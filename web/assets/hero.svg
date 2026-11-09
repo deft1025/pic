@@ -1,1 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#dceef3"/><stop offset="1" stop-color="#fcf7e9"/></linearGradient><filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".055"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter></defs><g filter="url(#paper)"><path fill="url(#sky)" d="M0 0h1200v800H0z"/><circle cx="940" cy="170" r="67" fill="#f7dfaa"/><g fill="#fffaf0" opacity=".7"><ellipse cx="260" cy="190" rx="100" ry="28"/><ellipse cx="230" cy="168" rx="44" ry="35"/><ellipse cx="290" cy="169" rx="41" ry="32"/><ellipse cx="760" cy="250" rx="77" ry="23"/></g><path d="M0 460Q240 300 470 470Q800 310 1200 470V800H0" fill="#c4d3b2"/><path d="M0 563Q330 400 650 554Q970 450 1200 560V800H0" fill="#aebf9e"/><path d="M0 660Q500 488 1200 670V800H0" fill="#d8dabc"/><path d="M470 800Q390 630 702 504Q504 675 680 800" fill="#ecdfbd"/><g transform="translate(115 580) scale(1.45)"><path d="M0 10L-7-105L11-105L9 10" fill="#bba58a"/><path d="M2-57L-30-86M5-86L26-114" stroke="#bba58a" stroke-width="7"/><circle cy="-131" r="58" fill="#a6bda0"/><circle cx="-33" cy="-102" r="44" fill="#a6bda0"/><circle cx="36" cy="-108" r="48" fill="#a6bda0"/><ellipse cx="-20" cy="-146" rx="25" ry="39" fill="#fff" opacity=".08"/></g><g transform="translate(1090 590) scale(1.7)"><path d="M0 10L-7-105L11-105L9 10" fill="#bba58a"/><path d="M2-57L-30-86M5-86L26-114" stroke="#bba58a" stroke-width="7"/><circle cy="-131" r="58" fill="#a0b69c"/><circle cx="-33" cy="-102" r="44" fill="#a0b69c"/><circle cx="36" cy="-108" r="48" fill="#a0b69c"/><ellipse cx="-20" cy="-146" rx="25" ry="39" fill="#fff" opacity=".08"/></g><g transform="translate(1020 490) scale(0.9)"><path d="M0 10L-7-105L11-105L9 10" fill="#bba58a"/><path d="M2-57L-30-86M5-86L26-114" stroke="#bba58a" stroke-width="7"/><circle cy="-131" r="58" fill="#b2c3a4"/><circle cx="-33" cy="-102" r="44" fill="#b2c3a4"/><circle cx="36" cy="-108" r="48" fill="#b2c3a4"/><ellipse cx="-20" cy="-146" rx="25" ry="39" fill="#fff" opacity=".08"/></g><g transform="translate(590 540) scale(1.7)"><ellipse cy="45" rx="46" ry="56" fill="#fffaf0"/><ellipse cx="-24" cy="-79" rx="16" ry="43" fill="#fffaf0" transform="rotate(-13 -24 -79)"/><ellipse cx="24" cy="-79" rx="16" ry="43" fill="#fffaf0" transform="rotate(12 24 -79)"/><ellipse cx="-24" cy="-80" rx="7" ry="29" fill="#edc0b7" transform="rotate(-13 -24 -79)"/><ellipse cx="24" cy="-80" rx="7" ry="29" fill="#edc0b7" transform="rotate(12 24 -79)"/><circle cy="-20" r="45" fill="#fffaf0"/><path d="M-37 26Q0 51 37 26L30 49Q0 64-30 49" fill="#a4c6ca"/><ellipse cx="-29" cy="91" rx="22" ry="12" fill="#fffaf0"/><ellipse cx="29" cy="91" rx="22" ry="12" fill="#fffaf0"/><circle cx="-15" cy="-13" r="3.5" fill="#463d3b"/><circle cx="15" cy="-13" r="3.5" fill="#463d3b"/><ellipse cy="0" rx="5" ry="3" fill="#b47872"/><path d="M-6 8 Q0 14 6 8" fill="none" stroke="#776158" stroke-width="2"/><ellipse cx="-27" cy="0" rx="9" ry="5" fill="#efa9a1" opacity=".55"/><ellipse cx="27" cy="0" rx="9" ry="5" fill="#efa9a1" opacity=".55"/></g><path d="M515 583Q555 565 600 586V642Q555 621 515 638ZM600 586Q643 563 688 581V638Q642 622 600 642" fill="#e6b55e" stroke="#c4944e" stroke-width="3"/><path d="M522 579Q563 564 600 586V634Q563 618 522 631ZM600 586Q639 565 681 577V630Q640 618 600 634" fill="#fffae9"/><g transform="translate(80 740) scale(0.8)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(310 690) scale(1.1)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(380 760) scale(1.4)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(940 710) scale(0.8)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(1070 770) scale(1.1)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(840 650) scale(1.4)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g transform="translate(204 660) scale(0.8)"><path d="M0 0v-24" stroke="#8fa777" stroke-width="3"/><path d="M0-4q-22-18-17 0" fill="#a9bb88"/><circle cy="-30" r="9" fill="#f2e5bc"/><circle cx="-7" cy="-24" r="9" fill="#f9efcf"/><circle cx="7" cy="-24" r="9" fill="#f9efcf"/><circle cy="-21" r="9" fill="#f9efcf"/><circle cy="-26" r="5" fill="#d7b778"/></g><g fill="#a5b898"><ellipse cx="80" cy="791" rx="140" ry="47"/><ellipse cx="1130" cy="787" rx="160" ry="41"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" fill="none">
+  <defs>
+    <linearGradient id="daylight" x1="370" y1="60" x2="490" y2="298" gradientUnits="userSpaceOnUse"><stop stop-color="#DDECF0"/><stop offset="1" stop-color="#F4F4DC"/></linearGradient>
+    <pattern id="rug" width="24" height="18" patternUnits="userSpaceOnUse"><path d="m2 10 6-3m9 7 5-3" stroke="#D5B890" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></pattern>
+  </defs>
+  <!-- A small, sunlit room. Curved edges keep the scene open against the page. -->
+  <path d="M123 461C68 415 95 329 112 256S153 99 250 61C348 23 448 51 534 83C624 116 663 191 646 272C629 354 687 411 621 466C548 525 198 525 123 461Z" fill="#F7EFDD"/>
+  <path d="M138 414C209 385 538 383 624 422C699 456 590 511 374 514C187 516 68 459 138 414Z" fill="#EAD8B9"/>
+  <path d="M138 414C209 385 538 383 624 422C699 456 590 511 374 514C187 516 68 459 138 414Z" fill="url(#rug)"/>
+  <path d="M339 89Q425 58 521 94L525 276Q424 264 337 282Z" fill="#FFFCF5" stroke="#D5C8AE" stroke-width="5"/>
+  <path d="M351 100Q427 74 509 104L511 262Q427 253 350 268Z" fill="url(#daylight)"/>
+  <circle cx="476" cy="125" r="23" fill="#F6D88E"/>
+  <path d="M351 233Q389 206 427 232T511 221V263Q426 255 350 268Z" fill="#C9D8BD"/>
+  <path d="M437 84V264M348 180L514 178" stroke="#FFFCF5" stroke-width="8"/>
+  <path d="m369 130 8-4 8 4m-4 15 6-3 6 3" stroke="#90A9AC" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M326 84Q347 76 364 82C352 127 350 171 358 220Q342 227 322 219C333 162 324 124 326 84Z" fill="#E7BEA4"/>
+  <path d="M329 97Q342 158 336 207M345 89Q337 144 346 205" stroke="#D6A88D" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+  <path d="M521 86Q539 88 547 98C537 136 537 189 552 223Q535 228 521 218C528 161 516 127 521 86Z" fill="#E7BEA4"/>
+  <path d="M328 80Q433 50 547 90" stroke="#B9A28C" stroke-width="5" stroke-linecap="round"/>
+  <!-- Side shelf, books with individual spines, and a quiet little plant. -->
+  <path d="M135 282 239 280 248 418 136 422Z" fill="#D7B991"/>
+  <path d="m145 291 83-1 3 49-85 2Zm2 62 86-2 4 56-89 3Z" fill="#F7E9D0"/>
+  <path d="m154 299 12-1 3 38-13 1Z" fill="#8EB4BD"/>
+  <path d="m170 298 15-1 1 39h-13Z" fill="#E6B186"/>
+  <path d="m189 299 12-1 6 37-14 1Z" fill="#B0BE9A"/>
+  <path d="m207 296 10-2 10 38-12 3Z" fill="#E5CC89"/>
+  <path d="m157 309 8-1m9 17h11m19-21 11-3" stroke="#FFF8E8" stroke-width="2"/>
+  <rect x="158" y="370" width="66" height="11" rx="3" fill="#BDCECA" transform="rotate(-3 158 370)"/>
+  <rect x="159" y="382" width="62" height="12" rx="3" fill="#E1B4A7" transform="rotate(-3 159 382)"/>
+  <path d="M162 265Q158 248 167 239Q177 246 174 264M177 257Q176 233 190 229Q195 245 183 261M181 257Q190 242 202 249Q201 263 182 266" fill="#9BAF8E"/>
+  <path d="m158 260 39-1-6 25-27 1Z" fill="#E1AD8B"/>
+  <path d="m164 265 27-1" stroke="#F6D8BA" stroke-width="2"/>
+  <!-- Cushions and loosely drawn feet sit low in the scene, with room to breathe. -->
+  <path d="M260 358C283 332 481 323 526 353C561 378 549 436 506 448L279 451C241 442 232 391 260 358Z" fill="#ADC6CB"/>
+  <path d="M264 410Q392 427 535 406" stroke="#94B6BD" stroke-width="3" stroke-linecap="round"/>
+  <path d="M282 348Q272 318 297 309L340 321 329 368Z" fill="#E9C59E"/>
+  <path d="m289 329 23 20m-17-26 23 20" stroke="#F9E5C8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Parent: gently turned toward the child, one arm around their shoulders. -->
+  <path d="M327 340C301 356 288 396 310 420C337 442 375 428 395 414L417 438Q440 448 453 435C462 425 437 408 417 397L374 370Z" fill="#7E9EAF"/>
+  <path d="M326 403Q350 396 375 410L397 432Q390 445 372 437L345 425 320 426" fill="#E8BA99"/>
+  <path d="M321 438Q346 443 366 430C372 438 365 450 354 454L313 456Q300 449 321 438Z" fill="#F8F0DF"/>
+  <path d="M427 432Q435 426 445 432L466 441Q473 451 454 453L431 448Z" fill="#F8F0DF"/>
+  <path d="M337 240C305 245 294 285 301 327L316 366Q349 381 391 357L395 286C391 255 367 240 337 240Z" fill="#E2A078"/>
+  <path d="M325 255Q309 296 330 336M385 282Q382 315 391 335" stroke="#C98A66" stroke-width="3" stroke-linecap="round"/>
+  <path d="M384 263Q420 256 443 287L466 312 452 325 422 301 391 295" fill="#E2A078"/>
+  <path d="M447 309Q451 299 463 306L476 317Q482 327 470 330L453 324Z" fill="#EAC3A4"/>
+  <path d="M337 223 339 248Q352 262 365 246L360 219" fill="#E9BC99"/>
+  <path d="M321 172C343 154 378 171 382 201L376 226Q368 249 344 241C321 235 309 194 321 172Z" fill="#EFCAA9"/>
+  <path d="M317 196C298 176 314 143 342 143C378 139 394 165 384 197L372 200 368 175Q345 188 327 177L327 207Z" fill="#665249"/>
+  <path d="M309 161Q289 145 297 130C306 114 334 126 330 143" fill="#665249"/>
+  <path d="M328 203Q314 195 315 207Q318 218 329 216" fill="#EFCAA9"/>
+  <path d="m346 202 1 2m22-6 1 2" stroke="#665249" stroke-width="3.7" stroke-linecap="round"/>
+  <path d="M354 217Q361 223 366 215" stroke="#B67B66" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="342" cy="213" rx="7" ry="4" fill="#DEA08A" opacity=".6"/>
+  <!-- Child leans in to look at the shared book. -->
+  <path d="M420 352Q399 379 421 403L457 413 485 395 462 357" fill="#C0BD93"/>
+  <path d="m426 393 28 12 26-8 21 23Q505 432 491 435L467 416 441 420 411 409" fill="#9DAA8A"/>
+  <path d="m487 427 16-7 15 13Q524 445 508 445L494 438" fill="#FFF8EB"/>
+  <path d="M419 413 433 419 427 437Q417 448 407 440Z" fill="#FFF8EB"/>
+  <path d="M427 286Q447 277 463 291L480 353Q455 374 417 357L415 317Z" fill="#F1D484"/>
+  <path d="m432 295-2 53m18-58 7 57m10-42 7 34" stroke="#E5C475" stroke-width="2" stroke-linecap="round"/>
+  <path d="m430 275 1 16q11 11 20-2l-3-17" fill="#EBC09A"/>
+  <path d="M419 226C439 208 468 219 473 242C479 266 461 287 439 282C415 279 404 246 419 226Z" fill="#F0CAA5"/>
+  <path d="M414 250C400 234 412 211 430 208Q462 195 475 226L471 243 462 239 456 223Q439 241 420 232L421 253Z" fill="#79604E"/>
+  <path d="M430 213Q423 203 433 198M438 211Q440 201 449 205" stroke="#79604E" stroke-width="5" stroke-linecap="round"/>
+  <path d="m433 252 1 2m22-4 1 2" stroke="#6E5547" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M440 266Q447 271 451 264" stroke="#B77E62" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="428" cy="263" rx="6" ry="3.5" fill="#E3A88D" opacity=".65"/>
+  <!-- One open book connects the two figures. -->
+  <path d="m331 327 14 49q38-3 66 12 20-23 58-29l-17-43q-32 5-52 26-29-18-69-15Z" fill="#C99564"/>
+  <path d="m335 319 14 48q30-1 59 14l-12-47q-28-17-61-15Z" fill="#FFF9E9"/>
+  <path d="m396 334 12 47q22-24 57-30l-17-43q-31 6-52 26Z" fill="#FFFCF1"/>
+  <path d="m396 334 12 47" stroke="#E4CEAB" stroke-width="2"/>
+  <path d="m352 338 28 8m-25 2 27 8m36-10 25-13m-22 22 26-14" stroke="#D7CEB5" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M318 313Q328 318 348 341L340 352Q319 343 306 330" fill="#E2A078"/>
+  <path d="M340 340Q349 335 355 344L361 355Q359 363 350 357L338 350" fill="#EFCAA9"/>
+  <path d="M469 319Q482 329 462 349L449 354 443 344 458 331" fill="#F1D484"/>
+  <path d="M449 344Q438 339 433 348Q431 357 442 358L453 351" fill="#F0CAA5"/>
+  <!-- A toy and a few marks of sunlight make this a lived-in corner. -->
+  <path d="M557 414Q552 402 562 399L571 405Q582 402 586 411L594 424Q589 438 575 436L562 432Z" fill="#CFAD88"/>
+  <circle cx="559" cy="397" r="7" fill="#CFAD88"/><circle cx="581" cy="401" r="7" fill="#CFAD88"/>
+  <path d="m566 413 1 1m12 1 1 1" stroke="#806956" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="572" cy="422" rx="4" ry="3" fill="#F2DBC0"/>
+  <path d="m240 152 5-12 4 12 12 4-12 4-4 12-5-12-11-4Z" fill="#E6C77E"/>
+  <path d="m581 270 3-8 3 8 8 3-8 3-3 8-3-8-8-3Z" fill="#D5BE89"/>
+  <path d="M218 455q12 8 25-1m287 19 15-2m-259 13 21 1" stroke="#C7AA82" stroke-width="2" stroke-linecap="round"/>
+</svg>
