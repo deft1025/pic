@@ -1,0 +1,163 @@
+{
+  "id": "bd-come-back-cat",
+  "title_zh": "小猫，回来呀！",
+  "title_original": "Come back, cat!",
+  "author": "Nicola Rijsdijk",
+  "illustrator": "小小绘本馆 · 新版矢量插画（原作：Karen Lilje）",
+  "description_zh": "小猫一会儿爬窗帘，一会儿追蝴蝶，午睡时又去了哪里？重复短句和寻找游戏，适合亲子指认、模仿动作与预测。",
+  "age_ranges": [
+    "0-2",
+    "3-4"
+  ],
+  "categories": [
+    "animals",
+    "habits"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-come-back-cat/cover.svg",
+  "page_count": 12,
+  "reading_minutes": 3,
+  "featured_order": 1,
+  "published_at": "2026-11-06T12:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-v1-story-art-v2-d4c52c29a3a5",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 翻译与重绘版",
+    "source_url": "https://bookdash.org/books/come-back-cat/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《Come back, cat!》由 Book Dash 发布；作者 Nicola Rijsdijk，原作插画 Karen Lilje，设计 Sam Scarborough。原作采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版为小小绘本馆 AI 辅助中文翻译及全新 SVG 插画，英文依原作整理，非原版插画；不表示原作者或 Book Dash 为本产品背书。原作无字画面补充了中英文朗读串词，页码：5,12。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/books/bd-come-back-cat/page-001.svg",
+      "image_alt": "小猫躲在奶油色沙发下，前面有一只滚动的小球。",
+      "text_zh": "小猫，回来呀！和我一起玩吧。",
+      "text_original": "Come back, cat! Play with me.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-001.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/books/bd-come-back-cat/page-002.svg",
+      "image_alt": "小猫坐在铺着软垫的藤篮里，尾巴垂在篮沿。",
+      "text_zh": "坐进你的小篮子。乖乖待在这里！",
+      "text_original": "Sit in your basket. Stay right here!",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-002.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/books/bd-come-back-cat/page-003.svg",
+      "image_alt": "小猫张开爪子爬上浅蓝色窗帘，离地板很高。",
+      "text_zh": "小猫，回来呀！那里太高啦。",
+      "text_original": "Come back, cat! That’s way too high.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-003.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-003.mp3"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/books/bd-come-back-cat/page-004.svg",
+      "image_alt": "小猫从半开的后门溜出，屋内的篮子留在身后。",
+      "text_zh": "小猫，回来呀！别跑到外面去。",
+      "text_original": "Come back, cat! Don’t go outside.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-004.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/books/bd-come-back-cat/page-005.svg",
+      "image_alt": "小猫在花园里追两只蝴蝶，花草围着小径。",
+      "text_zh": "瞧，小猫追着蝴蝶跑进了花园。",
+      "text_original": "Look! Cat is chasing butterflies in the garden.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-005.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/books/bd-come-back-cat/page-006.svg",
+      "image_alt": "小猫拉扯晾衣绳上的袜子，线头开始散开。",
+      "text_zh": "小猫，回来呀！那可不是你的。",
+      "text_original": "Come back, cat! That’s not yours.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-006.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "image": "/assets/books/bd-come-back-cat/page-007.svg",
+      "image_alt": "小猫低头观察蜗牛，袜子的线头缠在尾巴上。",
+      "text_zh": "小猫，回来呀！你找到什么啦？",
+      "text_original": "Come back, cat! What have you got?",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-007.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "image": "/assets/books/bd-come-back-cat/page-008.svg",
+      "image_alt": "小猫带着线头和蜗牛走近母鸡，母鸡张开翅膀。",
+      "text_zh": "小猫，回来呀。那不是你的朋友！",
+      "text_original": "Come back, cat. That’s not your friend!",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-008.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-008.mp3"
+    },
+    {
+      "page_number": 9,
+      "image": "/assets/books/bd-come-back-cat/page-009.svg",
+      "image_alt": "小猫回到门口，蜗牛在背上，羽毛飘在头边。",
+      "text_zh": "你好呀，小猫！你回来了吗？",
+      "text_original": "Hello, cat! Are you back?",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-009.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-009.mp3"
+    },
+    {
+      "page_number": 10,
+      "image": "/assets/books/bd-come-back-cat/page-010.svg",
+      "image_alt": "小猫蜷在篮子里，背上还有蜗牛，旁边落着羽毛。",
+      "text_zh": "待在篮子里。现在该午睡啦。",
+      "text_original": "Stay in your basket. It’s nap time now.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-010.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-010.mp3"
+    },
+    {
+      "page_number": 11,
+      "image": "/assets/books/bd-come-back-cat/page-011.svg",
+      "image_alt": "篮子里只剩几根羽毛，小猫又不见了。",
+      "text_zh": "小猫？",
+      "text_original": "Cat?",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-011.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-011.mp3"
+    },
+    {
+      "page_number": 12,
+      "image": "/assets/books/bd-come-back-cat/page-012.svg",
+      "image_alt": "小猫在沙发软垫上闭眼睡觉，蜗牛、线头和羽毛留在旁边。",
+      "text_zh": "嘘……小猫在沙发上睡着了。",
+      "text_original": "Shh... Cat is asleep on the couch.",
+      "audio_zh": "/assets/books/bd-come-back-cat/audio/zh/55a7085a113bb180/page-012.mp3",
+      "audio_original": "/assets/books/bd-come-back-cat/audio/en/866fd91bb37a334c/page-012.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-06T03:10:20.383737+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-06T08:46:15.618616+00:00",
+      "review_status": "pending"
+    }
+  }
+}

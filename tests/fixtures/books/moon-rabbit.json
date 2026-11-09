@@ -1,0 +1,109 @@
+{
+  "id": "moon-rabbit",
+  "title_zh": "小兔子，晚安",
+  "title_original": "Goodnight, Little Bunny",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "当月亮爬上树梢，小兔子把晚安送给森林里的每一位朋友。一个关于陪伴、安心与入睡的温柔故事。",
+  "age_ranges": [
+    "0-2",
+    "3-4"
+  ],
+  "categories": [
+    "bedtime",
+    "animals"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 3,
+  "featured_order": 1,
+  "published_at": "2026-11-03T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-dd25e2db8b34",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "夕阳照进卧室，小兔子抱着枕头来到窗边。",
+      "text_zh": "太阳落山了，小兔子还不想睡。它抱着小枕头，走到窗边。",
+      "text_original": "The sun went down. Bunny was not sleepy yet. She held her little pillow by the window.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "夜晚的树枝上，小鸟收起翅膀睡在鸟窝里，小兔子轻声道晚安。",
+      "text_zh": "小鸟收起翅膀，躲进暖暖的窝。“晚安，小鸟。”小兔子轻轻地说。",
+      "text_original": "The bird folded its wings in its cozy nest. “Goodnight, little bird,” whispered Bunny.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊躺在床上盖着被子，小兔子站在床边道晚安。",
+      "text_zh": "小熊拉上被子，露出圆圆的耳朵。“晚安，小熊。”",
+      "text_original": "Bear pulled up his blanket. Only his round ears peeked out. “Goodnight, Bear.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "月光照着安静的森林，小兔子抬起小手打哈欠。",
+      "text_zh": "月亮像一盏小灯，照着安静的森林。小兔子打了一个大大的哈欠。",
+      "text_original": "The moon was a little lamp above the quiet forest. Bunny gave a very big yawn.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "兔妈妈张开双臂，小兔子钻进温暖的被窝。",
+      "text_zh": "妈妈张开双臂：“小兔子，轮到你啦。”小兔子钻进软软的被窝。",
+      "text_original": "Mama opened her arms. “Your turn, little bunny.” Bunny snuggled under her soft blanket.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子闭眼躺在被窝中，妈妈守在床边，窗外月亮明亮。",
+      "text_zh": "“晚安，月亮。晚安，妈妈。”小兔子闭上眼睛，好梦轻轻地来了。",
+      "text_original": "“Goodnight, Moon. Goodnight, Mama.” Bunny closed her eyes, and a sweet dream floated in.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:39:19.012445+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:55:51.165012+00:00",
+      "review_status": "pending"
+    }
+  }
+}

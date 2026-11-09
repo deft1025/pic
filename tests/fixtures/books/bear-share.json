@@ -1,0 +1,109 @@
+{
+  "id": "bear-share",
+  "title_zh": "小熊的蜂蜜面包",
+  "title_original": "Bear’s Honey Bread",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "小熊烤了一块香喷喷的蜂蜜面包。当朋友们陆续敲门，它发现，分享会让一块小面包变成大大的快乐。",
+  "age_ranges": [
+    "3-4",
+    "5-6"
+  ],
+  "categories": [
+    "habits",
+    "animals"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 4,
+  "featured_order": 2,
+  "published_at": "2026-11-03T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-c99b8098bd58",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "厨房烤箱旁，小熊捧着刚烤好的蜂蜜面包，桌上飘起热气。",
+      "text_zh": "清晨，小熊烤好了一块蜂蜜面包。香味飘过小窗，飘进森林。",
+      "text_original": "One morning, Bear baked a loaf of honey bread. Its sweet smell drifted into the forest.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子来到敞开的门口，小熊把一片面包分享给它。",
+      "text_zh": "小兔子敲敲门：“好香呀！”小熊切下一片，放进小兔子的盘子。",
+      "text_original": "Bunny knocked. “That smells lovely!” Bear cut a slice and put it on her plate.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小狐狸拿着装有面包的盘子，小熊继续分享剩下的面包。",
+      "text_zh": "小狐狸也来了。小熊又切下一片：“来，一起吃吧！”",
+      "text_original": "Fox came by, too. Bear cut another slice. “Come and join us!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "面包分完了，小熊抱着肚子看着空盘子和桌上的面包屑。",
+      "text_zh": "面包越来越小，小熊的肚子咕咕叫。它低头看看，盘子空了。",
+      "text_original": "The loaf grew smaller. Bear’s tummy rumbled. He looked down at his empty plate.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子带来胡萝卜，小狐狸带来一篮莓果，小熊张开双臂欢迎。",
+      "text_zh": "小兔子拿来胡萝卜，小狐狸带来甜莓果。“我们也想和你分享！”",
+      "text_original": "Bunny brought carrots. Fox brought sweet berries. “We want to share with you, too!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊、小兔子和小狐狸围坐一桌，一起分享面包、胡萝卜和莓果。",
+      "text_zh": "大家围坐在一起。小小的桌子上，装满了大大的快乐。",
+      "text_original": "They all sat together. The little table was full of a very big kind of happiness.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:38:07.374617+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:54:51.331909+00:00",
+      "review_status": "pending"
+    }
+  }
+}

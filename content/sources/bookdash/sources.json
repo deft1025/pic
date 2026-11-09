@@ -1,0 +1,219 @@
+{
+  "bd-come-back-cat": {
+    "source_url": "https://bookdash.org/books/come-back-cat/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/come-back-cat/en/index.md",
+    "source_blob_sha": "868ecd40e5208f8b46d4b1e94b02dcfa8bf4a770",
+    "downloaded_on": "2026-11-06",
+    "source_file": "come-back-cat.md",
+    "sha256": "69059af681c27f3fac4fb1d1668c53fd8f02d6af86ba196a16d41a690c7c1e59",
+    "creators": {
+      "Designer": "Sam Scarborough",
+      "Writer": "Nicola Rijsdijk",
+      "Illustrator": "Karen Lilje"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {
+      "5": "Look! Cat is chasing butterflies in the garden.",
+      "12": "Shh... Cat is asleep on the couch."
+    },
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-a-house-for-mouse": {
+    "source_url": "https://bookdash.org/books/a-house-for-mouse/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/a-house-for-mouse/en/index.md",
+    "source_blob_sha": "19b7084a2bc36dd17138a1d40335bf2b7de093a7",
+    "downloaded_on": "2026-11-06",
+    "source_file": "a-house-for-mouse.md",
+    "sha256": "3d2da1444a3fa0f5e8865a7ee7b35cfa88831c0e92eba121be99f87a5346758e",
+    "creators": {
+      "Writer": "Michele Fry",
+      "Designer": "Jennifer Jacobs",
+      "Illustrator": "Amy Richards (Uzzell)"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {
+      "10": "Mouse paused by the warm fire and looked around."
+    },
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-amazing-daisy": {
+    "source_url": "https://bookdash.org/books/amazing-daisy/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/amazing-daisy/en/index.md",
+    "source_blob_sha": "d2f6f12cc640c95fc910baa91ab8393d550e758d",
+    "downloaded_on": "2026-11-06",
+    "source_file": "amazing-daisy.md",
+    "sha256": "ed7f390e7ab6eac4ba22c1a82f064837500440ace4a696a074cb91679cb27889",
+    "creators": {
+      "Writer": "Nozizwe Herero",
+      "Illustrator": "Siya Masuku",
+      "Designer": "Leona Ingram"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-a-tiny-seed": {
+    "source_url": "https://bookdash.org/books/a-tiny-seed/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/a-tiny-seed/en/index.md",
+    "source_blob_sha": "0165547ce0984a18d36aebfc4e26cd60798c5c00",
+    "downloaded_on": "2026-11-06",
+    "source_file": "a-tiny-seed.md",
+    "sha256": "4b1a6f23e08217a755839fc3b253f7ed082cb29495a9cc99580f0372e0e375c4",
+    "creators": {
+      "Illustrator": "Maya Marshak",
+      "Writer": "Nicola Rijsdijk",
+      "Designer": "Karen Lilje（本次正文版本）；Tarryn-Anne Anderson（当前官网版本）"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-sleepy-mr-sloth": {
+    "source_url": "https://bookdash.org/books/sleepy-mr-sloth/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/sleepy-mr-sloth/en/index.md",
+    "source_blob_sha": "edceff530f721f7cba3a54b81bef0b96c4fb90dd",
+    "downloaded_on": "2026-11-06",
+    "source_file": "sleepy-mr-sloth.md",
+    "sha256": "2748730cb37302ca9084795624617d5824950f08959ead29147e333e4738957b",
+    "creators": {
+      "Illustrator": "Graham Paterson",
+      "Writer": "Paul Kennedy",
+      "Designer": "Nick Mulgrew"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-little-ants-big-plan": {
+    "source_url": "https://bookdash.org/books/little-ants-big-plan/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/little-ants-big-plan/en/index.md",
+    "source_blob_sha": "18ce8eac47b32fc1ab9ae5d7661db3966c4a768c",
+    "downloaded_on": "2026-11-06",
+    "source_file": "little-ants-big-plan.md",
+    "sha256": "3ee77e8921d71e07c0fb71babc50d15a67b14f45fde0b9b60ee5c4dbcc8fa4e2",
+    "creators": {
+      "Illustrator": "Steven McKimmie",
+      "Designer": "Telri Stoop",
+      "Writer": "Candice Dingwall"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-tortoise-finds-his-home": {
+    "source_url": "https://bookdash.org/books/tortoise-finds-his-home/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/tortoise-finds-his-home/en/index.md",
+    "source_blob_sha": "8704fa8865b4716516cf825e2123ecbc6162f601",
+    "downloaded_on": "2026-11-06",
+    "source_file": "tortoise-finds-his-home.md",
+    "sha256": "4178959fb639d6e59fda438b6d775bba3d66e064bf9428579a8df2be47c35d69",
+    "creators": {
+      "Illustrator": "Katrin Coetzer",
+      "Designer": "Damian Gibbs",
+      "Writer": "Maya Fowler"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-whose-button-is-this": {
+    "source_url": "https://bookdash.org/books/whose-button-is-this/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/whose-button-is-this/en/index.md",
+    "source_blob_sha": "e304405f3180e20e6254182b94a1fbdb75fa344b",
+    "downloaded_on": "2026-11-06",
+    "source_file": "whose-button-is-this.md",
+    "sha256": "edb618644b84822f6646a879426874d94cdbad0a19b5a5982c23b381bd4bdcf2",
+    "creators": {
+      "Designer": "Louise Gale",
+      "Writer": "Paul Kennedy",
+      "Illustrator": "James Woolley"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 13,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-hippo-wants-to-dance": {
+    "source_url": "https://bookdash.org/books/hippo-wants-to-dance/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/hippo-wants-to-dance/en/index.md",
+    "source_blob_sha": "4027ef47358ea196db9e1a5f7c67fa819e4d4d45",
+    "downloaded_on": "2026-11-06",
+    "source_file": "hippo-wants-to-dance.md",
+    "sha256": "183d9ec435da5dd71ede072252095c4e879a5aee89d2c4af65a5a0a09efa064f",
+    "creators": {
+      "Illustrator": "Megan Andrews",
+      "Writer": "Sam Beckbessinger",
+      "Designer": "Marisa Steyn"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {
+      "12": "Now everyone is dancing together!"
+    },
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  },
+  "bd-what-is-it": {
+    "source_url": "https://bookdash.org/books/what-is-it/",
+    "text_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/what-is-it/en/index.md",
+    "source_blob_sha": "d3093cd52abdc68d7a830afa71a594ac1a5860fb",
+    "downloaded_on": "2026-11-06",
+    "source_file": "what-is-it.md",
+    "sha256": "02288aac774a1d574c100ec82cad3675895dbcfd9d670f3c4d9d97c63b3aec2f",
+    "creators": {
+      "Illustrator": "Robyn Penn",
+      "Designer": "Ann Roberts",
+      "Writer": "Kate Sidley"
+    },
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "story_spreads": 12,
+    "narration_additions": {},
+    "translation": "小小绘本馆 · AI 辅助中文翻译",
+    "illustrations": "小小绘本馆 · 新版 SVG 插画；未使用原版位图",
+    "metadata_note": "署名取自当前官方作品详情页；正文版本取自 Book Dash 官方 GitHub，版本哈希见 source_blob_sha。",
+    "rights_evidence_url": "https://github.com/bookdash/bookdash-books/blob/gh-pages/_data/meta.yml"
+  }
+}

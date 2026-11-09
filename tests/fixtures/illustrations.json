@@ -1,0 +1,352 @@
+{
+  "moon-rabbit": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "sunset-pillow-window",
+        "text_zh": "太阳落山了，小兔子还不想睡。它抱着小枕头，走到窗边。",
+        "description": "夕阳照进卧室，小兔子抱着枕头来到窗边。"
+      },
+      {
+        "scene": "bird-sleeping-in-nest",
+        "text_zh": "小鸟收起翅膀，躲进暖暖的窝。“晚安，小鸟。”小兔子轻轻地说。",
+        "description": "夜晚的树枝上，小鸟收起翅膀睡在鸟窝里，小兔子轻声道晚安。"
+      },
+      {
+        "scene": "bear-under-blanket",
+        "text_zh": "小熊拉上被子，露出圆圆的耳朵。“晚安，小熊。”",
+        "description": "小熊躺在床上盖着被子，小兔子站在床边道晚安。"
+      },
+      {
+        "scene": "bunny-yawning-under-moon",
+        "text_zh": "月亮像一盏小灯，照着安静的森林。小兔子打了一个大大的哈欠。",
+        "description": "月光照着安静的森林，小兔子抬起小手打哈欠。"
+      },
+      {
+        "scene": "mother-tucking-bunny-in",
+        "text_zh": "妈妈张开双臂：“小兔子，轮到你啦。”小兔子钻进软软的被窝。",
+        "description": "兔妈妈张开双臂，小兔子钻进温暖的被窝。"
+      },
+      {
+        "scene": "bunny-sleeping-beside-mother",
+        "text_zh": "“晚安，月亮。晚安，妈妈。”小兔子闭上眼睛，好梦轻轻地来了。",
+        "description": "小兔子闭眼躺在被窝中，妈妈守在床边，窗外月亮明亮。"
+      }
+    ]
+  },
+  "bear-share": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "fresh-honey-bread",
+        "text_zh": "清晨，小熊烤好了一块蜂蜜面包。香味飘过小窗，飘进森林。",
+        "description": "厨房烤箱旁，小熊捧着刚烤好的蜂蜜面包，桌上飘起热气。"
+      },
+      {
+        "scene": "bread-slice-for-bunny",
+        "text_zh": "小兔子敲敲门：“好香呀！”小熊切下一片，放进小兔子的盘子。",
+        "description": "小兔子来到敞开的门口，小熊把一片面包分享给它。"
+      },
+      {
+        "scene": "bread-slice-for-fox",
+        "text_zh": "小狐狸也来了。小熊又切下一片：“来，一起吃吧！”",
+        "description": "小狐狸拿着装有面包的盘子，小熊继续分享剩下的面包。"
+      },
+      {
+        "scene": "bear-looking-at-empty-plate",
+        "text_zh": "面包越来越小，小熊的肚子咕咕叫。它低头看看，盘子空了。",
+        "description": "面包分完了，小熊抱着肚子看着空盘子和桌上的面包屑。"
+      },
+      {
+        "scene": "friends-bring-carrots-and-berries",
+        "text_zh": "小兔子拿来胡萝卜，小狐狸带来甜莓果。“我们也想和你分享！”",
+        "description": "小兔子带来胡萝卜，小狐狸带来一篮莓果，小熊张开双臂欢迎。"
+      },
+      {
+        "scene": "friends-sharing-the-table",
+        "text_zh": "大家围坐在一起。小小的桌子上，装满了大大的快乐。",
+        "description": "小熊、小兔子和小狐狸围坐一桌，一起分享面包、胡萝卜和莓果。"
+      }
+    ]
+  },
+  "fox-feelings": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "fox-proud-of-tall-tower",
+        "text_zh": "今天，小狐狸搭了一座高高的积木塔。它的心里像晴天一样亮。",
+        "description": "小狐狸站在高高的积木塔旁，开心地张开双臂。"
+      },
+      {
+        "scene": "tower-falls-fox-angry",
+        "text_zh": "哗啦！塔倒了。小狐狸握紧拳头，心里刮起一阵大风。",
+        "description": "积木散落一地，小狐狸皱起眉头、握紧双手，很生气。"
+      },
+      {
+        "scene": "fox-breathes-slowly",
+        "text_zh": "“我好生气！”小狐狸说。它停下来，慢慢吸气，慢慢呼气。",
+        "description": "小狐狸闭上眼睛，摊开小手，慢慢吸气呼气，旁边还留着倒下的积木。"
+      },
+      {
+        "scene": "bunny-sits-with-sad-fox",
+        "text_zh": "它还是有一点难过。小兔子坐在旁边：“我陪你待一会儿。”",
+        "description": "小狐狸难过地坐在地毯上，小兔子坐在旁边安静陪伴。"
+      },
+      {
+        "scene": "friends-build-wide-base",
+        "text_zh": "小狐狸说：“我们重新搭吧。”这一次，它们从宽宽的底座开始。",
+        "description": "小狐狸和小兔子一起搭积木，从三块并排的宽底座开始。"
+      },
+      {
+        "scene": "rebuilt-stable-tower",
+        "text_zh": "塔又站起来了。心情像天气，会慢慢变化。每一种心情，都可以被听见。",
+        "description": "宽底座上的新积木塔稳稳站立，小狐狸和小兔子开心地张开双臂。"
+      }
+    ]
+  },
+  "seed-journey": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "autumn-seed-in-soil",
+        "text_zh": "秋风吹呀吹，一颗小种子落在松软的泥土里。",
+        "description": "秋风把一颗小种子吹进松软的土壤，地下剖面能看见种子。"
+      },
+      {
+        "scene": "seed-under-winter-snow",
+        "text_zh": "冬天来了。小种子躺在泥土被子里，静静地等着。",
+        "description": "冬天的土地盖着积雪，小种子安静躺在地下，地面上是光秃秃的树。"
+      },
+      {
+        "scene": "spring-rain-reaches-seed",
+        "text_zh": "滴答，滴答！春雨轻轻敲门：“小种子，该喝水啦。”",
+        "description": "春雨落在泥土上，小种子吸足水分，底端开始长出小根。"
+      },
+      {
+        "scene": "roots-down-shoot-up",
+        "text_zh": "一条小根往下钻，一片嫩芽往上长。你好，阳光！",
+        "description": "土壤剖面里，小根向下生长，嫩芽穿过地面向阳光伸展。"
+      },
+      {
+        "scene": "ladybug-on-green-leaf",
+        "text_zh": "叶子一天比一天大。小瓢虫飞过来，在叶子上歇歇脚。",
+        "description": "小苗长出几片大大的绿叶，一只红色瓢虫落在叶子上休息。"
+      },
+      {
+        "scene": "summer-flower-blooms",
+        "text_zh": "夏天，小花终于开了。原来，慢慢长大，也是一件很棒的事。",
+        "description": "夏天，绿叶间开出一朵高高的黄色小花，蝴蝶从旁边飞过。"
+      }
+    ]
+  },
+  "rainbow-walk": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "bunny-in-rain-boots",
+        "text_zh": "雨停了，小兔子穿上雨靴，去找彩虹的颜色。",
+        "description": "雨停后，小兔子穿上黄色雨靴，沿着有水洼的小路出门。"
+      },
+      {
+        "scene": "red-strawberries-under-leaves",
+        "text_zh": "红红的草莓躲在叶子下。“红色，我找到你啦！”",
+        "description": "小兔子在绿叶下面发现红红的草莓，伸出小手指向草莓。"
+      },
+      {
+        "scene": "yellow-flower-in-sunshine",
+        "text_zh": "一朵黄黄的小花朝太阳点头。“黄色，在这里！”",
+        "description": "阳光下，一朵高高的黄色小花开放，小兔子凑近看。"
+      },
+      {
+        "scene": "walking-on-soft-green-grass",
+        "text_zh": "绿绿的草地软绵绵。小兔子轻轻踩上去，像走在地毯上。",
+        "description": "小兔子穿着雨靴走在柔软的绿色草地上，脚边是一簇簇青草。"
+      },
+      {
+        "scene": "blue-sky-reflected-in-puddle",
+        "text_zh": "蓝蓝的天空里，白云慢慢飘。水洼也藏着一小片蓝天。",
+        "description": "蓝天白云倒映在一大块水洼中，小兔子低头看水里的天空。"
+      },
+      {
+        "scene": "rainbow-over-happy-bunny",
+        "text_zh": "抬头看，彩虹出来了！原来，美丽的颜色一直在身边。",
+        "description": "七色彩虹横跨雨后的天空，小兔子站在草地上开心地张开双臂。"
+      }
+    ]
+  },
+  "hedgehog-brave": {
+    "cover_page": 5,
+    "pages": [
+      {
+        "scene": "hedgehog-before-high-bridge",
+        "text_zh": "小刺猬想去河对岸看花。可是，小木桥看起来好高呀。",
+        "description": "小刺猬站在河岸边，望着跨过河流的木桥和对岸的小花。"
+      },
+      {
+        "scene": "shaky-feet-at-bridge",
+        "text_zh": "“我的脚有点发抖。”小刺猬停在桥边，不肯往前走。",
+        "description": "小刺猬停在木桥起点前，双脚发抖，害怕地抱着小手。"
+      },
+      {
+        "scene": "bear-offers-reassurance",
+        "text_zh": "小熊走过来：“害怕也没关系。我陪着你，一次走一小步。”",
+        "description": "小熊来到小刺猬身边伸出手，陪它一起面对前方的木桥。"
+      },
+      {
+        "scene": "first-step-on-plank",
+        "text_zh": "小刺猬看看脚下，慢慢迈出第一步。木桥稳稳的。",
+        "description": "小刺猬迈上第一块桥板，小熊站在后面鼓励它。"
+      },
+      {
+        "scene": "crossing-the-bridge-together",
+        "text_zh": "一步，两步，三步。水在下面轻轻唱歌，风在耳边说加油。",
+        "description": "小刺猬一步步走到木桥中段，小熊跟在后面，桥下河水流淌。"
+      },
+      {
+        "scene": "flowers-on-the-far-bank",
+        "text_zh": "到啦！小刺猬看见满地的小花。“原来，我可以一边害怕，一边试一试。”",
+        "description": "小刺猬走到对岸的小花旁，开心地张开双手，小熊也走下木桥。"
+      }
+    ]
+  },
+  "teddy-brush": {
+    "cover_page": 6,
+    "pages": [
+      {
+        "scene": "bear-at-bathroom-sink",
+        "text_zh": "晚上，小熊来到洗手台。小牙刷已经在杯子里等它啦。",
+        "description": "晚上，小熊来到洗手台旁，看着杯子里等待它的小牙刷。"
+      },
+      {
+        "scene": "toothpaste-on-toothbrush-train",
+        "text_zh": "挤一点牙膏，牙刷变成一列小火车。呜呜，出发！",
+        "description": "牙膏挤上牙刷，旁边画着想象中的小火车，准备开始刷牙。"
+      },
+      {
+        "scene": "brushing-outside-and-inside",
+        "text_zh": "小火车轻轻开过外面，再开到里面。每一颗小牙都要拜访。",
+        "description": "小熊把牙刷放到嘴边，旁边的放大画面展示外侧和内侧牙齿的刷洗。"
+      },
+      {
+        "scene": "brushing-top-and-bottom",
+        "text_zh": "上面的牙齿刷一刷，下面的牙齿也不忘。小熊慢慢来，不着急。",
+        "description": "放大的嘴巴中，上排和下排牙齿都在被轻轻刷洗，小熊慢慢练习。"
+      },
+      {
+        "scene": "rinsing-brush-at-running-tap",
+        "text_zh": "刷完牙，小熊吐掉泡泡，把牙刷洗干净，放回小杯子。",
+        "description": "小熊在流水下冲洗牙刷，泡沫落进水池，杯子放在一旁。"
+      },
+      {
+        "scene": "clean-teeth-in-mirror",
+        "text_zh": "小熊照照镜子，露出干净的牙齿。“晚安，牙刷小火车，明天见！”",
+        "description": "小熊对着镜子露出干净的牙齿，洗手台上的牙刷放回了杯子。"
+      }
+    ]
+  },
+  "count-stars": {
+    "cover_page": 4,
+    "pages": [
+      {
+        "scene": "fox-and-mother-on-blanket",
+        "text_zh": "夜晚来了，小狐狸和妈妈带着毯子，躺在柔软的草地上。",
+        "description": "小狐狸和妈妈躺在草地上的毯子上，抬头等待星星出现。"
+      },
+      {
+        "scene": "one-bright-star",
+        "text_zh": "一颗星星亮起来，像一只眨呀眨的小眼睛。",
+        "description": "夜空中只有一颗明亮的大星星，小狐狸和妈妈在毯子上仰望。"
+      },
+      {
+        "scene": "two-stars-side-by-side",
+        "text_zh": "两颗星星肩并肩，好像在悄悄说话。",
+        "description": "两颗明亮的大星星并排挂在夜空，小狐狸和妈妈一起看。"
+      },
+      {
+        "scene": "three-stars-toward-moon",
+        "text_zh": "三颗星星排成队，给月亮搭了一条小路。",
+        "description": "三颗大星星排成一条通往月亮的小路，下方是小狐狸和妈妈。"
+      },
+      {
+        "scene": "five-stars-sleepy-fox",
+        "text_zh": "四颗，五颗……小狐狸数着数着，眼皮开始打架。",
+        "description": "五颗明亮的星星挂在夜空，小狐狸躺在毯子上困得闭上了眼睛。"
+      },
+      {
+        "scene": "mother-holds-sleeping-fox",
+        "text_zh": "妈妈轻轻抱起它。“今晚的星星很多，给你的爱也很多。”",
+        "description": "满天星光下，妈妈抱起熟睡的小狐狸，毯子留在柔软的草地上。"
+      }
+    ]
+  },
+  "rainy-friends": {
+    "cover_page": 5,
+    "pages": [
+      {
+        "scene": "frog-with-leaf-umbrella",
+        "text_zh": "滴答滴答，森林下雨了。小青蛙撑着一把绿叶伞。",
+        "description": "森林里下雨了，小青蛙撑着一把绿叶做的小伞。"
+      },
+      {
+        "scene": "bunny-joins-under-umbrella",
+        "text_zh": "小兔子跑来了：“我可以躲一躲吗？”“当然，快进来！”",
+        "description": "小兔子跑来躲雨，小青蛙伸出手，邀请它一起撑绿叶伞。"
+      },
+      {
+        "scene": "three-friends-small-umbrella",
+        "text_zh": "小刺猬也来了。大家挤一挤，小伞还是太小啦。",
+        "description": "小兔子、小青蛙和小刺猬挤在一起，绿叶伞已经遮不住大家。"
+      },
+      {
+        "scene": "friends-walk-to-big-tree",
+        "text_zh": "小青蛙想了想：“前面有一棵大树，我们一起去吧。”",
+        "description": "小青蛙指向前方的大树，三位朋友一起向树下走去。"
+      },
+      {
+        "scene": "three-friends-shelter-under-tree",
+        "text_zh": "大树像一把大大的伞。大家坐下来，听雨点唱歌。",
+        "description": "大树的树冠像一把大伞，三位朋友坐在树下一起听雨。"
+      },
+      {
+        "scene": "friends-jump-over-puddles",
+        "text_zh": "雨停了，太阳出来了。朋友们跳过小水洼，一路笑着回家。",
+        "description": "雨停后太阳出来了，小兔子、小青蛙和小刺猬笑着跳过水洼回家。"
+      }
+    ]
+  },
+  "moon-letter": {
+    "cover_page": 5,
+    "pages": [
+      {
+        "scene": "bunny-at-desk-thinking",
+        "text_zh": "小兔子坐在窗边，想给月亮写一封信。可是，写什么呢？",
+        "description": "小兔子坐在桌边，面前是一张空白信纸，窗外是明亮的月亮。"
+      },
+      {
+        "scene": "helping-bear-pick-blueberries",
+        "text_zh": "她写：“今天，我帮小熊捡起了掉在地上的蓝莓。”",
+        "description": "回想白天，小兔子帮小熊拾起掉在小路上的蓝莓，旁边放着篮子。"
+      },
+      {
+        "scene": "friend-comforts-hurt-bunny",
+        "text_zh": "她又写：“我摔了一跤，有一点疼。朋友陪我坐了好久。”",
+        "description": "小兔子坐在路边，膝盖贴着小小的创可贴，小熊伸出手陪伴它。"
+      },
+      {
+        "scene": "flower-growing-between-stones",
+        "text_zh": "“后来，我看见一朵小花，从石头缝里长出来。它真勇敢。”",
+        "description": "石头缝隙里长出一朵黄色小花，小兔子在旁边认真观察。"
+      },
+      {
+        "scene": "letter-on-moonlit-windowsill",
+        "text_zh": "信写好了。小兔子把它放在窗台，让月光轻轻读一读。",
+        "description": "小兔子把写好的信放在窗台上，一束月光照着信封。"
+      },
+      {
+        "scene": "bunny-smiles-through-window",
+        "text_zh": "窗外，月亮亮亮的。小兔子笑了：“明天，我还会有新的故事。”",
+        "description": "夜色中的小屋亮着暖光，小兔子在窗边微笑，信在窗台上，月亮挂在屋外。"
+      }
+    ]
+  }
+}

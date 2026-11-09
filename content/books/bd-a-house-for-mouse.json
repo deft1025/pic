@@ -1,0 +1,162 @@
+{
+  "id": "bd-a-house-for-mouse",
+  "title_zh": "小老鼠找新家",
+  "title_original": "A House for Mouse",
+  "author": "Michele Fry",
+  "illustrator": "小小绘本馆 · 新版矢量插画（原作：Amy Richards (Uzzell)）",
+  "description_zh": "小狗、鹦鹉和小鱼都愿意分享住处，可小老鼠需要怎样的家？在现实与梦境中比较冷暖、干湿，发现适合自己的小角落。",
+  "age_ranges": [
+    "3-4"
+  ],
+  "categories": [
+    "animals",
+    "bedtime"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-a-house-for-mouse/cover.svg",
+  "page_count": 12,
+  "reading_minutes": 5,
+  "featured_order": 2,
+  "published_at": "2026-11-06T12:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-v1-story-art-v2-a2f99279eb3b",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 翻译与重绘版",
+    "source_url": "https://bookdash.org/books/a-house-for-mouse/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《A House for Mouse》由 Book Dash 发布；作者 Michele Fry，原作插画 Amy Richards (Uzzell)，设计 Jennifer Jacobs。原作采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版为小小绘本馆 AI 辅助中文翻译及全新 SVG 插画，英文依原作整理，非原版插画；不表示原作者或 Book Dash 为本产品背书。原作无字画面补充了中英文朗读串词，页码：10。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/books/bd-a-house-for-mouse/page-001.svg",
+      "image_alt": "小老鼠背着小包，沿小径望向远处的黄色房子。",
+      "text_zh": "小老鼠正在找一个新家。",
+      "text_original": "Mouse was looking for a new house.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-001.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/books/bd-a-house-for-mouse/page-002.svg",
+      "image_alt": "半开的黄色房门透出暖光，小老鼠探头往里看。",
+      "text_zh": "这里看起来很不错。",
+      "text_original": "This looks like a nice house.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-002.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/books/bd-a-house-for-mouse/page-003.svg",
+      "image_alt": "黑色小狗趴在软垫上邀请小老鼠，小老鼠站在垫边。",
+      "text_zh": "“你可以来和我一起睡。”小狗说。“谢谢你。”小老鼠说。",
+      "text_original": "“You can come and sleep with me,” said Puppy. “Thank you,” said Mouse.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-003.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-003.mp3"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/books/bd-a-house-for-mouse/page-004.svg",
+      "image_alt": "梦境用云朵边框围起，小老鼠在泥地上弹跳。",
+      "text_zh": "那天夜里，小老鼠的梦蹦蹦跳跳，还沾满了泥巴。",
+      "text_original": "That night, Mouse’s dreams were bouncy and muddy.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-004.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/books/bd-a-house-for-mouse/page-005.svg",
+      "image_alt": "绿色鹦鹉站在木架上，低头邀请小老鼠。",
+      "text_zh": "“你可以来和我一起睡。”鹦鹉说。“谢谢你。”小老鼠说。",
+      "text_original": "“You can come and sleep with me,” said Parrot. “Thank you,” said Mouse.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-005.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/books/bd-a-house-for-mouse/page-006.svg",
+      "image_alt": "梦境中的树叶和鸟鸣围着小老鼠，小老鼠捂着耳朵。",
+      "text_zh": "那天夜里，小老鼠的梦又吵闹，又热闹。",
+      "text_original": "That night, Mouse’s dreams were noisy and wild.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-006.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "image": "/assets/books/bd-a-house-for-mouse/page-007.svg",
+      "image_alt": "金鱼在透明鱼缸中摆尾，小老鼠在缸外听它说话。",
+      "text_zh": "“你可以来和我一起睡。”小鱼说。“谢谢你。”小老鼠说。",
+      "text_original": "“You can come and sleep with me,” said Fish. “Thank you,” said Mouse.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-007.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "image": "/assets/books/bd-a-house-for-mouse/page-008.svg",
+      "image_alt": "蓝色梦境中，小老鼠漂在水草和小鱼之间。",
+      "text_zh": "那天夜里，小老鼠的梦又冷，又湿。",
+      "text_original": "That night, Mouse’s dreams were cold and wet.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-008.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-008.mp3"
+    },
+    {
+      "page_number": 9,
+      "image": "/assets/books/bd-a-house-for-mouse/page-009.svg",
+      "image_alt": "小老鼠沿着墙角向温暖的房间跑去。",
+      "text_zh": "小老鼠需要一个温暖又干燥的地方。",
+      "text_original": "Mouse needed somewhere warm and dry.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-009.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-009.mp3"
+    },
+    {
+      "page_number": 10,
+      "image": "/assets/books/bd-a-house-for-mouse/page-010.svg",
+      "image_alt": "小老鼠站在沙发扶手上，望着安全封闭的暖炉和旁边的书架。",
+      "text_zh": "它在暖暖的炉火旁停了下来，四处望了望。",
+      "text_original": "Mouse paused by the warm fire and looked around.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-010.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-010.mp3"
+    },
+    {
+      "page_number": 11,
+      "image": "/assets/books/bd-a-house-for-mouse/page-011.svg",
+      "image_alt": "一排大小不同的书中间留着小空隙，小老鼠钻了进去。",
+      "text_zh": "小老鼠在附近发现了一个书架。",
+      "text_original": "Mouse found a bookshelf nearby.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-011.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-011.mp3"
+    },
+    {
+      "page_number": 12,
+      "image": "/assets/books/bd-a-house-for-mouse/page-012.svg",
+      "image_alt": "小老鼠蜷在书架上的软布里睡着，房间暖暖的。",
+      "text_zh": "那天夜里，小老鼠做了一个温暖又舒适的梦。",
+      "text_original": "That night, Mouse had warm and cosy dreams.",
+      "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-012.mp3",
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-012.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-06T03:08:36.617487+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-06T08:44:35.292788+00:00",
+      "review_status": "pending"
+    }
+  }
+}

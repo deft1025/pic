@@ -1,0 +1,109 @@
+{
+  "id": "rainy-friends",
+  "title_zh": "下雨天的好朋友",
+  "title_original": "Friends on a Rainy Day",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "一把小伞能装下几位朋友？雨天的小森林里，大家找到了一起躲雨、一起快乐的办法。",
+  "age_ranges": [
+    "3-4",
+    "5-6"
+  ],
+  "categories": [
+    "animals",
+    "habits"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 5,
+  "featured_order": 0,
+  "published_at": "2026-11-01T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-6fc55f74b8b1",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "森林里下雨了，小青蛙撑着一把绿叶做的小伞。",
+      "text_zh": "滴答滴答，森林下雨了。小青蛙撑着一把绿叶伞。",
+      "text_original": "Drip, drop. Rain fell on the forest. Frog held a green leaf umbrella.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子跑来躲雨，小青蛙伸出手，邀请它一起撑绿叶伞。",
+      "text_zh": "小兔子跑来了：“我可以躲一躲吗？”“当然，快进来！”",
+      "text_original": "Bunny came running. “May I shelter here?” “Of course! Come under!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子、小青蛙和小刺猬挤在一起，绿叶伞已经遮不住大家。",
+      "text_zh": "小刺猬也来了。大家挤一挤，小伞还是太小啦。",
+      "text_original": "Hedgehog came, too. They squeezed together, but the little umbrella was too small.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小青蛙指向前方的大树，三位朋友一起向树下走去。",
+      "text_zh": "小青蛙想了想：“前面有一棵大树，我们一起去吧。”",
+      "text_original": "Frog had an idea. “There is a big tree ahead. Let’s go there together.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "大树的树冠像一把大伞，三位朋友坐在树下一起听雨。",
+      "text_zh": "大树像一把大大的伞。大家坐下来，听雨点唱歌。",
+      "text_original": "The big tree was a giant umbrella. They sat down and listened to the rain sing.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "雨停后太阳出来了，小兔子、小青蛙和小刺猬笑着跳过水洼回家。",
+      "text_zh": "雨停了，太阳出来了。朋友们跳过小水洼，一路笑着回家。",
+      "text_original": "The rain stopped and the sun came out. The friends hopped over puddles, laughing all the way home.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:39:45.390274+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:56:16.091565+00:00",
+      "review_status": "pending"
+    }
+  }
+}

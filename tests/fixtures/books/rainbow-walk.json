@@ -1,0 +1,109 @@
+{
+  "id": "rainbow-walk",
+  "title_zh": "寻找彩虹的颜色",
+  "title_original": "Finding Rainbow Colors",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "雨后的森林藏着七彩的惊喜。和小兔子出门散步，在花朵、果实与天空里找到颜色。",
+  "age_ranges": [
+    "0-2",
+    "3-4"
+  ],
+  "categories": [
+    "cognition",
+    "nature"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 4,
+  "featured_order": 5,
+  "published_at": "2026-11-02T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-9bf9eeb72a2d",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "雨停后，小兔子穿上黄色雨靴，沿着有水洼的小路出门。",
+      "text_zh": "雨停了，小兔子穿上雨靴，去找彩虹的颜色。",
+      "text_original": "The rain stopped. Bunny put on her boots to look for rainbow colors.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子在绿叶下面发现红红的草莓，伸出小手指向草莓。",
+      "text_zh": "红红的草莓躲在叶子下。“红色，我找到你啦！”",
+      "text_original": "Red strawberries hid beneath the leaves. “Red, I found you!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "阳光下，一朵高高的黄色小花开放，小兔子凑近看。",
+      "text_zh": "一朵黄黄的小花朝太阳点头。“黄色，在这里！”",
+      "text_original": "A yellow flower nodded to the sun. “Here is yellow!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子穿着雨靴走在柔软的绿色草地上，脚边是一簇簇青草。",
+      "text_zh": "绿绿的草地软绵绵。小兔子轻轻踩上去，像走在地毯上。",
+      "text_original": "The green grass felt soft. Bunny stepped on it gently, like a fluffy carpet.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "蓝天白云倒映在一大块水洼中，小兔子低头看水里的天空。",
+      "text_zh": "蓝蓝的天空里，白云慢慢飘。水洼也藏着一小片蓝天。",
+      "text_original": "White clouds drifted across the blue sky. A puddle held a little piece of blue, too.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "七色彩虹横跨雨后的天空，小兔子站在草地上开心地张开双臂。",
+      "text_zh": "抬头看，彩虹出来了！原来，美丽的颜色一直在身边。",
+      "text_original": "Look up! A rainbow appeared! Beautiful colors had been around us all along.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:39:32.632566+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:56:03.258602+00:00",
+      "review_status": "pending"
+    }
+  }
+}

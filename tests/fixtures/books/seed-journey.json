@@ -1,0 +1,109 @@
+{
+  "id": "seed-journey",
+  "title_zh": "一颗种子的旅行",
+  "title_original": "A Little Seed’s Journey",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "一颗小种子落进泥土，遇见雨水和阳光。用一个小小的生命故事，陪孩子观察自然，学习等待。",
+  "age_ranges": [
+    "3-4",
+    "5-6"
+  ],
+  "categories": [
+    "nature",
+    "cognition"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 3,
+  "featured_order": 4,
+  "published_at": "2026-11-03T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-0d09a0e2c521",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "秋风把一颗小种子吹进松软的土壤，地下剖面能看见种子。",
+      "text_zh": "秋风吹呀吹，一颗小种子落在松软的泥土里。",
+      "text_original": "The autumn wind blew a little seed into the soft earth.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "冬天的土地盖着积雪，小种子安静躺在地下，地面上是光秃秃的树。",
+      "text_zh": "冬天来了。小种子躺在泥土被子里，静静地等着。",
+      "text_original": "Winter came. The seed rested quietly under its blanket of soil.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "春雨落在泥土上，小种子吸足水分，底端开始长出小根。",
+      "text_zh": "滴答，滴答！春雨轻轻敲门：“小种子，该喝水啦。”",
+      "text_original": "Drip, drop! The spring rain tapped gently. “Little seed, have a drink.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "土壤剖面里，小根向下生长，嫩芽穿过地面向阳光伸展。",
+      "text_zh": "一条小根往下钻，一片嫩芽往上长。你好，阳光！",
+      "text_original": "A little root grew down. A tiny shoot grew up. Hello, sunshine!",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小苗长出几片大大的绿叶，一只红色瓢虫落在叶子上休息。",
+      "text_zh": "叶子一天比一天大。小瓢虫飞过来，在叶子上歇歇脚。",
+      "text_original": "The leaves grew bigger each day. A ladybug came to rest on a leaf.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "夏天，绿叶间开出一朵高高的黄色小花，蝴蝶从旁边飞过。",
+      "text_zh": "夏天，小花终于开了。原来，慢慢长大，也是一件很棒的事。",
+      "text_original": "In summer, a flower finally opened. Growing slowly was a wonderful thing.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:40:00.210616+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:56:34.193310+00:00",
+      "review_status": "pending"
+    }
+  }
+}

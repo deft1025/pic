@@ -1,0 +1,171 @@
+{
+  "id": "bd-whose-button-is-this",
+  "title_zh": "这是谁的纽扣",
+  "title_original": "Whose button is this?",
+  "author": "Paul Kennedy",
+  "illustrator": "小小绘本馆 · 新版矢量插画（原作：James Woolley）",
+  "description_zh": "小机器人捡到一颗纽扣，穿过热闹街道寻找主人，最终收获新朋友。适合讨论助人、换位思考和等车通行；信号灯情节是角色的误会。",
+  "age_ranges": [
+    "5-6"
+  ],
+  "categories": [
+    "habits",
+    "cognition"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-whose-button-is-this/cover.svg",
+  "page_count": 13,
+  "reading_minutes": 7,
+  "featured_order": 8,
+  "published_at": "2026-11-06T12:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-v1-story-art-v2-99900222971a",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 翻译与重绘版",
+    "source_url": "https://bookdash.org/books/whose-button-is-this/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《Whose button is this?》由 Book Dash 发布；作者 Paul Kennedy，原作插画 James Woolley，设计 Louise Gale。原作采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版为小小绘本馆 AI 辅助中文翻译及全新 SVG 插画，英文依原作整理，非原版插画；不表示原作者或 Book Dash 为本产品背书。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/books/bd-whose-button-is-this/page-001.svg",
+      "image_alt": "蓝绿色小机器人丁丁坐在路沿，一颗四孔蓝纽扣滚到面前。",
+      "text_zh": "小机器人丁丁坐在路边，一颗纽扣蹦蹦跳跳地滚到了他面前。",
+      "text_original": "Tinny Tim was sitting on the road when a button bounced his way.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-001.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/books/bd-whose-button-is-this/page-002.svg",
+      "image_alt": "丁丁双手捧着纽扣，沿着人行道向前寻找。",
+      "text_zh": "“这会是从哪里掉下来的呢？”他说。他想弄个明白。",
+      "text_original": "“I wonder where this comes from,” he said. He wanted to find out.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-002.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/books/bd-whose-button-is-this/page-003.svg",
+      "image_alt": "一只巨大的红鞋落在人行道上，丁丁抱着纽扣站在鞋边。",
+      "text_zh": "路边人来人往。“哇！”他差点被一只大鞋子踩扁。",
+      "text_original": "It was busy on the side of the road. “Woah!” He nearly got squashed.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-003.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-003.mp3"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/books/bd-whose-button-is-this/page-004.svg",
+      "image_alt": "丁丁抓着红鞋的鞋带荡开，纽扣抱在胸前。",
+      "text_zh": "他幸运地逃开了。“外面真有点吓人。”他说。",
+      "text_original": "He made a lucky escape. “It’s scary out here,” he said.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-004.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/books/bd-whose-button-is-this/page-005.svg",
+      "image_alt": "丁丁举起纽扣，抬头看行人信号灯上的绿色小人。",
+      "text_zh": "“你好呀，这是你的吗？”",
+      "text_original": "“Hey there, is this yours?”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-005.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/books/bd-whose-button-is-this/page-006.svg",
+      "image_alt": "同一盏行人信号灯变成红色，丁丁仍举着蓝纽扣。",
+      "text_zh": "绿衣人什么也没说，只是变成了红色。“真不礼貌。”",
+      "text_original": "The green man said nothing. He just turned red. “What a rude person.”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-006.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "image": "/assets/books/bd-whose-button-is-this/page-007.svg",
+      "image_alt": "丁丁沿街寻找，一只棕色小狗从前面走来。",
+      "text_zh": "丁丁继续寻找。“这是谁的纽扣呢？”",
+      "text_original": "Tinny Tim carried on looking. “Whose button is this?”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-007.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "image": "/assets/books/bd-whose-button-is-this/page-008.svg",
+      "image_alt": "小狗低头舔丁丁，丁丁抱着纽扣，脸上沾着水珠。",
+      "text_zh": "“哇……至少，它还挺友好的。”",
+      "text_original": "“Woah..! ...at least he’s friendly.”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-008.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-008.mp3"
+    },
+    {
+      "page_number": 9,
+      "image": "/assets/books/bd-whose-button-is-this/page-009.svg",
+      "image_alt": "丁丁停在人行横道的路沿内侧，望向街对面。",
+      "text_zh": "“我得去马路对面。我想，纽扣一定是从那里掉过来的。”",
+      "text_original": "“I’ve got to get to the other side. I’m sure that’s where this comes from.”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-009.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-009.mp3"
+    },
+    {
+      "page_number": 10,
+      "image": "/assets/books/bd-whose-button-is-this/page-010.svg",
+      "image_alt": "汽车驶过水洼溅起水花，丁丁留在人行道上等待。",
+      "text_zh": "哗啦！“好险呀。”他等车子都开过去，才继续往前走。",
+      "text_original": "SPLASH! “That was close.” He waited for the cars to pass before he carried on.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-010.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-010.mp3"
+    },
+    {
+      "page_number": 11,
+      "image": "/assets/books/bd-whose-button-is-this/page-011.svg",
+      "image_alt": "丁丁举着纽扣，向街边一个坐在长椅上的布娃娃打招呼。",
+      "text_zh": "也许，这就是他要找的人。“你好，你是谁呀？”",
+      "text_original": "Maybe this was who he was looking for. “Hello, who are you?”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-011.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-011.mp3"
+    },
+    {
+      "page_number": 12,
+      "image": "/assets/books/bd-whose-button-is-this/page-012.svg",
+      "image_alt": "布娃娃露比一只眼睛是蓝纽扣，另一只眼睛处只有针脚；丁丁递出纽扣。",
+      "text_zh": "“我是布娃娃露比。”“我想，这是你的。”丁丁说。",
+      "text_original": "“I’m Ruby Rags.” “I think this is yours,”he said.",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-012.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-012.mp3"
+    },
+    {
+      "page_number": 13,
+      "image": "/assets/books/bd-whose-button-is-this/page-013.svg",
+      "image_alt": "露比的两只纽扣眼睛都完整了，和丁丁并肩坐在长椅上。",
+      "text_zh": "“谢谢你，小机器人。我们可以做朋友吗？”",
+      "text_original": "“Thank you, little robot. Can we be friends?”",
+      "audio_zh": "/assets/books/bd-whose-button-is-this/audio/zh/0714555aaa57e732/page-013.mp3",
+      "audio_original": "/assets/books/bd-whose-button-is-this/audio/en/fa719a4a42df21dd/page-013.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-06T03:13:46.405877+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-06T08:49:54.338158+00:00",
+      "review_status": "pending"
+    }
+  }
+}

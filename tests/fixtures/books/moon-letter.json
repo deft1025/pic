@@ -1,0 +1,109 @@
+{
+  "id": "moon-letter",
+  "title_zh": "寄给月亮的一封信",
+  "title_original": "A Letter to the Moon",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "如果可以给月亮寄一封信，你想说些什么？小兔子把一天的小事写下来，发现平凡日子里的闪光。",
+  "age_ranges": [
+    "5-6",
+    "3-4"
+  ],
+  "categories": [
+    "bedtime",
+    "emotions"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 3,
+  "featured_order": 0,
+  "published_at": "2026-11-01T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-8e5d9145dfd1",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子坐在桌边，面前是一张空白信纸，窗外是明亮的月亮。",
+      "text_zh": "小兔子坐在窗边，想给月亮写一封信。可是，写什么呢？",
+      "text_original": "Bunny sat by the window. She wanted to write to the moon. But what should she say?",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "回想白天，小兔子帮小熊拾起掉在小路上的蓝莓，旁边放着篮子。",
+      "text_zh": "她写：“今天，我帮小熊捡起了掉在地上的蓝莓。”",
+      "text_original": "She wrote, “Today, I helped Bear pick up his fallen blueberries.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子坐在路边，膝盖贴着小小的创可贴，小熊伸出手陪伴它。",
+      "text_zh": "她又写：“我摔了一跤，有一点疼。朋友陪我坐了好久。”",
+      "text_original": "She added, “I fell down and it hurt a little. A friend sat with me for a long time.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "石头缝隙里长出一朵黄色小花，小兔子在旁边认真观察。",
+      "text_zh": "“后来，我看见一朵小花，从石头缝里长出来。它真勇敢。”",
+      "text_original": "“Later, I saw a little flower growing between the stones. It was so brave.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小兔子把写好的信放在窗台上，一束月光照着信封。",
+      "text_zh": "信写好了。小兔子把它放在窗台，让月光轻轻读一读。",
+      "text_original": "The letter was ready. Bunny put it on the windowsill for the moonlight to read.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "夜色中的小屋亮着暖光，小兔子在窗边微笑，信在窗台上，月亮挂在屋外。",
+      "text_zh": "窗外，月亮亮亮的。小兔子笑了：“明天，我还会有新的故事。”",
+      "text_original": "Outside, the moon glowed brightly. Bunny smiled. “Tomorrow, I will have new stories to tell.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:39:07.290826+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:55:38.478967+00:00",
+      "review_status": "pending"
+    }
+  }
+}

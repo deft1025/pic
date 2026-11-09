@@ -1,0 +1,162 @@
+{
+  "id": "bd-a-tiny-seed",
+  "title_zh": "一粒种子的力量",
+  "title_original": "A Tiny Seed: The Story of Wangari Maathai",
+  "author": "Nicola Rijsdijk",
+  "illustrator": "小小绘本馆 · 新版矢量插画（原作：Maya Marshak）",
+  "description_zh": "从肯尼亚的菜园到种树行动，认识旺加里·马塔伊的求学与环保故事。适合 5–6 岁成人陪读，讨论树木、家乡和集体行动；含贫困与人物离世情节。",
+  "age_ranges": [
+    "5-6"
+  ],
+  "categories": [
+    "nature",
+    "cognition"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-a-tiny-seed/cover.svg",
+  "page_count": 12,
+  "reading_minutes": 10,
+  "featured_order": 4,
+  "published_at": "2026-11-06T12:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-v1-story-art-v2-c1b51b1979f7",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 翻译与重绘版",
+    "source_url": "https://bookdash.org/books/a-tiny-seed/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《A Tiny Seed: The Story of Wangari Maathai》由 Book Dash 发布；作者 Nicola Rijsdijk，原作插画 Maya Marshak，本次正文版本设计 Karen Lilje（现官网版本设计另列 Tarryn-Anne Anderson）。原作采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版为小小绘本馆 AI 辅助中文翻译及全新 SVG 插画，英文依原作整理，非原版插画；不表示原作者或 Book Dash 为本产品背书。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/books/bd-a-tiny-seed/page-001.svg",
+      "image_alt": "幼年旺加里和妈妈站在肯尼亚山脚的菜地里，背景有山峰。",
+      "text_zh": "在东非肯尼亚山坡上的一个村庄里，一个小女孩和妈妈一起在田里劳动。她的名字叫旺加里。",
+      "text_original": "In a village on the slopes of Mount Kenya in East Africa, a little girl worked in the fields with her mother. Her name was Wangari.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-001.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/books/bd-a-tiny-seed/page-002.svg",
+      "image_alt": "旺加里在菜畦中播种，松土用的砍刀平放在一旁。",
+      "text_zh": "旺加里喜欢待在户外。她在家里的菜园里用砍刀松开泥土，把小小的种子按进温暖的土地。",
+      "text_original": "Wangari loved being outside. In her family’s food garden she broke up the soil with her machete. She pressed tiny seeds into the warm earth.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-002.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/books/bd-a-tiny-seed/page-003.svg",
+      "image_alt": "落日下，旺加里提着蔬菜沿田间小路走过河上的小桥。",
+      "text_zh": "她最喜欢一天里太阳刚刚落山的时候。当天色暗得看不清植物了，旺加里就知道该回家了。她沿着田间窄窄的小路走，途中还要穿过河流。",
+      "text_original": "Her favourite time of day was just after sunset. When it got too dark to see the plants, Wangari knew it was time to go home. She would follow the narrow paths through the fields, crossing rivers as she went.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-003.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-003.mp3"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/books/bd-a-tiny-seed/page-004.svg",
+      "image_alt": "七岁的旺加里背着书包，哥哥陪她走向学校，一位家人在后方送行。",
+      "text_zh": "旺加里是个聪明的孩子，特别盼望去上学。可是爸爸妈妈想让她留在家里帮忙。七岁那年，哥哥说服了父母，让她去学校读书。",
+      "text_original": "Wangari was a clever child and couldn’t wait to go to school. But her mother and father wanted her to stay and help them at home. When she was seven years old, her big brother persuaded her parents to let her go to school.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-004.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/books/bd-a-tiny-seed/page-005.svg",
+      "image_alt": "旺加里在书桌前读书，打开的书上画着世界地图，窗外一架飞机飞过。",
+      "text_zh": "她喜欢学习！每读一本书，旺加里就懂得更多。她的成绩非常好，后来得到了去美国留学的机会。旺加里很兴奋，她想更多地了解世界。",
+      "text_original": "She liked to learn! Wangari learnt more and more with every book she read. She did so well at school that she was invited to study in the United States of America. Wangari was excited! She wanted to know more about the world.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-005.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/books/bd-a-tiny-seed/page-006.svg",
+      "image_alt": "长大后的旺加里在大学实验桌旁用放大镜观察幼苗，回忆气泡里是童年树下的游戏。",
+      "text_zh": "在美国的大学里，旺加里学到了许多新知识。她研究植物怎样生长，也想起了自己的成长：小时候，她和兄弟们在美丽的肯尼亚森林里，在树荫下玩游戏。",
+      "text_original": "At the American university Wangari learnt many new things. She studied plants and how they grow. And she remembered how she grew: playing games with her brothers in the shade of the trees in the beautiful Kenyan forests.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-006.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "image": "/assets/books/bd-a-tiny-seed/page-007.svg",
+      "image_alt": "旺加里坐在书堆旁阅读，窗边的想象画面里是肯尼亚家乡。",
+      "text_zh": "懂得越多，旺加里就越明白自己多么爱肯尼亚的人民。她希望大家幸福、自由。懂得越多，她就越想念非洲的家。",
+      "text_original": "The more she learnt, the more she realised that she loved the people of Kenya. She wanted them to be happy and free. The more she learnt, the more she remembered her African home.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-007.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "image": "/assets/books/bd-a-tiny-seed/page-008.svg",
+      "image_alt": "旺加里回到家乡，看见树桩、大片农田和提着空柴篮的妇女。",
+      "text_zh": "学业结束后，她回到了肯尼亚。可是家乡变了，大片农场铺满大地。妇女们没有做饭用的柴火，人们生活贫困，孩子们忍着饥饿。",
+      "text_original": "When she had finished her studies, she returned to Kenya. But her country had changed. Huge farms stretched across the land. Women had no wood to make cooking fires. The people were poor and the children were hungry.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-008.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-008.mp3"
+    },
+    {
+      "page_number": 9,
+      "image": "/assets/books/bd-a-tiny-seed/page-009.svg",
+      "image_alt": "旺加里教三位妇女播种和移栽幼苗，旁边摆着待出售的苗盆。",
+      "text_zh": "旺加里知道该怎么做。她教妇女们从种子开始种树。大家卖掉树苗，用挣来的钱照顾家人。妇女们很高兴，旺加里让她们感到自己有力量，也有办法。",
+      "text_original": "Wangari knew what to do. She taught the women how to plant trees from seeds. The women sold the trees and used the money to look after their families. The women were very happy. Wangari had helped them to feel powerful and strong.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-009.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-009.mp3"
+    },
+    {
+      "page_number": 10,
+      "image": "/assets/books/bd-a-tiny-seed/page-010.svg",
+      "image_alt": "近处是幼苗，远处是重新长起的树林，一条河穿过绿色土地。",
+      "text_zh": "时间慢慢过去，新种的树长成了森林，河流又开始流淌。旺加里的倡议传遍非洲。如今，从她倡导种下的种子里，已经长出了数以百万计的树。",
+      "text_original": "As time passed, the new trees grew into forests, and the rivers started flowing again. Wangari’s message spread across Africa. Today, millions of trees have grown from Wangari’s seeds.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-010.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-010.mp3"
+    },
+    {
+      "page_number": 11,
+      "image": "/assets/books/bd-a-tiny-seed/page-011.svg",
+      "image_alt": "旺加里佩戴绿色头巾，手捧象征和平奖的金色奖章，身后是树木。",
+      "text_zh": "旺加里辛勤的努力被世界各地的人们看见了。她获得了一项著名的奖项，叫作诺贝尔和平奖。她是第一位获得这个奖项的非洲女性。",
+      "text_original": "Wangari had worked hard. People all over the world took notice, and gave her a famous prize. It is called the Nobel Peace Prize, and she was the first African woman ever to receive it.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-011.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-011.mp3"
+    },
+    {
+      "page_number": 12,
+      "image": "/assets/books/bd-a-tiny-seed/page-012.svg",
+      "image_alt": "一棵高大的树在阳光下伸展枝叶，孩子和家长在树荫下照料幼苗。",
+      "text_zh": "旺加里在二〇一一年去世了。但每当看见一棵美丽的树，我们都可以想起她。",
+      "text_original": "Wangari died in 2011, but we can think of her every time we see a beautiful tree.",
+      "audio_zh": "/assets/books/bd-a-tiny-seed/audio/zh/45c076e0c85cccea/page-012.mp3",
+      "audio_original": "/assets/books/bd-a-tiny-seed/audio/en/90e9ae1bc14ebc51/page-012.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-06T03:09:21.079807+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-06T08:45:07.027148+00:00",
+      "review_status": "pending"
+    }
+  }
+}

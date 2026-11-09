@@ -1,0 +1,109 @@
+{
+  "id": "count-stars",
+  "title_zh": "一二三，数星星",
+  "title_original": "One, Two, Three Little Stars",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "一颗、两颗、三颗……小狐狸和妈妈躺在草地上，数一数夜空里的小星星，也数一数身边的爱。",
+  "age_ranges": [
+    "0-2",
+    "3-4"
+  ],
+  "categories": [
+    "bedtime",
+    "cognition"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 4,
+  "featured_order": 0,
+  "published_at": "2026-11-02T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-ebbda898072a",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小狐狸和妈妈躺在草地上的毯子上，抬头等待星星出现。",
+      "text_zh": "夜晚来了，小狐狸和妈妈带着毯子，躺在柔软的草地上。",
+      "text_original": "Night came. Fox and Mama lay on a soft blanket in the grass.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "夜空中只有一颗明亮的大星星，小狐狸和妈妈在毯子上仰望。",
+      "text_zh": "一颗星星亮起来，像一只眨呀眨的小眼睛。",
+      "text_original": "One star lit up like a tiny, twinkling eye.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "两颗明亮的大星星并排挂在夜空，小狐狸和妈妈一起看。",
+      "text_zh": "两颗星星肩并肩，好像在悄悄说话。",
+      "text_original": "Two stars sat side by side, as if whispering to each other.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "三颗大星星排成一条通往月亮的小路，下方是小狐狸和妈妈。",
+      "text_zh": "三颗星星排成队，给月亮搭了一条小路。",
+      "text_original": "Three stars lined up to make a little path to the moon.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "五颗明亮的星星挂在夜空，小狐狸躺在毯子上困得闭上了眼睛。",
+      "text_zh": "四颗，五颗……小狐狸数着数着，眼皮开始打架。",
+      "text_original": "Four, five… As Fox counted, his eyelids grew heavy.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "满天星光下，妈妈抱起熟睡的小狐狸，毯子留在柔软的草地上。",
+      "text_zh": "妈妈轻轻抱起它。“今晚的星星很多，给你的爱也很多。”",
+      "text_original": "Mama gently picked him up. “There are so many stars tonight, and so much love for you.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:38:20.892994+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:55:02.529416+00:00",
+      "review_status": "pending"
+    }
+  }
+}

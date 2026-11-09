@@ -1,0 +1,657 @@
+{
+  "bd-come-back-cat": {
+    "cover_page": 5,
+    "pages": [
+      {
+        "scene": "come-back-cat-1",
+        "text_zh": "小猫，回来呀！和我一起玩吧。",
+        "description": "小猫躲在奶油色沙发下，前面有一只滚动的小球。"
+      },
+      {
+        "scene": "come-back-cat-2",
+        "text_zh": "坐进你的小篮子。乖乖待在这里！",
+        "description": "小猫坐在铺着软垫的藤篮里，尾巴垂在篮沿。"
+      },
+      {
+        "scene": "come-back-cat-3",
+        "text_zh": "小猫，回来呀！那里太高啦。",
+        "description": "小猫张开爪子爬上浅蓝色窗帘，离地板很高。"
+      },
+      {
+        "scene": "come-back-cat-4",
+        "text_zh": "小猫，回来呀！别跑到外面去。",
+        "description": "小猫从半开的后门溜出，屋内的篮子留在身后。"
+      },
+      {
+        "scene": "come-back-cat-5",
+        "text_zh": "瞧，小猫追着蝴蝶跑进了花园。",
+        "description": "小猫在花园里追两只蝴蝶，花草围着小径。"
+      },
+      {
+        "scene": "come-back-cat-6",
+        "text_zh": "小猫，回来呀！那可不是你的。",
+        "description": "小猫拉扯晾衣绳上的袜子，线头开始散开。"
+      },
+      {
+        "scene": "come-back-cat-7",
+        "text_zh": "小猫，回来呀！你找到什么啦？",
+        "description": "小猫低头观察蜗牛，袜子的线头缠在尾巴上。"
+      },
+      {
+        "scene": "come-back-cat-8",
+        "text_zh": "小猫，回来呀。那不是你的朋友！",
+        "description": "小猫带着线头和蜗牛走近母鸡，母鸡张开翅膀。"
+      },
+      {
+        "scene": "come-back-cat-9",
+        "text_zh": "你好呀，小猫！你回来了吗？",
+        "description": "小猫回到门口，蜗牛在背上，羽毛飘在头边。"
+      },
+      {
+        "scene": "come-back-cat-10",
+        "text_zh": "待在篮子里。现在该午睡啦。",
+        "description": "小猫蜷在篮子里，背上还有蜗牛，旁边落着羽毛。"
+      },
+      {
+        "scene": "come-back-cat-11",
+        "text_zh": "小猫？",
+        "description": "篮子里只剩几根羽毛，小猫又不见了。"
+      },
+      {
+        "scene": "come-back-cat-12",
+        "text_zh": "嘘……小猫在沙发上睡着了。",
+        "description": "小猫在沙发软垫上闭眼睡觉，蜗牛、线头和羽毛留在旁边。"
+      }
+    ]
+  },
+  "bd-a-house-for-mouse": {
+    "cover_page": 11,
+    "pages": [
+      {
+        "scene": "a-house-for-mouse-1",
+        "text_zh": "小老鼠正在找一个新家。",
+        "description": "小老鼠背着小包，沿小径望向远处的黄色房子。"
+      },
+      {
+        "scene": "a-house-for-mouse-2",
+        "text_zh": "这里看起来很不错。",
+        "description": "半开的黄色房门透出暖光，小老鼠探头往里看。"
+      },
+      {
+        "scene": "a-house-for-mouse-3",
+        "text_zh": "“你可以来和我一起睡。”小狗说。“谢谢你。”小老鼠说。",
+        "description": "黑色小狗趴在软垫上邀请小老鼠，小老鼠站在垫边。"
+      },
+      {
+        "scene": "a-house-for-mouse-4",
+        "text_zh": "那天夜里，小老鼠的梦蹦蹦跳跳，还沾满了泥巴。",
+        "description": "梦境用云朵边框围起，小老鼠在泥地上弹跳。"
+      },
+      {
+        "scene": "a-house-for-mouse-5",
+        "text_zh": "“你可以来和我一起睡。”鹦鹉说。“谢谢你。”小老鼠说。",
+        "description": "绿色鹦鹉站在木架上，低头邀请小老鼠。"
+      },
+      {
+        "scene": "a-house-for-mouse-6",
+        "text_zh": "那天夜里，小老鼠的梦又吵闹，又热闹。",
+        "description": "梦境中的树叶和鸟鸣围着小老鼠，小老鼠捂着耳朵。"
+      },
+      {
+        "scene": "a-house-for-mouse-7",
+        "text_zh": "“你可以来和我一起睡。”小鱼说。“谢谢你。”小老鼠说。",
+        "description": "金鱼在透明鱼缸中摆尾，小老鼠在缸外听它说话。"
+      },
+      {
+        "scene": "a-house-for-mouse-8",
+        "text_zh": "那天夜里，小老鼠的梦又冷，又湿。",
+        "description": "蓝色梦境中，小老鼠漂在水草和小鱼之间。"
+      },
+      {
+        "scene": "a-house-for-mouse-9",
+        "text_zh": "小老鼠需要一个温暖又干燥的地方。",
+        "description": "小老鼠沿着墙角向温暖的房间跑去。"
+      },
+      {
+        "scene": "a-house-for-mouse-10",
+        "text_zh": "它在暖暖的炉火旁停了下来，四处望了望。",
+        "description": "小老鼠站在沙发扶手上，望着安全封闭的暖炉和旁边的书架。"
+      },
+      {
+        "scene": "a-house-for-mouse-11",
+        "text_zh": "小老鼠在附近发现了一个书架。",
+        "description": "一排大小不同的书中间留着小空隙，小老鼠钻了进去。"
+      },
+      {
+        "scene": "a-house-for-mouse-12",
+        "text_zh": "那天夜里，小老鼠做了一个温暖又舒适的梦。",
+        "description": "小老鼠蜷在书架上的软布里睡着，房间暖暖的。"
+      }
+    ]
+  },
+  "bd-amazing-daisy": {
+    "cover_page": 11,
+    "pages": [
+      {
+        "scene": "amazing-daisy-1",
+        "text_zh": "从前，在一个小村庄附近的小农场里，住着一只名叫黛西的小鸡。",
+        "description": "黄色小鸡黛西站在小农场的鸡舍前，远处是村庄。"
+      },
+      {
+        "scene": "amazing-daisy-2",
+        "text_zh": "“等我长大了，我要飞得高高的，飞上天空！”黛西说。可是，其他小鸡都笑了起来。",
+        "description": "黛西张开小翅膀指向天空，三只小鸡在一旁笑。"
+      },
+      {
+        "scene": "amazing-daisy-3",
+        "text_zh": "“你真奇怪。”它们说，“我们再也不跟你玩了。”妈妈告诉她：“黛西，我们都会扑扇翅膀，可是鸡要飞起来很不容易。”",
+        "description": "鸡妈妈用翅膀搂着黛西，其他小鸡站在远处。"
+      },
+      {
+        "scene": "amazing-daisy-4",
+        "text_zh": "黛西不肯放弃。每天，她都独自练习扑扇翅膀。扑扇，扑扇，扑扇！可她还是飞不离地面。",
+        "description": "黛西独自在鸡舍旁扑扇翅膀，两只脚仍在地面。"
+      },
+      {
+        "scene": "amazing-daisy-5",
+        "text_zh": "练习的时候，她想象自己飞上高空，低头看着地面上的小鸡。她想象自己飞过麻雀，飞过燕子。“哇！”鸟儿们会说，“一只会飞的鸡！”",
+        "description": "云朵形想象画面中，黛西飞过麻雀和燕子，农场在下面。"
+      },
+      {
+        "scene": "amazing-daisy-6",
+        "text_zh": "于是，扑扇，扑扇，扑扇！黛西每天都练习。她离开了地面，却又跌落下来。",
+        "description": "黛西从低处跳起又落向软草，翅膀用力扑扇。"
+      },
+      {
+        "scene": "amazing-daisy-7",
+        "text_zh": "“我永远也飞不起来！”黛西哭着对妈妈说，“它们说得对。”妈妈说：“黛西，你和其他小鸡不一样。它们不想飞，可是你想！你能做到。”",
+        "description": "黛西眼含泪水靠在鸡妈妈身边，妈妈俯身安慰她。"
+      },
+      {
+        "scene": "amazing-daisy-8",
+        "text_zh": "第二天，黛西爬上鸡舍顶。扑扇，扑扇，扑扇！她飞到了半空中，不停地扑扇翅膀，扑扇呀，扑扇呀，然后……",
+        "description": "黛西从矮鸡舍屋顶扑向空中，身后留下起飞的轨迹。"
+      },
+      {
+        "scene": "amazing-daisy-9",
+        "text_zh": "砰！黛西又落到了地上。其他小鸡哈哈大笑：“我们早就说过，鸡不会飞！”",
+        "description": "黛西落在松软草堆里，三只小鸡在一旁笑。"
+      },
+      {
+        "scene": "amazing-daisy-10",
+        "text_zh": "可是，再过一天，黛西爬得更高，一直爬到了圆屋的屋顶上。扑扇，扑扇，扑扇！她飞到了半空中，不停地扑扇翅膀，扑扇呀，扑扇呀，然后……",
+        "description": "黛西从更高的圆屋草顶起飞，风托着她的翅膀。"
+      },
+      {
+        "scene": "amazing-daisy-11",
+        "text_zh": "她真的一直在飞！翅膀下面的风越来越有力，她越飞越高。麻雀和燕子说：“太神奇了！一只会飞的鸡！”",
+        "description": "黛西展开翅膀在云间飞翔，麻雀和燕子陪在两侧。"
+      },
+      {
+        "scene": "amazing-daisy-12",
+        "text_zh": "其他小鸡也想像她一样。它们说：“哦，黛西，你真了不起！”",
+        "description": "小鸡们站在鸡舍顶张开翅膀，抬头望着空中的黛西。"
+      }
+    ]
+  },
+  "bd-a-tiny-seed": {
+    "cover_page": 10,
+    "pages": [
+      {
+        "scene": "a-tiny-seed-1",
+        "text_zh": "在东非肯尼亚山坡上的一个村庄里，一个小女孩和妈妈一起在田里劳动。她的名字叫旺加里。",
+        "description": "幼年旺加里和妈妈站在肯尼亚山脚的菜地里，背景有山峰。"
+      },
+      {
+        "scene": "a-tiny-seed-2",
+        "text_zh": "旺加里喜欢待在户外。她在家里的菜园里用砍刀松开泥土，把小小的种子按进温暖的土地。",
+        "description": "旺加里在菜畦中播种，松土用的砍刀平放在一旁。"
+      },
+      {
+        "scene": "a-tiny-seed-3",
+        "text_zh": "她最喜欢一天里太阳刚刚落山的时候。当天色暗得看不清植物了，旺加里就知道该回家了。她沿着田间窄窄的小路走，途中还要穿过河流。",
+        "description": "落日下，旺加里提着蔬菜沿田间小路走过河上的小桥。"
+      },
+      {
+        "scene": "a-tiny-seed-4",
+        "text_zh": "旺加里是个聪明的孩子，特别盼望去上学。可是爸爸妈妈想让她留在家里帮忙。七岁那年，哥哥说服了父母，让她去学校读书。",
+        "description": "七岁的旺加里背着书包，哥哥陪她走向学校，一位家人在后方送行。"
+      },
+      {
+        "scene": "a-tiny-seed-5",
+        "text_zh": "她喜欢学习！每读一本书，旺加里就懂得更多。她的成绩非常好，后来得到了去美国留学的机会。旺加里很兴奋，她想更多地了解世界。",
+        "description": "旺加里在书桌前读书，打开的书上画着世界地图，窗外一架飞机飞过。"
+      },
+      {
+        "scene": "a-tiny-seed-6",
+        "text_zh": "在美国的大学里，旺加里学到了许多新知识。她研究植物怎样生长，也想起了自己的成长：小时候，她和兄弟们在美丽的肯尼亚森林里，在树荫下玩游戏。",
+        "description": "长大后的旺加里在大学实验桌旁用放大镜观察幼苗，回忆气泡里是童年树下的游戏。"
+      },
+      {
+        "scene": "a-tiny-seed-7",
+        "text_zh": "懂得越多，旺加里就越明白自己多么爱肯尼亚的人民。她希望大家幸福、自由。懂得越多，她就越想念非洲的家。",
+        "description": "旺加里坐在书堆旁阅读，窗边的想象画面里是肯尼亚家乡。"
+      },
+      {
+        "scene": "a-tiny-seed-8",
+        "text_zh": "学业结束后，她回到了肯尼亚。可是家乡变了，大片农场铺满大地。妇女们没有做饭用的柴火，人们生活贫困，孩子们忍着饥饿。",
+        "description": "旺加里回到家乡，看见树桩、大片农田和提着空柴篮的妇女。"
+      },
+      {
+        "scene": "a-tiny-seed-9",
+        "text_zh": "旺加里知道该怎么做。她教妇女们从种子开始种树。大家卖掉树苗，用挣来的钱照顾家人。妇女们很高兴，旺加里让她们感到自己有力量，也有办法。",
+        "description": "旺加里教三位妇女播种和移栽幼苗，旁边摆着待出售的苗盆。"
+      },
+      {
+        "scene": "a-tiny-seed-10",
+        "text_zh": "时间慢慢过去，新种的树长成了森林，河流又开始流淌。旺加里的倡议传遍非洲。如今，从她倡导种下的种子里，已经长出了数以百万计的树。",
+        "description": "近处是幼苗，远处是重新长起的树林，一条河穿过绿色土地。"
+      },
+      {
+        "scene": "a-tiny-seed-11",
+        "text_zh": "旺加里辛勤的努力被世界各地的人们看见了。她获得了一项著名的奖项，叫作诺贝尔和平奖。她是第一位获得这个奖项的非洲女性。",
+        "description": "旺加里佩戴绿色头巾，手捧象征和平奖的金色奖章，身后是树木。"
+      },
+      {
+        "scene": "a-tiny-seed-12",
+        "text_zh": "旺加里在二〇一一年去世了。但每当看见一棵美丽的树，我们都可以想起她。",
+        "description": "一棵高大的树在阳光下伸展枝叶，孩子和家长在树荫下照料幼苗。"
+      }
+    ]
+  },
+  "bd-sleepy-mr-sloth": {
+    "cover_page": 12,
+    "pages": [
+      {
+        "scene": "sleepy-mr-sloth-1",
+        "text_zh": "一天，树懒先生来做客。他说：“我好困！我需要一根好树枝，当作我的床！”",
+        "description": "树懒先生站在大树下张嘴打哈欠，两只手揉眼睛。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-2",
+        "text_zh": "“我很会爬树，也知道怎么荡秋千。不过，睡觉才是我最最喜欢的事！”",
+        "description": "树懒先生用长长的手臂攀上树干，在两根树枝间荡起身子。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-3",
+        "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
+        "description": "树懒先生靠近低处的一根枝条，树叶后露出长颈鹿的耳朵。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-4",
+        "text_zh": "哎呀，树懒先生！长颈鹿正在这里吃东西呢！它可能以为你是午餐，咬到你的毛！",
+        "description": "长颈鹿伸长脖子吃叶子，树懒先生赶紧挪开，躲开它的嘴。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-5",
+        "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
+        "description": "树懒先生来到另一根树枝，树梢藏着蜂窝，几只蜜蜂飞近。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-6",
+        "text_zh": "哎呀，树懒先生！旁边就是蜂窝！蜜蜂飞来飞去，你可没法好好睡觉！",
+        "description": "蜜蜂从蜂窝飞出围着枝条，树懒先生抬起手臂避让。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-7",
+        "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
+        "description": "树懒先生伸手去抓一根弯弯的绿色形状，末端露出蛇尾。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-8",
+        "text_zh": "哎呀，树懒先生！那是一条蛇，不是树枝！可怜的蛇，被你吓了一大跳。",
+        "description": "小蛇睁大眼睛弯起身子，树懒先生松开手。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-9",
+        "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
+        "description": "树懒先生靠近更高的枝条，茂密叶子后露出两只鸟脚。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-10",
+        "text_zh": "哎呀，树懒先生！这里有只大声叫的鸟！这么吵，你可睡不着！",
+        "description": "一只长嘴鸟张嘴鸣叫，树懒先生捂住耳朵。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-11",
+        "text_zh": "“再往上爬一根树枝，树懒先生！”大家说。那根树枝，正好可以当他的床。",
+        "description": "树懒先生爬到最高处的宽树枝上，满意地笑起来。"
+      },
+      {
+        "scene": "sleepy-mr-sloth-12",
+        "text_zh": "鸟儿、小蛇、长颈鹿，还有每一只蜜蜂，都很高兴和树懒先生住在同一棵树上。",
+        "description": "树懒先生在高枝上闭眼睡觉，鸟和蛇安静休息，长颈鹿和蜜蜂各在树的一侧。"
+      }
+    ]
+  },
+  "bd-little-ants-big-plan": {
+    "cover_page": 10,
+    "pages": [
+      {
+        "scene": "little-ants-big-plan-1",
+        "text_zh": "小蚂蚁爱读书，却常常被同伴取笑：“蚂蚁不读书，蚂蚁要找食。需要的食物，都要自己拾！”",
+        "description": "戴圆眼镜的小蚂蚁坐在打开的书上，其他蚂蚁背着食物经过。"
+      },
+      {
+        "scene": "little-ants-big-plan-2",
+        "text_zh": "小蚂蚁一整天都在读书，读呀读呀，一天就过去了。其他蚂蚁把找到的食物搬进地下，留着过冬。",
+        "description": "孩子在野餐毯上读书，小蚂蚁在书边阅读，同伴搬走食物碎屑。"
+      },
+      {
+        "scene": "little-ants-big-plan-3",
+        "text_zh": "爸爸妈妈很生气，小蚂蚁心里也很难过。",
+        "description": "地下蚁室里，爸爸妈妈站在小蚂蚁面前，小妹妹在一旁看着。"
+      },
+      {
+        "scene": "little-ants-big-plan-4",
+        "text_zh": "秋天，树叶落了下来。蚂蚁们必须把食物储存在地下。",
+        "description": "秋叶铺满地面，蚂蚁们把苹果核和种子搬向地下入口。"
+      },
+      {
+        "scene": "little-ants-big-plan-5",
+        "text_zh": "蚁后希望储藏室装满食物，所有蚂蚁都得再多干些活。",
+        "description": "蚁后站在空空的地下储藏室前，工蚁们围在一旁。"
+      },
+      {
+        "scene": "little-ants-big-plan-6",
+        "text_zh": "小蚂蚁大声说起他在书里读到的一个地方：“我们需要找一家餐馆，那是人们吃饭的地方。我读的书里就是这么写的！”",
+        "description": "小蚂蚁举起手，想象气泡里出现餐馆、桌子和汉堡。"
+      },
+      {
+        "scene": "little-ants-big-plan-7",
+        "text_zh": "蚂蚁们一个接着一个出发，朝着落日的方向前进。",
+        "description": "一队蚂蚁沿小径走向橙色落日，小蚂蚁走在队首。"
+      },
+      {
+        "scene": "little-ants-big-plan-8",
+        "text_zh": "小蚂蚁说：“嘿，那里就有一家！”",
+        "description": "小蚂蚁指向有桌椅和餐盘的餐馆入口，同伴停下来张望。"
+      },
+      {
+        "scene": "little-ants-big-plan-9",
+        "text_zh": "蚂蚁们一个接着一个往回走，有的搬汉堡，有的搬面包。",
+        "description": "夜色里，蚂蚁们举着面包和汉堡碎块往蚁穴走。"
+      },
+      {
+        "scene": "little-ants-big-plan-10",
+        "text_zh": "回到家，蚁后很高兴。储藏室装满了，大家欢呼起来。",
+        "description": "地下储藏室装满食物，蚁后与戴眼镜的小蚂蚁握手，大家举手欢呼。"
+      },
+      {
+        "scene": "little-ants-big-plan-11",
+        "text_zh": "爸爸妈妈紧紧地拥抱了小蚂蚁。",
+        "description": "爸爸妈妈从两侧拥抱小蚂蚁，小妹妹在旁边开心地看着。"
+      },
+      {
+        "scene": "little-ants-big-plan-12",
+        "text_zh": "小妹妹牵住他的手：“现在，我想我明白了。看你那么爱读书，我也想翻开看一看！”",
+        "description": "小蚂蚁牵着妹妹坐在打开的书边，两个孩子一起看书。"
+      }
+    ]
+  },
+  "bd-tortoise-finds-his-home": {
+    "cover_page": 8,
+    "pages": [
+      {
+        "scene": "tortoise-finds-his-home-1",
+        "text_zh": "一天，陆龟走在草原上。他找了又找，望望远处，又眯起眼睛看草丛。“你在找什么吗？”蜗牛问。“是呀，我在找我的家。你看见了吗？”",
+        "description": "陆龟低头寻找，草叶旁的蜗牛抬起触角问话。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-2",
+        "text_zh": "“没有，不过我来帮你找！”蜗牛爬上陆龟的壳。陆龟背着她继续走。他们找呀找，可哪里都没有房子的影子。",
+        "description": "蜗牛坐在陆龟背上，两位朋友沿着草原小路前进。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-3",
+        "text_zh": "“你们在找什么吗？”麻雀问。“是呀，我们在找陆龟的家。你看见了吗？”“没有，不过我来帮你们找！”",
+        "description": "麻雀停在低树枝上，陆龟和背上的蜗牛抬头看它。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-4",
+        "text_zh": "麻雀扑扇翅膀，嗖地飞了出去。“你太快啦！”陆龟喊。“好吧，那我也坐上来。”陆龟背着蜗牛和麻雀继续走。他们找呀找，可哪里都没有房子的影子。",
+        "description": "麻雀先飞到前方，又转身落向陆龟的壳。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-5",
+        "text_zh": "“你们在找什么吗？”瓢虫问。“是呀，我们在找陆龟的家。你看见了吗？”",
+        "description": "瓢虫站在蒲公英上，陆龟背着蜗牛和麻雀经过。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-6",
+        "text_zh": "“没有，不过我来帮你们找！”瓢虫跳到陆龟壳上。陆龟背着蜗牛、麻雀和瓢虫继续走。他们找呀找，可哪里都没有房子的影子。微风吹了起来。",
+        "description": "瓢虫加入龟背上的伙伴，微风吹动小草。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-7",
+        "text_zh": "“你们在找什么吗？”老鼠问。“是呀，老鼠，我在找我的家。你看见了吗？”“没有，不过我来帮你们找！”",
+        "description": "老鼠坐在花边编花环，陆龟和背上的三位朋友停下来。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-8",
+        "text_zh": "老鼠跳上陆龟的背。陆龟背着蜗牛、麻雀、瓢虫和老鼠继续走。他们找呀找，可哪里都没有房子的影子。风卷起地上的叶子，在陆龟身边打转。",
+        "description": "老鼠也爬上龟背，四位朋友挤在一起，落叶随风旋转。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-9",
+        "text_zh": "风越来越大，天空暗了下来。“唉，我的家到底在哪里？”陆龟叹气。远处的山里雷声轰隆，电光闪过。滴答，滴答，下雨了。“陆龟的家到底在哪里？”蜗牛、麻雀、瓢虫和老鼠一起问。",
+        "description": "乌云和闪电出现在远山，陆龟背着四位朋友走在雨里。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-10",
+        "text_zh": "风呼呼地卷着、吹着，把蜗牛、麻雀、瓢虫和老鼠全都从陆龟的背上吹了下来。",
+        "description": "大风把四位伙伴从龟背吹向两旁，叶片在空中翻滚。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-11",
+        "text_zh": "“呀！”陆龟吓得叫了一声，缩进自己的壳里。里面温暖又舒适。“哦，原来我的家就在这里！”",
+        "description": "陆龟的头脚缩进壳里，雨滴落在完整的壳上，四位朋友站在旁边。"
+      },
+      {
+        "scene": "tortoise-finds-his-home-12",
+        "text_zh": "“哦，原来陆龟的家就在这里！”",
+        "description": "蜗牛、麻雀、瓢虫和老鼠在陆龟壳的边缘下躲雨，壳里透出暖光。"
+      }
+    ]
+  },
+  "bd-whose-button-is-this": {
+    "cover_page": 13,
+    "pages": [
+      {
+        "scene": "whose-button-is-this-1",
+        "text_zh": "小机器人丁丁坐在路边，一颗纽扣蹦蹦跳跳地滚到了他面前。",
+        "description": "蓝绿色小机器人丁丁坐在路沿，一颗四孔蓝纽扣滚到面前。"
+      },
+      {
+        "scene": "whose-button-is-this-2",
+        "text_zh": "“这会是从哪里掉下来的呢？”他说。他想弄个明白。",
+        "description": "丁丁双手捧着纽扣，沿着人行道向前寻找。"
+      },
+      {
+        "scene": "whose-button-is-this-3",
+        "text_zh": "路边人来人往。“哇！”他差点被一只大鞋子踩扁。",
+        "description": "一只巨大的红鞋落在人行道上，丁丁抱着纽扣站在鞋边。"
+      },
+      {
+        "scene": "whose-button-is-this-4",
+        "text_zh": "他幸运地逃开了。“外面真有点吓人。”他说。",
+        "description": "丁丁抓着红鞋的鞋带荡开，纽扣抱在胸前。"
+      },
+      {
+        "scene": "whose-button-is-this-5",
+        "text_zh": "“你好呀，这是你的吗？”",
+        "description": "丁丁举起纽扣，抬头看行人信号灯上的绿色小人。"
+      },
+      {
+        "scene": "whose-button-is-this-6",
+        "text_zh": "绿衣人什么也没说，只是变成了红色。“真不礼貌。”",
+        "description": "同一盏行人信号灯变成红色，丁丁仍举着蓝纽扣。"
+      },
+      {
+        "scene": "whose-button-is-this-7",
+        "text_zh": "丁丁继续寻找。“这是谁的纽扣呢？”",
+        "description": "丁丁沿街寻找，一只棕色小狗从前面走来。"
+      },
+      {
+        "scene": "whose-button-is-this-8",
+        "text_zh": "“哇……至少，它还挺友好的。”",
+        "description": "小狗低头舔丁丁，丁丁抱着纽扣，脸上沾着水珠。"
+      },
+      {
+        "scene": "whose-button-is-this-9",
+        "text_zh": "“我得去马路对面。我想，纽扣一定是从那里掉过来的。”",
+        "description": "丁丁停在人行横道的路沿内侧，望向街对面。"
+      },
+      {
+        "scene": "whose-button-is-this-10",
+        "text_zh": "哗啦！“好险呀。”他等车子都开过去，才继续往前走。",
+        "description": "汽车驶过水洼溅起水花，丁丁留在人行道上等待。"
+      },
+      {
+        "scene": "whose-button-is-this-11",
+        "text_zh": "也许，这就是他要找的人。“你好，你是谁呀？”",
+        "description": "丁丁举着纽扣，向街边一个坐在长椅上的布娃娃打招呼。"
+      },
+      {
+        "scene": "whose-button-is-this-12",
+        "text_zh": "“我是布娃娃露比。”“我想，这是你的。”丁丁说。",
+        "description": "布娃娃露比一只眼睛是蓝纽扣，另一只眼睛处只有针脚；丁丁递出纽扣。"
+      },
+      {
+        "scene": "whose-button-is-this-13",
+        "text_zh": "“谢谢你，小机器人。我们可以做朋友吗？”",
+        "description": "露比的两只纽扣眼睛都完整了，和丁丁并肩坐在长椅上。"
+      }
+    ]
+  },
+  "bd-hippo-wants-to-dance": {
+    "cover_page": 12,
+    "pages": [
+      {
+        "scene": "hippo-wants-to-dance-1",
+        "text_zh": "河马想跳舞。她在满是尘土的地上跳上跳下。咚！咚！",
+        "description": "圆润的灰紫色河马在沙地上踏步跳跃，脚边扬起尘土。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-2",
+        "text_zh": "“你把我弄脏啦！”睡在沙地里的马陆说，“去别的地方跳吧。”",
+        "description": "马陆在沙地里蜷起身体，河马停下脚步低头看它。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-3",
+        "text_zh": "河马想跳舞。她滚进河里，手脚一起扑腾。哗啦！哗啦！",
+        "description": "河马在河水里翻身跳舞，芦苇旁溅起水花。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-4",
+        "text_zh": "“你把我弄湿啦！”正在找早餐的翠鸟说，“去别的地方跳吧。”",
+        "description": "翠鸟停在河边枝头抖落水珠，河马露出水面望着它。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-5",
+        "text_zh": "河马想跳舞。她在草地上转呀转，把腿抬得高高的。呼！呼！",
+        "description": "河马在草地上转圈，一条腿高高抬起。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-6",
+        "text_zh": "“小心！你差点踢到我！”正在给宝宝洗澡的狐獴说，“去别的地方跳吧。”",
+        "description": "狐獴守着浴盆里的三只宝宝，河马收回差点踢到它们的腿。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-7",
+        "text_zh": "河马想跳舞。她扑进泥水洼，用大肚皮滑来滑去。叽咕！叽咕！",
+        "description": "河马趴在泥水洼里用肚皮滑行，泥点飞向四周。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-8",
+        "text_zh": "“你为什么不停下来呢？”驮着水桶的驴子问，“为什么不去做点有用的事呢？”",
+        "description": "驴子背着两只水桶经过，河马从泥洼里抬起头。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-9",
+        "text_zh": "河马很难过，难过得不想跳舞了。她坐在石头上哭，眼泪沿着脸颊流到地上。",
+        "description": "河马坐在石头上落泪，小小的绿色蚱蜢站在脚边。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-10",
+        "text_zh": "蹦！蹦！蚱蜢听见河马的眼泪声，开始绕着她的脚跳舞。啪嗒！啪嗒！",
+        "description": "河马的泪滴落地，蚱蜢在两滴眼泪之间跳跃。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-11",
+        "text_zh": "河马和蚱蜢一起跳起舞来，其他动物都跑来看……",
+        "description": "河马和蚱蜢张开手脚一起跳舞，远处动物探头观看。"
+      },
+      {
+        "scene": "hippo-wants-to-dance-12",
+        "text_zh": "大家一起跳起舞来！",
+        "description": "河马、蚱蜢、马陆、翠鸟、狐獴和驴子在空旷草地上一起跳舞。"
+      }
+    ]
+  },
+  "bd-what-is-it": {
+    "cover_page": 12,
+    "pages": [
+      {
+        "scene": "what-is-it-1",
+        "text_zh": "那是什么呀？",
+        "description": "几只想象中的小动物聚在草地上，看着远处一团灰色影子。"
+      },
+      {
+        "scene": "what-is-it-2",
+        "text_zh": "那是什么呀？它没有长鼻子，和我不一样。",
+        "description": "长鼻子、鳄鱼尾巴的想象动物指着灰影，展示自己的长鼻子。"
+      },
+      {
+        "scene": "what-is-it-3",
+        "text_zh": "那是什么呀？它没有尾巴，和我不一样。",
+        "description": "长尾巴的猴鼠模样动物转身展示尾巴，望向没有尾巴的灰影。"
+      },
+      {
+        "scene": "what-is-it-4",
+        "text_zh": "那是什么呀？咦！它的羽毛呢？它和我不一样。",
+        "description": "披着绒毛和羽毛的猫头鹰模样动物张开翅膀，望向灰影。"
+      },
+      {
+        "scene": "what-is-it-5",
+        "text_zh": "那是什么呀？瞧它那两只小脚，和我们不一样。",
+        "description": "长着小爪子的羚羊妈妈和宝宝并排站着，望向影子的小脚。"
+      },
+      {
+        "scene": "what-is-it-6",
+        "text_zh": "你们觉得，它危险吗？",
+        "description": "长鼻子的动物躲在树后探头，灰影仍在远处。"
+      },
+      {
+        "scene": "what-is-it-7",
+        "text_zh": "你们觉得，它会吃掉我们吗？",
+        "description": "长尾巴动物靠近伙伴，小声猜测灰影的来历。"
+      },
+      {
+        "scene": "what-is-it-8",
+        "text_zh": "阿嚏！阿嚏！",
+        "description": "灰影前出现一个打喷嚏的人类宝宝，头边有两道小气流。"
+      },
+      {
+        "scene": "what-is-it-9",
+        "text_zh": "啊！呀！快跑！",
+        "description": "想象动物们睁大眼睛转身逃跑，草叶被脚步带起。"
+      },
+      {
+        "scene": "what-is-it-10",
+        "text_zh": "它追上来啦！",
+        "description": "人类宝宝在阳光下爬行，身后拖着灰色影子，动物们回头张望。"
+      },
+      {
+        "scene": "what-is-it-11",
+        "text_zh": "小心呀，回来！",
+        "description": "羚羊宝宝停下来朝人类宝宝走去，妈妈在后方招呼。"
+      },
+      {
+        "scene": "what-is-it-12",
+        "text_zh": "它是什么呀？原来是个宝宝，和我一样！",
+        "description": "羚羊宝宝和人类宝宝碰了碰鼻尖，伙伴们从后面探头微笑。"
+      }
+    ]
+  }
+}

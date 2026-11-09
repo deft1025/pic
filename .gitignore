@@ -1,0 +1,63 @@
+# 本地凭据与环境配置；配置模板需要提交
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# IDE、系统辅助文件与编辑器临时文件
+.idea/
+.vscode/
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# Go 构建产物与本地缓存
+/bin/
+/dist/
+/api
+/dbinit
+/importer
+/pic
+/*.exe
+*.test
+go_build_*
+.cache/
+
+# Python / Node 本地依赖与缓存；依赖清单和锁文件仍需提交
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.npm/
+
+# 测试报告、运行日志与本地数据库数据
+/test-results/
+/coverage/
+/coverage.out
+/coverage.html
+.coverage
+.coverage.*
+htmlcov/
+*.log
+*.pid
+/mysql-data/
+
+# 独立上传的绘本物料、试听、上传副本及压缩包
+# 保留 content/books、content/sources、tests/fixtures 和 web/assets/hero.svg
+/web/assets/books/
+/web/assets/audio-previews/
+/upload-*/
+*.tar.gz
+
+# 本地校对总览图；docs 中的需求、建表 SQL 和说明文档继续提交
+/docs/materials-review/

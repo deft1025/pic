@@ -1,0 +1,15 @@
+{
+  "name": "pic",
+  "version": "0.1.0",
+  "private": true,
+  "description": "小小绘本馆 MVP: Go API and responsive storybook reader",
+  "scripts": {
+    "dev": "go run ./cmd/api",
+    "test:reader": "node tests/reader.cjs",
+    "check": "node --check web/app.js",
+    "test:flows": "node --test tests/flows.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "^0.18.12"
+  }
+}

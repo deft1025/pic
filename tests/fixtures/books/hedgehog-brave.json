@@ -1,0 +1,109 @@
+{
+  "id": "hedgehog-brave",
+  "title_zh": "小刺猬的第一步",
+  "title_original": "Hedgehog’s First Step",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "第一次走过小桥有一点害怕，怎么办？小刺猬和朋友一起，把大大的担心变成小小的一步。",
+  "age_ranges": [
+    "3-4",
+    "5-6"
+  ],
+  "categories": [
+    "emotions",
+    "animals"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 5,
+  "featured_order": 6,
+  "published_at": "2026-11-02T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-25d2d146289d",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小刺猬站在河岸边，望着跨过河流的木桥和对岸的小花。",
+      "text_zh": "小刺猬想去河对岸看花。可是，小木桥看起来好高呀。",
+      "text_original": "Hedgehog wanted to see the flowers across the river. But the little bridge looked so high.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小刺猬停在木桥起点前，双脚发抖，害怕地抱着小手。",
+      "text_zh": "“我的脚有点发抖。”小刺猬停在桥边，不肯往前走。",
+      "text_original": "“My feet feel shaky,” said Hedgehog. He stopped beside the bridge.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊来到小刺猬身边伸出手，陪它一起面对前方的木桥。",
+      "text_zh": "小熊走过来：“害怕也没关系。我陪着你，一次走一小步。”",
+      "text_original": "Bear came over. “It is okay to feel scared. I will stay with you, one small step at a time.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小刺猬迈上第一块桥板，小熊站在后面鼓励它。",
+      "text_zh": "小刺猬看看脚下，慢慢迈出第一步。木桥稳稳的。",
+      "text_original": "Hedgehog looked down and took his first slow step. The bridge felt steady.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小刺猬一步步走到木桥中段，小熊跟在后面，桥下河水流淌。",
+      "text_zh": "一步，两步，三步。水在下面轻轻唱歌，风在耳边说加油。",
+      "text_original": "One step, two steps, three. The water sang below. The breeze whispered, “You can do it.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小刺猬走到对岸的小花旁，开心地张开双手，小熊也走下木桥。",
+      "text_zh": "到啦！小刺猬看见满地的小花。“原来，我可以一边害怕，一边试一试。”",
+      "text_original": "He made it! Flowers were everywhere. “I can feel scared and still give it a try.”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:38:54.161048+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:55:26.259396+00:00",
+      "review_status": "pending"
+    }
+  }
+}

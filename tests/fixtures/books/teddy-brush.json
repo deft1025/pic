@@ -1,0 +1,109 @@
+{
+  "id": "teddy-brush",
+  "title_zh": "牙刷小火车",
+  "title_original": "The Toothbrush Train",
+  "author": "小小绘本馆创作组",
+  "illustrator": "小小绘本馆 · 原创矢量插画",
+  "description_zh": "呜呜，牙刷小火车出发啦！跟着小熊把刷牙变成一个游戏，给早晨和夜晚添一点好习惯。",
+  "age_ranges": [
+    "0-2",
+    "3-4"
+  ],
+  "categories": [
+    "habits",
+    "cognition"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/fixture/page.svg",
+  "page_count": 6,
+  "reading_minutes": 3,
+  "featured_order": 0,
+  "published_at": "2026-11-02T08:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "demo-v1-story-art-v2-22ba9766fbd2",
+  "is_demo": true,
+  "license": {
+    "type": "Original demo",
+    "source_url": "",
+    "license_url": "",
+    "attribution": "小小绘本馆原创演示文本与程序绘制插画；内容为 AI 辅助创作，供产品体验。",
+    "review_status": "pending",
+    "commercial_use": false,
+    "self_hosting": false,
+    "translation_allowed": false,
+    "audio_derivative_allowed": false
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "晚上，小熊来到洗手台旁，看着杯子里等待它的小牙刷。",
+      "text_zh": "晚上，小熊来到洗手台。小牙刷已经在杯子里等它啦。",
+      "text_original": "In the evening, Bear came to the sink. His little toothbrush was waiting in its cup.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 2,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "牙膏挤上牙刷，旁边画着想象中的小火车，准备开始刷牙。",
+      "text_zh": "挤一点牙膏，牙刷变成一列小火车。呜呜，出发！",
+      "text_original": "A little toothpaste went on. The toothbrush became a tiny train. Choo-choo, off we go!",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 3,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊把牙刷放到嘴边，旁边的放大画面展示外侧和内侧牙齿的刷洗。",
+      "text_zh": "小火车轻轻开过外面，再开到里面。每一颗小牙都要拜访。",
+      "text_original": "The train gently passed the outside, then the inside. Every little tooth got a visit.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 4,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "放大的嘴巴中，上排和下排牙齿都在被轻轻刷洗，小熊慢慢练习。",
+      "text_zh": "上面的牙齿刷一刷，下面的牙齿也不忘。小熊慢慢来，不着急。",
+      "text_original": "Top teeth got a brush. Bottom teeth got one, too. Bear took his time.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 5,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊在流水下冲洗牙刷，泡沫落进水池，杯子放在一旁。",
+      "text_zh": "刷完牙，小熊吐掉泡泡，把牙刷洗干净，放回小杯子。",
+      "text_original": "Bear spat out the bubbles. He rinsed his brush and put it back in the little cup.",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    },
+    {
+      "page_number": 6,
+      "image": "/assets/fixture/page.svg",
+      "image_alt": "小熊对着镜子露出干净的牙齿，洗手台上的牙刷放回了杯子。",
+      "text_zh": "小熊照照镜子，露出干净的牙齿。“晚安，牙刷小火车，明天见！”",
+      "text_original": "Bear smiled at his clean teeth in the mirror. “Goodnight, toothbrush train. See you tomorrow!”",
+      "audio_zh": "/assets/fixture/tone.wav",
+      "audio_original": "/assets/fixture/tone.wav"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-05T09:40:15.218658+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-05T09:56:51.844979+00:00",
+      "review_status": "pending"
+    }
+  }
+}
