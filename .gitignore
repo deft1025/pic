@@ -4,6 +4,9 @@
 !.env.example
 !.env.*.example
 
+# Codex 本地项目交接说明
+/AGENTS.md
+
 # IDE、系统辅助文件与编辑器临时文件
 .idea/
 .vscode/
