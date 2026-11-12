@@ -18,6 +18,9 @@ type storeStub struct {
 }
 
 func (s *storeStub) Ping(context.Context) error { return s.pingErr }
+func (s *storeStub) PublishedBookIDs(context.Context) ([]string, error) {
+	return []string{s.book.ID}, s.listErr
+}
 func (s *storeStub) List(_ context.Context, q model.Query) ([]model.Book, int, error) {
 	s.listCalls++
 	s.query = q

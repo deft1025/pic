@@ -22,6 +22,7 @@ type Store interface {
 	Get(context.Context, string) (model.Book, error)
 	Pages(context.Context, string) ([]model.Page, error)
 	Options(context.Context) (model.Options, error)
+	PublishedBookIDs(context.Context) ([]string, error)
 }
 
 type MySQL struct {

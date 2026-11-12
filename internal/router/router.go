@@ -9,9 +9,10 @@ import (
 	"pic/internal/web"
 )
 
-func New(library *service.Library, webDir, assetBaseURL string) http.Handler {
+func New(library *service.Library, webDir, assetBaseURL, siteBaseURL string) http.Handler {
 	mux := http.NewServeMux()
-	h := handler.New(library)
+	h := handler.New(library, siteBaseURL)
+	mux.HandleFunc("GET /sitemap.xml", h.Sitemap)
 	mux.HandleFunc("GET /api/health", h.Health)
 	mux.HandleFunc("GET /api/books", h.Books)
 	mux.HandleFunc("GET /api/search", h.Books)

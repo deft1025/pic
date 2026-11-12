@@ -45,7 +45,7 @@ func setup(t *testing.T) http.Handler {
 	if err := os.CopyFS(filepath.Join(webDir, "assets"), os.DirFS("../../tests/fixtures/web/assets")); err != nil {
 		t.Fatal(err)
 	}
-	return New(service.NewLibrary(memoryStore{c}, ""), webDir, "")
+	return New(service.NewLibrary(memoryStore{c}, ""), webDir, "", "")
 }
 func request(t *testing.T, h http.Handler, path string, want int) *httptest.ResponseRecorder {
 	t.Helper()
@@ -136,7 +136,7 @@ func TestOnlyPublishedStoriesVisible(t *testing.T) {
 	}
 	c.Books[0].Status = "offline"
 	c.Books[1].Status = "draft"
-	h := New(service.NewLibrary(memoryStore{c}, ""), "../../web", "")
+	h := New(service.NewLibrary(memoryStore{c}, ""), "../../web", "", "")
 	request(t, h, "/api/books/"+c.Books[0].ID, 404)
 	request(t, h, "/api/books/"+c.Books[1].ID+"/pages", 404)
 	_, total := c.List(model.Query{})
@@ -149,6 +149,15 @@ func TestOnlyPublishedStoriesVisible(t *testing.T) {
 type memoryStore struct{ c *catalog.Catalog }
 
 func (m memoryStore) Ping(context.Context) error { return nil }
+func (m memoryStore) PublishedBookIDs(context.Context) ([]string, error) {
+	ids := []string{}
+	for _, book := range m.c.Books {
+		if book.Status == "published" {
+			ids = append(ids, book.ID)
+		}
+	}
+	return ids, nil
+}
 func (m memoryStore) List(_ context.Context, q model.Query) ([]model.Book, int, error) {
 	items, total := m.c.List(q)
 	return items, total, nil
@@ -175,6 +184,9 @@ func (m memoryStore) Options(context.Context) (model.Options, error) {
 type unavailableStore struct{ memoryStore }
 
 func (unavailableStore) Ping(context.Context) error { return errors.New("private database error") }
+func (unavailableStore) PublishedBookIDs(context.Context) ([]string, error) {
+	return nil, errors.New("private database error")
+}
 func (unavailableStore) List(context.Context, model.Query) ([]model.Book, int, error) {
 	return nil, 0, errors.New("private database error")
 }
@@ -185,8 +197,8 @@ func (unavailableStore) Options(context.Context) (model.Options, error) {
 	return model.Options{}, errors.New("private database error")
 }
 func TestDatabaseFailure(t *testing.T) {
-	h := New(service.NewLibrary(unavailableStore{}, ""), "../../web", "")
-	for _, path := range []string{"/api/health", "/api/books", "/api/search?q=x", "/api/categories", "/api/books/moon-rabbit", "/api/books/moon-rabbit/pages"} {
+	h := New(service.NewLibrary(unavailableStore{}, ""), "../../web", "", "")
+	for _, path := range []string{"/api/health", "/api/books", "/api/search?q=x", "/api/categories", "/api/books/moon-rabbit", "/api/books/moon-rabbit/pages", "/sitemap.xml"} {
 		w := request(t, h, path, 503)
 		if strings.Contains(w.Body.String(), "private database error") {
 			t.Fatal("database details leaked to reader")

@@ -49,7 +49,7 @@ func run(configFile string) error {
 
 	server := &http.Server{
 		Addr:              cfg.Server.Addr,
-		Handler:           router.New(library, cfg.Content.WebDir, cfg.Content.AssetBaseURL),
+		Handler:           router.New(library, cfg.Content.WebDir, cfg.Content.AssetBaseURL, cfg.Server.SiteBaseURL),
 		ReadHeaderTimeout: cfg.Server.ReadHeaderTimeout,
 		ReadTimeout:       cfg.Server.ReadTimeout,
 		WriteTimeout:      cfg.Server.WriteTimeout,

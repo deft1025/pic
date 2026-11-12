@@ -3,6 +3,11 @@ package handler
 
 import "pic/internal/service"
 
-type Handler struct{ library *service.Library }
+type Handler struct {
+	library     *service.Library
+	siteBaseURL string
+}
 
-func New(library *service.Library) *Handler { return &Handler{library: library} }
+func New(library *service.Library, siteBaseURL string) *Handler {
+	return &Handler{library: library, siteBaseURL: siteBaseURL}
+}

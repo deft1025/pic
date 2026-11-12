@@ -12,9 +12,30 @@ func cleanEnv(t *testing.T) {
 	t.Helper()
 	for _, entry := range os.Environ() {
 		key, _, _ := strings.Cut(entry, "=")
-		if strings.HasPrefix(key, "DB_") || strings.HasPrefix(key, "HTTP_") || strings.HasPrefix(key, "ASSET_") || key == "CONFIG_FILE" || key == "CONTENT_DIR" || key == "WEB_DIR" || key == "SCHEMA_FILE" || key == "REQUIRE_LICENSE_APPROVAL" {
+		if strings.HasPrefix(key, "DB_") || strings.HasPrefix(key, "HTTP_") || strings.HasPrefix(key, "ASSET_") || key == "SITE_BASE_URL" || key == "CONFIG_FILE" || key == "CONTENT_DIR" || key == "WEB_DIR" || key == "SCHEMA_FILE" || key == "REQUIRE_LICENSE_APPROVAL" {
 			t.Setenv(key, "")
 			os.Unsetenv(key)
+		}
+	}
+}
+
+func TestSiteBaseURL(t *testing.T) {
+	cleanEnv(t)
+	path := file(t, "SITE_BASE_URL=https://books.example.com/\n")
+	cfg, err := Load(path)
+	if err != nil || cfg.Server.SiteBaseURL != "https://books.example.com" {
+		t.Fatal("site URL not loaded and normalized", err)
+	}
+	t.Setenv("SITE_BASE_URL", "")
+	cfg, err = Load(path)
+	if err != nil || cfg.Server.SiteBaseURL != "" {
+		t.Fatal("empty environment override ignored", err)
+	}
+	for _, raw := range []string{"/books", "//books.example.com", "ftp://books.example.com", "https://books.example.com/pic", "https://books.example.com?", "https://books.example.com?secret-value", "https://books.example.com#", "https://user:secret-value@books.example.com", "https://*.example.com", "https://books.example.com\\path"} {
+		t.Setenv("SITE_BASE_URL", raw)
+		_, err := Load(path)
+		if err == nil || strings.Contains(err.Error(), "secret-value") {
+			t.Fatalf("invalid site URL accepted or leaked: %v", err)
 		}
 	}
 }

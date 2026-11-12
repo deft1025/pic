@@ -23,6 +23,7 @@ type Config struct {
 
 type ServerConfig struct {
 	Addr              string
+	SiteBaseURL       string
 	ReadHeaderTimeout time.Duration
 	ReadTimeout       time.Duration
 	WriteTimeout      time.Duration
@@ -90,7 +91,7 @@ func Load(path string) (*Config, error) {
 		return fallback
 	}
 	cfg := &Config{
-		Server:   ServerConfig{Addr: value("HTTP_ADDR", "127.0.0.1:8198")},
+		Server:   ServerConfig{Addr: value("HTTP_ADDR", "127.0.0.1:8198"), SiteBaseURL: value("SITE_BASE_URL", "")},
 		Database: DatabaseConfig{Host: value("DB_HOST", "127.0.0.1"), User: value("DB_USER", "pic"), Password: value("DB_PASSWORD", ""), Name: value("DB_NAME", "pic")},
 		Content:  ContentConfig{WebDir: value("WEB_DIR", "web"), AssetBaseURL: value("ASSET_BASE_URL", ""), AssetCheckMode: value("ASSET_CHECK_MODE", "auto"), Dir: value("CONTENT_DIR", "content/books"), Schema: value("SCHEMA_FILE", "docs/schema.sql")},
 	}
@@ -161,6 +162,13 @@ func Load(path string) (*Config, error) {
 	}
 	if cfg.Content.Dir == "" || cfg.Content.WebDir == "" || cfg.Content.Schema == "" {
 		return nil, errors.New("CONTENT_DIR、WEB_DIR 和 SCHEMA_FILE 不可为空")
+	}
+	if raw := cfg.Server.SiteBaseURL; raw != "" {
+		u, err := url.Parse(raw)
+		if err != nil || (u.Scheme != "http" && u.Scheme != "https") || u.Hostname() == "" || u.User != nil || (u.Path != "" && u.Path != "/") || u.RawQuery != "" || u.ForceQuery || strings.Contains(raw, "#") || strings.ContainsAny(raw, " \t\r\n\\\"'`;<>*") {
+			return nil, errors.New("SITE_BASE_URL 必须是主站 http/https 域名，不含账号、子路径、查询参数或片段")
+		}
+		cfg.Server.SiteBaseURL = strings.TrimRight(raw, "/")
 	}
 	if raw := cfg.Content.AssetBaseURL; raw != "" {
 		u, err := url.Parse(raw)

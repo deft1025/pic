@@ -55,6 +55,24 @@ git rm -r --cached --ignore-unmatch web/assets/books web/assets/audio-previews
 
 Go 静态路由已支持根路径 `google字母数字.html`，不存在的文件返回 404；其他任意 HTML 不随之开放。Dockerfile 会复制 `web/*.html`。本次新增了 Go 路由，因此需部署并重启新版程序；Docker 部署需重新构建镜像。在浏览器确认上述公网地址直接显示验证文字后，再回 Google 点击验证。验证成功后保留文件。若 Nginx 将所有请求转发给 Go，无需额外配置；若 Nginx 独立处理 `.html`，需让该验证地址转发到 Go 或由其站点根目录提供同一文件。
 
+## Google 站点地图
+
+主站提供动态 `GET /sitemap.xml`，包含首页、书库、关于、版权、隐私页，以及 MySQL 中当前可见的所有已发布绘本详情页。不会把浏览器书架、筛选/搜索参数或阅读器的语言/页码变体重复列入。新增、下架绘本后，下次请求自动读取数据库，不必生成静态 XML 或重新导入；数据库查询失败返回 503，不回退 JSON 或返回不完整地图。
+
+在**运行主站的配置文件或环境变量**中设置正式主站域名，例如：
+
+```dotenv
+SITE_BASE_URL=https://books.example.com
+```
+
+将示例替换为自己的主站域名，不是 `ASSET_BASE_URL` 素材域名，不带 `/sitemap.xml`、子路径或参数。留空时按请求 Host 和直连 HTTP/HTTPS 生成；Nginx/CDN 终止 HTTPS 后再以 HTTP 转发到 Go 的部署应明确填写公开 HTTPS 域名，程序不信任转发头来推断域名。配置更改需重启；真实 `.env` 由用户自行修改，不提交 Git。
+
+1. 部署并重启新版 Go 服务；Docker 需重建镜像。该接口由 Go 实时生成，无需往 `web/` 或素材服务器上传 XML。如果 Nginx 单独处理 `.xml`，让 `/sitemap.xml` 请求转发到 Go，避免被静态规则返回 404。
+2. 浏览器打开 `https://主站域名/sitemap.xml`，确认返回 XML，且 `<loc>` 都使用正确的正式主站域名。
+3. 在 Google Search Console 的“站点地图”中提交此完整地址；若输入框前已固定主站域名，只填 `sitemap.xml`。提交后查看 Google 的读取状态，提交不保证立即收录。
+
+站点地图没有填写推测的更新时间；当前单文件支持最多 50,000 个网址，超过时需扩展为 sitemap index。
+
 ## 角色对白：与书目统一维护（2026-11-11）
 
 唯一编辑入口是 `content/books/书ID.json`。页面的可选 `dialogue` 保存角色、原文范围和气泡位置，随正文一起由 importer 写入 `book_pages.dialogue_layout`，API 直接返回。无需额外维护 `web/assets/reader-layouts/`、独立排版 JSON 或前端书目清单。新增绘本无对白时不填该字段；需要对白时在同一本资料内一起整理，步骤见 [content.md](content.md)。
