@@ -1,262 +1,123 @@
-# 日常运行与物料更新
+# 日常运行、部署与物料制作
 
-本文是当前项目的操作入口。所有“本地”命令均在 `/Users/zx/Projects/pic` 执行；“服务器”命令在资源服务器执行。当前数据库已建好，旧演示数据已由用户清理，不需要重复建表或清理。
+当前流程：**MySQL 是正式书目唯一维护源；Codex 完成选材、制作、校验、数据库写入及打包，用户最多负责上传压缩包、解压。** 不要求用户编辑 JSON、运行 SQL 或反复执行 importer。现有表已支持正文、气泡及声音记录，本次不改表。
 
-## 当前配置与目录
+## 日常运行和实际部署
 
-| 项目 | 当前值 |
-| --- | --- |
-| 本地项目 | `/Users/zx/Projects/pic` |
-| 本地新物料 | 制作时生成到 `web/assets/books/`，当前已上传副本已清理 |
-| 素材域名 | `https://img.xuninfo.top` |
-| 素材域名根目录 | `/root/www`（已由用户截图确认） |
-| 绘本素材目录 | `/root/www/pic/assets/books/` |
-| 主站 `.env` | `ASSET_BASE_URL=https://img.xuninfo.top/pic` |
-| 本地首页 | `http://127.0.0.1:8198/` |
-| 默认导入资料 | `content/books/`，14 本、169 页 |
-
-数据库和 JSON 继续存 `/assets/books/…` 相对路径，API 返回时添加素材域名前缀。不要将域名写回数据库，也不要在 `ASSET_BASE_URL` 末尾重复添加 `/assets`。主站的首页装饰图、JS、CSS 继续由主站提供。
-
-本地 `.env` 已配置上述素材地址；主站若另行部署到服务器，需在实际运行进程读取的 `.env` 中配置同样的值。配置更改或程序更新需要重启，普通绘本内容入库无需重启。
-
-## 代码部署与素材分离
-
-主站代码不携带绘本图片或音频。`web/assets/books/`、试听音频和 `.tar.gz` 已加入 `.gitignore` / `.dockerignore`；Dockerfile 复制页面（包括 Google 验证 HTML）、JS、CSS、favicon、首页 hero.svg、通用对白脚本和导入 JSON，不复制绘本物料，也不挂载本地素材目录。
-
-部署时保留 `ASSET_BASE_URL=https://img.xuninfo.top/pic`。`content/books/*.json`、分镜、来源快照与生成脚本继续版本管理；读者播放直接访问独立素材域名，API 启动不读本地绘本文件。
-
-导入器新增配置（默认值如下）：
-
-```dotenv
-ASSET_CHECK_MODE=auto
-ASSET_CHECK_TIMEOUT=10s
-ASSET_CHECK_CONCURRENCY=6
-```
-
-- `auto`：优先检查本地文件，缺失时检查 `ASSET_BASE_URL` 对应地址；适合本地只保留正在制作的新书。
-- `remote`：全部检查素材域名，用于上传后的验收；本地有副本也不会跳过远程检查。
-- `local`：只检查本地文件，用于离线制作。打包脚本始终要求本书素材在本地。
-
-远程检查去重并限制并发，优先 HEAD；服务器不支持 HEAD 或无法确定大小时，以 Range 请求读取一个字节。必须为非空的图片/音频响应，404、HTML 错误页、空文件或超时均报错，失败时不连接数据库或写入数据。
-
-**已上传并确认完整的本地 `web/assets/books/` 副本可以清理**，不会影响运行或以后通过 Go importer 导入。保留 `content/books/` JSON；不要删除仍由主站提供的 `web/assets/hero.svg`。生成或重新打包某本书时仍需这本书的本地文件，必要时从素材服务器取回；后续新物料只在本地制作、打包后单独上传，不随代码发布。
-
-`.gitignore` 只影响未跟踪文件；如果在其他 Git 仓库里已经跟踪过这些素材，需在那里移除索引（保留磁盘文件）：
+本地项目目录为 `/Users/zx/Projects/pic`，默认首页 `http://127.0.0.1:8198/`：
 
 ```sh
-git rm -r --cached --ignore-unmatch web/assets/books web/assets/audio-previews
-```
-
-当前工作目录已存在 Git 仓库，素材与本地校对图继续忽略，不由 Codex 提交或推送。Docker 镜像不包含绘本文件，Compose 也不再依赖主机上的素材目录。
-
-## Google HTML 所有权验证
-
-将 Google 下载的验证文件原样放在项目 `web/` 下，例如 `web/google92a938ffcd897911.html`。访问地址为 `https://主站域名/google92a938ffcd897911.html`，URL 不包含 `/web/`，也不放到素材域名。文件名与内容保持 Google 提供的原样。
-
-Go 静态路由已支持根路径 `google字母数字.html`，不存在的文件返回 404；其他任意 HTML 不随之开放。Dockerfile 会复制 `web/*.html`。本次新增了 Go 路由，因此需部署并重启新版程序；Docker 部署需重新构建镜像。在浏览器确认上述公网地址直接显示验证文字后，再回 Google 点击验证。验证成功后保留文件。若 Nginx 将所有请求转发给 Go，无需额外配置；若 Nginx 独立处理 `.html`，需让该验证地址转发到 Go 或由其站点根目录提供同一文件。
-
-## Google 站点地图
-
-主站提供动态 `GET /sitemap.xml`，包含首页、书库、关于、版权、隐私页，以及 MySQL 中当前可见的所有已发布绘本详情页。不会把浏览器书架、筛选/搜索参数或阅读器的语言/页码变体重复列入。新增、下架绘本后，下次请求自动读取数据库，不必生成静态 XML 或重新导入；数据库查询失败返回 503，不回退 JSON 或返回不完整地图。
-
-在**运行主站的配置文件或环境变量**中设置正式主站域名，例如：
-
-```dotenv
-SITE_BASE_URL=https://books.example.com
-```
-
-将示例替换为自己的主站域名，不是 `ASSET_BASE_URL` 素材域名，不带 `/sitemap.xml`、子路径或参数。留空时按请求 Host 和直连 HTTP/HTTPS 生成；Nginx/CDN 终止 HTTPS 后再以 HTTP 转发到 Go 的部署应明确填写公开 HTTPS 域名，程序不信任转发头来推断域名。配置更改需重启；真实 `.env` 由用户自行修改，不提交 Git。
-
-1. 部署并重启新版 Go 服务；Docker 需重建镜像。该接口由 Go 实时生成，无需往 `web/` 或素材服务器上传 XML。如果 Nginx 单独处理 `.xml`，让 `/sitemap.xml` 请求转发到 Go，避免被静态规则返回 404。
-2. 浏览器打开 `https://主站域名/sitemap.xml`，确认返回 XML，且 `<loc>` 都使用正确的正式主站域名。
-3. 在 Google Search Console 的“站点地图”中提交此完整地址；若输入框前已固定主站域名，只填 `sitemap.xml`。提交后查看 Google 的读取状态，提交不保证立即收录。
-
-站点地图没有填写推测的更新时间；当前单文件支持最多 50,000 个网址，超过时需扩展为 sitemap index。
-
-## 角色对白：与书目统一维护（2026-11-11）
-
-唯一编辑入口是 `content/books/书ID.json`。页面的可选 `dialogue` 保存角色、原文范围和气泡位置，随正文一起由 importer 写入 `book_pages.dialogue_layout`，API 直接返回。无需额外维护 `web/assets/reader-layouts/`、独立排版 JSON 或前端书目清单。新增绘本无对白时不填该字段；需要对白时在同一本资料内一起整理，步骤见 [content.md](content.md)。
-
-现有 14 本、169 页中，为 12 本的 72 页整理了 95 个气泡。明确角色说话才设置气泡，旁白和说话者不明确的内容保留普通文字。桌面优先按插画留白定位，文字过长、重叠或盖住角色指向点时改用图上方卡片；700px 及以下统一采用错开的卡片，保持完整画面。普通阅读链接默认使用对白，顶部可切“图下文字”，选择保存在当前浏览器。`/read/bd-best-friends?layout=dialogue&page=2` 可用于定位示例页。
-
-**2026-11-12 状态：用户反馈已在服务器执行完整增量 SQL；未独立回读确认，尚未收到对白导入或新版部署完成反馈。该服务器库不需重复执行迁移，继续后续步骤：**
-
-1. 在数据库客户端选中现有绘本库，执行 [migrations/20261111_dialogue_layout.sql](migrations/20261111_dialogue_layout.sql)。它仅新增一个可空 JSON 字段，可重复执行，不重建表。
-2. 更新并重启主站后端，部署 `web/app.js`、`web/styles.css` 与 `web/assets/reader-dialogue.js`（Docker 部署需重建镜像）。未升级字段时，新后端仍能从 MySQL 正常读取原图下文字。
-3. 在项目目录先校验，再导入，刷新阅读页查看：
-
-```sh
-go run ./cmd/importer --validate-only
-go run ./cmd/importer
-```
-
-旧 10 本的本地物料已清理，默认 `auto` 校验会访问现有素材域名；请保持网络可用。导入包含对白的资料而数据库尚未升级时，会在事务写入前报错，提示上述迁移文件。入库后刷新生效，无需再次重启。修改正文后必须重新校对范围和正文哈希；导入器拒绝失效布局，运行时遇到失效数据则显示普通正文。
-
-本次只调整文字排版与存储，图片、MP3、音色、语速、素材包和 `.env` 不变，无需重新生成、打包或上传绘本。此前四本新书原有包的上传事项独立按下一节处理。
-
-## 本次四本新书上传（2026-11-10）
-
-四本已经事务入库，实际 MySQL/API 回读通过，无需重复导入。用户本轮明确要求先入库、再自行上传物料；新书图片与播放需等上传解压后才能在线使用。以下四包均位于本地 `web/assets/books/`，每包含该书封面、12 页 JPEG、中文和英文各 12 个 MP3，共 37 个文件：
-
-| 本地压缩包 | 书名 | 大小 |
-| --- | --- | --- |
-| `bd-come-stay-with-me.tar.gz` | 来我家住吧 | 3.4 MiB |
-| `bd-best-friends.tar.gz` | 好朋友 | 3.7 MiB |
-| `bd-little-goat.tar.gz` | 小山羊 | 2.2 MiB |
-| `bd-fifi-and-teddy.tar.gz` | 菲菲和泰迪熊 | 2.4 MiB |
-
-将四个压缩包上传到资源服务器 `/root/www/pic/assets/books/`，在该目录执行：
-
-```sh
-cd /root/www/pic/assets/books
-tar -xzf bd-come-stay-with-me.tar.gz
-tar -xzf bd-best-friends.tar.gz
-tar -xzf bd-little-goat.tar.gz
-tar -xzf bd-fifi-and-teddy.tar.gz
-```
-
-直接解压即可，不需清空旧目录。包内第一层为各自书 ID，沿用既有目录层级。上传后检查例如 `https://img.xuninfo.top/pic/assets/books/bd-best-friends/cover.jpg`，刷新书库即可，无需重启。中英文播放、暂停/继续、自动翻页及手机显示仍需上传后验收。素材包与旧书本地物料无关，不要为了这次上传重新生成整个书库。
-
-本次检查包括 148 个打包文件与 JSON 引用/文件哈希一致、96 个 MP3 非空且能解析、音色与全文生成指纹匹配；音频合计约 656 秒。声音仍为晓晓/Jenny、生成 `-20%`、播放默认 1 倍。尚未逐段人工听审；不等于真机播放已验收。
-
-## 平时启动
-
-```sh
-cd /Users/zx/Projects/pic
 go run ./cmd/api
 ```
 
-日常启动不运行 dbinit、不重新导入。程序自动读取 `.env`；连接到哪一个数据库由该文件及覆盖它的环境变量决定。
-
-## 新增或修改物料的完整流程
-
-顺序固定为：**本地生成 → 校验 → 打包 → 上传并解压 → 检查资源访问 → 导入 MySQL → 网页验证**。
-
-### 1. 本地生成
-
-配音参数在 `config/audio.json`，中文晓晓、英文 Jenny，均以 `-20%` 语速生成，播放器默认 1 倍。每次只执行实际需要更新的语言：
+服务器使用根目录 `deploy.sh`：`git pull` → `go build -o pic-server ./cmd/api/` → 重启 systemd `pic` 服务。服务器在项目目录执行：
 
 ```sh
-# 示例：只更新指定书的英文；新增书替换为对应 JSON 路径
-/tmp/pic-audio-venv/bin/python scripts/generate_audio.py content/books/bd-come-back-cat.json --language en
+bash deploy.sh
 ```
 
-中文生成使用同一命令去掉 `--language en`。只生成需要更新的书，避免清理旧音频后用整个目录批量命令重新生成全部书。重绘插画使用 `python3 scripts/illustrate_books.py`。没有对应内容变更时不必执行。这些命令只更新本地文件，不上传、不入库。
+本次已移除不使用的 `.dockerignore`、`Dockerfile`、`docker-compose.yml`；不需要 Docker。Codex 不代替用户提交、推送或部署。本地的取消跟踪/文件删除等变更须由用户提交推送后，服务器拉取才会生效。
 
-`/tmp/pic-audio-venv` 是临时环境，若已不存在，在项目根目录创建虚拟环境后使用 `.venv/bin/python` 替代：
+主站运行只查询 MySQL，需要程序、`web/` 中的界面资源与实际运行配置，**不需要 `content/books/`**。该目录已加入 `.gitignore`，已跟踪的旧 JSON 取消跟踪但保留本地备份；不再作为日常编辑、配音或打包来源。Git 中的 `tests/fixtures/library.json` 是自动生成的离线测试快照，不参与运行、制作或导入，禁止人工编辑。
 
-```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install edge-tts
-```
+配置统一从 `.env` / `CONFIG_FILE` / `--config` 加载，环境变量优先；真实凭据不打印、不提交。配置或程序更新需重启，数据库内容更新刷新网页即可，不必重启。当前数据库已初始化，不重复建表或清库。
 
-生成器按音色、语速和正文生成不同版本目录；相同输入可复用已完成文件，每本全部成功后才回写 JSON。批量跳过 `offline` 书目。失败时修复网络再重试，不要把设备朗读当作正式音频完成。
+## 素材服务器
 
-### 2. 本地校验
+| 项目 | 值 |
+| --- | --- |
+| 素材域名 | `https://img.xuninfo.top` |
+| 域名根目录 | `/root/www` |
+| 绘本素材目录 | `/root/www/pic/assets/books/` |
+| 主站素材配置 | `ASSET_BASE_URL=https://img.xuninfo.top/pic` |
+| 本机生成位置 | `web/assets/books/书ID/` |
+| 单书交付包 | `web/assets/books/书ID.tar.gz` |
 
-```sh
-cd /Users/zx/Projects/pic
-go run ./cmd/importer --validate-only
-```
+数据库保存 `/assets/…` 相对路径，API 在返回时添加素材域名前缀。图片、MP3、试听及压缩包不进入 Git；主站首页 `hero.svg`、通用对白模块、JS/CSS 仍随代码部署。不要清空服务器旧书目录。
 
-当前全目录校验应显示 **14 本绘本，169 页**。本次实际只用四本新书构成的临时批次校验及事务导入，显示 **4 本绘本，48 页**，避免覆盖旧书运营资料。校验失败先解决，不继续上传和入库。
-
-### 3. 打包并上传解压
-
-服务器上传工具不能上传目录，现行方式为：**本次上传完整素材包，以后按书目上传对应压缩包**。使用 `scripts/package_assets.py`，只收集书目实际引用的图片与音频；全量包额外包含首页装饰图。自动排除 `.DS_Store`、`._*`、缓存、JSON 和其他压缩包，不递归复制 macOS 元数据。
-
-此前全量包已由用户上传并解压，本地绘本副本和已用压缩包已清理。日常更新按下面的单书流程执行；不要为了打包重新生成所有旧书。若需要全量恢复包，先从素材服务器取回对应素材，再运行 `python3 scripts/package_assets.py`；该全量包从 `assets/` 开始，在 `/root/www/pic` 解压。
-
-#### 后续：每本新增或更新的书单独打包
-
-本地生成、校验完成后，按实际书 ID 执行；以下用现有书举例：
-
-```sh
-python3 scripts/package_assets.py --book bd-come-back-cat
-```
-
-生成文件放在本地 **`web/assets/books/` 下面**，与对应书目文件夹同级：
-
-```text
-/Users/zx/Projects/pic/web/assets/books/bd-come-back-cat.tar.gz
-```
-
-该包内从 **`bd-come-back-cat/`** 开始，含本书当前引用的图片及中英文音频。只上传该压缩包到服务器 **`/root/www/pic/assets/books`**，在那里执行：
+单书包第一层是书 ID，不含 JSON、其他书、原始来源、校对图或系统文件。用户将包上传后，在服务器素材目录解压：
 
 ```sh
 cd /root/www/pic/assets/books
-tar -xzf bd-come-back-cat.tar.gz
+tar -xzf 书ID.tar.gz
 ```
 
-新增书用它自己的 ID 生成与解压。不会重复上传其他书，也不需要重建整个 assets 目录。更新现有书的同路径文件会覆盖，旧版音频目录不会自动删除。全量包与单书包不会把其他 `.tar.gz` 再套进包里。
+用户反馈解压后，由 Codex 校验远程图片与中英文音频；数据已由制作工具写回时，不再要求用户重复 importer。
 
-| 包类型 | 包内第一层 | 服务器解压位置 |
-| --- | --- | --- |
-| `pic-book-assets.tar.gz` | `assets/` | `/root/www/pic` |
-| `书ID.tar.gz` | `书ID/` | `/root/www/pic/assets/books` |
+## Codex 的查库制作入口
 
-### 4. 检查素材域名
-
-上传解压后，先在本地强制检查当前资料的全部远程资源，不连接数据库：
+以下命令供 Codex 制作时使用，不是增加用户的手工步骤。统一在本地项目根目录运行，数据库配置沿用项目 `.env`，也可用 `--db-config 路径` 指定。缺少 edge-tts 等依赖时，由 Codex 在本机准备项目虚拟环境，不在服务器生成配音。
 
 ```sh
-ASSET_CHECK_MODE=remote go run ./cmd/importer --validate-only
+python3 scripts/materials.py show --book 书ID
+python3 scripts/materials.py validate --book 书ID
+python3 scripts/materials.py audio --book 书ID
+python3 scripts/materials.py package --book 书ID
 ```
 
-该命令不要求本地绘本素材。检查通过后再入库；也可以用下面链接做人工试听。
+- `show` / `list`：直接读 MySQL，保留数据库相对路径、运营状态和来源字段，不从公开 API 拼接的远程地址或旧 JSON 回填。
+- `audio`：默认中英文顺序处理，继续晓晓 / Jenny、生成 -20%。每种语言整本成功后事务写回 MP3 路径、声音记录和内容版本。相同全文、音色、语速已在库中记录时跳过，即使已上传的本地副本被清理也不会自动重配；明确要求重配才使用 `--force`。`--language zh|en` 可选单语言，`--preview` 仅试听、不写库。
+- `package`：按数据库引用打包本机现存素材，保持单书包结构；缺文件会失败且保留原包，不偷偷重生成旧资源。旧书本地副本已清理时，如需重打包应先取回相应资源。
+- `prepare`：顺序执行配音与打包；图片需事先准备完成，避免误用模板或批量重绘旧书。
+- `art`：仅明确指定的一本书，原画按来源记录选择批次并处理图片，SVG 书使用已实现分镜；完成后写回路径和图片版本。保留数据库正文、对白、音频与运营字段，不默认重绘全库。`--source-dir` 可指定原画源目录。
 
+现有脚本也提供查库入口：
 
-封面验证地址：
+```sh
+python3 scripts/generate_audio.py --book 书ID --language zh
+python3 scripts/generate_audio.py --book 书ID --language en
+python3 scripts/package_assets.py --book 书ID
+python3 scripts/prepare_original_books.py --book 书ID
+python3 scripts/illustrate_books.py --book 书ID
+```
+
+技术性的音色配置、分镜、来源哈希和清理区域继续由 Codex 管理；用户不手工维护它们。制作中的序列化数据仅在内存或自动删除的临时目录内使用，不再保存第二份可编辑书目。
+
+## 新内容录入和一致性
+
+Codex 阅读完整来源、整理双语正文和明确角色对白后，用本机 `cmd/materials` 工具直接录入 MySQL。`read --book ID` 返回完整书目与快照版本，`save` 从标准输入接收工具生成的数据，**不需要用户创建或编辑 JSON 文件**。新建使用空快照版本，已有书必须带上读取时的版本，防止误覆盖；来源与许可署名仍须逐本保留。`save --metadata-only` 仅用于制作前录入完整正文和预计资源路径，不代表资源已生成或可访问。
+
+保存沿用已有校验与事务，不增加授权审批门槛。正文变化时清理对应语言旧音频引用及声音记录，失效的对白范围回退普通文本；生成失败不提交该阶段结果。写回前在事务内锁定书目并比对完整快照，若制作期间有其他改动则拒绝覆盖，重新查库后重试。不同书继续使用不同业务 ID。
+
+默认保存和 `validate` 使用既有素材检查器：`ASSET_CHECK_MODE=auto` 优先本地，缺失时检查素材域名；`remote` 全部检查远程；`local` 仅本地。非空、资源类型、HEAD/必要时单字节 Range 和并发限制沿用现有实现。生成/打包只处理指定书本机素材，不以旧 JSON 为后备。
+
+旧 `cmd/importer`、显式文件模式和 `--source legacy-json` 仅保留历史迁移/修复兼容；**以后不作为日常流程运行，避免用旧备份覆盖数据库新内容**。需要数据恢复时由 Codex核对目标及差异后处理。
+
+## 已有物料状态
+
+2026-11-12 已只读核对实际 MySQL 的 **18 本、217 页**，包括新四本《谁吃了我的帽子？》《聪明的小猪》《勇敢的博拉》《和我一起玩吧》的正文、气泡和相对资源路径。用户已反馈四包上传解压；此次没有重新导入或改写这些内容；已强制远程模式检查新四本全部148个引用图片/MP3，非空、类型和可访问性均通过，真机播放仍待验证。旧十本插画师展示字段与本地历史 JSON 有差异，保留数据库现值；声音时间的毫秒舍入和对白 target 的 null/省略属序列化差别，不据此覆盖。
+
+四个现有包各 37 文件（封面 1、正文图片 12、中英文 MP3 各 12）：
 
 ```text
-https://img.xuninfo.top/pic/assets/books/bd-come-back-cat/cover.svg
+web/assets/books/bd-who-ate-my-hat.tar.gz
+web/assets/books/bd-clever-pig.tar.gz
+web/assets/books/bd-brave-bora.tar.gz
+web/assets/books/bd-play-with-me.tar.gz
 ```
 
-英文音频路径含内容指纹，不要照抄旧版本。可在本地输出本次第一本书的真实试听地址，再复制到浏览器：
+本地源预览在 `docs/materials-review/original-sources-20261112/`，建议保留供重制；`responsive-20261112/` 是布局截图和报告，可在检查完成后清理。两者均被 Git 忽略、不打包、不部署。已上传资源的本机副本不影响网站运行，但未明确要求前不自动清理仍在制作/交付的资源。
+
+## Google 验证与 sitemap
+
+Google 验证文件保留在 `web/google92a938ffcd897911.html`，部署后从主站根路径 `/google92a938ffcd897911.html` 访问，不带 `/web/`，不放素材域名。Go 仅开放符合规则且确实存在的验证 HTML。若 Nginx 单独处理 HTML，确保该地址能访问对应文件。
+
+主站 `GET /sitemap.xml` 实时查询 MySQL 全部可见已发布书目，不需要生成、上传 XML。包含公共页面与绘本详情，不包含个人书架或阅读器参数变体；上/下架后下次请求生效，数据库失败返回 503。反向代理 HTTPS 部署应在主站配置填写真实公开 origin：
+
+```dotenv
+SITE_BASE_URL=https://你的主站域名
+```
+
+它与 `ASSET_BASE_URL` 独立，不加路径。修改后重启；确保 Nginx 把 `/sitemap.xml` 请求转发给 Go，公网确认 XML 后由用户在 Search Console 提交。
+
+## 检查与备份
+
+Codex 执行 Go/Python/JS 及阅读器检查；全页回归快照可自动刷新：
 
 ```sh
-python3 - <<'PY'
-import json
-from pathlib import Path
-book = json.loads(Path('content/books/bd-come-back-cat.json').read_text())
-print('https://img.xuninfo.top/pic' + book['pages'][0]['audio_original'])
-PY
+python3 scripts/materials.py snapshot-tests
+make test
+npm run test:reader
 ```
 
-图片应显示、英文应能播放。Nginx 应返回正确的 `image/svg+xml` / `audio/mpeg`，音频 Range 请求应返回 206。404 时检查目录层级，403 时检查读取权限或防盗链设置。已有中文资源站已验证可访问，无需为每次新增音频重新配置站点。
-
-### 5. 在本地更新 MySQL
-
-资源可访问后，回到本地项目目录执行：
-
-```sh
-cd /Users/zx/Projects/pic
-go run ./cmd/importer
-```
-
-读取本地更新后的 JSON，按 ASSET_CHECK_MODE 校验本地或远程素材，连接本地 `.env` 对应的 MySQL；目标应为主站实际使用的数据库。导入在事务内按业务 ID 更新书目、逐页路径和 `book_voices`，不会删除未在批次中的其他书。生成音频、上传文件、写入数据库是三个独立步骤，不能省掉最后的导入。
-
-### 6. 网页验证
-
-无需重启，刷新网页并打开《小猫，回来呀！》：
-
-- 详情应显示英文已配逐页音频。
-- `/api/books/bd-come-back-cat/pages` 中 `audio_original` 应为 `https://img.xuninfo.top/pic/assets/books/…`。
-- 切到 English，使用 1 倍播放，验证暂停、继续、播完自动翻页及切回中文停止旧音频。
-- 浏览器 Network 中图片和 MP3 应请求 `img.xuninfo.top/pic/…`。若仍显示设备朗读，检查是否尚未导入、导入了另一数据库，或当前页缺少 `audio_original`。
-
-## 文件清理
-
-- 上传、解压和播放验证完成后，可以删除本地及服务器上的已使用压缩包。原本为目录上传准备的 `upload-english/` 副本不再需要，已清理。
-- 制作机保留 JSON、来源快照、分镜和生成脚本。已上传并通过远程校验的本地绘本素材可清理，尚未上传的新物料保留到上传完成；以后导入缺失的本地素材会通过域名校验。
-- 不直接删除旧版本音频：只有确认数据库和当前 JSON 均不再引用时才清理，避免生成新版本但尚未导入时中断线上播放。
-- 主站运行目录无需部署绘本素材；首页装饰图和前端文件仍需部署。Dockerfile 与构建忽略规则已排除绘本素材，Compose 不挂载本地素材。
-- 同服务器独立静态域名仍共用整机磁盘和内存；配音生成在本机完成，服务器只提供文件访问。
-
-## 本轮状态（2026-11-06）
-
-- 书库为 10 本、121 页；原 131 张绘本 SVG 和中英文各 121 个 MP3 已由用户上传。本地已上传素材和用完压缩包已清理，JSON、制作脚本和主站界面资源保留。
-- 已知中文资源上传完成；封面 HTTP 200、中文音频 Range HTTP 206 已抽样验证。
-- 本次已实测封面、中文第一页、英文第一页均 HTTP 200，类型正确；数据库音频更新和真实浏览器播放尚待用户完成或反馈，抽查不能代表全量验收。
-
-- 当前本地已清理 374 个绘本/已用压缩包文件、约 23.5 MiB，未删除服务器文件。后续新物料在本地制作后按书目打包；旧书无需自动取回或重生成。用户反馈执行过 importer，未独立核验实库。
+该快照只读数据库、用于离线测试，不替代 MySQL 备份，不作为运营导入来源。生产数据维护以数据库为准；当前已知 schema 外键数量测试失败按用户要求忽略，不为通过断言修改表结构。实际检查边界见 `docs/acceptance.md`。

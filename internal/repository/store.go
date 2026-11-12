@@ -170,6 +170,15 @@ func (r *MySQL) Options(ctx context.Context) (model.Options, error) {
 
 // Fetch relations for the entire result page instead of running per-book queries.
 func (r *MySQL) relations(ctx context.Context, books []model.Book) error {
+	return relations(ctx, r.db, books)
+}
+
+type contentReader interface {
+	QueryContext(context.Context, string, ...any) (*sql.Rows, error)
+	QueryRowContext(context.Context, string, ...any) *sql.Row
+}
+
+func relations(ctx context.Context, db contentReader, books []model.Book) error {
 	if len(books) == 0 {
 		return nil
 	}
@@ -180,7 +189,7 @@ func (r *MySQL) relations(ctx context.Context, books []model.Book) error {
 		byID[books[i].ID] = &books[i]
 	}
 	for _, relation := range []struct{ table, column string }{{"book_age_ranges", "age_id"}, {"book_categories", "category_id"}, {"book_languages", "language_id"}} {
-		rows, err := r.db.QueryContext(ctx, fmt.Sprintf("SELECT book_id,%s FROM %s WHERE book_id IN (%s) ORDER BY book_id,sort_order,%s", relation.column, relation.table, placeholders(len(args)), relation.column), args...)
+		rows, err := db.QueryContext(ctx, fmt.Sprintf("SELECT book_id,%s FROM %s WHERE book_id IN (%s) ORDER BY book_id,sort_order,%s", relation.column, relation.table, placeholders(len(args)), relation.column), args...)
 		if err != nil {
 			return err
 		}
@@ -209,7 +218,7 @@ func (r *MySQL) relations(ctx context.Context, books []model.Book) error {
 			return err
 		}
 	}
-	rows, err := r.db.QueryContext(ctx, "SELECT book_id,language_id,provider,voice_id,generated_at,review_status FROM book_voices WHERE book_id IN ("+placeholders(len(args))+")", args...)
+	rows, err := db.QueryContext(ctx, "SELECT book_id,language_id,provider,voice_id,generated_at,review_status FROM book_voices WHERE book_id IN ("+placeholders(len(args))+")", args...)
 	if err != nil {
 		return err
 	}

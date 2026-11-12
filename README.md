@@ -1,5 +1,7 @@
 # pic · 小小绘本馆
 
+**2026-11-12 当前流程**：MySQL 是正式书目唯一维护源，已只读核对18本217页。Codex 通过本机制作工具完成内容录入、图片/中英文配音、校验与打包，用户最多负责上传压缩包、解压。正式书目JSON不再人工维护、不提交Git；本机旧文件仅留备份。服务器使用 `deploy.sh`（git pull、Go编译、systemd），Docker配置已移除。日常制作入口为 `python3 scripts/materials.py … --book 书ID`，详见[操作手册](docs/operations.md)；下方早期导入说明不再是日常流程。
+
 面向 0–6 岁儿童与家长的免费双语绘本 Web MVP：Go API + MySQL + 原生 HTML/CSS/JavaScript，无前端构建依赖。视觉保持浅蓝、奶油白、黄色按钮、圆角卡片与柔和插画。
 
 ## 运行
@@ -29,9 +31,9 @@ ASSET_BASE_URL=https://img.xuninfo.top/pic
 
 数据库继续保存 `/assets/…` 相对路径，API 自动添加域名前缀，不用改表。配置修改需重启；绘本入库后刷新网页即可。
 
-当前为 10 本 Book Dash 双语翻译与重绘版、121 页。图片和中英文各 121 页音频已由用户上传素材服务器，本地已上传的绘本文件及已用全量包已清理；书目 JSON 保留。用户反馈已执行 importer，实际数据库状态未独立复核。旧演示数据与试听已清理，不再保留旧清理步骤。
+首批为 10 本 Book Dash 双语翻译与重绘版、121 页（历史记录，当前为18本217页）。图片和中英文各 121 页音频已由用户上传素材服务器，本地已上传的绘本文件及已用全量包已清理；书目 JSON 保留。用户反馈已执行 importer，实际数据库状态未独立复核。旧演示数据与试听已清理，不再保留旧清理步骤。
 
-配音参数统一在 [config/audio.json](config/audio.json)：中文晓晓 `zh-CN-XiaoxiaoNeural`、英文 Jenny `en-US-JennyNeural`，均为 `-20%` 生成语速，播放器默认 1 倍。缺音频时仅提供明确标注的设备朗读；现有方案不提供可控情绪风格。新文本或参数会产生新的音频版本目录，成功生成整本后才写回 JSON。
+配音参数统一在 [config/audio.json](config/audio.json)：中文晓晓 `zh-CN-XiaoxiaoNeural`、英文 Jenny `en-US-JennyNeural`，均为 `-20%` 生成语速，播放器默认 1 倍。缺音频时仅提供明确标注的设备朗读；现有方案不提供可控情绪风格。新文本或参数会产生新的音频版本目录，成功生成整本后由本地制作入口事务写回 MySQL。
 
 ## 功能
 
@@ -48,7 +50,7 @@ ASSET_BASE_URL=https://img.xuninfo.top/pic
 
 自动读取 `.env`，支持 `--config` / `CONFIG_FILE`，环境变量覆盖文件；完整模板为 [.env.example](.env.example)。不要打印或上传实际 `.env`。
 
-后端为 `router → handler → service → repository → model`，命令仅负责配置、组装和生命周期。静态界面在 `web/`；`content/books/` 是离线导入源，不是运行时后备数据。
+后端为 `router → handler → service → repository → model`，命令仅负责配置、组装和生命周期。静态界面在 `web/`；`content/books/` 仅留历史本机备份，不是日常制作源或运行时后备。
 
 ## 检查
 

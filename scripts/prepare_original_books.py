@@ -40,7 +40,7 @@ def remove_typesetting(image, regions):
         # Reviewed boxes contain typesetting, with background lighter than ink.
         # Mask the ink only, preserving paper/watercolour texture around it.
         background = float(np.percentile(roi, 85))
-        if background >= 250:
+        if background >= 254.5:
             white_regions.append((x0, y0, x1, y1))
         ink = (roi < background - 18).astype('uint8') * 255
         mask[y0:y1, x0:x1] = np.maximum(mask[y0:y1, x0:x1], ink)
@@ -52,11 +52,16 @@ def remove_typesetting(image, regions):
     return Image.fromarray(result)
 
 
-def prepare(source_dir, art_only=False):
+def prepare(source_dir, art_only=False, books=None):
     from PIL import Image
     config = json.loads((ROOT / 'config/original_art.json').read_text())
     evidence = json.loads((SOURCE / 'sources.json').read_text())
-    for book_id, (ages, categories, featured, description) in PROFILES.items():
+    selected = books or list(PROFILES)
+    for book_id in selected:
+        if book_id not in evidence or book_id not in config:
+            raise ValueError('未找到原画来源或清理配置：' + book_id)
+        if not art_only and book_id not in PROFILES:
+            raise ValueError('此书的正文与对白直接维护 content/books/' + book_id + '.json；整理图片请使用 --art-only')
         story = json.loads((SOURCE / (book_id.removeprefix('bd-') + '.json')).read_text())
         output = ROOT / 'web/assets/books' / book_id
         output.mkdir(parents=True, exist_ok=True)
@@ -78,6 +83,7 @@ def prepare(source_dir, art_only=False):
         if art_only:
             print(f'{book_id}: 图片已整理，未修改书目或音频引用。')
             continue
+        ages, categories, featured, description = PROFILES[book_id]
         pages = [dict(page, image=f"/assets/books/{book_id}/page-{page['page_number']:03}.jpg") for page in story['pages']]
         addition = story['narration_additions']
         note = ('原作无字跨页补充了中英文朗读串词，页码：' + ','.join(map(str, addition)) + '。') if addition else ''
@@ -113,7 +119,20 @@ def prepare(source_dir, art_only=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source-dir', type=Path, default=ROOT / 'docs/materials-review/original-sources-20261110')
+    parser.add_argument('--source-dir', type=Path)
     parser.add_argument('--art-only', action='store_true', help='只处理图片，不修改 JSON 或配音引用')
+    parser.add_argument('--book', action='append', help='仅处理指定书 ID，可重复；默认查MySQL，不再重建书目JSON')
+    parser.add_argument('--db-config', type=Path, help='数据库.env配置文件')
+    parser.add_argument('--legacy-json', action='store_true', help='显式启用旧版JSON重建，仅兼容历史资料')
     args = parser.parse_args()
-    prepare(args.source_dir, args.art_only)
+    if not args.art_only and not args.legacy_json:
+        if not args.book:
+            parser.error('请用 --book 指定数据库书目；不再默认重生成旧书JSON')
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('pic_db_materials', Path(__file__).with_name('materials.py'))
+        materials = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(materials)
+        for book_id in args.book:
+            materials.make_art(materials.Store(args.db_config), book_id, args.source_dir)
+    else:
+        prepare(args.source_dir or ROOT/'docs/materials-review/original-sources-20261110', args.art_only, args.book)

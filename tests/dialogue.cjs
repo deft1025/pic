@@ -16,8 +16,7 @@ vm.runInContext(fs.readFileSync(path.join(root, 'web/assets/reader-dialogue.js')
 const stage = document.querySelector('main'), picture = stage.querySelector('.reader-image-wrap');
 const transcript = stage.querySelector('.reader-text'), view = context.mount(stage);
 let checked = 0;
-for (const name of fs.readdirSync(path.join(root, 'content/books')).filter(x => x.endsWith('.json'))) {
- const book = JSON.parse(fs.readFileSync(path.join(root, 'content/books', name), 'utf8'));
+for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/library.json'), 'utf8')).books) {
  for (const page of book.pages) for (const language of book.languages) {
   const text = page[language === 'zh' ? 'text_zh' : 'text_original'];
   transcript.textContent = text;

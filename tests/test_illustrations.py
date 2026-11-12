@@ -23,7 +23,9 @@ class IllustrationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.boards = json.loads((ROOT/'tests/fixtures/illustrations.json').read_text())
         cls.boards.update(json.loads((ROOT/'config/illustrations.json').read_text()))
-        cls.books = {bid: json.loads(((ROOT/'tests/fixtures/books' if (ROOT/'tests/fixtures/books'/f'{bid}.json').is_file() else ROOT/'content/books')/f'{bid}.json').read_text()) for bid in cls.boards}
+        cls.books = {b['id']: b for b in json.loads((ROOT/'tests/fixtures/library.json').read_text())['books']}
+        cls.books.update({p.stem: json.loads(p.read_text()) for p in (ROOT/'tests/fixtures/books').glob('*.json')})
+        cls.books = {bid: cls.books[bid] for bid in cls.boards}
 
     def page(self, bid, number):
         return ET.fromstring(art.page_svg(self.books[bid], number, self.boards[bid]))

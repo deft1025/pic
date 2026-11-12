@@ -1,0 +1,82 @@
+{
+  "key": "who-ate-my-hat",
+  "id": "bd-who-ate-my-hat",
+  "title": "谁吃了我的帽子？",
+  "en": "Who ate my hat?",
+  "writer": "Griffin Shea",
+  "illustrator": "El Marto",
+  "designer": "Thembelihle Radebe",
+  "editor": "Tiffany Mac Sherry",
+  "source_url": "https://bookdash.org/books/who-ate-my-hat/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "英文依官网完整原画逐页核对，OCR只作辅助；合并排版换行并统一弯引号。无字页新增串词单列，不冒充原作正文。",
+  "narration_additions": [
+    8,
+    10,
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "I love my hat.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "My hat was here. Who ate my hat?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Did you eat my hat? I don’t eat hats. I crunch on carrots.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "Did you eat my hat? I don’t eat hats. I nibble on nuts.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Did you eat my hat? I don’t eat hats. I munch on mangoes.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "Did you eat my hat? I don’t eat hats. I feast on flowers.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "That’s my hat! You ate my hat.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Zebra and Meerkat look at each other.",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 9,
+      "text_original": "I’m sorry. We can make a new hat.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "They make new hats together.",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 11,
+      "text_original": "I love my new hat. I love my new hat too.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "Now the friends share a picnic.",
+      "original_was_wordless": true
+    }
+  ]
+}

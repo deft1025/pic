@@ -16,13 +16,20 @@ flowchart LR
 
 `model` 是各层共享的纯数据类型，不依赖 HTTP、数据库或配置。`catalog` 仅用于离线资料加载、校验及测试资料；运行时 API 通过 repository 查询 MySQL，没有 JSON 后备。导入命令通过 `importer` 准备批次，再交给 repository 事务入库。
 
+## 本机制作与数据库维护
+
+`scripts/materials.py` → 本机 `cmd/materials` → `service.Materials` → repository → MySQL。不新增公开写接口或服务器后台；`read` 返回完整书目及快照版本，`save` 在事务内锁定并校验版本后写入。制作失败或版本冲突不覆盖已有内容，正文改变清理对应语言旧音频。脚本仅在内存/自动清理的临时目录里适配旧生成实现，不再维护 content/books。`snapshot-tests` 只读生成离线测试夹具，运行和制作均不读取测试快照。
+
+部署仍为服务器 `deploy.sh` 的 git pull、Go 编译和 systemd 重启；不使用 Docker。书目 JSON 已取消 Git 跟踪，本机历史备份保留。
+
 ## 各层职责
 
 | 包 | 职责 |
 | --- | --- |
 | `cmd/api` | 加载配置、连接数据库、组装依赖、启动及关闭 HTTP 服务 |
 | `cmd/dbinit` | 解析命令行参数，调用数据库初始化能力 |
-| `cmd/importer` | 解析命令行参数，组织批次加载、只校验或事务入库 |
+| `cmd/importer` | 仅兼容历史文件迁移；不作为日常制作入口 |
+| `cmd/materials` | 本地查库、校验、带版本保存的命令适配；不暴露 HTTP 写接口 |
 | `internal/config` | 自动读取配置文件、环境覆盖、默认值和有效性检查 |
 | `internal/router` | 注册路径、HTTP 方法、安全响应头与异常恢复 |
 | `internal/handler` | 转换请求参数，将业务结果、错误映射为 JSON 与 HTTP 状态码 |

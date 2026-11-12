@@ -15,19 +15,20 @@ content = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(content)
 
 
-def package_assets(root, book_id=None):
+def package_assets(root, book_id=None, books=None):
     root = Path(root)
     if book_id is not None and not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', book_id):
         raise ValueError('书目 ID 必须是 1–64 位字母、数字、下划线或连字符')
-    manifests = [root/'content/books'/f'{book_id}.json'] if book_id else sorted((root/'content/books').glob('*.json'))
-    if not manifests:
+    if books is None:
+        manifests = [root/'content/books'/f'{book_id}.json'] if book_id else sorted((root/'content/books').glob('*.json'))
+        books = [json.loads(path.read_text(encoding='utf-8')) for path in manifests]
+    if not books:
         raise ValueError('没有可打包的绘本资料')
     web = root/'web'
     sources = {}
     ids = set()
     pages = 0
-    for manifest in manifests:
-        book = json.loads(manifest.read_text(encoding='utf-8'))
+    for book in books:
         if book['id'] in ids or (book_id and book['id'] != book_id):
             raise ValueError('书目 ID 重复或与指定书目不一致')
         paths = content.validate(book, web)
@@ -69,10 +70,20 @@ def package_assets(root, book_id=None):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--book', help='只打包指定书目；省略则生成完整素材包')
+    parser.add_argument('--source', choices=['database', 'legacy-json'], default='database', help='默认从MySQL读取；legacy-json仅兼容历史备份')
+    parser.add_argument('--db-config', type=Path, help='数据库.env配置文件')
     args = parser.parse_args(argv)
     try:
-        output, stats = package_assets(ROOT, args.book)
-    except (OSError, ValueError, KeyError, TypeError, tarfile.TarError) as error:
+        if args.source == 'database':
+            if not args.book:
+                parser.error('数据库模式请用 --book 指定一本书，避免误打包全库')
+            spec = importlib.util.spec_from_file_location('pic_db_materials', Path(__file__).with_name('materials.py'))
+            database_materials = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(database_materials)
+            output, stats = database_materials.package(database_materials.Store(args.db_config), args.book)
+        else:
+            output, stats = package_assets(ROOT, args.book)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError, tarfile.TarError) as error:
         print('打包失败：' + str(error), file=sys.stderr)
         return 1
     print(f"打包完成：{output}\n{stats['books']} 本、{stats['pages']} 页、{stats['files']} 个素材文件，{output.stat().st_size / 1024 / 1024:.1f} MiB")

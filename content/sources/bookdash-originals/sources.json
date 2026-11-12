@@ -554,5 +554,577 @@
         "height": 768
       }
     ]
+  },
+  "bd-who-ate-my-hat": {
+    "source_url": "https://bookdash.org/books/who-ate-my-hat/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-12",
+    "source_dir": "docs/materials-review/original-sources-20261112",
+    "source_file": "who-ate-my-hat.json",
+    "source_sha256": "84bd578bc08314c488ddfe9cc93b3121ed437b1f28fc31b0bcd9af8c574f5db6",
+    "image_processing": "采用官网完整高清英文预览，保留原插画，按逐行复核区域清理图内英文；无字源文件目录可列出，抽查Clever Pig无字源图CloudFront返回403。封面保留英文书名及署名。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "source_file": "bd-who-ate-my-hat/cover.jpg",
+        "page_number": 0,
+        "sha256": "310ba00a48d1786bc5f48bcbaf8472f21be5c8fb7ad839c46e8edfb3b3f3c6d6",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "source_file": "bd-who-ate-my-hat/preview-001.jpg",
+        "page_number": 1,
+        "sha256": "bbf654bb0cd699371e1f6b7e56ec21869e392fac7b335c6e3539443545ba464f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "source_file": "bd-who-ate-my-hat/preview-002.jpg",
+        "page_number": 2,
+        "sha256": "58448fe1538bd84b9e089837fff18c91d58b68cfe53f73af9e5c1de845a121db",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "source_file": "bd-who-ate-my-hat/preview-003.jpg",
+        "page_number": 3,
+        "sha256": "6a301a4b5d590e60144028dc6bd3bd301069c8600a10cbc693c1520033eeeb09",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "source_file": "bd-who-ate-my-hat/preview-004.jpg",
+        "page_number": 4,
+        "sha256": "745136da6cb2d1151cef97701315f52cb52f854d829074ee50f5f68bac3d429f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "source_file": "bd-who-ate-my-hat/preview-005.jpg",
+        "page_number": 5,
+        "sha256": "2e4a64d8b9a510c3e7496fad681163347741190712be2013cfbf3d7f76162749",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "source_file": "bd-who-ate-my-hat/preview-006.jpg",
+        "page_number": 6,
+        "sha256": "9b4b0aaa1033cc8ded37a7d80581f386a923ed7c99cfcd0dfdc6bd63aace2330",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "source_file": "bd-who-ate-my-hat/preview-007.jpg",
+        "page_number": 7,
+        "sha256": "32b27e3fbf75f8753ec4d81419f9516c8438a62194e2a0e243adee9fb065cbc5",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "source_file": "bd-who-ate-my-hat/preview-008.jpg",
+        "page_number": 8,
+        "sha256": "289478104de8340ba45fd190eb6c513d1ffe2b75c8dd7773d513b9a0067aadba",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "source_file": "bd-who-ate-my-hat/preview-009.jpg",
+        "page_number": 9,
+        "sha256": "701c3e17b8bc9604446cdcdd49916c6442b85d761b0f5e53e88484d006f293e4",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "source_file": "bd-who-ate-my-hat/preview-010.jpg",
+        "page_number": 10,
+        "sha256": "e5cdaf90da6657780b978facad359b348186b4048972694060294c6021a12741",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "source_file": "bd-who-ate-my-hat/preview-011.jpg",
+        "page_number": 11,
+        "sha256": "2213dd6bb81dddc9caaa23b430065585cef45d9adf76ea67a4ab049589bfb255",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/who-ate-my-hat_en_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "source_file": "bd-who-ate-my-hat/preview-012.jpg",
+        "page_number": 12,
+        "sha256": "cace1f6dec9af2a7de07b58bc863ebffb492d2b3fb4f3e303a95c573c09113b1",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-clever-pig": {
+    "source_url": "https://bookdash.org/books/clever-pig/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-12",
+    "source_dir": "docs/materials-review/original-sources-20261112",
+    "source_file": "clever-pig.json",
+    "source_sha256": "9f3c0601bd07c57ca660e19c168b650d6bf16a067f052a839da7a5c4605451f4",
+    "image_processing": "采用官网完整高清英文预览，保留原插画，按逐行复核区域清理图内英文；无字源文件目录可列出，抽查Clever Pig无字源图CloudFront返回403。封面保留英文书名及署名。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "source_file": "bd-clever-pig/cover.jpg",
+        "page_number": 0,
+        "sha256": "5b81779c4654427f27a9b5c1400ee43387385cec9d633774018a77740e676811",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "source_file": "bd-clever-pig/preview-001.jpg",
+        "page_number": 1,
+        "sha256": "7b12423033a86698a4f43a955bc889abac66692c885d3c42aa79ff86d6146348",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "source_file": "bd-clever-pig/preview-002.jpg",
+        "page_number": 2,
+        "sha256": "42a18c35aa4536f36d6dbf0ab4310159bbf6cadbbcf27923a0e0f1795cdb713a",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "source_file": "bd-clever-pig/preview-003.jpg",
+        "page_number": 3,
+        "sha256": "23069261ba68585eef86f5673ef64130f42f5118c6a4452426c85d77d19c7e5d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "source_file": "bd-clever-pig/preview-004.jpg",
+        "page_number": 4,
+        "sha256": "24cc22b21adeba5ca8333e2d35aa16c5e6a4caa48a5d202cc605ed24707a6de7",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "source_file": "bd-clever-pig/preview-005.jpg",
+        "page_number": 5,
+        "sha256": "27193e0ebe0c94f2cc7ff8d87edd8ebf1c099ac668fc174447c29ccd167759bd",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "source_file": "bd-clever-pig/preview-006.jpg",
+        "page_number": 6,
+        "sha256": "65a2dd0ff1377a4584a2569e3c918248a7134b728df8115c436d9343d9783682",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "source_file": "bd-clever-pig/preview-007.jpg",
+        "page_number": 7,
+        "sha256": "cdaefead88d26257aade2c73ce941d099873b98006fca0aef70e53482ce4a583",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "source_file": "bd-clever-pig/preview-008.jpg",
+        "page_number": 8,
+        "sha256": "add7e8c1f563df64aa6c769781de9bde17532bd200ac4e175c35f2551932ae43",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "source_file": "bd-clever-pig/preview-009.jpg",
+        "page_number": 9,
+        "sha256": "3179edcd328abce4a3be261bd564649e8a8a3ca9536400e5a0562f2f522e40ec",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "source_file": "bd-clever-pig/preview-010.jpg",
+        "page_number": 10,
+        "sha256": "acf04c0504f04c6fcb9e6c78363be8e13a1ec18c1a89ad8adb982278498a811e",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "source_file": "bd-clever-pig/preview-011.jpg",
+        "page_number": 11,
+        "sha256": "06b2c6aa9f58eb686fab20c4e9515a81725721b21af6d96b693a38be0363a89a",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/clever-pig_en_20210131_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "source_file": "bd-clever-pig/preview-012.jpg",
+        "page_number": 12,
+        "sha256": "2ba2fba35f8c7194f37000428cca6e645d99d708e9ae7a38a5120031e14c03b7",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-brave-bora": {
+    "source_url": "https://bookdash.org/books/brave-bora/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-12",
+    "source_dir": "docs/materials-review/original-sources-20261112",
+    "source_file": "brave-bora.json",
+    "source_sha256": "e9605d0fe3f2cad25794522a1577b82a30602d17c923f61764bb7f47ed4f5bd6",
+    "image_processing": "采用官网完整高清英文预览，保留原插画，按逐行复核区域清理图内英文；无字源文件目录可列出，抽查Clever Pig无字源图CloudFront返回403。封面保留英文书名及署名。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "source_file": "bd-brave-bora/cover.jpg",
+        "page_number": 0,
+        "sha256": "f69cc43b86ad6bb80f8c99e01fbbb4dc51a1c26f76c4d3268ed00e6808082156",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "source_file": "bd-brave-bora/preview-001.jpg",
+        "page_number": 1,
+        "sha256": "12ea9279e581cbd8003486c6f2c032430df52d69e94ed7b00cc0ae1be926aa13",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "source_file": "bd-brave-bora/preview-002.jpg",
+        "page_number": 2,
+        "sha256": "2c2a4f0dc7d71eca7e81400839111372f357a83e81b31e54a4eaa3561c8b9123",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "source_file": "bd-brave-bora/preview-003.jpg",
+        "page_number": 3,
+        "sha256": "8a64b3f12331f44ce67e638e325ad2517bb17217944f045a1ece3d4ed04bf069",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "source_file": "bd-brave-bora/preview-004.jpg",
+        "page_number": 4,
+        "sha256": "2b2e1e70422d04e1e8a123836d478e8995f78e0dc8062ae7f0ba147acaf4e9a7",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "source_file": "bd-brave-bora/preview-005.jpg",
+        "page_number": 5,
+        "sha256": "2e50df04d816566161f58a400d98623b196c48e6d8ca0a70330fbf5a500d06f4",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "source_file": "bd-brave-bora/preview-006.jpg",
+        "page_number": 6,
+        "sha256": "3dbc13569bc7236d604f00496266cbd61119e83c2b07173311e26fea5881445e",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "source_file": "bd-brave-bora/preview-007.jpg",
+        "page_number": 7,
+        "sha256": "490e75a39e757494a3f7bd82dea4455908bcda8fe806d0d37cad88c29dec0e06",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "source_file": "bd-brave-bora/preview-008.jpg",
+        "page_number": 8,
+        "sha256": "9e44149218c8a1ca3021148a7761a045995cf018232e4ae6087c46943211992e",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "source_file": "bd-brave-bora/preview-009.jpg",
+        "page_number": 9,
+        "sha256": "73d0aad9b16414f76edf2f81ebe5c43442ef02c8883946380e5375ec7dc4e6d8",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "source_file": "bd-brave-bora/preview-010.jpg",
+        "page_number": 10,
+        "sha256": "a464048a9d940d101e1d4ef5e9545351128cf315d04328635658448406ea93af",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "source_file": "bd-brave-bora/preview-011.jpg",
+        "page_number": 11,
+        "sha256": "a7db295cb0586673c3f6bcc26ec74b998137a53d4999199878fd733d1045d1db",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/brave-bora_en_20211005_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "source_file": "bd-brave-bora/preview-012.jpg",
+        "page_number": 12,
+        "sha256": "43789699ca9402ff30e87aeba8ab3fdbea5305864e3f8110d4d2ba3d389e64b2",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-play-with-me": {
+    "source_url": "https://bookdash.org/books/play-with-me/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-12",
+    "source_dir": "docs/materials-review/original-sources-20261112",
+    "source_file": "play-with-me.json",
+    "source_sha256": "4e9e3a9db5994922105ad419972ce3dd770e60a293282675b7a2d23450bfa178",
+    "image_processing": "采用官网完整高清英文预览，保留原插画，按逐行复核区域清理图内英文；无字源文件目录可列出，抽查Clever Pig无字源图CloudFront返回403。封面保留英文书名及署名。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "source_file": "bd-play-with-me/cover.jpg",
+        "page_number": 0,
+        "sha256": "a7e82f2d2469e1de5b6af0442ce484f06f3c6e2c0660bc960dcd6ecddf0cc284",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "source_file": "bd-play-with-me/preview-001.jpg",
+        "page_number": 1,
+        "sha256": "74796bc22711de4a5a74e5c656a8882c665b34a8311b2978496dc2e38c7b70e9",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "source_file": "bd-play-with-me/preview-002.jpg",
+        "page_number": 2,
+        "sha256": "8874d79aee636a65822b7224820286d10a65deb5083ba8569fc4ee4e4cf3fc6d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "source_file": "bd-play-with-me/preview-003.jpg",
+        "page_number": 3,
+        "sha256": "871cb3658953d958de5e25b8561a7f5d2eb982eccbd4307ddf9e43f7d018ea54",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page7-2-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page7-2-1536x768.jpg",
+        "source_preview_index": 4,
+        "source_file": "bd-play-with-me/preview-004.jpg",
+        "page_number": 4,
+        "sha256": "a36b1692361c596652c1e23665255ed448bd858fbbe5c6dd8a90727b7b10c3a0",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "source_file": "bd-play-with-me/preview-005.jpg",
+        "page_number": 5,
+        "sha256": "80ee80801999f84af9c54521dd617a139face4464c9184a8df97074a63dd0fbf",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "source_file": "bd-play-with-me/preview-006.jpg",
+        "page_number": 6,
+        "sha256": "5238d9e65ea823d243029b526c8c5f2f5ae8260926b270e12ac0a90792e9efbc",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "source_file": "bd-play-with-me/preview-007.jpg",
+        "page_number": 7,
+        "sha256": "e2e814be95e5f102d2d411adb834eeeea920213e182613f6836753ed7527a553",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "source_file": "bd-play-with-me/preview-008.jpg",
+        "page_number": 8,
+        "sha256": "1a3ffb833a0224046411195ac432309cbf8434b13ae9e0cd25e2da5dc62f3208",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "source_file": "bd-play-with-me/preview-009.jpg",
+        "page_number": 9,
+        "sha256": "b7f725f45c8958ff8734e09de1ffba102febcda2cdec2b4add84092cf40e6be6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "source_file": "bd-play-with-me/preview-010.jpg",
+        "page_number": 10,
+        "sha256": "060d0ec47a79a0005fecc5bf03f7278905812476f94e7e04eae0079bf9bef03a",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "source_file": "bd-play-with-me/preview-011.jpg",
+        "page_number": 11,
+        "sha256": "a8ddd53c94c51db8cf084a865ac5c4a09ea7e07889a63f2506655db11bc1064b",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/play-with-me_en_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "source_file": "bd-play-with-me/preview-012.jpg",
+        "page_number": 12,
+        "sha256": "40f91a56f674e325739105363f75664a0a116be1e48f2f344b26fae981c8801e",
+        "width": 1536,
+        "height": 768
+      }
+    ]
   }
 }

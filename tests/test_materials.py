@@ -18,7 +18,7 @@ class MaterialTests(unittest.TestCase):
     def setUpClass(cls):
         cls.sources = json.loads((ROOT/'content/sources/bookdash/sources.json').read_text())
         cls.original_sources = json.loads((ROOT/'content/sources/bookdash-originals/sources.json').read_text())
-        cls.books = {p.stem: json.loads(p.read_text()) for p in (ROOT/'content/books').glob('*.json')}
+        cls.books = {b['id']: b for b in json.loads((ROOT/'tests/fixtures/library.json').read_text())['books']}
         cls.boards = json.loads((ROOT/'config/illustrations.json').read_text())
 
     def test_complete_sources_match_every_english_spread_and_explicit_additions(self):
@@ -45,8 +45,8 @@ class MaterialTests(unittest.TestCase):
         published = [b for b in self.books.values() if b['publish_status'] == 'published']
         expected = set(self.sources) | set(self.original_sources)
         self.assertEqual({b['id'] for b in published}, expected)
-        self.assertEqual(len(published), 14)
-        self.assertEqual(sum(b['page_count'] for b in published), 169)
+        self.assertEqual(len(published), len(expected))
+        self.assertEqual(sum(b['page_count'] for b in published), sum(s['story_spreads'] for s in self.sources.values()) + sum(len(s['images']) - 1 for s in self.original_sources.values()))
         self.assertEqual({age for b in published for age in b['age_ranges']}, {'0-2', '3-4', '5-6'})
         self.assertEqual(set(self.books), expected)
         for p in (ROOT/'tests/fixtures/books').glob('*.json'):
@@ -69,7 +69,12 @@ class MaterialTests(unittest.TestCase):
                 book = self.books[bid]
                 self.assertEqual(book['page_count'], 12)
                 self.assertEqual([p['page_number'] for p in source['pages']], list(range(1, 13)))
-                for key in ('text_zh', 'text_original', 'image_alt'):
+                # New source snapshots preserve original English only. Chinese,
+                # alt text and dialogue are edited only in MySQL.
+                keys = ['text_original']
+                if 'text_zh' in source['pages'][0]:
+                    keys.extend(['text_zh', 'image_alt'])
+                for key in keys:
                     self.assertEqual([p[key] for p in book['pages']], [p[key] for p in source['pages']])
                 self.assertEqual(book['illustrator'], source['illustrator'])
                 for key in ('writer', 'illustrator', 'designer', 'editor'):

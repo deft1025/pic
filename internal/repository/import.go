@@ -2,6 +2,7 @@ package repository
 
 import (
 	"context"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"strings"
@@ -15,6 +16,11 @@ import (
 // Import atomically replaces each supplied book and its child rows in one batch
 // transaction. Unrelated books remain untouched. Reimporting the same IDs is safe.
 func (r *MySQL) Import(ctx context.Context, books []model.Book) error {
+	return r.importBooks(ctx, books, nil)
+}
+
+// guard runs inside the same transaction, before replacing any content.
+func (r *MySQL) importBooks(ctx context.Context, books []model.Book, guard func(*sql.Tx) error) error {
 	seen := map[string]bool{}
 	published := make([]time.Time, len(books))
 	generated := map[string]map[string]time.Time{}
@@ -82,6 +88,11 @@ func (r *MySQL) Import(ctx context.Context, books []model.Book) error {
 		return err
 	}
 	defer tx.Rollback()
+	if guard != nil {
+		if err = guard(tx); err != nil {
+			return err
+		}
+	}
 	for i, b := range books {
 		_, err = tx.ExecContext(ctx, `INSERT INTO books
    (book_id,title_zh,title_original,author,illustrator,description_zh,cover,page_count,reading_minutes,featured_order,published_at,publish_status,content_version,is_demo)

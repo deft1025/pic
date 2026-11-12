@@ -56,7 +56,7 @@ htmlcov/
 /mysql-data/
 
 # 独立上传的绘本物料、试听、上传副本及压缩包
-# 保留 content/books、content/sources、tests/fixtures 和 web/assets/hero.svg
+# 保留 content/sources、自动生成的测试夹具和 web/assets/hero.svg
 /web/assets/books/
 /web/assets/audio-previews/
 /upload-*/
@@ -64,3 +64,8 @@ htmlcov/
 
 # 本地校对总览图；docs 中的需求、建表 SQL 和说明文档继续提交
 /docs/materials-review/
+
+# 正式书目只维护MySQL；该目录仅保留历史本地备份，不再作为制作入口
+/content/books/
+/pic-server
+/materials

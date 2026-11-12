@@ -17,7 +17,9 @@ DEFAULT_AUDIO_CONFIG=ROOT/'config/audio.json'
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('book',type=Path,help='绘本 JSON 文件或包含多本绘本的目录')
+    p.add_argument('book',type=Path,nargs='?',help='仅兼容历史JSON文件/目录；日常使用 --book 业务ID查库')
+    p.add_argument('--book',dest='database_book',help='从MySQL读取指定书目，整本成功后写回配音记录')
+    p.add_argument('--db-config',type=Path,help='数据库.env配置文件')
     p.add_argument('--config',type=Path,default=DEFAULT_AUDIO_CONFIG,help='配音配置文件，默认 config/audio.json')
     p.add_argument('--language',choices=['zh','en'],default='zh')
     p.add_argument('--voice',help='覆盖配置中的音色')
@@ -25,6 +27,14 @@ def main(argv=None):
     p.add_argument('--preview',action='store_true',help='只生成第一页试听，不修改绘本 JSON，不入库')
     p.add_argument('--force',action='store_true')
     args=p.parse_args(argv)
+    if args.database_book:
+        if args.book or args.voice or args.rate or args.config != DEFAULT_AUDIO_CONFIG:
+            p.error('数据库模式请只指定 --book，并沿用 config/audio.json 中的已确认配音参数')
+        spec=importlib.util.spec_from_file_location('pic_db_materials',Path(__file__).with_name('materials.py'))
+        materials=importlib.util.module_from_spec(spec);spec.loader.exec_module(materials)
+        materials.make_audio(materials.Store(args.db_config),args.database_book,args.language,args.force,args.preview)
+        return
+    if not args.book:p.error('请用 --book 指定数据库书目ID')
     try:
         profile=json.loads(args.config.read_text(encoding='utf-8'))[args.language]
         voice=args.voice if args.voice is not None else profile['voice']
@@ -92,13 +102,13 @@ def generate_book(b,book_path,language,voice,rate,preview,force,command):
     with tempfile.NamedTemporaryFile('w',dir=book_path.parent,suffix='.tmp',delete=False,encoding='utf-8') as f:
         json.dump(b,f,ensure_ascii=False,indent=2);f.write('\n');temp=Path(f.name)
     temp.replace(book_path)
-    print('音频已预生成，试听确认后可更新 voices 中的 review_status。运行 go run ./cmd/importer 后写入 MySQL 生效。')
+    print('整本音频已生成。')
 if __name__=='__main__':
     try:main()
     except subprocess.CalledProcessError as error:
         detail=error.stderr.strip().splitlines()[-1] if error.stderr else '语音服务调用失败'
-        print('配音未完成：'+detail+'\n未更新失败书目的 JSON；可修复网络后重试。',file=sys.stderr)
+        print('配音未完成：'+detail+'\n未提交失败阶段的书目改动；可修复网络后重试。',file=sys.stderr)
         sys.exit(1)
     except (subprocess.TimeoutExpired,OSError,RuntimeError) as error:
-        print('配音未完成：'+str(error)+'\n未更新失败书目的 JSON；可修复问题后重试。',file=sys.stderr)
+        print('配音未完成：'+str(error)+'\n未提交失败阶段的书目改动；可修复问题后重试。',file=sys.stderr)
         sys.exit(1)

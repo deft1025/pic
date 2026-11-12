@@ -702,8 +702,20 @@ def main():
     p.add_argument('--content', type=Path)
     p.add_argument('--web', type=Path)
     p.add_argument('--config', type=Path, default=CONFIG)
+    p.add_argument('--book', help='默认从MySQL读取指定书目，完成后写回路径')
+    p.add_argument('--db-config', type=Path, help='数据库.env配置文件')
     args = p.parse_args()
-    generate(args.content, args.web, args.config)
+    if args.content:
+        generate(args.content, args.web, args.config)
+    else:
+        if not args.book:
+            p.error('请用 --book 指定数据库书目；--content 仅兼容历史JSON资料')
+        if args.web or args.config != CONFIG:
+            p.error('数据库模式使用标准资源目录与分镜配置')
+        spec = importlib.util.spec_from_file_location('pic_db_materials', Path(__file__).with_name('materials.py'))
+        materials = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(materials)
+        materials.make_art(materials.Store(args.db_config), args.book)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,78 @@
+{
+  "key": "clever-pig",
+  "id": "bd-clever-pig",
+  "title": "聪明的小猪",
+  "en": "Clever Pig",
+  "writer": "Nathalie Koenig",
+  "illustrator": "Josh Morgan",
+  "designer": "Lee-Ann Knowles",
+  "editor": "Carol Kagezi",
+  "source_url": "https://bookdash.org/books/clever-pig/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "英文依官网完整原画逐页核对，OCR只作辅助；合并排版换行并统一弯引号。无字页新增串词单列，不冒充原作正文。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Come Pig! Let’s play. Can you find the carrot?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "No, it’s not under there. No, it’s not inside.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Clever Pig!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "Wake up, Pig! Come out and play. Where is she?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Pig is gone.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "The sun came up. And the sun went down. But, no Pig.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "I miss my friend.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "My Pig! Clever Pig.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "And one, two, three new friends!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "Come, pigs! Let’s play.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Time for bed!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "Goodnight, pigs.",
+      "original_was_wordless": false
+    }
+  ]
+}

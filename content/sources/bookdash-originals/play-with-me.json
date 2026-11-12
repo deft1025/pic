@@ -1,0 +1,80 @@
+{
+  "key": "play-with-me",
+  "id": "bd-play-with-me",
+  "title": "和我一起玩吧",
+  "en": "Play with me",
+  "writer": "Sabina Mutangadura Seldon",
+  "illustrator": "Heleen Steyn van der Merwe",
+  "designer": "Jamie Calf",
+  "editor": "David Mann",
+  "source_url": "https://bookdash.org/books/play-with-me/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "英文依官网完整原画逐页核对，OCR只作辅助；合并排版换行并统一弯引号。无字页新增串词单列，不冒充原作正文。",
+  "narration_additions": [
+    11
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "All Jabu wants to do is play. What can he do?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Diketo! But who can play with him?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "“Mama, come and play with me.” But Mama is cooking pap and spinach.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "“Baba, come and play with me.” But Baba is busy digging a big hole.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "“Zwe, come and play with me.” But his brother is busy reading.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "Jabu sits outside. He wants to play diketo! But there is no one to play with.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "So he plays alone. It’s not so bad! He digs a small hole in the earth. Then he puts ten small stones inside the hole.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "So much fun! Dad sees Jabu and stops digging his big hole.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Mama comes out with some pap and spinach.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "Zwe looks out the window and sees everyone. He doesn’t want to miss out on all the fun. So he goes to join them.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Jabu and his family smile together.",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 12,
+      "text_original": "At last, Jabu has people to play with.",
+      "original_was_wordless": false
+    }
+  ]
+}

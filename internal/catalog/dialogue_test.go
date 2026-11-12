@@ -2,7 +2,9 @@ package catalog
 
 import (
 	"crypto/sha256"
+	"encoding/json"
 	"fmt"
+	"os"
 	"testing"
 	"unicode/utf16"
 
@@ -42,9 +44,20 @@ func TestDialogueTextIntegrityAndUTF16Bounds(t *testing.T) {
 	}
 }
 func TestProductionDialogueManifestsValidate(t *testing.T) {
-	c, err := LoadWithAssets("../../content/books", false, func([]string) error { return nil })
+	data, err := os.ReadFile("../../tests/fixtures/library.json")
 	if err != nil {
 		t.Fatal(err)
+	}
+	var c struct {
+		Books []model.Book `json:"books"`
+	}
+	if err = json.Unmarshal(data, &c); err != nil {
+		t.Fatal(err)
+	}
+	for _, b := range c.Books {
+		if err = Validate(b, false); err != nil {
+			t.Fatal(err)
+		}
 	}
 	withDialogue := 0
 	for _, b := range c.Books {

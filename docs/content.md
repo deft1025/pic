@@ -1,6 +1,6 @@
 # 内容规范
 
-每本书一个 JSON，文件名建议与 `id` 一致；真实示例见 `content/books/bd-come-back-cat.json`。
+2026-11-12 起正式内容只在 MySQL 维护。以下字段是本地制作工具与数据库之间的数据结构，不要求用户维护文件。Codex 整理、校验并直接写库；用户最多上传压缩包、解压。`content/books/` 仅为忽略的历史本地备份，不作为日常数据来源。现行流程见 [operations.md](operations.md)。
 
 ## 核心字段
 
@@ -34,7 +34,7 @@
 
 ### 可选对白字段
 
-对白与正文统一编辑在本书 JSON 的对应页，实际例子见 `bd-best-friends.json` 第 2 页。导入器将其写进 MySQL `book_pages.dialogue_layout`；运行时 API 返回 `pages[].dialogue`，不另取静态排版配置。不填写或设为 `null` 就是普通正文；从资料中删除后重新导入，会把库中旧布局清空为 SQL NULL。
+对白与正文统一维护在 MySQL 的对应页，由本机制作工具整本事务写入 `book_pages.dialogue_layout`；运行时 API 返回 `pages[].dialogue`，不另取静态排版配置。不填写或设为 `null` 就是普通正文；从制作数据中清除后保存，会把库中旧布局清空为 SQL NULL。
 
 | 字段 | 约定 |
 | --- | --- |

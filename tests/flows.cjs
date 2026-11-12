@@ -9,7 +9,7 @@ const book = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/books/mo
 const source = fs.readFileSync(path.join(root, 'web/app.js'), 'utf8').replace(/render\(\);\s*$/, '') + '\nglobalThis.flow={loadStore,booksByIDs,reader,home,catalogPage,shelf,policyPage,render,get local(){return local},set local(x){local=x},setMeta(x){meta=x}};';
 
 class Element {
- constructor() { this.hidden=false; this.checked=false; this.value=''; this.dataset={}; this.events={}; this.attributes={}; this.classes=new Set(); this.classList={add:x=>this.classes.add(x),remove:x=>this.classes.delete(x),contains:x=>this.classes.has(x),toggle:(x,on)=>{on=on===undefined?!this.classes.has(x):on; on?this.classes.add(x):this.classes.delete(x);return on;}}; }
+ constructor() { this.hidden=false; this.checked=false; this.value=''; this.dataset={}; this.events={}; this.attributes={}; this.style={setProperty:(k,v)=>{this.style[k]=v;}}; this.classes=new Set(); this.classList={add:x=>this.classes.add(x),remove:x=>this.classes.delete(x),contains:x=>this.classes.has(x),toggle:(x,on)=>{on=on===undefined?!this.classes.has(x):on; on?this.classes.add(x):this.classes.delete(x);return on;}}; }
  setAttribute(k,v) { this.attributes[k]=v; }
  removeAttribute(k) { delete this.attributes[k]; }
  addEventListener(k,fn) { this.events[k]=fn; }
@@ -51,6 +51,15 @@ function setup(saved, fetcher, speechVoices) {
  return {flow,element,click,audioInstances,requests,storage,speech,go:href=>address=new URL(href,address),start:async()=>{const reader=await flow.reader('moon-rabbit',0);reader.initialize();return reader;}};
 }
 const settle=async()=>{await Promise.resolve();await Promise.resolve();};
+
+test('reader keeps the first image frame ratio when following pages use different sizes',async()=>{
+ const h=setup(),r=await h.start(),img=h.element('.reader-image'),stage=h.element('.reader-stage');
+ img.naturalWidth=1600;img.naturalHeight=800;img.events.load();
+ assert.equal(stage.style['--reader-ratio'],'1600 / 800');
+ h.click('reader','next');img.naturalWidth=800;img.naturalHeight=1200;img.events.load();
+ assert.equal(stage.style['--reader-ratio'],'1600 / 800');
+ r.dispose();
+});
 
 test('invalid local records do not break the shelf; valid settings survive',()=>{
  const h=setup({favorites:['moon-rabbit',null,'moon-rabbit',7],progress:{bad:null,wrong:{page:-1},good:{page:2,updated_at:'2026-11-04',completed:true}},preferences:{volume:0,rate:1.25,rateVersion:2,language:'en',auto:false,night:true}});
@@ -247,7 +256,7 @@ test('recorded audio keeps its voice and has no available device voice control',
 });
 
 test('every published replacement story reaches its actual final page in both languages',async()=>{
- const stories=fs.readdirSync(path.join(root,'content/books')).filter(name=>name.endsWith('.json')).map(name=>JSON.parse(fs.readFileSync(path.join(root,'content/books',name),'utf8'))).filter(item=>item.publish_status==='published');
+ const stories=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/library.json'),'utf8')).books.filter(item=>item.publish_status==='published');
  for(const story of stories){
   const h=setup(undefined,url=>url.pathname.endsWith('/pages')?{items:story.pages}:story);
   h.go(`/read/${story.id}`);

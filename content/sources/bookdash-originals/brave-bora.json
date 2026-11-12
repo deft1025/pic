@@ -1,0 +1,78 @@
+{
+  "key": "brave-bora",
+  "id": "bd-brave-bora",
+  "title": "勇敢的博拉",
+  "en": "Brave Bora",
+  "writer": "Edna Gicovi",
+  "illustrator": "Ellen Heydenrych",
+  "designer": "Raeesah Vawda",
+  "editor": "David Mann",
+  "source_url": "https://bookdash.org/books/brave-bora/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "英文依官网完整原画逐页核对，OCR只作辅助；合并排版换行并统一弯引号。无字页新增串词单列，不冒充原作正文。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Bora is sitting at the clinic with Baba. Jojo, his stuffed monkey, came too. Jojo is sleeping in Bora’s bag.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "“I don’t like needles. They hurt!” says Bora.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "“An injection helps make you healthy. It’s okay to be scared, Bora. Baba will be right here with you. And Jojo too.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "“Bora Baraka!” a loud voice calls. “Let’s go Bora,” says Baba. “It’s your turn.” “Let’s come back tomorrow Baba!” says Bora.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "“Remember what Baba said you will get for being brave enough to get your injection?” asks Baba. “A red lollipop! Okay, I’m coming,” says Bora.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "The doctor smiles at Bora. “Is this your monkey? Can we examine him too?” she asks. Bora looks at Baba, then at Jojo, and nods.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "“Now, it’s your turn,” she says. “Will you help me give your monkey a small injection so he feels better?” asks the doctor.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "“TOOP!” says the doctor as she gives Jojo the monkey an injection.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "“Now, it’s your turn. Is that a superhero on your T-shirt?” she asks. “TOOP!” she says as she gives Bora the injection.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "“Ouch!” shouts Bora. “Hey, that wasn’t so bad!”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "“I know it stings a little, but we’re done and you have been very brave!” says the doctor.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "“One red lollipop for our brave Bora!”",
+      "original_was_wordless": false
+    }
+  ]
+}
