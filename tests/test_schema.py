@@ -71,7 +71,10 @@ class SchemaTests(unittest.TestCase):
         self.assertIn('AND b.book_id=?', store)
         self.assertIn('b.book_id IN (', query)
         self.assertIn('c.category_id=bc.category_id', query)
-        self.assertNotRegex(store + query, r'\b(?:b|c)\.id\b')
+        # Generated IDs may break sorting ties; lookups and joins still use
+        # business keys, and generated IDs must not be returned as book IDs.
+        lookups = re.sub(r'func orderBy\(sort string\) string \{.*?\n\}', '', query, flags=re.S)
+        self.assertNotRegex(store + lookups, r'\b(?:b|c)\.id\b')
         # Explicit INSERT columns must exist and leave the generated id to MySQL.
         for table, column_list in re.findall(r'INSERT INTO (\w+)\s*\((.*?)\)', importer, re.S):
             with self.subTest(insert=table):

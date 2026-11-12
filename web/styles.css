@@ -135,11 +135,13 @@
 .reader-controls{max-width:none;margin:0;padding:14px 18px 6px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);column-gap:14px;border:0;border-radius:20px;box-shadow:none;background:transparent}
 .reader-controls .language-switch{justify-self:start;max-width:100%}
 .reader-controls .transport{justify-self:center}
+.reader-controls .transport>.icon-btn{min-width:44px;min-height:44px}
 .reader-controls .auto-control{justify-self:end;text-align:center}
 .reader-player .reader-audio-status{margin:0;height:38px;min-height:38px;overflow:auto;padding:4px 14px 0;line-height:1.6;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px}
 .reader-night .reader-player{background:#2c394f;border-color:#3b475b}
 .reader-night .reader-controls{background:transparent;border:0}
 .reader-settings{z-index:30;max-height:calc(100vh - 85px);max-height:calc(100dvh - 85px);overflow-y:auto}
+body.reading #toast{bottom:calc(150px + env(safe-area-inset-bottom,0px));pointer-events:none}
 .reader-stage:fullscreen{padding-bottom:calc(166px + env(safe-area-inset-bottom,0px));justify-content:flex-start}
 .reader-stage:fullscreen .reader-image-wrap{width:100%;max-height:none;aspect-ratio:var(--reader-ratio,3/2)}
 .reader-stage:fullscreen .dialogue-canvas.dialogue-flow{aspect-ratio:auto}
@@ -156,7 +158,8 @@
  .reader-player .reader-audio-status{font-size:10px;min-height:38px}
  .reader-stage{padding-bottom:calc(162px + env(safe-area-inset-bottom,0px))}
 }
-@media(max-width:374px){
+@media(max-width:420px){
+ body.reading #toast{bottom:calc(192px + env(safe-area-inset-bottom,0px))}
  .reader-controls{grid-template-columns:minmax(0,1fr) minmax(0,1fr);row-gap:7px}
  .reader-controls .language-switch{grid-column:1;grid-row:1}
  .reader-controls .auto-control{grid-column:2;grid-row:1;flex-direction:row;gap:6px}
@@ -170,4 +173,29 @@
  .detail-cover{width:100%;max-height:65vh;object-fit:contain;object-position:top}
  .detail-meta{padding-top:0}
  .detail-meta h1{margin-top:8px;font-size:28px}
+}
+
+/* Desktop reading: keep the whole illustration centered and controls below it. */
+@media(min-width:901px){
+ .reader-stage,.reader-stage:fullscreen{max-width:1040px;width:100%;margin-inline:auto;padding:16px 32px 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 24px;align-content:start}
+ .reader-stage>*{grid-column:1/-1;min-width:0}
+ .reader-layout-switch{grid-column:1;margin:0;justify-content:flex-start;gap:16px}
+ .reader-progress{margin:0;min-height:48px;gap:16px}
+ .reader-stage:has(.reader-layout-switch) .reader-progress{grid-column:2}
+ .reader-progress .progress-dots{max-width:60%}
+ .reader-scene{min-height:max(280px,calc(100dvh - 340px));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+ .reader-image-wrap,.reader-stage:fullscreen .reader-image-wrap{--reader-art-height:max(220px,calc(100dvh - 360px));width:min(100%,calc(var(--reader-art-height) * var(--reader-aspect,1.5)));max-height:none;margin:0 auto;align-self:center;aspect-ratio:var(--reader-ratio,3/2)}
+ .reader-stage:has(.reader-layout-switch) .reader-image-wrap{--reader-art-height:max(220px,calc(100dvh - 510px))}
+ .reader-image{display:block}
+ .reader-image-wrap.dialogue-flow,.reader-stage:fullscreen .dialogue-canvas.dialogue-flow{aspect-ratio:auto}
+ .dialogue-flow .reader-dialogue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:14px 18px 20px}
+ .dialogue-flow .dialogue-bubble{width:100%;align-self:start;padding:10px 14px;border-radius:16px}
+ .dialogue-flow .dialogue-bubble:only-of-type{grid-column:1/-1}
+ .dialogue-flow .dialogue-bubble p,.dialogue-flow .dialogue-bubble p:lang(en){font-size:16px;line-height:1.65}
+ .reader-text,.reader-stage:fullscreen .reader-text{margin:0 auto;min-height:0;font-size:18px;line-height:1.8}
+ .dialogue-narration{margin:0 auto;font-size:16px}
+ .reader-player{position:static;transform:none;justify-self:center;width:min(800px,100%);margin:2px auto 0;box-shadow:0 5px 22px #3450730b}
+ .reader-bottom{margin:0;padding:0;min-height:32px}
+ .reader-finished{margin:0 auto}
+ body:has(.reader-page) #toast{top:85px;bottom:auto;right:24px;left:auto;transform:none;max-width:min(360px,calc(100% - 48px));pointer-events:none}
 }

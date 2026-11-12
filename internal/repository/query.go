@@ -46,12 +46,14 @@ func (r *MySQL) where(q model.Query) (string, []any) {
 }
 func orderBy(sort string) string {
 	switch sort {
-	case "newest":
-		return "b.published_at DESC,b.book_id ASC"
 	case "title":
 		return "b.title_zh ASC,b.book_id ASC"
-	default:
+	case "featured":
 		return "CASE WHEN b.featured_order=0 THEN 1 ELSE 0 END,b.featured_order ASC,b.book_id ASC"
+	default:
+		// Creation time reflects when a book joined the library. The generated
+		// primary key keeps books created in the same second in a stable order.
+		return "b.created_at DESC,b.id DESC"
 	}
 }
 
