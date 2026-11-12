@@ -1,0 +1,92 @@
+{
+  "key": "come-stay",
+  "slug": "come-stay-with-me",
+  "title": "来我家住吧",
+  "en": "Come stay with me",
+  "writer": "Nasrin Siege",
+  "illustrator": "Subi Bosa",
+  "designer": "Job Mubinya",
+  "editor": "Nabeela Kalla",
+  "source_url": "https://bookdash.org/books/come-stay-with-me/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=come-stay-with-me",
+  "id": "bd-come-stay-with-me",
+  "narration_additions": [
+    6
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Tendai Turtle lives in the water. Tendai’s best friend is Bunny Busi. She lives in a tree.",
+      "text_zh": "小乌龟滕岱住在水里。他最好的朋友是小兔子布西。她住在树上。",
+      "image_alt": "小乌龟在蓝色水里游泳，小兔子坐在岸边的大树下。"
+    },
+    {
+      "page_number": 2,
+      "text_original": "Granny Turtle has hurt her shell.",
+      "text_zh": "乌龟奶奶的壳受伤了。",
+      "image_alt": "乌龟爸爸和妈妈神情担忧，画面中想象着龟壳受伤的奶奶。"
+    },
+    {
+      "page_number": 3,
+      "text_original": "“We have to go to help Granny,” says Mum. “Come stay with me,” calls Busi.",
+      "text_zh": "“我们得去帮帮奶奶。”妈妈说。“来我家住吧！”布西喊道。",
+      "image_alt": "乌龟爸爸妈妈准备出发，树边的小兔子邀请小乌龟来住。"
+    },
+    {
+      "page_number": 4,
+      "text_original": "Tendai stays with Bunny Busi in the tree.",
+      "text_zh": "滕岱住进了布西在树上的家。",
+      "image_alt": "小兔子站在漂浮的木头上迎接小乌龟，随后两人一起荡秋千。"
+    },
+    {
+      "page_number": 5,
+      "text_original": "They play all day.",
+      "text_zh": "他们玩了一整天。",
+      "image_alt": "小兔子和小乌龟一起仰望飞舞的蝴蝶。"
+    },
+    {
+      "page_number": 6,
+      "text_original": "They have so much fun together!",
+      "text_zh": "两个好朋友在一起，玩得真开心！",
+      "image_alt": "小兔子站在小乌龟的壳上摘果子，两个朋友又在树间快乐地玩耍。"
+    },
+    {
+      "page_number": 7,
+      "text_original": "They sleep all night.",
+      "text_zh": "夜晚，他们一起甜甜地睡着了。",
+      "image_alt": "月亮和星星下，小乌龟和小兔子依偎着睡觉。"
+    },
+    {
+      "page_number": 8,
+      "text_original": "Mum and Dad come back with Granny.",
+      "text_zh": "爸爸妈妈带着奶奶回来啦。",
+      "image_alt": "小兔子和小乌龟在岸边迎接游回来的乌龟一家。"
+    },
+    {
+      "page_number": 9,
+      "text_original": "“How are you, Granny?” asks Tendai.",
+      "text_zh": "“奶奶，你好些了吗？”滕岱问。",
+      "image_alt": "小乌龟和小兔子靠近戴着眼镜的奶奶，蝴蝶在旁边飞舞。"
+    },
+    {
+      "page_number": 10,
+      "text_original": "“I am better now,” says Granny with a smile. “We fixed her shell,” answers Mum.",
+      "text_zh": "“我已经好些啦。”奶奶笑着说。“我们把奶奶的壳修好啦。”妈妈回答。",
+      "image_alt": "奶奶微笑着回答，妈妈指着修补好的龟壳。"
+    },
+    {
+      "page_number": 11,
+      "text_original": "Granny gives Tendai her favourite flute.",
+      "text_zh": "奶奶把自己最喜欢的笛子送给了滕岱。",
+      "image_alt": "奶奶拿出一支绿色笛子，小乌龟和小兔子在旁边看着。"
+    },
+    {
+      "page_number": 12,
+      "text_original": "Tendai plays the flute and everybody dances.",
+      "text_zh": "滕岱吹起笛子，大家都跳起舞来。",
+      "image_alt": "小乌龟吹着笛子，小兔子和乌龟一家在树下跳舞。"
+    }
+  ]
+}

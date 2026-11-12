@@ -4,10 +4,15 @@ package repository
 import (
 	"context"
 	"database/sql"
+	"encoding/json"
+	"errors"
 	"fmt"
 	"strings"
 	"time"
 
+	"github.com/go-sql-driver/mysql"
+
+	"pic/internal/catalog"
 	"pic/internal/model"
 )
 
@@ -76,9 +81,17 @@ func (r *MySQL) Get(ctx context.Context, id string) (model.Book, error) {
 }
 
 func (r *MySQL) Pages(ctx context.Context, id string) ([]model.Page, error) {
-	rows, err := r.db.QueryContext(ctx, `SELECT p.page_number,p.image_path,p.image_alt,p.text_zh,p.text_original,p.audio_zh_path,p.audio_original_path
+	query := func(column string) string {
+		return `SELECT p.page_number,p.image_path,p.image_alt,p.text_zh,p.text_original,p.audio_zh_path,p.audio_original_path,` + column + `
  FROM book_pages p JOIN books b ON b.book_id=p.book_id JOIN book_licenses l ON l.book_id=b.book_id
- WHERE `+r.visibility()+` AND p.book_id=? ORDER BY p.page_number`, id)
+ WHERE ` + r.visibility() + ` AND p.book_id=? ORDER BY p.page_number`
+	}
+	rows, err := r.db.QueryContext(ctx, query("p.dialogue_layout"), id)
+	if missingDialogueColumn(err) {
+		// Old schemas remain readable until the operator applies the migration.
+		// This still reads only MySQL; there is no static story/layout fallback.
+		rows, err = r.db.QueryContext(ctx, query("NULL AS dialogue_layout"), id)
+	}
 	if err != nil {
 		return nil, err
 	}
@@ -86,12 +99,43 @@ func (r *MySQL) Pages(ctx context.Context, id string) ([]model.Page, error) {
 	items := []model.Page{}
 	for rows.Next() {
 		var p model.Page
-		if err = rows.Scan(&p.Number, &p.Image, &p.ImageAlt, &p.TextZH, &p.TextOriginal, &p.AudioZH, &p.AudioOriginal); err != nil {
+		var dialogue []byte
+		if err = rows.Scan(&p.Number, &p.Image, &p.ImageAlt, &p.TextZH, &p.TextOriginal, &p.AudioZH, &p.AudioOriginal, &dialogue); err != nil {
 			return nil, err
+		}
+		if len(dialogue) > 0 && string(dialogue) != "null" {
+			languages := []string{}
+			if p.TextZH != "" {
+				languages = append(languages, "zh")
+			}
+			if p.TextOriginal != "" {
+				languages = append(languages, "en")
+			}
+			// Optional typography must not hide the story if a database edit
+			// leaves stale offsets, even when the new text has the same length.
+			if json.Unmarshal(dialogue, &p.Dialogue) != nil || catalog.ValidateDialogue(p, languages) != nil {
+				p.Dialogue = nil
+			}
 		}
 		items = append(items, p)
 	}
 	return items, rows.Err()
+}
+
+func missingDialogueColumn(err error) bool {
+	var databaseError *mysql.MySQLError
+	return errors.As(err, &databaseError) && databaseError.Number == 1054 && strings.Contains(databaseError.Message, "dialogue_layout")
+}
+
+func (r *MySQL) hasDialogueColumn(ctx context.Context) (bool, error) {
+	rows, err := r.db.QueryContext(ctx, "SELECT dialogue_layout FROM book_pages LIMIT 0")
+	if missingDialogueColumn(err) {
+		return false, nil
+	}
+	if err != nil {
+		return false, err
+	}
+	return true, rows.Close()
 }
 
 func (r *MySQL) Options(ctx context.Context) (model.Options, error) {

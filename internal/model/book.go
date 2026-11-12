@@ -21,13 +21,32 @@ type Voice struct {
 }
 
 type Page struct {
-	Number        int    `json:"page_number"`
-	Image         string `json:"image"`
-	ImageAlt      string `json:"image_alt"`
-	TextZH        string `json:"text_zh"`
-	TextOriginal  string `json:"text_original"`
-	AudioZH       string `json:"audio_zh,omitempty"`
-	AudioOriginal string `json:"audio_original,omitempty"`
+	Number        int             `json:"page_number"`
+	Image         string          `json:"image"`
+	ImageAlt      string          `json:"image_alt"`
+	TextZH        string          `json:"text_zh"`
+	TextOriginal  string          `json:"text_original"`
+	AudioZH       string          `json:"audio_zh,omitempty"`
+	AudioOriginal string          `json:"audio_original,omitempty"`
+	Dialogue      *DialogueLayout `json:"dialogue,omitempty"`
+}
+
+// DialogueLayout contains typography only. Text ranges use browser UTF-16 offsets.
+type DialogueLayout struct {
+	AspectRatio [2]float64        `json:"aspect_ratio"`
+	Length      map[string]int    `json:"length"`
+	TextSHA256  map[string]string `json:"text_sha256"`
+	Parts       []DialoguePart    `json:"parts"`
+}
+
+type DialoguePart struct {
+	Start   map[string]int    `json:"start"`
+	End     map[string]int    `json:"end"`
+	Speaker map[string]string `json:"speaker"`
+	X       float64           `json:"x"`
+	Y       float64           `json:"y"`
+	Width   float64           `json:"width"`
+	Target  []float64         `json:"target"`
 }
 
 type Book struct {

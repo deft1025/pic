@@ -52,7 +52,44 @@
       "text_zh": "“你把我弄脏啦！”睡在沙地里的马陆说，“去别的地方跳吧。”",
       "text_original": "“You’re getting dirt on me!” says Shongololo, sleeping in the sand. “Go dance somewhere else.”",
       "audio_zh": "/assets/books/bd-hippo-wants-to-dance/audio/zh/84317b57d9a1ea2a/page-002.mp3",
-      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-002.mp3"
+      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-002.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 29,
+          "en": 94
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 29,
+              "en": 94
+            },
+            "speaker": {
+              "zh": "马陆",
+              "en": "Shongololo"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 68,
+            "target": [
+              35,
+              81
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "ad98cfafdf04bd243dbb4d5aba8357b1ce10a1a686d415e7b998ca28ea13e9bc",
+          "en": "b9c68262f42574224509f4750844bf5826e033b12fb4b56ab42af079f1d663dc"
+        }
+      }
     },
     {
       "page_number": 3,
@@ -70,7 +107,44 @@
       "text_zh": "“你把我弄湿啦！”正在找早餐的翠鸟说，“去别的地方跳吧。”",
       "text_original": "“You’re making me wet!” says Kingfisher, hunting for her breakfast. “Go dance somewhere else.”",
       "audio_zh": "/assets/books/bd-hippo-wants-to-dance/audio/zh/84317b57d9a1ea2a/page-004.mp3",
-      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-004.mp3"
+      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-004.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 29,
+          "en": 94
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 29,
+              "en": 94
+            },
+            "speaker": {
+              "zh": "翠鸟",
+              "en": "Kingfisher"
+            },
+            "x": 5,
+            "y": 63,
+            "width": 75,
+            "target": [
+              75,
+              23
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "6722315e14dbd8d404bfa2710d46b8d93c33022f73208d6b7453068195cedfe9",
+          "en": "7dfb59575485c7bd890520ab545de609a4e784ea85c29a49760909682b30163e"
+        }
+      }
     },
     {
       "page_number": 5,
@@ -88,7 +162,44 @@
       "text_zh": "“小心！你差点踢到我！”正在给宝宝洗澡的狐獴说，“去别的地方跳吧。”",
       "text_original": "“Be careful! You nearly kicked me!” says Meerkat, bathing his babies. “Go dance somewhere else.”",
       "audio_zh": "/assets/books/bd-hippo-wants-to-dance/audio/zh/84317b57d9a1ea2a/page-006.mp3",
-      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-006.mp3"
+      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-006.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 34,
+          "en": 96
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 34,
+              "en": 96
+            },
+            "speaker": {
+              "zh": "狐獴",
+              "en": "Meerkat"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 87,
+            "target": [
+              63,
+              57
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "8e17def8e6d1adad7182ecacb2c85da8c59b2bbfca40c13058ebbf3358be63ea",
+          "en": "2d26aefba65b9d0e7286c9f2674dfdceb0531d891875de5b05f76ea3fb75f8de"
+        }
+      }
     },
     {
       "page_number": 7,
@@ -106,7 +217,44 @@
       "text_zh": "“你为什么不停下来呢？”驮着水桶的驴子问，“为什么不去做点有用的事呢？”",
       "text_original": "“Why don’t you stop dancing?” asks Donkey, carrying his buckets. “Why can’t you do something useful instead?”",
       "audio_zh": "/assets/books/bd-hippo-wants-to-dance/audio/zh/84317b57d9a1ea2a/page-008.mp3",
-      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-008.mp3"
+      "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-008.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 36,
+          "en": 109
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 36,
+              "en": 109
+            },
+            "speaker": {
+              "zh": "驴子",
+              "en": "Donkey"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 78,
+            "target": [
+              67,
+              51
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "53eef109f575eea193065d4394e305d0dfedfbe839dd341dccd7aaa9c65dff9c",
+          "en": "85f1cf786a85cb9b92eb3179ffaa13120500d163d55449b8cbe49ce3ade3ee93"
+        }
+      }
     },
     {
       "page_number": 9,

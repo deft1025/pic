@@ -43,7 +43,44 @@
       "text_zh": "小蚂蚁爱读书，却常常被同伴取笑：“蚂蚁不读书，蚂蚁要找食。需要的食物，都要自己拾！”",
       "text_original": "Little Ant loved to read. Little Ant was often teased. “Ants don’t read. Ants must feed. Ants collect the food they need.”",
       "audio_zh": "/assets/books/bd-little-ants-big-plan/audio/zh/1ac768ea7fa02426/page-001.mp3",
-      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-001.mp3"
+      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-001.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 42,
+          "en": 122
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 16,
+              "en": 55
+            },
+            "end": {
+              "zh": 42,
+              "en": 122
+            },
+            "speaker": {
+              "zh": "其他蚂蚁",
+              "en": "Other ants"
+            },
+            "x": 45,
+            "y": 3,
+            "width": 51,
+            "target": [
+              76,
+              77
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "9cac57f33f7b91f8489043333c1b3111e33b1d7edbe22df215549e9f82d5ff17",
+          "en": "beb9e3331295ad7e41e18b5f58be797ad1a1d73af0d6cd87fc8b6daf6537c67a"
+        }
+      }
     },
     {
       "page_number": 2,
@@ -88,7 +125,44 @@
       "text_zh": "小蚂蚁大声说起他在书里读到的一个地方：“我们需要找一家餐馆，那是人们吃饭的地方。我读的书里就是这么写的！”",
       "text_original": "Little Ant begins to shout about a place he read about. “A restaurant is what we need, a place where people go to feed. It says so in the books I read.”",
       "audio_zh": "/assets/books/bd-little-ants-big-plan/audio/zh/1ac768ea7fa02426/page-006.mp3",
-      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-006.mp3"
+      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-006.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 53,
+          "en": 152
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 19,
+              "en": 56
+            },
+            "end": {
+              "zh": 53,
+              "en": 152
+            },
+            "speaker": {
+              "zh": "小蚂蚁",
+              "en": "Little Ant"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 40,
+            "target": [
+              35,
+              74
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "20fc22ad4c345598ca2323c5d00910b1cb705c5225c55aa36077a669267ba8be",
+          "en": "e2ea602b075a225b5cd1fe685bde3ea4a73e7f1326f05556d48a20b5063f8b5d"
+        }
+      }
     },
     {
       "page_number": 7,
@@ -106,7 +180,44 @@
       "text_zh": "小蚂蚁说：“嘿，那里就有一家！”",
       "text_original": "And Little Ant said “Hey, there’s one!”",
       "audio_zh": "/assets/books/bd-little-ants-big-plan/audio/zh/1ac768ea7fa02426/page-008.mp3",
-      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-008.mp3"
+      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-008.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 16,
+          "en": 39
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 5,
+              "en": 20
+            },
+            "end": {
+              "zh": 16,
+              "en": 39
+            },
+            "speaker": {
+              "zh": "小蚂蚁",
+              "en": "Little Ant"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 64,
+            "target": [
+              30,
+              66
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "6dcfc9d5eaf7d6687a7921729ff24f7f4841a3e06a2776421f536db63f5991a1",
+          "en": "8b63d3beba609108a0bce3b59d1218261b11e2a1b97cf6af7938816853c71859"
+        }
+      }
     },
     {
       "page_number": 9,
@@ -142,7 +253,44 @@
       "text_zh": "小妹妹牵住他的手：“现在，我想我明白了。看你那么爱读书，我也想翻开看一看！”",
       "text_original": "His baby sister takes his hand “Now I think I understand.” “The way you love to read a book ... Makes me want to take a look.”",
       "audio_zh": "/assets/books/bd-little-ants-big-plan/audio/zh/1ac768ea7fa02426/page-012.mp3",
-      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-012.mp3"
+      "audio_original": "/assets/books/bd-little-ants-big-plan/audio/en/bb201c69f733e6f4/page-012.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 38,
+          "en": 126
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 9,
+              "en": 31
+            },
+            "end": {
+              "zh": 38,
+              "en": 126
+            },
+            "speaker": {
+              "zh": "小妹妹",
+              "en": "Little sister"
+            },
+            "x": 45,
+            "y": 3,
+            "width": 52,
+            "target": [
+              65,
+              76
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "c17ef23e8487556a27ebb969f5b6b596c298ec7e0893cd79800d311d11e6bebd",
+          "en": "44a237badae32f19a20c04353e061f0f2904a41f9c407855e3cb0691f8eda6bb"
+        }
+      }
     }
   ],
   "voices": {

@@ -52,7 +52,44 @@
       "text_zh": "那是什么呀？它没有长鼻子，和我不一样。",
       "text_original": "What is it? It hasn't got a trunk. It's not like me.",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-002.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-002.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-002.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 19,
+          "en": 52
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 19,
+              "en": 52
+            },
+            "speaker": {
+              "zh": "小象",
+              "en": "Elephant"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              38,
+              65
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "a8830ecabd8c5b6d6a8eae57711dc71034f49c1625812dd82318afdefa85fedd",
+          "en": "8b01055826201711f5c54f94bfc7738eec99662a32fb47ea34d1170376cc7dae"
+        }
+      }
     },
     {
       "page_number": 3,
@@ -61,7 +98,44 @@
       "text_zh": "那是什么呀？它没有尾巴，和我不一样。",
       "text_original": "What is it? It hasn’t got a tail. It’s not like me.",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-003.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-003.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 18,
+          "en": 51
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 18,
+              "en": 51
+            },
+            "speaker": {
+              "zh": "小猴",
+              "en": "Monkey"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              35,
+              62
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "cc554592268184dea18fa7668755adbb9cfc14dc7a0b8306a80494014a9ada8f",
+          "en": "9798115b345a7d07dc6c313e7ca4612efe0201780360dacc5cee3b9b56b7034c"
+        }
+      }
     },
     {
       "page_number": 4,
@@ -70,7 +144,44 @@
       "text_zh": "那是什么呀？咦！它的羽毛呢？它和我不一样。",
       "text_original": "What is it? Ugh! Where are its feathers? It’s not like me.",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-004.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-004.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-004.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 21,
+          "en": 58
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 21,
+              "en": 58
+            },
+            "speaker": {
+              "zh": "猫头鹰",
+              "en": "Owl"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              35,
+              59
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "b8294914dbdc3917ae1108ef3ddda93566deb0475c6d3b4c984b7d1b7ac34c8b",
+          "en": "5b3198e00a3a528557ee5297b287cd563332e58ceb4253b28652a0c428b578be"
+        }
+      }
     },
     {
       "page_number": 5,
@@ -79,7 +190,44 @@
       "text_zh": "那是什么呀？瞧它那两只小脚，和我们不一样。",
       "text_original": "What is it? Look at those tiny feet. It’s not like us.",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-005.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-005.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-005.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 21,
+          "en": 54
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 21,
+              "en": 54
+            },
+            "speaker": {
+              "zh": "小鹿们",
+              "en": "Deer"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              30,
+              63
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "66c81a876a8ef8577f886bb64638d178bdd65b65bf5f16b6f85a994d44c34e51",
+          "en": "98a474243943b3b8dcc62bf38897b5db6c5acbdb8072cf4539ddb3058a7dc6f7"
+        }
+      }
     },
     {
       "page_number": 6,
@@ -106,7 +254,44 @@
       "text_zh": "阿嚏！阿嚏！",
       "text_original": "Achoo! Achoo!",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-008.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-008.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-008.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 6,
+          "en": 13
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 6,
+              "en": 13
+            },
+            "speaker": {
+              "zh": "宝宝",
+              "en": "Baby"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              50,
+              53
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "f8350318ad3f01eb126ae96e71740fd9d634586558353fee1bbc912507740ff3",
+          "en": "ab6dd9c8a6d264d7e329fcf888260c79668d688ed7aed9c9ac88b76557567b67"
+        }
+      }
     },
     {
       "page_number": 9,
@@ -142,7 +327,44 @@
       "text_zh": "它是什么呀？原来是个宝宝，和我一样！",
       "text_original": "What is it? It's a baby, just like me!",
       "audio_zh": "/assets/books/bd-what-is-it/audio/zh/0c9ee83cab979f70/page-012.mp3",
-      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-012.mp3"
+      "audio_original": "/assets/books/bd-what-is-it/audio/en/c0ccf4314391a063/page-012.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 18,
+          "en": 38
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 18,
+              "en": 38
+            },
+            "speaker": {
+              "zh": "宝宝",
+              "en": "Baby"
+            },
+            "x": 14,
+            "y": 3,
+            "width": 72,
+            "target": [
+              50,
+              66
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "2973c4b06e304c4fd6e911d001f92bab6b7afd1d46c24789bdff090c28ce8b7e",
+          "en": "be65e334e53bed2c66d07a51e55786880eca22097ed7f83433695abb9d1e8fea"
+        }
+      }
     }
   ],
   "voices": {

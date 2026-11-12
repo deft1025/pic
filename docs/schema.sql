@@ -150,6 +150,7 @@ CREATE TABLE IF NOT EXISTS `book_pages` (
     `text_original` text NOT NULL COMMENT '本页英文原文',
     `audio_zh_path` varchar(1024) NOT NULL DEFAULT '' COMMENT '本页中文预生成音频路径，空字符串表示未配音',
     `audio_original_path` varchar(1024) NOT NULL DEFAULT '' COMMENT '本页英文预生成音频路径，空字符串表示未配音',
+    `dialogue_layout` json DEFAULT NULL COMMENT '可选对白排版，含双语文字范围、角色、气泡位置及正文校验哈希；空值表示普通正文',
     `content_version` varchar(100) NOT NULL COMMENT '内容版本，图文或音频更新时同步递增',
     `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',

@@ -1,0 +1,558 @@
+{
+  "bd-come-stay-with-me": {
+    "source_url": "https://bookdash.org/books/come-stay-with-me/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "downloaded_on": "2026-11-10",
+    "image_processing": "保留官方高清预览原插画，清除图内英文排版；官网无字文件可列出但下载 CDN 返回 403。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_cover-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_cover-1.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-come-stay-with-me/cover.jpg",
+        "sha256": "671b9da4c3f908cbc66bef84d4a1641ed3940a342879e4077b32b9564a6ea38e",
+        "width": 1181,
+        "height": 1181
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page4.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-come-stay-with-me/page-001.jpg",
+        "sha256": "5de79c65aaf3051e0a95561f6fa0f00aaf68b54523fe769ed1384e2bcad87c6a",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page5.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-come-stay-with-me/page-002.jpg",
+        "sha256": "235cdb6381e6c37563c9e305553052c8900708e76a609be58cbc5b84b4f26c68",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page6.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-come-stay-with-me/page-003.jpg",
+        "sha256": "6bb6895c014be3f5e5079f2f5ff3552eb5cbd468d65ce462740453df115ab6af",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page7.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-come-stay-with-me/page-004.jpg",
+        "sha256": "9dd51bb8eb48155d4eae3832b1ca054980828d1008cf654ecc13a91ba8e4913d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page8.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-come-stay-with-me/page-005.jpg",
+        "sha256": "f4a8ca7d42054403feadf473eb54ab58ee1951af9389cf0811d63866350bf391",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page9.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-come-stay-with-me/page-006.jpg",
+        "sha256": "6833838b225353c2e3d0e233e0da647187928954990cb4fe84220053eb701506",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-come-stay-with-me/page-007.jpg",
+        "sha256": "df1b2a0990f567a8eaf514a2f2df44e9b29072d1a564bf707aab6e7ee081e29a",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-come-stay-with-me/page-008.jpg",
+        "sha256": "30d1f64b66823cb96aaef7a10f030999584823d3dd0d2ea9736ef32d3f057b10",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-come-stay-with-me/page-009.jpg",
+        "sha256": "df0988d1119e026820965c9b26d61288e14b37ae6712b82875d35b62c6c94822",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-come-stay-with-me/page-010.jpg",
+        "sha256": "abd3aaa5133c3d756c27536465ea56a3837b4e25d64be4d903b653344155f8a6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-come-stay-with-me/page-011.jpg",
+        "sha256": "ec89fb2aaa26e4580edceee420b7c04d489f41d0176a9ff9f0e531b763580b3d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2019/11/come-stay-with-me_en_20191122_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-come-stay-with-me/page-012.jpg",
+        "sha256": "b19b65aabed3f3f8830be52974135a06a125ea4fc1d5af70f4940dc72ee15905",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-little-goat": {
+    "source_url": "https://bookdash.org/books/little-goat/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "downloaded_on": "2026-11-10",
+    "image_processing": "保留官方高清预览原插画，清除图内英文排版；官网无字文件可列出但下载 CDN 返回 403。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_cover.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-little-goat/cover.jpg",
+        "sha256": "f9a300e806ec8d74b2af4000f51d9a99e6d4748a7b4a7f4b3ed70877275b9d40",
+        "width": 567,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page4.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page4.jpg",
+        "source_preview_index": 4,
+        "page_number": 1,
+        "source_file": "bd-little-goat/page-001.jpg",
+        "sha256": "ccca1788b530fa480624c22e2325a93c4758c9e600f1a363c9abe5cea414b63c",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page5.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page5.jpg",
+        "source_preview_index": 5,
+        "page_number": 2,
+        "source_file": "bd-little-goat/page-002.jpg",
+        "sha256": "de571eb8bc1b0a2acc2326e571dad6a5284b2748b39186e2c9de635d287913e7",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page6.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page6.jpg",
+        "source_preview_index": 6,
+        "page_number": 3,
+        "source_file": "bd-little-goat/page-003.jpg",
+        "sha256": "e828d8c6c9627b1b34ca4efcc901869fb351e0313f9b7b7a9060fa1dc5f7a2ad",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page7.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page7.jpg",
+        "source_preview_index": 7,
+        "page_number": 4,
+        "source_file": "bd-little-goat/page-004.jpg",
+        "sha256": "2366b013698dd2a3a1012085db6e2dcc788929f66314867941daed8e0d9f2f8f",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page8.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page8.jpg",
+        "source_preview_index": 8,
+        "page_number": 5,
+        "source_file": "bd-little-goat/page-005.jpg",
+        "sha256": "6cf25a32fda0f40cf0031abc55a3cd4c99578c836a776ae69a3d07526c34cfeb",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page9.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page9.jpg",
+        "source_preview_index": 9,
+        "page_number": 6,
+        "source_file": "bd-little-goat/page-006.jpg",
+        "sha256": "3c082f8ff0a926ad78bc5517ebf9ada7f52c7c063287e1178511ff3586c7b136",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page10.jpg",
+        "source_preview_index": 10,
+        "page_number": 7,
+        "source_file": "bd-little-goat/page-007.jpg",
+        "sha256": "fe0aa4e8f8886a6077401665de5347d1ecc852c3dd521aa93594592f577dab9a",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page11.jpg",
+        "source_preview_index": 11,
+        "page_number": 8,
+        "source_file": "bd-little-goat/page-008.jpg",
+        "sha256": "4aa9d974b3858fe0765131c9b604cb0b5801aea5fa7348f32044f0e7af12b481",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page12.jpg",
+        "source_preview_index": 12,
+        "page_number": 9,
+        "source_file": "bd-little-goat/page-009.jpg",
+        "sha256": "a5de1f382b8ab995e01d4d1684366ad4fd226904c817d2099998b6bbc54f4aee",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page13.jpg",
+        "source_preview_index": 13,
+        "page_number": 10,
+        "source_file": "bd-little-goat/page-010.jpg",
+        "sha256": "cb8626291d277fa5ec49495dae19414993d9e38c53cf9ba68f354b5ef8bb3b0a",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page14.jpg",
+        "source_preview_index": 14,
+        "page_number": 11,
+        "source_file": "bd-little-goat/page-011.jpg",
+        "sha256": "5aa140a891445f583400965b09ec5e250c1e1c6295bacf12e045e4e9ddda36b1",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/little-goat_english_20170208_page15.jpg",
+        "source_preview_index": 15,
+        "page_number": 12,
+        "source_file": "bd-little-goat/page-012.jpg",
+        "sha256": "b08af2fc807be6b83d50fbd951c8bac1d9737c96c46c8d53e4781c9f1efaad3b",
+        "width": 1134,
+        "height": 567
+      }
+    ]
+  },
+  "bd-best-friends": {
+    "source_url": "https://bookdash.org/books/best-friends/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "downloaded_on": "2026-11-10",
+    "image_processing": "保留官方高清预览原插画，清除图内英文排版；官网无字文件可列出但下载 CDN 返回 403。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_cover-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_cover-1-1536x1536.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-best-friends/cover.jpg",
+        "sha256": "dc9dbabe34800bb3bcc7c2572d4191af04def699736ceaab49a8d334f351c163",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-best-friends/page-001.jpg",
+        "sha256": "b409027a261fdd790f4548b2423fe47b340336e35d457f39668119d4f14b7458",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-best-friends/page-002.jpg",
+        "sha256": "45512b683c727d64b3c90cda29d9b82910014084c0265d34ef0d5bc63e1f011f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-best-friends/page-003.jpg",
+        "sha256": "407be822e832d6fef483d88155fa248faab6bc782dc6490fdc8d2891b667e6c6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-best-friends/page-004.jpg",
+        "sha256": "d49ab10e94cffa8493857eea0b68c0a1c9a524eeb4f9ac7ca44b457d7d7db658",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-best-friends/page-005.jpg",
+        "sha256": "6c3f4712ed2f316140223a01c6b2c6380774eff94e88059bc12e7dfbd87b53b9",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-best-friends/page-006.jpg",
+        "sha256": "415023a45a5ca463ff24a2435448f7dc93192659d90b88afa82bb4869c56d538",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-best-friends/page-007.jpg",
+        "sha256": "8254aa688b838a6204918367425604ccb5c7827051c8ecb1caf843ecd59d8019",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-best-friends/page-008.jpg",
+        "sha256": "009f9ec6f661a794757cf7d74f631cfe9591bfadfa1fd834aea7ec652bd193d1",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-best-friends/page-009.jpg",
+        "sha256": "6b5d99fb4f3be4abd3e6009e5afdb6a3dbff85052481c4fb5a101b13b1d8fef4",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-best-friends/page-010.jpg",
+        "sha256": "d7096843fe56134c1bb9aae48a7bd22084d9d0605b9fab3696830e778ff87161",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-best-friends/page-011.jpg",
+        "sha256": "c513fa2cba866b6b7c40247928b6e7fc1305ad76bb8c2f0fc2358fea551431f3",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2025/10/best-friends_en_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-best-friends/page-012.jpg",
+        "sha256": "87964df4eb109b4edeb484f9ef755c6f4d6c2c4ab83f4ef26bc0496f01fe16f0",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-fifi-and-teddy": {
+    "source_url": "https://bookdash.org/books/fifi-and-teddy/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "downloaded_on": "2026-11-10",
+    "image_processing": "保留官方高清预览原插画，清除图内英文排版；官网无字文件可列出但下载 CDN 返回 403。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_cover-2.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_cover-2-1536x1536.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-fifi-and-teddy/cover.jpg",
+        "sha256": "f0142656ad3899f0c78b9f837e59301712514312e0bdcdb3120007ba205ce717",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-fifi-and-teddy/page-001.jpg",
+        "sha256": "f9ac3d8f4cc9214901f8ff8871d073ecabdba8f3e19493270918cba814845574",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-fifi-and-teddy/page-002.jpg",
+        "sha256": "146cae02aaa6ba9bf0bf99bc9f2553dcc8542ab5626fa6dbebd93b104131a2bf",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-fifi-and-teddy/page-003.jpg",
+        "sha256": "0490e61b1daa4281aecf33beae5bf0cadb666435a5791673577885eb7535e31f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-fifi-and-teddy/page-004.jpg",
+        "sha256": "960ce18af513f8856b3bf7930ac67ca04fc86304470c2fb071fe073e4a51fc34",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-fifi-and-teddy/page-005.jpg",
+        "sha256": "cf85dbd61e276dbe98975e4b8478c28bdecaa011e58fcb554b85b80ea25cc71c",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-fifi-and-teddy/page-006.jpg",
+        "sha256": "bb1d993667b0d319f95a42aec918007fdaade39b70d11352a708a4607192d3de",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-fifi-and-teddy/page-007.jpg",
+        "sha256": "5cf72ee1118b88e378797cdd16bbc24e4a27d295d4dc530d047843f3b8d0ed63",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-fifi-and-teddy/page-008.jpg",
+        "sha256": "f4d59943d1995abeab03fbbe701a273eab011a8e9f34f4168e30417a47790ffe",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-fifi-and-teddy/page-009.jpg",
+        "sha256": "2252122742eec248a66a905278dd211b443cccf19f43aea06d77ac3e316f34e2",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-fifi-and-teddy/page-010.jpg",
+        "sha256": "4c922eb966f36416636514769d458264609f0994e3497e324ce55d178312e175",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-fifi-and-teddy/page-011.jpg",
+        "sha256": "24e9fbc7ab379a11dd4a77c9b405ea2f95de81adf9c681a9349bf1eddd30b20f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/11/fifi-and-teddy_en_20221127_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-fifi-and-teddy/page-012.jpg",
+        "sha256": "23726f4bc4965afe6523a1a79c40900dc3b8222fc5832f1d853af6edc2fd1078",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  }
+}

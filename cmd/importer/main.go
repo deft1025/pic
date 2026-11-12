@@ -5,6 +5,8 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
+	"path/filepath"
 	"time"
 
 	"pic/internal/assets"
@@ -27,7 +29,7 @@ func main() {
 }
 
 func run(configFile, content, web, status string, validate bool) error {
-	cfg, err := config.Load(configFile)
+	cfg, err := loadConfig(configFile)
 	if err != nil {
 		return err
 	}
@@ -61,4 +63,40 @@ func run(configFile, content, web, status string, validate bool) error {
 	}
 	fmt.Printf("MySQL 导入完成：%d 本绘本，%d 页。接口立即读取新数据，无需重启。\n", len(batch.Books), batch.Pages)
 	return nil
+}
+
+// Configuration paths are project-relative, while explicit CLI paths remain
+// relative to the caller. This also supports `go run main.go` in cmd/importer.
+func loadConfig(configFile string) (*config.Config, error) {
+	cwd, err := os.Getwd()
+	if err != nil {
+		return nil, err
+	}
+	root := cwd
+	for dir := cwd; ; dir = filepath.Dir(dir) {
+		if info, err := os.Stat(filepath.Join(dir, "go.mod")); err == nil && !info.IsDir() {
+			root = dir
+			break
+		}
+		if filepath.Dir(dir) == dir {
+			break
+		}
+	}
+	if configFile == "" && os.Getenv("CONFIG_FILE") == "" {
+		path := filepath.Join(root, ".env")
+		if _, err := os.Stat(path); !os.IsNotExist(err) {
+			configFile = path
+		}
+	}
+	cfg, err := config.Load(configFile)
+	if err != nil {
+		return nil, err
+	}
+	if !filepath.IsAbs(cfg.Content.Dir) {
+		cfg.Content.Dir = filepath.Join(root, cfg.Content.Dir)
+	}
+	if !filepath.IsAbs(cfg.Content.WebDir) {
+		cfg.Content.WebDir = filepath.Join(root, cfg.Content.WebDir)
+	}
+	return cfg, nil
 }

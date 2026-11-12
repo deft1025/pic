@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | books | 绘本元数据 | book_id，例如 bd-come-back-cat |
 | book_licenses | 来源与授权 | book_id |
-| book_pages | 图片、双语文本和逐页音频路径 | book_id + page_number |
+| book_pages | 图片、双语文本、逐页音频路径与可选对白排版 | book_id + page_number |
 | book_voices | 语音服务商、音色与生成记录 | book_id + language_id |
 | age_ranges | 年龄字典 | age_id |
 | categories | 主题字典 | category_id |
@@ -24,6 +24,10 @@
 API 与 JSON 中的 `id` 仍表示业务标识。重复导入按业务标识更新，不重建绘本主表自增 ID，不删除导入批次以外的书。不要假定所有关联表都有级联删除；正式删除书目时需明确处理相关记录。
 
 `book_pages.audio_zh_path` / `audio_original_path` 保存中英文逐页音频地址，`book_voices` 保存服务商、音色、生成时间等信息，不保存 MP3 二进制。仅上传音频不会写入这些表，仍需运行 importer。
+
+`book_pages.dialogue_layout` 为可空 JSON，对应资料页的 `dialogue` 字段，保存双语原文范围、角色、坐标、画幅比例和正文哈希。它与正文同一事务导入，接口直接返回，不需要独立静态文件或额外布局表。唯一编辑源仍为对应书目 JSON；直接在库中手改的内容可能被下次导入覆盖。删除源字段并导入会写入 NULL，恢复普通正文。
+
+已有库由用户执行一次 [migrations/20261111_dialogue_layout.sql](migrations/20261111_dialogue_layout.sql)，再导入资料；本轮仅准备迁移文件，尚未执行。它只增加该字段，不改变现有图片或音频。新建库的 schema 已包含该字段。旧库未迁移时，新版 API 仍读 MySQL 并显示原正文；含对白的导入会在写事务开始前拒绝执行。若手改正文导致布局失效，API 忽略可选布局并保留普通阅读。
 
 ## 事务和查询
 
@@ -45,7 +49,7 @@ API、dbinit、importer 均自动读取 `internal/config.Load`：`--config` 选�
 
 1. 用户创建目标数据库与账户，在新环境填写 `.env`，不覆盖已有凭据。
 2. 在数据库客户端选中目标库，手动执行 `docs/schema.sql`。该文件不创建数据库，不包含绘本正文，也不升级旧版同名表。
-3. 按操作手册准备、上传并导入现有 10 本、121 页资料，再启动 API。
+3. 按操作手册准备、上传并导入现有 14 本、169 页资料，再启动 API。
 
 `cmd/dbinit` 是同一 SQL 的命令入口；用户仍可自行手动建表。重复执行建表不会删除绘本，但会更新基础字典，不能替代迁移方案。
 

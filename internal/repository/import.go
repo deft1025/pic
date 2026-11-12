@@ -2,6 +2,7 @@ package repository
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"strings"
 	"time"
@@ -63,6 +64,19 @@ func (r *MySQL) Import(ctx context.Context, books []model.Book) error {
 			}
 		}
 	}
+	withDialogue, err := r.hasDialogueColumn(ctx)
+	if err != nil {
+		return err
+	}
+	if !withDialogue {
+		for _, b := range books {
+			for _, p := range b.Pages {
+				if p.Dialogue != nil {
+					return fmt.Errorf("数据库尚未添加 book_pages.dialogue_layout；请先执行 docs/migrations/20261111_dialogue_layout.sql，再运行 importer；本次未写入数据")
+				}
+			}
+		}
+	}
 	tx, err := r.db.BeginTx(ctx, nil)
 	if err != nil {
 		return err
@@ -106,8 +120,21 @@ func (r *MySQL) Import(ctx context.Context, books []model.Book) error {
 			}
 		}
 		for _, p := range b.Pages {
-			_, err = tx.ExecContext(ctx, `INSERT INTO book_pages (book_id,page_number,image_path,image_alt,text_zh,text_original,audio_zh_path,audio_original_path,content_version) VALUES (?,?,?,?,?,?,?,?,?)`,
-				b.ID, p.Number, p.Image, p.ImageAlt, p.TextZH, p.TextOriginal, p.AudioZH, p.AudioOriginal, b.Version)
+			args := []any{b.ID, p.Number, p.Image, p.ImageAlt, p.TextZH, p.TextOriginal, p.AudioZH, p.AudioOriginal, b.Version}
+			query := `INSERT INTO book_pages (book_id,page_number,image_path,image_alt,text_zh,text_original,audio_zh_path,audio_original_path,content_version) VALUES (?,?,?,?,?,?,?,?,?)`
+			if withDialogue {
+				var dialogue any
+				if p.Dialogue != nil {
+					encoded, e := json.Marshal(p.Dialogue)
+					if e != nil {
+						return e
+					}
+					dialogue = string(encoded)
+				}
+				query = `INSERT INTO book_pages (book_id,page_number,image_path,image_alt,text_zh,text_original,audio_zh_path,audio_original_path,content_version,dialogue_layout) VALUES (?,?,?,?,?,?,?,?,?,?)`
+				args = append(args, dialogue)
+			}
+			_, err = tx.ExecContext(ctx, query, args...)
 			if err != nil {
 				return err
 			}

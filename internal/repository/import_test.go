@@ -5,8 +5,11 @@ import (
 	"database/sql"
 	"database/sql/driver"
 	"errors"
+	"io"
 	"strings"
 	"testing"
+
+	"github.com/go-sql-driver/mysql"
 
 	"pic/internal/catalog"
 	"pic/internal/model"
@@ -17,6 +20,9 @@ import (
 type importState struct {
 	begin, commit, rollback, writes int
 	failPages                       bool
+	legacy                          bool
+	layout                          []byte
+	pageLayouts                     []driver.Value
 }
 type testConnector struct{ s *importState }
 
@@ -33,12 +39,49 @@ func (c *testConn) Prepare(string) (driver.Stmt, error)                         
 func (c *testConn) Close() error                                                 { return nil }
 func (c *testConn) Begin() (driver.Tx, error)                                    { c.s.begin++; return testTx{c.s}, nil }
 func (c *testConn) BeginTx(context.Context, driver.TxOptions) (driver.Tx, error) { return c.Begin() }
-func (c *testConn) ExecContext(_ context.Context, q string, _ []driver.NamedValue) (driver.Result, error) {
+func (c *testConn) ExecContext(_ context.Context, q string, args []driver.NamedValue) (driver.Result, error) {
 	c.s.writes++
 	if c.s.failPages && strings.HasPrefix(strings.TrimSpace(q), "INSERT INTO book_pages") {
 		return nil, errors.New("injected child failure")
 	}
+	if strings.HasPrefix(strings.TrimSpace(q), "INSERT INTO book_pages") && len(args) == 10 {
+		c.s.pageLayouts = append(c.s.pageLayouts, args[9].Value)
+	}
 	return driver.RowsAffected(1), nil
+}
+
+func (c *testConn) QueryContext(_ context.Context, q string, _ []driver.NamedValue) (driver.Rows, error) {
+	if c.s.legacy && !strings.Contains(q, "NULL AS dialogue_layout") {
+		return nil, &mysql.MySQLError{Number: 1054, Message: "Unknown column 'dialogue_layout'"}
+	}
+	if strings.Contains(q, "LIMIT 0") {
+		return &testRows{columns: []string{"dialogue_layout"}}, nil
+	}
+	if strings.HasPrefix(q, "SELECT p.page_number") {
+		var layout driver.Value
+		if !c.s.legacy && c.s.layout != nil {
+			layout = c.s.layout
+		}
+		return &testRows{columns: []string{"page_number", "image_path", "image_alt", "text_zh", "text_original", "audio_zh_path", "audio_original_path", "dialogue_layout"}, rows: [][]driver.Value{{int64(1), "/assets/page.svg", "插画", "你好", "Hello", "", "", layout}}}, nil
+	}
+	return nil, errors.New("unexpected query")
+}
+
+type testRows struct {
+	columns []string
+	rows    [][]driver.Value
+	index   int
+}
+
+func (r *testRows) Columns() []string { return r.columns }
+func (r *testRows) Close() error      { return nil }
+func (r *testRows) Next(dest []driver.Value) error {
+	if r.index >= len(r.rows) {
+		return io.EOF
+	}
+	copy(dest, r.rows[r.index])
+	r.index++
+	return nil
 }
 
 type testTx struct{ s *importState }

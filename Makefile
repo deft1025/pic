@@ -5,6 +5,7 @@ test:
 	go test ./...
 	python3 -m unittest discover -s tests -p 'test_*.py'
 	node --check web/app.js
+	node --input-type=module --check < web/assets/reader-dialogue.js
 	node --test tests/flows.cjs
 build:
 	go build -o bin/pic ./cmd/api

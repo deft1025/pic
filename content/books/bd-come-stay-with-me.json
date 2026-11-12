@@ -1,0 +1,316 @@
+{
+  "id": "bd-come-stay-with-me",
+  "title_zh": "来我家住吧",
+  "title_original": "Come stay with me",
+  "author": "Nasrin Siege",
+  "illustrator": "Subi Bosa",
+  "description_zh": "乌龟奶奶受伤了，小乌龟到兔子朋友家暂住。一起玩耍、入睡，再迎接家人回来，感受朋友的陪伴与关心。",
+  "age_ranges": [
+    "3-4"
+  ],
+  "categories": [
+    "animals",
+    "emotions",
+    "bedtime"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-come-stay-with-me/cover.jpg",
+  "page_count": 12,
+  "reading_minutes": 4,
+  "featured_order": 11,
+  "published_at": "2026-11-10T15:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-original-v1-7380639d9b0e",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 原画整理与双语翻译版",
+    "source_url": "https://bookdash.org/books/come-stay-with-me/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《Come stay with me》由 Book Dash 发布；作者 Nasrin Siege，原插画 Subi Bosa，设计 Job Mubinya，编辑 Nabeela Kalla。采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆 AI 辅助中文翻译，使用原作插画并清理原图英文排版，双语正文置于图外；图片经过版式整理，非原版整页排版。不表示原作者或 Book Dash 为本产品背书。原作无字跨页补充了中英文朗读串词，页码：6。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Tendai Turtle lives in the water. Tendai’s best friend is Bunny Busi. She lives in a tree.",
+      "text_zh": "小乌龟滕岱住在水里。他最好的朋友是小兔子布西。她住在树上。",
+      "image_alt": "小乌龟在蓝色水里游泳，小兔子坐在岸边的大树下。",
+      "image": "/assets/books/bd-come-stay-with-me/page-001.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-001.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "text_original": "Granny Turtle has hurt her shell.",
+      "text_zh": "乌龟奶奶的壳受伤了。",
+      "image_alt": "乌龟爸爸和妈妈神情担忧，画面中想象着龟壳受伤的奶奶。",
+      "image": "/assets/books/bd-come-stay-with-me/page-002.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-002.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "text_original": "“We have to go to help Granny,” says Mum. “Come stay with me,” calls Busi.",
+      "text_zh": "“我们得去帮帮奶奶。”妈妈说。“来我家住吧！”布西喊道。",
+      "image_alt": "乌龟爸爸妈妈准备出发，树边的小兔子邀请小乌龟来住。",
+      "image": "/assets/books/bd-come-stay-with-me/page-003.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-003.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 28,
+          "en": 74
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 15,
+              "en": 42
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mum"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 42,
+            "target": [
+              19,
+              82
+            ]
+          },
+          {
+            "start": {
+              "zh": 15,
+              "en": 42
+            },
+            "end": {
+              "zh": 28,
+              "en": 74
+            },
+            "speaker": {
+              "zh": "布西",
+              "en": "Busi"
+            },
+            "x": 49,
+            "y": 4,
+            "width": 33,
+            "target": [
+              77,
+              47
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "1927d1a4da1b4ee0ced51e693fd4fd026cd00535228405f5270d2cf78d1bcc3c",
+          "en": "5bd1b5d91a077ef72900a598447ad3b4b3f72960d57ba708c7c80fae1acdb175"
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text_original": "Tendai stays with Bunny Busi in the tree.",
+      "text_zh": "滕岱住进了布西在树上的家。",
+      "image_alt": "小兔子站在漂浮的木头上迎接小乌龟，随后两人一起荡秋千。",
+      "image": "/assets/books/bd-come-stay-with-me/page-004.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-004.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "text_original": "They play all day.",
+      "text_zh": "他们玩了一整天。",
+      "image_alt": "小兔子和小乌龟一起仰望飞舞的蝴蝶。",
+      "image": "/assets/books/bd-come-stay-with-me/page-005.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-005.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "text_original": "They have so much fun together!",
+      "text_zh": "两个好朋友在一起，玩得真开心！",
+      "image_alt": "小兔子站在小乌龟的壳上摘果子，两个朋友又在树间快乐地玩耍。",
+      "image": "/assets/books/bd-come-stay-with-me/page-006.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-006.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "text_original": "They sleep all night.",
+      "text_zh": "夜晚，他们一起甜甜地睡着了。",
+      "image_alt": "月亮和星星下，小乌龟和小兔子依偎着睡觉。",
+      "image": "/assets/books/bd-come-stay-with-me/page-007.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-007.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "text_original": "Mum and Dad come back with Granny.",
+      "text_zh": "爸爸妈妈带着奶奶回来啦。",
+      "image_alt": "小兔子和小乌龟在岸边迎接游回来的乌龟一家。",
+      "image": "/assets/books/bd-come-stay-with-me/page-008.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-008.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-008.mp3"
+    },
+    {
+      "page_number": 9,
+      "text_original": "“How are you, Granny?” asks Tendai.",
+      "text_zh": "“奶奶，你好些了吗？”滕岱问。",
+      "image_alt": "小乌龟和小兔子靠近戴着眼镜的奶奶，蝴蝶在旁边飞舞。",
+      "image": "/assets/books/bd-come-stay-with-me/page-009.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-009.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-009.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 15,
+          "en": 35
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 15,
+              "en": 35
+            },
+            "speaker": {
+              "zh": "滕岱",
+              "en": "Tendai"
+            },
+            "x": 29,
+            "y": 3,
+            "width": 43,
+            "target": [
+              39,
+              75
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "42ca582a20b411e11cd631d42e8f455b38b5723af30d4976232a400fc5e23442",
+          "en": "76be1b393938131867ca936b0b5eb387d518bf959b2e91a5986343a47d82d0dd"
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text_original": "“I am better now,” says Granny with a smile. “We fixed her shell,” answers Mum.",
+      "text_zh": "“我已经好些啦。”奶奶笑着说。“我们把奶奶的壳修好啦。”妈妈回答。",
+      "image_alt": "奶奶微笑着回答，妈妈指着修补好的龟壳。",
+      "image": "/assets/books/bd-come-stay-with-me/page-010.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-010.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-010.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 33,
+          "en": 79
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 15,
+              "en": 45
+            },
+            "speaker": {
+              "zh": "奶奶",
+              "en": "Granny"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 42,
+            "target": [
+              28,
+              58
+            ]
+          },
+          {
+            "start": {
+              "zh": 15,
+              "en": 45
+            },
+            "end": {
+              "zh": 33,
+              "en": 79
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mum"
+            },
+            "x": 51,
+            "y": 3,
+            "width": 46,
+            "target": [
+              90,
+              65
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "e927231ccd720da39c27f27cb9b849c8733d6b3b517131df90d96c827818df4d",
+          "en": "446fb02ca2a07bfd1da2474f72dd2c80c20957e4664462366b48fabfe457327b"
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text_original": "Granny gives Tendai her favourite flute.",
+      "text_zh": "奶奶把自己最喜欢的笛子送给了滕岱。",
+      "image_alt": "奶奶拿出一支绿色笛子，小乌龟和小兔子在旁边看着。",
+      "image": "/assets/books/bd-come-stay-with-me/page-011.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-011.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-011.mp3"
+    },
+    {
+      "page_number": 12,
+      "text_original": "Tendai plays the flute and everybody dances.",
+      "text_zh": "滕岱吹起笛子，大家都跳起舞来。",
+      "image_alt": "小乌龟吹着笛子，小兔子和乌龟一家在树下跳舞。",
+      "image": "/assets/books/bd-come-stay-with-me/page-012.jpg",
+      "audio_zh": "/assets/books/bd-come-stay-with-me/audio/zh/91280fe9bab9385f/page-012.mp3",
+      "audio_original": "/assets/books/bd-come-stay-with-me/audio/en/edcd469e282a4983/page-012.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-10T07:31:35.246154+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-10T07:35:54.028444+00:00",
+      "review_status": "pending"
+    }
+  }
+}

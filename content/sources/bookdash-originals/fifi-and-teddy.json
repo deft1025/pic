@@ -1,0 +1,94 @@
+{
+  "key": "fifi",
+  "slug": "fifi-and-teddy",
+  "title": "菲菲和泰迪熊",
+  "en": "Fifi and Teddy",
+  "writer": "Tshepo Letsapa",
+  "illustrator": "Alison de Villiers",
+  "designer": "Fathima Kathrada",
+  "editor": "Zanri Kritzinger",
+  "source_url": "https://bookdash.org/books/fifi-and-teddy/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=fifi-and-teddy",
+  "id": "bd-fifi-and-teddy",
+  "narration_additions": [
+    6,
+    7,
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Fifi has loved Teddy since she was a baby.",
+      "text_zh": "从还是小宝宝的时候起，菲菲就喜欢泰迪熊了。",
+      "image_alt": "穿红裙子的菲菲和棕色泰迪熊分别出现在白色画面上。"
+    },
+    {
+      "page_number": 2,
+      "text_original": "Fifi eats with Teddy. Fifi plays with Teddy.",
+      "text_zh": "菲菲和泰迪一起吃饭，也和泰迪一起玩。",
+      "image_alt": "菲菲抱着泰迪熊坐在餐桌前，又带着它一起荡秋千。"
+    },
+    {
+      "page_number": 3,
+      "text_original": "Fifi takes Teddy wherever she goes. And they curl up together every night.",
+      "text_zh": "不管去哪儿，菲菲都带着泰迪。每天晚上，他们还依偎着一起睡。",
+      "image_alt": "菲菲坐车时抱着泰迪熊，晚上又在床上抱着它睡觉。"
+    },
+    {
+      "page_number": 4,
+      "text_original": "Fifi knows she cannot take Teddy to school. So every morning she leaves Teddy on her bed.",
+      "text_zh": "菲菲知道，上学不能带泰迪。所以每天早上，她都把泰迪留在床上。",
+      "image_alt": "泰迪熊独自坐在菲菲的床上，身后是画着红心的枕头。"
+    },
+    {
+      "page_number": 5,
+      "text_original": "One day, when she comes back from school, Teddy is not there!",
+      "text_zh": "有一天，菲菲放学回家，发现泰迪不见了！",
+      "image_alt": "菲菲从床边探下头，寻找不见了的泰迪熊。"
+    },
+    {
+      "page_number": 6,
+      "text_original": "Fifi looks under the covers. Where is Teddy?",
+      "text_zh": "菲菲掀开被子找。泰迪在哪儿呢？",
+      "image_alt": "菲菲站在床边掀开蓝色被子，心里想着泰迪熊。"
+    },
+    {
+      "page_number": 7,
+      "text_original": "Fifi looks outside. Where is Teddy?",
+      "text_zh": "菲菲又往窗外找。泰迪在哪儿呢？",
+      "image_alt": "菲菲趴在打开的窗户边向外寻找，心里仍想着泰迪熊。"
+    },
+    {
+      "page_number": 8,
+      "text_original": "“What’s wrong, Fifi?” asks Mom.",
+      "text_zh": "“怎么啦，菲菲？”妈妈问。",
+      "image_alt": "菲菲走到正在洗衣服的妈妈身边，妈妈低头看着她。"
+    },
+    {
+      "page_number": 9,
+      "text_original": "“Teddy is missing!”",
+      "text_zh": "“泰迪不见了！”",
+      "image_alt": "菲菲难过得哭起来，旁边有一大块蓝色的情绪色块。"
+    },
+    {
+      "page_number": 10,
+      "text_original": "“No, darling. Teddy just had a bath!”",
+      "text_zh": "“别担心，宝贝。泰迪只是洗了个澡呀！”",
+      "image_alt": "妈妈指向晾衣绳，洗过的泰迪熊正挂在那里。"
+    },
+    {
+      "page_number": 11,
+      "text_original": "“There you are, Teddy!”",
+      "text_zh": "“原来你在这里呀，泰迪！”",
+      "image_alt": "菲菲高兴地举起双手，看着重新找到的泰迪熊。"
+    },
+    {
+      "page_number": 12,
+      "text_original": "Fifi gives Teddy a big hug.",
+      "text_zh": "菲菲紧紧地抱住了泰迪。",
+      "image_alt": "菲菲闭着眼睛拥抱泰迪熊，旁边有两颗温暖的爱心。"
+    }
+  ]
+}

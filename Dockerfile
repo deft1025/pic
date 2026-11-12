@@ -12,10 +12,12 @@ FROM alpine:3.22
 RUN apk add --no-cache ca-certificates && addgroup -S pic && adduser -S pic -G pic
 WORKDIR /app
 COPY --from=build /out/ /app/
-COPY --chown=pic:pic web/index.html web/app.js web/styles.css web/favicon.svg /app/web/
+COPY --chown=pic:pic web/*.html web/app.js web/styles.css web/favicon.svg /app/web/
 COPY --chown=pic:pic web/assets/hero.svg /app/web/assets/hero.svg
+COPY --chown=pic:pic web/assets/reader-dialogue.js /app/web/assets/
 COPY --chown=pic:pic content/books /app/content/books
 COPY --chown=pic:pic docs/schema.sql /app/docs/schema.sql
+COPY --chown=pic:pic docs/migrations /app/docs/migrations
 USER pic
 ENV HTTP_ADDR=0.0.0.0:8198
 EXPOSE 8198

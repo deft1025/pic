@@ -80,6 +80,9 @@ func Validate(b model.Book, requireApproval bool) error {
 				return fmt.Errorf("音频路径无效")
 			}
 		}
+		if err := ValidateDialogue(p, b.Languages); err != nil {
+			return fmt.Errorf("第 %d 页：%w", i+1, err)
+		}
 	}
 	return nil
 }

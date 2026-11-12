@@ -5,8 +5,11 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 )
+
+var googleVerificationFile = regexp.MustCompile(`^/google[a-zA-Z0-9]+\.html$`)
 
 func Handler(webDir string) http.Handler {
 	mux := http.NewServeMux()
@@ -25,7 +28,7 @@ func Handler(webDir string) http.Handler {
 		files.ServeHTTP(w, r)
 	})
 	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/app.js" || r.URL.Path == "/styles.css" || r.URL.Path == "/favicon.svg" {
+		if r.URL.Path == "/app.js" || r.URL.Path == "/styles.css" || r.URL.Path == "/favicon.svg" || googleVerificationFile.MatchString(r.URL.Path) {
 			files.ServeHTTP(w, r)
 			return
 		}

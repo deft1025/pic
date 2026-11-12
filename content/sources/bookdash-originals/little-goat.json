@@ -1,0 +1,90 @@
+{
+  "key": "little-goat",
+  "slug": "little-goat",
+  "title": "小山羊",
+  "en": "Little Goat",
+  "writer": "Mirna Lawrence",
+  "illustrator": "Nicola Anne Smith",
+  "designer": "Tiffany Mac Sherry",
+  "editor": "Nabeela Kalla",
+  "source_url": "https://bookdash.org/books/little-goat/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=little-goat",
+  "id": "bd-little-goat",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Little Goat went to find the sweetest grass. The sky was blue above. But she did not look up.",
+      "text_zh": "小山羊出发去找最甜的青草。头顶的天空蓝蓝的，可她没有抬头看。",
+      "image_alt": "小山羊走在青草地上，头顶是一片蓝色天空。"
+    },
+    {
+      "page_number": 2,
+      "text_original": "The river gurgled below. But Little Goat did not listen to its song.",
+      "text_zh": "小河在脚边咕噜咕噜地唱歌，可小山羊没有听。",
+      "image_alt": "小山羊低头在草地上寻找，蓝色的小河就在旁边。"
+    },
+    {
+      "page_number": 3,
+      "text_original": "A bird called to her, saying, “How do you do?” But Little Goat didn’t answer.",
+      "text_zh": "一只小鸟叫住她：“你好呀！”可小山羊没有回答。",
+      "image_alt": "小鸟站在细枝上叫唤，小山羊继续朝前走。"
+    },
+    {
+      "page_number": 4,
+      "text_original": "She just walked along looking for the sweetest grass.",
+      "text_zh": "她只顾一路走，一路找最甜的青草。",
+      "image_alt": "小山羊在蓝天和绿草间继续向前走。"
+    },
+    {
+      "page_number": 5,
+      "text_original": "As she walked along, Little Goat moved further and further away from Mother Goat.",
+      "text_zh": "走着走着，小山羊离妈妈越来越远了。",
+      "image_alt": "山羊妈妈在左边吃草，小山羊独自走向远处。"
+    },
+    {
+      "page_number": 6,
+      "text_original": "Little Goat found the sweetest grass. She ate and ate. She had walked far from Mother Goat.",
+      "text_zh": "小山羊找到了最甜的青草。她吃呀，吃呀。这时，她已经离妈妈很远了。",
+      "image_alt": "小山羊大口吃着青草，又低下头继续吃。"
+    },
+    {
+      "page_number": 7,
+      "text_original": "Mother Goat wondered where Little Goat had gone. She looked in the mealie patch, but Little Goat was not there.",
+      "text_zh": "山羊妈妈想：小山羊去哪儿了？她到玉米地里找，可小山羊不在那里。",
+      "image_alt": "山羊妈妈先站着张望，再走进高高的玉米地里寻找。"
+    },
+    {
+      "page_number": 8,
+      "text_original": "Mother Goat ran to the river. But Little Goat was not there. “Where are you, Little Goat,” bleated Mother Goat.",
+      "text_zh": "山羊妈妈跑到河边，可小山羊也不在那里。“小山羊，你在哪儿呀？”妈妈咩咩地叫着。",
+      "image_alt": "山羊妈妈跑到小河边，抬起头大声呼唤。"
+    },
+    {
+      "page_number": 9,
+      "text_original": "A bird called to Mother Goat. “Little Goat is asleep in the sweet grass across the bridge.”",
+      "text_zh": "一只小鸟告诉山羊妈妈：“小山羊在桥那边，睡在甜甜的青草里呢。”",
+      "image_alt": "小鸟站在枝头，低头告诉抬头张望的山羊妈妈。"
+    },
+    {
+      "page_number": 10,
+      "text_original": "Mother Goat crossed the bridge, to the sweet grass.",
+      "text_zh": "山羊妈妈走过小桥，来到那片青草地。",
+      "image_alt": "山羊妈妈走过木头小桥，向长着青草的对岸走去。"
+    },
+    {
+      "page_number": 11,
+      "text_original": "There she found Little Goat fast asleep.",
+      "text_zh": "她在那里找到了睡得正香的小山羊。",
+      "image_alt": "小山羊蜷在草地里，闭着眼睛睡觉。"
+    },
+    {
+      "page_number": 12,
+      "text_original": "“Wake up, Little Goat,” said Mother Goat gently. “You were lost!” “I wasn’t lost... I have been here all the time!” said Little Goat.",
+      "text_zh": "“醒醒，小山羊。”妈妈轻轻地说，“你走丢啦！”“我没有走丢呀……我一直都在这里呢！”小山羊说。",
+      "image_alt": "山羊妈妈低头轻声叫醒小山羊，小山羊坐在草地上回答。"
+    }
+  ]
+}

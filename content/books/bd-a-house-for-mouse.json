@@ -61,7 +61,65 @@
       "text_zh": "“你可以来和我一起睡。”小狗说。“谢谢你。”小老鼠说。",
       "text_original": "“You can come and sleep with me,” said Puppy. “Thank you,” said Mouse.",
       "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-003.mp3",
-      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-003.mp3"
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 27,
+          "en": 70
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 16,
+              "en": 46
+            },
+            "speaker": {
+              "zh": "小狗",
+              "en": "Puppy"
+            },
+            "x": 50,
+            "y": 3,
+            "width": 47,
+            "target": [
+              65,
+              55
+            ]
+          },
+          {
+            "start": {
+              "zh": 16,
+              "en": 46
+            },
+            "end": {
+              "zh": 27,
+              "en": 70
+            },
+            "speaker": {
+              "zh": "小老鼠",
+              "en": "Mouse"
+            },
+            "x": 2,
+            "y": 6,
+            "width": 44,
+            "target": [
+              32,
+              70
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "accd22bfc1733a4c0072c1f7535ab3c3ff9774c6b676608a6b2df1470445906b",
+          "en": "f381afa4d09b8d87313be49620fd2a913302767ede8204913f8d3936fae4b392"
+        }
+      }
     },
     {
       "page_number": 4,
@@ -79,7 +137,65 @@
       "text_zh": "“你可以来和我一起睡。”鹦鹉说。“谢谢你。”小老鼠说。",
       "text_original": "“You can come and sleep with me,” said Parrot. “Thank you,” said Mouse.",
       "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-005.mp3",
-      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-005.mp3"
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-005.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 27,
+          "en": 71
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 16,
+              "en": 47
+            },
+            "speaker": {
+              "zh": "鹦鹉",
+              "en": "Parrot"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 44,
+            "target": [
+              62,
+              25
+            ]
+          },
+          {
+            "start": {
+              "zh": 16,
+              "en": 47
+            },
+            "end": {
+              "zh": 27,
+              "en": 71
+            },
+            "speaker": {
+              "zh": "小老鼠",
+              "en": "Mouse"
+            },
+            "x": 52,
+            "y": 64,
+            "width": 44,
+            "target": [
+              32,
+              70
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "bb26288ceefda6e83665abf11d280eb2e08fdd456e6e309b25c6f7f70b9b6ab6",
+          "en": "d1e932e1a0a6ccd0bf67b34863b1bca047c0308fb0c72e301627ad5654a61ad0"
+        }
+      }
     },
     {
       "page_number": 6,
@@ -97,7 +213,65 @@
       "text_zh": "“你可以来和我一起睡。”小鱼说。“谢谢你。”小老鼠说。",
       "text_original": "“You can come and sleep with me,” said Fish. “Thank you,” said Mouse.",
       "audio_zh": "/assets/books/bd-a-house-for-mouse/audio/zh/02504f1f35ad1e8a/page-007.mp3",
-      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-007.mp3"
+      "audio_original": "/assets/books/bd-a-house-for-mouse/audio/en/c48a0ecdaef5112e/page-007.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 27,
+          "en": 69
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 16,
+              "en": 45
+            },
+            "speaker": {
+              "zh": "小鱼",
+              "en": "Fish"
+            },
+            "x": 50,
+            "y": 3,
+            "width": 47,
+            "target": [
+              65,
+              50
+            ]
+          },
+          {
+            "start": {
+              "zh": 16,
+              "en": 45
+            },
+            "end": {
+              "zh": 27,
+              "en": 69
+            },
+            "speaker": {
+              "zh": "小老鼠",
+              "en": "Mouse"
+            },
+            "x": 2,
+            "y": 6,
+            "width": 44,
+            "target": [
+              32,
+              70
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "252f206c855338f25eb1589d7ea02351cb069c822b95800889e8161851f53f14",
+          "en": "8f0e229ee2629a7437810da0ca7601bc2ea85d1188f0394a6015e12ac2f6fa0a"
+        }
+      }
     },
     {
       "page_number": 8,

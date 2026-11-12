@@ -1,0 +1,4 @@
+Pillow>=10
+opencv-python-headless==4.10.0.84
+edge-tts>=7.3.1,<8
+mutagen>=1.47

@@ -43,7 +43,44 @@
       "text_zh": "一天，树懒先生来做客。他说：“我好困！我需要一根好树枝，当作我的床！”",
       "text_original": "One day, Mr Sloth came to visit. He said: I’m sleepy! I need a good branch for a bed!",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-001.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-001.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-001.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 35,
+          "en": 85
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 14,
+              "en": 42
+            },
+            "end": {
+              "zh": 35,
+              "en": 85
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 6,
+            "y": 3,
+            "width": 88,
+            "target": [
+              50,
+              55
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "1932783deb7b414edb763766379defb9f029693bc02bcc3e916450a13572e27e",
+          "en": "818cfdb2e077139a3513f55cacf2a10c18fb4d75aa29b73bf1cab7756aaf8575"
+        }
+      }
     },
     {
       "page_number": 2,
@@ -52,7 +89,44 @@
       "text_zh": "“我很会爬树，也知道怎么荡秋千。不过，睡觉才是我最最喜欢的事！”",
       "text_original": "I’m quite good at climbing. I know how to swing. But sleeping’s my favourite, favourite thing!",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-002.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-002.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-002.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 32,
+          "en": 94
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 32,
+              "en": 94
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 12,
+            "y": 67,
+            "width": 76,
+            "target": [
+              49,
+              54
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "72d9bb0984e1a7b906a3859eef1b9342b3f4c6d050c9b639115bb2dd61b33d5b",
+          "en": "bd9140d60120accc72c31f95c927ded84c8eaa1ee008507eb1208c88576acab9"
+        }
+      }
     },
     {
       "page_number": 3,
@@ -61,7 +135,44 @@
       "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
       "text_original": "This branch looks lovely! I think I’ll sleep here. And you? Don’t you think that’s a splendid idea?",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-003.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-003.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 31,
+          "en": 99
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 31,
+              "en": 99
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 43,
+            "y": 4,
+            "width": 54,
+            "target": [
+              35,
+              52
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "341facc147798133c5a86c5deaf1b7b600ed79aadea13b6bc6051d5075116ecd",
+          "en": "fcc621d41b428e91ee325d3d3c8cc037af5f194d2b421da16a3dd00f3ce966e5"
+        }
+      }
     },
     {
       "page_number": 4,
@@ -79,7 +190,44 @@
       "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
       "text_original": "This branch looks lovely! I think I’ll sleep here. And you? Don’t you think that’s a splendid idea?",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-005.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-005.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-005.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 31,
+          "en": 99
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 31,
+              "en": 99
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 43,
+            "y": 4,
+            "width": 54,
+            "target": [
+              35,
+              52
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "341facc147798133c5a86c5deaf1b7b600ed79aadea13b6bc6051d5075116ecd",
+          "en": "fcc621d41b428e91ee325d3d3c8cc037af5f194d2b421da16a3dd00f3ce966e5"
+        }
+      }
     },
     {
       "page_number": 6,
@@ -97,7 +245,44 @@
       "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
       "text_original": "This branch looks lovely! I think I’ll sleep here. And you? Don’t you think that’s a splendid idea?",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-007.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-007.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-007.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 31,
+          "en": 99
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 31,
+              "en": 99
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 43,
+            "y": 4,
+            "width": 54,
+            "target": [
+              35,
+              52
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "341facc147798133c5a86c5deaf1b7b600ed79aadea13b6bc6051d5075116ecd",
+          "en": "fcc621d41b428e91ee325d3d3c8cc037af5f194d2b421da16a3dd00f3ce966e5"
+        }
+      }
     },
     {
       "page_number": 8,
@@ -115,7 +300,44 @@
       "text_zh": "“这根树枝真不错！我想睡在这里。你呢？你觉得这个主意好不好？”",
       "text_original": "This branch looks lovely! I think I’ll sleep here. And you? Don’t you think that’s a splendid idea?",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-009.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-009.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-009.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 31,
+          "en": 99
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 31,
+              "en": 99
+            },
+            "speaker": {
+              "zh": "树懒先生",
+              "en": "Mr Sloth"
+            },
+            "x": 43,
+            "y": 4,
+            "width": 54,
+            "target": [
+              35,
+              52
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "341facc147798133c5a86c5deaf1b7b600ed79aadea13b6bc6051d5075116ecd",
+          "en": "fcc621d41b428e91ee325d3d3c8cc037af5f194d2b421da16a3dd00f3ce966e5"
+        }
+      }
     },
     {
       "page_number": 10,
@@ -133,7 +355,41 @@
       "text_zh": "“再往上爬一根树枝，树懒先生！”大家说。那根树枝，正好可以当他的床。",
       "text_original": "Try climb one more branch, Mr Sloth! they all said. And that branch was just the right one for his bed.",
       "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-011.mp3",
-      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-011.mp3"
+      "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-011.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 34,
+          "en": 103
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 20,
+              "en": 51
+            },
+            "speaker": {
+              "zh": "朋友们",
+              "en": "His friends"
+            },
+            "x": 9,
+            "y": 68,
+            "width": 79,
+            "target": null
+          }
+        ],
+        "text_sha256": {
+          "zh": "379319ff7c81ad3de05f17f60a88ffcb033c7508fab655724b1c4dfd5453f031",
+          "en": "4e7b0ca66ec4975546adda426c95c77e54d49bc1ecd573b03724ee2a5b6ed1fb"
+        }
+      }
     },
     {
       "page_number": 12,

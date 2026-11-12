@@ -53,7 +53,44 @@
       "text_zh": "“等我长大了，我要飞得高高的，飞上天空！”黛西说。可是，其他小鸡都笑了起来。",
       "text_original": "“When I grow up, I want to fly high, high into the sky,” Daisy said. But all the other chickens laughed at her.",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-002.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-002.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-002.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 38,
+          "en": 111
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 25,
+              "en": 68
+            },
+            "speaker": {
+              "zh": "黛西",
+              "en": "Daisy"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 70,
+            "target": [
+              45,
+              57
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "4ae0c4fa17ded302ee91626f8c2fb5436dfafa021653f73d34bf42d4e3949ae5",
+          "en": "673e468362900cd278987e1c880c194784c5ff67b88b2fca554e22cb70dc93fc"
+        }
+      }
     },
     {
       "page_number": 3,
@@ -62,7 +99,65 @@
       "text_zh": "“你真奇怪。”它们说，“我们再也不跟你玩了。”妈妈告诉她：“黛西，我们都会扑扇翅膀，可是鸡要飞起来很不容易。”",
       "text_original": "“You are so weird,” they said. “We won’t play with you anymore.” “Daisy, we can all flap our wings but it’s very difficult for chickens to fly,” Mama told her.",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-003.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-003.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 55,
+          "en": 159
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 23,
+              "en": 65
+            },
+            "speaker": {
+              "zh": "其他小鸡",
+              "en": "Other chicks"
+            },
+            "x": 52,
+            "y": 3,
+            "width": 46,
+            "target": [
+              79,
+              78
+            ]
+          },
+          {
+            "start": {
+              "zh": 23,
+              "en": 65
+            },
+            "end": {
+              "zh": 55,
+              "en": 159
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mama"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 46,
+            "target": [
+              48,
+              55
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "69299063e0733bba5bdf3ccb1e43811c70e0fb6bb6abebfa18e2a368a6aa9716",
+          "en": "389be6b9d83ddfba5b691a2f376c919a87a8c758f07a178dfb24f9ac05bee878"
+        }
+      }
     },
     {
       "page_number": 4,
@@ -80,7 +175,44 @@
       "text_zh": "练习的时候，她想象自己飞上高空，低头看着地面上的小鸡。她想象自己飞过麻雀，飞过燕子。“哇！”鸟儿们会说，“一只会飞的鸡！”",
       "text_original": "While she practised, she imagined herself flying high into the sky and looking at the chickens below. She imagined herself flying past the sparrows and past the swallows. “Wow!” the birds would say. “A chicken that can fly!”",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-005.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-005.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-005.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 61,
+          "en": 224
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 42,
+              "en": 171
+            },
+            "end": {
+              "zh": 61,
+              "en": 224
+            },
+            "speaker": {
+              "zh": "鸟儿们 · 想象中",
+              "en": "Birds · in her imagination"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 90,
+            "target": [
+              73,
+              45
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "6b483caa366e475e80112e04fb2975268fd8cb568017ed674a931b097215e4b3",
+          "en": "0dd0bbc41e141e15f78c69b22192813d86499cf9208f9101b814979e209fdc50"
+        }
+      }
     },
     {
       "page_number": 6,
@@ -98,7 +230,65 @@
       "text_zh": "“我永远也飞不起来！”黛西哭着对妈妈说，“它们说得对。”妈妈说：“黛西，你和其他小鸡不一样。它们不想飞，可是你想！你能做到。”",
       "text_original": "“I’m never going to fly!” Daisy cried to Mama. “The others are right.” “Daisy, you are different from the other chickens. They don’t want to fly but you do! You can do it,” Mama said.",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-007.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-007.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-007.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 63,
+          "en": 183
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 28,
+              "en": 71
+            },
+            "speaker": {
+              "zh": "黛西",
+              "en": "Daisy"
+            },
+            "x": 3,
+            "y": 4,
+            "width": 44,
+            "target": [
+              43,
+              67
+            ]
+          },
+          {
+            "start": {
+              "zh": 28,
+              "en": 71
+            },
+            "end": {
+              "zh": 63,
+              "en": 183
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mama"
+            },
+            "x": 51,
+            "y": 4,
+            "width": 47,
+            "target": [
+              57,
+              50
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "464883ccf7dc3e80f94ac6b319ad7148b6fc74d29e3f7a03ecf50c7e5b4ac750",
+          "en": "9d6e336aadc4572db99a8688e9c4c825cdee3c5717b5cfe0e265315137487bed"
+        }
+      }
     },
     {
       "page_number": 8,
@@ -116,7 +306,44 @@
       "text_zh": "砰！黛西又落到了地上。其他小鸡哈哈大笑：“我们早就说过，鸡不会飞！”",
       "text_original": "BAM! The other chickens laughed out loud.“Ha ha ha! We told you! Chickens can’t fly!”",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-009.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-009.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-009.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 34,
+          "en": 85
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 20,
+              "en": 41
+            },
+            "end": {
+              "zh": 34,
+              "en": 85
+            },
+            "speaker": {
+              "zh": "其他小鸡",
+              "en": "Other chicks"
+            },
+            "x": 44,
+            "y": 3,
+            "width": 53,
+            "target": [
+              76,
+              74
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "f015a07df31a405a158addab9887f2bcbe6bcc7225d5a019692569daa3495ec0",
+          "en": "b18699b90e02bfbbbe09ce998f8c55448004c97f6700f43c8f0974b51ef1ca00"
+        }
+      }
     },
     {
       "page_number": 10,
@@ -134,7 +361,44 @@
       "text_zh": "她真的一直在飞！翅膀下面的风越来越有力，她越飞越高。麻雀和燕子说：“太神奇了！一只会飞的鸡！”",
       "text_original": "She kept flying! The wind beneath her wings grew stronger and she flew higher and higher! The sparrows and the swallows said, “Amazing! A flying chicken!”",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-011.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-011.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-011.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 47,
+          "en": 154
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 26,
+              "en": 90
+            },
+            "end": {
+              "zh": 47,
+              "en": 154
+            },
+            "speaker": {
+              "zh": "麻雀和燕子",
+              "en": "Sparrows and swallows"
+            },
+            "x": 3,
+            "y": 2,
+            "width": 66,
+            "target": [
+              74,
+              36
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "1626883c6b84d56889d94a0ac6b68dd362d913ea3e88444bdb43d1d3b2b013b7",
+          "en": "11a3f278e1c0901e0a634b0f4a75e9f3bf0c55edc4efca0c8992f7c0cc520b25"
+        }
+      }
     },
     {
       "page_number": 12,
@@ -143,7 +407,44 @@
       "text_zh": "其他小鸡也想像她一样。它们说：“哦，黛西，你真了不起！”",
       "text_original": "And the other chickens wanted to be just like her. They said, “Oh Daisy, you’re amazing!”",
       "audio_zh": "/assets/books/bd-amazing-daisy/audio/zh/c9482ffeba920501/page-012.mp3",
-      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-012.mp3"
+      "audio_original": "/assets/books/bd-amazing-daisy/audio/en/f700248500b68807/page-012.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 28,
+          "en": 89
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 11,
+              "en": 51
+            },
+            "end": {
+              "zh": 28,
+              "en": 89
+            },
+            "speaker": {
+              "zh": "其他小鸡",
+              "en": "Other chicks"
+            },
+            "x": 12,
+            "y": 62,
+            "width": 65,
+            "target": [
+              27,
+              39
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "8e406d27189bfae266b564196edb655040794079d7da5c1960780504732be534",
+          "en": "f63f8fa9013e579864fec66b2a0c4680967501b08c6d8047fe47df9ac7ad4562"
+        }
+      }
     }
   ],
   "voices": {

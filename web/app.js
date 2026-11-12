@@ -10,7 +10,7 @@ let renderToken = 0, disposePage = () => {}, storageAvailable = true;
 const storeKey = 'pic-library-v1';
 const readingRates = [0.5,0.65,0.75,1,1.25,1.5];
 const deviceSpeechBaseRate = 0.8;
-const defaultPreferences = {language:'zh',auto:true,showText:true,night:false,rate:1,rateVersion:2,volume:1,voices:{zh:'',en:''}};
+const defaultPreferences = {language:'zh',auto:true,showText:true,night:false,rate:1,rateVersion:2,volume:1,readingLayout:'dialogue',voices:{zh:'',en:''}};
 function loadStore() {
  try {
   const raw = JSON.parse(localStorage.getItem(storeKey) || '{}');
@@ -23,6 +23,7 @@ function loadStore() {
   const saved = x.preferences || {}, preferences = {...defaultPreferences,voices:{...defaultPreferences.voices}};
   for (const key of ['auto','showText','night']) if (typeof saved[key] === 'boolean') preferences[key] = saved[key];
   if (['zh','en'].includes(saved.language)) preferences.language = saved.language;
+  if (['dialogue','standard'].includes(saved.readingLayout)) preferences.readingLayout = saved.readingLayout;
   // The approved pre-generated narration is now 1x. Reset earlier speed settings once.
   if (readingRates.includes(saved.rate) && saved.rateVersion === 2) preferences.rate = saved.rate;
   for (const language of ['zh','en']) if (typeof saved.voices?.[language] === 'string' && saved.voices[language].length <= 512) preferences.voices[language] = saved.voices[language];
@@ -133,8 +134,17 @@ async function reader(id, token) {
  document.title=book.title_zh+' · 正在阅读';
  const pages=res.items, remembered=progressFor(book);
  if(!pages.length)throw Error('这本绘本的页面还没有准备好，请稍后重试');
+ const requestedLayout=new URLSearchParams(location.search).get('layout');
+ let dialogueLayout=null,dialogueModule=null,dialogueView=null,dialogueEnabled=(['dialogue','standard'].includes(requestedLayout)?requestedLayout:local.preferences.readingLayout)==='dialogue';
+ if(pages.some(p=>p.dialogue?.parts?.length)){
+  try{
+   dialogueModule=await import('/assets/reader-dialogue.js');dialogueLayout=true;
+  }catch{/* Optional typography must never prevent reading a story. */}
+  if(token!==renderToken)return null;
+ }
  const preferences=local.preferences;
  let page=new URLSearchParams(location.search).get('start')!=='1'&&remembered&&!remembered.completed?Math.min(remembered.page,pages.length-1):0,lang=book.languages.includes(preferences.language)?preferences.language:book.languages[0],playing=false,auto=preferences.auto,showText=preferences.showText,finished=false,rate=preferences.rate,volume=preferences.volume,epoch=0,disposed=false,sleepTimer=null,utterance=null;
+ if(dialogueLayout){const requested=Number(new URLSearchParams(location.search).get('page'));if(Number.isInteger(requested)&&requested>=1&&requested<=pages.length)page=requested-1;}
  const audio=new Audio();audio.preload='metadata';audio.preservesPitch=true;
  const speechAvailable='speechSynthesis' in window;
  const html=`<div class="reader-page"><header class="reader-header"><a href="/book/${esc(id)}">${icon('back')}返回绘本</a><div class="reader-title">${esc(book.title_zh)}<small>一页一页，读进故事里</small></div><div class="reader-toolset"><button class="icon-btn" data-reader="night" aria-label="切换夜间模式" aria-pressed="false">${icon('moon')}</button><button class="icon-btn" data-reader="settings" aria-label="阅读设置" aria-expanded="false">${icon('settings')}</button></div></header><div class="reader-settings" hidden><h3>舒适地读一个故事</h3><label class="setting-row">音量<input type="range" id="reader-volume" min="0" max="1" step="0.1" value="1" aria-label="朗读音量"></label><label class="setting-row setting-voice">朗读声音<select id="reader-voice" aria-label="朗读声音" aria-describedby="reader-voice-hint"><option value="">自动选择</option></select></label><p class="setting-hint" id="reader-voice-hint"></p><label class="setting-row">语速<select id="reader-rate" aria-label="朗读语速">${readingRates.map(r=>`<option value="${r}" ${r===rate?'selected':''}>${r} 倍${r===1?' · 标准节奏':''}</option>`).join('')}</select></label><label class="setting-row">定时停止<select id="reader-sleep" aria-label="定时停止"><option value="0">不定时</option><option value="5">5 分钟</option><option value="10">10 分钟</option><option value="15">15 分钟</option></select></label><label class="setting-row">显示故事文字<input id="reader-show-text" type="checkbox" checked></label></div><main class="reader-stage" id="main"><div class="reader-progress"><span id="page-number"></span><div class="progress-dots" aria-label="选择绘本页码"></div><button class="text-link" data-reader="fullscreen" aria-label="全屏阅读">${icon('expand')}全屏</button></div><div class="reader-image-wrap"><img class="reader-image" width="1200" height="800" alt=""><div class="reader-image-error" role="status" hidden><p>这一页的插画暂时加载失败，可以重试，或继续读文字。</p><button class="btn btn-white" data-reader="image-retry">${icon('restart')}重试插画</button></div><button class="page-arrow prev" data-reader="prev" aria-label="上一页">${icon('left')}</button><button class="page-arrow next" data-reader="next" aria-label="下一页">${icon('chevron')}</button></div><p class="reader-text" aria-live="polite"></p><div class="reader-controls"><div class="language-switch" aria-label="故事语言">${book.languages.map(l=>`<button data-lang="${l}" aria-pressed="${l==='zh'}" class="${l==='zh'?'active':''}">${l==='zh'?'中文':'English'}</button>`).join('')}</div><div class="transport"><button class="icon-btn" data-reader="prev" aria-label="上一页">${icon('left')}</button><button class="play-button" data-reader="play" aria-label="播放当前页">${icon('play')}</button><button class="icon-btn" data-reader="next" aria-label="下一页">${icon('chevron')}</button></div><label class="auto-control"><input id="reader-auto" type="checkbox" checked>自动翻页</label></div><p class="reader-audio-status" role="status"></p><div class="reader-bottom"><button data-reader="restart">${icon('restart')} 从头阅读</button><button data-reader="text">${icon('text')} <span id="text-label">隐藏文字</span></button><span>左右滑动或按方向键翻页</span></div><button class="btn finish-reading" data-reader="finish" hidden>${icon('check')}我们读完啦</button><section class="reader-finished" hidden aria-live="polite"><h2>又读完了一个小小的世界 ✨</h2><p>和孩子聊聊，今天最喜欢故事里的哪一页？</p><button class="btn btn-white" data-reader="restart">${icon('restart')}再读一遍</button><a class="btn" href="/books">寻找下一个故事${icon('arrow')}</a></section></main></div>`;
@@ -176,11 +186,16 @@ async function reader(id, token) {
   setPlaying(true);status('设备朗读（非预生成配音） · '+voice.name);window.speechSynthesis.speak(utterance);
  }
  function pause(){if(currentAudio())audio.pause();else if(speechAvailable)window.speechSynthesis.pause();setPlaying(false);status('已暂停，点击播放继续。');}
+ function updateDialogue(){
+  const p=pages[page];dialogueView?.render({config:p.dialogue,text:lang==='zh'?p.text_zh:p.text_original,language:lang,visible:showText,enabled:dialogueEnabled});
+  $$('[data-layout]').forEach(b=>b.setAttribute('aria-pressed',String((b.dataset.layout==='dialogue')===dialogueEnabled)));
+ }
  function update(){
   const p=pages[page];$('.reader-image-wrap').classList.remove('image-failed');const img=$('.reader-image');$('.reader-image-error').hidden=true;img.src=assetURL(p.image,res.content_version||book.content_version);img.alt=p.image_alt;
   $('[data-reader=finish]').hidden=page!==pages.length-1||finished;
   $('#page-number').textContent=`第 ${page+1} 页 / 共 ${pages.length} 页`;$('.progress-dots').innerHTML=pages.map((_,i)=>`<button class="progress-dot ${i===page?'active':''}" data-page="${i}" aria-label="前往第 ${i+1} 页" ${i===page?'aria-current="step"':''}></button>`).join('');
   const text=$('.reader-text');text.textContent=lang==='zh'?p.text_zh:p.text_original;text.classList.toggle('english',lang==='en');text.hidden=!showText;
+  updateDialogue();
   $$('[data-reader=prev]').forEach(b=>b.disabled=page===0);$$('[data-reader=next]').forEach(b=>b.disabled=page===pages.length-1);
   $$('.language-switch button').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-pressed',String(b.dataset.lang===lang));});
   $('.reader-finished').hidden=!finished;refreshVoices();status(currentAudio()?'点击播放，听听这一页的故事':'此故事暂未配音 · 可尝试设备朗读');
@@ -188,8 +203,8 @@ async function reader(id, token) {
  }
  function rememberSettings(){Object.assign(preferences,{language:lang,auto,showText,rate,volume,night:$('.reader-page').classList.contains('reader-night')});persist();}
  function changePage(n){if(n<0||n>=pages.length)return;stop();page=n;finished=false;save();update();}
- function toggleText(){showText=!showText;$('.reader-text').hidden=!showText;$('#text-label').textContent=showText?'隐藏文字':'显示文字';$('#reader-show-text').checked=showText;rememberSettings();}
- function click(e){const langEl=e.target.closest('[data-lang]');if(langEl){stop();audio.removeAttribute('src');audio.load();lang=langEl.dataset.lang;rememberSettings();update();return;}const dot=e.target.closest('[data-page]');if(dot){changePage(Number(dot.dataset.page));return;}const action=e.target.closest('[data-reader]')?.dataset.reader;if(!action)return;
+ function toggleText(){showText=!showText;$('.reader-text').hidden=!showText;updateDialogue();$('#text-label').textContent=showText?'隐藏文字':'显示文字';$('#reader-show-text').checked=showText;rememberSettings();}
+ function click(e){const layoutEl=e.target.closest('[data-layout]');if(layoutEl&&dialogueView){dialogueEnabled=layoutEl.dataset.layout==='dialogue';preferences.readingLayout=dialogueEnabled?'dialogue':'standard';persist();updateDialogue();return;}const langEl=e.target.closest('[data-lang]');if(langEl){stop();audio.removeAttribute('src');audio.load();lang=langEl.dataset.lang;rememberSettings();update();return;}const dot=e.target.closest('[data-page]');if(dot){changePage(Number(dot.dataset.page));return;}const action=e.target.closest('[data-reader]')?.dataset.reader;if(!action)return;
   if(action==='finish'&&page===pages.length-1)complete();
   if(action==='image-retry'){const img=$('.reader-image');$('.reader-image-error').hidden=true;$('.reader-image-wrap').classList.remove('image-failed');img.removeAttribute('src');img.src=assetURL(pages[page].image,res.content_version||book.content_version);}
   if(action==='prev')changePage(page-1);if(action==='next')changePage(page+1);if(action==='play')playing?pause():play();if(action==='retry'){stop();audio.removeAttribute('src');audio.load();play();}if(action==='restart')changePage(0);if(action==='text')toggleText();
@@ -199,9 +214,14 @@ async function reader(id, token) {
  }
  function key(e){if(e.key==='Escape'){$('.reader-settings').hidden=true;$('[data-reader=settings]').setAttribute('aria-expanded','false');}if(['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName))return;if(e.key==='ArrowRight'){e.preventDefault();changePage(page+1);}if(e.key==='ArrowLeft'){e.preventDefault();changePage(page-1);}if(e.code==='Space'){e.preventDefault();playing?pause():play();}}
  function initialize(){
+  if(dialogueLayout){
+   const stage=$('.reader-stage'),switcher=document.createElement('div');switcher.className='reader-layout-switch';
+   switcher.innerHTML='<span>阅读排版</span><div role="group" aria-label="阅读排版"><button data-layout="dialogue" aria-pressed="true">角色对白</button><button data-layout="standard" aria-pressed="false">图下文字</button></div>';
+   stage.prepend(switcher);dialogueView=dialogueModule.mountDialogue(stage);
+  }
   document.addEventListener('click',click);document.addEventListener('keydown',key);
-  const img=$('.reader-image');img.addEventListener('error',()=>{if(disposed)return;$('.reader-image-wrap').classList.add('image-failed');$('.reader-image-error').hidden=false;});
-  img.addEventListener('load',()=>{if(disposed)return;$('.reader-image-wrap').classList.remove('image-failed');$('.reader-image-error').hidden=true;});
+  const img=$('.reader-image');img.addEventListener('error',()=>{if(disposed)return;$('.reader-image-wrap').classList.add('image-failed');$('.reader-image-error').hidden=false;updateDialogue();});
+  img.addEventListener('load',()=>{if(disposed)return;$('.reader-image-wrap').classList.remove('image-failed');$('.reader-image-error').hidden=true;updateDialogue();});
   $('.reader-page').classList.toggle('reader-night',preferences.night);$('[data-reader=night]').setAttribute('aria-pressed',String(preferences.night));
   $('#reader-auto').checked=auto;$('#reader-show-text').checked=showText;$('#reader-volume').value=String(volume);$('#reader-rate').value=String(rate);$('#text-label').textContent=showText?'隐藏文字':'显示文字';
   $('#reader-auto').onchange=e=>{auto=e.target.checked;rememberSettings();};
@@ -214,7 +234,7 @@ async function reader(id, token) {
   let touchStart=null;const wrap=$('.reader-image-wrap');wrap.addEventListener('touchstart',e=>{touchStart={x:e.changedTouches[0].clientX,y:e.changedTouches[0].clientY};},{passive:true});wrap.addEventListener('touchend',e=>{if(!touchStart)return;const dx=e.changedTouches[0].clientX-touchStart.x,dy=e.changedTouches[0].clientY-touchStart.y;if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.3)changePage(page+(dx<0?1:-1));touchStart=null;},{passive:true});
   update();save();if(new URLSearchParams(location.search).get('start')!=='1'&&remembered&&!remembered.completed&&remembered.page>0)toast(`已回到上次读到的第 ${page+1} 页`);
  }
- return {html,initialize,dispose:()=>{disposed=true;stop();clearTimeout(sleepTimer);if(speechAvailable)window.speechSynthesis.removeEventListener('voiceschanged',refreshVoices);document.removeEventListener('click',click);document.removeEventListener('keydown',key);audio.removeAttribute('src');audio.load();if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});}};
+ return {html,initialize,dispose:()=>{disposed=true;dialogueView?.dispose();stop();clearTimeout(sleepTimer);if(speechAvailable)window.speechSynthesis.removeEventListener('voiceschanged',refreshVoices);document.removeEventListener('click',click);document.removeEventListener('keydown',key);audio.removeAttribute('src');audio.load();if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});}};
 }
 
 function navigate(href,replace=false) { if(replace)history.replaceState(null,'',href);else history.pushState(null,'',href);render(); }

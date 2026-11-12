@@ -30,7 +30,24 @@
 
 ## 页数据
 
-每页记录 `page_number`（从 1 开始连续递增）、`image`、`image_alt`、`text_zh`、`text_original`，可选 `audio_zh`、`audio_original`。所有资源必须存在且非空。图像不得把正文压在关键插画上；当前阅读器在图像下显示文本。
+每页记录 `page_number`（从 1 开始连续递增）、`image`、`image_alt`、`text_zh`、`text_original`，可选 `audio_zh`、`audio_original`、`dialogue`。所有引用资源必须存在且非空。普通正文显示在图下；对白可使用独立气泡文字层，不更改原图片或配音，不把旁白改写成角色说话。
+
+### 可选对白字段
+
+对白与正文统一编辑在本书 JSON 的对应页，实际例子见 `bd-best-friends.json` 第 2 页。导入器将其写进 MySQL `book_pages.dialogue_layout`；运行时 API 返回 `pages[].dialogue`，不另取静态排版配置。不填写或设为 `null` 就是普通正文；从资料中删除后重新导入，会把库中旧布局清空为 SQL NULL。
+
+| 字段 | 约定 |
+| --- | --- |
+| `aspect_ratio` | 原图宽高比，如 SVG `[3,2]`、原画跨页 `[2,1]` |
+| `length.zh/en` | 对应正文的 JavaScript UTF-16 长度 |
+| `text_sha256.zh/en` | 对应完整正文 UTF-8 字节的 SHA-256 小写十六进制值 |
+| `parts` | 1–8 个按原文顺序排列的气泡 |
+| `parts[].start/end.zh/en` | 对应语言原文的 UTF-16 范围，左闭右开，不复制台词；不可重叠或切开代理对 |
+| `parts[].speaker.zh/en` | 有原文或画面依据的角色名；无法确定说话者则保留普通文字 |
+| `parts[].x/y/width` | 画面百分比坐标及气泡宽度；不能越界 |
+| `parts[].target` | 角色指向点 `[x,y]`，百分比；角色在画外时为 `null` |
+
+气泡之间及前后的原文仍作为旁白显示，全文保留给辅助阅读与原音频。桌面位置需结合实际画面校对；手机、长句或拥挤布局会显示为图上方卡片。修改正文后更新范围、长度和哈希，否则导入失败。修改插画后也要重新核对位置；这不能靠哈希自动判断。单纯调整气泡位置不更改图片、音频、物料版本或压缩包。
 
 正式 10 本新书的逐页分镜在 `config/illustrations.json`，使用 `python3 scripts/illustrate_books.py` 离线绘制，每页采用对应情节的独立 SVG；不能只换文件名或图片描述来伪装不同页面。生成器核对页数、页码与中文正文后才写文件，更新 `image_alt` 和包含画面摘要的 `content_version`，保留所有音频与运营字段。变更正文时需同步调整分镜及绘制逻辑。新书校对图、来源与分龄说明见 [materials.md](materials.md)。旧演示书和试听已清理，不再保留旧清理步骤。
 

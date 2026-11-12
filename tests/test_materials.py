@@ -17,6 +17,7 @@ class MaterialTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.sources = json.loads((ROOT/'content/sources/bookdash/sources.json').read_text())
+        cls.original_sources = json.loads((ROOT/'content/sources/bookdash-originals/sources.json').read_text())
         cls.books = {p.stem: json.loads(p.read_text()) for p in (ROOT/'content/books').glob('*.json')}
         cls.boards = json.loads((ROOT/'config/illustrations.json').read_text())
 
@@ -42,11 +43,12 @@ class MaterialTests(unittest.TestCase):
 
     def test_replacement_contains_only_new_books_and_legacy_files_are_absent(self):
         published = [b for b in self.books.values() if b['publish_status'] == 'published']
-        self.assertEqual({b['id'] for b in published}, set(self.sources))
-        self.assertEqual(len(published), 10)
-        self.assertEqual(sum(b['page_count'] for b in published), 121)
+        expected = set(self.sources) | set(self.original_sources)
+        self.assertEqual({b['id'] for b in published}, expected)
+        self.assertEqual(len(published), 14)
+        self.assertEqual(sum(b['page_count'] for b in published), 169)
         self.assertEqual({age for b in published for age in b['age_ranges']}, {'0-2', '3-4', '5-6'})
-        self.assertEqual(set(self.books), set(self.sources))
+        self.assertEqual(set(self.books), expected)
         for p in (ROOT/'tests/fixtures/books').glob('*.json'):
             legacy_id = json.loads(p.read_text())['id']
             self.assertFalse((ROOT/'content/books'/f'{legacy_id}.json').exists())
@@ -54,11 +56,29 @@ class MaterialTests(unittest.TestCase):
         self.assertFalse(list((ROOT/'web/assets/audio-previews').glob('*.mp3')))
 
     def test_new_stories_never_reference_old_story_audio(self):
-        for bid in self.sources:
+        for bid in self.books:
             for page in self.books[bid]['pages']:
                 for key in ('audio_zh', 'audio_original'):
                     if page.get(key):
                         self.assertTrue(page[key].startswith('/assets/books/'+bid+'/audio/'))
+
+    def test_original_editions_preserve_reviewed_text_page_order_and_credits(self):
+        for bid, evidence in self.original_sources.items():
+            with self.subTest(book=bid):
+                source = json.loads((ROOT/'content/sources/bookdash-originals'/(bid.removeprefix('bd-')+'.json')).read_text())
+                book = self.books[bid]
+                self.assertEqual(book['page_count'], 12)
+                self.assertEqual([p['page_number'] for p in source['pages']], list(range(1, 13)))
+                for key in ('text_zh', 'text_original', 'image_alt'):
+                    self.assertEqual([p[key] for p in book['pages']], [p[key] for p in source['pages']])
+                self.assertEqual(book['illustrator'], source['illustrator'])
+                for key in ('writer', 'illustrator', 'designer', 'editor'):
+                    self.assertIn(source[key], book['license']['attribution'])
+                self.assertEqual(book['license']['source_url'], evidence['source_url'])
+                self.assertEqual(book['license']['license_url'], evidence['license_url'])
+                self.assertEqual([p['page_number'] for p in evidence['images']], list(range(13)))
+                self.assertEqual(len({p['sha256'] for p in evidence['images']}), 13)
+                self.assertTrue(set(source['narration_additions']).issubset(range(1, 13)))
 
     def objects(self, bid, number):
         root = ET.fromstring(art.page_svg(self.books[bid], number, self.boards[bid]))

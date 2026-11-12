@@ -1,0 +1,310 @@
+{
+  "id": "bd-fifi-and-teddy",
+  "title_zh": "菲菲和泰迪熊",
+  "title_original": "Fifi and Teddy",
+  "author": "Tshepo Letsapa",
+  "illustrator": "Alison de Villiers",
+  "description_zh": "菲菲最喜欢的泰迪熊不见了！她找床上、找窗外，最后发现泰迪只是洗了个澡。温暖水彩讲述依恋、担心和重逢。",
+  "age_ranges": [
+    "3-4"
+  ],
+  "categories": [
+    "habits",
+    "emotions"
+  ],
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "cover": "/assets/books/bd-fifi-and-teddy/cover.jpg",
+  "page_count": 12,
+  "reading_minutes": 4,
+  "featured_order": 14,
+  "published_at": "2026-11-10T15:00:00+08:00",
+  "publish_status": "published",
+  "content_version": "bookdash-original-v1-d9ae0782cdd5",
+  "is_demo": false,
+  "license": {
+    "type": "CC BY 4.0 · 原画整理与双语翻译版",
+    "source_url": "https://bookdash.org/books/fifi-and-teddy/",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "原作《Fifi and Teddy》由 Book Dash 发布；作者 Tshepo Letsapa，原插画 Alison de Villiers，设计 Fathima Kathrada，编辑 Zanri Kritzinger。采用 CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆 AI 辅助中文翻译，使用原作插画并清理原图英文排版，双语正文置于图外；图片经过版式整理，非原版整页排版。不表示原作者或 Book Dash 为本产品背书。原作无字跨页补充了中英文朗读串词，页码：6,7,12。",
+    "review_status": "pending",
+    "commercial_use": true,
+    "self_hosting": true,
+    "translation_allowed": true,
+    "audio_derivative_allowed": true
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Fifi has loved Teddy since she was a baby.",
+      "text_zh": "从还是小宝宝的时候起，菲菲就喜欢泰迪熊了。",
+      "image_alt": "穿红裙子的菲菲和棕色泰迪熊分别出现在白色画面上。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-001.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-001.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-001.mp3"
+    },
+    {
+      "page_number": 2,
+      "text_original": "Fifi eats with Teddy. Fifi plays with Teddy.",
+      "text_zh": "菲菲和泰迪一起吃饭，也和泰迪一起玩。",
+      "image_alt": "菲菲抱着泰迪熊坐在餐桌前，又带着它一起荡秋千。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-002.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-002.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-002.mp3"
+    },
+    {
+      "page_number": 3,
+      "text_original": "Fifi takes Teddy wherever she goes. And they curl up together every night.",
+      "text_zh": "不管去哪儿，菲菲都带着泰迪。每天晚上，他们还依偎着一起睡。",
+      "image_alt": "菲菲坐车时抱着泰迪熊，晚上又在床上抱着它睡觉。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-003.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-003.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-003.mp3"
+    },
+    {
+      "page_number": 4,
+      "text_original": "Fifi knows she cannot take Teddy to school. So every morning she leaves Teddy on her bed.",
+      "text_zh": "菲菲知道，上学不能带泰迪。所以每天早上，她都把泰迪留在床上。",
+      "image_alt": "泰迪熊独自坐在菲菲的床上，身后是画着红心的枕头。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-004.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-004.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-004.mp3"
+    },
+    {
+      "page_number": 5,
+      "text_original": "One day, when she comes back from school, Teddy is not there!",
+      "text_zh": "有一天，菲菲放学回家，发现泰迪不见了！",
+      "image_alt": "菲菲从床边探下头，寻找不见了的泰迪熊。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-005.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-005.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-005.mp3"
+    },
+    {
+      "page_number": 6,
+      "text_original": "Fifi looks under the covers. Where is Teddy?",
+      "text_zh": "菲菲掀开被子找。泰迪在哪儿呢？",
+      "image_alt": "菲菲站在床边掀开蓝色被子，心里想着泰迪熊。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-006.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-006.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-006.mp3"
+    },
+    {
+      "page_number": 7,
+      "text_original": "Fifi looks outside. Where is Teddy?",
+      "text_zh": "菲菲又往窗外找。泰迪在哪儿呢？",
+      "image_alt": "菲菲趴在打开的窗户边向外寻找，心里仍想着泰迪熊。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-007.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-007.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-007.mp3"
+    },
+    {
+      "page_number": 8,
+      "text_original": "“What’s wrong, Fifi?” asks Mom.",
+      "text_zh": "“怎么啦，菲菲？”妈妈问。",
+      "image_alt": "菲菲走到正在洗衣服的妈妈身边，妈妈低头看着她。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-008.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-008.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-008.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 13,
+          "en": 31
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 13,
+              "en": 31
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mom"
+            },
+            "x": 3,
+            "y": 5,
+            "width": 51,
+            "target": [
+              76,
+              22
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "24c72d7c5935fb8b3dcf86fffa29a2c428437ff3f7368fc3831ca2bb54644f53",
+          "en": "09b7ea077cc98807e0b72732fcaada2f36bb499abbbaf22b59115ccec69c5899"
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text_original": "“Teddy is missing!”",
+      "text_zh": "“泰迪不见了！”",
+      "image_alt": "菲菲难过得哭起来，旁边有一大块蓝色的情绪色块。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-009.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-009.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-009.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 8,
+          "en": 19
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 8,
+              "en": 19
+            },
+            "speaker": {
+              "zh": "菲菲",
+              "en": "Fifi"
+            },
+            "x": 47,
+            "y": 35,
+            "width": 47,
+            "target": [
+              26,
+              40
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "d9b6b25e2abed029363cdaed2379e53732eb3b2f00e6fd30da0fabcf8d7c0c1e",
+          "en": "0cfc4d5ed5c925f6919092cb955eda6c02329b59834b9da93f829237e000e8ff"
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text_original": "“No, darling. Teddy just had a bath!”",
+      "text_zh": "“别担心，宝贝。泰迪只是洗了个澡呀！”",
+      "image_alt": "妈妈指向晾衣绳，洗过的泰迪熊正挂在那里。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-010.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-010.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-010.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 19,
+          "en": 37
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 19,
+              "en": 37
+            },
+            "speaker": {
+              "zh": "妈妈",
+              "en": "Mom"
+            },
+            "x": 49,
+            "y": 5,
+            "width": 47,
+            "target": [
+              16,
+              40
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "698856a702d5f45f80dd91511c6bf8291a563cc3cc74d41f36a4441f92e9301c",
+          "en": "268666b6d9ba88137edde3c7173efbb5dbd3f866b93cd9b4da047aff0f4d3208"
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text_original": "“There you are, Teddy!”",
+      "text_zh": "“原来你在这里呀，泰迪！”",
+      "image_alt": "菲菲高兴地举起双手，看着重新找到的泰迪熊。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-011.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-011.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-011.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          2,
+          1
+        ],
+        "length": {
+          "zh": 13,
+          "en": 23
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 13,
+              "en": 23
+            },
+            "speaker": {
+              "zh": "菲菲",
+              "en": "Fifi"
+            },
+            "x": 40,
+            "y": 8,
+            "width": 56,
+            "target": [
+              23,
+              30
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "aa002c7170152df0ae92ad989f101bf12171fbf649bd78113e95adb1e456135f",
+          "en": "8ae5b475a183a74521ddeee79b236d8b376f78a2b1b9ec34e29627f04c16fb76"
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text_original": "Fifi gives Teddy a big hug.",
+      "text_zh": "菲菲紧紧地抱住了泰迪。",
+      "image_alt": "菲菲闭着眼睛拥抱泰迪熊，旁边有两颗温暖的爱心。",
+      "image": "/assets/books/bd-fifi-and-teddy/page-012.jpg",
+      "audio_zh": "/assets/books/bd-fifi-and-teddy/audio/zh/0df0da74f419752e/page-012.mp3",
+      "audio_original": "/assets/books/bd-fifi-and-teddy/audio/en/3561a90fb9684671/page-012.mp3"
+    }
+  ],
+  "voices": {
+    "zh": {
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-XiaoxiaoNeural",
+      "generated_at": "2026-11-10T07:31:38.645330+00:00",
+      "review_status": "pending"
+    },
+    "en": {
+      "provider": "edge-tts",
+      "voice_id": "en-US-JennyNeural",
+      "generated_at": "2026-11-10T07:35:54.042556+00:00",
+      "review_status": "pending"
+    }
+  }
+}

@@ -44,7 +44,65 @@
       "text_zh": "一天，陆龟走在草原上。他找了又找，望望远处，又眯起眼睛看草丛。“你在找什么吗？”蜗牛问。“是呀，我在找我的家。你看见了吗？”",
       "text_original": "One day Tortoise was walking through the veld. He was searching and searching. He gazed into the distance and squinted at the grass. “Are you looking for something?” Snail asked. “Yes, I’m looking for my house. Have you seen it?”",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-001.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-001.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-001.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 62,
+          "en": 229
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 31,
+              "en": 133
+            },
+            "end": {
+              "zh": 44,
+              "en": 179
+            },
+            "speaker": {
+              "zh": "蜗牛",
+              "en": "Snail"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 43,
+            "target": [
+              27,
+              86
+            ]
+          },
+          {
+            "start": {
+              "zh": 44,
+              "en": 179
+            },
+            "end": {
+              "zh": 62,
+              "en": 229
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 51,
+            "y": 3,
+            "width": 46,
+            "target": [
+              76,
+              79
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "e7d57104724ec5742e89f73bb530b355185befe835a54c404456f605ddcce5d2",
+          "en": "9c34df0f7426f18a4dcb87e8f936c1531fc73ebd1162a07854400ace333a43d2"
+        }
+      }
     },
     {
       "page_number": 2,
@@ -53,7 +111,44 @@
       "text_zh": "“没有，不过我来帮你找！”蜗牛爬上陆龟的壳。陆龟背着她继续走。他们找呀找，可哪里都没有房子的影子。",
       "text_original": "“No, I haven’t, but I’ll help you look!” She climbed onto Tortoise’s shell. Tortoise walked on with Snail on his back. They looked and looked, but there was no sign of a house.",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-002.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-002.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-002.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 49,
+          "en": 176
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 13,
+              "en": 40
+            },
+            "speaker": {
+              "zh": "蜗牛",
+              "en": "Snail"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 70,
+            "target": [
+              42,
+              55
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "1ad67cd58651a020b0c5bb2ee5449aa23907b5ed1f40ca22cf93fe4e69db6ac5",
+          "en": "77fdb0d7ee8c24dd5bb7202f707c5a4d5931b2821b85f77f728269f798556231"
+        }
+      }
     },
     {
       "page_number": 3,
@@ -62,7 +157,86 @@
       "text_zh": "“你们在找什么吗？”麻雀问。“是呀，我们在找陆龟的家。你看见了吗？”“没有，不过我来帮你们找！”",
       "text_original": "“Are you looking for something?” asked Sparrow. “Yes, we're looking for Tortoise's house. Have you seen it?” “No, I haven’t, but I’ll help you look!”",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-003.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-003.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-003.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 48,
+          "en": 149
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 14,
+              "en": 48
+            },
+            "speaker": {
+              "zh": "麻雀",
+              "en": "Sparrow"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 29,
+            "target": [
+              76,
+              28
+            ]
+          },
+          {
+            "start": {
+              "zh": 14,
+              "en": 48
+            },
+            "end": {
+              "zh": 34,
+              "en": 109
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 35,
+            "y": 3,
+            "width": 33,
+            "target": [
+              76,
+              80
+            ]
+          },
+          {
+            "start": {
+              "zh": 34,
+              "en": 109
+            },
+            "end": {
+              "zh": 48,
+              "en": 149
+            },
+            "speaker": {
+              "zh": "麻雀",
+              "en": "Sparrow"
+            },
+            "x": 71,
+            "y": 3,
+            "width": 27,
+            "target": [
+              76,
+              28
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "8aa1adfb846dd1082502ffe37e396e64d9acfdc8e164f286d163489182b8cc5c",
+          "en": "1218220521710153d62d6dfd1eebda5fa9a7343f9d721b6b0824e2dd528cb98d"
+        }
+      }
     },
     {
       "page_number": 4,
@@ -71,7 +245,65 @@
       "text_zh": "麻雀扑扇翅膀，嗖地飞了出去。“你太快啦！”陆龟喊。“好吧，那我也坐上来。”陆龟背着蜗牛和麻雀继续走。他们找呀找，可哪里都没有房子的影子。",
       "text_original": "Sparrow flapped his wings and he whizzed away. “You’re going too fast!” called Tortoise. “Alright, then I’ll hop on too.” Tortoise walked on with Snail and Sparrow perched on his shell. They looked and looked, but there was no sign of a house.",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-004.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-004.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-004.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 68,
+          "en": 243
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 14,
+              "en": 47
+            },
+            "end": {
+              "zh": 25,
+              "en": 89
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 44,
+            "target": [
+              76,
+              80
+            ]
+          },
+          {
+            "start": {
+              "zh": 25,
+              "en": 89
+            },
+            "end": {
+              "zh": 37,
+              "en": 121
+            },
+            "speaker": {
+              "zh": "麻雀",
+              "en": "Sparrow"
+            },
+            "x": 51,
+            "y": 3,
+            "width": 46,
+            "target": [
+              71,
+              42
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "b09fc1d5980956eab12841b4e46bb9addc44ea8bf3ccb7bc2a87f9e8095ce2d8",
+          "en": "796142dd0e4334fbd810dbc66ca9d0a8c19428291b3fa7759b94adf6c73811b9"
+        }
+      }
     },
     {
       "page_number": 5,
@@ -80,7 +312,65 @@
       "text_zh": "“你们在找什么吗？”瓢虫问。“是呀，我们在找陆龟的家。你看见了吗？”",
       "text_original": "“Are you looking for something?” asked Ladybird. “Yes, we’re looking for Tortoise’s house. Have you seen it?”",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-005.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-005.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-005.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 34,
+          "en": 109
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 14,
+              "en": 49
+            },
+            "speaker": {
+              "zh": "瓢虫",
+              "en": "Ladybird"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 43,
+            "target": [
+              42,
+              55
+            ]
+          },
+          {
+            "start": {
+              "zh": 14,
+              "en": 49
+            },
+            "end": {
+              "zh": 34,
+              "en": 109
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 51,
+            "y": 3,
+            "width": 46,
+            "target": [
+              76,
+              80
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "3c6113befb20c369909a4460b9e3099eca034ee86aff9b1560d874fb32469267",
+          "en": "669f794c21f714a916cbc843bde92b5f05e1080f690f88a576aa4b2f4fa5c4aa"
+        }
+      }
     },
     {
       "page_number": 6,
@@ -89,7 +379,44 @@
       "text_zh": "“没有，不过我来帮你们找！”瓢虫跳到陆龟壳上。陆龟背着蜗牛、麻雀和瓢虫继续走。他们找呀找，可哪里都没有房子的影子。微风吹了起来。",
       "text_original": "“No, I haven’t, but I’ll help you look!” Ladybird hopped onto Tortoise’s shell. Tortoise walked on with Snail and Sparrow and Ladybird sitting on his back. They looked and looked, but there was no sign of a house. A breeze started to blow.",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-006.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-006.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-006.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 64,
+          "en": 239
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 14,
+              "en": 40
+            },
+            "speaker": {
+              "zh": "瓢虫",
+              "en": "Ladybird"
+            },
+            "x": 4,
+            "y": 3,
+            "width": 70,
+            "target": [
+              42,
+              55
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "3ae6b7e14dd93b8d6597fca62a8e2c74a9b785f182e48d7c3a622300ae0942fe",
+          "en": "7651c478a80b101569c31f78d3c867b652668cc095a4d258b45b81f24240bbba"
+        }
+      }
     },
     {
       "page_number": 7,
@@ -98,7 +425,86 @@
       "text_zh": "“你们在找什么吗？”老鼠问。“是呀，老鼠，我在找我的家。你看见了吗？”“没有，不过我来帮你们找！”",
       "text_original": "“Are you looking for something?” asked Mouse. “Yes, Mouse, I’m looking for my house. Have you seen it?” “No, I haven’t, but I’ll help you look!”",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-007.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-007.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-007.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 49,
+          "en": 144
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 14,
+              "en": 46
+            },
+            "speaker": {
+              "zh": "老鼠",
+              "en": "Mouse"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 29,
+            "target": [
+              76,
+              77
+            ]
+          },
+          {
+            "start": {
+              "zh": 14,
+              "en": 46
+            },
+            "end": {
+              "zh": 35,
+              "en": 104
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 35,
+            "y": 3,
+            "width": 33,
+            "target": [
+              76,
+              80
+            ]
+          },
+          {
+            "start": {
+              "zh": 35,
+              "en": 104
+            },
+            "end": {
+              "zh": 49,
+              "en": 144
+            },
+            "speaker": {
+              "zh": "老鼠",
+              "en": "Mouse"
+            },
+            "x": 71,
+            "y": 3,
+            "width": 27,
+            "target": [
+              76,
+              77
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "30959f7c525c9458c2d964866999ece1bebe02e02a3864d3f874e636dbfb3714",
+          "en": "1987da73b881a9d56537df8f39b9f65d5a31256db5730ab32f63473316898b2c"
+        }
+      }
     },
     {
       "page_number": 8,
@@ -116,7 +522,65 @@
       "text_zh": "风越来越大，天空暗了下来。“唉，我的家到底在哪里？”陆龟叹气。远处的山里雷声轰隆，电光闪过。滴答，滴答，下雨了。“陆龟的家到底在哪里？”蜗牛、麻雀、瓢虫和老鼠一起问。",
       "text_original": "The wind got stronger and stronger. The sky turned dark. “Oh, where is my house?” Tortoise sighed. Thunder roared in the hills. Lightning flashed in the distance. Drip, drip came the rain. “Oh, where is Tortoise’s house?” asked Snail and Sparrow and Ladybird and Mouse.",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-009.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-009.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-009.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 83,
+          "en": 269
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 13,
+              "en": 57
+            },
+            "end": {
+              "zh": 31,
+              "en": 98
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 43,
+            "target": [
+              76,
+              79
+            ]
+          },
+          {
+            "start": {
+              "zh": 56,
+              "en": 189
+            },
+            "end": {
+              "zh": 83,
+              "en": 269
+            },
+            "speaker": {
+              "zh": "蜗牛、麻雀、瓢虫和老鼠",
+              "en": "Snail, Sparrow, Ladybird and Mouse"
+            },
+            "x": 51,
+            "y": 3,
+            "width": 46,
+            "target": [
+              48,
+              55
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "e179c18f74c6126f3f14eb51470c5be404a124b21d0b58cda4a1860d5b2a1c01",
+          "en": "7c3bcabbcc58b21a7c263f7cf0ab7061cc6812b40c9bb4191d950e3c030ef4b1"
+        }
+      }
     },
     {
       "page_number": 10,
@@ -134,7 +598,65 @@
       "text_zh": "“呀！”陆龟吓得叫了一声，缩进自己的壳里。里面温暖又舒适。“哦，原来我的家就在这里！”",
       "text_original": "“Eek!” squeaked Tortoise with a fright, and he shrank back into his shell. It was warm and cosy inside. “Oh, here is my house!”",
       "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-011.mp3",
-      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-011.mp3"
+      "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-011.mp3",
+      "dialogue": {
+        "aspect_ratio": [
+          3,
+          2
+        ],
+        "length": {
+          "zh": 43,
+          "en": 127
+        },
+        "parts": [
+          {
+            "start": {
+              "zh": 0,
+              "en": 0
+            },
+            "end": {
+              "zh": 4,
+              "en": 6
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 3,
+            "y": 3,
+            "width": 26,
+            "target": [
+              50,
+              70
+            ]
+          },
+          {
+            "start": {
+              "zh": 29,
+              "en": 104
+            },
+            "end": {
+              "zh": 43,
+              "en": 127
+            },
+            "speaker": {
+              "zh": "陆龟",
+              "en": "Tortoise"
+            },
+            "x": 39,
+            "y": 3,
+            "width": 58,
+            "target": [
+              50,
+              70
+            ]
+          }
+        ],
+        "text_sha256": {
+          "zh": "451f57eed65fb0ce6ae5218347eedd358475e980b4eb0e4009417eb1bfd8fd0a",
+          "en": "0902f802b40078e5d414ba0cbf09c1113194530a02e71032b346334b54ef5818"
+        }
+      }
     },
     {
       "page_number": 12,
