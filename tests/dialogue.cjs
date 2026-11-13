@@ -5,11 +5,11 @@ const path = require('node:path');
 const vm = require('node:vm');
 const {parseHTML} = require(process.env.PIC_DOM_MODULE || 'linkedom');
 const root = path.resolve(__dirname, '..');
-const {window, document} = parseHTML('<main><div class="reader-image-wrap"></div><p class="reader-text"></p></main>');
-let disconnected = false;
+const {window, document} = parseHTML('<main><div class="reader-scene"><div class="reader-image-wrap"></div><div class="reader-copy"><p class="reader-text"></p></div></div></main>');
+let disconnected = false, viewportWidth = 390, viewportHeight = 844, onResize, sample;
 const context = vm.createContext({
- document, window: {matchMedia: () => ({matches: true})},
- ResizeObserver: class { observe() {} disconnect() { disconnected = true; } },
+ document, window: {matchMedia: query => ({matches: query.includes('orientation') ? viewportWidth >= 568 && viewportHeight <= 500 : query.includes('min-width') ? viewportWidth >= 901 : viewportWidth <= 700})},
+ ResizeObserver: class { constructor(callback) { onResize = callback; } observe() {} disconnect() { disconnected = true; } },
  requestAnimationFrame: callback => {callback(); return 1;}, cancelAnimationFrame() {}
 });
 vm.runInContext(fs.readFileSync(path.join(root, 'web/assets/reader-dialogue.js'), 'utf8').replace('export function', 'function')+'\nglobalThis.mount = mountDialogue;', context);
@@ -24,6 +24,7 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
   view.render(params);
   assert.equal(picture.classList.contains('dialogue-canvas'), Boolean(page.dialogue));
   if (!page.dialogue) continue;
+  sample = params;
   const expectedNarration = []; let cursor = 0;
   const bubbles = [...stage.querySelectorAll('.dialogue-bubble')];
   page.dialogue.parts.forEach((part, i) => {
@@ -59,5 +60,15 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
  }
 }
 assert.ok(checked > 0);
+viewportWidth = 1440; view.render(sample);
+assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'));
+assert.equal(stage.querySelector('.reader-dialogue').parentElement, stage.querySelector('.reader-copy'), 'desktop cards share the text column without covering art');
+viewportWidth = 390; onResize();
+assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), false);
+assert.equal(stage.querySelector('.reader-dialogue').parentElement, picture, 'resizing restores mobile cards above the art');
+viewportWidth = 844; viewportHeight = 390; onResize();
+assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), 'short landscape screens keep art and dialogue visible side by side');
+viewportWidth = 1440; view.render({...sample, enabled: false});
+assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), false, 'standard layout keeps text below the art');
 view.dispose(); assert.equal(disconnected, true);
 console.log(`PASS: ${checked} bilingual dialogue pages preserve speech, intervening narration and accessible text; optional layout/invalid data/image failure fallbacks and observer disposal.`);

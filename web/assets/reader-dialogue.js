@@ -2,18 +2,25 @@
 export function mountDialogue(stage) {
  const picture=stage.querySelector('.reader-image-wrap');
  const transcript=stage.querySelector('.reader-text');
+ const scene=stage.querySelector('.reader-scene'),copy=stage.querySelector('.reader-copy');
  const overlay=document.createElement('div');
  overlay.className='reader-dialogue';overlay.setAttribute('aria-hidden','true');overlay.hidden=true;
  picture.append(overlay);
  const narration=document.createElement('div');
  narration.className='dialogue-narration';narration.setAttribute('aria-hidden','true');narration.hidden=true;
  transcript.before(narration);
- let state=null,frameRequest=0,disposed=false;
+ let state=null,frameRequest=0,disposed=false,enabled=false;
  const intersects=(a,b)=>a.left<b.right&&b.left<a.right&&a.top<b.bottom&&b.top<a.bottom;
  function reflow() {
-  if(disposed||overlay.hidden)return;
+  if(disposed)return;
+  const columns=Boolean(scene&&copy&&enabled&&(window.matchMedia('(min-width: 901px)').matches||window.matchMedia('(orientation: landscape) and (min-width: 568px) and (max-height: 500px)').matches));
+  scene?.classList.toggle('reader-dialogue-columns',columns);
+  const parent=columns?copy:picture;
+  if(overlay.parentElement!==parent)parent.prepend(overlay);
+  if(overlay.hidden)return;
   picture.classList.remove('dialogue-flow');
   const svg=overlay.querySelector('svg');svg.replaceChildren();
+  if(columns)return;
   if(window.matchMedia('(max-width: 700px)').matches)return;
   const frame=picture.getBoundingClientRect();if(!frame.width)return;
   const boxes=[...overlay.querySelectorAll('.dialogue-bubble')].map(b=>b.getBoundingClientRect());
@@ -48,14 +55,15 @@ export function mountDialogue(stage) {
    cursor=end;return valid;
   });
  }
- function render({config,text,language,visible,enabled}){
+ function render({config,text,language,visible,enabled:requested}){
+  enabled=requested;
   const ratio=config?.aspect_ratio;
   if(Array.isArray(ratio)&&ratio.length===2&&ratio.every(x=>Number.isFinite(x)&&x>0))picture.style.setProperty('--dialogue-ratio',ratio.join(' / '));
   const active=enabled&&!picture.classList.contains('image-failed')&&validParts(config,text,language);
   picture.classList.toggle('dialogue-canvas',Boolean(active));picture.classList.remove('dialogue-flow');
   transcript.classList.toggle('dialogue-transcript',Boolean(active));
   narration.hidden=true;narration.replaceChildren();overlay.hidden=!active||!visible;overlay.replaceChildren();
-  if(!active)return;
+  if(!active){reflow();return;}
   state=config;
   const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('dialogue-tails');overlay.append(svg);
   let cursor=0;
