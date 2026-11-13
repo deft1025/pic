@@ -1,0 +1,81 @@
+{
+  "key": "lets-be-friends",
+  "id": "bd-lets-be-friends",
+  "en": "Let’s be Friends",
+  "title": "交个朋友吧",
+  "writer": "Murray Hunter",
+  "illustrator": "Emma Bosman",
+  "designer": "Wilna Combrinck",
+  "editor": "Ester Levinrad",
+  "isbn": "978-1-77632-450-7",
+  "source_url": "https://bookdash.org/books/lets-be-friends/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "2026-11-13逐本核对官网作品署名、ISBN、完整英文预览及官方全部作品CC BY 4.0声明；下载PDF入口返回CloudFront 403，未声称核对PDF版权页。英文按原图页序人工核对，OCR只辅助；合并版式换行、规范引号与破折号。中文、画面描述及对白仅维护MySQL。第10页门边拟声字knock knock并入朗读，原文无标点处作朗读标点整理。",
+  "narration_additions": [
+    11
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "It’s time to make some friends!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Making friends can be hard. But let’s try!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Hello! Hi! Do you like to swim? So do I!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "LET’S BE FRIENDS!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Oh dear.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "Hello! Hi! Do you like seashells? So do I! LET’S BE FRIENDS!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "Oh my.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Hello! Hi! Are you a fish? So am I! LET’S BE FRIENDS!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Oh NO.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "NOBODY wants to be my friend. Knock, knock.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Some new friends are at the door!",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 12,
+      "text_original": "LET’S BE FRIENDS!",
+      "original_was_wordless": false
+    }
+  ]
+}

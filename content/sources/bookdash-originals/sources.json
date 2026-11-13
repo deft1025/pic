@@ -1126,5 +1126,577 @@
         "height": 768
       }
     ]
+  },
+  "bd-lets-be-friends": {
+    "source_url": "https://bookdash.org/books/lets-be-friends/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-13",
+    "source_dir": "docs/materials-review/original-sources-20261113",
+    "source_file": "lets-be-friends.json",
+    "source_sha256": "003029e116985928f1005c3f2bd7ff0c4c143c5175157633b32f36f17935ebce",
+    "image_processing": "采用官网完整高清英文预览；保留封面书名与署名，按逐页目视核对的文字区域清理英文排版，双语正文置于图外。未采用AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_cover-1536x1536.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-lets-be-friends/cover.jpg",
+        "sha256": "744e353bf8f1134c120c02ca54ea267c5a07aa6b7bb8455b5bb24a67f48f7874",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page4-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-lets-be-friends/page-001.jpg",
+        "sha256": "76a77d850b4acd7b0c64e579b05600bd58afd3b4fe013d13d718b838b4e045e6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page5-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-lets-be-friends/page-002.jpg",
+        "sha256": "7b88100b677d0078a243518f50e1af59347e776a6a442eb9a45cc5537be2658b",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page6-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-lets-be-friends/page-003.jpg",
+        "sha256": "9d33079f727adbc9004a80dbd4f708d15a6a379ba6ca5015c96d52be8ea2de12",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page7-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-lets-be-friends/page-004.jpg",
+        "sha256": "3d9194f20348a991393e8d2b74ad9037ebfa95e65b901ef24958e61397166286",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page8-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-lets-be-friends/page-005.jpg",
+        "sha256": "5e363a75a3c3ccf4386f9bf8d0e700bfa607c4f7e712ecf8282e1d22c6495256",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page9-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-lets-be-friends/page-006.jpg",
+        "sha256": "5db18526a7ba9cb9fe8443ccb6a6b823b55cd18f445a399f345a803d718f44bb",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page10-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-lets-be-friends/page-007.jpg",
+        "sha256": "865b6cf4cca0963972bae5623398d923934bcf74d878a135bec2f38d9d7fb544",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page11-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-lets-be-friends/page-008.jpg",
+        "sha256": "af5105421dee48b66cb5f1755b653beabd90b63a8e3db831b27a8d6b89baa045",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page12-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-lets-be-friends/page-009.jpg",
+        "sha256": "48eb75528f26b549819a2a50fa54a2c4e8b56fcc133a773cf01565e087114f88",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page13-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-lets-be-friends/page-010.jpg",
+        "sha256": "74c92f1916e7fc6569b4a0fad8ffd4e9a19341cdddcd6e064460aa2d6ff94b85",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page14-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-lets-be-friends/page-011.jpg",
+        "sha256": "a3a9e5f24ec5c2cfe0e2d38e5466ad19a752e7d028f0b354eb747edd787ee09d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page15-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2022/05/lets-be-friends_en_20220529_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-lets-be-friends/page-012.jpg",
+        "sha256": "ac568e7900291e62ec30c1aa5aa78564649d63a07f42d3fb6c5d0d298e88a575",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-grumpy-cloud": {
+    "source_url": "https://bookdash.org/books/grumpy-cloud/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-13",
+    "source_dir": "docs/materials-review/original-sources-20261113",
+    "source_file": "grumpy-cloud.json",
+    "source_sha256": "93903f6ed710017956e9618fe31e5df4a33d5dee4e4e3933abf9339177c1b9eb",
+    "image_processing": "采用官网完整高清英文预览；保留封面书名与署名，按逐页目视核对的文字区域清理英文排版，双语正文置于图外。未采用AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_cover-1536x1536.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-grumpy-cloud/cover.jpg",
+        "sha256": "5bbae78ad704371d5fe289af1a645e3a7662081f0095cb198705ac01bde8fb43",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page4-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-grumpy-cloud/page-001.jpg",
+        "sha256": "267a8d3d3d67bcfdb689863ca2ba180b669a42fe1506dfb4307ec2b43d569e47",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page5-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-grumpy-cloud/page-002.jpg",
+        "sha256": "7c9cc902f99c7a2c79dd0c86d276107e476a3698133200915b007f8b10684f6b",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page6-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-grumpy-cloud/page-003.jpg",
+        "sha256": "44f90e0ea72fa83aa692abb4da05c6a3276b206d8510030b5b73c34d522b4629",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page7-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-grumpy-cloud/page-004.jpg",
+        "sha256": "944df0cd6a2678ccdb98269e0cb3ab85a7e7e3fcfdfd88d214129da01b2fa98d",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page8-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-grumpy-cloud/page-005.jpg",
+        "sha256": "341792db56e5e7d27fcdc9199140a60f7be1f901d0280944efe9c835c0fc3574",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page9-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-grumpy-cloud/page-006.jpg",
+        "sha256": "1f24931cb50e66b8aa9e282f234b8c5f673c63822a71c08ebf77b62fb69ef7c6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page10-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-grumpy-cloud/page-007.jpg",
+        "sha256": "b9e5c5e6172df2e8898f8e0c58696372d404962de78eb9bced9b52249156c6d6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page11-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-grumpy-cloud/page-008.jpg",
+        "sha256": "07e58426f2e5296816dbb52b873f850106ce65c11812381749143dda74021011",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page12-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-grumpy-cloud/page-009.jpg",
+        "sha256": "de6a946662b99518edbf1b12b553172eb32fdcc8d43266ba66988eec04f272f5",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page13-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-grumpy-cloud/page-010.jpg",
+        "sha256": "0c52917a7dffd1cee9dc35724edce7c08c69a98aa4c048268deebebe57065f70",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page14-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-grumpy-cloud/page-011.jpg",
+        "sha256": "e84691e4ca24a556536bb08aee638437aaf1c900729a3c18da6c0912267f31b8",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page15-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2024/09/grumpy-cloud_en_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-grumpy-cloud/page-012.jpg",
+        "sha256": "ac1c54d6e69f85d1776fc476b83087011e081c76e63fcf4dd1f87005da76d0be",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-the-best-nest": {
+    "source_url": "https://bookdash.org/books/the-best-nest/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-13",
+    "source_dir": "docs/materials-review/original-sources-20261113",
+    "source_file": "the-best-nest.json",
+    "source_sha256": "4bede9f249a9f7182739439c607317d96ccf5e2d261d60ad3720f9d77aa3dcfc",
+    "image_processing": "采用官网完整高清英文预览；保留封面书名与署名，按逐页目视核对的文字区域清理英文排版，双语正文置于图外。未采用AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_cover-1536x1536.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_cover-1536x1536.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-the-best-nest/cover.jpg",
+        "sha256": "7c90ad142cda21ada1c5cf65db223d83cb5e01b2014a4de0991b1eb7d7800151",
+        "width": 1536,
+        "height": 1536
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page4-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page4-1536x768.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-the-best-nest/page-001.jpg",
+        "sha256": "59e4729d6d7558b58ad2cef1291f1133ce0c574ecd936bf2dd688a31e2351f90",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page5-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page5-1536x768.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-the-best-nest/page-002.jpg",
+        "sha256": "7268e347c677f54004e5d158d61bf63cdc3428a9fd28b39b481da5c45a20be50",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page6-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page6-1536x768.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-the-best-nest/page-003.jpg",
+        "sha256": "46811ba042218fc7838b62f7d4ae34979c833102978fb980c4192106f9cb4041",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page7-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page7-1536x768.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-the-best-nest/page-004.jpg",
+        "sha256": "af6eefaa408d6f2b49b69bd468768134a883a6adfdbf916c476fba6bb130e458",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page8-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page8-1536x768.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-the-best-nest/page-005.jpg",
+        "sha256": "f6c1cddf2fd13feca7fda2bf32a9d386b6a2edb53f6bb2637aff9e779df890c5",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page9-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page9-1536x768.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-the-best-nest/page-006.jpg",
+        "sha256": "7d217dd2d389b8d177e5f0487a961b035a95326b0242fcee16a8291a9bcb036f",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page10-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page10-1536x768.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-the-best-nest/page-007.jpg",
+        "sha256": "ba5ff9dc9f45e84d08c4c025ab77206c1a985cf290bef3ba2b28843fcea06270",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page11-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page11-1536x768.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-the-best-nest/page-008.jpg",
+        "sha256": "664c8b0bb7553e8e07223d7b9e374259480737f837f206ffb2ba4f5f45e41672",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page12-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page12-1536x768.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-the-best-nest/page-009.jpg",
+        "sha256": "75e9dff44649bf94b6ebc5aab051ca35677598c84c27e08ed69d3accf086cec6",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page13-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page13-1536x768.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-the-best-nest/page-010.jpg",
+        "sha256": "2dea02d70ebea3f96c5dc0c9252fdf4ba3c53935286f5475ef31139b329a4f84",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page14-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page14-1536x768.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-the-best-nest/page-011.jpg",
+        "sha256": "83ae981d9f5da9fbf80bb20adf76c29fc7a7d74ba469f7b054ed96989ed559bb",
+        "width": 1536,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page15-1536x768.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/10/the-best-nest_en_20210929_page15-1536x768.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-the-best-nest/page-012.jpg",
+        "sha256": "2c2e1309e3bbb3e74ac929b948a793f23416314db235153dbcebb152b0ba3ed6",
+        "width": 1536,
+        "height": 768
+      }
+    ]
+  },
+  "bd-shongololos-shoes": {
+    "source_url": "https://bookdash.org/books/shongololos-shoes/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-13",
+    "source_dir": "docs/materials-review/original-sources-20261113",
+    "source_file": "shongololos-shoes.json",
+    "source_sha256": "feb4e34ec627f4c6ecb73c25b2524c0abb83f44cedff113d19f257caaef40c73",
+    "image_processing": "采用官网完整高清英文预览；保留封面书名与署名，按逐页目视核对的文字区域清理英文排版，双语正文置于图外。未采用AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_01.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-shongololos-shoes/cover.jpg",
+        "sha256": "807410f33d14bd0458d13a20e3527ce1c4bf79a830292326a2b845752af063d5",
+        "width": 788,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_05.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-shongololos-shoes/page-001.jpg",
+        "sha256": "699e49e25f00b4d31cc93038c3adbcb4a900bc7a79d344cf7c0779c99002a5a8",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_06.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-shongololos-shoes/page-002.jpg",
+        "sha256": "09ab21226a427f53d5f71cc2a85ab2c9c36e2a8c8553984c8b80fe87b304b9c1",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_07.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-shongololos-shoes/page-003.jpg",
+        "sha256": "ff91f8575b77eb06f185df389fe564fe2f90bfb9bfb4abf5b9ad932a6d6971ac",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_08.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-shongololos-shoes/page-004.jpg",
+        "sha256": "ce7b383f6ff7eddf64b16a8989fcfc07c211e37e5a1d70f7e9149e7a45d13df3",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_09.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-shongololos-shoes/page-005.jpg",
+        "sha256": "d7b9594d1045bf97c574024f5c61b034f71c9d85f070ae0d0fa3e0c08f538810",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_10.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-shongololos-shoes/page-006.jpg",
+        "sha256": "c6f5c8313a7a3cf550ca68e8d94f1f89e6a2561faeec216aba436dc056b5ccb3",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_11.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-shongololos-shoes/page-007.jpg",
+        "sha256": "0f0f8f525657fddab7381d91f13c9aded398cc910f3263359ee7e04745800888",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_12.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-shongololos-shoes/page-008.jpg",
+        "sha256": "4252242733cb75955d32765716b77fd7c9c60a673264d4be4b27b31f035173c3",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_13.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-shongololos-shoes/page-009.jpg",
+        "sha256": "44b6ec796d64aa6af0b98d625232d85a3f66b5047c297b6b327c6a34d2c19514",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_14.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-shongololos-shoes/page-010.jpg",
+        "sha256": "d76de923642e6f925128ba75f1263b1ebf38cbf22397af0c0dad223f27f16e34",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_15.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-shongololos-shoes/page-011.jpg",
+        "sha256": "050d04a8ab621becf843e5fbd1906231c0d9aea846d1f2e381883470fdea3681",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/03/shongololos-shoes_english_20160323_Page_16.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-shongololos-shoes/page-012.jpg",
+        "sha256": "2b4c94ead2fddc671da788e62e6714400f52f60047aba0173da0435295241e34",
+        "width": 1579,
+        "height": 791
+      }
+    ]
   }
 }

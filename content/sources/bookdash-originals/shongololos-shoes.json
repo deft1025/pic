@@ -1,0 +1,81 @@
+{
+  "key": "shongololos-shoes",
+  "id": "bd-shongololos-shoes",
+  "en": "Shongololo’s shoes",
+  "title": "千足虫找鞋子",
+  "writer": "Jacqui L’Ange",
+  "illustrator": "Megan Lötter",
+  "designer": "Marteli Kleyn",
+  "editor": "Judith Browne",
+  "isbn": "978-1-928318-45-3",
+  "source_url": "https://bookdash.org/books/shongololos-shoes/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "2026-11-13逐本核对官网作品署名、ISBN、完整英文预览及官方全部作品CC BY 4.0声明；下载PDF入口返回CloudFront 403，未声称核对PDF版权页。英文按原图页序人工核对，OCR只辅助；合并版式换行、规范引号与破折号。中文、画面描述及对白仅维护MySQL。",
+  "narration_additions": [
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Where are all my shoes? I know I left them here!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "I haven’t seen your shoes. Go ask Snail.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "No shoes here. Go ask Giraffe.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "I’m in a hurry – go ask Frog.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Shoes? How many? Go ask Flamingo.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "Seen your shoes? No, not me.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "Will I ever find my shoes?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Shoes, eh? You should ask the Monkeys.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Hello hello? We’re busy. Go ask Owl, she knows everything.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "Hmm. I have an idea. Why don’t you ask Lion?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "These are yours? I’ll give them all back if you come to my party!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "At the party, Shongololo wears his shoes again, and all the animals gather together.",
+      "original_was_wordless": true
+    }
+  ]
+}

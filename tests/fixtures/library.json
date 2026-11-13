@@ -3401,6 +3401,168 @@
       ]
     },
     {
+      "id": "bd-grumpy-cloud",
+      "title_zh": "坏心情云朵",
+      "title_original": "Grumpy Cloud",
+      "author": "Oarabetse Ditlhareng",
+      "illustrator": "Neil Badenhorst",
+      "description_zh": "法法的心情会变成看得见的模样。一天，一朵皱眉的坏心情云跟着他，怎么甩也甩不掉。妈妈陪着他，笑容慢慢回来了。用想象认识情绪：有不同的感受也没关系。",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-grumpy-cloud/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-13T03:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-0817d4f41c8d912ce1a3e48fb5b16a34af711125a15fd18153d81066bd0c082b",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/grumpy-cloud/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Grumpy Cloud》由Book Dash发布；作者Oarabetse Ditlhareng，原插画Neil Badenhorst，设计Mbali Magubane，编辑Tiffany Mac Sherry。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理图内英文排版，双语正文与角色对白置于图片外；不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-13T02:57:09.851Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-13T02:56:22.148Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-grumpy-cloud/page-001.jpg",
+          "image_alt": "绿色山坡上长满色彩鲜艳的花草，穿黄色上衣的法法从右下方探出身子。",
+          "text_zh": "在一个五彩缤纷、充满各种心情的地方，住着一个叫法法的男孩。",
+          "text_original": "In a colourful land filled with feelings, there lived a boy named Fafa.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-001.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-grumpy-cloud/page-002.jpg",
+          "image_alt": "法法站在绿草地上，身后飘着橙色风筝，天空中有明亮的太阳。",
+          "text_zh": "法法是个快乐的男孩，喜欢整天跑跑跳跳、到处玩耍。",
+          "text_original": "Fafa was a cheerful boy who loved to run and play all day.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-002.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-grumpy-cloud/page-003.jpg",
+          "image_alt": "法法身旁浮现出不同表情的小脸和手势，像心情变成了线条画。",
+          "text_zh": "他还有一种特别的本领：他的心情能变成看得见的模样。",
+          "text_original": "But he had a special gift: his feelings could come to life.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-003.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-grumpy-cloud/page-004.jpg",
+          "image_alt": "法法坐在枕头前，眉毛低垂；一朵皱眉的灰色云朵浮在他头顶。",
+          "text_zh": "一天，法法醒来，心里有些烦。一朵皱着眉头的坏心情云，跟着他转了一整天。",
+          "text_original": "One day, Fafa woke up feeling grumpy. Grumpy Cloud, with a frown on their face, followed Fafa around all day.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-004.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-grumpy-cloud/page-005.jpg",
+          "image_alt": "法法站在花草间，身旁有一只橙色小动物，头顶皱眉的灰云正下着雨。",
+          "text_zh": "每当法法想玩一会儿，坏心情云就让一切都变得闷闷不乐。",
+          "text_original": "Whenever Fafa tried to play, Grumpy Cloud would make everything sad.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-005.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-grumpy-cloud/page-006.jpg",
+          "image_alt": "法法皱着眉看向上方，大大的灰云占满画面上半部。",
+          "text_zh": "法法想尽办法，要把坏心情云甩掉……可怎么也不管用。",
+          "text_original": "Fafa tried his best to shake off Grumpy Cloud... but nothing worked.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-006.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-grumpy-cloud/page-007.jpg",
+          "image_alt": "法法在草地上张开双臂，抬起一条腿跳舞；大片灰云仍悬在头顶。",
+          "text_zh": "他试着跳起舞来，可坏心情云还是待在那里。",
+          "text_original": "He tried dancing, but Grumpy Cloud was STILL there.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-007.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-grumpy-cloud/page-008.jpg",
+          "image_alt": "穿粉色上衣、系绿色领巾的妈妈伸手挠灰云，法法低着眼睛站在旁边。",
+          "text_zh": "妈妈决定给坏心情云挠挠痒痒。还是不管用。",
+          "text_original": "Mama decided to tickle Grumpy Cloud. It DIDN’T work.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-008.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-grumpy-cloud/page-009.jpg",
+          "image_alt": "妈妈的手伸向一小团灰云，云朵的嘴角微微翘起。",
+          "text_zh": "妈妈又试了一次。坏心情云露出一点点笑容，可它还是没有走。",
+          "text_original": "Mama tried again and Grumpy Cloud smiled slightly, but Grumpy Cloud stayed.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-009.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-grumpy-cloud/page-010.jpg",
+          "image_alt": "妈妈站在法法身旁向云朵伸手，法法的嘴角上扬，灰云向上飘去。",
+          "text_zh": "妈妈最后又挠了一下。咯咯，一阵笑声响起来，坏心情云飘走了。",
+          "text_original": "Mama tickled Grumpy Cloud one last time. A giggle came out and Grumpy Cloud went away.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-010.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-grumpy-cloud/page-011.jpg",
+          "image_alt": "橙色圆形背景里，法法咧开嘴笑着，双眼弯弯。",
+          "text_zh": "法法开心地笑了，一个小小的笑容又出现在脸上。",
+          "text_original": "Fafa laughed with joy and a happy little smile appeared.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-011.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-grumpy-cloud/page-012.jpg",
+          "image_alt": "落日照着草木，法法牵着风筝线走在山坡上，脸上带着笑容。",
+          "text_zh": "法法明白了，有各种各样的心情都没关系，他也能慢慢找回自己的笑容。",
+          "text_original": "Fafa knew that it was okay to have different feelings, as long as he knew his way back to his smile.",
+          "audio_zh": "/assets/books/bd-grumpy-cloud/audio/zh/da10f858a6318669/page-012.mp3",
+          "audio_original": "/assets/books/bd-grumpy-cloud/audio/en/68a8bf2f92683900/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-hippo-wants-to-dance",
       "title_zh": "河马想跳舞",
       "title_original": "Hippo Wants to Dance",
@@ -3707,6 +3869,353 @@
           "text_original": "Now everyone is dancing together!",
           "audio_zh": "/assets/books/bd-hippo-wants-to-dance/audio/zh/84317b57d9a1ea2a/page-012.mp3",
           "audio_original": "/assets/books/bd-hippo-wants-to-dance/audio/en/30ba16a26eb1137f/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "bd-lets-be-friends",
+      "title_zh": "交个朋友吧",
+      "title_original": "Let’s be Friends",
+      "author": "Murray Hunter",
+      "illustrator": "Emma Bosman",
+      "description_zh": "小鲨鱼想交朋友，可它一露出大牙齿，大家就游走了。生日那天，门外传来了敲门声……海底原画和重复问候，适合一起聊聊初次见面的紧张与接纳。",
+      "age_ranges": [
+        "3-4"
+      ],
+      "categories": [
+        "animals",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-lets-be-friends/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-13T03:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-76859cd9c65e21c418f1ad92c7bf9de1ba7d7bb7fc6cca4bc94e7ac7bc6ccd66",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/lets-be-friends/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Let’s be Friends》由Book Dash发布；作者Murray Hunter，原插画Emma Bosman，设计Wilna Combrinck，编辑Ester Levinrad。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理图内英文排版，双语正文与角色对白置于图片外；不表示原作者或Book Dash为本产品背书。原作无字跨页的中英文串词由小小绘本馆补写，页码：11。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-13T02:54:23.155Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-13T02:53:53.215Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-lets-be-friends/page-001.jpg",
+          "image_alt": "蓝绿色的小鲨鱼站在家门口，墙上挂着画有生日蛋糕的日历。",
+          "text_zh": "该去交些朋友啦！",
+          "text_original": "It’s time to make some friends!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-001.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-lets-be-friends/page-002.jpg",
+          "image_alt": "小鲨鱼对着浴室镜子练习微笑，嘴里露出尖尖的牙齿。",
+          "text_zh": "交朋友有时不容易。不过，试试看吧！",
+          "text_original": "Making friends can be hard. But let’s try!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-002.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-lets-be-friends/page-003.jpg",
+          "image_alt": "小鲨鱼在海里游向一只橙色海豹，珊瑚旁有一群小鱼。",
+          "text_zh": "你好！嗨！你喜欢游泳吗？我也喜欢！",
+          "text_original": "Hello! Hi! Do you like to swim? So do I!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-003.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 40,
+              "zh": 17
+            },
+            "text_sha256": {
+              "en": "13e027a552ece6b54165cd1391bafcfe505b57484c62ce61f4c538de791f4f17",
+              "zh": "ca8b69964c9dca413f6445d90ea1e22f06e05bb87ab83854f0f0d858474fa9e0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 40,
+                  "zh": 17
+                },
+                "speaker": {
+                  "en": "Shark",
+                  "zh": "小鲨鱼"
+                },
+                "x": 55,
+                "y": 5,
+                "width": 41,
+                "target": [
+                  25,
+                  41
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-lets-be-friends/page-004.jpg",
+          "image_alt": "小鲨鱼张开双鳍，咧嘴露出尖牙；右下方的海豹睁大眼睛。",
+          "text_zh": "我们交个朋友吧！",
+          "text_original": "LET’S BE FRIENDS!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-004.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 17,
+              "zh": 8
+            },
+            "text_sha256": {
+              "en": "066da870a85cfb8f2c15e2dcec1d96066f7e6451f5d848b387d9d8369ead45b9",
+              "zh": "38d8012c8029ca8ad7adfb5ca72f429b5291695070e22248853a4c98c01b9607"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 17,
+                  "zh": 8
+                },
+                "speaker": {
+                  "en": "Shark",
+                  "zh": "小鲨鱼"
+                },
+                "x": 54,
+                "y": 8,
+                "width": 42,
+                "target": [
+                  29,
+                  41
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-lets-be-friends/page-005.jpg",
+          "image_alt": "海豹匆匆向右上方游走，小鲨鱼留在珊瑚旁，神情失落。",
+          "text_zh": "哎呀。",
+          "text_original": "Oh dear.",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-005.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-lets-be-friends/page-006.jpg",
+          "image_alt": "小鲨鱼露出牙齿向一只粉色章鱼打招呼，章鱼从画面右侧探过来。",
+          "text_zh": "你好！嗨！你喜欢贝壳吗？我也喜欢！我们交个朋友吧！",
+          "text_original": "Hello! Hi! Do you like seashells? So do I! LET’S BE FRIENDS!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-006.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 60,
+              "zh": 25
+            },
+            "text_sha256": {
+              "en": "285b9edadca1f8d21ec465f69c65a83ceb2b12b3a613d5d5658137ca66690129",
+              "zh": "5ed24f76832f84f13f6616cd4391be8b6250e7bfca51dcec0b71ba6c8575bc43"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 60,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "Shark",
+                  "zh": "小鲨鱼"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  19,
+                  61
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-lets-be-friends/page-007.jpg",
+          "image_alt": "粉色章鱼拖着水流游走，小鲨鱼看着它离开。",
+          "text_zh": "哎哟。",
+          "text_original": "Oh my.",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-007.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-lets-be-friends/page-008.jpg",
+          "image_alt": "小鲨鱼向戴面镜和脚蹼的潜水员打招呼，海底有海螺和珊瑚。",
+          "text_zh": "你好！嗨！你是一条鱼吗？我也是！我们交个朋友吧！",
+          "text_original": "Hello! Hi! Are you a fish? So am I! LET’S BE FRIENDS!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-008.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 53,
+              "zh": 24
+            },
+            "text_sha256": {
+              "en": "14b65b1ce9423bc2c4d9dad7eadf32621df23983ffb9990cc275e0bbd2c98b59",
+              "zh": "f5b6f5efe26f806fe9b5c0d562be41f2818cc57beef9315d9a341615b209d341"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 53,
+                  "zh": 24
+                },
+                "speaker": {
+                  "en": "Shark",
+                  "zh": "小鲨鱼"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  22,
+                  66
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-lets-be-friends/page-009.jpg",
+          "image_alt": "潜水员匆匆游向右上方，小鲨鱼垂着眼睛看着他。",
+          "text_zh": "哦，不。",
+          "text_original": "Oh NO.",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-009.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-lets-be-friends/page-010.jpg",
+          "image_alt": "戴生日帽的小鲨鱼独自坐在蛋糕前，身旁的红色门传来敲门声。",
+          "text_zh": "没有谁愿意和我做朋友。咚咚，有人敲门了。",
+          "text_original": "NOBODY wants to be my friend. Knock, knock.",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-010.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 43,
+              "zh": 20
+            },
+            "text_sha256": {
+              "en": "1db92032657404a89886696d3b173f1c8fb605e0431e9c857e097431ffca673c",
+              "zh": "25e2cf0cfa42f6eb6c9056b56f16e007073276ef0f33fb81e790a7f94f8a19e7"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 29,
+                  "zh": 11
+                },
+                "speaker": {
+                  "en": "Shark",
+                  "zh": "小鲨鱼"
+                },
+                "x": 3,
+                "y": 5,
+                "width": 43,
+                "target": [
+                  38,
+                  55
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-lets-be-friends/page-011.jpg",
+          "image_alt": "小鲨鱼拉开红色门，黄色条纹鱼、深蓝色琵琶鱼和粉色鱼笑着来到门口。",
+          "text_zh": "门口来了几位新朋友！",
+          "text_original": "Some new friends are at the door!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-011.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-lets-be-friends/page-012.jpg",
+          "image_alt": "小鲨鱼和三位露着不同牙齿的鱼朋友戴着生日帽，围着蛋糕开心相聚。",
+          "text_zh": "我们交个朋友吧！",
+          "text_original": "LET’S BE FRIENDS!",
+          "audio_zh": "/assets/books/bd-lets-be-friends/audio/zh/f692b68bfc6daada/page-012.mp3",
+          "audio_original": "/assets/books/bd-lets-be-friends/audio/en/a65aed0c0525d3cf/page-012.mp3"
         }
       ]
     },
@@ -4628,6 +5137,577 @@
       ]
     },
     {
+      "id": "bd-shongololos-shoes",
+      "title_zh": "千足虫找鞋子",
+      "title_original": "Shongololo’s shoes",
+      "author": "Jacqui L’Ange",
+      "illustrator": "Megan Lötter",
+      "description_zh": "千足虫的鞋子不见了。它问刺猬、蜗牛、长颈鹿，一路找到狮子家。鞋子原来藏在大家身边！鲜亮原画藏着寻找线索，结尾适合聊聊借东西前先问一声。",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "cognition",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-shongololos-shoes/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-13T03:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-e735fdf80b5b7cb0478aa514b53807500bd073c30d8e8b44045fc42d3190b07c",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/shongololos-shoes/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Shongololo’s shoes》由Book Dash发布；作者Jacqui L’Ange，原插画Megan Lötter，设计Marteli Kleyn，编辑Judith Browne。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理图内英文排版，双语正文与角色对白置于图片外；不表示原作者或Book Dash为本产品背书。原作无字跨页的中英文串词由小小绘本馆补写，页码：12。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-13T02:58:58.632Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-13T02:58:33.597Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-shongololos-shoes/page-001.jpg",
+          "image_alt": "戴红边眼镜的黑色千足虫站在屋里，粉色地板和绿色地毯上散着几只黄色靴子。",
+          "text_zh": "我的鞋子都去哪儿了？我明明把它们放在这儿了呀！",
+          "text_original": "Where are all my shoes? I know I left them here!",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-001.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 48,
+              "zh": 23
+            },
+            "text_sha256": {
+              "en": "6ec1e0be096f020e3109a00f306e1ee39e79b255a9a909435cd24d3116aaf527",
+              "zh": "9da3fe4e83376b93205d5375a5330d8ee805889992f7d1a21d13cfbe02f1a0fc"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 48,
+                  "zh": 23
+                },
+                "speaker": {
+                  "en": "Shongololo",
+                  "zh": "千足虫"
+                },
+                "x": 3,
+                "y": 4,
+                "width": 44,
+                "target": [
+                  85,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-shongololos-shoes/page-002.jpg",
+          "image_alt": "刺猬一只脚穿着红靴子，头上扣着黄靴子，手里也拿着一只红靴子。",
+          "text_zh": "我没看见你的鞋子。去问问蜗牛吧。",
+          "text_original": "I haven’t seen your shoes. Go ask Snail.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-002.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 40,
+              "zh": 16
+            },
+            "text_sha256": {
+              "en": "3be05e00399980d3b492fb08019d4226d025bc98f24638416e00ad6d7c511700",
+              "zh": "74ddeb57e3347f661473d0d64b70d493dba7a57749cee95731f31580fbf6af74"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 40,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "刺猬"
+                },
+                "x": 3,
+                "y": 4,
+                "width": 45,
+                "target": [
+                  72,
+                  42
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-shongololos-shoes/page-003.jpg",
+          "image_alt": "绿色蜗牛趴在红色圆点蘑菇上，壳里插着一只黄色靴子。",
+          "text_zh": "我这里没有鞋子。去问问长颈鹿吧。",
+          "text_original": "No shoes here. Go ask Giraffe.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-003.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 30,
+              "zh": 16
+            },
+            "text_sha256": {
+              "en": "2765932e0d1e478fd6989d5b8e428e77e806d81030f8def382e7b05475f62b30",
+              "zh": "2a4551ef6e5749e747180de964e71a3c8de050048d96aea04fdd5fdc6812b978"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 30,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "Snail",
+                  "zh": "蜗牛"
+                },
+                "x": 3,
+                "y": 4,
+                "width": 45,
+                "target": [
+                  70,
+                  26
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-shongololos-shoes/page-004.jpg",
+          "image_alt": "长颈鹿和红色自行车横在画面中，长颈鹿戴着棕色帽子，一只黄色靴子套在它的嘴边。",
+          "text_zh": "我正赶时间呢——去问问青蛙吧。",
+          "text_original": "I’m in a hurry – go ask Frog.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-004.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 29,
+              "zh": 15
+            },
+            "text_sha256": {
+              "en": "aa30e5cafed077fc2bad974989f38fe9764e6b4948e934490ab5cc36ebb4fd6a",
+              "zh": "8f175b0969ac06a7268ef28e03bf250106569c245a8c11e30f702a45cb75a49a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 29,
+                  "zh": 15
+                },
+                "speaker": {
+                  "en": "Giraffe",
+                  "zh": "长颈鹿"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 45,
+                "target": [
+                  86,
+                  59
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-shongololos-shoes/page-005.jpg",
+          "image_alt": "绿色青蛙坐在一只漂浮的黄色靴子里，水边长着芦苇和小花。",
+          "text_zh": "鞋子？多少只呀？去问问火烈鸟吧。",
+          "text_original": "Shoes? How many? Go ask Flamingo.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-005.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 33,
+              "zh": 16
+            },
+            "text_sha256": {
+              "en": "0b367efba8aa641e32db4d6b20c0e11e3ab7e8a9667ea13b1fc4484c2b5b5fb8",
+              "zh": "c8cbc1b4f1193ad7a90c30f6f953911c6d99c3ffbb75aad42c14a4ca17b03a9a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 33,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "Frog",
+                  "zh": "青蛙"
+                },
+                "x": 3,
+                "y": 4,
+                "width": 45,
+                "target": [
+                  65,
+                  40
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-shongololos-shoes/page-006.jpg",
+          "image_alt": "粉色火烈鸟站在水边，嘴上套着一只黄色靴子，另一只脚抬了起来。",
+          "text_zh": "见过你的鞋子吗？没有，我没见过。",
+          "text_original": "Seen your shoes? No, not me.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-006.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 28,
+              "zh": 16
+            },
+            "text_sha256": {
+              "en": "9e41d4d7fe1ab1ebe1ca62e9c719175b1636f511356ec193a8d3e7f9de9bdaa1",
+              "zh": "fd35025ea32da6d4ef0ae2572ccc54795e47c4ce94549b6f633f9a73115c36ce"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 28,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "Flamingo",
+                  "zh": "火烈鸟"
+                },
+                "x": 52,
+                "y": 4,
+                "width": 45,
+                "target": [
+                  28,
+                  25
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-shongololos-shoes/page-007.jpg",
+          "image_alt": "千足虫盘成一圈，戴着红边眼镜望向前方，周围是茂密的绿色植物。",
+          "text_zh": "我到底还能不能找到我的鞋子呀？",
+          "text_original": "Will I ever find my shoes?",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-007.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 26,
+              "zh": 15
+            },
+            "text_sha256": {
+              "en": "50877b12453a1dace6bcae527d4b835037da1c5903c9a302bdd8ec1096590b1c",
+              "zh": "5a85247f2a378b8f60cf54784f7440f6c601766043427fcc32f5df6ba9b3712e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 26,
+                  "zh": 15
+                },
+                "speaker": {
+                  "en": "Shongololo",
+                  "zh": "千足虫"
+                },
+                "x": 53,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  75,
+                  65
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-shongololos-shoes/page-008.jpg",
+          "image_alt": "一只橙色尖耳朵动物坐在树旁，用黄色靴子当杯子，靴口插着一根吸管。",
+          "text_zh": "鞋子呀？你该去问问猴子们。",
+          "text_original": "Shoes, eh? You should ask the Monkeys.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-008.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 38,
+              "zh": 13
+            },
+            "text_sha256": {
+              "en": "507066068432720ddfabd225c8c1ef58d50d9592d94cc7ae8c9e7165f0c56ca2",
+              "zh": "6f6e8297cdff29d9f29c05db959dc7b4565dda3613eb797a0b20e2e6273720d6"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 38,
+                  "zh": 13
+                },
+                "speaker": {
+                  "en": "Pointy-eared friend",
+                  "zh": "尖耳朵朋友"
+                },
+                "x": 51,
+                "y": 4,
+                "width": 46,
+                "target": [
+                  33,
+                  32
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-shongololos-shoes/page-009.jpg",
+          "image_alt": "两只猴子爬在树枝上，用黄色靴子和细线玩传话游戏。",
+          "text_zh": "喂，你们好？我们正忙着呢。去问问猫头鹰吧，她什么都知道。",
+          "text_original": "Hello hello? We’re busy. Go ask Owl, she knows everything.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-009.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 58,
+              "zh": 28
+            },
+            "text_sha256": {
+              "en": "2a27b72bb45a4994f1eb2344a63db3fcce9a295214d2e87d8a22c708eaa29a3f",
+              "zh": "ed1ada4b8a931e8496b1644f223d5ba10b8d5a416f97db6b0f0cdc4b6933ed9b"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 58,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "Monkeys",
+                  "zh": "猴子们"
+                },
+                "x": 49,
+                "y": 2,
+                "width": 48,
+                "target": [
+                  32,
+                  57
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-shongololos-shoes/page-010.jpg",
+          "image_alt": "戴眼镜的猫头鹰坐在树枝上读书，旁边一只黄色靴子里插着彩色铅笔。",
+          "text_zh": "嗯，我有个主意。你为什么不去问问狮子呢？",
+          "text_original": "Hmm. I have an idea. Why don’t you ask Lion?",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-010.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 44,
+              "zh": 20
+            },
+            "text_sha256": {
+              "en": "fb278ef36fbf9970a818c3d821d005e967b79ea4f4fb9d968054205773fdb5dd",
+              "zh": "b675022a148135f14b3b6b201b6cf38762f13a8ff45846976ff1cf517b234eb3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 44,
+                  "zh": 20
+                },
+                "speaker": {
+                  "en": "Owl",
+                  "zh": "猫头鹰"
+                },
+                "x": 54,
+                "y": 4,
+                "width": 43,
+                "target": [
+                  31,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-shongololos-shoes/page-011.jpg",
+          "image_alt": "狮子把许多黄色靴子卷在鬃毛上，手里拿着蓝色袋子，脸上带着笑。",
+          "text_zh": "这些都是你的？只要你来参加我的派对，我就把它们全还给你！",
+          "text_original": "These are yours? I’ll give them all back if you come to my party!",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-011.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 65,
+              "zh": 28
+            },
+            "text_sha256": {
+              "en": "50935f697635a92746f03a48948b968100675ae992061432b9bfc8c5a3c0480c",
+              "zh": "8c8708ac17ea1ba68a3424446fbfdd2bd0226253c2b8335fa8be8dde7f206e9c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 65,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "Lion",
+                  "zh": "狮子"
+                },
+                "x": 54,
+                "y": 4,
+                "width": 43,
+                "target": [
+                  40,
+                  59
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-shongololos-shoes/page-012.jpg",
+          "image_alt": "夜晚的彩旗下，穿着一排黄色鞋子的千足虫和狮子、猴子、火烈鸟、长颈鹿、刺猬、青蛙、蜗牛、猫头鹰及橙色朋友围在一起。",
+          "text_zh": "派对上，千足虫又穿上了鞋子，动物朋友们都聚到了一起。",
+          "text_original": "At the party, Shongololo wears his shoes again, and all the animals gather together.",
+          "audio_zh": "/assets/books/bd-shongololos-shoes/audio/zh/d931063279fab388/page-012.mp3",
+          "audio_original": "/assets/books/bd-shongololos-shoes/audio/en/92484116198d5fac/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-sleepy-mr-sloth",
       "title_zh": "树懒先生找睡床",
       "title_original": "Sleepy Mr Sloth",
@@ -5042,6 +6122,549 @@
           "text_original": "The bird and the snake, the giraffe and each bee were happy to have Mr Sloth in their tree.",
           "audio_zh": "/assets/books/bd-sleepy-mr-sloth/audio/zh/245517660df6dd72/page-012.mp3",
           "audio_original": "/assets/books/bd-sleepy-mr-sloth/audio/en/8488fab74000939b/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "bd-the-best-nest",
+      "title_zh": "最棒的鸟窝",
+      "title_original": "The Best Nest",
+      "author": "Crystal Warren",
+      "illustrator": "Megan Naudé",
+      "description_zh": "蓝鸟嫌旧窝不够好，拉着棕鸟寻找新家。软软的、彩色的、亮闪闪的，哪个才适合它们？一路寻找和几次小意外，让两个朋友发现家的可贵。",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-the-best-nest/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-13T03:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-863110d93832ce4a0d7137a2b96233cf37feef9e7f3cafef2a4e25c20663e23b",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/the-best-nest/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《The Best Nest》由Book Dash发布；作者Crystal Warren，原插画Megan Naudé，设计Ashlyn Atkinson，编辑David Mann。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理图内英文排版，双语正文与角色对白置于图片外；不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-13T02:58:05.705Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-13T02:57:39.895Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-the-best-nest/page-001.jpg",
+          "image_alt": "蓝鸟躺在树枝上的鸟窝里，棕鸟直直地坐在旁边，四周垂着绿叶。",
+          "text_zh": "蓝鸟觉得有点无聊。“这个窝我住腻了。”他说，“我们得找个新家。”",
+          "text_original": "Blue Bird is bored. “I am tired of this nest,” he says. “We need a new home.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-001.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 77,
+              "zh": 32
+            },
+            "text_sha256": {
+              "en": "44df4e5981ef8602e020d9f353244ef2027fe5e7c58c4f2cc6dfdb34d3789002",
+              "zh": "7664f6b8f29141bd4e3413c492d3094afefdef7536cdea2ad4473fa0069f1d0d"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 20,
+                  "zh": 9
+                },
+                "end": {
+                  "en": 46,
+                  "zh": 19
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 3,
+                "y": 6,
+                "width": 45,
+                "target": [
+                  67,
+                  72
+                ]
+              },
+              {
+                "start": {
+                  "en": 56,
+                  "zh": 22
+                },
+                "end": {
+                  "en": 77,
+                  "zh": 32
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 3,
+                "y": 30,
+                "width": 45,
+                "target": [
+                  67,
+                  72
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-the-best-nest/page-002.jpg",
+          "image_alt": "蓝鸟站起来张开双翅，兴奋地向棕鸟说话；棕鸟仍站在旧窝里。",
+          "text_zh": "“你一定要找的话，好吧。”棕鸟说，“不过，新窝得比现在这个好，我才搬。”“当然啦！”蓝鸟说，“一定会是个很棒的窝。我会找到最棒的鸟窝！”",
+          "text_original": "“If you insist,” says Brown Bird. “But I am not moving unless the new nest is better than the one that we have now.” “Oh yes,” says Blue Bird. “It will be a great nest. I will find the best nest ever!”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-002.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 201,
+              "zh": 68
+            },
+            "text_sha256": {
+              "en": "fd9537916dc5e22db3a396c9fe2ac78556c3ae5b6145735596a87a2b84b11790",
+              "zh": "cde3d545f5b42c333fe17217b7c3a73a93c21989199ab68bf71529184c673dbd"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 16,
+                  "zh": 13
+                },
+                "speaker": {
+                  "en": "Brown Bird",
+                  "zh": "棕鸟"
+                },
+                "x": 2,
+                "y": 3,
+                "width": 46,
+                "target": [
+                  89,
+                  39
+                ]
+              },
+              {
+                "start": {
+                  "en": 34,
+                  "zh": 17
+                },
+                "end": {
+                  "en": 116,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Brown Bird",
+                  "zh": "棕鸟"
+                },
+                "x": 2,
+                "y": 25,
+                "width": 46,
+                "target": [
+                  89,
+                  39
+                ]
+              },
+              {
+                "start": {
+                  "en": 117,
+                  "zh": 36
+                },
+                "end": {
+                  "en": 126,
+                  "zh": 42
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 51,
+                "y": 3,
+                "width": 46,
+                "target": [
+                  66,
+                  39
+                ]
+              },
+              {
+                "start": {
+                  "en": 143,
+                  "zh": 46
+                },
+                "end": {
+                  "en": 201,
+                  "zh": 68
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 51,
+                "y": 25,
+                "width": 46,
+                "target": [
+                  66,
+                  39
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-the-best-nest/page-003.jpg",
+          "image_alt": "两只鸟站在浴室地砖上，蓝鸟指向旁边一双毛茸茸的棕色拖鞋。",
+          "text_zh": "“看这个可爱的窝！又软又舒服，我们还可以各睡各的床。这是最适合我们的窝。”",
+          "text_original": "“Look at this lovely nest! It is soft and cosy. And we can each have our own bed. This is the best nest for us.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-003.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 112,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "b70588973bab524b628767a0bbb33698b6cdbcbac26fcf60d381e2a46cc4b664",
+              "zh": "e55d8e3cb97b24f2a1b434fb9fa6e25a7312badb8fa6be808af43cdbf1dc87e0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 112,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 53,
+                "y": 2,
+                "width": 44,
+                "target": [
+                  60,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-the-best-nest/page-004.jpg",
+          "image_alt": "一只大脚正踩进拖鞋，两只鸟惊慌地拍翅，羽毛飞了起来。",
+          "text_zh": "可并不是这样！",
+          "text_original": "But it isn’t!",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-004.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-the-best-nest/page-005.jpg",
+          "image_alt": "蓝鸟和棕鸟站在一只彩虹条纹的宠物食盆旁，蓝鸟张开翅膀介绍它。",
+          "text_zh": "“看这个漂亮的窝，颜色多鲜艳呀！这才是最棒的鸟窝。”",
+          "text_original": "“Look at this beautiful nest. It is so bright and colourful. This is the very best nest.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-005.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 89,
+              "zh": 26
+            },
+            "text_sha256": {
+              "en": "6fa97cdf9c97ac759b411eb2c870e746a7827374c65b283e8b11dab69ef3428c",
+              "zh": "8849151b2a53110cafde8dba34630c94819d512c4c4aa213b9f280c3a2d0fd46"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 89,
+                  "zh": 26
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 51,
+                "y": 3,
+                "width": 46,
+                "target": [
+                  72,
+                  52
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-the-best-nest/page-006.jpg",
+          "image_alt": "一只橙色猫的脸靠近彩色食盆，两只鸟拍着翅膀逃开。",
+          "text_zh": "可并不是这样！",
+          "text_original": "But it isn’t!",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-006.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-the-best-nest/page-007.jpg",
+          "image_alt": "两只鸟站在厨房台面上，蓝鸟指向右侧亮闪闪的金属容器。",
+          "text_zh": "“看这个亮闪闪的窝，瞧它多闪亮！这个窝比刚才的还棒。”",
+          "text_original": "“Look at this shiny nest. See how it sparkles. This is the best nest yet.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-007.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 74,
+              "zh": 27
+            },
+            "text_sha256": {
+              "en": "cdd141e4cea7fc5c373b0684e0fa10595a2c08363d9c3a86d8206e1c578a1870",
+              "zh": "9f70e19803e466a34f58892614e03323d6af34e77016e182c3e4f7102d0391b8"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 74,
+                  "zh": 27
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 53,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  72,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-the-best-nest/page-008.jpg",
+          "image_alt": "大人的双手把黑色垃圾袋放进金属垃圾桶，桶盖躺在旁边，两只鸟扑扇翅膀飞走。",
+          "text_zh": "可并不是这样！",
+          "text_original": "But it isn’t!",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-008.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-the-best-nest/page-009.jpg",
+          "image_alt": "蓝鸟和棕鸟站在院子里，面前是一间带尖屋顶的木头狗屋。",
+          "text_zh": "“看这个大大的窝！还有自己的门呢。这才是最棒的窝。”",
+          "text_original": "“Look at this large nest! It even has its own door. This is the best nest of all.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-009.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 82,
+              "zh": 26
+            },
+            "text_sha256": {
+              "en": "798f02beee31afd2155a7b9bc64be9f69230fd48b822491673e0140b1871e4f7",
+              "zh": "c4f262b7efecdabe64db12aba2b0e8f1555e819301bf771178c8562a35e9e40e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 82,
+                  "zh": 26
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 51,
+                "y": 2,
+                "width": 46,
+                "target": [
+                  65,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-the-best-nest/page-010.jpg",
+          "image_alt": "一只狗从木头狗屋里探出头来叫，两只鸟惊慌地飞上半空。",
+          "text_zh": "可并不是这样！",
+          "text_original": "But it isn’t!",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-010.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-the-best-nest/page-011.jpg",
+          "image_alt": "两只鸟回到长着绿叶的树枝上，蓝鸟抬起翅膀，指向原来的鸟窝。",
+          "text_zh": "“看看这个窝，搭得多好呀。这就是最棒的鸟窝。”",
+          "text_original": "“Look at this nest. See how well it has been built. This is the best nest ever.”",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-011.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 80,
+              "zh": 23
+            },
+            "text_sha256": {
+              "en": "3a91cb3d68758cab1f141f6301bb6b4fb680d466f5506ee7cbe2741a569bc91d",
+              "zh": "06cb0a2c64a5f92687633b216ad24b9518e6db35b97d7a8f501a35539c10d5f7"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 80,
+                  "zh": 23
+                },
+                "speaker": {
+                  "en": "Blue Bird",
+                  "zh": "蓝鸟"
+                },
+                "x": 51,
+                "y": 2,
+                "width": 46,
+                "target": [
+                  68,
+                  59
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-the-best-nest/page-012.jpg",
+          "image_alt": "蓝鸟舒舒服服地躺回旧窝，棕鸟站在旁边看着它。",
+          "text_zh": "“是呀，就是这个。”棕鸟说。",
+          "text_original": "“Yes, it is,” says Brown Bird.",
+          "audio_zh": "/assets/books/bd-the-best-nest/audio/zh/b1fc87117cf34b4b/page-012.mp3",
+          "audio_original": "/assets/books/bd-the-best-nest/audio/en/fc492a412e38a962/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 30,
+              "zh": 14
+            },
+            "text_sha256": {
+              "en": "fb8ae14896459e672a0a5829d64ad383ab7b948c0fef5cd8fa0522f0d8bcecc3",
+              "zh": "d126b1edfdf1105ca665ef0a87fd3f972a962e8265884c3abd88cea79902f476"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 13,
+                  "zh": 10
+                },
+                "speaker": {
+                  "en": "Brown Bird",
+                  "zh": "棕鸟"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 45,
+                "target": [
+                  77,
+                  49
+                ]
+              }
+            ]
+          }
         }
       ]
     },

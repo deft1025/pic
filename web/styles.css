@@ -175,17 +175,18 @@ body.reading #toast{bottom:calc(150px + env(safe-area-inset-bottom,0px));pointer
  .detail-meta h1{margin-top:8px;font-size:28px}
 }
 
-/* Desktop reading: keep the whole illustration centered and controls below it. */
+/* Scale desktop artwork with the window while keeping one frame per book. */
 @media(min-width:901px){
- .reader-stage,.reader-stage:fullscreen{max-width:1040px;width:100%;margin-inline:auto;padding:16px 32px 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 24px;align-content:start}
+ .reader-stage,.reader-stage:fullscreen{max-width:1440px;width:100%;margin-inline:auto;padding:16px clamp(24px,3vw,48px) 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 24px;align-content:start}
  .reader-stage>*{grid-column:1/-1;min-width:0}
  .reader-layout-switch{grid-column:1;margin:0;justify-content:flex-start;gap:16px}
  .reader-progress{margin:0;min-height:48px;gap:16px}
  .reader-stage:has(.reader-layout-switch) .reader-progress{grid-column:2}
  .reader-progress .progress-dots{max-width:60%}
- .reader-scene{min-height:max(280px,calc(100dvh - 340px));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
- .reader-image-wrap,.reader-stage:fullscreen .reader-image-wrap{--reader-art-height:max(220px,calc(100dvh - 360px));width:min(100%,calc(var(--reader-art-height) * var(--reader-aspect,1.5)));max-height:none;margin:0 auto;align-self:center;aspect-ratio:var(--reader-ratio,3/2)}
- .reader-stage:has(.reader-layout-switch) .reader-image-wrap{--reader-art-height:max(220px,calc(100dvh - 510px))}
+ .reader-scene{min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:14px}
+ .reader-image-wrap,.reader-stage:fullscreen .reader-image-wrap{--reader-art-height:clamp(360px,calc(100dvh - 300px),900px);width:min(100%,max(60%,calc(var(--reader-art-height) * var(--reader-aspect,1.5))));max-height:none;margin:0 auto;align-self:center;aspect-ratio:var(--reader-ratio,3/2)}
+ .reader-stage:fullscreen{max-width:none}
+ .reader-stage:fullscreen .reader-image-wrap{--reader-art-height:clamp(360px,calc(100dvh - 220px),1000px)}
  .reader-image{display:block}
  .reader-image-wrap.dialogue-flow,.reader-stage:fullscreen .dialogue-canvas.dialogue-flow{aspect-ratio:auto}
  .dialogue-flow .reader-dialogue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:14px 18px 20px}
