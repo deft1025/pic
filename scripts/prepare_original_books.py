@@ -37,6 +37,12 @@ def remove_typesetting(image, regions):
         x0, y0 = max(0, int(x * width) - padding), max(0, int(y * height) - 4)
         x1, y1 = min(width, int((x + w) * width) + padding), min(height, int((y + h) * height) + 5)
         roi = gray[y0:y1, x0:x1]
+        # Curved lettering can sit on watercolour edges. A reviewed absolute
+        # threshold removes only the dark ink, keeping the pale painted edge.
+        if 'ink_threshold' in region:
+            ink = (roi < region['ink_threshold']).astype('uint8') * 255
+            mask[y0:y1, x0:x1] = np.maximum(mask[y0:y1, x0:x1], ink)
+            continue
         # Reviewed boxes contain typesetting, with background lighter than ink.
         # Mask the ink only, preserving paper/watercolour texture around it.
         background = float(np.percentile(roi, 85))
@@ -76,6 +82,9 @@ def prepare(source_dir, art_only=False, books=None):
                 number = item['page_number']
                 if number:
                     image = remove_typesetting(image, config[book_id]['pages'][str(number)]['text_regions'])
+                max_width = config[book_id].get('max_width' if number else 'max_cover_width')
+                if max_width and image.width > max_width:
+                    image = image.resize((max_width, round(image.height * max_width / image.width)), Image.Resampling.LANCZOS)
                 name = 'cover.jpg' if number == 0 else f'page-{number:03}.jpg'
                 destination = output / name
                 image.save(destination, quality=94, subsampling=0, optimize=True)

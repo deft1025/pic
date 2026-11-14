@@ -1698,5 +1698,577 @@
         "height": 791
       }
     ]
+  },
+  "bd-bathtub-safari": {
+    "source_url": "https://bookdash.org/books/bathtub-safari/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-14",
+    "source_dir": "docs/materials-review/original-sources-20261114",
+    "source_file": "bathtub-safari.json",
+    "source_sha256": "81ea0b66c6dab5b4c4bd52ad18bc4c6be0723bd783a03138219d84a1121cf64e",
+    "image_processing": "官网完整高清预览原插画；保留封面英文书名与署名，按逐页核对区域清理英文正文与拟声排版，双语文字由阅读器显示；未使用AI重绘。正文长边宽度最多2048px、封面宽度最多960px，仅缩小不放大；兼顾PC细节与移动端加载。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_01.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-bathtub-safari/cover.jpg",
+        "sha256": "913d3992ea78a0d40bba7f3205eae282ae32d739b4cad3f0b8558c0facb38c40",
+        "width": 775,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_05.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-bathtub-safari/page-001.jpg",
+        "sha256": "6c70721b6ff91dbcfdf0c5c90c856fa7f42b7e7628f0cd2c82c5aa53ef905a9e",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_06.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-bathtub-safari/page-002.jpg",
+        "sha256": "7d1104ba57c727ad03e7cd4ffd319a68949a58bc5336349ce9677c2e530c883c",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_07.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-bathtub-safari/page-003.jpg",
+        "sha256": "b17a455db8357ae2b0abba91b31bae48f77e7754b5bb0f76191a802878d57ce9",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_08.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-bathtub-safari/page-004.jpg",
+        "sha256": "5ddcd811eb1e42fcb01a50c4dccccd9034b04e5a3306ccefb685fec3c0c1a2d4",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_09.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-bathtub-safari/page-005.jpg",
+        "sha256": "2b5821ca1117fd790a7e732dfc1cd8878b5a84521e41c98f4d7d260b57c9bb5f",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_10.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-bathtub-safari/page-006.jpg",
+        "sha256": "86e35c18684c91ec0a2bb759da4ac0f9832278d0cdb9780b80ec0ba8bb3ed31b",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_11.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-bathtub-safari/page-007.jpg",
+        "sha256": "e92a71d42bb8b0ae51499950679b8c3e43144c92a1f59ef2f5975e6e0c3e960a",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_12.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-bathtub-safari/page-008.jpg",
+        "sha256": "a7f3de089ba32d9d42e5bef9260a76ee24e33aa64f62b233ccdf16528e0ac993",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_13.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-bathtub-safari/page-009.jpg",
+        "sha256": "6e8a297e81d718c9aa7837149041eac40f9312f7836bac38444b3b394be23358",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_14.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-bathtub-safari/page-010.jpg",
+        "sha256": "19fa895da6c56b16feb2bd89f2c457343c71d5fadac052c5cae7af455ba6ea1f",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_15.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-bathtub-safari/page-011.jpg",
+        "sha256": "33ebc6a6c3a628a7242dd44e25bfa25e4d0307bdf91addfc9e241db682ae7b6b",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2014/12/bathtub-safari_pdf-ebook_20141202_Page_16.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-bathtub-safari/page-012.jpg",
+        "sha256": "7ed4be165e675cb26a43686272aa8d95fff8e01ce26c07237cf175783e8f6c41",
+        "width": 1575,
+        "height": 788
+      }
+    ]
+  },
+  "bd-a-beautiful-day": {
+    "source_url": "https://bookdash.org/books/a-beautiful-day/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-14",
+    "source_dir": "docs/materials-review/original-sources-20261114",
+    "source_file": "a-beautiful-day.json",
+    "source_sha256": "c96ce55c13fa6e1798a6789de1c8d14adf4a3eb7cd11730cad5380a9a9376e1e",
+    "image_processing": "官网完整高清预览原插画；保留封面英文书名与署名，按逐页核对区域清理英文正文与拟声排版，双语文字由阅读器显示；未使用AI重绘。正文长边宽度最多2048px、封面宽度最多960px，仅缩小不放大；兼顾PC细节与移动端加载。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_cover_20160104.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_cover_20160104.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-a-beautiful-day/cover.jpg",
+        "sha256": "38e0ace5963447616980a194008984cc48693fc03d715ff163442c2392e4a7c0",
+        "width": 2379,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601044.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601044.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-a-beautiful-day/page-001.jpg",
+        "sha256": "7e571e871f1c99bfae38fedb27057a657b632238d860accfa20a6923715adf24",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601045.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601045.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-a-beautiful-day/page-002.jpg",
+        "sha256": "3f50f5210873aca0bc7ab9c8d9f207506513b943d7cb8d3f5190675fde7f2d50",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601046.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601046.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-a-beautiful-day/page-003.jpg",
+        "sha256": "1c4217885a87701ee24c43ba062ac1c319116368ba371154e6e094cae2afae6f",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601047.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601047.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-a-beautiful-day/page-004.jpg",
+        "sha256": "df0683ec48d3e2cdb0f97f952ad73c7755b4dee236500bd59105d250fa62602c",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601048.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601048.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-a-beautiful-day/page-005.jpg",
+        "sha256": "b56bcffbd938daa901a865faeb42191e3215194e2138d4d7021d544023d39928",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601049.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_201601049.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-a-beautiful-day/page-006.jpg",
+        "sha256": "126743c159f6f8b396f749c7eb0f040257eb3ee628afdbf5f91df4686dce102c",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010410.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010410.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-a-beautiful-day/page-007.jpg",
+        "sha256": "db5d0f65acf0308a2fa294b448c4cf3549cfb4c9bad562ab57b4054424d8973b",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010411.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010411.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-a-beautiful-day/page-008.jpg",
+        "sha256": "38cc7d5cc405d2d730f4fd8e1fdcb90d33ef82cb3b6b7ca371340cdc87220840",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010412.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010412.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-a-beautiful-day/page-009.jpg",
+        "sha256": "d7165e928b549c0d7e7230d4b112cd32f0c9d03852f4a6725b6304eda190f230",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010413.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010413.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-a-beautiful-day/page-010.jpg",
+        "sha256": "4ea63df55201564a9245f62add3bb506aa8f96552bc5cefbdab3de47ff04ecfe",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010414.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010414.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-a-beautiful-day/page-011.jpg",
+        "sha256": "130a17dfd636a2dcbf64ea003340d125655accd039db9ea27bb01ac2b6fffe1d",
+        "width": 4724,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010415.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/a-beautiful-day_interior_spreads_2016010415.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-a-beautiful-day/page-012.jpg",
+        "sha256": "591b8f1465b2e05cbe561f2b3060e24d762a62a525eb2da91b5e63ab8158eda4",
+        "width": 4724,
+        "height": 2362
+      }
+    ]
+  },
+  "bd-feathered-friends": {
+    "source_url": "https://bookdash.org/books/feathered-friends/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page3.jpg",
+    "downloaded_on": "2026-11-14",
+    "source_dir": "docs/materials-review/original-sources-20261114",
+    "source_file": "feathered-friends.json",
+    "source_sha256": "31715c09be7ea398d3d4316a2f683d0b459f0c49fdb3f9a73557143d2b6563ed",
+    "image_processing": "官网完整高清预览原插画；保留封面英文书名与署名，按逐页核对区域清理英文正文与拟声排版，双语文字由阅读器显示；未使用AI重绘。正文长边宽度最多2048px、封面宽度最多960px，仅缩小不放大；兼顾PC细节与移动端加载。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_cover.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-feathered-friends/cover.jpg",
+        "sha256": "e7d130e7a2a4ff1cac0b06ebf28ea9c5bb92c59132646d1a69440662a5c62ff2",
+        "width": 567,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page4.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page4.jpg",
+        "source_preview_index": 3,
+        "page_number": 1,
+        "source_file": "bd-feathered-friends/page-001.jpg",
+        "sha256": "b326454c4da1fd4637e49a97e7a2f72ef536193b6bb4534dbb573ec486ad9249",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page5.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page5.jpg",
+        "source_preview_index": 4,
+        "page_number": 2,
+        "source_file": "bd-feathered-friends/page-002.jpg",
+        "sha256": "a92d2cd618b2ff4b210ed479fe7ca8333947300ba1ade2726b0f6b4688932a5e",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page6.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page6.jpg",
+        "source_preview_index": 5,
+        "page_number": 3,
+        "source_file": "bd-feathered-friends/page-003.jpg",
+        "sha256": "b07df3eb03e1d024b6c495af9635fb8ec3dae818ffbe8986043a0429e0c7a162",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page7.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page7.jpg",
+        "source_preview_index": 6,
+        "page_number": 4,
+        "source_file": "bd-feathered-friends/page-004.jpg",
+        "sha256": "e924913f129fc49484d5cb74871c3fe89343c91608a55d6feb7a9850bf91b4f8",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page8.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page8.jpg",
+        "source_preview_index": 7,
+        "page_number": 5,
+        "source_file": "bd-feathered-friends/page-005.jpg",
+        "sha256": "b42ffe16c4b237de9ac2fe7202f6f3b00c983e63fddc36b73427dd50bbe641cb",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page9.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page9.jpg",
+        "source_preview_index": 8,
+        "page_number": 6,
+        "source_file": "bd-feathered-friends/page-006.jpg",
+        "sha256": "bf8ccc0c54ba16b297ae7828f4499a6f2701d1bc0082484773f4363c2664c5f1",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page10.jpg",
+        "source_preview_index": 9,
+        "page_number": 7,
+        "source_file": "bd-feathered-friends/page-007.jpg",
+        "sha256": "2521e03bc83e2d32e0f2aef1fd6947262fe67cc56ecfc4e8f5ae8b909f35e761",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page11.jpg",
+        "source_preview_index": 10,
+        "page_number": 8,
+        "source_file": "bd-feathered-friends/page-008.jpg",
+        "sha256": "a753421e52eda0a5ec5bdb131b4e20e3658defac9f0e7b83eb6d38197e336021",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page12.jpg",
+        "source_preview_index": 11,
+        "page_number": 9,
+        "source_file": "bd-feathered-friends/page-009.jpg",
+        "sha256": "f9c69a0eb46af80d8b8d236bd6dcf491ce8d84e5fb7f1e6e3fbe5ea78385e594",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page13.jpg",
+        "source_preview_index": 12,
+        "page_number": 10,
+        "source_file": "bd-feathered-friends/page-010.jpg",
+        "sha256": "9f24cccc47542ad2976960bea9566bc3d69cd4d6a96dae6d505e1b1a74c8cb53",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page14.jpg",
+        "source_preview_index": 13,
+        "page_number": 11,
+        "source_file": "bd-feathered-friends/page-011.jpg",
+        "sha256": "dfdf002a5e32000f53141d2eb88ef65fea1c3877eadd9331aac6ff0fde6ee4fd",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page15.jpg",
+        "source_preview_index": 14,
+        "page_number": 12,
+        "source_file": "bd-feathered-friends/page-012.jpg",
+        "sha256": "2ca16b5ecf92e09e003b590d92ec88b08629f8adf1928e36a19b3f5f3008ac97",
+        "width": 1134,
+        "height": 567
+      }
+    ]
+  },
+  "bd-i-can-do-it": {
+    "source_url": "https://bookdash.org/books/i-can-do-it/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-14",
+    "source_dir": "docs/materials-review/original-sources-20261114",
+    "source_file": "i-can-do-it.json",
+    "source_sha256": "5be4b38684ca9e990ddbe415d20f194a10ca86ef049ac0a39b8606e646f6f36f",
+    "image_processing": "官网完整高清预览原插画；保留封面英文书名与署名，按逐页核对区域清理英文正文与拟声排版，双语文字由阅读器显示；未使用AI重绘。正文长边宽度最多2048px、封面宽度最多960px，仅缩小不放大；兼顾PC细节与移动端加载。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_cover-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_cover-1.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-i-can-do-it/cover.jpg",
+        "sha256": "fbb7607880d93955e470fb03573d04e69e28a246561d7b9668730951b45031d8",
+        "width": 2362,
+        "height": 2362
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page4-scaled.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-i-can-do-it/page-001.jpg",
+        "sha256": "c2b6d9f25346938c61406f02640542dd92e5af01ff06fd72c44eda59d9b8cb23",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page5-scaled.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-i-can-do-it/page-002.jpg",
+        "sha256": "d3602f0506e24e127961a99ccc58076b9409401ca7f6a9f1ace0c6f17e83627f",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page6-scaled.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-i-can-do-it/page-003.jpg",
+        "sha256": "0b19b6c3026fb95103b37051b99ea5b55be0a71dd7136c0383a5d2c331dbe1d4",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page7-scaled.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-i-can-do-it/page-004.jpg",
+        "sha256": "77821fced97dfe1893f0f4f2dc40c682a7ff41111585f6e87cdbb05cadfb4629",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page8-scaled.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-i-can-do-it/page-005.jpg",
+        "sha256": "c0b6b3ccaaafa8f0d2740657b8612c8814157de0d320520b0c60e43fe70a5c8d",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page9-scaled.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-i-can-do-it/page-006.jpg",
+        "sha256": "be689fc8fa9a7bf6ccd909aacd6018c55860f5c984ba7b12afd8c7a106f43636",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page10-scaled.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-i-can-do-it/page-007.jpg",
+        "sha256": "d42dbd4e71dd837c85139dd619ee226e04d8d0c126d7e23eb15c6a2d742bf1e6",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page11-scaled.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-i-can-do-it/page-008.jpg",
+        "sha256": "925c4134968bd772fd2d49461c68cbaf719edfc04804e03583099887a7318141",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page12-scaled.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-i-can-do-it/page-009.jpg",
+        "sha256": "efc2bf4c159a6f903049d495eb9613cf431aa3e9aee88d83f791b076866341d6",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page13-scaled.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-i-can-do-it/page-010.jpg",
+        "sha256": "6169ce18f5146b7842c3b00abaf3935112d34e1d0f178f20af27e3055fe73158",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page14-scaled.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-i-can-do-it/page-011.jpg",
+        "sha256": "e87ffcaa7c5924a8bb7268750975706c3e80f07b5abec237550cdd414208a507",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2026/10/i-can-do-it_en_page15-scaled.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-i-can-do-it/page-012.jpg",
+        "sha256": "20e120dd6f8c167215806cb268c62916048211630ff7402abbb8e1fdcf2f67c0",
+        "width": 2560,
+        "height": 1280
+      }
+    ]
   }
 }

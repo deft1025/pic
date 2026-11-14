@@ -1,0 +1,82 @@
+{
+  "key": "a-beautiful-day",
+  "id": "bd-a-beautiful-day",
+  "en": "A Beautiful Day",
+  "title": "美好的一天",
+  "writer": "Elana Bregin",
+  "illustrator": "Lindy Pelzl",
+  "designer": "Raeesah Vawda",
+  "editor": null,
+  "isbn": "978-1-928318-15-6",
+  "source_url": "https://bookdash.org/books/a-beautiful-day/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "2026-11-14逐本核对官方作品页署名、ISBN、完整原图页序及全部作品CC BY 4.0声明；英文PDF入口实测403，未取得PDF版权页。英文依原图人工核对，OCR仅辅助；合并排版换行，规范引号、大小写与朗读标点。正文、中文翻译、画面描述和对白仅维护MySQL。无字页新增朗读串词已在书目署名披露。",
+  "narration_additions": [
+    4,
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "“What a beautiful day,” says Mom. “Wake up Nicholas.” “Hello sun,” says Nicholas. “Good morning birds.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "“It’s a lovely day,” says Dad. “Let’s have a picnic by the river.” “Can my friend Jacob come?” asks Nicholas.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "“Don’t forget me. I love picnics!” says Donkey. “And me. I want to come too!” says Dog. “Follow us,” say the birds.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 5,
+      "text_original": "“I’ll race you to that tree,” Nicholas says.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "“I won, I won,” says Donkey. “Not fair,” says Nicholas. “You’ve got four legs.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "“Look what I can do,” says Nicholas. “I bet you can’t do this,” says Jacob.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "“Here’s our picnic spot,” says Dad.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "“Race you to the water!” says Jacob.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "“Come and eat, boys and girls,” says Mom.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "“Time to go home,” says Mom. “Say goodbye to Jacob.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "",
+      "original_was_wordless": true
+    }
+  ]
+}

@@ -56,6 +56,7 @@ type Book struct {
 	Author        string           `json:"author"`
 	Illustrator   string           `json:"illustrator"`
 	Description   string           `json:"description_zh"`
+	ReadingValue  string           `json:"reading_value"`
 	Ages          []string         `json:"age_ranges"`
 	Categories    []string         `json:"categories"`
 	Languages     []string         `json:"languages"`

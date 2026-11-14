@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `books` (
     `author` varchar(255) NOT NULL COMMENT '作者名称',
     `illustrator` varchar(255) NOT NULL COMMENT '插画师名称',
     `description_zh` text NOT NULL COMMENT '中文内容简介',
+    `reading_value` varchar(80) NOT NULL DEFAULT '' COMMENT '推荐理由，基于故事内容的一句亲子阅读价值短句',
     `cover` varchar(1024) NOT NULL COMMENT '封面图片路径',
     `page_count` smallint unsigned NOT NULL COMMENT '绘本总页数，从1开始',
     `reading_minutes` smallint unsigned NOT NULL DEFAULT '0' COMMENT '预计阅读时长，单位分钟',

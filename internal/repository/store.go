@@ -33,7 +33,7 @@ type MySQL struct {
 func New(db *sql.DB, strict bool) *MySQL        { return &MySQL{db: db, strict: strict} }
 func (r *MySQL) Ping(ctx context.Context) error { return r.db.PingContext(ctx) }
 
-const selectBook = `SELECT b.book_id,b.title_zh,b.title_original,b.author,b.illustrator,b.description_zh,
+const selectBook = `SELECT b.book_id,b.title_zh,b.title_original,b.author,b.illustrator,b.description_zh,b.reading_value,
  b.cover,b.page_count,b.reading_minutes,b.featured_order,b.published_at,b.publish_status,b.content_version,b.is_demo,
  l.license_type,l.source_url,l.license_url,l.attribution,l.review_status,
  l.commercial_use,l.self_hosting,l.translation_allowed,l.audio_derivative_allowed
@@ -44,7 +44,7 @@ type scanner interface{ Scan(...any) error }
 func scanBook(row scanner) (model.Book, error) {
 	var b model.Book
 	var published time.Time
-	err := row.Scan(&b.ID, &b.TitleZH, &b.TitleOriginal, &b.Author, &b.Illustrator, &b.Description,
+	err := row.Scan(&b.ID, &b.TitleZH, &b.TitleOriginal, &b.Author, &b.Illustrator, &b.Description, &b.ReadingValue,
 		&b.Cover, &b.PageCount, &b.Minutes, &b.Featured, &published, &b.Status, &b.Version, &b.IsDemo,
 		&b.License.Type, &b.License.SourceURL, &b.License.URL, &b.License.Attribution, &b.License.ReviewStatus,
 		&b.License.CommercialUse, &b.License.SelfHosting, &b.License.TranslationAllowed, &b.License.AudioDerivativeAllowed)

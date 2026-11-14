@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
+	"unicode/utf8"
 
 	"pic/internal/assets"
 	"pic/internal/model"
@@ -34,6 +35,9 @@ func safeAsset(path string) bool {
 func Validate(b model.Book, requireApproval bool) error {
 	if b.ID == "" || strings.ContainsAny(b.ID, "/\\. ") || b.TitleZH == "" || b.Description == "" || b.Author == "" || b.Illustrator == "" {
 		return fmt.Errorf("缺少有效 ID、书名、简介或作者信息")
+	}
+	if utf8.RuneCountInString(b.ReadingValue) > 80 || strings.ContainsAny(b.ReadingValue, "\r\n") {
+		return fmt.Errorf("推荐理由 reading_value 必须是一句不超过80字的短句")
 	}
 	if b.Status != "published" && b.Status != "draft" && b.Status != "offline" {
 		return fmt.Errorf("无效发布状态")

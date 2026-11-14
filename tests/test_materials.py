@@ -62,6 +62,16 @@ class MaterialTests(unittest.TestCase):
                     if page.get(key):
                         self.assertTrue(page[key].startswith('/assets/books/'+bid+'/audio/'))
 
+    def test_published_books_have_a_brief_reading_value(self):
+        for bid, book in self.books.items():
+            if book['publish_status'] != 'published':
+                continue
+            with self.subTest(book=bid):
+                value = book.get('reading_value', '')
+                self.assertTrue(value.strip())
+                self.assertLessEqual(len(value), 80)
+                self.assertNotRegex(value, r'[\r\n]')
+
     def test_original_editions_preserve_reviewed_text_page_order_and_credits(self):
         for bid, evidence in self.original_sources.items():
             with self.subTest(book=bid):
@@ -74,11 +84,19 @@ class MaterialTests(unittest.TestCase):
                 keys = ['text_original']
                 if 'text_zh' in source['pages'][0]:
                     keys.extend(['text_zh', 'image_alt'])
-                for key in keys:
-                    self.assertEqual([p[key] for p in book['pages']], [p[key] for p in source['pages']])
+                for page, original in zip(book['pages'], source['pages']):
+                    for key in keys:
+                        if key == 'text_original' and not original[key]:
+                            self.assertTrue(original['original_was_wordless'])
+                            self.assertIn(original['page_number'], source['narration_additions'])
+                            self.assertTrue(page[key].strip())
+                            self.assertIn('无字', book['license']['attribution'])
+                        else:
+                            self.assertEqual(page[key], original[key])
                 self.assertEqual(book['illustrator'], source['illustrator'])
                 for key in ('writer', 'illustrator', 'designer', 'editor'):
-                    self.assertIn(source[key], book['license']['attribution'])
+                    if source[key]:
+                        self.assertIn(source[key], book['license']['attribution'])
                 self.assertEqual(book['license']['source_url'], evidence['source_url'])
                 self.assertEqual(book['license']['license_url'], evidence['license_url'])
                 self.assertEqual([p['page_number'] for p in evidence['images']], list(range(13)))

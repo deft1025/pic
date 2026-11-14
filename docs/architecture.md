@@ -58,6 +58,12 @@ handler 不操作 SQL，router 不读取配置、数据库或内容。service �
 
 相对路径以进程工作目录为准，不以配置文件所在目录为准。环境、文件读取集中在 config，不再散落在 handler、service、repository、database 或各命令的辅助函数中。配置修改需重启对应命令；MySQL 绘本数据仍在每次请求时读取。
 
+## 阅读器与书目展示
+
+阅读器样式唯一入口为 `web/assets/reader.css`；全站 `styles.css` 只负责其他页面和通用组件。外层 Grid 约束当前可视高度，图文区与播放器分别占位，只有图文/PC文字栏滚动。对白模块仅根据数据库范围生成文字，卡片和普通旁白按故事顺序排列，固定在同一个 DOM 容器；设备断点与图文位置由 CSS 决定，不再用 ResizeObserver、碰撞检测或绝对坐标调整文字。宽屏将插画与文字栏作为一个整体限宽，避免插画独自缩小后留下空隙；窄屏纵向排列。可选排版失效保留完整正文和独立播放控制。
+
+`books.reading_value` 通过 model → repository → service → API 贯通，制作工具对已发布物料执行非空、单行与长度校验；快照版本覆盖该字段，推荐理由编辑不触发正文配音失效。前端共用书卡渲染，不另建推荐理由清单。`tests/layout.cjs` 同时检查阅读布局和首页、书库、详情、书架文案边界，可选择离线夹具或真实 API。
+
 ## 检查
 
 `make test` 验证配置、业务规则、路由契约、SQL 查询/事务和现有前端流程。`go run ./cmd/importer --config .env.example --validate-only` 可验证配置与资料链路，无需数据库。真实 MySQL 和浏览器验证边界见 [acceptance.md](acceptance.md)。

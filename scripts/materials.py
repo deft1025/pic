@@ -169,6 +169,7 @@ def main(argv=None):
     elif args.action == 'show':
         b = store.read(args.book)['book']
         print(f"{b['id']} · {b['title_zh']} · {len(b['pages'])} 页 · {b['publish_status']}")
+        print('推荐理由：' + (b.get('reading_value') or '待补充'))
     elif args.action == 'validate':
         store.call('validate', args.book)
         print(args.book + ': 数据库资料及本地/远程素材校验通过，未写库。')

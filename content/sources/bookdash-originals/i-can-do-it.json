@@ -1,0 +1,79 @@
+{
+  "key": "i-can-do-it",
+  "id": "bd-i-can-do-it",
+  "en": "I can do it!",
+  "title": "我能自己来！",
+  "writer": "Wandile Mathe",
+  "illustrator": "Elliot Jaudz Taylor",
+  "designer": "Terri Lourens",
+  "editor": "Cherie Wright",
+  "isbn": "978-1-997453-75-8",
+  "source_url": "https://bookdash.org/books/i-can-do-it/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "2026-11-14逐本核对官方作品页署名、ISBN、完整原图页序及全部作品CC BY 4.0声明；英文PDF入口实测403，未取得PDF版权页。英文依原图人工核对，OCR仅辅助；合并排版换行，规范引号、大小写与朗读标点。正文、中文翻译、画面描述和对白仅维护MySQL。无字页新增朗读串词已在书目署名披露。插画师全名按封面Elliot Jaudz Taylor；官网简称Elliot Taylor。保留场景中的SPAZA店招，清理正文及对白框；拟声词按原图补齐大小写。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Livhu is a happy girl who enjoys soaking up the sun and watching flowers bloom brightly in her garden. She also enjoys going outside in her wheelchair.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "When she is outside, some people stare at her. “Aww!” they say, feeling sorry for her.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "“But I want to stay and talk to people,” Livhu says to the cashier who wheels her to the front of the line in the spaza shop.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "“May we push you down the slope?” offer some of the kids in the park.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "“Swishhhh!” Livhu feels the fresh air whip across her face as they go down the hill.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "Livhu knows people want to help, BUT...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "...mostly she likes to do things for herself.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "At the spaza shop she enjoys chatting to people in the line and making new friends. “Hi! I am Livhu.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Back in the park, she joins in a fun game of tug-of-war with the other children.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "“Whoaaa!” The rope stretches.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Livhu is so happy. Her wheelchair helps her have fun with her favourite people.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "At night she falls asleep thinking about more great adventures to have with her wheelchair and her new besties.",
+      "original_was_wordless": false
+    }
+  ]
+}

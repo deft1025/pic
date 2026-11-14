@@ -95,13 +95,13 @@ func (r *MySQL) importBooks(ctx context.Context, books []model.Book, guard func(
 	}
 	for i, b := range books {
 		_, err = tx.ExecContext(ctx, `INSERT INTO books
-   (book_id,title_zh,title_original,author,illustrator,description_zh,cover,page_count,reading_minutes,featured_order,published_at,publish_status,content_version,is_demo)
-   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+   (book_id,title_zh,title_original,author,illustrator,description_zh,reading_value,cover,page_count,reading_minutes,featured_order,published_at,publish_status,content_version,is_demo)
+   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
    ON DUPLICATE KEY UPDATE title_zh=VALUES(title_zh),title_original=VALUES(title_original),author=VALUES(author),
-   illustrator=VALUES(illustrator),description_zh=VALUES(description_zh),cover=VALUES(cover),page_count=VALUES(page_count),
+   illustrator=VALUES(illustrator),description_zh=VALUES(description_zh),reading_value=VALUES(reading_value),cover=VALUES(cover),page_count=VALUES(page_count),
    reading_minutes=VALUES(reading_minutes),featured_order=VALUES(featured_order),published_at=VALUES(published_at),
    publish_status=VALUES(publish_status),content_version=VALUES(content_version),is_demo=VALUES(is_demo)`,
-			b.ID, b.TitleZH, b.TitleOriginal, b.Author, b.Illustrator, b.Description, b.Cover, b.PageCount, b.Minutes, b.Featured, published[i], b.Status, b.Version, b.IsDemo)
+			b.ID, b.TitleZH, b.TitleOriginal, b.Author, b.Illustrator, b.Description, b.ReadingValue, b.Cover, b.PageCount, b.Minutes, b.Featured, published[i], b.Status, b.Version, b.IsDemo)
 		if err != nil {
 			return fmt.Errorf("写入绘本 %s: %w", b.ID, err)
 		}

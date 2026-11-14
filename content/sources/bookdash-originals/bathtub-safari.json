@@ -1,0 +1,81 @@
+{
+  "key": "bathtub-safari",
+  "id": "bd-bathtub-safari",
+  "en": "Bathtub Safari",
+  "title": "浴缸里的大冒险",
+  "writer": "Tracy Lynn Chemaly",
+  "illustrator": "Robert McEwan",
+  "designer": "Sarah-Jane Williams",
+  "editor": null,
+  "isbn": "978-0-9922357-6-5",
+  "source_url": "https://bookdash.org/books/bathtub-safari/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "2026-11-14逐本核对官方作品页署名、ISBN、完整原图页序及全部作品CC BY 4.0声明；英文PDF入口实测403，未取得PDF版权页。英文依原图人工核对，OCR仅辅助；合并排版换行，规范引号、大小写与朗读标点。正文、中文翻译、画面描述和对白仅维护MySQL。无字页新增朗读串词已在书目署名披露。作者全名按原版封面Tracy Lynn Chemaly；官网简称Tracy Chemaly。最后一幅睡前原画无字，补充串词。",
+  "narration_additions": [
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Bathtime is Jack’s favourite part of the day. ‘I’ll be back in a few moments,’ says his mom. ‘Make sure to clean behind your ears.’",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "There’s a SWOOSH. And a swish of a tail. And then...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Jack’s bathtub safari begins!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "Look at what’s coming! There’s a twist and a turn... Something’s growing... It’s a...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "TOOOT!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "There’s a RUMBLE! It’s going up, UP, UP and...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "SPLASH!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "There’s a SPLOSH. Something bubbles. It’s time to...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "AAAAAH. But something’s lurking in the background...",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "ROAR!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "‘Time to get out. I hope you’re clean and ready for bed.’",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "",
+      "original_was_wordless": true
+    }
+  ]
+}

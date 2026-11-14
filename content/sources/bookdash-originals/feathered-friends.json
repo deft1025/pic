@@ -1,0 +1,85 @@
+{
+  "key": "feathered-friends",
+  "id": "bd-feathered-friends",
+  "en": "Feathered Friends",
+  "title": "羽毛朋友",
+  "writer": "Jacqui L’Ange",
+  "illustrator": "Daniela Hammond",
+  "designer": "Stephanie Pretorius",
+  "editor": "Helen Moffett",
+  "isbn": "978-1-928442-10-3",
+  "source_url": "https://bookdash.org/books/feathered-friends/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/wp-content/uploads/2018/01/feathered-friends_20180117_page3.jpg",
+  "source_note": "2026-11-14逐本核对官方作品页署名、ISBN、完整原图页序及全部作品CC BY 4.0声明；英文PDF入口实测403，未取得PDF版权页。英文依原图人工核对，OCR仅辅助；合并排版换行，规范引号、大小写与朗读标点。正文、中文翻译、画面描述和对白仅维护MySQL。无字页新增朗读串词已在书目署名披露。官网第2幅跨页为该版本版权页，明确CC BY 4.0，已阅读并保存；第1幅衬页、第2幅版权页和末幅封底不计入12个故事跨页，封底科普附言不作为故事正文。oakum boys在此指尚披棕色绒毛的小王企鹅。设计者全名按版权页Stephanie Pretorius。",
+  "narration_additions": [
+    4,
+    6,
+    8,
+    11,
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "We are the oakum boys. We do everything together.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Penguins don’t fly, they swim. But we’re too young to swim. So we walk.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "One day we went for a long walk. We walked and walked. Until we saw something new.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 5,
+      "text_original": "He’s got something on his head!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 7,
+      "text_original": "You’re changing! So are you!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 9,
+      "text_original": "It’s not so bad! It’s not so cold!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "But who’s going to teach us to swim? I will!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 12,
+      "text_original": "",
+      "original_was_wordless": true
+    }
+  ]
+}

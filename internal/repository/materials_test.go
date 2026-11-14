@@ -50,7 +50,7 @@ func (c *materialConn) QueryContext(ctx context.Context, q string, args []driver
 		}
 		p, _ := time.Parse(time.RFC3339Nano, b.PublishedAt)
 		l := b.License
-		return materialRows([][]driver.Value{{b.ID, b.TitleZH, b.TitleOriginal, b.Author, b.Illustrator, b.Description, b.Cover, int64(b.PageCount), int64(b.Minutes), int64(b.Featured), p, b.Status, b.Version, b.IsDemo, l.Type, l.SourceURL, l.URL, l.Attribution, l.ReviewStatus, l.CommercialUse, l.SelfHosting, l.TranslationAllowed, l.AudioDerivativeAllowed}}, 23), nil
+		return materialRows([][]driver.Value{{b.ID, b.TitleZH, b.TitleOriginal, b.Author, b.Illustrator, b.Description, b.ReadingValue, b.Cover, int64(b.PageCount), int64(b.Minutes), int64(b.Featured), p, b.Status, b.Version, b.IsDemo, l.Type, l.SourceURL, l.URL, l.Attribution, l.ReviewStatus, l.CommercialUse, l.SelfHosting, l.TranslationAllowed, l.AudioDerivativeAllowed}}, 24), nil
 	}
 	if strings.HasPrefix(q, "SELECT page_number,image_path") {
 		rows := [][]driver.Value{}
@@ -114,6 +114,7 @@ func materialBook(t *testing.T) model.Book {
 }
 func TestMaterialReadsUnpublishedBookAndRejectsInvalidTypography(t *testing.T) {
 	b := materialBook(t)
+	b.ReadingValue = "陪孩子在故事里认识友谊"
 	b.Status = "offline"
 	state := &materialState{book: &b}
 	db := sql.OpenDB(materialConnector{state})
@@ -123,7 +124,7 @@ func TestMaterialReadsUnpublishedBookAndRejectsInvalidTypography(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if snapshot.Book.Status != "offline" || len(snapshot.Book.Pages) != b.PageCount || snapshot.Revision == "" {
+	if snapshot.Book.Status != "offline" || len(snapshot.Book.Pages) != b.PageCount || snapshot.Revision == "" || snapshot.Book.ReadingValue != b.ReadingValue {
 		t.Fatal("incomplete tooling snapshot")
 	}
 	b.Pages[0].Dialogue = &model.DialogueLayout{Length: map[string]int{"zh": 1, "en": 1}}

@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "go run ./cmd/api",
     "test:reader": "node tests/reader.cjs && node tests/dialogue.cjs",
+    "test:layout": "node tests/layout.cjs",
     "check": "node --check web/app.js && node --input-type=module --check < web/assets/reader-dialogue.js",
     "test:flows": "node --test tests/flows.cjs"
   },
   "devDependencies": {
-    "linkedom": "^0.18.12"
+    "linkedom": "^0.18.12",
+    "playwright": "1.65.0"
   }
 }

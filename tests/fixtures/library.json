@@ -2,12 +2,779 @@
   "note": "由 scripts/materials.py snapshot-tests 从 MySQL 自动生成，仅供离线测试；禁止人工维护或导入运营库。",
   "books": [
     {
+      "id": "bd-a-beautiful-day",
+      "title_zh": "美好的一天",
+      "title_original": "A Beautiful Day",
+      "author": "Elana Bregin",
+      "illustrator": "Lindy Pelzl",
+      "description_zh": "天气真好，尼古拉斯一家去河边野餐。朋友、毛驴、小狗和小鸟都想同行。赛跑、玩耍、分享食物，再挥手道别，一起读读热闹又温暖的一天。",
+      "reading_value": "陪孩子发现日常里的快乐与分享",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "emotions",
+        "nature"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-a-beautiful-day/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-14T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-29e8b96617316584ff54ce8f6223208fe4aa0b52bb1de98cf7f78c068d06cd18",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/a-beautiful-day/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《A Beautiful Day》由Book Dash发布；作者Elana Bregin，原插画Lindy Pelzl，设计Raeesah Vawda；官网未列编辑姓名。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文正文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。原作无字故事页的中英文朗读串词由小小绘本馆补写，页码：4,12。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-14T02:19:51.024Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-14T02:19:27.503Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-a-beautiful-day/page-001.jpg",
+          "image_alt": "戴头巾的妈妈背着宝宝挥手；右边的尼古拉斯坐在床上伸开双臂，窗外有树和太阳。",
+          "text_zh": "“多美好的一天呀！”妈妈说，“尼古拉斯，起床啦。”“你好，太阳！”尼古拉斯说，“小鸟们，早上好！”",
+          "text_original": "“What a beautiful day,” says Mom. “Wake up Nicholas.” “Hello sun,” says Nicholas. “Good morning birds.”",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-001.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 103,
+              "zh": 49
+            },
+            "text_sha256": {
+              "en": "c5b897c11ada89eed226ac474176be68696575027d3c621f8db764b5519549ba",
+              "zh": "5cfde107f7fbeb60c788415b7a854a8bf2423bfa00f1565e4cc69c692252e5df"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 23,
+                  "zh": 10
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  28,
+                  57
+                ]
+              },
+              {
+                "start": {
+                  "en": 34,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 53,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 27,
+                "width": 44,
+                "target": [
+                  28,
+                  57
+                ]
+              },
+              {
+                "start": {
+                  "en": 54,
+                  "zh": 25
+                },
+                "end": {
+                  "en": 66,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  74,
+                  26
+                ]
+              },
+              {
+                "start": {
+                  "en": 82,
+                  "zh": 39
+                },
+                "end": {
+                  "en": 103,
+                  "zh": 49
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 52,
+                "y": 27,
+                "width": 44,
+                "target": [
+                  74,
+                  26
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-a-beautiful-day/page-002.jpg",
+          "image_alt": "爸爸和尼古拉斯坐在餐桌旁吃饭，窗外的雅各布站在绿草地上。",
+          "text_zh": "“今天天气真好。”爸爸说，“咱们去河边野餐吧。”“可以叫上我的朋友雅各布吗？”尼古拉斯问。",
+          "text_original": "“It’s a lovely day,” says Dad. “Let’s have a picnic by the river.” “Can my friend Jacob come?” asks Nicholas.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-002.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 109,
+              "zh": 45
+            },
+            "text_sha256": {
+              "en": "e253b45cde721bdd92e7021ca50d9ad4ea187c0b18123c1fcce9026022b4e7bb",
+              "zh": "89098ae217cf4a26e788ced82088e7f38c3f59291c73e0dfd6df2a68dc5dcf92"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 20,
+                  "zh": 9
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  19,
+                  49
+                ]
+              },
+              {
+                "start": {
+                  "en": 31,
+                  "zh": 13
+                },
+                "end": {
+                  "en": 66,
+                  "zh": 24
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 3,
+                "y": 27,
+                "width": 44,
+                "target": [
+                  19,
+                  49
+                ]
+              },
+              {
+                "start": {
+                  "en": 67,
+                  "zh": 24
+                },
+                "end": {
+                  "en": 94,
+                  "zh": 39
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  48,
+                  51
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-a-beautiful-day/page-003.jpg",
+          "image_alt": "毛驴和小狗从左边跑来，尼古拉斯与雅各布站在一起，橙色小鸟在头顶飞过，右边还有一只小猴子。",
+          "text_zh": "“别忘了我，我最喜欢野餐啦！”毛驴说。“还有我，我也想去！”小狗说。“跟我们来吧！”小鸟们说。",
+          "text_original": "“Don’t forget me. I love picnics!” says Donkey. “And me. I want to come too!” says Dog. “Follow us,” say the birds.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-003.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 115,
+              "zh": 47
+            },
+            "text_sha256": {
+              "en": "3e5173cfe9a63b1f836ddbd60d3bc65c50b067e230cb4ff92765095bd9330fe8",
+              "zh": "ac53f9c74984f7ee7edfef0d17909be5dbfaa0f174df6157eecbc2b9f63920bd"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 34,
+                  "zh": 15
+                },
+                "speaker": {
+                  "en": "Donkey",
+                  "zh": "毛驴"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  16,
+                  36
+                ]
+              },
+              {
+                "start": {
+                  "en": 48,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 77,
+                  "zh": 30
+                },
+                "speaker": {
+                  "en": "Dog",
+                  "zh": "小狗"
+                },
+                "x": 3,
+                "y": 30,
+                "width": 44,
+                "target": [
+                  44,
+                  57
+                ]
+              },
+              {
+                "start": {
+                  "en": 88,
+                  "zh": 34
+                },
+                "end": {
+                  "en": 100,
+                  "zh": 42
+                },
+                "speaker": {
+                  "en": "Birds",
+                  "zh": "小鸟们"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  88,
+                  18
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-a-beautiful-day/page-004.jpg",
+          "image_alt": "小狗、毛驴、雅各布、尼古拉斯、背着宝宝的妈妈和顶着野餐篮的爸爸，排成一队走过山坡，小鸟在上方飞翔。",
+          "text_zh": "出发啦！大家一起，走进美好的一天！",
+          "text_original": "Off they go together, on a beautiful day!",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-004.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-a-beautiful-day/page-005.jpg",
+          "image_alt": "尼古拉斯笑着指向右边山坡上的大树，小狗从身旁的绿叶间探出头。",
+          "text_zh": "“我们比赛，看谁先跑到那棵树！”尼古拉斯说。",
+          "text_original": "“I’ll race you to that tree,” Nicholas says.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-005.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 44,
+              "zh": 22
+            },
+            "text_sha256": {
+              "en": "c6f26abf258a1f03a3a09e7bf9f667277f1bc23bb2bedef40434c6647b86269a",
+              "zh": "49e627d5fe167a0452964df00bb9db781e94ce86d19ddac4f5584a30a35d6340"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 29,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  26,
+                  54
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-a-beautiful-day/page-006.jpg",
+          "image_alt": "毛驴高兴地站在树下，尼古拉斯弯腰喘气，一只小猴子坐在树枝上，周围有橙色小鸟。",
+          "text_zh": "“我赢啦，我赢啦！”毛驴说。“不公平。”尼古拉斯说，“你有四条腿呀。”",
+          "text_original": "“I won, I won,” says Donkey. “Not fair,” says Nicholas. “You’ve got four legs.”",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-006.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 79,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "aba298592de94ae9fc9074e95355693922d404821d8dda61a88ff7d384330099",
+              "zh": "e568fcbe6c22338e767adaea72c916d6323f7d7fcb715e533368917cda56f1a4"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 15,
+                  "zh": 10
+                },
+                "speaker": {
+                  "en": "Donkey",
+                  "zh": "毛驴"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  77,
+                  59
+                ]
+              },
+              {
+                "start": {
+                  "en": 29,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 40,
+                  "zh": 20
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  61,
+                  73
+                ]
+              },
+              {
+                "start": {
+                  "en": 56,
+                  "zh": 26
+                },
+                "end": {
+                  "en": 79,
+                  "zh": 35
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 3,
+                "y": 28,
+                "width": 44,
+                "target": [
+                  61,
+                  73
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-a-beautiful-day/page-007.jpg",
+          "image_alt": "尼古拉斯用双手倒立，雅各布侧着身子用手撑地，小狗在下方打滚，小猴子倒挂在树枝上。",
+          "text_zh": "“看看我会做什么！”尼古拉斯说。“这个你可不一定会哦！”雅各布说。",
+          "text_original": "“Look what I can do,” says Nicholas. “I bet you can’t do this,” says Jacob.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-007.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 75,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "0c883e4070bcca9930f9e313ebe2c142c7c7b3e76538dda7abbe9894dad7b2bc",
+              "zh": "c59a9c7f7d4bcaff5e763e8380ba82ba74cf9844a6783ef8300a82335030fd6c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 21,
+                  "zh": 10
+                },
+                "speaker": {
+                  "en": "Nicholas",
+                  "zh": "尼古拉斯"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  18,
+                  54
+                ]
+              },
+              {
+                "start": {
+                  "en": 37,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 63,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "Jacob",
+                  "zh": "雅各布"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  89,
+                  69
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-a-beautiful-day/page-008.jpg",
+          "image_alt": "爸爸伸手指向河边的草地，妈妈拿着装满食物的篮子，宝宝趴在妈妈背上，河对岸长着树。",
+          "text_zh": "“咱们就在这里野餐吧。”爸爸说。",
+          "text_original": "“Here’s our picnic spot,” says Dad.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-008.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 35,
+              "zh": 16
+            },
+            "text_sha256": {
+              "en": "c2af6c7075cf8070be150050543fbefabf9ef52b1f1b00b8661e06cb6fbde974",
+              "zh": "d1e4f95c686a40d27533ce8dc37193f5f4b1565390885f89ba9917c89b9a51eb"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 25,
+                  "zh": 12
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  51,
+                  56
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-a-beautiful-day/page-009.jpg",
+          "image_alt": "尼古拉斯抱着膝盖跃向河水，雅各布已经在水中，毛驴溅起大片水花，小狗从河岸跳了下来。",
+          "text_zh": "“来比赛，看谁先到水里！”雅各布说。",
+          "text_original": "“Race you to the water!” says Jacob.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-009.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 36,
+              "zh": 18
+            },
+            "text_sha256": {
+              "en": "1c641d8c31aa8eb2f095f302a375f759d6206a0813887f4b7ae2e4be26bd117c",
+              "zh": "6cbfe22d1b07a3f9fe9bd5adc4683cc08fc00de47c2059c053dac947bfe65786"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 24,
+                  "zh": 13
+                },
+                "speaker": {
+                  "en": "Jacob",
+                  "zh": "雅各布"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  91,
+                  76
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-a-beautiful-day/page-010.jpg",
+          "image_alt": "一家人和雅各布坐卧在红白格野餐毯上吃东西，篮子放在中间，小狗在毯边嗅闻，毛驴在一旁吃草。",
+          "text_zh": "“孩子们，快来吃东西啦！”妈妈说。",
+          "text_original": "“Come and eat, boys and girls,” says Mom.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-010.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 41,
+              "zh": 17
+            },
+            "text_sha256": {
+              "en": "81f425bb7c3c285d230067c8975837036005d51ec96c43916fc67f42c31b7148",
+              "zh": "ab314eb13e28eb41165f21c86198b8426c2e0891b74ca6b32aa23a9cd8fb6257"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 31,
+                  "zh": 13
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  79,
+                  61
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-a-beautiful-day/page-011.jpg",
+          "image_alt": "傍晚的山坡上，尼古拉斯牵着妈妈的手挥手道别，雅各布站在通向房子的小路上，也举起了手。",
+          "text_zh": "“该回家啦。”妈妈说，“和雅各布说再见吧。”",
+          "text_original": "“Time to go home,” says Mom. “Say goodbye to Jacob.”",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-011.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 52,
+              "zh": 22
+            },
+            "text_sha256": {
+              "en": "236f92fb6b68e136e1dc92d4add7927bc07380855eb98db7bda14ebc05d0de83",
+              "zh": "c0d510f15599f2e89b50ee80afd4544d6b0f68efaa68b652060be19da5ded332"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 18,
+                  "zh": 7
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  20,
+                  59
+                ]
+              },
+              {
+                "start": {
+                  "en": 29,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 52,
+                  "zh": 22
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  20,
+                  59
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-a-beautiful-day/page-012.jpg",
+          "image_alt": "夜空布满星星，尼古拉斯和小狗在窗内睡着了，毛驴卧在屋外的树下，弯弯的小路通向远处的房子。",
+          "text_zh": "星星出来了。美好的一天过后，尼古拉斯甜甜地睡着了。",
+          "text_original": "The stars are out. Nicholas is fast asleep after a beautiful day.",
+          "audio_zh": "/assets/books/bd-a-beautiful-day/audio/zh/2bb81f091bef7087/page-012.mp3",
+          "audio_original": "/assets/books/bd-a-beautiful-day/audio/en/89fc959b6f558135/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-a-house-for-mouse",
       "title_zh": "小老鼠找新家",
       "title_original": "A House for Mouse",
       "author": "Michele Fry",
       "illustrator": "Amy Richards",
       "description_zh": "小狗、鹦鹉和小鱼都愿意分享住处，可小老鼠需要怎样的家？在现实与梦境中比较冷暖、干湿，发现适合自己的小角落。",
+      "reading_value": "找到适合自己的，才最舒服",
       "age_ranges": [
         "3-4"
       ],
@@ -25,7 +792,7 @@
       "featured_order": 2,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-a2f99279eb3b",
+      "content_version": "materials-13bf85ea1075f076dc91052afa172169a6748b878ff83784bc7c5c7055642551",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -344,6 +1111,7 @@
       "author": "Nicola Rijsdijk",
       "illustrator": "Maya Marshak",
       "description_zh": "从肯尼亚的菜园到种树行动，认识旺加里·马塔伊的求学与环保故事。适合 5–6 岁成人陪读，讨论树木、家乡和集体行动；含贫困与人物离世情节。",
+      "reading_value": "从一粒种子认识爱护自然的力量",
       "age_ranges": [
         "5-6"
       ],
@@ -361,7 +1129,7 @@
       "featured_order": 4,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-c1b51b1979f7",
+      "content_version": "materials-3cf83f1fef8c293ce818a47cb5c4cb0a1aac6337e821f89e3217dc55b00ecced",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -506,6 +1274,7 @@
       "author": "Nozizwe Herero",
       "illustrator": "Siya Masuku",
       "description_zh": "小鸡黛西想飞，嘲笑和失败让她难过，妈妈的支持陪她继续尝试。适合讨论愿望、挫折与鼓励。",
+      "reading_value": "鼓励孩子勇敢做自己，遇到挫折再试试",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -524,7 +1293,7 @@
       "featured_order": 3,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-45246f14806b",
+      "content_version": "materials-2f87642e6fee50afacab2838aaf2034729942675dc841000c7df10a9494eef12",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -964,12 +1733,272 @@
       ]
     },
     {
+      "id": "bd-bathtub-safari",
+      "title_zh": "浴缸里的大冒险",
+      "title_original": "Bathtub Safari",
+      "author": "Tracy Lynn Chemaly",
+      "illustrator": "Robert McEwan",
+      "description_zh": "洗澡是杰克最喜欢的时光。泡泡一转，浴缸里好像来了鳄鱼、大象和长颈鹿！水彩画与有趣的声音，带来一场想象中的动物冒险，最后回到暖暖的被窝。",
+      "reading_value": "把洗澡变成一场想象力冒险",
+      "age_ranges": [
+        "3-4"
+      ],
+      "categories": [
+        "animals",
+        "habits",
+        "bedtime"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-bathtub-safari/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-14T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-5ba83eda4c6b2bcb17f376365e08b4883531dd46734c9018c597beea65bd406b",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/bathtub-safari/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Bathtub Safari》由Book Dash发布；作者Tracy Lynn Chemaly，原插画Robert McEwan，设计Sarah-Jane Williams；官网未列编辑姓名。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文正文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。原作无字故事页的中英文朗读串词由小小绘本馆补写，页码：12。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-14T02:19:00.196Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-14T02:18:38.389Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-bathtub-safari/page-001.jpg",
+          "image_alt": "金发的杰克坐在浴缸里，妈妈从浴室门边探头叮嘱；旁边放着洗浴瓶子和海绵。",
+          "text_zh": "洗澡是杰克一天里最喜欢的时光。“我一会儿就回来。”妈妈说，“别忘了洗洗耳朵后面哦。”",
+          "text_original": "Bathtime is Jack’s favourite part of the day. ‘I’ll be back in a few moments,’ says his mom. ‘Make sure to clean behind your ears.’",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-001.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 131,
+              "zh": 42
+            },
+            "text_sha256": {
+              "en": "602a5ecb9dfd55868c131a01c384706e38ae0950ff60c6cfbd6a6bc1f28d4d8a",
+              "zh": "730fe9109d5c5b1e7fb21f9fedf63679128d630b32f2d9af5bc7bb1d8d80f8c3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 46,
+                  "zh": 15
+                },
+                "end": {
+                  "en": 78,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  33,
+                  58
+                ]
+              },
+              {
+                "start": {
+                  "en": 93,
+                  "zh": 29
+                },
+                "end": {
+                  "en": 131,
+                  "zh": 42
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  33,
+                  58
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-bathtub-safari/page-002.jpg",
+          "image_alt": "杰克从紫色泡泡里露出头，一条绿色鳄鱼的尾巴出现，接着鳄鱼的头也探了出来。",
+          "text_zh": "哗啦一声，一条尾巴摆了摆。接着……",
+          "text_original": "There’s a SWOOSH. And a swish of a tail. And then...",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-002.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-bathtub-safari/page-003.jpg",
+          "image_alt": "杰克张开双手，骑在跃出泡泡的绿色鳄鱼背上，身上穿着红色短裤。",
+          "text_zh": "杰克的浴缸大冒险开始啦！",
+          "text_original": "Jack’s bathtub safari begins!",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-003.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-bathtub-safari/page-004.jpg",
+          "image_alt": "杰克用粉色瓶子当望远镜张望；一头紫色大象从泡泡里出现，长鼻子卷到杰克身边。",
+          "text_zh": "快看，什么来了！扭一扭，转一转……有个东西变长了……原来是一头……",
+          "text_original": "Look at what’s coming! There’s a twist and a turn... Something’s growing... It’s a...",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-004.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-bathtub-safari/page-005.jpg",
+          "image_alt": "紫色大象扬起长鼻子，朝坐在背上的杰克喷水，周围堆着紫色泡泡。",
+          "text_zh": "嘟——！",
+          "text_original": "TOOOT!",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-005.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-bathtub-safari/page-006.jpg",
+          "image_alt": "杰克站在紫色大象背上，一只长颈鹿从泡泡里伸出长长的脖子，低下头靠近他。",
+          "text_zh": "轰隆隆！它越升越高，往上，往上，再往上，接着……",
+          "text_original": "There’s a RUMBLE! It’s going up, UP, UP and...",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-006.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-bathtub-safari/page-007.jpg",
+          "image_alt": "长颈鹿把脖子伸得斜斜的，杰克顺着脖子滑下去，落入水花和泡泡中。",
+          "text_zh": "扑通，水花飞起来！",
+          "text_original": "SPLASH!",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-007.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-bathtub-safari/page-008.jpg",
+          "image_alt": "一块黄色海绵在泡泡里变成河马的脑袋，杰克站在黄色河马身旁，张开双臂笑着。",
+          "text_zh": "哗啦啦，泡泡冒起来。又到了……",
+          "text_original": "There’s a SPLOSH. Something bubbles. It’s time to...",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-008.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-bathtub-safari/page-009.jpg",
+          "image_alt": "戴墨镜的杰克坐在黄色河马背上，身旁放着红色收音机；橙色狮子的头从泡泡后面露出来。",
+          "text_zh": "啊——，真舒服。可是，后面好像藏着什么……",
+          "text_original": "AAAAAH. But something’s lurking in the background...",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-009.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-bathtub-safari/page-010.jpg",
+          "image_alt": "橙色鬃毛的狮子从紫色泡泡中探出身子，张大嘴巴吼叫。",
+          "text_zh": "吼——！",
+          "text_original": "ROAR!",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-010.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-bathtub-safari/page-011.jpg",
+          "image_alt": "妈妈站在浴室里，杰克又坐回小浴缸，水里漂着洗浴瓶子、海绵和绿色玩具。",
+          "text_zh": "“该出来啦。洗干净了吗？准备上床睡觉喽。”",
+          "text_original": "‘Time to get out. I hope you’re clean and ready for bed.’",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-011.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 57,
+              "zh": 21
+            },
+            "text_sha256": {
+              "en": "6ac16a1797d3a04d2561e9352ae4a180b4efbbf6fd40edd28515c54380287542",
+              "zh": "2258edea20b0bf591de25d180408db4c5a541b88dcc6933c6e55cb53d13ac20d"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 57,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 3,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  25,
+                  49
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-bathtub-safari/page-012.jpg",
+          "image_alt": "杰克闭着眼睛躺在床上，盖着紫色被子，枕边和被边露出小动物玩具，床头柜上放着红色收音机。",
+          "text_zh": "杰克钻进了被窝，小小的动物朋友们陪在身边。",
+          "text_original": "Jack is tucked up in bed, with his little animal friends close by.",
+          "audio_zh": "/assets/books/bd-bathtub-safari/audio/zh/57245c7c67149d4b/page-012.mp3",
+          "audio_original": "/assets/books/bd-bathtub-safari/audio/en/4ab463089829024f/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-best-friends",
       "title_zh": "好朋友",
       "title_original": "Best Friends",
       "author": "Julia Smuts Louw",
       "illustrator": "Gerhard van Wyk",
       "description_zh": "好朋友没来上学，津齐该和谁玩呢？从一起做康复卡片开始，她发现：交新朋友，也能珍惜老朋友。",
+      "reading_value": "交新朋友，也能珍惜老朋友",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -988,7 +2017,7 @@
       "featured_order": 12,
       "published_at": "2026-11-10T07:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-7f2b6fd20fd0",
+      "content_version": "materials-a1d645fa85604a0b2a72567168704332949cd6882dcccf21a6304340b1c2c505",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -1571,6 +2600,7 @@
       "author": "Edna Gicovi",
       "illustrator": "Ellen Heydenrych",
       "description_zh": "博拉害怕打针。爸爸陪着他，医生先和玩具猴子乔乔做示范，再温柔地帮他完成检查。故事接纳孩子的担心，也让孩子看见陪伴和勇气；适合看医生前一起共读。",
+      "reading_value": "看医生前读一读，害怕也可以很勇敢",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -1589,7 +2619,7 @@
       "featured_order": 17,
       "published_at": "2026-11-12T08:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-f7e7380e6ad7",
+      "content_version": "materials-e3dc7709e73dc9be562603d8d683f73c2a7aa9056b37b1a52947efdb04585b37",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -2161,6 +3191,7 @@
       "author": "Nathalie Koenig",
       "illustrator": "Josh Morgan",
       "description_zh": "小朋友和小猪一起找胡萝卜、玩捉迷藏。一天，小猪不见了；再次相见时，还多了三个小伙伴。暖黄色水彩与简短重复句，适合亲子指图、寻找线索和一起数一数。",
+      "reading_value": "在寻找小猪的游戏里观察和数数",
       "age_ranges": [
         "0-2",
         "3-4"
@@ -2180,7 +3211,7 @@
       "featured_order": 16,
       "published_at": "2026-11-12T08:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-ab9e02490c54",
+      "content_version": "materials-b8c31874c043f4ac502430b3de89560e4c7a05ef86875df49c1bea470b9b7bc1",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -2618,6 +3649,7 @@
       "author": "Nicola Rijsdijk",
       "illustrator": "Karen Lilje",
       "description_zh": "小猫一会儿爬窗帘，一会儿追蝴蝶，午睡时又去了哪里？重复短句和寻找游戏，适合亲子指认、模仿动作与预测。",
+      "reading_value": "在寻找与重逢中感受陪伴",
       "age_ranges": [
         "0-2",
         "3-4"
@@ -2636,7 +3668,7 @@
       "featured_order": 1,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-d4c52c29a3a5",
+      "content_version": "materials-f61225c2f67b21661cdfc6a705358b09eb35689ebd8257e2b2b43cba0c45ddf2",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -2781,6 +3813,7 @@
       "author": "Nasrin Siege",
       "illustrator": "Subi Bosa",
       "description_zh": "乌龟奶奶受伤了，小乌龟到兔子朋友家暂住。一起玩耍、入睡，再迎接家人回来，感受朋友的陪伴与关心。",
+      "reading_value": "暂时离开爸妈，也能被朋友温暖陪伴",
       "age_ranges": [
         "3-4"
       ],
@@ -2799,7 +3832,7 @@
       "featured_order": 11,
       "published_at": "2026-11-10T07:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-7380639d9b0e",
+      "content_version": "materials-789b270cf369776054ca32821b0646c9a66a18a0561e8b32a8b057aef68c570a",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -2873,8 +3906,8 @@
                   "zh": 0
                 },
                 "end": {
-                  "en": 42,
-                  "zh": 15
+                  "en": 31,
+                  "zh": 11
                 },
                 "speaker": {
                   "en": "Mum",
@@ -2894,8 +3927,8 @@
                   "zh": 15
                 },
                 "end": {
-                  "en": 74,
-                  "zh": 28
+                  "en": 62,
+                  "zh": 23
                 },
                 "speaker": {
                   "en": "Busi",
@@ -2985,8 +4018,8 @@
                   "zh": 0
                 },
                 "end": {
-                  "en": 35,
-                  "zh": 15
+                  "en": 22,
+                  "zh": 11
                 },
                 "speaker": {
                   "en": "Tendai",
@@ -3031,8 +4064,8 @@
                   "zh": 0
                 },
                 "end": {
-                  "en": 45,
-                  "zh": 15
+                  "en": 18,
+                  "zh": 9
                 },
                 "speaker": {
                   "en": "Granny",
@@ -3052,8 +4085,8 @@
                   "zh": 15
                 },
                 "end": {
-                  "en": 79,
-                  "zh": 33
+                  "en": 66,
+                  "zh": 28
                 },
                 "speaker": {
                   "en": "Mum",
@@ -3091,12 +4124,352 @@
       ]
     },
     {
+      "id": "bd-feathered-friends",
+      "title_zh": "羽毛朋友",
+      "title_original": "Feathered Friends",
+      "author": "Jacqui L’Ange",
+      "illustrator": "Daniela Hammond",
+      "description_zh": "两只毛茸茸的小企鹅总在一起。它们沿着冰雪走呀走，遇见一位头顶黄羽毛的新朋友，也发现自己正在悄悄长大。细腻水彩适合观察羽毛变化、聊聊成长与友谊。",
+      "reading_value": "在企鹅的变化里聊聊成长与友谊",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "nature",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-feathered-friends/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-14T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-2e72d5578edadfba49d48c4538ac99544772b8ba2f5cbd4c7128dd38fe6ab5b1",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/feathered-friends/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Feathered Friends》由Book Dash发布；作者Jacqui L’Ange，原插画Daniela Hammond，设计Stephanie Pretorius，编辑Helen Moffett。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文正文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。原作无字故事页的中英文朗读串词由小小绘本馆补写，页码：4,6,8,11,12。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-14T02:20:40.268Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-14T02:20:12.974Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-feathered-friends/page-001.jpg",
+          "image_alt": "两只棕色绒毛的小王企鹅并肩站在冰雪上，一只伸出短短的翅膀，远处有企鹅群。",
+          "text_zh": "我们是两只毛茸茸的小王企鹅。做什么事，我们都在一起。",
+          "text_original": "We are the oakum boys. We do everything together.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-001.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-feathered-friends/page-002.jpg",
+          "image_alt": "两只棕色小企鹅站在雪地上，抬头望向前方密密的黑白企鹅群，上方是蓝色冰雪。",
+          "text_zh": "企鹅不会飞，却会游泳。不过我们还小，还不能下水游泳。所以，我们就走一走。",
+          "text_original": "Penguins don’t fly, they swim. But we’re too young to swim. So we walk.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-002.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-feathered-friends/page-003.jpg",
+          "image_alt": "两只小企鹅沿着雪地上的脚印走向远方，周围是淡蓝色冰雪和远山。",
+          "text_zh": "有一天，我们去走一段长长的路。走呀，走呀，直到看见新鲜事。",
+          "text_original": "One day we went for a long walk. We walked and walked. Until we saw something new.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-003.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-feathered-friends/page-004.jpg",
+          "image_alt": "许多黑白相间的企鹅聚在雪地上，右边一只头顶有黄色冠羽、嘴巴橙红的企鹅格外显眼。",
+          "text_zh": "在黑白相间的企鹅群里，我们看见一只头顶长着鲜黄色羽毛的企鹅。",
+          "text_original": "Among the black-and-white penguins, we spot a penguin with bright yellow feathers on his head.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-004.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-feathered-friends/page-005.jpg",
+          "image_alt": "左边的两只棕色小企鹅望向右边的新朋友，新朋友头顶伸着黄色冠羽，张开双翅站着。",
+          "text_zh": "他的头上长着什么呀！",
+          "text_original": "He’s got something on his head!",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-005.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-feathered-friends/page-006.jpg",
+          "image_alt": "两只棕色小企鹅走在远处的冰雪上，头顶黄色冠羽的新朋友站在左下方，转头望着它们。",
+          "text_zh": "新朋友也跟来了，我们继续一起往前走。",
+          "text_original": "Our new friend comes along, and we keep walking together.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-006.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-feathered-friends/page-007.jpg",
+          "image_alt": "两只小企鹅抖动身体，棕色绒毛纷纷飘落，黑白的新羽毛露了出来，一只低头看着自己的肚子。",
+          "text_zh": "你变样啦！你也变样啦！",
+          "text_original": "You’re changing! So are you!",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-007.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 28,
+              "zh": 11
+            },
+            "text_sha256": {
+              "en": "e0e3c81b8b1ba9763dba923a90b1072bf5915c84a88a47dd7c9c00669f107a57",
+              "zh": "0aff25e820baae8e56102520f73416eb33c9c15a9bd74880afbe4b044b651041"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 16,
+                  "zh": 5
+                },
+                "speaker": {
+                  "en": "Penguin on the left",
+                  "zh": "左边的小企鹅"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  27,
+                  46
+                ]
+              },
+              {
+                "start": {
+                  "en": 17,
+                  "zh": 5
+                },
+                "end": {
+                  "en": 28,
+                  "zh": 11
+                },
+                "speaker": {
+                  "en": "Penguin on the right",
+                  "zh": "右边的小企鹅"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  77,
+                  48
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-feathered-friends/page-008.jpg",
+          "image_alt": "整幅画是交叠飞舞的棕色绒羽、细长的蓝色羽毛和金黄色细羽，能看见不同的羽毛纹理。",
+          "text_zh": "软软的棕色绒毛和光滑的新羽毛，在四周轻轻飞舞。",
+          "text_original": "Soft brown fluff and smooth new feathers swirl all around.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-008.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-feathered-friends/page-009.jpg",
+          "image_alt": "两只换上黑白羽毛的小王企鹅分站两边，一只挺着白肚子张开翅膀，另一只低头缩着身体站在小片蓝色冰面上。",
+          "text_zh": "这样也不错！也没有那么冷！",
+          "text_original": "It’s not so bad! It’s not so cold!",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-009.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 34,
+              "zh": 13
+            },
+            "text_sha256": {
+              "en": "f70ead7d685959b541b3391c53270fb6ceeaafddaa8397523d37a4d53e8cf391",
+              "zh": "a1cfda1aa4c4c3aeddec014c966fe15f4d729b1c4c1343bf193b285a84cbcb7e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 16,
+                  "zh": 6
+                },
+                "speaker": {
+                  "en": "Penguin on the left",
+                  "zh": "左边的小企鹅"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  30,
+                  51
+                ]
+              },
+              {
+                "start": {
+                  "en": 17,
+                  "zh": 6
+                },
+                "end": {
+                  "en": 34,
+                  "zh": 13
+                },
+                "speaker": {
+                  "en": "Penguin on the right",
+                  "zh": "右边的小企鹅"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  77,
+                  50
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-feathered-friends/page-010.jpg",
+          "image_alt": "左边两只小王企鹅靠在一起，面向右边的新朋友；新朋友顶着黄色冠羽，举起一只翅膀。",
+          "text_zh": "可是，谁来教我们游泳呢？我来！",
+          "text_original": "But who’s going to teach us to swim? I will!",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-010.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 44,
+              "zh": 15
+            },
+            "text_sha256": {
+              "en": "2e59193efcb168af18b5ae913bf980e5cb65b5a4fbaf7ce0df69cd79b2ee55f2",
+              "zh": "eefa5642d9d999cc41da4580e6cc253c9bb888d36fe18709143cbbbfe021b44a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 36,
+                  "zh": 12
+                },
+                "speaker": {
+                  "en": "Young penguins",
+                  "zh": "小企鹅们"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  24,
+                  52
+                ]
+              },
+              {
+                "start": {
+                  "en": 37,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 44,
+                  "zh": 15
+                },
+                "speaker": {
+                  "en": "New friend",
+                  "zh": "新朋友"
+                },
+                "x": 52,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  79,
+                  51
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-feathered-friends/page-011.jpg",
+          "image_alt": "三只企鹅在旋转的蓝色水流中张开双翅游动，黄色冠羽的新朋友在前，两只小王企鹅在两侧。",
+          "text_zh": "我们下水啦，和新朋友一起游泳！",
+          "text_original": "Into the water we go, swimming with our new friend!",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-011.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-feathered-friends/page-012.jpg",
+          "image_alt": "三位企鹅朋友并排站在蓝色水边的冰雪上，远处右边还有一只黑白企鹅，天空下垂着深蓝色云层。",
+          "text_zh": "我们一起站在蓝蓝的水边，准备迎接更多冒险。",
+          "text_original": "We stand together by the blue water, ready for more adventures.",
+          "audio_zh": "/assets/books/bd-feathered-friends/audio/zh/89ef3793a2a7a9ab/page-012.mp3",
+          "audio_original": "/assets/books/bd-feathered-friends/audio/en/d32a095876f7a272/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-fifi-and-teddy",
       "title_zh": "菲菲和泰迪熊",
       "title_original": "Fifi and Teddy",
       "author": "Tshepo Letsapa",
       "illustrator": "Alison de Villiers",
       "description_zh": "菲菲最喜欢的泰迪熊不见了！她找床上、找窗外，最后发现泰迪只是洗了个澡。温暖水彩讲述依恋、担心和重逢。",
+      "reading_value": "陪孩子聊聊想念，珍惜心爱的陪伴",
       "age_ranges": [
         "3-4"
       ],
@@ -3114,7 +4487,7 @@
       "featured_order": 14,
       "published_at": "2026-11-10T07:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-d9ae0782cdd5",
+      "content_version": "materials-8c76ee6120a0cf079738d96221b1a612b5a0c111a2697f9282f7f19d6abf4c76",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -3407,6 +4780,7 @@
       "author": "Oarabetse Ditlhareng",
       "illustrator": "Neil Badenhorst",
       "description_zh": "法法的心情会变成看得见的模样。一天，一朵皱眉的坏心情云跟着他，怎么甩也甩不掉。妈妈陪着他，笑容慢慢回来了。用想象认识情绪：有不同的感受也没关系。",
+      "reading_value": "让孩子知道：有坏心情也没关系",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -3424,7 +4798,7 @@
       "featured_order": 0,
       "published_at": "2026-11-13T03:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-0817d4f41c8d912ce1a3e48fb5b16a34af711125a15fd18153d81066bd0c082b",
+      "content_version": "materials-2b1f8c14cab39f5e3615d97582c7907b43c5cf652f727cb7c4cf0e16663ee94a",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -3569,6 +4943,7 @@
       "author": "Sam Beckbessinger",
       "illustrator": "Megan Andrews",
       "description_zh": "河马的舞步总打扰邻居，她难过地停了下来，一只小蚱蜢却听见了新的节奏。模仿拟声词，讨论表达自己和照顾别人。",
+      "reading_value": "喜欢自己的舞步，也学着体谅别人",
       "age_ranges": [
         "3-4"
       ],
@@ -3586,7 +4961,7 @@
       "featured_order": 9,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-87d82bb6e44f",
+      "content_version": "materials-080656d0e73754aa7d26c43f0131c4e2f71cc9b6392f73fd84ee2e7b0d7b8e01",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -3873,12 +5248,288 @@
       ]
     },
     {
+      "id": "bd-i-can-do-it",
+      "title_zh": "我能自己来！",
+      "title_original": "I can do it!",
+      "author": "Wandile Mathe",
+      "illustrator": "Elliot Jaudz Taylor",
+      "description_zh": "莉芙喜欢阳光、花朵，也喜欢坐着轮椅出门。大家总想帮她，可她也想自己来、慢慢交朋友。明亮的太阳脸角色，用小小日常讲述自主、友谊和彼此尊重。",
+      "reading_value": "尊重孩子的“我能自己来”",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "emotions",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-i-can-do-it/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-14T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-d37a4ad0101638ca879fb7d117d7ecc4e72e495d61fb2742e6e85f2b2d3aa1ec",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/i-can-do-it/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《I can do it!》由Book Dash发布；作者Wandile Mathe，原插画Elliot Jaudz Taylor，设计Terri Lourens，编辑Cherie Wright。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文正文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-14T02:21:29.13Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-14T02:21:04.642Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-i-can-do-it/page-001.jpg",
+          "image_alt": "太阳脸女孩莉芙坐在装饰着花朵和爱心的轮椅里，手拿绿色洒水壶给花浇水，穿着紫色上衣和粉色袜子。",
+          "text_zh": "莉芙是个快乐的女孩，喜欢晒太阳，看花园里的花儿开得鲜艳。她也喜欢坐着轮椅出门。",
+          "text_original": "Livhu is a happy girl who enjoys soaking up the sun and watching flowers bloom brightly in her garden. She also enjoys going outside in her wheelchair.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-001.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-i-can-do-it/page-002.jpg",
+          "image_alt": "左边三个月亮脸的人望着轮椅里的莉芙，其中一人伸手指着她；莉芙低着眼睛，嘴角向下。",
+          "text_zh": "出门时，有些人会盯着她看。“哎呀！”他们说，觉得她很可怜。",
+          "text_original": "When she is outside, some people stare at her. “Aww!” they say, feeling sorry for her.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-002.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-i-can-do-it/page-003.jpg",
+          "image_alt": "小店柜台前，粉色星球脸的收银员俯下身，手扶莉芙的轮椅把手，莉芙回头抬起手和她说话。",
+          "text_zh": "“可是，我想留在队伍里，和大家说说话呀。”莉芙对收银员说。收银员正推着她的轮椅，想让她先到小店的队伍前面去。",
+          "text_original": "“But I want to stay and talk to people,” Livhu says to the cashier who wheels her to the front of the line in the spaza shop.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-003.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 125,
+              "zh": 54
+            },
+            "text_sha256": {
+              "en": "8c0f102b25957e1f93f75fc95b1935e63f2dfe758fd535a772b0f163ec13bf8c",
+              "zh": "d487255ee4296ec53c0a99a3fe224432358b18bfcfb7c702992817037e637644"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 40,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Livhu",
+                  "zh": "莉芙"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  82,
+                  63
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-i-can-do-it/page-004.jpg",
+          "image_alt": "莉芙坐在绿色山坡上的轮椅里举起一只手，身后站着两个分别长着蓝色和橙色星球脸的孩子。",
+          "text_zh": "“我们可以推你下坡吗？”公园里的几个孩子问。",
+          "text_original": "“May we push you down the slope?” offer some of the kids in the park.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-004.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 69,
+              "zh": 22
+            },
+            "text_sha256": {
+              "en": "0567cfd5cdbf74b0d19a5eb5647aea5fb1761d604fd94a659ea3c3b69567a5d6",
+              "zh": "ba64d0982b993024bac411dbf4f638eda1c6bbae5a853db16e26483d8fffefff"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 33,
+                  "zh": 12
+                },
+                "speaker": {
+                  "en": "Children in the park",
+                  "zh": "公园里的孩子们"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  87,
+                  28
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-i-can-do-it/page-005.jpg",
+          "image_alt": "莉芙坐着轮椅沿着花草间的坡道滑下，笑着张开双臂，轮椅上的花朵和彩色图案清晰可见。",
+          "text_zh": "“呼——！”她们顺着山坡往下走，清新的风掠过莉芙的脸颊。",
+          "text_original": "“Swishhhh!” Livhu feels the fresh air whip across her face as they go down the hill.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-005.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-i-can-do-it/page-006.jpg",
+          "image_alt": "左侧留着白色背景，右侧橙色画面里浮着三张笑脸，分别像戴帽子的星球、蓝色星球和小小的蓝色圆球。",
+          "text_zh": "莉芙知道，大家都想帮忙，可是……",
+          "text_original": "Livhu knows people want to help, BUT...",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-006.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-i-can-do-it/page-007.jpg",
+          "image_alt": "莉芙坐在桌旁，举起手中的小勺，桌上摆着杯子、罐子、水壶和茶包。",
+          "text_zh": "……大多数时候，她更喜欢自己动手做。",
+          "text_original": "...mostly she likes to do things for herself.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-007.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-i-can-do-it/page-008.jpg",
+          "image_alt": "小店里，莉芙坐在轮椅中，面向几位星星脸和月亮脸的新朋友挥手，柜台后的收银员望着他们。",
+          "text_zh": "在小店里，她喜欢和排队的人聊天，交新朋友。“嗨！我叫莉芙。”",
+          "text_original": "At the spaza shop she enjoys chatting to people in the line and making new friends. “Hi! I am Livhu.”",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-008.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 101,
+              "zh": 30
+            },
+            "text_sha256": {
+              "en": "10d1f2619bd63ab82c10a6dc55ebd5144ccf8d455bb2e825c23546762f766df0",
+              "zh": "34f78483b55de09e94a236d844a473339dd4b07c19a56aac80a4e786a1e94537"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 84,
+                  "zh": 21
+                },
+                "end": {
+                  "en": 101,
+                  "zh": 30
+                },
+                "speaker": {
+                  "en": "Livhu",
+                  "zh": "莉芙"
+                },
+                "x": 3,
+                "y": 3,
+                "width": 44,
+                "target": [
+                  82,
+                  68
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-i-can-do-it/page-009.jpg",
+          "image_alt": "莉芙坐在轮椅中紧紧拉着绳子，蓝色和橙色星球脸的孩子站在她身后一起用力，草地上开着小花。",
+          "text_zh": "回到公园，她和其他孩子一起，玩起了有趣的拔河游戏。",
+          "text_original": "Back in the park, she joins in a fun game of tug-of-war with the other children.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-009.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-i-can-do-it/page-010.jpg",
+          "image_alt": "蓝天白云前，一根棕色绳子被用力拉紧，中间的纤维散开，两条粉色带子向上飘起。",
+          "text_zh": "“哇——！”绳子绷得紧紧的。",
+          "text_original": "“Whoaaa!” The rope stretches.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-010.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-i-can-do-it/page-011.jpg",
+          "image_alt": "右侧紫色背景里是莉芙明亮的太阳笑脸，眼睛睁得圆圆的，嘴角大大地向上扬起。",
+          "text_zh": "莉芙真开心。轮椅陪着她，让她能和喜欢的人一起快乐地玩耍。",
+          "text_original": "Livhu is so happy. Her wheelchair helps her have fun with her favourite people.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-011.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-i-can-do-it/page-012.jpg",
+          "image_alt": "莉芙穿着粉色睡衣躺在蓝色星星被子里，抱着小太阳玩偶，床边挂着灯串，窗外是一弯月亮。",
+          "text_zh": "夜晚，莉芙甜甜地睡着了。她想着，以后还要坐着轮椅，和新交的好朋友经历更多有趣的冒险。",
+          "text_original": "At night she falls asleep thinking about more great adventures to have with her wheelchair and her new besties.",
+          "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-012.mp3",
+          "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-lets-be-friends",
       "title_zh": "交个朋友吧",
       "title_original": "Let’s be Friends",
       "author": "Murray Hunter",
       "illustrator": "Emma Bosman",
       "description_zh": "小鲨鱼想交朋友，可它一露出大牙齿，大家就游走了。生日那天，门外传来了敲门声……海底原画和重复问候，适合一起聊聊初次见面的紧张与接纳。",
+      "reading_value": "鼓励孩子说声你好，迈出交友第一步",
       "age_ranges": [
         "3-4"
       ],
@@ -3896,7 +5547,7 @@
       "featured_order": 0,
       "published_at": "2026-11-13T03:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-76859cd9c65e21c418f1ad92c7bf9de1ba7d7bb7fc6cca4bc94e7ac7bc6ccd66",
+      "content_version": "materials-ac060729d77347ef6a91557b6ec25ad0d10db340d36104380af07268786cd7dd",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -4226,6 +5877,7 @@
       "author": "Candice Dingwall",
       "illustrator": "Steven McKimmie",
       "description_zh": "同伴忙着储粮，爱读书的小蚂蚁却有自己的发现。完整的因果故事，适合复述计划如何解决问题，讨论阅读与合作。",
+      "reading_value": "在故事里发现阅读与合作的力量",
       "age_ranges": [
         "5-6"
       ],
@@ -4243,7 +5895,7 @@
       "featured_order": 6,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-94696636bffa",
+      "content_version": "materials-6222a948e2ff2c2fa5fef5e0de4cc7cc7ad212c4bdca0aa24124bb4ba5f2e532",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -4536,6 +6188,7 @@
       "author": "Mirna Lawrence",
       "illustrator": "Nicola Anne Smith",
       "description_zh": "小山羊一路寻找最甜的青草，没发现自己离妈妈越来越远。清淡水彩与重复句式，适合亲子指图、预测与复述。",
+      "reading_value": "出门留意周围，记得和家人照应",
       "age_ranges": [
         "0-2",
         "3-4"
@@ -4555,7 +6208,7 @@
       "featured_order": 13,
       "published_at": "2026-11-10T07:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-9654f3f6ed32",
+      "content_version": "materials-960e0267407c1f7ac2f03196ad0f3de3e6ac179cf28d0fa57ee6f2df2bae5c45",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -4869,6 +6522,7 @@
       "author": "Sabina Mutangadura Seldon",
       "illustrator": "Heleen Steyn van der Merwe",
       "description_zh": "贾布想玩迪凯托石子游戏，可妈妈、爸爸和哥哥都在忙。他先自己玩起来，慢慢吸引了全家加入。带着纸感的温暖原画，讲述主动尝试、等待和家人相聚。",
+      "reading_value": "等待陪伴时，也能先发现自己的乐趣",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -4887,7 +6541,7 @@
       "featured_order": 18,
       "published_at": "2026-11-12T08:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-73aef17cc015",
+      "content_version": "materials-13f4953ae56f40bf340569007c1d3cae5b50985076db77811a349f000aa853ab",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -5143,6 +6797,7 @@
       "author": "Jacqui L’Ange",
       "illustrator": "Megan Lötter",
       "description_zh": "千足虫的鞋子不见了。它问刺猬、蜗牛、长颈鹿，一路找到狮子家。鞋子原来藏在大家身边！鲜亮原画藏着寻找线索，结尾适合聊聊借东西前先问一声。",
+      "reading_value": "借东西先问一声，学着尊重别人",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -5162,7 +6817,7 @@
       "featured_order": 0,
       "published_at": "2026-11-13T03:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-e735fdf80b5b7cb0478aa514b53807500bd073c30d8e8b44045fc42d3190b07c",
+      "content_version": "materials-b8070918b7f69d2110eca3cf7d6e04d7a59e4856bb099135266528e4ee8906c0",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -5714,6 +7369,7 @@
       "author": "Paul Kennedy",
       "illustrator": "Graham Paterson",
       "description_zh": "树懒先生一心想睡觉，可树枝旁总有新邻居。跟随重复问句猜下一位动物，观察局部线索，直到找到适合休息的地方。",
+      "reading_value": "跟着树懒猜一猜，练习观察与预测",
       "age_ranges": [
         "3-4"
       ],
@@ -5731,7 +7387,7 @@
       "featured_order": 5,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-2e2e2f74cf2c",
+      "content_version": "materials-0f26eb1f91400f0e401dc2e3bffd6ff55f8004244341f321914ae7f596a6d055",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -6132,6 +7788,7 @@
       "author": "Crystal Warren",
       "illustrator": "Megan Naudé",
       "description_zh": "蓝鸟嫌旧窝不够好，拉着棕鸟寻找新家。软软的、彩色的、亮闪闪的，哪个才适合它们？一路寻找和几次小意外，让两个朋友发现家的可贵。",
+      "reading_value": "陪孩子分辨：好看和适合有什么不同",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -6150,7 +7807,7 @@
       "featured_order": 0,
       "published_at": "2026-11-13T03:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-863110d93832ce4a0d7137a2b96233cf37feef9e7f3cafef2a4e25c20663e23b",
+      "content_version": "materials-4e701fbe2c9321a022760b4a1706d3beadcc52aec00f804e9f2e091c821e2d10",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -6675,6 +8332,7 @@
       "author": "Maya Fowler",
       "illustrator": "Katrin Coetzer",
       "description_zh": "陆龟一路寻找自己的家，背上的朋友越来越多，天气也越来越糟。通过重复叙事、角色累加与结尾反转，练习观察和预测。",
+      "reading_value": "一起寻找线索，猜猜家的秘密",
       "age_ranges": [
         "3-4",
         "5-6"
@@ -6693,7 +8351,7 @@
       "featured_order": 7,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-48d8d7c1d448",
+      "content_version": "materials-fc2d17d48812fab9b7267f3070e515a59d246b35984fde41159fa7806e52890d",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -7360,6 +9018,7 @@
       "author": "Kate Sidley",
       "illustrator": "Robyn Penn",
       "description_zh": "没有长鼻子，没有尾巴，也没有羽毛，那团影子究竟是什么？想象动物们的猜测变成了误会，结尾发现彼此都是宝宝。适合比较特征、分辨猜测与事实。",
+      "reading_value": "观察不同，也发现彼此的相同",
       "age_ranges": [
         "3-4"
       ],
@@ -7377,7 +9036,7 @@
       "featured_order": 10,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-658dd8fec2dc",
+      "content_version": "materials-a3222707c70a2aeeb2e6568bed513131dcba659546321010bd1e257c7cf3d928",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",
@@ -7744,6 +9403,7 @@
       "author": "Griffin Shea",
       "illustrator": "El Marto",
       "description_zh": "心爱的帽子不见了，小獴一路问朋友：你吃了我的帽子吗？从生气、道歉到一起做新帽子，重复问答里藏着体谅与合作。0–2岁适合亲子指图，3–4岁可以聊聊怎样解决小冲突。",
+      "reading_value": "遇到小冲突，一起道歉和想办法",
       "age_ranges": [
         "0-2",
         "3-4"
@@ -7762,7 +9422,7 @@
       "featured_order": 15,
       "published_at": "2026-11-12T08:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-original-v1-9815b08b95e0",
+      "content_version": "materials-ce83c66d1b4f4823e00dc56343fc0d688ecc9a4a1d8611d2f5d67ae60922f78c",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -8345,6 +10005,7 @@
       "author": "Paul Kennedy",
       "illustrator": "James Woolley",
       "description_zh": "小机器人捡到一颗纽扣，穿过热闹街道寻找主人，最终收获新朋友。适合讨论助人、换位思考和等车通行；信号灯情节是角色的误会。",
+      "reading_value": "从一颗纽扣开始，感受助人与交友的温暖",
       "age_ranges": [
         "5-6"
       ],
@@ -8362,7 +10023,7 @@
       "featured_order": 8,
       "published_at": "2026-11-06T04:00:00Z",
       "publish_status": "published",
-      "content_version": "bookdash-v1-story-art-v2-99900222971a",
+      "content_version": "materials-ba61ada5d485ee3adf4e4633c65e1a047f2cf1c5dd684e00f180b2accf0db73c",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 翻译与重绘版",

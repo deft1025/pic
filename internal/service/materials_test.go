@@ -8,6 +8,8 @@ import (
 	"os"
 	"pic/internal/model"
 	"pic/internal/repository"
+	"reflect"
+	"strings"
 	"testing"
 )
 
@@ -47,6 +49,7 @@ func materialFixture(t *testing.T) model.Book {
 	if err = json.Unmarshal(data, &b); err != nil {
 		t.Fatal(err)
 	}
+	b.ReadingValue = "陪孩子在故事里认识友谊"
 	b.Voices = map[string]model.Voice{"zh": {Provider: "edge-tts", VoiceID: "zh-CN-XiaoxiaoNeural", GeneratedAt: "2026-11-12T00:00:00Z", ReviewStatus: "pending"}, "en": {Provider: "edge-tts", VoiceID: "en-US-JennyNeural", GeneratedAt: "2026-11-12T00:00:00Z", ReviewStatus: "pending"}}
 	for i := range b.Pages {
 		b.Pages[i].AudioZH = "/assets/test/zh.mp3"
@@ -113,5 +116,25 @@ func TestNewMaterialHasNoApprovalGateOrRequiredLocalJSON(t *testing.T) {
 	}
 	if m.saved == nil || m.saved.Status != "published" || m.saved.License.ReviewStatus != "pending" {
 		t.Fatal("publication policy changed")
+	}
+}
+
+func TestReadingValueRequiredForPublishedMaterialsAndDoesNotInvalidateAudio(t *testing.T) {
+	for _, value := range []string{"", " \t ", strings.Repeat("字", 81), "两行\n文字"} {
+		m := &materialMemory{snapshot: repository.MaterialSnapshot{Book: materialFixture(t), Revision: "current"}}
+		next, _ := m.Material(context.Background(), "")
+		next.Book.ReadingValue = value
+		if err := NewMaterials(m, false).Save(context.Background(), next, nil); err == nil || m.saved != nil {
+			t.Fatalf("invalid recommendation was saved: %q", value)
+		}
+	}
+	m := &materialMemory{snapshot: repository.MaterialSnapshot{Book: materialFixture(t), Revision: "current"}}
+	next, _ := m.Material(context.Background(), "")
+	next.Book.ReadingValue = "  鼓励孩子勇敢做自己  "
+	if err := NewMaterials(m, false).Save(context.Background(), next, nil); err != nil {
+		t.Fatal(err)
+	}
+	if m.saved.ReadingValue != "鼓励孩子勇敢做自己" || !reflect.DeepEqual(m.saved.Pages, next.Book.Pages) || !reflect.DeepEqual(m.saved.Voices, next.Book.Voices) {
+		t.Fatal("recommendation edit changed story pages or recordings")
 	}
 }

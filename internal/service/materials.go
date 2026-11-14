@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strings"
 
 	"pic/internal/catalog"
 	"pic/internal/model"
@@ -34,6 +35,9 @@ func (s *Materials) Read(ctx context.Context, id string) (repository.MaterialSna
 func (s *Materials) IDs(ctx context.Context) ([]string, error) { return s.store.MaterialIDs(ctx) }
 
 func (s *Materials) Validate(b model.Book, check func([]string) error) error {
+	if b.Status == "published" && strings.TrimSpace(b.ReadingValue) == "" {
+		return fmt.Errorf("已发布物料必须包含推荐理由 reading_value，请根据故事内容填写一句短句")
+	}
 	if err := catalog.Validate(b, s.strict); err != nil {
 		return err
 	}
@@ -56,6 +60,7 @@ func (s *Materials) Validate(b model.Book, check func([]string) error) error {
 // Save clears stale generated speech and typography after edits, validates the
 // complete book, then commits with an optimistic revision check under a row lock.
 func (s *Materials) Save(ctx context.Context, next repository.MaterialSnapshot, check func([]string) error) error {
+	next.Book.ReadingValue = strings.TrimSpace(next.Book.ReadingValue)
 	current, err := s.store.Material(ctx, next.Book.ID)
 	if err != nil && !errors.Is(err, sql.ErrNoRows) {
 		return err
