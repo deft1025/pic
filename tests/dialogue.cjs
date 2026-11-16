@@ -33,18 +33,19 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
    cursor = part.end[language];
   });
   if (text.slice(cursor).trim()) expectedNarration.push(text.slice(cursor));
-  assert.deepEqual([...stage.querySelectorAll('.dialogue-narration p')].map(p => p.textContent), expectedNarration);
-  assert.equal([...stage.querySelectorAll('.reader-dialogue p')].map(p => p.textContent).join('').replace(/\s/g,''), text.replace(/\s/g,''), 'visible speech and narration retain the story sequence');
+  assert.equal([...stage.querySelectorAll('.dialogue-narration p')].map(p => p.textContent).join('').replace(/\s/g,''), expectedNarration.join('').replace(/\s/g,''));
+  assert.equal(stage.querySelector('.dialogue-full-text p').textContent, text, 'complete original sequence remains available');
   assert.equal(transcript.textContent, text, 'accessible full transcript stays intact');
   assert.equal(stage.querySelector('.reader-dialogue').getAttribute('aria-hidden'), 'true');
   view.render({...params, visible: false});
   assert.equal(stage.querySelector('.reader-dialogue').hidden, true);
-  assert.ok([...stage.querySelectorAll('.dialogue-narration')].every(p => p.hidden));
+  assert.equal(stage.querySelector('.dialogue-panel').hidden, true);
   for (const fallback of [
    {...params, enabled: false},
    {...params, text: text + 'changed'},
    {...params, config: {}},
-   {...params, config: {...page.dialogue, parts: [null]}}
+   {...params, config: {...page.dialogue, parts: [null]}},
+   {...params, config: {...page.dialogue, parts: [{...page.dialogue.parts[0], target: [NaN, 10]}]}}
   ]) {
    view.render(fallback);
    assert.equal(picture.classList.contains('dialogue-canvas'), false);
@@ -60,13 +61,13 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
 }
 assert.ok(checked > 0);
 view.render(sample);
-assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'));
-assert.equal(stage.querySelector('.reader-dialogue').parentElement, stage.querySelector('.reader-copy'), 'cards have one stable parent on every viewport');
-assert.equal(picture.querySelector('.reader-dialogue'), null, 'text never covers artwork');
+assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'));
+assert.equal(stage.querySelector('.reader-dialogue').parentElement, picture, 'overlay has one stable parent on every viewport');
+assert.equal(stage.querySelector('.dialogue-panel').parentElement,stage.querySelector('.reader-copy'),'navigation and narration stay outside artwork');
 view.render({...sample, config: null});
-assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), 'pages without dialogue keep the selected composition');
+assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'), 'pages without dialogue keep the selected composition');
 view.render({...sample, enabled: false});
-assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), false, 'standard layout keeps text below the art');
+assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'), false, 'standard layout keeps text below the art');
 view.dispose(); view.render(sample);
-assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-columns'), false, 'disposed views cannot update the page');
+assert.equal(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'), false, 'disposed views cannot update the page');
 console.log(`PASS: ${checked} bilingual dialogue pages preserve speech, narration, accessible text and a stable DOM; invalid data/image failure fallbacks and disposal.`);

@@ -1,5 +1,5 @@
 /* Reader layout owner. Keep viewport/scroll/placement rules here, never in styles.css.
-   One DOM tree: CSS places dialogue above art or beside it; text never covers art. */
+   One DOM tree: measured speech bubbles use artwork anchors; narration stays below. */
 body.reading { overflow: hidden; }
 .reader-page {
   --reader-header-height: 73px;
@@ -68,21 +68,33 @@ body.reading { overflow: hidden; }
 .reader-copy { position:relative; min-width:0; width:100%; color:var(--reader-text-color); }
 .reader-text { max-width:800px; margin:0 auto; padding:0 12px; text-align:center; white-space:pre-wrap; overflow-wrap:anywhere; font-size:18px; line-height:1.85; }
 .reader-text.english { font-family:Georgia,serif; font-size:20px; }
-/* Stable tree: on stacked screens speech/narration stay in order above the art. */
-.reader-scene.reader-dialogue-columns .reader-copy { display:contents; }
-.reader-dialogue { order:0; width:100%; padding:14px; display:flex; flex-direction:column; gap:12px; background:var(--reader-copy-background); border-radius:18px; }
-.reader-dialogue-columns .reader-image-wrap { order:1; }
-.reader-dialogue-columns .reader-text { order:2; }
-.dialogue-bubble { width:96%; padding:12px 14px; border:1px solid #c9c3ae; border-radius:18px; background:#fffdf4; color:#494e3d; overflow-wrap:anywhere; }
-.dialogue-bubble.dialogue-reply { align-self:flex-end; background:#f5f8eb; border-color:#bac6a7; }
-.dialogue-speaker { display:block; color:#8b886a; font-size:12px; margin-bottom:4px; }
-.dialogue-reply .dialogue-speaker { color:#718563; }
-.dialogue-bubble p { font-size:17px; line-height:1.65; white-space:pre-wrap; }
+/* The overlay always belongs to the picture; only its measured coordinates change. */
+.dialogue-canvas .page-arrow { display:none; }
+.reader-dialogue { position:absolute; z-index:1; pointer-events:none; }
+.dialogue-bubble { position:absolute; padding:8px 11px; border:1px solid #b7b49e; border-radius:17px; background:#fffef7f5; color:#3f493b; overflow-wrap:anywhere; box-shadow:0 3px 10px #35442212; }
+.dialogue-speaker { display:block; color:#687659; font-size:11px; line-height:1.35; margin-bottom:3px; }
+.dialogue-bubble p { margin:0; font-size:16px; line-height:1.5; white-space:pre-wrap; }
 .dialogue-bubble p:lang(en) { font-family:Georgia,serif; }
-.dialogue-narration { width:100%; padding:0 8px; font-size:14px; line-height:1.7; text-align:left; color:var(--reader-text-color); overflow-wrap:anywhere; }
+.dialogue-tail { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
+.dialogue-tail path { fill:#fffef7; stroke:#9da78c; stroke-width:1; stroke-linecap:round; }
+.dialogue-panel { width:100%; max-width:800px; margin:0 auto; color:var(--reader-text-color); }
+.dialogue-navigation { display:flex; justify-content:center; align-items:center; gap:18px; margin-bottom:6px; }
+.dialogue-navigation button { min-height:44px; min-width:76px; padding:6px 12px; background:var(--reader-surface); border:1px solid var(--line); border-radius:12px; color:var(--reader-text-color); font-size:13px; }
+.dialogue-navigation button:disabled { opacity:.4; cursor:default; }
+.dialogue-counter { font-size:12px; min-width:40px; text-align:center; }
+.dialogue-narration { padding:0 10px; font-size:14px; line-height:1.7; text-align:center; overflow-wrap:anywhere; }
 .dialogue-narration p { white-space:pre-wrap; }
-.dialogue-narration p:lang(en) { font-family:Georgia,serif; }
-.dialogue-narration p + p { margin-top:8px; }
+.dialogue-narration p:empty { display:none; }
+.dialogue-narration p:lang(en), .dialogue-full-text p:lang(en) { font-family:Georgia,serif; }
+/* Long speech scrolls inside its own frame; the illustration frame never grows. */
+.dialogue-bubble { pointer-events:auto; }
+.dialogue-bubble.dialogue-scroll { display:flex; flex-direction:column; overflow:hidden; }
+.dialogue-scroll .dialogue-speaker { flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.dialogue-scroll .dialogue-speaker::after { content:" ↕"; }
+.dialogue-scroll p { min-height:24px; overflow:auto; overscroll-behavior:contain; touch-action:pan-y; scrollbar-width:thin; }
+.dialogue-full-text { margin-top:6px; padding:0 10px; font-size:14px; }
+.dialogue-full-text summary { cursor:pointer; min-height:44px; display:list-item; width:max-content; margin-inline:auto; padding:10px; font-size:12px; }
+.dialogue-full-text p { font-size:17px; line-height:1.85; white-space:pre-wrap; overflow-wrap:anywhere; }
 .reader-text.dialogue-transcript { position:absolute; top:0; left:0; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
 .reader-image-error { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:12px 56px; background:#edf3f7; color:#60758c; text-align:center; overflow:auto; }
 .reader-image-error p { font-size:14px; }
@@ -124,27 +136,9 @@ body.reading { overflow: hidden; }
 .reader-night .reader-finished { background:#2c394f; border-color:#3b475b; }
 .reader-night .reader-finished p, .reader-night .reader-layout-switch { color:#bdcada; }
 body.reading #toast { top:80px; bottom:auto; left:auto; right:16px; transform:none; max-width:min(360px,calc(100% - 32px)); pointer-events:none; }
-/* Desktop composition shrinks as a whole, leaving exactly one gap between art/text. */
+/* Art keeps one stable frame in either reading mode. */
 @media (min-width:901px) {
   .reader-image-wrap { width:min(100%,calc(max(180px,100cqh - 110px) * var(--reader-aspect,1.5))); }
-}
-@media (min-width:901px), (orientation:landscape) and (min-width:568px) and (max-height:500px) {
-  .reader-scene.reader-dialogue-columns {
-    --copy-width:clamp(260px,27vw,360px);
-    width:min(100%,calc(max(160px,100cqh - 24px) * var(--reader-aspect,1.5) + var(--copy-width) + 20px));
-    max-width:none;
-    height:100%;
-    min-height:160px;
-    display:grid;
-    grid-template-columns:minmax(0,1fr) var(--copy-width);
-    align-items:center;
-    gap:20px;
-  }
-  .reader-dialogue-columns .reader-image-wrap { order:0; width:100%; }
-  .reader-scene.reader-dialogue-columns .reader-copy { display:block; max-height:100%; overflow:auto; overscroll-behavior:contain; overflow-anchor:none; padding:12px; border-radius:18px; background:var(--reader-copy-background); }
-  .reader-dialogue-columns .reader-dialogue { padding:0; border-radius:0; }
-  .reader-dialogue-columns .dialogue-bubble { width:100%; }
-  .reader-dialogue-columns .reader-text { padding:0; text-align:left; }
 }
 @media (max-width:700px) {
   .reader-stage { padding:8px 12px max(8px,env(safe-area-inset-bottom)); grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr) auto auto; grid-template-areas:"progress" "content" "player" "bottom"; gap:6px; }
@@ -160,7 +154,6 @@ body.reading #toast { top:80px; bottom:auto; left:auto; right:16px; transform:no
   .reader-scene { padding:4px 0 12px; gap:12px; }
   .reader-image-wrap { border-radius:14px; }
   .reader-text, .reader-text.english { font-size:17px; }
-  .reader-dialogue { padding:12px; }
   .page-arrow { width:40px; height:44px; }
   .page-arrow.prev { left:4px; }
   .page-arrow.next { right:4px; }
@@ -189,7 +182,7 @@ body.reading #toast { top:80px; bottom:auto; left:auto; right:16px; transform:no
   .reader-finished .btn { font-size:12px; padding:10px 14px; }
   body.reading #toast { top:72px; }
 }
-/* Compact landscape: one toolbar row, art/text columns, player beside helpers. */
+/* Compact landscape: one toolbar row, player beside helpers. */
 @media (orientation:landscape) and (min-width:568px) and (max-height:500px) {
   .reader-page { --reader-header-height:48px; }
   .reader-title small, .reader-layout-switch > span, .progress-dots, .reader-bottom > span { display:none; }
@@ -200,11 +193,7 @@ body.reading #toast { top:80px; bottom:auto; left:auto; right:16px; transform:no
   .reader-layout-switch button { padding:4px 10px; }
   .reader-progress { justify-content:flex-end; }
   .reader-page-select { display:block; }
-  .reader-scene.reader-dialogue-columns { --copy-width:clamp(200px,34vw,300px); gap:12px; width:min(100%,calc(max(120px,100cqh - 8px) * var(--reader-aspect,1.5) + var(--copy-width) + 12px)); min-height:120px; padding:4px 0; }
-  .reader-dialogue-columns .reader-copy { padding:8px; }
-  .reader-dialogue-columns .dialogue-bubble { padding:8px 10px; }
   .reader-image-wrap { width:min(100%,calc(max(120px,100cqh - 64px) * var(--reader-aspect,1.5))); }
-  .reader-dialogue-columns .reader-image-wrap { width:100%; }
   .reader-player { width:100%; padding:4px 8px; }
   .reader-controls { grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); gap:4px; }
   .reader-controls .language-switch, .reader-controls .transport, .reader-controls .auto-control { grid-column:auto; grid-row:auto; }

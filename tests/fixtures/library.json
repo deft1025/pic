@@ -28,7 +28,7 @@
       "featured_order": 0,
       "published_at": "2026-11-14T04:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-29e8b96617316584ff54ce8f6223208fe4aa0b52bb1de98cf7f78c068d06cd18",
+      "content_version": "materials-8e36fe40f6fb1fec224ab4ac364616248afce36f1fafa0378e3108471bfa5d58",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -292,8 +292,8 @@
                 "y": 3,
                 "width": 44,
                 "target": [
-                  16,
-                  36
+                  20,
+                  54
                 ]
               },
               {
@@ -314,7 +314,7 @@
                 "width": 44,
                 "target": [
                   44,
-                  57
+                  68
                 ]
               },
               {
@@ -334,8 +334,8 @@
                 "y": 3,
                 "width": 44,
                 "target": [
-                  88,
-                  18
+                  87,
+                  20
                 ]
               }
             ]

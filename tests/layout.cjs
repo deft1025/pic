@@ -54,19 +54,25 @@ async function verify(p,label) {
    check(r.left>=pl.left-tol&&r.right<=pl.right+tol&&r.top>=pl.top-tol&&r.bottom<=pl.bottom+tol,'control outside player');
    controls.slice(i+1).forEach(b=>check(!(r.left<b.right-1&&r.right>b.left+1&&r.top<b.bottom-1&&r.bottom>b.top+1),'controls overlap'));
   });
-  const columns=getComputedStyle(scene).display==='grid';
-  if(columns){
-   const t=rect(copy);check(Math.abs(t.left-a.right-(matchMedia('(max-height:500px) and (orientation:landscape)').matches?12:20))<=tol,'excessive art/text gap');
-   check(a.top+content.scrollTop>=c.top-tol&&a.bottom+content.scrollTop<=c.bottom+tol,'art clipped in columns');
-   check(copy.scrollWidth<=copy.clientWidth+tol,'copy horizontal overflow');
-   check(t.top+content.scrollTop>=c.top-tol&&t.bottom+content.scrollTop<=c.bottom+tol,'copy exceeds story viewport');
-  }
   const dialogue=$('.reader-dialogue');
-  if(dialogue&&!dialogue.hidden&&!columns){
-   const d=rect(dialogue);check(d.bottom<=a.top+tol,'dialogue covers art');
+  if(dialogue&&!dialogue.hidden){
+   check(dialogue.parentElement===art,'overlay left artwork');
+   const d=rect(dialogue),bubbles=[...dialogue.querySelectorAll('.dialogue-bubble')].filter(e=>!e.hidden);
+   const boxes=bubbles.map(rect);
+   boxes.forEach((r,i)=>{
+    check(r.left>=d.left-tol&&r.right<=d.right+tol&&r.top>=d.top-tol&&r.bottom<=d.bottom+tol,'bubble outside actual artwork');
+    check(bubbles[i].scrollWidth<=bubbles[i].clientWidth+tol,'bubble horizontal overflow');
+    const words=bubbles[i].querySelector('p');check(words.clientHeight>=24-tol,'speech viewport too short');check(words.scrollHeight<=words.clientHeight+tol||getComputedStyle(words).overflowY==='auto','long speech cannot scroll');
+    check(parseFloat(getComputedStyle(bubbles[i].querySelector('p')).fontSize)>=16,'speech font too small');
+    boxes.slice(i+1).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'speech bubbles overlap'));
+    [...art.querySelectorAll('.page-arrow')].map(rect).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'bubble covers page control'));
+   });
+   check(dialogue.querySelectorAll('svg').length===bubbles.filter(e=>e.dataset.anchored==='true').length,'missing mouth pointer');
+   if(dialogue.dataset.mode==='single')check(bubbles.length===1,'crowded scene does not show one speech turn');
+   check(bubbles.length>0,'speech is missing from artwork');
    check(sc.height<=c.height+tol||content.scrollHeight>content.clientHeight,'long scene cannot scroll');
+   const panel=$('.dialogue-panel');check(rect(panel).top>=a.bottom-tol,'narration/navigation covers art');
   }
-  if(art.querySelector('.reader-dialogue'))errors.push('dialogue moved into artwork');
   const dots=$('.progress-dots');if(getComputedStyle(dots).display!=='none')check(dots.scrollWidth<=dots.clientWidth+tol,'page dots overflow');
   return errors;
  });
@@ -102,7 +108,7 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
    const book=books.find(b=>b.id===id);assert.ok(book,id+' exists');
    await open(p,base,id);
    const longest=book.pages.reduce((best,page,i)=>page.text_original.length>book.pages[best].text_original.length?i:best,0);
-   const pages=[...new Set([0,longest,book.pages.length-1])];
+   const pages=[...new Set([0,2,longest,book.pages.length-1])];
    for(const mode of ['dialogue','standard']){
     const toggle=p.locator(`[data-layout="${mode}"]`);if(await toggle.count())await toggle.click();
     for(const lang of ['zh','en']){
@@ -116,7 +122,30 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
   }
   console.log(`PASS ${width}x${height}`);
  }
- // Resize the same reader across every breakpoint; no observer/DOM race is allowed.
+ // Every configured speech page, both languages, every turn in crowded scenes.
+ for(const [width,height] of [[320,568],[430,932],[1366,768]]){
+  await p.setViewportSize({width,height});
+  for(const book of books.filter(b=>b.pages.some(p=>p.dialogue))){
+   await open(p,base,book.id);
+   for(const language of book.languages){
+    await p.locator(`[data-lang="${language}"]`).click();
+    for(const [i,page] of book.pages.entries()){
+     if(!page.dialogue)continue;
+     await p.selectOption('.reader-page-select',String(i),{force:true});await settle(p);
+     for(let turn=0;turn<page.dialogue.parts.length;turn++){
+      await verify(p,`${book.id} anchored ${width}/${language} page ${i+1} turn ${turn+1}`);
+      const nav=p.locator('.dialogue-navigation');
+      if(!await nav.isVisible())break;
+      const next=nav.locator('[data-dialogue=next]');if(await next.isDisabled())break;
+      await next.click();await settle(p);
+     }
+     assert.equal(await p.locator('.dialogue-full-text p').textContent(),page[language==='zh'?'text_zh':'text_original']);
+    }
+   }
+  }
+  console.log(`PASS all speech pages ${width}x${height}`);
+ }
+ // Resize the same reader across every breakpoint; one measured overlay and no DOM reparenting.
  await p.setViewportSize({width:1366,height:768});await open(p,base,ids[0]);
  for(const [width,height] of sizes){await p.setViewportSize({width,height});await settle(p);await verify(p,`live resize ${width}x${height}`);}
  // Stable artwork frame through pages with/without dialogue; native page jump works.
@@ -135,6 +164,25 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
   await p.locator('[data-reader=text]').click();await p.locator('[data-reader=settings]').click();
   const settings=await p.locator('.reader-settings').boundingBox();assert.ok(settings.x>=0&&settings.x+settings.width<=width+2&&settings.y+settings.height<=height+2,'settings outside viewport');
   await p.keyboard.press('Escape');
+ }
+ // Bubble counts/language/mode and expanded text cannot move artwork or outer controls.
+ for(const [width,height] of [[430,932],[1366,768],[844,390]]){
+  await p.setViewportSize({width,height});
+  for(const id of ids){
+   await open(p,base,id);
+   const geometry=()=>p.evaluate(()=>Object.fromEntries(['.reader-image-wrap','.reader-header','.reader-progress','.reader-player','.reader-bottom'].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return [s,[r.x,r.y+(s==='.reader-image-wrap'?document.querySelector('.reader-content').scrollTop:0),r.width,r.height]];})));
+   const baseline=await geometry();
+   for(const page of [0,2,books.find(b=>b.id===id).pages.length-1]){
+    await p.selectOption('.reader-page-select',String(page),{force:true});
+    for(const language of ['zh','en']){
+     await p.locator(`[data-lang="${language}"]`).click();await settle(p);
+     for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,`${selector} moved with speech: ${id}/${width}/${page}/${language}`));
+    }
+   }
+   const full=p.locator('.dialogue-full-text');if(await full.isVisible()){await full.locator('summary').click();await settle(p);for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,selector+' moved when text expanded'));}
+   const standard=p.locator('[data-layout="standard"]');if(await standard.count()){await standard.click();await settle(p);for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,selector+' moved with mode'));}
+   checks++;
+  }
  }
  // Failure/retry must preserve accessible text and independent controls.
  const failArt=route=>route.abort();await p.route('**/assets/books/**',failArt);
