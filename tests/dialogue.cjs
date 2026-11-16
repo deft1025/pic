@@ -10,7 +10,18 @@ let sample;
 const context = vm.createContext({
  document
 });
-vm.runInContext(fs.readFileSync(path.join(root, 'web/assets/reader-dialogue.js'), 'utf8').replace('export function', 'function')+'\nglobalThis.mount = mountDialogue;', context);
+vm.runInContext(fs.readFileSync(path.join(root, 'web/assets/reader-dialogue.js'), 'utf8').replaceAll('export function', 'function')+'\nglobalThis.mount = mountDialogue;globalThis.merge = canMergeSpeech;', context);
+// Editorial boundaries: a repeated speaker alone does not imply one speech turn.
+const mum={speaker:{zh:'妈妈',en:'Mum'},target:[20,50]};
+const child={speaker:{zh:'孩子',en:'Child'},target:[70,50]};
+assert.equal(context.merge(mum,mum,'妈妈说，','zh'),true);
+assert.equal(context.merge(mum,mum,' says Mum. ','en'),true);
+assert.equal(context.merge(mum,mum,'妈妈走进厨房。过了一会儿，','zh'),false);
+assert.equal(context.merge(mum,mum,' Mum walked away. Later, ','en'),false);
+assert.equal(context.merge(mum,mum,'\n\n','zh'),false);
+assert.equal(context.merge(mum,{...mum,target:[60,50]},'妈妈说，','zh'),false);
+assert.equal(context.merge({...mum,target:null},{...mum,target:null},'妈妈说，','zh'),false);
+for(const [before,after,gap] of [[mum,child,'妈妈问。'],[child,mum,'孩子回答。']])assert.equal(context.merge(before,after,gap,'zh'),false,'question/answer turns remain separate, including a returning speaker');
 const stage = document.querySelector('main'), picture = stage.querySelector('.reader-image-wrap');
 const transcript = stage.querySelector('.reader-text'), view = context.mount(stage);
 let checked = 0;
@@ -23,6 +34,7 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
   assert.equal(picture.classList.contains('dialogue-canvas'), Boolean(page.dialogue));
   if (!page.dialogue) continue;
   sample = params;
+  assert.equal(stage.querySelector('.dialogue-navigation'),null,'no hidden speech turns');
   const expectedNarration = []; let cursor = 0;
   const bubbles = [...stage.querySelectorAll('.dialogue-bubble')];
   page.dialogue.parts.forEach((part, i) => {
@@ -63,7 +75,7 @@ assert.ok(checked > 0);
 view.render(sample);
 assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'));
 assert.equal(stage.querySelector('.reader-dialogue').parentElement, picture, 'overlay has one stable parent on every viewport');
-assert.equal(stage.querySelector('.dialogue-panel').parentElement,stage.querySelector('.reader-copy'),'navigation and narration stay outside artwork');
+assert.equal(stage.querySelector('.dialogue-panel').parentElement,stage.querySelector('.reader-copy'),'narration stays outside artwork');
 view.render({...sample, config: null});
 assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'), 'pages without dialogue keep the selected composition');
 view.render({...sample, enabled: false});

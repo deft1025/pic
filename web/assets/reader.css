@@ -78,19 +78,18 @@ body.reading { overflow: hidden; }
 .dialogue-tail { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
 .dialogue-tail path { fill:#fffef7; stroke:#9da78c; stroke-width:1; stroke-linecap:round; }
 .dialogue-panel { width:100%; max-width:800px; margin:0 auto; color:var(--reader-text-color); }
-.dialogue-navigation { display:flex; justify-content:center; align-items:center; gap:18px; margin-bottom:6px; }
-.dialogue-navigation button { min-height:44px; min-width:76px; padding:6px 12px; background:var(--reader-surface); border:1px solid var(--line); border-radius:12px; color:var(--reader-text-color); font-size:13px; }
-.dialogue-navigation button:disabled { opacity:.4; cursor:default; }
-.dialogue-counter { font-size:12px; min-width:40px; text-align:center; }
 .dialogue-narration { padding:0 10px; font-size:14px; line-height:1.7; text-align:center; overflow-wrap:anywhere; }
 .dialogue-narration p { white-space:pre-wrap; }
 .dialogue-narration p:empty { display:none; }
 .dialogue-narration p:lang(en), .dialogue-full-text p:lang(en) { font-family:Georgia,serif; }
 /* Long speech scrolls inside its own frame; the illustration frame never grows. */
 .dialogue-bubble { pointer-events:auto; }
+.dialogue-bubble.dialogue-compact { padding:6px 7px; border-radius:13px; }
+.reader-dialogue.dialogue-overflow { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-content:start; gap:6px; padding:6px; overflow:auto; pointer-events:auto; overscroll-behavior:contain; }
+.dialogue-overflow .dialogue-bubble { position:relative; width:100%; min-width:0; }
 .dialogue-bubble.dialogue-scroll { display:flex; flex-direction:column; overflow:hidden; }
 .dialogue-scroll .dialogue-speaker { flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.dialogue-scroll .dialogue-speaker::after { content:" ↕"; }
+.dialogue-scroll[data-overflow=true] .dialogue-speaker::after { content:" ↕"; }
 .dialogue-scroll p { min-height:24px; overflow:auto; overscroll-behavior:contain; touch-action:pan-y; scrollbar-width:thin; }
 .dialogue-full-text { margin-top:6px; padding:0 10px; font-size:14px; }
 .dialogue-full-text summary { cursor:pointer; min-height:44px; display:list-item; width:max-content; margin-inline:auto; padding:10px; font-size:12px; }

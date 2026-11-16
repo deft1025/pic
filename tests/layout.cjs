@@ -60,15 +60,18 @@ async function verify(p,label) {
    const d=rect(dialogue),bubbles=[...dialogue.querySelectorAll('.dialogue-bubble')].filter(e=>!e.hidden);
    const boxes=bubbles.map(rect);
    boxes.forEach((r,i)=>{
-    check(r.left>=d.left-tol&&r.right<=d.right+tol&&r.top>=d.top-tol&&r.bottom<=d.bottom+tol,'bubble outside actual artwork');
+    check(r.left>=d.left-tol&&r.right<=d.right+tol&&r.top>=d.top-tol&&r.bottom<=(dialogue.dataset.mode==='overflow'?d.top+dialogue.scrollHeight:d.bottom)+tol,'bubble outside actual artwork');
     check(bubbles[i].scrollWidth<=bubbles[i].clientWidth+tol,'bubble horizontal overflow');
     const words=bubbles[i].querySelector('p');check(words.clientHeight>=24-tol,'speech viewport too short');check(words.scrollHeight<=words.clientHeight+tol||getComputedStyle(words).overflowY==='auto','long speech cannot scroll');
     check(parseFloat(getComputedStyle(bubbles[i].querySelector('p')).fontSize)>=16,'speech font too small');
     boxes.slice(i+1).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'speech bubbles overlap'));
     [...art.querySelectorAll('.page-arrow')].map(rect).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'bubble covers page control'));
    });
-   check(dialogue.querySelectorAll('svg').length===bubbles.filter(e=>e.dataset.anchored==='true').length,'missing mouth pointer');
-   if(dialogue.dataset.mode==='single')check(bubbles.length===1,'crowded scene does not show one speech turn');
+   check(dialogue.querySelectorAll('svg').length===(dialogue.dataset.mode==='overflow'?0:bubbles.filter(e=>e.dataset.anchored==='true').length),'missing mouth pointer');
+   const covered=bubbles.flatMap(e=>e.dataset.parts.split(',').map(Number)).sort((a,b)=>a-b);
+   check(JSON.stringify(covered)===JSON.stringify([...dialogue.querySelectorAll('.dialogue-bubble')].map((_,i)=>i)),'some speech ranges are hidden');
+   check(!document.querySelector('.dialogue-navigation'),'speech must not require paging');
+   check([...document.querySelectorAll('.dialogue-narration')].every(e=>!e.hidden),'narration hidden with speech');
    check(bubbles.length>0,'speech is missing from artwork');
    check(sc.height<=c.height+tol||content.scrollHeight>content.clientHeight,'long scene cannot scroll');
    const panel=$('.dialogue-panel');check(rect(panel).top>=a.bottom-tol,'narration/navigation covers art');
@@ -122,7 +125,7 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
   }
   console.log(`PASS ${width}x${height}`);
  }
- // Every configured speech page, both languages, every turn in crowded scenes.
+ // Every configured speech page: all speech and narration present without paging.
  for(const [width,height] of [[320,568],[430,932],[1366,768]]){
   await p.setViewportSize({width,height});
   for(const book of books.filter(b=>b.pages.some(p=>p.dialogue))){
@@ -132,19 +135,36 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
     for(const [i,page] of book.pages.entries()){
      if(!page.dialogue)continue;
      await p.selectOption('.reader-page-select',String(i),{force:true});await settle(p);
-     for(let turn=0;turn<page.dialogue.parts.length;turn++){
-      await verify(p,`${book.id} anchored ${width}/${language} page ${i+1} turn ${turn+1}`);
-      const nav=p.locator('.dialogue-navigation');
-      if(!await nav.isVisible())break;
-      const next=nav.locator('[data-dialogue=next]');if(await next.isDisabled())break;
-      await next.click();await settle(p);
-     }
+     await verify(p,`${book.id} complete ${width}/${language} page ${i+1}`);
+     const visibleSpeech=await p.locator('.dialogue-bubble').evaluateAll(els=>els.filter(e=>!e.hidden).map(e=>e.querySelector('p').textContent).join(''));
+     const text=page[language==='zh'?'text_zh':'text_original'];
+     const expectedSpeech=page.dialogue.parts.map(part=>text.slice(part.start[language],part.end[language])).join('');
+     assert.equal(visibleSpeech.replace(/\s/g,''),expectedSpeech.replace(/\s/g,''),'every speech range must be present without clicking');
+     if(book.id==='bd-a-beautiful-day'&&width===430&&[0,2].includes(i))assert.ok(await p.locator('.dialogue-bubble').evaluateAll(els=>els.filter(e=>!e.hidden).every(e=>{const p=e.querySelector('p');return p.scrollHeight<=p.clientHeight+2;})),'reported mobile pages should show full speech without internal scrolling when it fits');
      assert.equal(await p.locator('.dialogue-full-text p').textContent(),page[language==='zh'?'text_zh':'text_original']);
     }
    }
   }
   console.log(`PASS all speech pages ${width}x${height}`);
  }
+ // Eight separate turns cannot be reduced to one bubble or hidden behind paging.
+ // Injected API data checks the smallest landscape capacity without editing MySQL.
+ const crowdRoute='**/api/books/bd-a-beautiful-day/pages';
+ const crowdHandler=async route=>{
+  const response=await route.fetch(),body=await response.json(),page={...body.items[0]},parts=[];
+  const texts={zh:'',en:''};
+  for(let i=0;i<8;i++){
+   const part={start:{},end:{},speaker:{zh:`角色${i+1}`,en:`Speaker ${i+1}`},x:i*12,y:3,width:12,target:[5+i*12,50]};
+   for(const language of ['zh','en']){const words=language==='zh'?`“这是第${i+1}句对白。”`:`“This is speech number ${i+1}.”`;part.start[language]=texts[language].length;texts[language]+=words;part.end[language]=texts[language].length;texts[language]+=' ';}
+   parts.push(part);
+  }
+  page.text_zh=texts.zh;page.text_original=texts.en;page.dialogue={aspect_ratio:[2,1],length:{zh:texts.zh.length,en:texts.en.length},parts};
+  await route.fulfill({response,json:{...body,items:[page]}});
+ };
+ await p.route(crowdRoute,crowdHandler);await p.setViewportSize({width:568,height:320});await open(p,base,'bd-a-beautiful-day');
+ await verify(p,'eight independent turns in tiny landscape');
+ assert.equal(await p.locator('.dialogue-bubble:not([hidden])').count(),8,'all eight turns remain present');
+ await p.unroute(crowdRoute,crowdHandler);
  // Resize the same reader across every breakpoint; one measured overlay and no DOM reparenting.
  await p.setViewportSize({width:1366,height:768});await open(p,base,ids[0]);
  for(const [width,height] of sizes){await p.setViewportSize({width,height});await settle(p);await verify(p,`live resize ${width}x${height}`);}

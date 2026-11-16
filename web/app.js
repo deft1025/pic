@@ -141,7 +141,7 @@ async function reader(id, token) {
  let dialogueLayout=null,dialogueModule=null,dialogueView=null,dialogueEnabled=(['dialogue','standard'].includes(requestedLayout)?requestedLayout:local.preferences.readingLayout)==='dialogue';
  if(pages.some(p=>p.dialogue?.parts?.length)){
   try{
-   dialogueModule=await import('/assets/reader-dialogue.js?v=20261114c');dialogueLayout=true;
+   dialogueModule=await import('/assets/reader-dialogue.js?v=20261116-complete');dialogueLayout=true;
   }catch{/* Optional typography must never prevent reading a story. */}
   if(token!==renderToken)return null;
  }
