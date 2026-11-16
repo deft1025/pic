@@ -64,6 +64,14 @@ async function verify(p,label) {
     check(bubbles[i].scrollWidth<=bubbles[i].clientWidth+tol,'bubble horizontal overflow');
     const words=bubbles[i].querySelector('p');check(words.clientHeight>=24-tol,'speech viewport too short');check(words.scrollHeight<=words.clientHeight+tol||getComputedStyle(words).overflowY==='auto','long speech cannot scroll');
     check(parseFloat(getComputedStyle(bubbles[i].querySelector('p')).fontSize)>=16,'speech font too small');
+    // Short speech should hug its text instead of retaining an authored card width.
+    const range=document.createRange();range.selectNodeContents(words);const lines=[...range.getClientRects()];
+    if(lines.length===1){
+     range.selectNodeContents(bubbles[i].querySelector('.dialogue-speaker'));
+     const ink=Math.max(lines[0].width,...[...range.getClientRects()].map(r=>r.width));
+     const style=getComputedStyle(bubbles[i]),padding=parseFloat(style.paddingLeft)+parseFloat(style.paddingRight)+2;
+     check(r.width<=ink+padding+4,'short speech has unnecessary blank width');
+    }
     boxes.slice(i+1).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'speech bubbles overlap'));
     [...art.querySelectorAll('.page-arrow')].map(rect).forEach(b=>check(!(r.left<b.right&&r.right>b.left&&r.top<b.bottom&&r.bottom>b.top),'bubble covers page control'));
    });
@@ -74,7 +82,8 @@ async function verify(p,label) {
    check([...document.querySelectorAll('.dialogue-narration')].every(e=>!e.hidden),'narration hidden with speech');
    check(bubbles.length>0,'speech is missing from artwork');
    check(sc.height<=c.height+tol||content.scrollHeight>content.clientHeight,'long scene cannot scroll');
-   const panel=$('.dialogue-panel');check(rect(panel).top>=a.bottom-tol,'narration/navigation covers art');
+   check(!$('.dialogue-full-text'),'duplicate full text in dialogue mode');
+   const panel=$('.dialogue-panel');if(!panel.hidden)check(rect(panel).top>=a.bottom-tol,'narration covers art');
   }
   const dots=$('.progress-dots');if(getComputedStyle(dots).display!=='none')check(dots.scrollWidth<=dots.clientWidth+tol,'page dots overflow');
   return errors;
@@ -141,7 +150,16 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
      const expectedSpeech=page.dialogue.parts.map(part=>text.slice(part.start[language],part.end[language])).join('');
      assert.equal(visibleSpeech.replace(/\s/g,''),expectedSpeech.replace(/\s/g,''),'every speech range must be present without clicking');
      if(book.id==='bd-a-beautiful-day'&&width===430&&[0,2].includes(i))assert.ok(await p.locator('.dialogue-bubble').evaluateAll(els=>els.filter(e=>!e.hidden).every(e=>{const p=e.querySelector('p');return p.scrollHeight<=p.clientHeight+2;})),'reported mobile pages should show full speech without internal scrolling when it fits');
-     assert.equal(await p.locator('.dialogue-full-text p').textContent(),page[language==='zh'?'text_zh':'text_original']);
+     assert.equal(await p.locator('.reader-text').textContent(),text,'accessible original stays intact');
+     if(book.id==='bd-a-beautiful-day'&&i===10){
+      assert.equal(await p.locator('.dialogue-narration').count(),0,'speaker attribution must not appear below the picture');
+      assert.equal(await p.locator('.dialogue-panel').isVisible(),false,'no empty narration panel');
+      await p.locator('[data-layout="standard"]').click();await settle(p);
+      assert.equal(await p.locator('.reader-text').isVisible(),true);
+      assert.equal(await p.locator('.reader-text').evaluate(e=>e.classList.contains('dialogue-transcript')),false,'standard mode shows the original text');
+      assert.equal(await p.locator('.reader-text').textContent(),text);
+      await p.locator('[data-layout="dialogue"]').click();await settle(p);
+     }
     }
    }
   }
@@ -185,7 +203,7 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
   const settings=await p.locator('.reader-settings').boundingBox();assert.ok(settings.x>=0&&settings.x+settings.width<=width+2&&settings.y+settings.height<=height+2,'settings outside viewport');
   await p.keyboard.press('Escape');
  }
- // Bubble counts/language/mode and expanded text cannot move artwork or outer controls.
+ // Bubble counts/language/mode cannot move artwork or outer controls.
  for(const [width,height] of [[430,932],[1366,768],[844,390]]){
   await p.setViewportSize({width,height});
   for(const id of ids){
@@ -199,7 +217,6 @@ async function open(p,base,id,layout='dialogue',imageExpected=true) {
      for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,`${selector} moved with speech: ${id}/${width}/${page}/${language}`));
     }
    }
-   const full=p.locator('.dialogue-full-text');if(await full.isVisible()){await full.locator('summary').click();await settle(p);for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,selector+' moved when text expanded'));}
    const standard=p.locator('[data-layout="standard"]');if(await standard.count()){await standard.click();await settle(p);for(const [selector,bounds] of Object.entries(await geometry()))bounds.forEach((n,i)=>assert.ok(Math.abs(n-baseline[selector][i])<2,selector+' moved with mode'));}
    checks++;
   }

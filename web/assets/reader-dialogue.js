@@ -1,15 +1,21 @@
 // Speech ranges and illustration anchors come only from the book API.
 // Only attribution-only gaps can continue a speech turn. Actions, scene changes,
 // unknown anchors, and intervening speakers retain separate bubbles.
-export function canMergeSpeech(previous,current,gap,language) {
- const name=previous?.speaker?.[language];
- if(!name||name!==current?.speaker?.[language]||!previous.target||JSON.stringify(previous.target)!==JSON.stringify(current.target)||gap.length>80||/[\r\n]/.test(gap))return false;
+function isSpeechAttribution(gap,names,language) {
+ if(gap.length>80||/[\r\n]/.test(gap))return false;
  const phrase=gap.trim().replace(/^[，,。.!?！？:：;；“”‘’"'…\s]+|[，,。.!?！？:：;；“”‘’"'…\s]+$/g,'');
  if(!phrase)return true;
+ return names.filter(Boolean).some(name=>{
  const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
  if(language==='zh')return new RegExp('^'+escaped+'(?:轻声|小声|大声|笑着)?(?:说|问|喊|叫)(?:道)?$').test(phrase);
  const verb='(?:says?|said|asks?|asked|calls?|called|shouts?|shouted|replies|replied|answers?|answered|whispers?|whispered)';
  return new RegExp('^(?:'+verb+'[ \t]+(?:the[ \t]+)?'+escaped+'|'+escaped+'[ \t]+'+verb+')$','i').test(phrase);
+ });
+}
+export function canMergeSpeech(previous,current,gap,language) {
+ const name=previous?.speaker?.[language];
+ if(!name||name!==current?.speaker?.[language]||!previous.target||JSON.stringify(previous.target)!==JSON.stringify(current.target))return false;
+ return isSpeechAttribution(gap,[name],language);
 }
 export function mountDialogue(stage) {
  const picture=stage.querySelector('.reader-image-wrap'),image=picture.querySelector('.reader-image');
@@ -45,6 +51,13 @@ export function mountDialogue(stage) {
   const targets=entries.filter(e=>e.part.target).map(e=>[e.part.target[0]*w/100,e.part.target[1]*h/100]);
   const obstacles=[...picture.querySelectorAll('.page-arrow')].filter(el=>el.offsetWidth&&el.offsetHeight).map(el=>({x:el.offsetLeft-ox,y:el.offsetTop-el.offsetHeight/2-oy,w:el.offsetWidth,h:el.offsetHeight}));
   const guard=clamp(w*.025,16,30),pad=7;
+  function fitWidth(el,limit){
+   // Authored widths are limits, not empty space around a short line.
+   // Measure the actual speaker/text with current fonts and compact padding.
+   el.style.width='max-content';el.style.maxWidth=limit+'px';
+   const width=Math.min(limit,el.offsetWidth+1);
+   el.style.maxWidth='';el.style.width=width+'px';return width;
+  }
   function place(entry,placed,scroll=false,protectAll=true){
    if(!entry.part.target)return null;
    const t=entry.part.target.map((n,i)=>n*(i?h:w)/100),el=entry.bubble;
@@ -52,8 +65,8 @@ export function mountDialogue(stage) {
    const maxWidth=Math.min(w-pad*2,340),minWidth=Math.min(maxWidth,scroll?Math.max(64,w*.28):150);
    const preferred=clamp(entry.part.width*w/100,minWidth,maxWidth);
    const widths=[preferred,clamp(w*.45,minWidth,maxWidth),maxWidth,minWidth];let best=null;
-   for(const width of new Set(widths.map(Math.round))){
-    el.style.width=width+'px';const bh=el.offsetHeight;
+   for(const limit of new Set(widths.map(Math.round))){
+    const width=fitWidth(el,limit),bh=el.offsetHeight;
     if(bh>h-pad*2)continue;
     const xs=[t[0]-width/2,t[0]+guard,t[0]-guard-width,entry.part.x*w/100,pad,w-width-pad];
     const ys=[t[1]-guard-bh,t[1]+guard,t[1]-bh/2,entry.part.y*h/100,pad,h-bh-pad];
@@ -64,7 +77,7 @@ export function mountDialogue(stage) {
      // Do not send another character's tail through an existing bubble.
      const blocked=placed.some(o=>Array.from({length:9},(_,i)=>({x:t[0]+(end[0]-t[0])*(i+1)/10,y:t[1]+(end[1]-t[1])*(i+1)/10,w:1,h:1})).some(p=>intersects(p,o,3)));
      if(blocked)continue;
-     const score=distance(r,t)+Math.hypot(r.x-entry.part.x*w/100,r.y-entry.part.y*h/100)*.12+Math.abs(width-preferred)*.06;
+     const score=distance(r,t)+Math.hypot(r.x-entry.part.x*w/100,r.y-entry.part.y*h/100)*.12+width*bh*.003;
      if(!best||score<best.score)best={...r,end,target:t,score};
     }
    }
@@ -105,8 +118,8 @@ export function mountDialogue(stage) {
      for(let slot=0;slot<n;slot++){
       const entry=shown[order[slot]],el=entry.bubble;
       const cell={x:pad+(slot%cols)*(cw+gap),y:pad+Math.floor(slot/cols)*(ch+gap),w:cw,h:ch};
-      const width=Math.min(cw,340,Math.max(Math.min(150,cw),entry.part.width*w/100));
-      el.hidden=false;el.classList.add('dialogue-scroll','dialogue-compact');el.style.width=width+'px';el.style.maxHeight=ch+'px';
+      el.hidden=false;el.classList.add('dialogue-scroll','dialogue-compact');el.style.maxHeight=ch+'px';
+      const width=fitWidth(el,Math.min(cw,340));
       const bh=el.offsetHeight,t=entry.part.target?.map((v,i)=>v*(i?h:w)/100)||null;
       let candidate=null;
       for(const x of [cell.x,cell.x+cw-width])for(const y of [cell.y,cell.y+ch-bh]){
@@ -157,18 +170,25 @@ export function mountDialogue(stage) {
   overlay.hidden=!active||!visible;panel.hidden=!active||!visible;
   overlay.replaceChildren();panel.replaceChildren();entries=[];
   if(!active)return;
+  function appendNarration(words,names){
+   // Speaker labels already identify these lines. Keep actual narration and
+   // ambiguous gaps, but do not repeat attribution-only text below the artwork.
+   if(!words.trim()||isSpeechAttribution(words,names,language))return;
+   const narration=document.createElement('div');narration.className='dialogue-narration';narration.setAttribute('aria-hidden','true');
+   const p=document.createElement('p');p.textContent=words;p.lang=language==='zh'?'zh-CN':'en';narration.append(p);panel.append(narration);
+  }
   let cursor=0;
   config.parts.forEach((part,i)=>{
+   appendNarration(text.slice(cursor,part.start[language]),[config.parts[i-1]?.speaker[language],part.speaker[language]]);
    const words=text.slice(part.start[language],part.end[language]);
    const bubble=document.createElement('div');bubble.className='dialogue-bubble';bubble.dataset.anchored=String(Boolean(part.target));bubble.hidden=true;
    const speaker=document.createElement('span');speaker.className='dialogue-speaker';speaker.textContent=part.speaker[language];
    const p=document.createElement('p');p.lang=language==='zh'?'zh-CN':'en';p.textContent=words;bubble.append(speaker,p);overlay.append(bubble);
-   const narration=document.createElement('div');narration.className='dialogue-narration';narration.setAttribute('aria-hidden','true');
-   const n=document.createElement('p');n.textContent=text.slice(cursor,part.start[language])+(i===config.parts.length-1?text.slice(part.end[language]):text.slice(part.end[language],config.parts[i+1].start[language]));n.lang=p.lang;if(n.textContent.trim()){narration.append(n);panel.append(narration);}
-   cursor=i===config.parts.length-1?text.length:config.parts[i+1].start[language];
+   cursor=part.end[language];
    entries.push({part,bubble,words});
   });
-  const full=document.createElement('details');full.className='dialogue-full-text';const summary=document.createElement('summary'),p=document.createElement('p');summary.textContent='完整文字';p.textContent=text;p.lang=language==='zh'?'zh-CN':'en';full.append(summary,p);panel.append(full);
+  appendNarration(text.slice(cursor),[config.parts.at(-1).speaker[language]]);
+  panel.hidden=!visible||!panel.childElementCount;
   // Page/image/language changes commit visible speech together; resize remains batched.
   layout();
  }
