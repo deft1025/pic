@@ -6,8 +6,13 @@ import "pic/internal/service"
 type Handler struct {
 	library     *service.Library
 	siteBaseURL string
+	accounts    *service.Accounts
 }
 
-func New(library *service.Library, siteBaseURL string) *Handler {
-	return &Handler{library: library, siteBaseURL: siteBaseURL}
+func New(library *service.Library, siteBaseURL string, accounts ...*service.Accounts) *Handler {
+	h := &Handler{library: library, siteBaseURL: siteBaseURL}
+	if len(accounts) > 0 {
+		h.accounts = accounts[0]
+	}
+	return h
 }

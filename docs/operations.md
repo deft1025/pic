@@ -4,7 +4,7 @@
 
 ## 新会话新增物料的默认流程
 
-新增物料默认每批至少4本；用户明确指定数量或单本更新时按当次要求。各本独立核验来源、入库、制作、校验并交付单书包。
+新增物料默认每批至少4本；用户明确指定数量或单本更新时按当次要求。各本独立核验来源、入库、制作、校验并交付单书包。选材优先有完整可朗读原文的作品，不选整本无字绘本；个别无字情节页补写串词时如实披露，并配齐双语正文和音频。
 
 后续新增物料统一沿用用户确认的当前PC/移动端UI：轻量半透明圆润气泡、完整对白、稳定图片画幅、独立播放器、角色对白/图下文字切换及读完提示等宽等高按钮。只适配每本的实际图片比例、角色锚点和完整内容，不恢复旧版布局、不新增书目专用CSS。每本验收同时覆盖PC和手机。
 
@@ -103,27 +103,27 @@ Codex 阅读完整来源、整理双语正文和明确角色对白后，用本�
 
 ## 已有物料状态
 
-2026-11-14实库回读为**26本、313页**。本批新增《浴缸里的大冒险》《美好的一天》《羽毛朋友》《我能自己来！》各12页，52张图片、96个双语MP3及18页33个气泡均已通过工具写回与校验。4个单书包各37文件，逐文件字节与数据库引用一致；**本批待上传解压，之后由Codex强制remote校验**。沿用工作区最新版PC/手机UI，本机实库与真实本机新素材已完成浏览器检查，范围见 [acceptance.md](acceptance.md)；具体分龄、来源与改编说明见 [materials.md](materials.md)。
+2026-11-16独立实库回读为**30本、361页**。本批新增《这是谁的蛋？》《黄色瓢虫拉拉》《一起走呀走》《有谁和我一样吗？》各12页；52张JPEG、96个双语MP3、完整正文及推荐理由、拉拉4页7个气泡均已写回与校验。4个单书包各37文件，包内逐文件字节与数据库引用一致；**本批待用户上传解压，再由Codex强制remote校验**。本机检查与具体来源分别见 [acceptance.md](acceptance.md)、[materials.md](materials.md)。
 
 ```text
-web/assets/books/bd-bathtub-safari.tar.gz
-web/assets/books/bd-a-beautiful-day.tar.gz
-web/assets/books/bd-feathered-friends.tar.gz
-web/assets/books/bd-i-can-do-it.tar.gz
+web/assets/books/bd-egg.tar.gz
+web/assets/books/bd-lara-the-yellow-ladybird.tar.gz
+web/assets/books/bd-walking-together.tar.gz
+web/assets/books/bd-is-there-anyone-like-me.tar.gz
 ```
 
-上传这四包后，在`/root/www/pic/assets/books/`依次执行：
+将这四包上传到`/root/www/pic/assets/books/`，在该目录执行：
 
 ```sh
-tar -xzf bd-bathtub-safari.tar.gz
-tar -xzf bd-a-beautiful-day.tar.gz
-tar -xzf bd-feathered-friends.tar.gz
-tar -xzf bd-i-can-do-it.tar.gz
+tar -xzf bd-egg.tar.gz
+tar -xzf bd-lara-the-yellow-ladybird.tar.gz
+tar -xzf bd-walking-together.tar.gz
+tar -xzf bd-is-there-anyone-like-me.tar.gz
 ```
 
-此前22本保持原样；2026-11-13批次《交个朋友吧》《坏心情云朵》《最棒的鸟窝》《千足虫找鞋子》已收到上传解压反馈，强制远程148个引用及逐文件SHA-256检查通过；2026-11-12批次也已收到上传解压反馈并通过远程资源检查。素材与来源原图均被Git忽略，未获清理授权不删除。
+原有26本保留原样；2026-11-14批次《浴缸里的大冒险》《美好的一天》《羽毛朋友》《我能自己来！》此前仍待上传解压，不能因新批制作完成推断其已上传。2026-11-13批次已收到上传解压反馈，强制远程148个引用及逐文件SHA-256检查通过；2026-11-12批次也已收到上传解压反馈并通过远程资源检查。素材与来源原图均被Git忽略，未获清理授权不删除。
 
-本批书目更新刷新即可生效，无需重复importer或重启。继续沿用当前最新版UI；本次新增的制图阈值和尺寸配置属于本机制作用途。代码提交、推送与部署继续由用户自行处理。
+本批只增加数据库内容、本机物料配置与来源证据，未修改运行时代码和UI；书目刷新即可生效，无需importer或为本批重启/部署。代码提交、推送与部署仍由用户自行处理。
 
 ## Google 验证与 sitemap
 
@@ -148,3 +148,7 @@ npm run test:reader
 ```
 
 该快照只读数据库、用于离线测试，不替代 MySQL 备份，不作为运营导入来源。生产数据维护以数据库为准；当前已知 schema 外键数量测试失败按用户要求忽略，不为通过断言修改表结构。实际检查边界见 `docs/acceptance.md`。
+
+## 微信小程序
+
+原生客户端及可选账号服务的导入、域名、四张新表、配置和统计见 [小程序操作说明](miniprogram.md)。运行 `npm run setup:mini` 从本机配置生成被Git忽略的项目配置；不复制AppSecret到客户端。现有数据库默认不自动迁移，`go run ./cmd/readerdb`只预览新表SQL，四张表由用户手动创建，Codex不执行建表或迁移。API代码与小程序上传分开交付，正式API仍用 `bash deploy.sh`，小程序不自动上传/发布。

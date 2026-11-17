@@ -7,8 +7,13 @@
     "dev": "go run ./cmd/api",
     "test:reader": "node tests/reader.cjs && node tests/dialogue.cjs",
     "test:layout": "node tests/layout.cjs",
-    "check": "node --check web/app.js && node --input-type=module --check < web/assets/reader-dialogue.js",
-    "test:flows": "node --test tests/flows.cjs"
+    "check": "node --check web/app.js && node --input-type=module --check < web/assets/reader-dialogue.js && npm run check:mini",
+    "test:flows": "node --test tests/flows.cjs",
+    "setup:mini": "python3 scripts/setup_miniprogram.py",
+    "check:mini": "node scripts/check_miniprogram.cjs",
+    "test:mini": "node --test tests/miniprogram.cjs",
+    "test:mini:layout": "node tests/miniprogram-layout.cjs",
+    "test:mini:profile": "node tests/miniprogram-profile-layout.cjs"
   },
   "devDependencies": {
     "linkedom": "^0.18.12",

@@ -1,0 +1,79 @@
+{
+  "key": "walking-together",
+  "id": "bd-walking-together",
+  "en": "Walking Together",
+  "title": "一起走呀走",
+  "writer": "Jade Mathieson Duckitt",
+  "illustrator": "Louwrisa Blaauw",
+  "designer": "Bianca de Jong",
+  "editor": "Elise Varga",
+  "isbn": "978-1-928318-28-6",
+  "source_url": "https://bookdash.org/books/walking-together/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=walking-together",
+  "source_note": "2026-11-16逐本核对官网作品页署名、ISBN、完整原图页序与CC BY 4.0许可依据；英文PDF下载入口实测403，未取得PDF。英文按完整原画人工校对，OCR仅辅助，合并排版换行并规范引号与朗读标点。中文、实际画面描述、对白和音频引用仅维护MySQL。故事对应预览索引2–13，衬页和封底不计入。作者采用现官网全名Jade Mathieson Duckitt，原封面署名Jade Mathieson。原文为对孩子的第一人称陪伴叙述，未将没有独立说话署名的诗句强制气泡化。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "When we go walking and the road is long, we’ll walk together singing a song.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "I am with you and you are with me. A journey is fun with our family.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "I’ll keep you cosy like a mother hen. She keeps her chicks warm under her wing.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "If the rain starts to fall down from the sky, like that good hat I’ll keep your face dry.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "If storm clouds get angry and grumble and moan, be brave, why cry? You’re not alone.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "We’re walking together so we never get bored. Look up! Look around! See where we’ve explored!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "If you see something that’s funny to see, I don’t want to miss it. Please share it with me!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "If your feet start to hurt from the distance we’ve passed, don’t worry, we’ve made it! Here’s the clinic at last.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "We all need to check our throat, lungs and ears. Get strong as you grow, it’s no reason for tears.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "Do you think it’s scary? Here, hold my hand. She’ll check your blood pressure with this clever armband.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "They give us our medicine, tell us what we should know, to keep us all healthy. Now back home we go.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "It’s okay to be tired, there’s so much we’ve seen. Now it’s your bedtime. Sleep well and sweet dreams.",
+      "original_was_wordless": false
+    }
+  ]
+}

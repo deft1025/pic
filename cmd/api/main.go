@@ -47,9 +47,13 @@ func run(configFile string) error {
 		return errors.New("MySQL 内容表未就绪，请先运行 cmd/dbinit 和 cmd/importer")
 	}
 
+	var accounts *service.Accounts
+	if cfg.WeChat.Enabled {
+		accounts = service.NewAccounts(repository.New(db, cfg.Content.RequireLicenseApproval), library, &service.WeChatClient{AppID: cfg.WeChat.AppID, Secret: cfg.WeChat.AppSecret}, cfg.WeChat.AppID)
+	}
 	server := &http.Server{
 		Addr:              cfg.Server.Addr,
-		Handler:           router.New(library, cfg.Content.WebDir, cfg.Content.AssetBaseURL, cfg.Server.SiteBaseURL),
+		Handler:           router.New(library, cfg.Content.WebDir, cfg.Content.AssetBaseURL, cfg.Server.SiteBaseURL, accounts),
 		ReadHeaderTimeout: cfg.Server.ReadHeaderTimeout,
 		ReadTimeout:       cfg.Server.ReadTimeout,
 		WriteTimeout:      cfg.Server.WriteTimeout,

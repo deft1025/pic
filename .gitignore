@@ -69,3 +69,7 @@ htmlcov/
 /content/books/
 /pic-server
 /materials
+
+# 小程序本机项目配置；公开模板保留游客AppID，密钥仅在后端.env
+/miniprogram/project.config.json
+/miniprogram/project.private.config.json

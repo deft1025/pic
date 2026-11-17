@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小小绘本馆",
+  "usingComponents": {
+    "book-card": "/components/book-card/index"
+  }
+}

@@ -24,6 +24,8 @@ func respond(w http.ResponseWriter, value any, err error) {
 	}
 	status := http.StatusInternalServerError
 	switch {
+	case errors.Is(err, service.ErrUnauthorized):
+		status = http.StatusUnauthorized
 	case errors.Is(err, service.ErrInvalidQuery):
 		status = http.StatusBadRequest
 	case errors.Is(err, service.ErrNotFound):

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的书架",
+  "usingComponents": {
+    "book-card": "/components/book-card/index"
+  }
+}

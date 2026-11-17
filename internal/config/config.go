@@ -18,7 +18,14 @@ import (
 type Config struct {
 	Server   ServerConfig
 	Database DatabaseConfig
+	WeChat   WeChatConfig
 	Content  ContentConfig
+}
+
+type WeChatConfig struct {
+	Enabled   bool
+	AppID     string
+	AppSecret string
 }
 
 type ServerConfig struct {
@@ -91,6 +98,7 @@ func Load(path string) (*Config, error) {
 		return fallback
 	}
 	cfg := &Config{
+		WeChat:   WeChatConfig{AppID: value("WECHAT_APP_ID", ""), AppSecret: value("WECHAT_APP_SECRET", "")},
 		Server:   ServerConfig{Addr: value("HTTP_ADDR", "127.0.0.1:8198"), SiteBaseURL: value("SITE_BASE_URL", "")},
 		Database: DatabaseConfig{Host: value("DB_HOST", "127.0.0.1"), User: value("DB_USER", "pic"), Password: value("DB_PASSWORD", ""), Name: value("DB_NAME", "pic")},
 		Content:  ContentConfig{WebDir: value("WEB_DIR", "web"), AssetBaseURL: value("ASSET_BASE_URL", ""), AssetCheckMode: value("ASSET_CHECK_MODE", "auto"), Dir: value("CONTENT_DIR", "content/books"), Schema: value("SCHEMA_FILE", "docs/schema.sql")},
@@ -138,7 +146,7 @@ func Load(path string) (*Config, error) {
 		key  string
 		dest *bool
 	}{
-		{"DB_TLS", &cfg.Database.TLS}, {"REQUIRE_LICENSE_APPROVAL", &cfg.Content.RequireLicenseApproval},
+		{"MINI_PROGRAM_ENABLED", &cfg.WeChat.Enabled}, {"DB_TLS", &cfg.Database.TLS}, {"REQUIRE_LICENSE_APPROVAL", &cfg.Content.RequireLicenseApproval},
 	} {
 		b, e := strconv.ParseBool(value(item.key, "false"))
 		if e != nil {
@@ -182,6 +190,9 @@ func Load(path string) (*Config, error) {
 	}
 	if cfg.Content.AssetCheckMode == "remote" && cfg.Content.AssetBaseURL == "" {
 		return nil, errors.New("ASSET_CHECK_MODE=remote 需要设置 ASSET_BASE_URL")
+	}
+	if cfg.WeChat.Enabled && (cfg.WeChat.AppID == "" || cfg.WeChat.AppSecret == "") {
+		return nil, errors.New("启用小程序账号服务需要 WECHAT_APP_ID 和 WECHAT_APP_SECRET")
 	}
 	return cfg, nil
 }

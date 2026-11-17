@@ -1,0 +1,81 @@
+{
+  "key": "egg",
+  "id": "bd-egg",
+  "en": "Egg",
+  "title": "这是谁的蛋？",
+  "writer": "Mirna Lawrence",
+  "illustrator": "Megan Naudé",
+  "designer": "Georgia Demertzis",
+  "editor": "Nabeela Kalla",
+  "isbn": "978-1-77623-140-9",
+  "source_url": "https://bookdash.org/books/egg/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=egg",
+  "source_note": "2026-11-16逐本核对官网作品页署名、ISBN、完整原图页序与CC BY 4.0许可依据；英文PDF下载入口实测403，未取得PDF。英文按完整原画人工校对，OCR仅辅助，合并排版换行并规范引号与朗读标点。中文、实际画面描述、对白和音频引用仅维护MySQL。第12页原作无字，保留原图并补写中英文结尾串词，已在数据库署名披露。第2、4、6、8页原画是动物想象气泡，原文保留为普通文字，不误标为口头对白。",
+  "narration_additions": [
+    12
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Egg",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "My egg?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Not my egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "My egg?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Not my egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "My egg?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "Not my egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "My egg?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Not my egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "My egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Our egg.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "",
+      "original_was_wordless": true
+    }
+  ]
+}

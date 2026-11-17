@@ -94,6 +94,27 @@ func TestCatalogAPI(t *testing.T) {
 	request(t, h, "/api/books/not-a-book/pages", 404)
 	request(t, h, "/api/nope", 404)
 }
+
+func TestRecommendationsArePublicButNeverSharedCached(t *testing.T) {
+	w := request(t, setup(t), "/api/recommendations?user_id=spoof&age=spoof", http.StatusOK)
+	var result service.BookList
+	if err := json.Unmarshal(w.Body.Bytes(), &result); err != nil {
+		t.Fatal(err)
+	}
+	if len(result.Items) != 4 || result.Limit != 4 {
+		t.Fatal("unexpected recommendation count", result)
+	}
+	if w.Header().Get("Cache-Control") != "no-store" || !strings.Contains(w.Header().Get("Vary"), "Authorization") {
+		t.Fatal("recommendations can be shared cached")
+	}
+	seen := map[string]bool{}
+	for _, b := range result.Items {
+		if b.Status != "published" || len(b.Pages) > 0 || seen[b.ID] {
+			t.Fatal("invalid public recommendation", b)
+		}
+		seen[b.ID] = true
+	}
+}
 func TestEveryStoryAndAsset(t *testing.T) {
 	h := setup(t)
 	c, _ := catalog.Load("../../tests/fixtures/books", "../../tests/fixtures/web", false)
@@ -149,6 +170,15 @@ func TestOnlyPublishedStoriesVisible(t *testing.T) {
 type memoryStore struct{ c *catalog.Catalog }
 
 func (m memoryStore) Ping(context.Context) error { return nil }
+func (m memoryStore) RecommendationCandidates(context.Context, string, string, bool) ([]model.RecommendationCandidate, error) {
+	items := []model.RecommendationCandidate{}
+	for i, b := range m.c.Books {
+		if b.Status == "published" {
+			items = append(items, model.RecommendationCandidate{BookID: b.ID, Sequence: uint64(i + 1)})
+		}
+	}
+	return items, nil
+}
 func (m memoryStore) PublishedBookIDs(context.Context) ([]string, error) {
 	ids := []string{}
 	for _, book := range m.c.Books {

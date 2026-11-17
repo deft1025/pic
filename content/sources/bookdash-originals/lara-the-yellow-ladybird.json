@@ -1,0 +1,79 @@
+{
+  "key": "lara-the-yellow-ladybird",
+  "id": "bd-lara-the-yellow-ladybird",
+  "en": "Lara the Yellow Ladybird",
+  "title": "黄色瓢虫拉拉",
+  "writer": "Martha Evans",
+  "illustrator": "Catherine Holtzhausen",
+  "designer": "Nadene Kriel",
+  "editor": "Ester Levinrad",
+  "isbn": "978-1-928318-54-5",
+  "source_url": "https://bookdash.org/books/lara-the-yellow-ladybird/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_04.jpg",
+  "source_note": "2026-11-16逐本核对官网作品页署名、ISBN、完整原图页序与CC BY 4.0许可依据；英文PDF下载入口实测403，未取得PDF。英文按完整原画人工校对，OCR仅辅助，合并排版换行并规范引号与朗读标点。中文、实际画面描述、对白和音频引用仅维护MySQL。预览索引3为版权/标题跨页，明确CC BY 4.0；故事对应索引4–15，跳过书名页、衬页、版权页与封底。第3页按左→右阅读顺序整理，第9页按同学群体发言不指定单独人物，第11页明确是内心想法，保留旁白。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Lara the ladybird was a special bug. Unlike all her friends, she had bright yellow wings.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Everyone loved her yellow wings. Each morning, Bibi Butterfly said hello. And Manto Mantis always waved.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Even Sesa, the sulky spider, was happy to see her. At school, she played with lots of friends.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "But Lara wanted to be like the other ladybirds. “I wish I had red wings like you, Mama,” she cried.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "So one day, to cheer her up, Lara’s mother painted her wings bright red.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "The next morning, nobody greeted Lara on her way to school.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "And when she got there, none of her friends said hello.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Lara sat all alone. No one noticed her new red wings. Until Miss Miya spotted her and said: “You’ve painted your lovely yellow wings!”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Lara’s classmates were shocked. “Your wings are special!” “So unique!” “So rare!”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "“Lara,” Miss Miya said, “your yellow wings are what make you you. Like Sipho’s spot … and Sally’s legs.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "Back home, Lara took a long bath and scrubbed until her golden wings gleamed. “I’ll never paint my wings again!” she thought. Except, maybe once or twice …",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "To try a bit of purple – or something nice. But not for ever and just for fun.",
+      "original_was_wordless": false
+    }
+  ]
+}

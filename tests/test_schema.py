@@ -15,17 +15,36 @@ def identifiers(value):
 
 class SchemaTests(unittest.TestCase):
     def test_every_table_has_generated_primary_key_and_business_uniqueness(self):
-        self.assertEqual(set(TABLES), {'books', 'book_licenses', 'age_ranges', 'categories', 'languages', 'book_age_ranges', 'book_categories', 'book_languages', 'book_pages', 'book_voices'})
+        self.assertEqual(set(TABLES), {'books', 'book_licenses', 'age_ranges', 'categories', 'languages', 'book_age_ranges', 'book_categories', 'book_languages', 'book_pages', 'book_voices', 'reader_users', 'reader_sessions', 'reader_favorites', 'reader_events'})
         for name, body in TABLES.items():
             with self.subTest(table=name):
                 fields = columns(body)
-                self.assertIn('int unsigned NOT NULL AUTO_INCREMENT', fields['id'])
-                self.assertEqual(re.findall(r'PRIMARY KEY \((.*?)\)', body), ['`id`'])
+                pk = 'user_id' if name == 'reader_users' else 'id'
+                self.assertIn('int unsigned NOT NULL AUTO_INCREMENT', fields[pk])
+                self.assertEqual(re.findall(r'PRIMARY KEY \((.*?)\)', body), ['`' + pk + '`'])
                 self.assertRegex(body, r'UNIQUE KEY `\w+` \(')
                 self.assertIn('timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP', fields['created_at'])
                 self.assertIn('ON UPDATE CURRENT_TIMESTAMP', fields['updated_at'])
                 for field, declaration in fields.items():
                     self.assertRegex(declaration, r"COMMENT '.+'", name + '.' + field)
+
+    def test_favorites_are_one_account_book_state_without_cumulative_counter(self):
+        fields = columns(TABLES['reader_favorites'])
+        self.assertNotIn('added_count', fields)
+        self.assertIn("tinyint unsigned NOT NULL DEFAULT '0'", fields['active'])
+        self.assertIn('0 否、1 是', fields['active'])
+        self.assertIn('(`user_id`, `book_id`)', TABLES['reader_favorites'])
+
+    def test_reader_user_ids_are_numeric_and_age_is_explicit(self):
+        users = columns(TABLES['reader_users'])
+        self.assertNotIn('id', users)
+        self.assertIn('name', users)
+        self.assertIn("DEFAULT ''", users['age'])
+        self.assertRegex(SQL, r"AUTO_INCREMENT=10000")
+        for name in ('reader_users', 'reader_sessions', 'reader_favorites', 'reader_events'):
+            self.assertIn('int unsigned NOT NULL', columns(TABLES[name])['user_id'])
+        self.assertNotIn('visitor_id', columns(TABLES['reader_events']))
+        self.assertNotIn('reader_progress', TABLES)
 
     def test_foreign_keys_target_matching_unique_business_keys(self):
         created = set()

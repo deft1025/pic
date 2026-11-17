@@ -1,0 +1,230 @@
+package repository
+
+import (
+	"context"
+	"database/sql"
+	"errors"
+	"fmt"
+	"os"
+	"strings"
+	"sync"
+	"testing"
+	"time"
+
+	"pic/internal/catalog"
+	"pic/internal/config"
+	"pic/internal/database"
+	"pic/internal/model"
+)
+
+// Explicitly opt in. Only a unique disposable database is created/dropped;
+// the configured content database is never initialized or migrated.
+func TestAccountMySQLIntegration(t *testing.T) {
+	if os.Getenv("PIC_MYSQL_TEST") != "1" {
+		t.Skip("set PIC_MYSQL_TEST=1 for an isolated temporary MySQL database")
+	}
+	cfg, err := config.Load("../../.env")
+	if err != nil {
+		t.Fatal(err)
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
+	defer cancel()
+	dbc := cfg.Database
+	dbc.Name = ""
+	admin, err := database.Open(ctx, dbc)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer admin.Close()
+	name := fmt.Sprintf("pic_account_test_%d", time.Now().UnixNano())
+	if _, err = admin.ExecContext(ctx, "CREATE DATABASE `"+name+"` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"); err != nil {
+		t.Fatal("cannot create temporary test database")
+	}
+	defer func() {
+		cleanup, c := context.WithTimeout(context.Background(), 10*time.Second)
+		defer c()
+		if _, e := admin.ExecContext(cleanup, "DROP DATABASE `"+name+"`"); e != nil {
+			t.Error("cannot remove temporary test database")
+		}
+	}()
+	dbc.Name = name
+	db, err := database.Open(ctx, dbc)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer db.Close()
+	if err = database.Initialize(ctx, db, "../../docs/schema.sql"); err != nil {
+		t.Fatal(err)
+	}
+	fixture, err := catalog.Load("../../tests/fixtures/books", "../../tests/fixtures/web", false)
+	if err != nil {
+		t.Fatal(err)
+	}
+	repo := New(db, false)
+	if err = repo.Import(ctx, fixture.Books); err != nil {
+		t.Fatal(err)
+	}
+	book := fixture.Books[0]
+	a, err := repo.Login(ctx, "app", "openid", strings.Repeat("a", 64), time.Now().UTC().Add(time.Hour))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if a.ID != "10000" || a.Name != "" || a.Age != "" {
+		t.Fatal("user ID must start at 10000 and profile must be unset")
+	}
+	if err = repo.SaveProfile(ctx, a.ID, "小读者", "3-4"); err != nil {
+		t.Fatal(err)
+	}
+	profile, err := repo.Profile(ctx, a.ID)
+	if err != nil || profile.Name != "小读者" || profile.Age != "3-4" {
+		t.Fatal("profile did not roundtrip", err)
+	}
+	again, err := repo.Login(ctx, "app", "openid", strings.Repeat("b", 64), time.Now().UTC().Add(time.Hour))
+	if err != nil || again.ID != a.ID || again.Name != "小读者" || again.Age != "3-4" {
+		t.Fatal("wechat identity duplicated", err)
+	}
+	other, err := repo.Login(ctx, "app", "other-openid", strings.Repeat("c", 64), time.Now().UTC().Add(-time.Hour))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if other.ID == a.ID {
+		t.Fatal("different user IDs must be unique")
+	}
+	if _, err = repo.Authenticate(ctx, strings.Repeat("c", 64), time.Now().UTC()); !errors.Is(err, sql.ErrNoRows) {
+		t.Fatal("expired token accepted")
+	}
+	var wg sync.WaitGroup
+	errs := make(chan error, 12)
+	for i := 0; i < 12; i++ {
+		wg.Add(1)
+		go func() { defer wg.Done(); errs <- repo.SetFavorites(ctx, a.ID, []string{book.ID}, true) }()
+	}
+	wg.Wait()
+	close(errs)
+	for err = range errs {
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+	var count, active int
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),COALESCE(SUM(active),0) FROM reader_favorites WHERE user_id=? AND book_id=?`, a.ID, book.ID).Scan(&count, &active); err != nil || active != 1 || count != 1 {
+		t.Fatal("retry/concurrent favorite duplicated state", err, active, count)
+	}
+	if ids, e := repo.Favorites(ctx, other.ID); e != nil || len(ids) != 0 {
+		t.Fatal("cross-account favorites leaked", e)
+	}
+	if err = repo.SetFavorites(ctx, a.ID, []string{book.ID}, false); err != nil {
+		t.Fatal(err)
+	}
+	if err = db.QueryRowContext(ctx, `SELECT active FROM reader_favorites WHERE user_id=? AND book_id=?`, a.ID, book.ID).Scan(&active); err != nil || active != 0 {
+		t.Fatal("cancel did not clear favorite state", err)
+	}
+	for i := 0; i < 3; i++ {
+		if err = repo.SetFavorites(ctx, a.ID, []string{book.ID}, true); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),SUM(active) FROM reader_favorites WHERE user_id=? AND book_id=?`, a.ID, book.ID).Scan(&count, &active); err != nil || count != 1 || active != 1 {
+		t.Fatal("refavorite should contribute at most one favorite", err)
+	}
+	if err = repo.SetFavorites(ctx, other.ID, []string{book.ID}, true); err != nil {
+		t.Fatal(err)
+	}
+	if err = db.QueryRowContext(ctx, `SELECT SUM(active) FROM reader_favorites WHERE book_id=?`, book.ID).Scan(&count); err != nil || count != 2 {
+		t.Fatal("favorite ranking must count distinct account states", err)
+	}
+	// A failure after the first insert must roll back the entire batch.
+	longID := strings.Repeat("x", 65)
+	if err = repo.SetFavorites(ctx, a.ID, []string{"rollback-book", longID}, true); err == nil {
+		t.Fatal("expected database validation failure")
+	}
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_favorites WHERE book_id='rollback-book'`).Scan(&count); err != nil || count != 0 {
+		t.Fatal("partial batch committed", err)
+	}
+	e := model.ReadingEvent{ID: strings.Repeat("a", 32), ReadingID: strings.Repeat("c", 32), BookID: book.ID, Kind: "complete", UserID: a.ID}
+	for i := 0; i < 3; i++ {
+		if i == 2 {
+			e.ID = strings.Repeat("d", 32)
+		}
+		if err = repo.RecordEvent(ctx, e); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_events`).Scan(&count); err != nil || count != 1 {
+		t.Fatal("duplicate completion counted", err)
+	}
+	// Later reading IDs, retries and concurrent devices preserve first completion.
+	if _, err = db.ExecContext(ctx, `UPDATE reader_events SET updated_at='2020-01-01 00:00:00' WHERE event_id=?`, strings.Repeat("a", 32)); err != nil {
+		t.Fatal(err)
+	}
+	completionErrors := make(chan error, 12)
+	for i := 0; i < 12; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			later := e
+			later.ID = fmt.Sprintf("%032x", i+100)
+			later.ReadingID = fmt.Sprintf("%032x", i+200)
+			completionErrors <- repo.RecordEvent(ctx, later)
+		}(i)
+	}
+	wg.Wait()
+	close(completionErrors)
+	for err = range completionErrors {
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+	var firstID string
+	var updated time.Time
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),MIN(event_id),MIN(updated_at) FROM reader_events WHERE user_id=? AND book_id=? AND event_kind='complete'`, a.ID, book.ID).Scan(&count, &firstID, &updated); err != nil || count != 1 || firstID != strings.Repeat("a", 32) || updated.Year() != 2020 {
+		t.Fatal("first completion was inserted again or modified", count, firstID, updated, err)
+	}
+	candidates, err := repo.RecommendationCandidates(ctx, a.ID, book.Ages[0], true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	found := false
+	for _, c := range candidates {
+		if c.BookID == book.ID {
+			found = true
+			if c.Score != 5 || !c.Completed || !c.AgeMatch {
+				t.Fatal("expected two favorites and one unique completion", c)
+			}
+		}
+	}
+	if !found {
+		t.Fatal("published book missing from recommendation candidates")
+	}
+	// Older repeated completion rows must not inflate rankings either.
+	if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id) VALUES(?,?,?,'complete',?)`, strings.Repeat("e", 32), a.ID, book.ID, strings.Repeat("f", 32)); err != nil {
+		t.Fatal(err)
+	}
+	candidates, err = repo.RecommendationCandidates(ctx, "", "", true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, c := range candidates {
+		if c.Completed || c.AgeMatch {
+			t.Fatal("guest received private read status", c)
+		}
+		if c.BookID == book.ID && c.Score != 5 {
+			t.Fatal("legacy duplicate completion inflated score", c)
+		}
+	}
+	candidates, err = repo.RecommendationCandidates(ctx, "", "", false)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, c := range candidates {
+		if c.Score != 0 || c.Completed || c.AgeMatch {
+			t.Fatal("disabled statistics touched account data", c)
+		}
+	}
+	if err = repo.Logout(ctx, strings.Repeat("a", 64)); err != nil {
+		t.Fatal(err)
+	}
+	if _, err = repo.Authenticate(ctx, strings.Repeat("a", 64), time.Now().UTC()); !errors.Is(err, sql.ErrNoRows) {
+		t.Fatal("logged-out token accepted")
+	}
+}

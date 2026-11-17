@@ -18,7 +18,7 @@ flowchart LR
 
 ## 本机制作与数据库维护
 
-`scripts/materials.py` → 本机 `cmd/materials` → `service.Materials` → repository → MySQL。不新增公开写接口或服务器后台；`read` 返回完整书目及快照版本，`save` 在事务内锁定并校验版本后写入。制作失败或版本冲突不覆盖已有内容，正文改变清理对应语言旧音频。脚本仅在内存/自动清理的临时目录里适配旧生成实现，不再维护 content/books。`snapshot-tests` 只读生成离线测试夹具，运行和制作均不读取测试快照。
+`scripts/materials.py` → 本机 `cmd/materials` → `service.Materials` → repository → MySQL。书目维护不新增公开写接口或服务器后台；`read` 返回完整书目及快照版本，`save` 在事务内锁定并校验版本后写入。制作失败或版本冲突不覆盖已有内容，正文改变清理对应语言旧音频。脚本仅在内存/自动清理的临时目录里适配旧生成实现，不再维护 content/books。`snapshot-tests` 只读生成离线测试夹具，运行和制作均不读取测试快照。
 
 部署仍为服务器 `deploy.sh` 的 git pull、Go 编译和 systemd 重启；不使用 Docker。书目 JSON 已取消 Git 跟踪，本机历史备份保留。
 
@@ -67,3 +67,9 @@ handler 不操作 SQL，router 不读取配置、数据库或内容。service �
 ## 检查
 
 `make test` 验证配置、业务规则、路由契约、SQL 查询/事务和现有前端流程。`go run ./cmd/importer --config .env.example --validate-only` 可验证配置与资料链路，无需数据库。真实 MySQL 和浏览器验证边界见 [acceptance.md](acceptance.md)。
+
+## 微信小程序与账号
+
+`miniprogram/` 为独立原生微信客户端，复用公共书库API，不复制运营书目。`service.Accounts → repository.AccountStore` 管理微信身份交换、用户名/年龄资料、随机会话、收藏状态和登录用户阅读事件；HTTP层验证请求与会话，SQL事务锁定用户行，同一用户/绘本的收藏状态保持0/1；complete仅首次写入，后续重复阅读不新增、不更新时间。`Library.Recommendations → repository.RecommendationStore`读取MySQL可见书目、有效收藏人数、去重读完人数及当前用户读完状态，服务层组合4本推荐，默认2本同龄未读新书＋同龄未读热门，不足依次补同龄/全库热门；同分和全零按物料自增ID倒序。账号能力与推荐只由小程序接入，网页版保持本机状态与原首页。`WeChatClient` 只在服务端调用微信，不暴露OpenID、AppSecret或session_key。客户端游客只阅读，账号缓存和按账号的事件重试分开维护，禁止登录过期或换号时将私有缓存移作游客数据。
+
+新表定义集中在 `docs/schema.sql` 第六节；`cmd/readerdb` 默认只预览这四张表的SQL，显式 `--apply` 才连接配置库建表，不更新书目与字典。默认关闭小程序账号功能，不自动迁移已有库。见 [小程序说明](miniprogram.md)。

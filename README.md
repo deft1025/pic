@@ -44,7 +44,7 @@ ASSET_BASE_URL=https://img.xuninfo.top/pic
 - 夜间/全屏/文字显示、音量/倍速/定时停止、本地阅读进度和历史。
 - MySQL 事务导入、资源校验、配置管理、静态资源域名。
 
-无需注册，收藏、进度与设置保存在当前浏览器，不跨设备同步。初期 `REQUIRE_LICENSE_APPROVAL=false`，保留授权字段，不增加审核门槛。
+网页版无需注册，收藏、进度与设置保存在当前浏览器。原生微信小程序支持游客阅读，登录后收藏和参与阅读统计，不保存阅读进度，见 [小程序说明](docs/miniprogram.md)。初期 `REQUIRE_LICENSE_APPROVAL=false`，保留授权字段，不增加审核门槛。
 
 ## 配置与分层
 
@@ -76,3 +76,9 @@ npm run test:reader
 | [architecture.md](docs/architecture.md) | 分层、配置与各包职责 |
 | [acceptance.md](docs/acceptance.md) | 当前验收状态及待验证项目 |
 | [prd.docx](docs/prd.docx) | 原始产品文档 |
+
+## 微信小程序
+
+原生客户端位于 `miniprogram/`。先在根目录执行 `npm run setup:mini`，再用微信开发者工具导入该目录；接口为 `https://pic.xuninfo.top`，AppSecret只留在后端。新账号功能默认关闭，现有库仅通过独立四张新表启用，见 [配置与验收说明](docs/miniprogram.md)。
+
+检查入口为 `npm run check:mini`、`npm run test:mini` 和 `npm run test:mini:layout`；浏览器模拟检查与微信模拟器/真机结果分开记录。

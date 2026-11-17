@@ -13,6 +13,7 @@ import (
 type storeStub struct {
 	listCalls, pageCalls                           int
 	query                                          model.Query
+	options                                        model.Options
 	book                                           model.Book
 	listErr, getErr, pagesErr, pingErr, optionsErr error
 }
@@ -32,7 +33,7 @@ func (s *storeStub) Pages(context.Context, string) ([]model.Page, error) {
 	return s.book.Pages, s.pagesErr
 }
 func (s *storeStub) Options(context.Context) (model.Options, error) {
-	return model.Options{}, s.optionsErr
+	return s.options, s.optionsErr
 }
 
 func TestParsePage(t *testing.T) {

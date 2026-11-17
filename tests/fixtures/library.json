@@ -4124,6 +4124,171 @@
       ]
     },
     {
+      "id": "bd-egg",
+      "title_zh": "这是谁的蛋？",
+      "title_original": "Egg",
+      "author": "Mirna Lawrence",
+      "illustrator": "Megan Naudé",
+      "description_zh": "草地上有一颗蛋。鳄鱼、陆龟、企鹅和母鸡都来瞧一瞧：这是我的蛋吗？简单的重复问答，最后迎来鸵鸟一家。低龄宝宝可以和大人一起指图、猜一猜。",
+      "reading_value": "跟着重复问答，观察动物和蛋的不同",
+      "age_ranges": [
+        "0-2",
+        "3-4"
+      ],
+      "categories": [
+        "animals",
+        "nature",
+        "cognition"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-egg/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 3,
+      "featured_order": 0,
+      "published_at": "2026-11-16T09:30:00Z",
+      "publish_status": "published",
+      "content_version": "materials-e887e75d206b667b70926d54eef4f189dddd8dde070131994a292a406b0ab6a6",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/egg/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Egg》由Book Dash发布；作者Mirna Lawrence，原插画Megan Naudé，设计Georgia Demertzis，编辑Nabeela Kalla。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。原作无字故事页的中英文朗读串词由小小绘本馆补写，页码：12。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-16T09:33:01.876Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-16T09:32:11.176Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-egg/page-001.jpg",
+          "image_alt": "蓝天和斜坡前，一颗浅色带斑点的大蛋立在右边的草地上，一只红色瓢虫沿着草坡爬行。",
+          "text_zh": "一颗蛋。",
+          "text_original": "Egg",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-001.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-egg/page-002.jpg",
+          "image_alt": "绿色鳄鱼趴在草坡上看着蛋，头顶的想象泡泡里，一只小鳄鱼从蛋壳中探出头。",
+          "text_zh": "是我的蛋吗？",
+          "text_original": "My egg?",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-002.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-egg/page-003.jpg",
+          "image_alt": "鳄鱼迈着脚步向右离开，大蛋留在左边草坡上，旁边有一只小瓢虫。",
+          "text_zh": "不是我的蛋。",
+          "text_original": "Not my egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-003.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-egg/page-004.jpg",
+          "image_alt": "黄色长脖子的陆龟伸头看着蛋，想象泡泡里，一只小陆龟正从蛋壳里爬出来。",
+          "text_zh": "是我的蛋吗？",
+          "text_original": "My egg?",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-004.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-egg/page-005.jpg",
+          "image_alt": "背着旋纹龟壳的陆龟抬起脚向右走，大蛋留在左侧，草坡上有深绿色灌木。",
+          "text_zh": "不是我的蛋。",
+          "text_original": "Not my egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-005.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-egg/page-006.jpg",
+          "image_alt": "黑白企鹅弯身低头看蛋，头顶的想象泡泡里，小企鹅从破开的蛋壳里探出头。",
+          "text_zh": "是我的蛋吗？",
+          "text_original": "My egg?",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-006.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-egg/page-007.jpg",
+          "image_alt": "黑白企鹅挺着身子往右走，左边的大蛋依然立在草地上，小瓢虫靠在蛋旁。",
+          "text_zh": "不是我的蛋。",
+          "text_original": "Not my egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-007.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-egg/page-008.jpg",
+          "image_alt": "浅棕色母鸡低下头看蛋，想象泡泡里，小鸡站在裂开的蛋壳中。",
+          "text_zh": "是我的蛋吗？",
+          "text_original": "My egg?",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-008.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-egg/page-009.jpg",
+          "image_alt": "母鸡抬着一只脚往右走，大蛋留在左边草坡上，一只红色小瓢虫停在蛋顶附近。",
+          "text_zh": "不是我的蛋。",
+          "text_original": "Not my egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-009.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-egg/page-010.jpg",
+          "image_alt": "棕色鸵鸟俯下长脖子看着右边的大蛋，远处左侧的灌木后露出另一只鸵鸟的头。",
+          "text_zh": "是我的蛋。",
+          "text_original": "My egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-010.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-egg/page-011.jpg",
+          "image_alt": "黑色鸵鸟站在左边，棕色鸵鸟坐在右边的蛋上，一只红色小瓢虫从空中飞过。",
+          "text_zh": "是我们的蛋。",
+          "text_original": "Our egg.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-011.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-egg/page-012.jpg",
+          "image_alt": "一只小鸵鸟从裂开的蛋壳里伸出脖子，黑色和棕色的两只大鸵鸟从左右两边俯身望着它。",
+          "text_zh": "小鸵鸟破壳啦！爸爸妈妈低下头，迎接小宝宝。",
+          "text_original": "A baby ostrich hatches! Mum and Dad bend down to greet their chick.",
+          "audio_zh": "/assets/books/bd-egg/audio/zh/36986bd313cad190/page-012.mp3",
+          "audio_original": "/assets/books/bd-egg/audio/en/e106dba2f4846dba/page-012.mp3"
+        }
+      ]
+    },
+    {
       "id": "bd-feathered-friends",
       "title_zh": "羽毛朋友",
       "title_original": "Feathered Friends",
@@ -5519,6 +5684,537 @@
           "text_original": "At night she falls asleep thinking about more great adventures to have with her wheelchair and her new besties.",
           "audio_zh": "/assets/books/bd-i-can-do-it/audio/zh/83f507f2c5e6c250/page-012.mp3",
           "audio_original": "/assets/books/bd-i-can-do-it/audio/en/d15bed0f9952f204/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "bd-is-there-anyone-like-me",
+      "title_zh": "有谁和我一样吗？",
+      "title_original": "Is There Anyone Like Me?",
+      "author": "Fred Strydom",
+      "illustrator": "Jess Jardim-Wedepohl",
+      "description_zh": "小驴想知道，世界上有没有另一个自己：长得一样、笑起来一样，也有一样的小卷毛？它走过公园、水边和树后，观察朋友们，最后发现你和我都各有特别。清淡水彩中藏着许多值得指认的小动物。",
+      "reading_value": "边找边比较，看见每个人的独特",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "emotions",
+        "cognition"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-is-there-anyone-like-me/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-16T09:30:00Z",
+      "publish_status": "published",
+      "content_version": "materials-04e60eca27ef563d6f932fe542569e7f58706f76454032523ecb103b40ceaa92",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/is-there-anyone-like-me/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Is There Anyone Like Me?》由Book Dash发布；作者Fred Strydom，原插画Jess Jardim-Wedepohl，设计Stephen Wallace；官网未列编辑姓名。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-16T09:37:50.112Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-16T09:37:08.521Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-001.jpg",
+          "image_alt": "右边的小驴坐在草坡上抬头望向远方，身后是平静的水面和几棵伞形树；左侧留白。",
+          "text_zh": "我想知道，世界上的某个地方，会不会还有另一个我。",
+          "text_original": "I wonder if there’s another me somewhere in the world.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-001.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-002.jpg",
+          "image_alt": "左边小驴趴在水边看着自己的倒影；右边小驴仰起头对着崖壁张嘴，旁边竖着长长的耳朵。",
+          "text_zh": "长得和我一样，说起话来也一样。",
+          "text_original": "Who looks the same. And talks the same.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-002.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-003.jpg",
+          "image_alt": "小驴和一头灰色小象并排站着，回头对望，小驴额前的卷毛和小象尾端的卷曲线条清晰可见。",
+          "text_zh": "就连头上的小卷毛，也和我一样。",
+          "text_original": "And even has my curls.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-003.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-004.jpg",
+          "image_alt": "左边是小驴的绿眼睛、长耳朵和黑色卷毛特写；右边是小驴咧开嘴露出牙齿的笑脸。",
+          "text_zh": "有和我一样的眼睛、耳朵，就连笑声也和我一样。",
+          "text_original": "Someone with my eyes my ears. Who even has my laugh.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-004.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-005.jpg",
+          "image_alt": "右边小驴在石头和草地旁抬腿跳跃，画面用两个连续动作表现它高高跃起。",
+          "text_zh": "我会做的，它也会……",
+          "text_original": "Who can do what I can do …",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-005.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-006.jpg",
+          "image_alt": "左边小猴子坐在树枝上剥香蕉；右边小驴拿着香蕉，疑惑地看着地上的小乌龟和剥开的香蕉。",
+          "text_zh": "……我不会做的，它也不会。",
+          "text_original": "… and can’t do what I can’t.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-006.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-007.jpg",
+          "image_alt": "小驴在公园的大树后探头，树上挂着轮胎秋千，草坡下方是一条小河。",
+          "text_zh": "为了找到另一个我，我到处找呀找。我去了公园，还跑到树后面找。",
+          "text_original": "I’ve looked and looked everywhere to find another me. I went down to the park and looked behind the trees.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-007.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-008.jpg",
+          "image_alt": "左边小驴抬起头看鸟巢旁的小鸟；右边小驴低下头，从草坡边看向洞里的猫头鹰。",
+          "text_zh": "我东瞧瞧，西看看，往上找，往下看……",
+          "text_original": "I looked around, up and down …",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-008.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-009.jpg",
+          "image_alt": "水塘边，小驴趴低身子，和水牛、长颈鹿、小象一起低头看着水面，周围有草地和小石子。",
+          "text_zh": "……仔细看过每一张脸。",
+          "text_original": "… at every single face.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-009.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-010.jpg",
+          "image_alt": "小驴独自坐在大树旁，长耳朵竖起来，回头望向左侧，眼神显得有点疑惑。",
+          "text_zh": "可是，哪儿都找不到另一个我。",
+          "text_original": "I couldn’t find another me in any single place.",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-010.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-011.jpg",
+          "image_alt": "小驴开心地张开前腿站在草地中央，身旁围着小象、长颈鹿、鸟、水牛、乌龟和猫头鹰等朋友。",
+          "text_zh": "世界上只有一个我！我就是这么特别，真的呀！",
+          "text_original": "There’s only one me in the world! I’m special, oh it’s true!",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-011.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-is-there-anyone-like-me/page-012.jpg",
+          "image_alt": "右边是小驴歪着头微笑的近景，绿眼睛、长睫毛、直立的耳朵和额前卷毛清晰可见。",
+          "text_zh": "特别的可不只有我，你发现了吗？世界上，也只有一个你呀！",
+          "text_original": "But not just me, don’t you see? There’s only one of you!",
+          "audio_zh": "/assets/books/bd-is-there-anyone-like-me/audio/zh/ca98cc4ad92bb787/page-012.mp3",
+          "audio_original": "/assets/books/bd-is-there-anyone-like-me/audio/en/aec8a3457b0dd1a7/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "bd-lara-the-yellow-ladybird",
+      "title_zh": "黄色瓢虫拉拉",
+      "title_original": "Lara the Yellow Ladybird",
+      "author": "Martha Evans",
+      "illustrator": "Catherine Holtzhausen",
+      "description_zh": "拉拉的翅膀是黄色的，可她想和红翅膀的瓢虫朋友一样。妈妈帮她涂红了翅膀，却发生了意想不到的事。拼贴质感的花草和昆虫校园，陪孩子聊聊自己的特别。",
+      "reading_value": "聊聊与众不同，也欣赏自己的特别",
+      "age_ranges": [
+        "3-4",
+        "5-6"
+      ],
+      "categories": [
+        "animals",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-lara-the-yellow-ladybird/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-16T09:30:00Z",
+      "publish_status": "published",
+      "content_version": "materials-91d654d71024a89ff573787bb4210b1b8a3ebe378b99dafc2296536d176ea54d",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/lara-the-yellow-ladybird/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Lara the Yellow Ladybird》由Book Dash发布；作者Martha Evans，原插画Catherine Holtzhausen，设计Nadene Kriel，编辑Ester Levinrad。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-16T09:34:46.901Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-16T09:33:52.423Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-001.jpg",
+          "image_alt": "枝叶间挂着许多红色瓢虫，左下角的拉拉穿着蓝色上衣，展开黄色翅膀站在叶子上；右半边留白。",
+          "text_zh": "瓢虫拉拉很特别。她和所有朋友都不一样，长着一双亮黄色的翅膀。",
+          "text_original": "Lara the ladybird was a special bug. Unlike all her friends, she had bright yellow wings.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-001.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-002.jpg",
+          "image_alt": "左边拉拉背着小包走在一只大红瓢虫身旁；右边粉色蝴蝶在空中挥手，绿色螳螂面向拉拉。",
+          "text_zh": "大家都喜欢她的黄翅膀。每天早晨，蝴蝶比比都会向她问好，螳螂曼托也总是挥手打招呼。",
+          "text_original": "Everyone loved her yellow wings. Each morning, Bibi Butterfly said hello. And Manto Mantis always waved.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-002.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-003.jpg",
+          "image_alt": "左边黑蜘蛛倒挂在蛛网上；右边的拉拉和一群红翅膀瓢虫在学校旁的草地上玩耍。",
+          "text_zh": "就连爱闷闷不乐的蜘蛛塞萨，见到她也很开心。到了学校，她和好多朋友一起玩。",
+          "text_original": "Even Sesa, the sulky spider, was happy to see her. At school, she played with lots of friends.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-003.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-004.jpg",
+          "image_alt": "右边的拉拉低着眼睛坐在妈妈身旁，头顶的想象泡泡里是一双红色黑斑点翅膀，周围长着绿色枝叶。",
+          "text_zh": "可是，拉拉想和其他瓢虫一样。“妈妈，我真希望也有像你那样的红翅膀！”她哭着说。",
+          "text_original": "But Lara wanted to be like the other ladybirds. “I wish I had red wings like you, Mama,” she cried.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-004.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 99,
+              "zh": 39
+            },
+            "text_sha256": {
+              "en": "a633c5057dc3d50c7b5883f7f9b23dc30b146c775a09d789d57df08b1dd84878",
+              "zh": "659b67d65f1b52f74175f808e5c6beece4ad029d3af0990db3469ac541957e82"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 48,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 88,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Lara",
+                  "zh": "拉拉"
+                },
+                "x": 3,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  70.6,
+                  52
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-005.jpg",
+          "image_alt": "拉拉坐在椅子上照镜子，妈妈弯腰拿着刷子给她的翅膀涂红色，脚边放着一桶颜料。",
+          "text_zh": "于是有一天，为了让她开心，妈妈把她的翅膀涂成了鲜红色。",
+          "text_original": "So one day, to cheer her up, Lara’s mother painted her wings bright red.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-005.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-006.jpg",
+          "image_alt": "拉拉顶着红翅膀背着小包走在左下方，蜘蛛、蝴蝶和螳螂各自朝着别处，周围是草地和蓝天。",
+          "text_zh": "第二天早晨，拉拉走在上学的路上，却没有谁向她打招呼。",
+          "text_original": "The next morning, nobody greeted Lara on her way to school.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-006.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-007.jpg",
+          "image_alt": "左边的拉拉低着头站着；右边几只红瓢虫聚在学校门前聊天，没有望向她。",
+          "text_zh": "到了学校，也没有一个朋友和她说你好。",
+          "text_original": "And when she got there, none of her friends said hello.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-007.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-008.jpg",
+          "image_alt": "左上方拉拉独自坐着；右边戴眼镜的米娅老师弯腰看向拉拉，穿着粉色衣服，伸出一只手。",
+          "text_zh": "拉拉孤零零地坐着，谁也没注意到她新涂的红翅膀。直到米娅老师发现了她，说：“你把漂亮的黄翅膀涂上颜色啦！”",
+          "text_original": "Lara sat all alone. No one noticed her new red wings. Until Miss Miya spotted her and said: “You’ve painted your lovely yellow wings!”",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-008.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 134,
+              "zh": 52
+            },
+            "text_sha256": {
+              "en": "95c5803d9a4480b77efe18e7f125c883b287cda1789980208a014e5ddcfb5983",
+              "zh": "25bb321a981b506e2dcf0cb1429e5d6fbc251d6ad0c3b8784b0c76a315adf3c1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 92,
+                  "zh": 36
+                },
+                "end": {
+                  "en": 134,
+                  "zh": 52
+                },
+                "speaker": {
+                  "en": "Miss Miya",
+                  "zh": "米娅老师"
+                },
+                "x": 3,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  85.4,
+                  37.3
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-009.jpg",
+          "image_alt": "米娅老师和三位同学围着红翅膀的拉拉站在草地上，同学们抬起手，脸上露出惊讶的表情。",
+          "text_zh": "拉拉的同学们吃了一惊。“你的翅膀很特别呀！”“多独特！”“多少见呀！”",
+          "text_original": "Lara’s classmates were shocked. “Your wings are special!” “So unique!” “So rare!”",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-009.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 81,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "5527d8778321e8e0b3fde5e93fe8d9e37416f818ece03f14d9d2716bfb34d58c",
+              "zh": "cafc764c66178f6f0d725a8dec124b0ab32b7185438cf609035528a35dd3b6da"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 32,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 57,
+                  "zh": 22
+                },
+                "speaker": {
+                  "en": "Classmates",
+                  "zh": "同学们"
+                },
+                "x": 52,
+                "y": 5,
+                "width": 44,
+                "target": null
+              },
+              {
+                "start": {
+                  "en": 58,
+                  "zh": 22
+                },
+                "end": {
+                  "en": 70,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "Classmates",
+                  "zh": "同学们"
+                },
+                "x": 52,
+                "y": 28,
+                "width": 44,
+                "target": null
+              },
+              {
+                "start": {
+                  "en": 71,
+                  "zh": 28
+                },
+                "end": {
+                  "en": 81,
+                  "zh": 35
+                },
+                "speaker": {
+                  "en": "Classmates",
+                  "zh": "同学们"
+                },
+                "x": 52,
+                "y": 51,
+                "width": 44,
+                "target": null
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-010.jpg",
+          "image_alt": "左半边留白；右上方的想象泡泡里，两只瓢虫背对着站着，一只翅膀中间有一大块黑斑，另一只只有一条腿；右下方是老师和拉拉。",
+          "text_zh": "“拉拉，”米娅老师说，“黄翅膀让你成为独一无二的自己。就像西波的斑点，还有莎莉的双腿。”",
+          "text_original": "“Lara,” Miss Miya said, “your yellow wings are what make you you. Like Sipho’s spot … and Sally’s legs.”",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-010.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              2,
+              1
+            ],
+            "length": {
+              "en": 104,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "3eb71431e012819d6c9d955fc67ca50d04be1398116ea99b669b05e55d19e21b",
+              "zh": "69f867d7c6679a46717d99c267d20a78ca93073da3910ac1d8a9159f495fc725"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 7,
+                  "zh": 5
+                },
+                "speaker": {
+                  "en": "Miss Miya",
+                  "zh": "米娅老师"
+                },
+                "x": 3,
+                "y": 4,
+                "width": 44,
+                "target": [
+                  86.7,
+                  66
+                ]
+              },
+              {
+                "start": {
+                  "en": 24,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 104,
+                  "zh": 44
+                },
+                "speaker": {
+                  "en": "Miss Miya",
+                  "zh": "米娅老师"
+                },
+                "x": 3,
+                "y": 25,
+                "width": 44,
+                "target": [
+                  86.7,
+                  66
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-011.jpg",
+          "image_alt": "左边拉拉坐在泡泡浴缸中洗澡，旁边摆着瓶子；右边洗干净的拉拉展开亮黄色黑斑点翅膀。",
+          "text_zh": "回到家，拉拉洗了好久，搓呀搓，直到金黄色的翅膀闪闪发亮。“我再也不给翅膀涂颜色了！”她想。不过，也许偶尔一两次……",
+          "text_original": "Back home, Lara took a long bath and scrubbed until her golden wings gleamed. “I’ll never paint my wings again!” she thought. Except, maybe once or twice …",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-011.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-lara-the-yellow-ladybird/page-012.jpg",
+          "image_alt": "左上方的小拉拉想象着紫色和绿色翅膀；右边拉拉背对着看画面，举着刷子，黄色翅膀上画着蓝色星星和花纹。",
+          "text_zh": "试一点紫色，或者别的漂亮颜色。不过，只是玩一玩，才不一直涂着呢！",
+          "text_original": "To try a bit of purple – or something nice. But not for ever and just for fun.",
+          "audio_zh": "/assets/books/bd-lara-the-yellow-ladybird/audio/zh/8003c3666338e794/page-012.mp3",
+          "audio_original": "/assets/books/bd-lara-the-yellow-ladybird/audio/en/4c20df4e5394004a/page-012.mp3"
         }
       ]
     },
@@ -9008,6 +9704,170 @@
           "text_original": "“Oh, here is Tortoise’s house!”",
           "audio_zh": "/assets/books/bd-tortoise-finds-his-home/audio/zh/38fe16c7f677c03a/page-012.mp3",
           "audio_original": "/assets/books/bd-tortoise-finds-his-home/audio/en/b3a42bef9aa2d70f/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "bd-walking-together",
+      "title_zh": "一起走呀走",
+      "title_original": "Walking Together",
+      "author": "Jade Mathieson Duckitt",
+      "illustrator": "Louwrisa Blaauw",
+      "description_zh": "去诊所的路很长，可牵着家人的手，沿路唱唱歌、看看瀑布和小动物，走路也像一次小旅行。温柔的韵律讲述陪伴、检查身体，以及一天结束后的安心入睡。",
+      "reading_value": "把漫长的路，读成有陪伴的小旅行",
+      "age_ranges": [
+        "3-4"
+      ],
+      "categories": [
+        "habits",
+        "emotions",
+        "nature"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/bd-walking-together/cover.jpg",
+      "page_count": 12,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-16T09:30:00Z",
+      "publish_status": "published",
+      "content_version": "materials-d71a6d357c1bb04ab32b016245726eda7b89a4de69d9b04ea4cf5d6e31e2e4f5",
+      "is_demo": false,
+      "license": {
+        "type": "CC BY 4.0 · 原画整理与双语翻译版",
+        "source_url": "https://bookdash.org/books/walking-together/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "原作《Walking Together》由Book Dash发布；作者Jade Mathieson Duckitt，原插画Louwrisa Blaauw，设计Bianca de Jong，编辑Elise Varga。采用CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。本版由小小绘本馆AI辅助中文翻译，保留原插画并清理英文排版，双语正文与角色对白由阅读器显示；封面保留原英文书名及创作者署名。不表示原作者或Book Dash为本产品背书。",
+        "review_status": "pending",
+        "commercial_use": true,
+        "self_hosting": true,
+        "translation_allowed": true,
+        "audio_derivative_allowed": true
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-16T09:36:41.3Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-16T09:35:43.956Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/bd-walking-together/page-001.jpg",
+          "image_alt": "妈妈牵着小女孩沿山坡上的土路向前走，身后是小房子，天空飘着白云；左侧留白。",
+          "text_zh": "出门走路，路儿长。我们牵着手，一起唱着歌。",
+          "text_original": "When we go walking and the road is long, we’ll walk together singing a song.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-001.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/bd-walking-together/page-002.jpg",
+          "image_alt": "妈妈和小女孩背对着画面，沿着弯弯的小路走向层层青山，蓝天上飘着云朵。",
+          "text_zh": "我陪着你，你陪着我。和家人在一起，一路都有趣。",
+          "text_original": "I am with you and you are with me. A journey is fun with our family.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-002.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/bd-walking-together/page-003.jpg",
+          "image_alt": "棕色母鸡站在草坡上，黄色小鸡依偎在她的翅膀下面，远处有山坡和云朵。",
+          "text_zh": "我会让你暖暖的，像鸡妈妈一样。她张开翅膀，把小鸡护得暖洋洋。",
+          "text_original": "I’ll keep you cosy like a mother hen. She keeps her chicks warm under her wing.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-003.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/bd-walking-together/page-004.jpg",
+          "image_alt": "雨幕中，一位穿红衣服的人戴着宽宽的草帽微笑挥手，脚下的水洼溅起一圈圈水花。",
+          "text_zh": "要是雨点从天上落下来，我会像那顶好帽子，替你挡住脸上的雨。",
+          "text_original": "If the rain starts to fall down from the sky, like that good hat I’ll keep your face dry.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-004.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/bd-walking-together/page-005.jpg",
+          "image_alt": "妈妈搂着小女孩站在屋檐下，一起望向外面阴沉的雨天，女孩靠在妈妈身旁。",
+          "text_zh": "要是乌云发了脾气，轰隆隆地响，别怕，别哭呀。你身边有我陪着。",
+          "text_original": "If storm clouds get angry and grumble and moan, be brave, why cry? You’re not alone.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-005.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/bd-walking-together/page-006.jpg",
+          "image_alt": "蓝色瀑布从棕色山崖上流进河里，河水蜿蜒穿过绿色山坡，一只小青蛙坐在河边。",
+          "text_zh": "我们一起走，一点也不无聊。抬头看！四处瞧！看看我们走到了哪里！",
+          "text_original": "We’re walking together so we never get bored. Look up! Look around! See where we’ve explored!",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-006.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/bd-walking-together/page-007.jpg",
+          "image_alt": "一头驴驮着高高的柴火站在路边，身上垫着蓝色花纹布，脚下是弯曲的山路。",
+          "text_zh": "要是你看见有趣的东西，我可不想错过。快指给我看看吧！",
+          "text_original": "If you see something that’s funny to see, I don’t want to miss it. Please share it with me!",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-007.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/bd-walking-together/page-008.jpg",
+          "image_alt": "妈妈和小女孩从背后望向山坡上的诊所，房子墙上画着红色十字，远处有青山。",
+          "text_zh": "走了这么远，要是小脚有点疼，别着急，我们到啦！诊所就在前面。",
+          "text_original": "If your feet start to hurt from the distance we’ve passed, don’t worry, we’ve made it! Here’s the clinic at last.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-008.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/bd-walking-together/page-009.jpg",
+          "image_alt": "右边的三个圆形小画面里，穿红衣服的护士分别给小女孩查看喉咙、听胸口和检查耳朵。",
+          "text_zh": "喉咙、肺和耳朵，都要检查一下。慢慢长大，身体壮壮的，不用为这掉眼泪。",
+          "text_original": "We all need to check our throat, lungs and ears. Get strong as you grow, it’s no reason for tears.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-009.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/bd-walking-together/page-010.jpg",
+          "image_alt": "护士站在右侧给妈妈的手臂套上量血压的袖带，妈妈微笑看着前方，小女孩从桌子下面探出头。",
+          "text_zh": "觉得有点害怕吗？来，握住我的手。护士用这条聪明的袖带，给你量量血压。",
+          "text_original": "Do you think it’s scary? Here, hold my hand. She’ll check your blood pressure with this clever armband.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-010.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/bd-walking-together/page-011.jpg",
+          "image_alt": "妈妈提着印有红十字的白色袋子，牵着小女孩从诊所前向外走，两人脸上都带着笑容。",
+          "text_zh": "她们给我们药，也告诉我们怎样照顾身体，让大家健健康康。现在，我们回家喽。",
+          "text_original": "They give us our medicine, tell us what we should know, to keep us all healthy. Now back home we go.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-011.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/bd-walking-together/page-012.jpg",
+          "image_alt": "夜晚的房间里，妈妈坐在床边给熟睡的小女孩掖粉色被子，窗外是深蓝色夜空和星星。",
+          "text_zh": "累了也没关系，今天我们看了那么多东西。现在，该睡觉啦。晚安，做个甜甜的梦。",
+          "text_original": "It’s okay to be tired, there’s so much we’ve seen. Now it’s your bedtime. Sleep well and sweet dreams.",
+          "audio_zh": "/assets/books/bd-walking-together/audio/zh/22479128b29d0dee/page-012.mp3",
+          "audio_original": "/assets/books/bd-walking-together/audio/en/a714f09fa58af313/page-012.mp3"
         }
       ]
     },

@@ -2270,5 +2270,573 @@
         "height": 1280
       }
     ]
+  },
+  "bd-egg": {
+    "source_url": "https://bookdash.org/books/egg/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=egg",
+    "downloaded_on": "2026-11-16",
+    "source_file": "egg.json",
+    "source_sha256": "cc18a98b91a7cfa9d939105004e5671a83344f20056ed455babf1f3a7012aa4f",
+    "image_processing": "保留官网原插画，清理正文英文排版；封面保留原文书名与署名。按配置缩小、不放大；双语正文由阅读器呈现，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_cover-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_cover-1-880x880.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-egg/cover.jpg",
+        "sha256": "518921faad7f7a5b5958d605ea2ed3ce6b8a59dcb6d0b5e4e87c368abf49266c",
+        "width": 880,
+        "height": 880
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page4-2048x1024.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-egg/page-001.jpg",
+        "sha256": "2845511cb7128c1ffc9df131bc5cc6c2dafacf7074d818efd0f0f486ceaf42af",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page5-2048x1024.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-egg/page-002.jpg",
+        "sha256": "edc2e562fbae1394cacfc3b1a4f70ff79408cb211f984f0dc33fcbd76fcbec37",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page6-2048x1024.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-egg/page-003.jpg",
+        "sha256": "66d909701835ad09388906a822be7f881135c0c5220d5282865264a13c81daf2",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page7-2048x1024.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-egg/page-004.jpg",
+        "sha256": "49a0ad4383f3cbbf51f7e293d73bd3023befe3659a02a4045d384cbf50e89074",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page8-2048x1024.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-egg/page-005.jpg",
+        "sha256": "a763397e50606bf08cfd9e9058ee8423e9abae79d81ee75ebb5c71319215424a",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page9-2048x1024.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-egg/page-006.jpg",
+        "sha256": "551d9621d99754661a6a3339a89bdd03396b2698094fcb8c39ef6ffb7ba9b9e1",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page10-2048x1024.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-egg/page-007.jpg",
+        "sha256": "357207d466e242b771eb8c899758f50e15446a83543cbe6031019f908aeae829",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page11-2048x1024.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-egg/page-008.jpg",
+        "sha256": "e32959fc9acb4d47bdb0f95f2aa587d7ed3dd3483b494cb60c0f3ab63aaa4313",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page12-2048x1024.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-egg/page-009.jpg",
+        "sha256": "506c2e6ca9bbad7cd53b2d8ba79494a96012e341d584a4ff9919f0f78e0427f3",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page13-2048x1024.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-egg/page-010.jpg",
+        "sha256": "d03403b533a0b3490711e56c87dd92d6c62c78d38df79099d891a6ef3fc8a93b",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page14-2048x1024.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-egg/page-011.jpg",
+        "sha256": "388ae592ea4bfbdae6654de3ec905aa3f0576579074884a9cb3cb0e4b9602bfe",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2020/11/egg_en_20201023_page15-2048x1024.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-egg/page-012.jpg",
+        "sha256": "c6969d56eb88ddaf049b74fc96d9f3a81634992cb458a3a5918ca769584c040a",
+        "width": 2048,
+        "height": 1024
+      }
+    ]
+  },
+  "bd-lara-the-yellow-ladybird": {
+    "source_url": "https://bookdash.org/books/lara-the-yellow-ladybird/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_04.jpg",
+    "downloaded_on": "2026-11-16",
+    "source_file": "lara-the-yellow-ladybird.json",
+    "source_sha256": "7b9c34031c1e809f67afc3458cc81bbc05c5ba7542ca1da393e9c2ebade74f6d",
+    "image_processing": "保留官网原插画，清理正文英文排版；封面保留原文书名与署名。按配置缩小、不放大；双语正文由阅读器呈现，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_01.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-lara-the-yellow-ladybird/cover.jpg",
+        "sha256": "e0d6a5cadb10f238cbd81ec7944046e0a3d50379bde7c44797ac77c17a9ceabf",
+        "width": 788,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_05.jpg",
+        "source_preview_index": 4,
+        "page_number": 1,
+        "source_file": "bd-lara-the-yellow-ladybird/page-001.jpg",
+        "sha256": "44fcac8c775184cd8f080c534b4327f4a15d5838bfe27ebd92a7f697a2a65f32",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_06.jpg",
+        "source_preview_index": 5,
+        "page_number": 2,
+        "source_file": "bd-lara-the-yellow-ladybird/page-002.jpg",
+        "sha256": "c4ba97a8362ed5e8932b99f372d2c49a10b96604757497642998c73219745b67",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_07.jpg",
+        "source_preview_index": 6,
+        "page_number": 3,
+        "source_file": "bd-lara-the-yellow-ladybird/page-003.jpg",
+        "sha256": "87d06c6a7d439995b5977ae2113f6303d9876782728b69a51b6342c0fc8d3c6a",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_08.jpg",
+        "source_preview_index": 7,
+        "page_number": 4,
+        "source_file": "bd-lara-the-yellow-ladybird/page-004.jpg",
+        "sha256": "5122b323fafc770c9f9ec4f82aa9cbf3b83179a7cf20c55572f80ba6c0049a26",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_09.jpg",
+        "source_preview_index": 8,
+        "page_number": 5,
+        "source_file": "bd-lara-the-yellow-ladybird/page-005.jpg",
+        "sha256": "902bd15a4318ba4ae71342dc91f8067b882fe67b1741c6acedb6d569985ed332",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_10.jpg",
+        "source_preview_index": 9,
+        "page_number": 6,
+        "source_file": "bd-lara-the-yellow-ladybird/page-006.jpg",
+        "sha256": "2a7531f7524f37cf1a3395166087918ea29cbdb71f408790676fd9c48700c5aa",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_11.jpg",
+        "source_preview_index": 10,
+        "page_number": 7,
+        "source_file": "bd-lara-the-yellow-ladybird/page-007.jpg",
+        "sha256": "da13ee334e9166dd0b9ad4e047e49cf83486ba2206130a733336a07550f34c3b",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_12.jpg",
+        "source_preview_index": 11,
+        "page_number": 8,
+        "source_file": "bd-lara-the-yellow-ladybird/page-008.jpg",
+        "sha256": "3de010331557644f41f67e8a80c019b552747b1c167943caf91faa3e3137d3d0",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_13.jpg",
+        "source_preview_index": 12,
+        "page_number": 9,
+        "source_file": "bd-lara-the-yellow-ladybird/page-009.jpg",
+        "sha256": "f66b1a272e722a8c1e515d2a7e9f932b134aa0f22c64ca18ea208da72691169f",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_14.jpg",
+        "source_preview_index": 13,
+        "page_number": 10,
+        "source_file": "bd-lara-the-yellow-ladybird/page-010.jpg",
+        "sha256": "f77e5b01f0a0d11fcd51036141008ac0f6f4af1b9f3e011c1065e80fa0d94695",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_15.jpg",
+        "source_preview_index": 14,
+        "page_number": 11,
+        "source_file": "bd-lara-the-yellow-ladybird/page-011.jpg",
+        "sha256": "3595c31efc399ead2003c25ad1017c72c6e1faa814bbb124a71bf5ff2194793d",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/04/the-yellow-ladybird_english_20160409_Page_16.jpg",
+        "source_preview_index": 15,
+        "page_number": 12,
+        "source_file": "bd-lara-the-yellow-ladybird/page-012.jpg",
+        "sha256": "f2bcfcb3808a58e2b2280ad390f48bbca6867f0f1b5047e07198c7aba77d996a",
+        "width": 1575,
+        "height": 788
+      }
+    ]
+  },
+  "bd-walking-together": {
+    "source_url": "https://bookdash.org/books/walking-together/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=walking-together",
+    "downloaded_on": "2026-11-16",
+    "source_file": "walking-together.json",
+    "source_sha256": "5e62054befe638c2c44ddb5ba110af72717c53fe4283bddf867e6948dff96b0c",
+    "image_processing": "保留官网原插画，清理正文英文排版；封面保留原文书名与署名。按配置缩小、不放大；双语正文由阅读器呈现，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_01.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-walking-together/cover.jpg",
+        "sha256": "a4bb0811ecd7815ad6d591a5eef5b432d2566774df1f8400cbb4e4677de21ac0",
+        "width": 756,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_05.jpg",
+        "source_preview_index": 2,
+        "page_number": 1,
+        "source_file": "bd-walking-together/page-001.jpg",
+        "sha256": "9a1fddb33aedef956602a52600a280364201e90f790307a3f1b3cdbfb132b9e1",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_06.jpg",
+        "source_preview_index": 3,
+        "page_number": 2,
+        "source_file": "bd-walking-together/page-002.jpg",
+        "sha256": "90184dc4ab2b870bee6cb791cfc5541ea8ae8e628ec61817a5b78b9a0ab6ccaa",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_07.jpg",
+        "source_preview_index": 4,
+        "page_number": 3,
+        "source_file": "bd-walking-together/page-003.jpg",
+        "sha256": "b8a2e5005d725a0d4546ace1f12c7a0b711efb5e27e81ddd6e9d65e62d5c8c2a",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_08.jpg",
+        "source_preview_index": 5,
+        "page_number": 4,
+        "source_file": "bd-walking-together/page-004.jpg",
+        "sha256": "0ae6be7ba2e1994452e8e4ef3e178b694442a58fcc9347b2312c0f8a3d7eb4e7",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_09.jpg",
+        "source_preview_index": 6,
+        "page_number": 5,
+        "source_file": "bd-walking-together/page-005.jpg",
+        "sha256": "f26db2ac0a1c36db2069b6aa5527538488b27254c4c4785870931b394fa522a2",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_10.jpg",
+        "source_preview_index": 7,
+        "page_number": 6,
+        "source_file": "bd-walking-together/page-006.jpg",
+        "sha256": "9b0a8e644996f13b942021b0a09798ac6392591599f45853c8d592175654bb2e",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_11.jpg",
+        "source_preview_index": 8,
+        "page_number": 7,
+        "source_file": "bd-walking-together/page-007.jpg",
+        "sha256": "2e14050f1fb6729e1b64a3b149a0bc642c8dcec0981fc9d04e0677f757aa8318",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_12.jpg",
+        "source_preview_index": 9,
+        "page_number": 8,
+        "source_file": "bd-walking-together/page-008.jpg",
+        "sha256": "84a58444142baebbfed76ed698419e1a519d75c9acdbdd23ddb205f1ccd9d3de",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_13.jpg",
+        "source_preview_index": 10,
+        "page_number": 9,
+        "source_file": "bd-walking-together/page-009.jpg",
+        "sha256": "a52847d6521b5870d3adf6e8ac2fc79113696ad5127238564f9187fa2197fc49",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_14.jpg",
+        "source_preview_index": 11,
+        "page_number": 10,
+        "source_file": "bd-walking-together/page-010.jpg",
+        "sha256": "e05c03afe45c25af8df8b573ba9deeb17998ab71b21e20f0614021efe04646b7",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_15.jpg",
+        "source_preview_index": 12,
+        "page_number": 11,
+        "source_file": "bd-walking-together/page-011.jpg",
+        "sha256": "15fce9254154ef13b02ffa5409d1db15e7de0fc574616d9ddfac7ca9ad899a10",
+        "width": 1512,
+        "height": 756
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/walking-together_20150827_Page_16.jpg",
+        "source_preview_index": 13,
+        "page_number": 12,
+        "source_file": "bd-walking-together/page-012.jpg",
+        "sha256": "bd362f6f62158c5fb86b3e45e210f3ff2c2de13223af897b34e76a44b6815284",
+        "width": 1512,
+        "height": 756
+      }
+    ]
+  },
+  "bd-is-there-anyone-like-me": {
+    "source_url": "https://bookdash.org/books/is-there-anyone-like-me/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=is-there-anyone-like-me",
+    "downloaded_on": "2026-11-16",
+    "source_file": "is-there-anyone-like-me.json",
+    "source_sha256": "2c1442c58b641aed610975b49488b33232c84e54de8dbcb6bd8514676db1ed0b",
+    "image_processing": "保留官网原插画，清理正文英文排版；封面保留原文书名与署名。按配置缩小、不放大；双语正文由阅读器呈现，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_front-cover_20150811.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_front-cover_20150811.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-is-there-anyone-like-me/cover.jpg",
+        "sha256": "b00ccdd39c0703cef8ec32a82b892abd0c9b02b819e9cdaca926da38bf23f752",
+        "width": 3331,
+        "height": 3331
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508044.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508044.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-is-there-anyone-like-me/page-001.jpg",
+        "sha256": "c1ec97619bc3cac226663bd0ed1d981c485fcaed0767313597622b554ab143a0",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508045.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508045.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-is-there-anyone-like-me/page-002.jpg",
+        "sha256": "0bd6cdaab422d99ae0197ba2b26f9a5662b8b4ce195734152ae5cc104a72a319",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508046.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508046.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-is-there-anyone-like-me/page-003.jpg",
+        "sha256": "a444d966c65c95c4a2f2e40a46825fc18b07c727671000011d72fb8850a31a6c",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508047.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508047.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-is-there-anyone-like-me/page-004.jpg",
+        "sha256": "c7052038fd9441e9f610a8a4c5a5b73701d8a40b9d009c85888b9be933d0c129",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508048.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508048.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-is-there-anyone-like-me/page-005.jpg",
+        "sha256": "92df7a8b8ca52f4d9a586c734d71fc49ce7607d533d235be44133343c668c438",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508049.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_201508049.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-is-there-anyone-like-me/page-006.jpg",
+        "sha256": "6dbfde86dbec69690862fdddb24f5c42acd0928475483ca09fde2434c0fc5d77",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080410.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080410.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-is-there-anyone-like-me/page-007.jpg",
+        "sha256": "2c8c6a58189238ffe8b5605ea6c6e5cde9051ed7f642bab846b602f9b05af378",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080411.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080411.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-is-there-anyone-like-me/page-008.jpg",
+        "sha256": "99f1fb0d88f2f68230bf40f72922fd712a60fe0a5599f78e32723d54d6c82c7a",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080412.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080412.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-is-there-anyone-like-me/page-009.jpg",
+        "sha256": "3c47e89c702b0a97495c726d72c394a23a0882408f9cb543fc58288cc364e66c",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080413.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080413.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-is-there-anyone-like-me/page-010.jpg",
+        "sha256": "977da7ed4627cdcd167533fc9fe23c0aed372ebb1fc6c99d2414d9edcdbb3185",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080414.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080414.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-is-there-anyone-like-me/page-011.jpg",
+        "sha256": "e90d76b5ee9a8dc9618e7accf384912b109ad27dde08c27e03c445f9d4e2f851",
+        "width": 4725,
+        "height": 2363
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080415.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/anyone-like-me_interior-spreads_2015080415.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-is-there-anyone-like-me/page-012.jpg",
+        "sha256": "7fae4768fbab41284396ddbce758fdd7e0cdf9fe1d9fe4f54797bff645a9d6e0",
+        "width": 4725,
+        "height": 2363
+      }
+    ]
   }
 }

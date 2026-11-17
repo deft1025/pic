@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发现好绘本",
+  "usingComponents": {
+    "book-card": "/components/book-card/index"
+  }
+}

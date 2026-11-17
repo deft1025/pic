@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "关于与隐私",
+  "usingComponents": {
+    "book-card": "/components/book-card/index"
+  }
+}

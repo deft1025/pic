@@ -1,0 +1,79 @@
+{
+  "key": "is-there-anyone-like-me",
+  "id": "bd-is-there-anyone-like-me",
+  "en": "Is There Anyone Like Me?",
+  "title": "有谁和我一样吗？",
+  "writer": "Fred Strydom",
+  "illustrator": "Jess Jardim-Wedepohl",
+  "designer": "Stephen Wallace",
+  "editor": null,
+  "isbn": "978-1-928318-26-2",
+  "source_url": "https://bookdash.org/books/is-there-anyone-like-me/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=is-there-anyone-like-me",
+  "source_note": "2026-11-16逐本核对官网作品页署名、ISBN、完整原图页序与CC BY 4.0许可依据；英文PDF下载入口实测403，未取得PDF。英文按完整原画人工校对，OCR仅辅助，合并排版换行并规范引号与朗读标点。中文、实际画面描述、对白和音频引用仅维护MySQL。使用2015版完整12个故事跨页；封底链接为2020文件，仅作非正文资料。第6页清理表示疑惑的问号排版；第一人称自我探索保留旁白，不强加说话气泡。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "I wonder if there’s another me somewhere in the world.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Who looks the same. And talks the same.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "And even has my curls.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "Someone with my eyes my ears. Who even has my laugh.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Who can do what I can do …",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "… and can’t do what I can’t.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "I’ve looked and looked everywhere to find another me. I went down to the park and looked behind the trees.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "I looked around, up and down …",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "… at every single face.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "I couldn’t find another me in any single place.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "There’s only one me in the world! I’m special, oh it’s true!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "But not just me, don’t you see? There’s only one of you!",
+      "original_was_wordless": false
+    }
+  ]
+}

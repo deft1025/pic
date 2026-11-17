@@ -1,0 +1,20 @@
+{
+  "description": "小小绘本馆 · 免费双语亲子阅读",
+  "compileType": "miniprogram",
+  "libVersion": "3.7.10",
+  "appid": "touristappid",
+  "projectname": "pic-library",
+  "setting": {
+    "es6": true,
+    "minified": true,
+    "urlCheck": true
+  },
+  "packOptions": {
+    "ignore": [
+      {
+        "type": "file",
+        "value": "README.md"
+      }
+    ]
+  }
+}

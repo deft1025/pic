@@ -12,7 +12,7 @@ func cleanEnv(t *testing.T) {
 	t.Helper()
 	for _, entry := range os.Environ() {
 		key, _, _ := strings.Cut(entry, "=")
-		if strings.HasPrefix(key, "DB_") || strings.HasPrefix(key, "HTTP_") || strings.HasPrefix(key, "ASSET_") || key == "SITE_BASE_URL" || key == "CONFIG_FILE" || key == "CONTENT_DIR" || key == "WEB_DIR" || key == "SCHEMA_FILE" || key == "REQUIRE_LICENSE_APPROVAL" {
+		if strings.HasPrefix(key, "WECHAT_") || key == "MINI_PROGRAM_ENABLED" || strings.HasPrefix(key, "DB_") || strings.HasPrefix(key, "HTTP_") || strings.HasPrefix(key, "ASSET_") || key == "SITE_BASE_URL" || key == "CONFIG_FILE" || key == "CONTENT_DIR" || key == "WEB_DIR" || key == "SCHEMA_FILE" || key == "REQUIRE_LICENSE_APPROVAL" {
 			t.Setenv(key, "")
 			os.Unsetenv(key)
 		}
@@ -173,5 +173,21 @@ func TestAssetCheckConfiguration(t *testing.T) {
 				t.Fatal("invalid asset check settings accepted")
 			}
 		})
+	}
+}
+
+func TestWeChatRequiresServerCredentialsOnlyWhenEnabled(t *testing.T) {
+	cleanEnv(t)
+	cfg, err := Load(file(t, ""))
+	if err != nil || cfg.WeChat.Enabled {
+		t.Fatal("feature should default off")
+	}
+	_, err = Load(file(t, "MINI_PROGRAM_ENABLED=true\nWECHAT_APP_SECRET=private-secret\n"))
+	if err == nil || strings.Contains(err.Error(), "private-secret") {
+		t.Fatal("missing AppID accepted or secret leaked")
+	}
+	cfg, err = Load(file(t, "MINI_PROGRAM_ENABLED=true\nWECHAT_APP_ID=app\nWECHAT_APP_SECRET=private-secret\n"))
+	if err != nil || !cfg.WeChat.Enabled || cfg.WeChat.AppSecret != "private-secret" {
+		t.Fatal("server credentials not loaded")
 	}
 }

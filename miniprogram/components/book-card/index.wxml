@@ -1,0 +1,1 @@
+<view class="card" bindtap="open" role="button" aria-label="{{book.title_zh}}"><image class="cover" src="{{book.cover}}" mode="aspectFit" lazy-load/><view class="name">{{book.title_zh}}</view><view class="reason">{{book.reading_value}}</view><view class="meta">{{book.page_count}}页 · 约{{book.reading_minutes}}分钟</view></view>

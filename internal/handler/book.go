@@ -30,3 +30,9 @@ func (h *Handler) Pages(w http.ResponseWriter, r *http.Request) {
 	pages, err := h.library.Pages(r.Context(), r.PathValue("id"))
 	respond(w, pages, err)
 }
+
+func (h *Handler) Recommendations(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Vary", "Authorization")
+	result, err := h.library.Recommendations(r.Context(), h.accounts, accountToken(r))
+	respond(w, result, err)
+}
