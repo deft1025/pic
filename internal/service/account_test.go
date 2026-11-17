@@ -32,7 +32,7 @@ type accountsStub struct {
 	calls   int
 }
 
-func (s *accountsStub) Login(_ context.Context, app, open, hash string, expires time.Time) (model.Account, error) {
+func (s *accountsStub) Login(_ context.Context, open, hash string, expires time.Time) (model.Account, error) {
 	s.hash = hash
 	s.user = "10000"
 	s.calls++
@@ -75,7 +75,7 @@ func (s *accountsStub) RecordEvent(_ context.Context, e model.ReadingEvent) erro
 func accountService() (context.Context, *Accounts, *accountsStub, *storeStub) {
 	repo := &accountsStub{profile: model.Account{Name: "读者", Age: "3-4"}}
 	catalog := &storeStub{book: model.Book{ID: "book", Version: "v1", PageCount: 4}, options: model.Options{Ages: []model.Option{{ID: "0-2"}, {ID: "3-4"}, {ID: "5-6"}}}}
-	return context.Background(), NewAccounts(repo, NewLibrary(catalog, ""), identityStub{}, "app"), repo, catalog
+	return context.Background(), NewAccounts(repo, NewLibrary(catalog, ""), identityStub{}), repo, catalog
 }
 func TestAccountSessionIsOpaqueHashedRevocableAndSafe(t *testing.T) {
 	ctx, s, repo, _ := accountService()

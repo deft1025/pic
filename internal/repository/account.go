@@ -10,7 +10,7 @@ import (
 
 // AccountStore keeps identity and reader state separate from catalog maintenance.
 type AccountStore interface {
-	Login(context.Context, string, string, string, time.Time) (model.Account, error)
+	Login(context.Context, string, string, time.Time) (model.Account, error)
 	Profile(context.Context, string) (model.Account, error)
 	SaveProfile(context.Context, string, string, string) error
 	Authenticate(context.Context, string, time.Time) (string, error)
@@ -20,18 +20,18 @@ type AccountStore interface {
 	RecordEvent(context.Context, model.ReadingEvent) error
 }
 
-func (s *MySQL) Login(ctx context.Context, appID, openID, hash string, expires time.Time) (model.Account, error) {
+func (s *MySQL) Login(ctx context.Context, openID, hash string, expires time.Time) (model.Account, error) {
 	tx, err := s.db.BeginTx(ctx, nil)
 	if err != nil {
 		return model.Account{}, err
 	}
 	defer tx.Rollback()
-	_, err = tx.ExecContext(ctx, `INSERT INTO reader_users (wechat_app_id,wechat_open_id) VALUES (?,?) ON DUPLICATE KEY UPDATE user_id=user_id`, appID, openID)
+	_, err = tx.ExecContext(ctx, `INSERT INTO reader_users (wechat_open_id) VALUES (?) ON DUPLICATE KEY UPDATE user_id=user_id`, openID)
 	if err != nil {
 		return model.Account{}, err
 	}
 	var account model.Account
-	if err = tx.QueryRowContext(ctx, `SELECT user_id,name,age FROM reader_users WHERE wechat_app_id=? AND wechat_open_id=?`, appID, openID).Scan(&account.ID, &account.Name, &account.Age); err != nil {
+	if err = tx.QueryRowContext(ctx, `SELECT user_id,name,age FROM reader_users WHERE wechat_open_id=?`, openID).Scan(&account.ID, &account.Name, &account.Age); err != nil {
 		return account, err
 	}
 	// Remove this account’s expired sessions at login.
@@ -108,31 +108,33 @@ func (s *MySQL) SetFavorites(ctx context.Context, user string, ids []string, act
 	}
 	return tx.Commit()
 }
+
+// RecordEvent stores one monotonic reading state per account and book.
 func (s *MySQL) RecordEvent(ctx context.Context, e model.ReadingEvent) error {
-	if e.Kind == "complete" {
-		// Serialize first completion for this account, including different devices.
-		// A later reading must not insert another row or touch the original time.
-		tx, err := s.db.BeginTx(ctx, nil)
-		if err != nil {
-			return err
-		}
-		defer tx.Rollback()
-		var user string
-		if err = tx.QueryRowContext(ctx, `SELECT user_id FROM reader_users WHERE user_id=? FOR UPDATE`, e.UserID).Scan(&user); err != nil {
-			return err
-		}
-		var completed bool
-		if err = tx.QueryRowContext(ctx, `SELECT EXISTS(SELECT 1 FROM reader_events WHERE user_id=? AND book_id=? AND event_kind='complete')`, e.UserID, e.BookID).Scan(&completed); err != nil {
-			return err
-		}
-		if completed {
+	tx, err := s.db.BeginTx(ctx, nil)
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+	// Serialize opens and completions across devices, including the first insert.
+	var user string
+	if err = tx.QueryRowContext(ctx, `SELECT user_id FROM reader_users WHERE user_id=? FOR UPDATE`, e.UserID).Scan(&user); err != nil {
+		return err
+	}
+	var id uint64
+	var kind string
+	err = tx.QueryRowContext(ctx, `SELECT id,event_kind FROM reader_events WHERE user_id=? AND book_id=? FOR UPDATE`, e.UserID, e.BookID).Scan(&id, &kind)
+	if err == sql.ErrNoRows {
+		_, err = tx.ExecContext(ctx, `INSERT INTO reader_events (event_id,user_id,book_id,event_kind,reading_id) VALUES (?,?,?,?,?)`, e.ID, e.UserID, e.BookID, e.Kind, e.ReadingID)
+	} else if err == nil {
+		// A repeated open or any request after completion leaves every field intact.
+		if kind == "complete" || e.Kind == "open" {
 			return nil
 		}
-		if _, err = tx.ExecContext(ctx, `INSERT INTO reader_events (event_id,user_id,book_id,event_kind,reading_id) VALUES (?,?,?,?,?) ON DUPLICATE KEY UPDATE event_id=event_id`, e.ID, e.UserID, e.BookID, e.Kind, e.ReadingID); err != nil {
-			return err
-		}
-		return tx.Commit()
+		_, err = tx.ExecContext(ctx, `UPDATE reader_events SET event_id=?,event_kind='complete',reading_id=? WHERE id=?`, e.ID, e.ReadingID, id)
 	}
-	_, err := s.db.ExecContext(ctx, `INSERT INTO reader_events (event_id,user_id,book_id,event_kind,reading_id) VALUES (?,?,?,?,?) ON DUPLICATE KEY UPDATE event_id=event_id`, e.ID, e.UserID, e.BookID, e.Kind, e.ReadingID)
-	return err
+	if err != nil {
+		return err
+	}
+	return tx.Commit()
 }

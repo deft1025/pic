@@ -85,11 +85,10 @@ type Accounts struct {
 	store   repository.AccountStore
 	library *Library
 	wechat  WeChatIdentity
-	appID   string
 }
 
-func NewAccounts(store repository.AccountStore, library *Library, wechat WeChatIdentity, appID string) *Accounts {
-	return &Accounts{store, library, wechat, appID}
+func NewAccounts(store repository.AccountStore, library *Library, wechat WeChatIdentity) *Accounts {
+	return &Accounts{store: store, library: library, wechat: wechat}
 }
 func loginFailure(kind error, message, code string, cause error) error {
 	return &Error{Kind: kind, Message: message, Code: code, Cause: cause}
@@ -128,7 +127,7 @@ func (s *Accounts) Login(ctx context.Context, code string) (model.AccountSession
 		return model.AccountSession{}, loginFailure(ErrUnavailable, "暂时无法创建登录会话，请稍后重试", "login_token_failed", err)
 	}
 	expiry := time.Now().UTC().Add(30 * 24 * time.Hour)
-	account, err := s.store.Login(ctx, s.appID, open, tokenHash(token), expiry)
+	account, err := s.store.Login(ctx, open, tokenHash(token), expiry)
 	if err != nil {
 		if problem := repository.ReaderSchemaProblem(err); problem != "" {
 			return model.AccountSession{}, loginFailure(ErrUnavailable, "账号数据表未就绪，请联系管理员", problem, err)

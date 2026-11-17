@@ -69,10 +69,12 @@ CONFIG_FILE="$PWD/.env" PIC_MYSQL_TEST=1 go test ./internal/repository -run Test
 
 ## 小程序账号与统计
 
-新增四张可选读者表，定义唯一来源为 `schema.sql` 第六节：`reader_users`（用户主键及用户名/年龄、微信身份）、`reader_sessions`（令牌摘要和到期时间）、`reader_favorites`（每个用户/绘本唯一的0/1状态）、`reader_events`（仅登录用户的打开/读完事件）。不保留进度表、游客标识或累计添加收藏字段。
+新增四张可选读者表，定义唯一来源为 `schema.sql` 第六节：`reader_users`（用户主键及用户名/年龄、微信身份）、`reader_sessions`（令牌摘要和到期时间）、`reader_favorites`（每个用户/绘本唯一的0/1状态）、`reader_events`（仅登录用户的单书阅读状态）。不保留进度表、游客标识或累计添加收藏字段。
 
 `reader_users.user_id`是 `int unsigned AUTO_INCREMENT`主键，初始水位10000，不再另设id；其余表的user_id统一 `int unsigned NOT NULL`，表自身仍用自增id。首次选择的年龄段从MySQL年龄字典验证，保存后不再弹首次选择框，可在个人资料修改；姓名留空默认“小小读者”，不采集生日。
 
-新增表未改变已有书目表或新增物料外键。收藏/资料/事件接口均通过有效会话确定用户归属，游客只浏览阅读。每本书的当前收藏人数按 `SUM(active)`或过滤active=1计数，取消后不计入。`reader_events`中同用户/绘本的complete只在首次读完时写入，后续不新增也不更新时间；未读由不存在complete记录判断，无需新表。写入以用户行锁串行化，推荐计分仍使用不同用户数兼容历史重复记录。小程序推荐分为收藏人数×2＋读完人数；PC不接入账号和个性化。
+读者账号仅服务当前一个小程序，`reader_users`不保存AppID；`wechat_open_id`单列唯一，重复登录复用原用户编号。微信身份验证所需AppID继续从后端配置读取。已有库由用户手动删除旧AppID列并保留OpenID唯一索引，代码不自动迁移。
+
+新增表未改变已有书目表或新增物料外键。收藏/资料/事件接口均通过有效会话确定用户归属，游客只浏览阅读。每本书的当前收藏人数按 `SUM(active)`或过滤active=1计数，取消后不计入。`reader_events`以user_id/book_id联合唯一，一人一本书最多一条：首次打开创建open，首次读完原行升级complete，之后任何请求不新增也不修改整行与时间；未读包括无记录与open，无需新表。写入以用户行锁串行化，唯一索引兜底并发；打开人数统计全部状态行，读完人数只统计complete，重复点击不累计。旧表由用户手动执行 `migrations/20261117_reader_events_user_book.sql`合并历史重复记录并调整索引。小程序推荐分为收藏人数×2＋读完人数；PC不接入账号和个性化。
 
 现有库不运行全量dbinit：`go run ./cmd/readerdb`只预览四张表，由用户手动创建，准备好再开启 `MINI_PROGRAM_ENABLED=true`。已有旧版同名表不会被自动升级，先核对并单独准备迁移。会话清理现为登录时清该用户过期记录，独立到期索引已加入；尚无定时清理任务。接口、建表和排行榜查询见 [小程序说明](miniprogram.md)。

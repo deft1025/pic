@@ -18,10 +18,10 @@ func (r *MySQL) RecommendationCandidates(ctx context.Context, user, age string, 
 		if user == "" {
 			user = "0"
 		}
-		// Separate indexed aggregates avoid multiplying events by favorite rows.
+		// Separate indexed counts avoid multiplying reading states by favorite rows.
 		columns = `b.book_id,b.id,
  (SELECT COUNT(*) FROM reader_favorites f WHERE f.book_id=b.book_id AND f.active=1)*2
- +(SELECT COUNT(DISTINCT e.user_id) FROM reader_events e WHERE e.book_id=b.book_id AND e.event_kind='complete'),
+ +(SELECT COUNT(*) FROM reader_events e WHERE e.book_id=b.book_id AND e.event_kind='complete'),
  EXISTS (SELECT 1 FROM book_age_ranges a WHERE a.book_id=b.book_id AND a.age_id=?),
  EXISTS (SELECT 1 FROM reader_events e WHERE e.book_id=b.book_id AND e.user_id=? AND e.event_kind='complete')`
 		args = append(args, age, user)

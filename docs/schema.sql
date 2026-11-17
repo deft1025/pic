@@ -213,14 +213,13 @@ COMMIT;
 
 CREATE TABLE IF NOT EXISTS `reader_users` (
     `user_id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '用户编号，自增主键，初始水位10000',
-    `wechat_app_id` varchar(64) NOT NULL COMMENT '微信小程序AppID',
     `wechat_open_id` varchar(128) COLLATE utf8mb4_bin NOT NULL COMMENT '微信小程序内用户标识，仅服务端使用',
     `name` varchar(50) NOT NULL DEFAULT '' COMMENT '用户名，首次完善资料时可填写，空白使用小小读者',
     `age` varchar(16) NOT NULL DEFAULT '' COMMENT '阅读年龄段业务标识，对应年龄字典；空值表示首次登录尚未选择',
     `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     PRIMARY KEY (`user_id`),
-    UNIQUE KEY `uk_reader_users_wechat` (`wechat_app_id`, `wechat_open_id`)
+    UNIQUE KEY `uk_reader_users_wechat` (`wechat_open_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='微信小程序读者账号';
 
 CREATE TABLE IF NOT EXISTS `reader_sessions` (
@@ -250,15 +249,15 @@ CREATE TABLE IF NOT EXISTS `reader_favorites` (
 
 CREATE TABLE IF NOT EXISTS `reader_events` (
     `id` int unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-    `event_id` char(32) NOT NULL COMMENT '客户端随机事件业务标识，用于重试去重',
+    `event_id` char(32) NOT NULL COMMENT '首次打开或首次读完时的客户端事件标识',
     `user_id` int unsigned NOT NULL COMMENT '用户编号，关联reader_users.user_id',
     `book_id` varchar(64) NOT NULL COMMENT '绘本业务标识',
-    `event_kind` varchar(16) NOT NULL COMMENT '事件类型，open打开详情、complete确认读完',
-    `reading_id` char(32) NOT NULL COMMENT '一次详情打开或阅读会话的随机标识',
+    `event_kind` varchar(16) NOT NULL COMMENT '阅读状态，open已打开未读完、complete已读完；完成后不再更新',
+    `reading_id` char(32) NOT NULL COMMENT '首次打开或首次读完时的客户端会话标识',
     `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
     `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
     PRIMARY KEY (`id`),
     UNIQUE KEY `uk_reader_events_event` (`event_id`),
-    UNIQUE KEY `uk_reader_events_reading_kind` (`user_id`, `reading_id`, `event_kind`),
+    UNIQUE KEY `uk_reader_events_user_book` (`user_id`, `book_id`),
     KEY `idx_reader_events_book_kind_time` (`book_id`, `event_kind`, `created_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='登录用户阅读事件，服务端接收时间';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='登录用户绘本阅读状态，每个用户每本书一条，完成后不再更新';

@@ -32,7 +32,7 @@ func TestAccountBodyRejectsUnknownFieldsOversizeAndTrailingJSON(t *testing.T) {
 }
 
 func TestEnabledLoginProbeNeedsNoWeChatCodeOrDatabase(t *testing.T) {
-	h := NewAccounts(service.NewAccounts(nil, nil, nil, "app"))
+	h := NewAccounts(service.NewAccounts(nil, nil, nil))
 	w := httptest.NewRecorder()
 	h.Login(w, httptest.NewRequest("POST", "/", strings.NewReader(`{}`)))
 	if w.Code != http.StatusBadRequest || !strings.Contains(w.Body.String(), "登录凭证无效") {
@@ -52,7 +52,7 @@ func TestLoginLimiterDoesNotTrustForwardedIP(t *testing.T) {
 }
 
 func TestReaderAccountEndpointsRequireLoginIncludingEvents(t *testing.T) {
-	h := NewAccounts(service.NewAccounts(nil, nil, nil, "app"))
+	h := NewAccounts(service.NewAccounts(nil, nil, nil))
 	for _, endpoint := range []struct {
 		name   string
 		handle http.HandlerFunc

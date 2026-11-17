@@ -12,16 +12,18 @@ let browser;
  const ages = [{ id: '0-2', name: '0–2 岁', description: '看图认知 · 亲子陪伴' }, { id: '3-4', name: '3–4 岁', description: '发现世界 · 快乐成长' }, { id: '5-6', name: '5–6 岁', description: '独立思考 · 自主阅读' }];
  for (const [width, height] of [[320, 568], [390, 844], [568, 320], [1366, 768]]) {
   await p.setViewportSize({ width, height });
-  for (const [page, selected] of [['shelf', false], ['shelf', true], ['profile', true], ['library', false], ['library', true]]) {
-   const data = page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
+  for (const [scenario, selected] of [['shelf', false], ['shelf', true], ['shelfFavorites', true], ['profile', true], ['library', false], ['library', true]]) {
+   const page = scenario === 'shelfFavorites' ? 'shelf' : scenario;
+   const data = page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
+   if (scenario === 'shelfFavorites') Object.assign(data, { ageDialog: false, needsProfile: false, total: 17, page: 2, pageCount: 3, items: Array.from({ length: 8 }, (_, i) => ({ id: 'book-' + i, title_zh: i === 0 ? '很长的绘本名字也能完整显示，方便找到喜欢的故事' : '美好的一天', cover: '' })) });
    const template = fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
-   const styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/\bpage\{/g, 'body{') + fs.readFileSync(path.join(root, 'pages', page, 'index.wxss'), 'utf8');
+   const styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, 'pages', page, 'index.wxss'), 'utf8');
    await p.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body></body></html>');
    await p.evaluate(({ template, styles, data }) => {
     const css = document.createElement('style'); css.textContent = 'body{margin:0}*{box-sizing:border-box}button{border:0;font-family:inherit}input{font-family:inherit}' + styles.replace(/([\d.]+)rpx/g, (_, n) => Number(n) * innerWidth / 750 + 'px'); document.head.append(css);
     const tree = new DOMParser().parseFromString(template.replace(/<([\w-]+)([^>]*?)\/>/g, (_, t, a) => t === 'br' ? '<br>' : '<' + t + a + '></' + t + '>'), 'text/html').body;
     const expr = (e, s) => new Function('s', 'with(s){return (' + e + ')}')(s);
-    const val = (v, s) => /^{{([\s\S]+)}}$/.test(v) ? expr(v.slice(2, -2), s) : v.replace(/{{([\s\S]+?)}}/g, (_, e) => expr(e, s) ?? '');
+    const val = (v, s) => /^{{([^{}]+)}}$/.test(v) ? expr(v.slice(2, -2), s) : v.replace(/{{([\s\S]+?)}}/g, (_, e) => expr(e, s) ?? '');
     function children(parent, out, scope) {
      let matched = false;
      for (const n of parent.childNodes) {
@@ -49,10 +51,16 @@ let browser;
     }
     children(tree, document.body, data);
    }, { template, styles, data });
-   const errors = await p.evaluate(({ page, selected }) => {
+   const errors = await p.evaluate(({ page, selected, scenario }) => {
     const failures = [], check = (v, m) => { if (!v) failures.push(m); };
     check(document.documentElement.scrollWidth <= innerWidth + 1, 'page horizontal overflow');
-    if (page === 'shelf') {
+    if (page === 'shelf' && scenario === 'shelfFavorites') {
+     const rows = [...document.querySelectorAll('.favorite-row')];
+     check(rows.length === 8, 'favorites page must contain eight rows');
+     for (const row of rows) { const r = row.getBoundingClientRect(); check(r.height >= 72, 'favorite touch target too small'); check(row.scrollWidth <= row.clientWidth + 1, 'favorite title overflow'); }
+     check(document.querySelector('.shelf-pagination').textContent.includes('2 / 3'), 'favorite page indicator missing');
+     check(document.querySelectorAll('.shelf-pagination button').length === 2, 'favorite page controls missing');
+    } else if (page === 'shelf') {
      const modal = document.querySelector('.age-welcome'), m = modal.getBoundingClientRect();
      check(m.left >= 0 && m.right <= innerWidth && m.top >= 0 && m.bottom <= innerHeight, 'age dialog outside viewport');
      check(document.querySelectorAll('.age-option').length === 3, 'missing ages');
@@ -73,14 +81,14 @@ let browser;
      check(document.querySelector('.age-picker').textContent.includes('3–4'), 'saved age missing');
     }
     return failures;
-   }, { page, selected });
+   }, { page, selected, scenario });
    assert.deepEqual(errors, [], `${page}/${selected}/${width}x${height}: ${errors.join('; ')}`); checks++;
    if (output && width === 390 && selected) {
     fs.mkdirSync(output, { recursive: true });
-    if (page === 'shelf') await p.locator('.age-welcome').evaluate(e => e.scrollTop = 0);
-    await p.screenshot({ path: path.join(output, page + '-390.png'), fullPage: true });
+    if (page === 'shelf' && scenario !== 'shelfFavorites') await p.locator('.age-welcome').evaluate(e => e.scrollTop = 0);
+    await p.screenshot({ path: path.join(output, scenario + '-390.png'), fullPage: true });
    }
   }
  }
- console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, required selection, saved profile, filter labels, touch targets and scrolling. Not a native device test.`);
+ console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, required selection, saved profile, filter labels, compact favorite rows/pagination, touch targets and scrolling. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

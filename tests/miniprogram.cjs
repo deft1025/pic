@@ -273,6 +273,48 @@ test('unavailable online login service shows a persistent error and allows retry
  await shelf.load(); assert.ok(shelf.data.loginError); await shelf.login(); assert.equal(c.requests.length, 2);
 });
 
+test('shelf paginates favorites in saved order, clamps after removal, and opens the selected book', async () => {
+ let ids = Array.from({ length: 18 }, (_, i) => 'book-' + i);
+ const c = client(o => {
+  if (o.url.endsWith('/profile')) return profile;
+  if (o.url.endsWith('/favorites')) return { items: ids };
+  const requested = new URL(o.url).searchParams.get('ids').split(',');
+  return { items: requested.filter(id => id !== 'book-3').reverse().map(id => ({ id, title_zh: id, cover: '/cover.jpg' })) };
+ });
+ c.storage.set('pic-session', session);
+ const shelf = c.page('shelf'); await shelf.load();
+ assert.equal(shelf.data.total, 17); assert.equal(shelf.data.pageCount, 3);
+ assert.deepEqual([...shelf.data.items.map(b => b.id)], ids.filter(id => id !== 'book-3').slice(0, 8));
+ shelf.previous(); assert.equal(shelf.data.page, 1);
+ shelf.next(); assert.equal(shelf.data.page, 2); assert.equal(shelf.data.items.length, 8);
+ shelf.next(); assert.equal(shelf.data.page, 3); assert.equal(shelf.data.items.length, 1);
+ shelf.next(); assert.equal(shelf.data.page, 3);
+ let target; c.wx.navigateTo = o => target = o.url;
+ shelf.openBook({ currentTarget: { dataset: { id: 'book-17' } } });
+ assert.equal(target, '/pages/detail/index?id=book-17');
+ target = null; shelf.openBook({ currentTarget: { dataset: { id: 'not-listed' } } }); assert.equal(target, null);
+ ids = ids.slice(0, 10); await shelf.load();
+ assert.equal(shelf.data.page, 2); assert.equal(shelf.data.pageCount, 2); assert.equal(shelf.data.items.length, 1);
+ ids = []; await shelf.load();
+ assert.equal(shelf.data.page, 1); assert.equal(shelf.data.pageCount, 0); assert.equal(shelf.data.total, 0);
+ assert.equal(shelf.data.items.length, 0);
+});
+
+test('shelf drops delayed private books when the account logs out during loading', async () => {
+ let release;
+ const c = client(o => {
+  if (o.url.endsWith('/profile')) return profile;
+  if (o.url.endsWith('/favorites')) return { items: ['private-book'] };
+  if (o.url.includes('/api/books?')) return new Promise(resolve => release = resolve);
+  return { ok: true };
+ });
+ c.storage.set('pic-session', session);
+ const shelf = c.page('shelf'), pending = shelf.load(); await tick();
+ await c.state.logout(); release({ items: [{ id: 'private-book' }] }); await pending;
+ assert.equal(shelf.data.loggedIn, false); assert.equal(shelf.data.items.length, 0); assert.equal(shelf.data.total, 0);
+ shelf.next(); assert.equal(shelf.data.items.length, 0);
+});
+
 test('compact packing uses measured content height instead of stretching short speech into cells', () => {
  const d = require('../miniprogram/utils/dialogue');
  const bubbles = [20, 80].map(x => ({ part: { x, y: 10, width: 44, target: [x, 60] } }));

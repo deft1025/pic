@@ -65,7 +65,7 @@ func TestAccountMySQLIntegration(t *testing.T) {
 		t.Fatal(err)
 	}
 	book := fixture.Books[0]
-	a, err := repo.Login(ctx, "app", "openid", strings.Repeat("a", 64), time.Now().UTC().Add(time.Hour))
+	a, err := repo.Login(ctx, "openid", strings.Repeat("a", 64), time.Now().UTC().Add(time.Hour))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -79,11 +79,11 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	if err != nil || profile.Name != "小读者" || profile.Age != "3-4" {
 		t.Fatal("profile did not roundtrip", err)
 	}
-	again, err := repo.Login(ctx, "app", "openid", strings.Repeat("b", 64), time.Now().UTC().Add(time.Hour))
+	again, err := repo.Login(ctx, "openid", strings.Repeat("b", 64), time.Now().UTC().Add(time.Hour))
 	if err != nil || again.ID != a.ID || again.Name != "小读者" || again.Age != "3-4" {
 		t.Fatal("wechat identity duplicated", err)
 	}
-	other, err := repo.Login(ctx, "app", "other-openid", strings.Repeat("c", 64), time.Now().UTC().Add(-time.Hour))
+	other, err := repo.Login(ctx, "other-openid", strings.Repeat("c", 64), time.Now().UTC().Add(-time.Hour))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -141,22 +141,52 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_favorites WHERE book_id='rollback-book'`).Scan(&count); err != nil || count != 0 {
 		t.Fatal("partial batch committed", err)
 	}
-	e := model.ReadingEvent{ID: strings.Repeat("a", 32), ReadingID: strings.Repeat("c", 32), BookID: book.ID, Kind: "complete", UserID: a.ID}
-	for i := 0; i < 3; i++ {
-		if i == 2 {
-			e.ID = strings.Repeat("d", 32)
+	// Every account/book has a single row: repeated opens do not touch it.
+	type readingState struct {
+		id                       uint64
+		eventID, kind, readingID string
+		created, updated         time.Time
+	}
+	snapshot := func() readingState {
+		t.Helper()
+		var row readingState
+		if err := db.QueryRowContext(ctx, `SELECT id,event_id,event_kind,reading_id,created_at,updated_at FROM reader_events WHERE user_id=? AND book_id=?`, a.ID, book.ID).Scan(&row.id, &row.eventID, &row.kind, &row.readingID, &row.created, &row.updated); err != nil {
+			t.Fatal(err)
 		}
-		if err = repo.RecordEvent(ctx, e); err != nil {
+		return row
+	}
+	open := model.ReadingEvent{ID: strings.Repeat("1", 32), ReadingID: strings.Repeat("2", 32), BookID: book.ID, Kind: "open", UserID: a.ID}
+	if err = repo.RecordEvent(ctx, open); err != nil {
+		t.Fatal(err)
+	}
+	if _, err = db.ExecContext(ctx, `UPDATE reader_events SET updated_at='2020-01-01 00:00:00' WHERE user_id=? AND book_id=?`, a.ID, book.ID); err != nil {
+		t.Fatal(err)
+	}
+	firstOpen := snapshot()
+	for i := 0; i < 3; i++ {
+		later := open
+		later.ID = fmt.Sprintf("%032x", i+10)
+		later.ReadingID = fmt.Sprintf("%032x", i+20)
+		if err = repo.RecordEvent(ctx, later); err != nil {
 			t.Fatal(err)
 		}
 	}
-	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_events`).Scan(&count); err != nil || count != 1 {
-		t.Fatal("duplicate completion counted", err)
+	if snapshot() != firstOpen {
+		t.Fatal("repeated opens changed the first open row")
 	}
-	// Later reading IDs, retries and concurrent devices preserve first completion.
-	if _, err = db.ExecContext(ctx, `UPDATE reader_events SET updated_at='2020-01-01 00:00:00' WHERE event_id=?`, strings.Repeat("a", 32)); err != nil {
+	e := model.ReadingEvent{ID: strings.Repeat("a", 32), ReadingID: strings.Repeat("c", 32), BookID: book.ID, Kind: "complete", UserID: a.ID}
+	if err = repo.RecordEvent(ctx, e); err != nil {
 		t.Fatal(err)
 	}
+	complete := snapshot()
+	if complete.id != firstOpen.id || !complete.created.Equal(firstOpen.created) || complete.kind != "complete" || complete.eventID != e.ID || complete.readingID != e.ReadingID || complete.updated.Year() == 2020 {
+		t.Fatal("open was not promoted in place to complete")
+	}
+	if _, err = db.ExecContext(ctx, `UPDATE reader_events SET updated_at='2020-01-01 00:00:00' WHERE user_id=? AND book_id=?`, a.ID, book.ID); err != nil {
+		t.Fatal(err)
+	}
+	firstComplete := snapshot()
+	// Opens and completions from concurrent devices preserve the entire completed row.
 	completionErrors := make(chan error, 12)
 	for i := 0; i < 12; i++ {
 		wg.Add(1)
@@ -165,6 +195,9 @@ func TestAccountMySQLIntegration(t *testing.T) {
 			later := e
 			later.ID = fmt.Sprintf("%032x", i+100)
 			later.ReadingID = fmt.Sprintf("%032x", i+200)
+			if i%2 == 0 {
+				later.Kind = "open"
+			}
 			completionErrors <- repo.RecordEvent(ctx, later)
 		}(i)
 	}
@@ -175,10 +208,37 @@ func TestAccountMySQLIntegration(t *testing.T) {
 			t.Fatal(err)
 		}
 	}
-	var firstID string
-	var updated time.Time
-	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),MIN(event_id),MIN(updated_at) FROM reader_events WHERE user_id=? AND book_id=? AND event_kind='complete'`, a.ID, book.ID).Scan(&count, &firstID, &updated); err != nil || count != 1 || firstID != strings.Repeat("a", 32) || updated.Year() != 2020 {
-		t.Fatal("first completion was inserted again or modified", count, firstID, updated, err)
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_events WHERE user_id=? AND book_id=?`, a.ID, book.ID).Scan(&count); err != nil || count != 1 || snapshot() != firstComplete {
+		t.Fatal("completed state was duplicated or modified", err)
+	}
+	// A completion may arrive before an open (offline queue or direct reader entry).
+	// Concurrent first requests still create exactly one permanent completed row.
+	initialErrors := make(chan error, 12)
+	for i := 0; i < 12; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			initial := e
+			initial.UserID = other.ID
+			initial.BookID = "direct-reader-book"
+			initial.ID = fmt.Sprintf("%032x", i+300)
+			initial.ReadingID = fmt.Sprintf("%032x", i+400)
+			if i%2 == 0 {
+				initial.Kind = "open"
+			}
+			initialErrors <- repo.RecordEvent(ctx, initial)
+		}(i)
+	}
+	wg.Wait()
+	close(initialErrors)
+	for err = range initialErrors {
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+	var kind string
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),MIN(event_kind) FROM reader_events WHERE user_id=? AND book_id='direct-reader-book'`, other.ID).Scan(&count, &kind); err != nil || count != 1 || kind != "complete" {
+		t.Fatal("concurrent first opens/completions lost state", err)
 	}
 	candidates, err := repo.RecommendationCandidates(ctx, a.ID, book.Ages[0], true)
 	if err != nil {
@@ -196,9 +256,9 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	if !found {
 		t.Fatal("published book missing from recommendation candidates")
 	}
-	// Older repeated completion rows must not inflate rankings either.
-	if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id) VALUES(?,?,?,'complete',?)`, strings.Repeat("e", 32), a.ID, book.ID, strings.Repeat("f", 32)); err != nil {
-		t.Fatal(err)
+	// The database also prevents duplicate account/book states from other writers.
+	if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id) VALUES(?,?,?,'complete',?)`, strings.Repeat("e", 32), a.ID, book.ID, strings.Repeat("f", 32)); err == nil {
+		t.Fatal("duplicate account/book accepted by database")
 	}
 	candidates, err = repo.RecommendationCandidates(ctx, "", "", true)
 	if err != nil {
@@ -209,7 +269,7 @@ func TestAccountMySQLIntegration(t *testing.T) {
 			t.Fatal("guest received private read status", c)
 		}
 		if c.BookID == book.ID && c.Score != 5 {
-			t.Fatal("legacy duplicate completion inflated score", c)
+			t.Fatal("duplicate attempt inflated score", c)
 		}
 	}
 	candidates, err = repo.RecommendationCandidates(ctx, "", "", false)
@@ -226,5 +286,46 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	}
 	if _, err = repo.Authenticate(ctx, strings.Repeat("a", 64), time.Now().UTC()); !errors.Is(err, sql.ErrNoRows) {
 		t.Fatal("logged-out token accepted")
+	}
+	// Recreate legacy event storage only inside this disposable test database.
+	if _, err = db.ExecContext(ctx, `DELETE FROM reader_events`); err != nil {
+		t.Fatal(err)
+	}
+	if _, err = db.ExecContext(ctx, `ALTER TABLE reader_events DROP INDEX uk_reader_events_user_book, ADD UNIQUE KEY uk_reader_events_reading_kind (user_id,reading_id,event_kind)`); err != nil {
+		t.Fatal(err)
+	}
+	for i, item := range []struct{ book, kind string }{
+		{"mixed", "open"}, {"mixed", "open"}, {"mixed", "complete"}, {"mixed", "complete"}, {"mixed", "open"},
+		{"open-only", "open"}, {"open-only", "open"}, {"done-only", "complete"}, {"done-only", "complete"},
+	} {
+		if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id,created_at,updated_at) VALUES(?,?,?,?,?,'2020-01-01','2021-01-01')`, fmt.Sprintf("%032x", i+500), a.ID, item.book, item.kind, fmt.Sprintf("%032x", i+600)); err != nil {
+			t.Fatal(err)
+		}
+	}
+	migration, err := os.ReadFile("../../docs/migrations/20261117_reader_events_user_book.sql")
+	if err != nil {
+		t.Fatal(err)
+	}
+	conn, err := db.Conn(ctx)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer conn.Close()
+	for _, statement := range strings.Split(string(migration), ";") {
+		if strings.TrimSpace(statement) != "" {
+			if _, err = conn.ExecContext(ctx, statement); err != nil {
+				t.Fatal("manual reading-state migration failed", err)
+			}
+		}
+	}
+	for _, expected := range []struct{ book, kind, eventID string }{{"mixed", "complete", fmt.Sprintf("%032x", 502)}, {"open-only", "open", fmt.Sprintf("%032x", 505)}, {"done-only", "complete", fmt.Sprintf("%032x", 507)}} {
+		var eventID string
+		var created, updated time.Time
+		if err = db.QueryRowContext(ctx, `SELECT COUNT(*),MIN(event_kind),MIN(event_id),MIN(created_at),MIN(updated_at) FROM reader_events WHERE user_id=? AND book_id=?`, a.ID, expected.book).Scan(&count, &kind, &eventID, &created, &updated); err != nil || count != 1 || kind != expected.kind || eventID != expected.eventID || created.Year() != 2020 || updated.Year() != 2021 {
+			t.Fatal("migration lost first completion/open or changed timestamps", err)
+		}
+	}
+	if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id) VALUES(?,?,'mixed','open',?)`, strings.Repeat("8", 32), a.ID, strings.Repeat("9", 32)); err == nil {
+		t.Fatal("migration did not enforce account/book uniqueness")
 	}
 }
