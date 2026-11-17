@@ -39,6 +39,17 @@ GOCACHE=/tmp/pic-go-cache go run ./cmd/readerdb
 
 后端 `.env` 使用 `WECHAT_APP_ID`、`WECHAT_APP_SECRET` 和默认关闭的 `MINI_PROGRAM_ENABLED=false`。四张表准备好后才启用 `MINI_PROGRAM_ENABLED=true` 并重启API。本机与服务器配置分别准备；真实密钥不写入小程序、文档或Git。正式代码部署仍由用户自行提交、推送，在服务器执行 `bash deploy.sh`；小程序上传/发布单独操作，不自动执行。
 
+服务器四张读者表准备好后，将服务器实际读取的 `.env` 中 `MINI_PROGRAM_ENABLED` 改为 `true`，保留已有AppID、Secret和数据库配置。`.env`被Git忽略，本机文件需要单独同步到服务器；系统环境变量会覆盖同名文件配置。然后在服务器项目目录执行 `bash deploy.sh`。启动日志明确输出账号服务已启用/未启用，不输出凭据。
+
+部署后可用不含有效登录code的空JSON检查开关（不会向微信换身份或创建账号）：
+
+```sh
+curl -sS -i -H 'Content-Type: application/json' --data '{}' https://pic.xuninfo.top/api/auth/wechat
+journalctl -u pic -n 50 --no-pager
+```
+
+返回400“登录凭证无效”表示路由和开关已生效，仍须在小程序实际登录验证微信与读者表；503“尚未启用”表示实际运行配置的开关仍关闭。其他失败的日志只输出固定诊断码：`wechat_err_40013`（AppID）、`wechat_err_40125`/`wechat_err_40001`（凭据）、`wechat_err_40029`/`wechat_err_40163`（无效/已使用code）、`wechat_network_failed`（连接微信失败）、`reader_table_missing`（读者表缺失）、`reader_schema_mismatch`（旧表结构）、`reader_storage_failed`（数据库写入失败）。页面展示对应的简明原因，不返回微信原始errmsg、OpenID、会话密钥或SQL错误。
+
 ## 登录、会话与客户端
 
 `wx.login`提供一次性code，后端向微信 `jscode2session` 换取身份，再建立内部账号和30天随机会话。只向小程序返回内部用户资料和随机令牌，不返回OpenID、AppSecret或session_key。后端只保存令牌摘要。退出即撤销当前会话，过期令牌返回401；401清除本机登录和私有收藏缓存。

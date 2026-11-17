@@ -50,6 +50,9 @@ func run(configFile string) error {
 	var accounts *service.Accounts
 	if cfg.WeChat.Enabled {
 		accounts = service.NewAccounts(repository.New(db, cfg.Content.RequireLicenseApproval), library, &service.WeChatClient{AppID: cfg.WeChat.AppID, Secret: cfg.WeChat.AppSecret}, cfg.WeChat.AppID)
+		log.Print("小程序账号服务已启用（MINI_PROGRAM_ENABLED=true）")
+	} else {
+		log.Print("小程序账号服务未启用（MINI_PROGRAM_ENABLED=false）；登录需在实际加载的配置中开启，系统环境变量优先于配置文件")
 	}
 	server := &http.Server{
 		Addr:              cfg.Server.Addr,

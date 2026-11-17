@@ -26,8 +26,17 @@ func TestAccountBodyRejectsUnknownFieldsOversizeAndTrailingJSON(t *testing.T) {
 	h := NewAccounts(nil)
 	w := httptest.NewRecorder()
 	h.Login(w, httptest.NewRequest("POST", "/", strings.NewReader(`{"code":"x"}`)))
-	if w.Code != 503 {
+	if w.Code != 503 || !strings.Contains(w.Body.String(), "尚未启用") {
 		t.Fatal("disabled login did not fail safely")
+	}
+}
+
+func TestEnabledLoginProbeNeedsNoWeChatCodeOrDatabase(t *testing.T) {
+	h := NewAccounts(service.NewAccounts(nil, nil, nil, "app"))
+	w := httptest.NewRecorder()
+	h.Login(w, httptest.NewRequest("POST", "/", strings.NewReader(`{}`)))
+	if w.Code != http.StatusBadRequest || !strings.Contains(w.Body.String(), "登录凭证无效") {
+		t.Fatal("enabled login probe must stop before upstream or storage", w.Code, w.Body.String())
 	}
 }
 func TestLoginLimiterDoesNotTrustForwardedIP(t *testing.T) {

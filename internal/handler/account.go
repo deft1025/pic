@@ -2,7 +2,9 @@ package handler
 
 import (
 	"encoding/json"
+	"errors"
 	"io"
+	"log"
 	"net"
 	"net/http"
 	"strings"
@@ -90,7 +92,7 @@ func (h *AccountHandler) user(w http.ResponseWriter, r *http.Request) (string, b
 }
 func (h *AccountHandler) Login(w http.ResponseWriter, r *http.Request) {
 	if h.accounts == nil {
-		Fail(w, 503, "微信登录尚未配置，可先直接阅读")
+		Fail(w, 503, "微信登录尚未启用，请联系管理员")
 		return
 	}
 	if !h.allow(r, true) {
@@ -104,6 +106,15 @@ func (h *AccountHandler) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	result, err := h.accounts.Login(r.Context(), input.Code)
+	if err != nil {
+		code := "login_failed"
+		var failure *service.Error
+		if errors.As(err, &failure) && failure.Code != "" {
+			code = failure.Code
+		}
+		// Raw upstream/SQL errors may contain the code exchange URL or identities.
+		log.Printf("小程序登录失败 code=%s", code)
+	}
 	respond(w, result, err)
 }
 func (h *AccountHandler) Logout(w http.ResponseWriter, r *http.Request) {

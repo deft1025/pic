@@ -14,6 +14,8 @@ type Error struct {
 	Kind    error
 	Message string
 	Cause   error
+	// Code is a fixed diagnostic label; never include credentials or raw errors.
+	Code string
 }
 
 func (e *Error) Error() string        { return e.Message }

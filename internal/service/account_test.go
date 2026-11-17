@@ -11,6 +11,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/go-sql-driver/mysql"
+
 	"pic/internal/model"
 )
 
@@ -154,6 +156,55 @@ func TestWeChatExchangeUsesServerSecretAndRejectsMalformedReplies(t *testing.T) 
 		if err != nil && strings.Contains(err.Error(), "secret") {
 			t.Fatal("upstream diagnostics leaked")
 		}
+	}
+}
+
+func TestLoginFailuresHaveDistinctSafeDiagnostics(t *testing.T) {
+	for _, tc := range []struct {
+		body, code string
+		kind       error
+	}{
+		{`{"errcode":40029,"errmsg":"private details"}`, "wechat_err_40029", ErrInvalidQuery},
+		{`{"errcode":40163}`, "wechat_err_40163", ErrInvalidQuery},
+		{`{"errcode":40013}`, "wechat_err_40013", ErrUnavailable},
+		{`{"errcode":40125}`, "wechat_err_40125", ErrUnavailable},
+		{`{"errcode":45011}`, "wechat_err_45011", ErrUnavailable},
+		{`{"errcode":-1}`, "wechat_err_-1", ErrUnavailable},
+		{`broken`, "wechat_invalid_response", ErrUnavailable},
+	} {
+		t.Run(tc.code, func(t *testing.T) {
+			ctx, s, _, _ := accountService()
+			s.wechat = &WeChatClient{AppID: "app", Secret: "private-secret", Client: &http.Client{Transport: roundTripFunc(func(*http.Request) (*http.Response, error) {
+				return &http.Response{StatusCode: 200, Body: io.NopCloser(strings.NewReader(tc.body))}, nil
+			})}}
+			_, err := s.Login(ctx, "private-code")
+			var failure *Error
+			if !errors.As(err, &failure) || failure.Code != tc.code || !errors.Is(err, tc.kind) {
+				t.Fatal("wrong diagnostic", err)
+			}
+			if strings.Contains(err.Error(), "private") {
+				t.Fatal("private data leaked")
+			}
+		})
+	}
+	for _, tc := range []struct {
+		number uint16
+		code   string
+	}{{1146, "reader_table_missing"}, {1054, "reader_schema_mismatch"}, {1364, "reader_schema_mismatch"}, {1040, "reader_storage_failed"}} {
+		ctx, s, store, _ := accountService()
+		store.err = &mysql.MySQLError{Number: tc.number, Message: "private SQL and identity"}
+		_, err := s.Login(ctx, "code")
+		var failure *Error
+		if !errors.As(err, &failure) || failure.Code != tc.code || !errors.Is(err, ErrUnavailable) || strings.Contains(err.Error(), "private") {
+			t.Fatal("storage diagnostic leaked or misclassified", err)
+		}
+	}
+	ctx, s, _, _ := accountService()
+	s.wechat = &WeChatClient{AppID: "app", Secret: "private-secret", Client: &http.Client{Transport: roundTripFunc(func(*http.Request) (*http.Response, error) { return nil, errors.New("private URL secret") })}}
+	_, err := s.Login(ctx, "private-code")
+	var failure *Error
+	if !errors.As(err, &failure) || failure.Code != "wechat_network_failed" || strings.Contains(err.Error(), "private") {
+		t.Fatal("network diagnostic leaked", err)
 	}
 }
 

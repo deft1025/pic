@@ -8,6 +8,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -36,7 +37,7 @@ type WeChatClient struct {
 
 func (c *WeChatClient) Exchange(ctx context.Context, code string) (string, error) {
 	if c.AppID == "" || c.Secret == "" {
-		return "", errors.New("wechat not configured")
+		return "", loginFailure(ErrUnavailable, "微信登录配置不完整，请联系管理员", "wechat_config_missing", nil)
 	}
 	q := url.Values{"appid": {c.AppID}, "secret": {c.Secret}, "js_code": {code}, "grant_type": {"authorization_code"}}
 	req, err := http.NewRequestWithContext(ctx, "GET", "https://api.weixin.qq.com/sns/jscode2session?"+q.Encode(), nil)
@@ -49,7 +50,7 @@ func (c *WeChatClient) Exchange(ctx context.Context, code string) (string, error
 	}
 	res, err := client.Do(req)
 	if err != nil {
-		return "", errors.New("wechat unavailable")
+		return "", loginFailure(ErrUnavailable, "暂时无法连接微信登录服务，请稍后重试", "wechat_network_failed", nil)
 	}
 	defer res.Body.Close()
 	var data struct {
@@ -57,10 +58,25 @@ func (c *WeChatClient) Exchange(ctx context.Context, code string) (string, error
 		Error  int    `json:"errcode"`
 	}
 	if res.StatusCode != 200 {
-		return "", errors.New("wechat unavailable")
+		return "", loginFailure(ErrUnavailable, "微信登录服务暂时不可用，请稍后重试", fmt.Sprintf("wechat_http_%d", res.StatusCode), nil)
 	}
-	if err = json.NewDecoder(io.LimitReader(res.Body, 8192)).Decode(&data); err != nil || data.Error != 0 || data.OpenID == "" || len(data.OpenID) > 128 {
-		return "", errors.New("wechat login rejected")
+	if err = json.NewDecoder(io.LimitReader(res.Body, 8192)).Decode(&data); err != nil {
+		return "", loginFailure(ErrUnavailable, "微信登录响应异常，请稍后重试", "wechat_invalid_response", nil)
+	}
+	if data.Error != 0 {
+		kind, message := ErrUnavailable, "微信登录暂时失败，请稍后重试"
+		switch data.Error {
+		case 40029, 40163:
+			kind, message = ErrInvalidQuery, "微信登录凭证已失效，请重新点击登录"
+		case 40013, 40001, 40125:
+			message = "微信登录配置异常，请联系管理员"
+		case 45011:
+			message = "微信登录过于频繁，请稍后再试"
+		}
+		return "", loginFailure(kind, message, fmt.Sprintf("wechat_err_%d", data.Error), nil)
+	}
+	if data.OpenID == "" || len(data.OpenID) > 128 {
+		return "", loginFailure(ErrUnavailable, "微信登录响应异常，请稍后重试", "wechat_invalid_response", nil)
 	}
 	return data.OpenID, nil
 }
@@ -74,6 +90,9 @@ type Accounts struct {
 
 func NewAccounts(store repository.AccountStore, library *Library, wechat WeChatIdentity, appID string) *Accounts {
 	return &Accounts{store, library, wechat, appID}
+}
+func loginFailure(kind error, message, code string, cause error) error {
+	return &Error{Kind: kind, Message: message, Code: code, Cause: cause}
 }
 func accountUnavailable(err error) error {
 	if err == nil {
@@ -98,16 +117,23 @@ func (s *Accounts) Login(ctx context.Context, code string) (model.AccountSession
 	}
 	open, err := s.wechat.Exchange(ctx, code)
 	if err != nil {
-		return model.AccountSession{}, accountUnavailable(err)
+		var failure *Error
+		if errors.As(err, &failure) {
+			return model.AccountSession{}, err
+		}
+		return model.AccountSession{}, loginFailure(ErrUnavailable, "微信登录验证暂时失败，请稍后重试", "wechat_exchange_failed", err)
 	}
 	token, err := randomID(32)
 	if err != nil {
-		return model.AccountSession{}, accountUnavailable(err)
+		return model.AccountSession{}, loginFailure(ErrUnavailable, "暂时无法创建登录会话，请稍后重试", "login_token_failed", err)
 	}
 	expiry := time.Now().UTC().Add(30 * 24 * time.Hour)
 	account, err := s.store.Login(ctx, s.appID, open, tokenHash(token), expiry)
 	if err != nil {
-		return model.AccountSession{}, accountUnavailable(err)
+		if problem := repository.ReaderSchemaProblem(err); problem != "" {
+			return model.AccountSession{}, loginFailure(ErrUnavailable, "账号数据表未就绪，请联系管理员", problem, err)
+		}
+		return model.AccountSession{}, loginFailure(ErrUnavailable, "暂时无法保存登录信息，请稍后重试", "reader_storage_failed", err)
 	}
 	account.NeedsProfile = account.Age == ""
 	return model.AccountSession{Token: token, ExpiresAt: expiry, User: account}, nil
