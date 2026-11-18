@@ -9,14 +9,14 @@ import (
 	"strings"
 )
 
-// ReaderSchema selects only the four additive reader tables from the canonical
+// ReaderSchema selects only the five additive reader tables from the canonical
 // schema. It excludes content tables, seeds and any destructive statements.
 func ReaderSchema(path string) ([]string, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return nil, errors.New("无法读取小程序建表定义")
 	}
-	allowed := map[string]bool{"reader_users": true, "reader_sessions": true, "reader_favorites": true, "reader_events": true}
+	allowed := map[string]bool{"reader_users": true, "reader_sessions": true, "reader_favorites": true, "reader_events": true, "reader_recommendations": true}
 	pattern := regexp.MustCompile("(?s)CREATE TABLE IF NOT EXISTS `([a-z_]+)` \\(.*?\\n\\) ENGINE=[^;]+;")
 	result := []string{}
 	for _, match := range pattern.FindAllStringSubmatch(string(data), -1) {
@@ -30,7 +30,7 @@ func ReaderSchema(path string) ([]string, error) {
 		result = append(result, match[0])
 	}
 	if len(allowed) != 0 {
-		return nil, errors.New("小程序四张表的定义不完整")
+		return nil, errors.New("小程序五张表的定义不完整")
 	}
 	return result, nil
 }

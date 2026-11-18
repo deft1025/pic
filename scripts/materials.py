@@ -100,7 +100,11 @@ def make_art(store, book_id, source_dir=None):
     snapshot = store.read(book_id)
     book = snapshot['book']
     evidence = json.loads((ROOT/'content/sources/bookdash-originals/sources.json').read_text())
-    if book_id in evidence:
+    storybloom_path = ROOT/'content/sources/storybloom/sources.json'
+    storybloom = json.loads(storybloom_path.read_text()) if storybloom_path.exists() else {}
+    if book_id in storybloom:
+        book = module('storybloom_art').prepare(book, source_dir)
+    elif book_id in evidence:
         if not source_dir:
             source_dir = ROOT/'docs/materials-review'/('original-sources-' + evidence[book_id]['downloaded_on'].replace('-', ''))
         module('prepare_original_books').prepare(Path(source_dir), art_only=True, books=[book_id])

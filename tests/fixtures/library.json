@@ -11494,6 +11494,1328 @@
           }
         }
       ]
+    },
+    {
+      "id": "sb-bus-next-stop",
+      "title_zh": "公交车怎么知道下一站",
+      "title_original": "How Does a Bus Know Its Next Stop?",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "安安和妈妈乘公交去图书馆，一边看路线图，一边寻找报站的秘密。",
+      "reading_value": "跟着安安找站点，认识路线和定位",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "cognition",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-bus-next-stop/cover.webp",
+      "page_count": 12,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-17T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-8701b1efd17a34e3536710fd1443f80a54156a9247bd8a556f5296643f0257ed",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom 城市交通系列（公开 AI 生成样本；来源未列个人作者/插画师）。本项目保留12页原图与双语叙事，校对交通知识及少量场景衔接，添加角色气泡与合成配音，首幅图兼作封面。仓库MIT声明明确针对应用代码，图文独立许可未确认，审核状态pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-17T12:26:17.44Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-17T12:25:49.68Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-bus-next-stop/page-001.webp",
+          "image_alt": "安安和妈妈站在候车亭旁，安安指着右侧驶来的公交车。",
+          "text_zh": "安安和妈妈站在“小河站”候车。一辆公交车叮叮靠站，她望着车头问：“它怎么知道下一站？”",
+          "text_original": "An'an and Mom waited at Xiaohe Stop. A bus chimed as it pulled in. An'an looked at the front and asked, “How does it know which stop comes next?”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-001.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 145,
+              "zh": 43
+            },
+            "text_sha256": {
+              "en": "63ab71c3adf8da78f048a07732055991bcb799d0c50667f8a896a3dbf8866338",
+              "zh": "aa8113ecad639c532f4c68bfa38d8f5488a46b834449898eb822f5744db4af9d"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 104,
+                  "zh": 32
+                },
+                "end": {
+                  "en": 145,
+                  "zh": 43
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  43,
+                  55
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-bus-next-stop/page-002.webp",
+          "image_alt": "妈妈在站台长椅上展开彩色路线图，安安站在一旁指着图上的站点。",
+          "text_zh": "妈妈展开路线图：“我们坐到城市图书馆，边走边找答案。”图上串着彩色圆点，像一条小路。",
+          "text_original": "Mom unfolded a route map. “We will ride to the city library and look for clues.” Colorful dots on it looked like a tiny road.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-002.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 125,
+              "zh": 42
+            },
+            "text_sha256": {
+              "en": "890e12f5640a3f3ef84a61b4cbcb8c19b28650081d67989d8fe7e1de539d0571",
+              "zh": "3302d3b9caf476096e2e87f9511d63a823633af30998f51c2ce18d31a3c476b1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 26,
+                  "zh": 8
+                },
+                "end": {
+                  "en": 80,
+                  "zh": 27
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  40,
+                  30
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-bus-next-stop/page-003.webp",
+          "image_alt": "三个连续画面中，母女等乘客下车，再牵手登上停稳的公交车。",
+          "text_zh": "公交车停进站台，车门打开。先下后上，安安牵着妈妈的手，等车完全停稳才上车。",
+          "text_original": "The bus settled at the stop and opened its doors. People got off before others got on. Holding Mom's hand, An'an waited until it was completely still.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-003.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-bus-next-stop/page-004.webp",
+          "image_alt": "家中的沙发上，妈妈和安安看着玩具公交车，头顶浮现彩点串起的房屋、公园与桥。",
+          "text_zh": "安安想起出门前，妈妈在家说：“每条线路出发前就排好了顺序：这一站、下一站，再下一站。”她想象站点在城市里接力。",
+          "text_original": "An'an remembered Mom explaining at home, “Before a route begins, its stops are put in order: this stop, the next one, then the next.” She imagined the stops passing a baton.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-004.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 173,
+              "zh": 55
+            },
+            "text_sha256": {
+              "en": "172e22b75dae7240c067a2f855323a9ca945bf20d29ca0db41c2efa69f92d9c7",
+              "zh": "516afdf1835cc2806f9e6e8949f2c22207e67998827e31c672367faace686884"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 41,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 133,
+                  "zh": 43
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  25,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-bus-next-stop/page-005.webp",
+          "image_alt": "公交车座位上，安安指着上方的四个彩色站点，妈妈坐在右侧。",
+          "text_zh": "座位上方的路线图把站点排成一列。安安数到四个彩点，图书馆就在第四站。",
+          "text_original": "A route map above the seats arranged the stops in a row. An'an counted four colored dots and found the library at the fourth stop.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-005.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-bus-next-stop/page-006.webp",
+          "image_alt": "上方是司机开车和乘车的母女，下方以卫星、车辆与调度楼示意定位联系。",
+          "text_zh": "车开起来，司机照着道路和线路行驶；定位系统把车辆位置传给报站系统和调度中心。",
+          "text_original": "The bus moved as the driver followed the streets and planned line. A location system sent its position to the announcement system and dispatch center.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-006.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-bus-next-stop/page-007.webp",
+          "image_alt": "安安拿着路线图指向窗外的公园，妈妈坐在后方，窗边有提示音符。",
+          "text_zh": "快到第一站，车里响起轻柔提示。安安看见窗外的公园，对照路线图：“原来它知道走到哪儿了！”",
+          "text_original": "Near the first stop, a gentle chime sounded. An'an spotted the park and checked the map. “It knows where it is on the journey!”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-007.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 127,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "bb65df56333a26719bff459d62a31662beb0baa7e5ec2fb02d9b061bfbfa8e6d",
+              "zh": "81f7a6c658929d485f09b5cd497d9a068144368ec89e6bea40c73c7082f3cd4e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 89,
+                  "zh": 31
+                },
+                "end": {
+                  "en": 127,
+                  "zh": 44
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  56,
+                  59
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-bus-next-stop/page-008.webp",
+          "image_alt": "母女坐在公交车窗边，看着窗外环岛、树木、小桥与蓝顶房屋。",
+          "text_zh": "公交车绕着圆环路口转弯，安安数窗外的景色：大树、桥、蓝色屋顶。路线靠地图和站点，不靠记忆。",
+          "text_original": "The bus curved around a roundabout. An'an counted a big tree, a bridge, and a blue roof outside. A route uses maps and marked stops, not memory alone.",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-008.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-bus-next-stop/page-009.webp",
+          "image_alt": "母女在车内看到前方施工围栏和绿色绕行路线，司机手边放着平板。",
+          "text_zh": "前方道路施工，司机收到调度中心的临时安排，绕过封闭路段。妈妈说：“路线变了，安全和新站点要先确认。”",
+          "text_original": "Road work blocked the street ahead. The driver received a temporary plan and went around it. Mom said, “When a route changes, safety and new stops must be checked first.”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-009.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 170,
+              "zh": 50
+            },
+            "text_sha256": {
+              "en": "075b3b26776faf113c7c2acad61754e7fb846186605ffdd3424b4a00294c8173",
+              "zh": "9dc2ab9d098d90e0f4efb28a9fd69904f07f6656de39943661cb229abe76fcc0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 103,
+                  "zh": 32
+                },
+                "end": {
+                  "en": 170,
+                  "zh": 50
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  17,
+                  50
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-bus-next-stop/page-010.webp",
+          "image_alt": "安安伸手按车内的红色下车按钮，妈妈在右侧陪着她。",
+          "text_zh": "安安按下下车提示按钮。妈妈提醒：“需要下一站下车时再按，车会在规定站点安全停下。”",
+          "text_original": "An'an pressed the stop-request button. Mom reminded her, “Press it when you need the next stop; the bus will stop safely at its designated stop.”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-010.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 145,
+              "zh": 41
+            },
+            "text_sha256": {
+              "en": "bb79231ecccf96f9ed8e514d7ae58881aba3cb33c402a39e4cc0e715e96e5116",
+              "zh": "e5ace3ab040a9d3203976a606c611e1c6ac4e28abec07ed90466d8671336891c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 57,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 145,
+                  "zh": 41
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  63,
+                  30
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-bus-next-stop/page-011.webp",
+          "image_alt": "母女已下车站在停靠的公交车旁，安安展示画有彩色小旗的纸。",
+          "text_zh": "四站之后，公交车在图书馆站停稳。安安把彩点画成小旗子：“线路、定位、司机和报站，一起帮它找到下一站！”",
+          "text_original": "Four stops later, the bus fully stopped at the library. An'an drew flags over the dots. “The route, location, driver, and announcements help it find the next stop together!”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-011.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 173,
+              "zh": 51
+            },
+            "text_sha256": {
+              "en": "4bd9219bdf0140998fcb31bcd2e5a548dbeb110a00892b1df0ea943f7007f1f4",
+              "zh": "7b1d9a83e7958018e782e706c5b2239277012d8f5802e23b36abcb05643927d5"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 88,
+                  "zh": 27
+                },
+                "end": {
+                  "en": 173,
+                  "zh": 51
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  53,
+                  49
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-bus-next-stop/page-012.webp",
+          "image_alt": "傍晚，安安和妈妈站在地铁入口旁，安安指向向下的楼梯。",
+          "text_zh": "回家路上，安安看见地铁入口，又问：“地铁为什么跑得快？”妈妈笑着说：“下一次继续观察！”",
+          "text_original": "On the way home, An'an saw a subway entrance and asked, “Why can a subway move so fast?” Mom smiled. “That is our next adventure!”",
+          "audio_zh": "/assets/books/sb-bus-next-stop/audio/zh/18bd2cf35604cd58/page-012.mp3",
+          "audio_original": "/assets/books/sb-bus-next-stop/audio/en/bc3ead6f25c4f3cf/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 130,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "842c756c2cf5b56f9fb202af253b3621de06e1b980f7cfe999d1a9f0eb63be36",
+              "zh": "24278b4791b3223a14484b8abdfcf44d63052b4e3d6e20e444c3324f1b8f619e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 56,
+                  "zh": 17
+                },
+                "end": {
+                  "en": 88,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  56,
+                  60
+                ]
+              },
+              {
+                "start": {
+                  "en": 101,
+                  "zh": 34
+                },
+                "end": {
+                  "en": 130,
+                  "zh": 44
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  31,
+                  35
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sb-fire-engine",
+      "title_zh": "消防车为什么要鸣笛",
+      "title_original": "Why Do Fire Trucks Use Sirens?",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "安安和爸爸听见警笛，跟随一次安全观察，认识消防车与救援人员的工作。",
+      "reading_value": "认识消防车，学会安全观察与让行",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "cognition",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-fire-engine/cover.webp",
+      "page_count": 12,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-17T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-cb8350af74fad368f8ea09562b0b03e5bf02827a31edc0fc58d434cb0b6d28aa",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom 城市交通系列（公开 AI 生成样本；来源未列个人作者/插画师）。本项目保留12页原图与双语叙事，校对交通知识及少量场景衔接，添加角色气泡与合成配音，首幅图兼作封面。仓库MIT声明明确针对应用代码，图文独立许可未确认，审核状态pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-17T12:26:17.588Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-17T12:25:50.569Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-fire-engine/page-001.webp",
+          "image_alt": "爸爸和安安站在街角人行道上，安安指着远处驶来的消防车。",
+          "text_zh": "清晨，安安和爸爸走到街角，忽然听见“呜哇——呜哇——”。她问：“消防车为什么要鸣笛？”",
+          "text_original": "One morning, An'an and Dad reached the corner. A wailing sound rose: “Woo-oo, woo-oo!” “Why do fire trucks use sirens?” she asked.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-001.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 130,
+              "zh": 43
+            },
+            "text_sha256": {
+              "en": "ce431c10de63b21e1b1d46bb8dfea67698a85e47f27bb37b855a3fd7caaa6453",
+              "zh": "757def68dc36bd902553b485d80a00a19f8fba0cecb8d94208f356c9715cde1f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 87,
+                  "zh": 31
+                },
+                "end": {
+                  "en": 119,
+                  "zh": 43
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  39,
+                  56
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-fire-engine/page-002.webp",
+          "image_alt": "爸爸牵着安安站在路边，右侧消防车亮着警示灯驶近。",
+          "text_zh": "爸爸牵着安安站在安全的人行道上：“我们可以观察，但不追车，也不挡路。”",
+          "text_original": "Dad held An'an's hand on the safe sidewalk. “We can watch, but we never chase a truck or block its way.”",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-002.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 104,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "4250c66589b96e2484fc57c0290b9f61146f2854c0ed5087593af0721a050def",
+              "zh": "98abbabadec6676d70c72c6edbd731ddc657a32df5f92aed8ac941781e2db977"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 44,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 104,
+                  "zh": 35
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  20,
+                  26
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-fire-engine/page-003.webp",
+          "image_alt": "爸爸和安安在左侧观察，消防站门前的队员整理装备，旁边停着消防车。",
+          "text_zh": "消防站的大门打开，红色消防车亮起警示灯。队员们先听调度，再检查装备。",
+          "text_original": "The fire station gate opened and the red fire engine turned on its warning lights. The crew listened to dispatch, then checked their equipment.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-003.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-fire-engine/page-004.webp",
+          "image_alt": "爸爸弯身指向路口的消防车，安安站在旁边，彩色弧线示意鸣笛声。",
+          "text_zh": "鸣笛声一高一低，能穿过车流和街角，提醒大家：有紧急车辆来了。",
+          "text_original": "The siren rises and falls so its sound can travel through traffic and around corners. It tells everyone that an emergency vehicle is coming.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-004.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-fire-engine/page-005.webp",
+          "image_alt": "俯视路口，消防车通过斑马线，汽车在旁边，骑车人在右下方，父女在左下方人行道。",
+          "text_zh": "它不是在催大家慌张。汽车减速靠边，骑车人停在安全处，行人等绿灯。",
+          "text_original": "The siren is not a reason to panic. Cars slow and move aside, a cyclist waits safely, and pedestrians wait for the green signal.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-005.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-fire-engine/page-006.webp",
+          "image_alt": "安安和爸爸在消防车前观察，右侧放大画面展示后视镜与车顶警示灯。",
+          "text_zh": "安安找到了三个小细节：闪烁的灯、宽大的后视镜，还有车顶的警示装置。",
+          "text_original": "An'an spotted three little details: flashing lights, broad mirrors, and a warning device on the roof.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-006.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-fire-engine/page-007.webp",
+          "image_alt": "驾驶室视角中，司机看着道路，车内有路线屏幕和无线电，远处右侧人行道上站着父女。",
+          "text_zh": "驾驶员看地图、听无线电，按道路情况选择路线；鸣笛帮助他人及时发现车辆。",
+          "text_original": "The driver checks a map and radio and chooses a route for the road conditions. The siren helps others notice the truck in time.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-007.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-fire-engine/page-008.webp",
+          "image_alt": "父女在楼外左侧观看，消防员在右侧住户门口检查，门旁有红色报警装置。",
+          "text_zh": "到了小区，烟雾报警器发出警报。消防员在门外先确认环境，再进入检查。",
+          "text_original": "At the apartment block, a smoke alarm sounded. The firefighters checked the surroundings from outside before going in to inspect.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-008.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-fire-engine/page-009.webp",
+          "image_alt": "父女站在厨房门边，消防员检查冒着蒸汽的锅，住户在旁边配合通风。",
+          "text_zh": "原来厨房里锅里的水蒸气触发了报警器，没有人受伤。队员通风并确认设备恢复正常。",
+          "text_original": "Steam from a pot in the kitchen had triggered the alarm, and no one was hurt. The crew aired the room and confirmed that the system was working again.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-009.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-fire-engine/page-010.webp",
+          "image_alt": "爸爸和安安在消防车旁看分格收好的卷盘、水带和工具，消防员在中间介绍。",
+          "text_zh": "安安发现消防车的水带、软管和工具都分区收好；需要时，队员能很快取用。",
+          "text_original": "An'an noticed that hoses, nozzles, and tools were stored in separate compartments. The crew can reach them quickly when needed.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-010.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-fire-engine/page-011.webp",
+          "image_alt": "父女在人行道上挥手，消防车沿街道驶远。",
+          "text_zh": "警报解除后，消防车关掉鸣笛，按规定慢慢回站。鸣笛只在需要提醒和请求让行时使用。",
+          "text_original": "After the alarm was cleared, the fire engine switched off its siren and returned to the station at a careful pace. It uses the siren when people need a warning and a safe path.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-011.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-fire-engine/page-012.webp",
+          "image_alt": "家中的桌边，爸爸陪安安在本子上画街道、斑马线和车辆，窗外远处有救护车。",
+          "text_zh": "回到家，安安画下安全口诀：听到警笛，在安全处停下观察，给救援车辆让路。她又好奇起救护车是怎样争分夺秒的。",
+          "text_original": "Back at home, An'an drew a safety rule: hear a siren, stop and look from a safe place, and give emergency vehicles room. Then she wondered how ambulances save every minute.",
+          "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-012.mp3",
+          "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-subway",
+      "title_zh": "地铁为什么跑得快",
+      "title_original": "Why Can a Subway Travel So Fast?",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "坐上地铁去图书馆，安安发现专用轨道、车轮和安全停靠的秘密。",
+      "reading_value": "看看轨道与车轮，发现地铁的秘密",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "cognition"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-subway/cover.webp",
+      "page_count": 12,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-17T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-2bcd7f92a0a034935fee1c2297b005cd578345dc14c9af2440005afebd232b9b",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom 城市交通系列（公开 AI 生成样本；来源未列个人作者/插画师）。本项目保留12页原图与双语叙事，校对交通知识及少量场景衔接，添加角色气泡与合成配音，首幅图兼作封面。仓库MIT声明明确针对应用代码，图文独立许可未确认，审核状态pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-17T12:26:13.782Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-17T12:25:49.095Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-subway/page-001.webp",
+          "image_alt": "母女站在绿顶地铁入口旁，安安指向通往地下的楼梯。",
+          "text_zh": "安安和妈妈来到地铁站，准备去图书馆借一本车子的书。",
+          "text_original": "An'an and Mom arrived at the subway station to borrow a book about vehicles from the library.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-001.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-subway/page-002.webp",
+          "image_alt": "银色列车停在站台边，安安指向车头，妈妈站在右侧。",
+          "text_zh": "站台边，银色列车安静地等着。安安问：“它怎么不怕堵车？”",
+          "text_original": "A silver train waited quietly at the platform. An'an asked, “How does it avoid traffic jams?”",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-002.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 93,
+              "zh": 28
+            },
+            "text_sha256": {
+              "en": "c765c7674ef6b322fec9aacbefa4c1c84ba1a377453cc20069cd253e8f9d9e2f",
+              "zh": "b343a2945507ac35d115436075abfaedc6e16f86f94be733a65c82d8b586b628"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 60,
+                  "zh": 18
+                },
+                "end": {
+                  "en": 93,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  62,
+                  52
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-subway/page-003.webp",
+          "image_alt": "剖面示意图中，上方道路有汽车，下方专用轨道有地铁，母女在左侧观察。",
+          "text_zh": "妈妈说：“地铁有自己的轨道，和汽车走的道路分开了。”",
+          "text_original": "Mom said, “A subway has its own tracks, separate from the roads used by cars.”",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-003.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 78,
+              "zh": 26
+            },
+            "text_sha256": {
+              "en": "2c9f41d217f7ce8276b868c0b23a5298e070cd2ead10b974453b9413211882e3",
+              "zh": "cf2404f8ff5bc5a0433940a17129d75f295b7d6863c473fd102867192d990c2a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 10,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 78,
+                  "zh": 26
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  23,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-subway/page-004.webp",
+          "image_alt": "母女坐在车厢座位上，安安扶着立杆，右侧窗外是延伸的隧道灯光。",
+          "text_zh": "车门关好，列车沿着轨道滑进黑亮的隧道。",
+          "text_original": "The doors closed, and the train glided along its rails into a shining tunnel.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-004.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-subway/page-005.webp",
+          "image_alt": "母女站在站台一侧，前方轨道和列车伸入长长的隧道。",
+          "text_zh": "地铁不用经过汽车的十字路口。专门的列车信号系统，会帮助它与前面的列车保持安全距离。",
+          "text_original": "A subway does not go through road intersections. A special railway signaling system helps it keep a safe distance from the train ahead.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-005.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-subway/page-006.webp",
+          "image_alt": "特写展示车轮和两条钢轨，母女从上方的车窗向外观察。",
+          "text_zh": "轨道像两条平行的路，车轮沿着它们保持方向。",
+          "text_original": "The rails are like two parallel roads, guiding the wheels in one direction.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-006.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-subway/page-007.webp",
+          "image_alt": "母女坐在列车窗边，窗外轨道沿平缓弯道伸向远处城市。",
+          "text_zh": "轨道沿着平缓的弯道伸向前方，车轮顺着钢轨转动，列车稳稳地前进。",
+          "text_original": "The tracks curve gently ahead. The wheels follow the steel rails, helping the train move steadily.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-007.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-subway/page-008.webp",
+          "image_alt": "安安和妈妈坐在车窗边，妈妈指向上方用彩色圆点表示的站点路线。",
+          "text_zh": "列车驶过一站又一站，屏幕上的颜色提示下一次停靠。",
+          "text_original": "The train passed one station after another, while simple colors on a screen hinted at the next stop.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-008.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-subway/page-009.webp",
+          "image_alt": "母女站在站台的黄色安全线后，旁边停着银色列车。",
+          "text_zh": "快到站时，列车慢下来，沿着站台停稳。等车的人站在安全线后，等车门打开。",
+          "text_original": "Near the station, the train slowed and stopped alongside the platform. People waited behind the safety line for the doors to open.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-009.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-subway/page-010.webp",
+          "image_alt": "安安在站台展示自己画的列车，妈妈蹲在旁边，右侧是停靠的地铁。",
+          "text_zh": "安安发现：快，不只是跑得快，还要准时、平稳、停得住。",
+          "text_original": "An'an discovered that being fast also means arriving on time, moving smoothly, and stopping safely.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-010.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-subway/page-011.webp",
+          "image_alt": "母女从地铁入口来到地面，后方道路上有排成一列的汽车。",
+          "text_zh": "她们走出地下站，城市的汽车在地面慢慢排成一队。",
+          "text_original": "They came back above ground, where city cars moved in a slow, patient line.",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-011.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-subway/page-012.webp",
+          "image_alt": "安安抱着书站在妈妈身边，指向右侧道路上的红色消防车。",
+          "text_zh": "安安抱紧新借的书，又问：“消防车为什么要鸣笛呢？”",
+          "text_original": "Holding her new book close, An'an asked, “Why do fire trucks sound their sirens?”",
+          "audio_zh": "/assets/books/sb-subway/audio/zh/b585f9e6c17fdb4d/page-012.mp3",
+          "audio_original": "/assets/books/sb-subway/audio/en/6d3491fcfcfe1849/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 81,
+              "zh": 25
+            },
+            "text_sha256": {
+              "en": "bb6b40316b02f97b3b528a77ac78668a005b71deb132c4d472ce471c895003d2",
+              "zh": "858a40a63d0cd0eb852ecf7937d82c992626b664d5659bc73508938ef388455f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 41,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 81,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  41,
+                  51
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sb-traffic-lights",
+      "title_zh": "红绿灯为什么会变色",
+      "title_original": "Why Do Traffic Lights Change Colors?",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "安安和妈妈沿路观察信号变化，了解不同方向为什么要轮流通行。",
+      "reading_value": "观察红黄绿，聊聊轮流与安全过街",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "cognition",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-traffic-lights/cover.webp",
+      "page_count": 12,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-17T04:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-aed68bf823641d7e3a9e772e622026c5f53d9b0f2b7ee93a63e119d11199081b",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom 城市交通系列（公开 AI 生成样本；来源未列个人作者/插画师）。本项目保留12页原图与双语叙事，校对交通知识及少量场景衔接，添加角色气泡与合成配音，首幅图兼作封面。仓库MIT声明明确针对应用代码，图文独立许可未确认，审核状态pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-17T12:26:15.572Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-17T12:25:51.199Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-traffic-lights/page-001.webp",
+          "image_alt": "母女站在路边，安安抬头指向右上方画出三种颜色的交通信号灯。",
+          "text_zh": "清晨，安安背着橙色小背包，和妈妈走到路口。红灯、黄灯、绿灯轮流亮起来，她好奇地问：“它们为什么会变色？”",
+          "text_original": "One morning, An'an and Mom reached an intersection. The red, yellow, and green lights took turns glowing. “Why do they change colors?” An'an wondered.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-001.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 150,
+              "zh": 52
+            },
+            "text_sha256": {
+              "en": "aff1b2631a3729519c6adc844acc22e1029511b0a00ce62cdd39c61311369fe8",
+              "zh": "e4cbaf16fafff42cb5c915181cea68309303bfb7deac6a11c50b05c245301114"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 106,
+                  "zh": 41
+                },
+                "end": {
+                  "en": 134,
+                  "zh": 52
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  38,
+                  55
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-traffic-lights/page-002.webp",
+          "image_alt": "妈妈蹲在安安身边，安安指向前方路口，远处有圆顶建筑。",
+          "text_zh": "妈妈指指前方：“我们去城市图书馆，沿路观察三次信号变化，找出答案。”安安点点头，开始她的颜色侦探任务。",
+          "text_original": "Mom pointed ahead. “We are going to the city library. Let’s watch three signal changes along the way and solve the mystery.” An'an began her color-detective mission.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-002.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 165,
+              "zh": 51
+            },
+            "text_sha256": {
+              "en": "0bb314e1e8edb70408af3c235faa3924452d9fd4982f7bae4e4063d9d6af1723",
+              "zh": "d8039c15849b149c29815af7778f41d7559e79456a25db14d2be6363723e7cac"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 19,
+                  "zh": 7
+                },
+                "end": {
+                  "en": 124,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  27,
+                  44
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-traffic-lights/page-003.webp",
+          "image_alt": "母女在斑马线前观察路口，一辆公交车、汽车和骑车人在前方。",
+          "text_zh": "第一盏红灯亮起，汽车、自行车和公交车都停在停止线后。安安发现，大家像排队等候的小火车。",
+          "text_original": "At the first crossing, the red light came on. Cars, bicycles, and a bus stopped behind the line. An'an thought they looked like little trains waiting in a row.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-003.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-traffic-lights/page-004.webp",
+          "image_alt": "俯视路口，母女站在左下角的人行道上，公交车、两辆汽车和自行车分布在道路上。",
+          "text_zh": "安安数了数：一辆公交车、两辆小汽车，还有一位骑车人。红灯让不同方向的人先等一等，路口就不会挤成一团。",
+          "text_original": "An'an counted one bus, two cars, and one cyclist. A red light lets one direction wait while another takes a turn, so the crossing does not become a tangled crowd.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-004.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-traffic-lights/page-005.webp",
+          "image_alt": "母女停在路缘旁，右侧行人信号显示绿色小人。",
+          "text_zh": "另一侧的行人信号变成绿色小人，安安等妈妈看清后才走。原来，车辆和行人也有各自的通行时间。",
+          "text_original": "The pedestrian signal on the other side changed to a green walking figure. An'an waited for Mom to check, then stepped forward. Vehicles and people each get their own time to move.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-005.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-traffic-lights/page-006.webp",
+          "image_alt": "妈妈牵着安安沿斑马线步行，两人转头观察道路。",
+          "text_zh": "绿灯亮了，妈妈牵着安安走斑马线；她们先看左边、右边，再留意转弯车辆，不在路口奔跑。",
+          "text_original": "When the light turned green, Mom held An'an's hand across the zebra crossing. They looked left and right and watched for turning vehicles instead of running.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-006.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-traffic-lights/page-007.webp",
+          "image_alt": "雨后的路口，母女站在人行道上观察黄色信号灯和前方汽车。",
+          "text_zh": "第二个路口，黄灯亮起。一辆还没进入路口的车在安全处减速停下。黄灯提醒大家准备停止，不是催人加速。",
+          "text_original": "At the second intersection, the yellow light came on. A car that had not entered the crossing slowed and stopped where it was safe. Yellow means prepare to stop, never hurry up.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-007.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-traffic-lights/page-008.webp",
+          "image_alt": "母女站在信号灯杆旁，右侧小画面用车辆、波纹和不同颜色灯示意感应和切换。",
+          "text_zh": "安安抬头看信号灯箱。妈妈说，信号控制器按设定的时序切换；有些路口还会用传感器观察车流，调整等待时间。",
+          "text_original": "An'an looked up at the signal cabinet. Mom explained that a controller switches the lights in a planned order. Some intersections use sensors to notice traffic and adjust waiting time.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-008.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-traffic-lights/page-009.webp",
+          "image_alt": "俯视路口，一辆汽车沿绿色左转指示路线行驶，母女在左下角观察。",
+          "text_zh": "第三个路口出现绿色左转箭头，直行车辆仍在等待。安安猜对了：箭头只给指向的车流一个专用通行时段。",
+          "text_original": "At the third crossing, a green left-turn arrow appeared while straight-ahead cars still waited. An'an guessed correctly: an arrow gives only the pointed direction its own time to move.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-009.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-traffic-lights/page-010.webp",
+          "image_alt": "安安拿着画有红黄绿圆点的小本子，妈妈蹲在她身边，背景有不同信号灯。",
+          "text_zh": "她们玩起“颜色侦探”：找出红、黄、绿三种灯，猜下一次谁先走。安安发现，灯变色不是心情变化，而是在轮流发口令。",
+          "text_original": "They played “color detective”: find red, yellow, and green, then guess who will move next. An'an discovered that the lights do not change moods—they give turns in an orderly way.",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-010.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-traffic-lights/page-011.webp",
+          "image_alt": "安安举着本子向蹲着的妈妈讲述发现，身后是路口和车辆。",
+          "text_zh": "到图书馆附近，安安总结：“红灯停，黄灯准备停下，绿灯在确认安全后走；每个方向轮流，城市才顺畅。”",
+          "text_original": "Near the library, An'an summed it up: “Red means stop, yellow means prepare to stop, and green means go after checking that it is safe. Taking turns keeps the city moving.”",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-011.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 172,
+              "zh": 48
+            },
+            "text_sha256": {
+              "en": "d7a16ad0201dde51f1a45a4dbdbf7b3010a53908c0a335bc99394eb315e40367",
+              "zh": "e52009ba704d345ccd3eb973ebe7f45899cff95aa0067bac618099cd8607d429"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 38,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 172,
+                  "zh": 48
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  40,
+                  48
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-traffic-lights/page-012.webp",
+          "image_alt": "母女站在路边，安安指向右侧的公交车，手里拿着小本子。",
+          "text_zh": "安安把观察画进小本子，又问：“那公交车沿着路线，怎么知道下一站呢？”妈妈笑了：“下次坐一程就知道啦！”",
+          "text_original": "An'an drew the observations in her little notebook, then asked, “How does a bus know which stop comes next?” Mom smiled. “Let’s ride one and find out!”",
+          "audio_zh": "/assets/books/sb-traffic-lights/audio/zh/3e081d3379f7237a/page-012.mp3",
+          "audio_original": "/assets/books/sb-traffic-lights/audio/en/80cb8bccad53e1fc/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 151,
+              "zh": 51
+            },
+            "text_sha256": {
+              "en": "b1c047148d2a6a7197ba2cde82d47e918381a85540b930ff94b234303613364f",
+              "zh": "acd98c21f96b279a7e740b017b469daca8b9a128940de20b1b5c2c8d55ae7d54"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 64,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 108,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  53,
+                  51
+                ]
+              },
+              {
+                "start": {
+                  "en": 121,
+                  "zh": 39
+                },
+                "end": {
+                  "en": 151,
+                  "zh": 51
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  33,
+                  29
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

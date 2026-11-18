@@ -5,8 +5,8 @@ Page({
  data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, night: false, fullscreen: false, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
  onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['showText', 'night', 'auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
  onShow() { this.hidden = false; },
- onHide() { this.hidden = true; this.destroyAudio(); },
- onUnload() { this.dead = true; this.serial++; this.destroyAudio(); },
+ onHide() { this.hidden = true; this.destroyAudio(true); },
+ onUnload() { this.dead = true; this.serial++; this.destroyAudio(true); },
  onResize() { this.frame(); },
  async load() {
   this.setData({ error: '' });
@@ -42,6 +42,7 @@ Page({
  show(index, autoplay) {
   if (!this.pages || index < 0 || index >= this.pages.length) return;
   this.serial++; this.destroyAudio(); this.imageRatio = null;
+  if (!autoplay) this.restorePlaybackView();
   this.visited.add(index);
   this.setData({ index, page: this.pages[index], imageError: false, imageReady: false, audioError: '', completed: false });
   this.renderText(); this.artwork();
@@ -96,21 +97,35 @@ Page({
   const length = Math.hypot(tx - x, ty - y), angle = Math.atan2(ty - y, tx - x) * 180 / Math.PI;
   return 'left:' + x + 'px;top:' + y + 'px;width:' + length + 'px;transform:rotate(' + angle + 'deg);';
  },
- destroyAudio() { if (this.audio) { const old = this.audio; this.audio = null; old.stop(); old.destroy(); } this.setData({ playing: false }); },
+ startPlaybackView() {
+  if (this.data.fullscreen || this.playbackViewDismissed) return;
+  const info = wx.getWindowInfo ? wx.getWindowInfo() : wx.getSystemInfoSync();
+  if (Math.min(info.windowWidth, info.windowHeight) > 600) return;
+  this.autoExpanded = true;
+  this.setData({ fullscreen: true }, () => this.frame());
+ },
+ restorePlaybackView() {
+  const restore = this.autoExpanded;
+  this.autoExpanded = false; this.playbackViewDismissed = false;
+  if (restore) this.setData({ fullscreen: false }, () => this.frame());
+ },
+ destroyAudio(restoreView = false) { if (this.audio) { const old = this.audio; this.audio = null; old.stop(); old.destroy(); } this.setData({ playing: false }); if (restoreView) this.restorePlaybackView(); },
  play() {
   if (!this.data.page || this.hidden || this.dead) return;
   if (this.data.playing) { this.audio.pause(); this.setData({ playing: false }); return; }
   if (this.audio) { this.audio.play(); return; }
   const source = this.data.language === 'zh' ? this.data.page.audio_zh : this.data.page.audio_original;
-  if (!source) { this.setData({ audioError: '本页暂时没有这一语言的配音，可以先读文字。' }); return; }
+  if (!source) { this.restorePlaybackView(); this.setData({ audioError: '本页暂时没有这一语言的配音，可以先读文字。' }); return; }
   this.setData({ audioError: '' });
   const audio = wx.createInnerAudioContext(); this.audio = audio; audio.obeyMuteSwitch = false; audio.playbackRate = this.data.rate;
   const current = () => this.audio === audio && !this.hidden && !this.dead;
-  audio.onPlay(() => { if (current()) this.setData({ playing: true }); });
+  audio.onPlay(() => { if (current()) { this.setData({ playing: true }); this.startPlaybackView(); } });
   audio.onPause(() => { if (current()) this.setData({ playing: false }); });
-  audio.onError(() => { if (current()) { this.destroyAudio(); this.setData({ audioError: '配音加载失败，点播放重试。' }); } });
+  audio.onError(() => { if (current()) { this.destroyAudio(true); this.setData({ audioError: '配音加载失败，点播放重试。' }); } });
   audio.onEnded(() => {
-   if (!current()) return; this.destroyAudio();
+   if (!current()) return;
+   const continuing = this.data.auto && this.data.index < this.data.total - 1;
+   this.destroyAudio(!continuing);
    if (this.data.index === this.data.total - 1) { if (this.visited.size === this.data.total) this.finish(); }
    else if (this.data.auto) this.show(this.data.index + 1, true);
   });
@@ -125,9 +140,9 @@ Page({
  auto() { this.setData({ auto: !this.data.auto }); this.settings(); },
  rate(e) { const rate = [.75, 1, 1.25][Number(e.detail.value)]; this.setData({ rate }); this.settings(); if (this.audio) this.audio.playbackRate = rate; },
  night() { this.setData({ night: !this.data.night }); this.settings(); },
- fullscreen() { this.setData({ fullscreen: !this.data.fullscreen }, () => this.frame()); },
+ fullscreen() { this.autoExpanded = false; this.playbackViewDismissed = Boolean(this.audio); this.setData({ fullscreen: !this.data.fullscreen }, () => this.frame()); },
  finish() {
-  this.destroyAudio();
+  this.destroyAudio(true);
   if (this.visited.size < this.data.total) { wx.showToast({ title: '还有页面没读，先一起读完吧', icon: 'none' }); return; }
   if (!this.finished) { this.finished = true; state.event(this.id, 'complete', this.readingID); }
   this.setData({ completed: true });

@@ -8,3 +8,9 @@ type RecommendationCandidate struct {
 	AgeMatch  bool
 	Completed bool
 }
+
+// RecommendationRecord is the last batch for one account, never a guest record.
+type RecommendationRecord struct {
+	BookIDs []string
+	Date    string
+}

@@ -15,7 +15,7 @@ def identifiers(value):
 
 class SchemaTests(unittest.TestCase):
     def test_every_table_has_generated_primary_key_and_business_uniqueness(self):
-        self.assertEqual(set(TABLES), {'books', 'book_licenses', 'age_ranges', 'categories', 'languages', 'book_age_ranges', 'book_categories', 'book_languages', 'book_pages', 'book_voices', 'reader_users', 'reader_sessions', 'reader_favorites', 'reader_events'})
+        self.assertEqual(set(TABLES), {'books', 'book_licenses', 'age_ranges', 'categories', 'languages', 'book_age_ranges', 'book_categories', 'book_languages', 'book_pages', 'book_voices', 'reader_users', 'reader_sessions', 'reader_favorites', 'reader_events', 'reader_recommendations'})
         for name, body in TABLES.items():
             with self.subTest(table=name):
                 fields = columns(body)
@@ -41,7 +41,7 @@ class SchemaTests(unittest.TestCase):
         self.assertIn('name', users)
         self.assertIn("DEFAULT ''", users['age'])
         self.assertRegex(SQL, r"AUTO_INCREMENT=10000")
-        for name in ('reader_users', 'reader_sessions', 'reader_favorites', 'reader_events'):
+        for name in ('reader_users', 'reader_sessions', 'reader_favorites', 'reader_events', 'reader_recommendations'):
             self.assertIn('int unsigned NOT NULL', columns(TABLES[name])['user_id'])
         self.assertNotIn('visitor_id', columns(TABLES['reader_events']))
         self.assertNotIn('reader_progress', TABLES)

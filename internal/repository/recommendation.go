@@ -2,12 +2,77 @@ package repository
 
 import (
 	"context"
+	"database/sql"
+	"encoding/json"
+	"errors"
+	"time"
 
 	"pic/internal/model"
 )
 
 type RecommendationStore interface {
 	RecommendationCandidates(context.Context, string, string, bool) ([]model.RecommendationCandidate, error)
+}
+
+type RecommendationHistoryStore interface {
+	RecommendationHistory(context.Context, string) (model.RecommendationRecord, error)
+	SaveRecommendation(context.Context, string, model.RecommendationRecord) (model.RecommendationRecord, error)
+}
+
+func readRecommendation(ctx context.Context, db contentReader, user string) (model.RecommendationRecord, error) {
+	var raw []byte
+	var date time.Time
+	err := db.QueryRowContext(ctx, `SELECT book_ids,recommended_date FROM reader_recommendations WHERE user_id=?`, user).Scan(&raw, &date)
+	if errors.Is(err, sql.ErrNoRows) {
+		return model.RecommendationRecord{}, nil
+	}
+	if err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	var record model.RecommendationRecord
+	if err = json.Unmarshal(raw, &record.BookIDs); err != nil {
+		return record, err
+	}
+	record.Date = date.Format("2006-01-02")
+	return record, nil
+}
+
+func (r *MySQL) RecommendationHistory(ctx context.Context, user string) (model.RecommendationRecord, error) {
+	return readRecommendation(ctx, r.db, user)
+}
+
+// SaveRecommendation lets the first successful request win the day. Generation
+// and card loading happen beforehand, without holding a connection or row lock.
+func (r *MySQL) SaveRecommendation(ctx context.Context, user string, next model.RecommendationRecord) (model.RecommendationRecord, error) {
+	tx, err := r.db.BeginTx(ctx, nil)
+	if err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	defer tx.Rollback()
+	var locked string
+	if err = tx.QueryRowContext(ctx, `SELECT user_id FROM reader_users WHERE user_id=? FOR UPDATE`, user).Scan(&locked); err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	current, err := readRecommendation(ctx, tx, user)
+	if err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	// Also prevents a request spanning midnight from replacing a newer batch.
+	if current.Date >= next.Date {
+		return current, nil
+	}
+	raw, err := json.Marshal(next.BookIDs)
+	if err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	_, err = tx.ExecContext(ctx, `INSERT INTO reader_recommendations (user_id,book_ids,recommended_date) VALUES (?,?,?) ON DUPLICATE KEY UPDATE book_ids=VALUES(book_ids),recommended_date=VALUES(recommended_date)`, user, string(raw), next.Date)
+	if err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	if err = tx.Commit(); err != nil {
+		return model.RecommendationRecord{}, err
+	}
+	return next, nil
 }
 
 func (r *MySQL) RecommendationCandidates(ctx context.Context, user, age string, statistics bool) ([]model.RecommendationCandidate, error) {

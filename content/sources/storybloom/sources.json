@@ -1,0 +1,654 @@
+{
+  "sb-bus-next-stop": {
+    "title": "公交车怎么知道下一站",
+    "source_file": "gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan.json",
+    "source_git_blob_sha": "22777cc06186f17392c25b78ec08add7e680ca7f",
+    "source_sha256": "145b4d8ce4e94d57a7e30ce078b7e71afbc5f4e700a2f01be5994e36aba4fa97",
+    "downloaded_on": "2026-11-17",
+    "originals_directory": "docs/materials-review/storybloom-20261117/originals/sb-bus-next-stop",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/1.webp",
+        "git_blob_sha": "460e5694765a2db562e912cc04317ffc51cddb6b",
+        "sha256": "9bf7fd3623a14a2932a5ab3b8d0e8681ebe01c267a9be836d278b8f03b912c92",
+        "bytes": 153370,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/2.webp",
+        "git_blob_sha": "b8dcc301f9bfb37e309db6f0fcd85c85d048ea0e",
+        "sha256": "3f0d45c7bc1a3cf80e124ff8f0a0cc102b6300590a47134573c83fa37fe0b397",
+        "bytes": 176108,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/3.webp",
+        "git_blob_sha": "cedf840da915fd9cdce24426d8f7026dc73af4e7",
+        "sha256": "64eb260cba21c00fdfe3793dab6d4bb68db3e9037727285ae104d96dba060f3b",
+        "bytes": 181746,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/4.webp",
+        "git_blob_sha": "56b633f22f0dc39b7c20f754a954ff79d04c46c5",
+        "sha256": "91237bfe437a0217d52f0a2934be51a1dd7dfe1dac6ec52fdb3295ac37c78b6d",
+        "bytes": 150684,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/5.webp",
+        "git_blob_sha": "99a9999a1f8990b0aa849637c93d6f1d4b0859e9",
+        "sha256": "43766cce42db86206169c9116425b2dc6e12cac2ee978c5912690df6ec21b41b",
+        "bytes": 163838,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/6.webp",
+        "git_blob_sha": "460a2974849b548c05c26a9321f5d0bd5ecf3491",
+        "sha256": "831933a510b89fb780536e37f5167989d9a7a56bc61086866649531310d75ee8",
+        "bytes": 148614,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/7.webp",
+        "git_blob_sha": "7e9021055ed5635e1170a9c6a272cf61ebd68084",
+        "sha256": "573e38ee0b53b8f14b94a5acca4d623cb6f2c3ddbb0786b6ea3b8a0d88770497",
+        "bytes": 158950,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/8.webp",
+        "git_blob_sha": "510b49aba3fb7d66fb5f71ef4007e5f8e001a56f",
+        "sha256": "1f7628073e88d98c51eb12fa41c8de0b297a09f4f0cc84bc836d072186fd1a30",
+        "bytes": 180958,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/9.webp",
+        "git_blob_sha": "e2b581f9f022d77892c6a248a85ced9996856fce",
+        "sha256": "8c90bef392bbc46d5c421ef7493df85f3c52a3cb01d868ff7db675253f85acad",
+        "bytes": 150560,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/10.webp",
+        "git_blob_sha": "ba05362f4323db8face7860ed21dec687dc83a22",
+        "sha256": "3fe44ef69dc07809972d7d0c7edb02dff4540391f939c2bdf3a1ee7ab6fbccbd",
+        "bytes": 146288,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/11.webp",
+        "git_blob_sha": "f164db306461cb5d3bbbe52e894f3633d6c3ffe6",
+        "sha256": "5f28f385dab3a026349e7835b2fc0a2aa9247300c8fbe9aec7dc2d50a7331e03",
+        "bytes": 181910,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/gong-jiao-che-zen-me-zhi-dao-xia-yi-zhan/12.webp",
+        "git_blob_sha": "a03e8d45f5f52b094874ceb0e56d2878fc9365fc",
+        "sha256": "045e91a8ae49e43f62858af039751c99f7938c2dbde0e103a892d7a1f10275bc",
+        "bytes": 169496,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ]
+  },
+  "sb-traffic-lights": {
+    "title": "红绿灯为什么会变色",
+    "source_file": "hong-lu-deng-wei-shen-me-hui-bian-se.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qiche/hong-lu-deng-wei-shen-me-hui-bian-se.json",
+    "source_git_blob_sha": "b100994217b02bcec1ff21af19d0c7bb4938a6ce",
+    "source_sha256": "4410757bf4a69d877625135ff8196fac982a3a2fbf69ea49d5c58d9587d159f3",
+    "downloaded_on": "2026-11-17",
+    "originals_directory": "docs/materials-review/storybloom-20261117/originals/sb-traffic-lights",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/1.webp",
+        "git_blob_sha": "9616216b82f7c55c8ebf2865ed2fc7ff2c04a70f",
+        "sha256": "88a5ef9a4efd1dcf20cf65d024602e86f7002dce79b65f1977527d0c951e3c35",
+        "bytes": 152052,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/2.webp",
+        "git_blob_sha": "6d8e700745d7e8640fca0e76b2f942d4aa6c6091",
+        "sha256": "f35c163459e506a420c16cf043fb4ee90dcc22dcfe65e29de38cc80af7d0c79e",
+        "bytes": 164198,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/3.webp",
+        "git_blob_sha": "6a1e13fa464f16344ab90425c0bbd9ebc5c25a72",
+        "sha256": "dd66f77b1100e6501b1500d84b87dd66b56ed89b11af489317aebf832d759f4c",
+        "bytes": 198480,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/4.webp",
+        "git_blob_sha": "af998ea6d02d574256263a18b253cdd4a5998f71",
+        "sha256": "f175de6b4ffb408016976668b102e70c9b6f1e1bfdefd4d3c803e2bd9afc9bcc",
+        "bytes": 282636,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/5.webp",
+        "git_blob_sha": "18f996fdeaa93d68aac89bf29d964b8a54064132",
+        "sha256": "168cb76dd5345263ce4b36bcb7a54bf32af3073ba6c6e4cecd63904d823c52f2",
+        "bytes": 167182,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/6.webp",
+        "git_blob_sha": "ea558a6464afa070ad43659fa06f0f51635d6732",
+        "sha256": "4c112c36950f19a85d2f913bb4947fed483f2697e6f74b9dfc357ce33c01a3a1",
+        "bytes": 216236,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/7.webp",
+        "git_blob_sha": "82374617753f4c9cf7ec0711b8b88ae40a467258",
+        "sha256": "9b743ca4175a6b8ffaf77da3bcfb29d366d0aa86f13f17b631c34694fd9f5c3c",
+        "bytes": 220204,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/8.webp",
+        "git_blob_sha": "e75999bc91dd53c7240e2f86be958a4462653bed",
+        "sha256": "00850b80dff43559dad219bcc9f8230fd45d1705555f82c4016e025febd092c5",
+        "bytes": 146950,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/9.webp",
+        "git_blob_sha": "fe37b7e18f8c7c85bbd092f7d1dc006482fc54ab",
+        "sha256": "71d1016878899034261cec2013f69ec9f4daa7c61c4eae78f839b3df71a75b1e",
+        "bytes": 271384,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/10.webp",
+        "git_blob_sha": "100ca12683bddff395ea152672d2ef12a5982df7",
+        "sha256": "3388e76c3bbd7342a86b864ad38853199885b8f4da1e3e20c2a37c3e3412333f",
+        "bytes": 185844,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/11.webp",
+        "git_blob_sha": "3afb38e2d995bcdb70d5439b215820118cf843e0",
+        "sha256": "62c1edec01be30c62879bcc3cdfe32788a7d4f981308ad0c269a9d2726f6b633",
+        "bytes": 179978,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/hong-lu-deng-wei-shen-me-hui-bian-se/12.webp",
+        "git_blob_sha": "0d01a70859159f52532fe5e07de826b98c17219b",
+        "sha256": "734aa09055db0b408d122fefd591dcdc3d59f0ed4fb88b063923f17dd002d281",
+        "bytes": 219862,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ]
+  },
+  "sb-subway": {
+    "title": "地铁为什么跑得快",
+    "source_file": "di-tie-wei-shen-me-pao-de-kuai.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qiche/di-tie-wei-shen-me-pao-de-kuai.json",
+    "source_git_blob_sha": "3d021d8c662996ec51d55ae33a7b84308c5847d7",
+    "source_sha256": "7951938f26e5d6c2824775aaa3532ac44c1e961fa0a2f73f812a58e07f3fa784",
+    "downloaded_on": "2026-11-17",
+    "originals_directory": "docs/materials-review/storybloom-20261117/originals/sb-subway",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/1.webp",
+        "git_blob_sha": "1cdfca662b574687472b5868631c4ad68ef17d8e",
+        "sha256": "93140853a3e5acc46e9029a509aad01077a3550f24881e29a81076384a42db9e",
+        "bytes": 180948,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/2.webp",
+        "git_blob_sha": "5c579c1153c41204e79f574dfef89bf9bbe4b4d3",
+        "sha256": "981e487815d20ba4847657856a035c58690d5d7bac992259983f08b668241b1c",
+        "bytes": 147904,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/3.webp",
+        "git_blob_sha": "30f91ec5629819bc45b189571ba903bf612c5ae7",
+        "sha256": "e7b36bf977624843bd4e49228285616333d5324ea00b122eabb4ef37f9f6b8c1",
+        "bytes": 181880,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/4.webp",
+        "git_blob_sha": "bf91cd417908de94622b9790303723efa4d497b4",
+        "sha256": "15ad7bb29bf17c1cbcc670f18c6c401a6de78b1e7a8f097f49331b4e345a80ca",
+        "bytes": 139468,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/5.webp",
+        "git_blob_sha": "a031be5e94ad4ebc7c9fab4838d2eae152afe819",
+        "sha256": "9297e10d5538fd4e17a95013176ce86ff865ff3f47d00fbbf17749fa960b8ac9",
+        "bytes": 134114,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/6.webp",
+        "git_blob_sha": "b4bb716dae3cff673477f6a4c33dc7250e9939fc",
+        "sha256": "93d0e80a0f7ccc83bf1ae5c77f670616788c40630045a5e2a9604ee8743c187e",
+        "bytes": 142830,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/7.webp",
+        "git_blob_sha": "3d00d1ead6594e5d61aec8c11701ec46d81fcf18",
+        "sha256": "253265d02956910d16eb82fe8d6f45a6284ec3331c857861595364756fa9f202",
+        "bytes": 154866,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/8.webp",
+        "git_blob_sha": "7cafc3eab41b85a831b5490ff1b1a7bd1383784d",
+        "sha256": "974caa6879fc50d830bb16e775a6025dd2d3c3fcba5231bbd6153daec90fdef9",
+        "bytes": 135278,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/9.webp",
+        "git_blob_sha": "ba05b2d5bdddc0616f71778cd236f9b37fc85363",
+        "sha256": "2d4c385abc13269ec37ffe90ee62c493d4f7c27c390122a2b14f7ea458d210cf",
+        "bytes": 155242,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/10.webp",
+        "git_blob_sha": "93fd259dff86d03f5157a8259bfad2d5167bc987",
+        "sha256": "c5cce657b5479393e29b46fcdf629566addea643386414431b847d44bb6b4b3d",
+        "bytes": 170802,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/11.webp",
+        "git_blob_sha": "f1627ec6af12e1f82bf1e34cf707bce2da9031d3",
+        "sha256": "d9ee3938f06b9146b54cd23c09e0f792f4a55af3060430972175b3d1a416fc87",
+        "bytes": 193412,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/di-tie-wei-shen-me-pao-de-kuai/12.webp",
+        "git_blob_sha": "df7af2b39cc54630cae8edf3aeeb8d844bafcc22",
+        "sha256": "265df0c843b36cbbb8d91adc81481af87fe454b3c8dd00c84fb7d33c0bff8153",
+        "bytes": 165884,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ]
+  },
+  "sb-fire-engine": {
+    "title": "消防车为什么要鸣笛",
+    "source_file": "xiao-fang-che-wei-shen-me-yao-ming-di.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qiche/xiao-fang-che-wei-shen-me-yao-ming-di.json",
+    "source_git_blob_sha": "291b9d6eabfdfb814b1fddab67275dbfba7e5dd3",
+    "source_sha256": "fe4eab0f0c1e63ddd842d37dcfd5b238ee8f7d6988875fa84f15ac75b881c93c",
+    "downloaded_on": "2026-11-17",
+    "originals_directory": "docs/materials-review/storybloom-20261117/originals/sb-fire-engine",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/1.webp",
+        "git_blob_sha": "9b1fc41caf45c56ab7619fc06d7ccbc7b319e2e6",
+        "sha256": "ab69897655ec9899db5dc7616c6fc9b89a78e3a4bfa1284e3c8a714933ff608c",
+        "bytes": 210796,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/2.webp",
+        "git_blob_sha": "5fc537436f2d70db41558347bc7f6e188a54d694",
+        "sha256": "78f70ef8effefc7bcc90188cbccae430ec7e371d170f28ad18164328c16c0fc8",
+        "bytes": 215668,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/3.webp",
+        "git_blob_sha": "37c2341584dd866ef12e78bede7fc9a0f202b5d6",
+        "sha256": "b2b7a4a7f4a650011b126f85f60b76c7b4f36c67ccc5b9d240185593894ba3b4",
+        "bytes": 197012,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/4.webp",
+        "git_blob_sha": "cd1b5b394be5cd2e5abe2345f9f5b51b769a17b1",
+        "sha256": "73d558e07337dfa3a5fc4472b62bd673d59544091fef529add86ff5ea3c146dc",
+        "bytes": 220914,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/5.webp",
+        "git_blob_sha": "cb7ae12f7871df2275624219e7c873111522b572",
+        "sha256": "a3618567bf9a3fcb50689a3d72529a3a3571f68fa694ffbf452be83d2e7077fe",
+        "bytes": 271740,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/6.webp",
+        "git_blob_sha": "a845274a4ae8aa111d234e04617b53ee3b1add9d",
+        "sha256": "3a0f4466042031e8fd5cb12ac011aa2a4aaf7d369f6de0658298a6a9fe62dc49",
+        "bytes": 176462,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/7.webp",
+        "git_blob_sha": "04bfc5524f2a0dcbc10002f394ea1b711acd24f5",
+        "sha256": "ddf6844ecb618e07064574e4bdf50149a01427732e361957524114ae4143c91c",
+        "bytes": 186882,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/8.webp",
+        "git_blob_sha": "b4bde5e089f465f137674cc718782d0a46bf267b",
+        "sha256": "3aaebe14e2c9cb500cc143e6a44fe2b167371887f2b25bbc9ed718fdffb2a173",
+        "bytes": 234246,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/9.webp",
+        "git_blob_sha": "d540554e079caf37425164eef191270064badd1a",
+        "sha256": "b19f82c4997754d31fc4b1b590798240b9f3dcd2153bfd7be8b260edb6df593f",
+        "bytes": 145858,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/10.webp",
+        "git_blob_sha": "23dd6e7a8d90b00c15600c4218410f85a55d6251",
+        "sha256": "a15d3d93b2acc542c3e72059be9b1e9b43afa3e98ce1289225ec12fd994a4304",
+        "bytes": 234478,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/11.webp",
+        "git_blob_sha": "ceaecca2dbc3d23ffcc9f52b1b57a13574265251",
+        "sha256": "77329caaf643de34b4556cc0356872a5fa1adbced4ac467682897ff16118c56c",
+        "bytes": 224280,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/qiche/xiao-fang-che-wei-shen-me-yao-ming-di/12.webp",
+        "git_blob_sha": "2063a317e1855586c04a7c948dba99a3b18f08e1",
+        "sha256": "cee1952f4e791b70396227225f080284d0b4f7b89b1510fa7510d59a3e98c2b9",
+        "bytes": 183296,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ]
+  }
+}

@@ -18,6 +18,7 @@ class MaterialTests(unittest.TestCase):
     def setUpClass(cls):
         cls.sources = json.loads((ROOT/'content/sources/bookdash/sources.json').read_text())
         cls.original_sources = json.loads((ROOT/'content/sources/bookdash-originals/sources.json').read_text())
+        cls.storybloom_sources = json.loads((ROOT/'content/sources/storybloom/sources.json').read_text())
         cls.books = {b['id']: b for b in json.loads((ROOT/'tests/fixtures/library.json').read_text())['books']}
         cls.boards = json.loads((ROOT/'config/illustrations.json').read_text())
 
@@ -43,10 +44,10 @@ class MaterialTests(unittest.TestCase):
 
     def test_replacement_contains_only_new_books_and_legacy_files_are_absent(self):
         published = [b for b in self.books.values() if b['publish_status'] == 'published']
-        expected = set(self.sources) | set(self.original_sources)
+        expected = set(self.sources) | set(self.original_sources) | set(self.storybloom_sources)
         self.assertEqual({b['id'] for b in published}, expected)
         self.assertEqual(len(published), len(expected))
-        self.assertEqual(sum(b['page_count'] for b in published), sum(s['story_spreads'] for s in self.sources.values()) + sum(len(s['images']) - 1 for s in self.original_sources.values()))
+        self.assertEqual(sum(b['page_count'] for b in published), sum(s['story_spreads'] for s in self.sources.values()) + sum(len(s['images']) - 1 for s in self.original_sources.values()) + sum(len(s['images']) for s in self.storybloom_sources.values()))
         self.assertEqual({age for b in published for age in b['age_ranges']}, {'0-2', '3-4', '5-6'})
         self.assertEqual(set(self.books), expected)
         for p in (ROOT/'tests/fixtures/books').glob('*.json'):
@@ -71,6 +72,24 @@ class MaterialTests(unittest.TestCase):
                 self.assertTrue(value.strip())
                 self.assertLessEqual(len(value), 80)
                 self.assertNotRegex(value, r'[\r\n]')
+
+    def test_storybloom_complete_sources_and_honest_attribution(self):
+        for bid, evidence in self.storybloom_sources.items():
+            with self.subTest(book=bid):
+                raw = (ROOT/'content/sources/storybloom'/evidence['source_file']).read_bytes()
+                self.assertEqual(hashlib.sha256(raw).hexdigest(), evidence['source_sha256'])
+                source = json.loads(raw)['book']
+                book = self.books[bid]
+                self.assertEqual(len(book['pages']), len(source['pages']))
+                self.assertEqual([p['page_number'] for p in evidence['images']], list(range(1, len(book['pages']) + 1)))
+                self.assertEqual(len({p['sha256'] for p in evidence['images']}), len(book['pages']))
+                self.assertTrue(all(p['text_zh'] and p['text_original'] and p['image_alt'] for p in book['pages']))
+                self.assertEqual(book['license']['source_url'], evidence['source_url'])
+                self.assertEqual(book['license']['review_status'], 'pending')
+                self.assertFalse(book['license']['self_hosting'])
+                self.assertIn('AI', book['illustrator'])
+                self.assertIn('应用代码', book['license']['attribution'])
+                self.assertTrue(set(book['categories']).issubset({'cognition', 'habits'}))
 
     def test_original_editions_preserve_reviewed_text_page_order_and_credits(self):
         for bid, evidence in self.original_sources.items():

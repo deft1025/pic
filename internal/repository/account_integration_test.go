@@ -6,6 +6,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"reflect"
 	"strings"
 	"sync"
 	"testing"
@@ -27,7 +28,7 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
 	dbc := cfg.Database
 	dbc.Name = ""
@@ -93,6 +94,7 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	if _, err = repo.Authenticate(ctx, strings.Repeat("c", 64), time.Now().UTC()); !errors.Is(err, sql.ErrNoRows) {
 		t.Fatal("expired token accepted")
 	}
+	testRecommendationHistory(t, ctx, repo, db, a.ID, other.ID)
 	var wg sync.WaitGroup
 	errs := make(chan error, 12)
 	for i := 0; i < 12; i++ {
@@ -327,5 +329,86 @@ func TestAccountMySQLIntegration(t *testing.T) {
 	}
 	if _, err = db.ExecContext(ctx, `INSERT INTO reader_events(event_id,user_id,book_id,event_kind,reading_id) VALUES(?,?,'mixed','open',?)`, strings.Repeat("8", 32), a.ID, strings.Repeat("9", 32)); err == nil {
 		t.Fatal("migration did not enforce account/book uniqueness")
+	}
+}
+
+func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, db *sql.DB, user, other string) {
+	t.Helper()
+	empty, err := repo.RecommendationHistory(ctx, user)
+	if err != nil || empty.Date != "" {
+		t.Fatal("new account has recommendation history", err)
+	}
+	first := model.RecommendationRecord{Date: "2026-11-10", BookIDs: []string{"a", "b", "c", "d"}}
+	saved, err := repo.SaveRecommendation(ctx, user, first)
+	if err != nil || !reflect.DeepEqual(saved, first) {
+		t.Fatal("first batch not saved", err, saved)
+	}
+	if _, err = db.ExecContext(ctx, `UPDATE reader_recommendations SET updated_at='2020-01-01' WHERE user_id=?`, user); err != nil {
+		t.Fatal(err)
+	}
+	var originalID uint64
+	var originalCreated time.Time
+	if err = db.QueryRowContext(ctx, `SELECT id,created_at FROM reader_recommendations WHERE user_id=?`, user).Scan(&originalID, &originalCreated); err != nil {
+		t.Fatal(err)
+	}
+	saved, err = repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: first.Date, BookIDs: []string{"should-not-replace"}})
+	if err != nil || !reflect.DeepEqual(saved, first) {
+		t.Fatal("same day replaced batch", err)
+	}
+	var updated time.Time
+	if err = db.QueryRowContext(ctx, `SELECT updated_at FROM reader_recommendations WHERE user_id=?`, user).Scan(&updated); err != nil || updated.Year() != 2020 {
+		t.Fatal("same day changed timestamp", err)
+	}
+	next := model.RecommendationRecord{Date: "2026-11-17", BookIDs: []string{"e", "f", "g", "h"}}
+	saved, err = repo.SaveRecommendation(ctx, user, next)
+	if err != nil || !reflect.DeepEqual(saved, next) {
+		t.Fatal("return after multiple days did not replace batch", err)
+	}
+	var count int
+	var id uint64
+	var created time.Time
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*),MIN(id),MIN(created_at) FROM reader_recommendations WHERE user_id=?`, user).Scan(&count, &id, &created); err != nil || count != 1 || id != originalID || !created.Equal(originalCreated) {
+		t.Fatal("batch update inserted a history row", err)
+	}
+	// Concurrent first requests on a new date must all return the same winner.
+	results := make(chan model.RecommendationRecord, 8)
+	failures := make(chan error, 8)
+	var wg sync.WaitGroup
+	for i := 0; i < 8; i++ {
+		wg.Add(1)
+		go func(i int) {
+			defer wg.Done()
+			record, e := repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: "2026-11-18", BookIDs: []string{fmt.Sprintf("candidate-%d", i)}})
+			results <- record
+			failures <- e
+		}(i)
+	}
+	wg.Wait()
+	close(results)
+	close(failures)
+	for e := range failures {
+		if e != nil {
+			t.Fatal(e)
+		}
+	}
+	winner, err := repo.RecommendationHistory(ctx, user)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for result := range results {
+		if !reflect.DeepEqual(result, winner) {
+			t.Fatal("concurrent requests got different batches")
+		}
+	}
+	saved, err = repo.SaveRecommendation(ctx, user, next)
+	if err != nil || !reflect.DeepEqual(saved, winner) {
+		t.Fatal("late old-date request replaced newer record", err)
+	}
+	otherRecord, err := repo.RecommendationHistory(ctx, other)
+	if err != nil || otherRecord.Date != "" {
+		t.Fatal("cross-account recommendation leak", err)
+	}
+	if err = db.QueryRowContext(ctx, `SELECT COUNT(*) FROM reader_recommendations`).Scan(&count); err != nil || count != 1 {
+		t.Fatal("recommendation table accumulated history", err, count)
 	}
 }

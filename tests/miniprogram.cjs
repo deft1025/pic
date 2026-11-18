@@ -121,6 +121,26 @@ test('manual page skipping does not count a completion; all pages plus finish co
  p.show(1, false); p.show(2, false); p.finish(); p.finish(); await tick(); assert.equal(c.requests.filter(r => r.url.endsWith('/events')).length, 1);
  p.again(); assert.equal(p.data.index, 0); assert.equal(p.visited.size, 1);
 });
+
+test('mobile playback expands on actual play, keeps pause stable, and restores at the session end', async () => {
+ const c = client(o => o.url.endsWith('/pages') ? { items: [1,2].map(i => ({ image:i+'.jpg', text_zh:'页', audio_zh:'/'+i+'.mp3', audio_original:'/'+i+'-en.mp3' })) } : { id:'book', title_zh:'故事' });
+ const p=c.page('reader');p.onLoad({id:'book'});await tick();
+ p.play();assert.equal(p.data.fullscreen,true);
+ p.play();assert.equal(p.data.playing,false);assert.equal(p.data.fullscreen,true);
+ p.play();assert.equal(p.data.fullscreen,true);
+ c.audios.at(-1).emit('ended');assert.equal(p.data.fullscreen,false);assert.equal(p.data.index,0);
+ p.auto();p.play();const first=c.audios.at(-1);first.emit('ended');
+ assert.equal(p.data.index,1);assert.equal(p.data.playing,true);assert.equal(p.data.fullscreen,true);
+ first.emit('ended');assert.equal(p.data.index,1);assert.equal(p.data.fullscreen,true);
+ c.audios.at(-1).emit('ended');assert.equal(p.data.completed,true);assert.equal(p.data.fullscreen,false);
+ p.again();p.play();p.fullscreen();assert.equal(p.data.fullscreen,false);
+ p.play();p.play();assert.equal(p.data.fullscreen,false,'resume overrode manual collapse');
+ c.audios.at(-1).emit('error');assert.equal(p.data.fullscreen,false);
+ p.play();assert.equal(p.data.fullscreen,true);p.onHide();assert.equal(p.data.fullscreen,false);
+ p.onShow();p.fullscreen();p.play();c.audios.at(-1).emit('error');assert.equal(p.data.fullscreen,true,'error collapsed manual fullscreen');
+ p.fullscreen();p.data.page.audio_zh='';p.play();assert.equal(p.data.fullscreen,false);
+ c.wx.getWindowInfo=()=>({windowWidth:1366,windowHeight:768});p.data.page.audio_zh='/audio.mp3';p.play();assert.equal(p.data.fullscreen,false,'desktop auto expanded');
+});
 test('every fixture dialogue page preserves all speech in both languages and falls back on invalid ranges', () => {
  const dialogue = require('../miniprogram/utils/dialogue'); const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json')));
  let total = 0;

@@ -9,7 +9,7 @@ import (
 
 func TestReaderSchemaIsAdditiveAndDoesNotIncludeCatalogOrSeeds(t *testing.T) {
 	statements, err := ReaderSchema("../../docs/schema.sql")
-	if err != nil || len(statements) != 4 {
+	if err != nil || len(statements) != 5 {
 		t.Fatal("reader schema selection failed", err)
 	}
 	joined := strings.Join(statements, "\n")
