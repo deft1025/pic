@@ -4,9 +4,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const root = path.resolve(__dirname, '../miniprogram');
-function client(responder = () => ({ ok: true })) {
+function client(responder = () => ({ ok: true }), timers = manualClock()) {
  const storage = new Map(), requests = [], audios = [], modules = new Map();
- let definition;
+ let definition; const currentPages = [{}, {}];
  const wx = {
   getStorageSync: k => storage.get(k), setStorageSync: (k, v) => storage.set(k, structuredClone(v)), removeStorageSync: k => storage.delete(k),
   login: o => o.success({ code: 'one-use-code' }),
@@ -22,7 +22,7 @@ function client(responder = () => ({ ok: true })) {
   const filename = name.endsWith('.js') ? name : name + '.js';
   if (modules.has(filename)) return modules.get(filename).exports;
   const module = { exports: {} }; modules.set(filename, module);
-  const sandbox = { module, exports: module.exports, wx, Page: p => definition = p, App() {}, getCurrentPages: () => [{}, {}], console, setTimeout, clearTimeout, require: name => load(path.resolve(path.dirname(filename), name)) };
+  const sandbox = { module, exports: module.exports, wx, Page: p => definition = p, Component: p => definition = p, App() {}, getCurrentPages: () => currentPages, console, setTimeout: timers.setTimeout, clearTimeout: timers.clearTimeout, require: name => load(path.resolve(path.dirname(filename), name)) };
   vm.runInNewContext(fs.readFileSync(filename, 'utf8'), sandbox, { filename }); return module.exports;
  }
  function page(name) {
@@ -31,9 +31,21 @@ function client(responder = () => ({ ok: true })) {
   p.setData = (patch, cb) => { for (const [key, value] of Object.entries(patch)) { const parts = key.split('.'); let o = p.data; while (parts.length > 1) o = o[parts.shift()]; o[parts[0]] = value; } cb?.(); };
   return p;
  }
- return { wx, storage, requests, audios, load: name => load(path.join(root, name)), state: load(path.join(root, 'utils/state.js')), page };
+ function component(name) {
+  load(path.join(root, name, 'index.js'));
+  return { ...definition.methods, ...definition, data: structuredClone(definition.data), setData(patch) { Object.assign(this.data, patch); } };
+ }
+ return { wx, storage, requests, audios, currentPages, component, load: name => load(path.join(root, name)), state: load(path.join(root, 'utils/state.js')), page };
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
+function manualClock() {
+ let now = 0, next = 0; const tasks = new Map();
+ return {
+  setTimeout(fn, delay) { const id = ++next; tasks.set(id, { fn, due: now + delay }); return id; },
+  clearTimeout(id) { tasks.delete(id); },
+  advance(ms) { now += ms; for (const [id, task] of [...tasks]) if (task.due <= now) { tasks.delete(id); task.fn(); } }
+ };
+}
 const profile = { id: '10000', name: '小小读者', age: '3-4', needs_profile: false };
 const session = { token: 'a'.repeat(64), user: profile, expires_at: '2099-01-01' };
 test('guest reading stays available but favorites require login and ignore old guest cache', async () => {
@@ -430,7 +442,7 @@ test('returning to the library refreshes completed marks without resetting filte
  c.storage.delete('pic-session'); await library.onShow(); assert.equal(library.data.items[0].completed, false);
 });
 
-test('end-of-book demo greets with an actual story character only when explicitly enabled', async () => {
+test('explicit end-of-book preview still works without a server rollout flag', async () => {
  const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
  assert.ok(book);
  const c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book);
@@ -443,9 +455,104 @@ test('end-of-book demo greets with an actual story character only when explicitl
  p.again(); assert.equal(p.data.completed, false); assert.equal(p.data.completionCharacter, null);
  const normal = c.page('reader'); normal.onLoad({ id: book.id }); await tick();
  for (let i = 0; i < book.pages.length; i++) normal.show(i, false);
- normal.finish(); assert.equal(normal.data.celebrationEnabled, false); assert.equal(normal.data.completionCharacter, null);
+ normal.finish(); assert.equal(normal.data.celebrationEnabled, true); assert.equal(normal.data.completionCharacter.name, '小川');
 });
 
+test('ordinary detail entry celebrates without a server rollout field after completing every page', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const book = fixture;
+ const c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book);
+ const detail = c.page('detail'); detail.onLoad({ id: book.id }); await tick();
+ let destination; c.wx.navigateTo = o => destination = o.url; detail.read();
+ assert.equal(destination, '/pages/reader/index?id=' + book.id);
+ const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick();
+ assert.equal(reader.data.celebrationEnabled, true);
+ reader.show(book.pages.length - 1, false); reader.finish(); assert.equal(reader.data.completed, false);
+ for (let i = 0; i < book.pages.length; i++) reader.show(i, false);
+ reader.finish(); assert.equal(reader.data.completed, true); assert.equal(reader.data.completionCharacter.name, '小川');
+ reader.again(); assert.equal(reader.data.completed, false); assert.equal(reader.data.index, 0);
+ assert.equal(reader.data.celebrationEnabled, true);
+});
+
+test('ordinary entry celebrates after the final audio of continuous playback, including manual fullscreen', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ for (const fullscreen of [false, true]) {
+  const c = client(o => o.url.endsWith('/pages') ? { items: fixture.pages } : fixture);
+  const reader = c.page('reader'); reader.onLoad({ id: fixture.id }); await tick();
+  reader.setData({ auto: true }); if (fullscreen) reader.fullscreen(); reader.play();
+  for (let i = 0; i < fixture.pages.length; i++) {
+   assert.equal(reader.data.index, i); assert.equal(reader.data.completed, false);
+   c.audios.at(-1).emit('ended');
+  }
+  assert.equal(reader.data.completed, true); assert.equal(reader.data.completionCharacter.name, '小川');
+  assert.equal(reader.data.playing, false); assert.equal(reader.data.fullscreen, fullscreen);
+ }
+});
+
+
+test('silent final-page celebration waits four seconds and cancels on navigation, background and unload', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ for (const action of ['previous', 'onHide', 'onUnload']) {
+  const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: fixture.pages } : fixture, clock);
+  const reader = c.page('reader'); reader.onLoad({ id: fixture.id }); await tick();
+  reader.show(fixture.pages.length - 1, false); clock.advance(10000); assert.equal(reader.data.completed, false, 'skipping pages completed the book');
+  for (let i = 0; i < fixture.pages.length; i++) reader.show(i, false);
+  clock.advance(3999); assert.equal(reader.data.completed, false);
+  reader[action](); clock.advance(10000); assert.equal(reader.data.completed, false);
+  if (action === 'onUnload') continue;
+  if (action === 'previous') reader.next(); else reader.onShow();
+  clock.advance(3999); assert.equal(reader.data.completed, false);
+  clock.advance(1); assert.equal(reader.data.completed, true); assert.equal(reader.data.completionCharacter.name, '小川');
+  reader.again(); clock.advance(10000); assert.equal(reader.data.completed, false);
+ }
+});
+
+test('starting final-page audio cancels silent completion and waits for its natural end, never pause or error', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: fixture.pages } : fixture, clock);
+ const reader = c.page('reader'); reader.onLoad({ id: fixture.id }); await tick();
+ for (let i = 0; i < fixture.pages.length; i++) reader.show(i, false);
+ clock.advance(3000); reader.play(); clock.advance(10000); assert.equal(reader.data.completed, false);
+ reader.play(); clock.advance(10000); assert.equal(reader.data.completed, false, 'paused audio triggered completion');
+ reader.play(); c.audios.at(-1).emit('error'); clock.advance(10000); assert.equal(reader.data.completed, false, 'audio error triggered completion');
+ reader.play(); c.audios.at(-1).emit('ended'); assert.equal(reader.data.completed, true);
+ assert.equal(reader.data.completionCharacter.name, '小川'); assert.equal(reader.data.playing, false);
+});
+
+test('completion recording runs once after presentation, and stale presentation callbacks cannot finish a new read', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: fixture.pages } : fixture, clock);
+ c.storage.set('pic-session', session);
+ const reader = c.page('reader'); reader.onLoad({ id: fixture.id }); await tick();
+ for (let i = 0; i < fixture.pages.length; i++) reader.show(i, false);
+ const callbacks = [], setData = reader.setData;
+ reader.setData = (patch, cb) => { setData(patch, patch.completed ? undefined : cb); if (patch.completed && cb) callbacks.push(cb); };
+ clock.advance(4000); assert.equal(reader.data.completed, true);
+ assert.equal(c.state.completedBooks().includes(fixture.id), false);
+ assert.equal(c.requests.filter(r => r.url.endsWith('/events')).length, 0);
+ reader.finish(); callbacks[0](); callbacks[1]();
+ assert.equal(c.requests.filter(r => r.url.endsWith('/events')).length, 1);
+ assert.equal(c.state.completedBooks().includes(fixture.id), true);
+ reader.again(); for (let i = 0; i < fixture.pages.length; i++) reader.show(i, false);
+ clock.advance(4000); const stale = callbacks.at(-1); reader.again(); stale();
+ assert.equal(reader.data.completed, false); assert.equal(reader.finished, false);
+ assert.equal(c.requests.filter(r => r.url.endsWith('/events')).length, 1);
+});
+
+test('the completion character responds to a tap without recording another completion and resets on restart', async () => {
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: fixture.pages } : fixture, clock);
+ c.storage.set('pic-session', session);
+ const reader = c.page('reader'); reader.onLoad({ id: fixture.id }); await tick();
+ for (let i = 0; i < fixture.pages.length; i++) reader.show(i, false);
+ clock.advance(4000); assert.equal(reader.data.completed, true);
+ reader.greet(); assert.equal(reader.data.characterReply, true);
+ reader.greet(); clock.advance(1800); assert.equal(reader.data.characterReply, false);
+ assert.equal(c.requests.filter(r => r.url.endsWith('/events')).length, 1);
+ reader.greet(); reader.onHide(); assert.equal(reader.data.characterReply, false);
+ reader.onShow(); reader.greet(); reader.again(); clock.advance(10000);
+ assert.equal(reader.data.completed, false); assert.equal(reader.data.characterReply, false);
+});
 
 test('configured age avatars follow saved profiles and logout, with a default and image failure fallback', async () => {
  let current = { ...profile };
@@ -478,4 +585,71 @@ test('older backends without completed-books keep account synchronization and lo
  const shelf = c.page('shelf'); await shelf.load();
  assert.equal(shelf.data.syncError, ''); assert.deepEqual([...c.state.completedBooks()], ['finished']);
  status = 503; await shelf.load(); assert.ok(shelf.data.syncError);
+});
+
+
+test('every catalog book automatically celebrates after silent reading or final audio, without per-book flags', async () => {
+ const books = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books;
+ let portraits = 0, buddies = 0;
+ for (const book of books) for (const audio of [false, true]) {
+  const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book, clock);
+  const reader = c.page('reader'), events = [];
+  c.state.event = (id, type) => { assert.equal(reader.data.completed, true); events.push({ id, type }); };
+  reader.onLoad({ id: book.id }); await tick();
+  for (let i = 0; i < book.pages.length; i++) reader.show(i, false);
+  assert.equal(reader.data.completed, false, book.id);
+  if (audio) { reader.play(); clock.advance(5000); assert.equal(reader.data.completed, false); c.audios.at(-1).emit('ended'); }
+  else { clock.advance(3999); assert.equal(reader.data.completed, false); clock.advance(1); }
+  assert.equal(reader.data.completed, true, book.id); assert.equal(events.length, 1);
+  if (reader.data.completionCharacter) {
+   portraits++; assert.equal(book.pages.some(p => reader.data.completionCharacter.image.endsWith(p.image)), true);
+   assert.equal(/NaN|Infinity/.test(reader.data.completionCharacter.portraitStyle), false);
+  } else buddies++;
+  reader.greet(); assert.equal(reader.data.characterReply, true);
+  reader.finish(); clock.advance(10000); assert.equal(events.length, 1);
+  reader.again(); assert.equal(reader.data.completed, false); assert.equal(reader.data.characterReply, false);
+  reader.onUnload();
+ }
+ assert.ok(portraits > 0 && buddies > 0);
+});
+
+test('completion portraits reject invalid anchors, ratios, speech and images and recover from image failures', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const c = client(), reader = c.page('reader'), valid = structuredClone(book.pages[0]);
+ for (const change of [p => p.image = '', p => p.dialogue.aspect_ratio = null, p => p.dialogue.aspect_ratio = [1, 0], p => p.dialogue.aspect_ratio = [NaN, 1], p => p.dialogue.parts.forEach(part => part.target = [Infinity, 50]), p => p.dialogue.parts.forEach(part => part.target = [-1, 50]), p => p.dialogue.parts.forEach(part => part.speaker.zh = ' '), p => p.dialogue.parts[0].end.zh = 99999]) {
+  const page = structuredClone(valid); change(page); reader.pages = [page]; assert.equal(reader.completionPortrait(), null);
+ }
+ reader.pages = [valid]; const portrait = reader.completionPortrait(); assert.ok(portrait);
+ reader.setData({ completed: true, completionCharacter: portrait });
+ reader.portraitFailed({ currentTarget: { dataset: { src: 'previous-image' } } }); assert.ok(reader.data.completionCharacter);
+ reader.portraitFailed({ currentTarget: { dataset: { src: portrait.image } } }); assert.equal(reader.data.completionCharacter, null);
+ reader.greet(); assert.equal(reader.data.characterReply, true, 'generic buddy must still respond');
+});
+
+test('custom tab selection follows the visible route and handles rapid taps, failures and programmatic returns', async () => {
+ const c = client(), bar = c.component('custom-tab-bar');
+ c.currentPages[1].route = 'pages/library/index'; bar.lifetimes.attached.call(bar); assert.equal(bar.data.selected, 1);
+ const calls = []; c.wx.switchTab = o => calls.push(o);
+ bar.switchTab({ currentTarget: { dataset: { index: 1 } } }); assert.equal(calls.length, 0);
+ bar.switchTab({ currentTarget: { dataset: { index: 2 } } }); bar.switchTab({ currentTarget: { dataset: { index: 0 } } });
+ assert.equal(calls.length, 1); assert.equal(calls[0].url, '/pages/shelf/index'); assert.equal(bar.data.selected, 1);
+ calls[0].fail(); calls[0].complete(); assert.equal(bar.data.selected, 1);
+ bar.switchTab({ currentTarget: { dataset: { index: 2 } } });
+ c.currentPages[1].route = 'pages/shelf/index'; calls[1].success(); calls[1].complete(); assert.equal(bar.data.selected, 2);
+ c.currentPages[1].route = 'pages/home/index'; bar.pageLifetimes.show.call(bar); assert.equal(bar.data.selected, 0);
+ for (const name of ['home', 'library', 'shelf']) {
+  const page = c.page(name); let synced = false; page.getTabBar = () => ({ sync() { synced = true; } }); page.load = async () => {};
+  await page.onShow(); assert.equal(synced, true, name);
+ }
+});
+
+
+test('switching language after paused audio restarts the silent final-page wait', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book, clock);
+ const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick();
+ for (let i = 0; i < book.pages.length; i++) reader.show(i, false);
+ reader.play(); reader.play(); clock.advance(5000); assert.equal(reader.data.completed, false);
+ reader.language({ currentTarget: { dataset: { language: 'en' } } });
+ clock.advance(3999); assert.equal(reader.data.completed, false); clock.advance(1); assert.equal(reader.data.completed, true);
 });

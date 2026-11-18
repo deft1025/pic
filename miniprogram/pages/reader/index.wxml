@@ -6,7 +6,7 @@
    <view class="languages"><button class="small {{language === 'zh' ? 'primary' : ''}}" data-language="zh" bindtap="language">中文</button><button class="small {{language === 'en' ? 'primary' : ''}}" data-language="en" bindtap="language">English</button></view>
    <button class="small" bindtap="fullscreen">全屏阅读</button>
   </view>
-  <view wx:if="{{fullscreen}}" class="fullscreen-header"><button class="small" bindtap="fullscreen">退出全屏</button><button wx:if="{{index === total - 1 && controlsVisible}}" class="small" bindtap="finish">读完啦</button><button wx:if="{{controlsVisible}}" class="small" bindtap="toggleLanguage">{{language === 'zh' ? '中文 ⇄ English' : 'English ⇄ 中文'}}</button></view>
+  <view wx:if="{{fullscreen}}" class="fullscreen-header"><button class="small" bindtap="fullscreen">退出全屏</button><button wx:if="{{controlsVisible}}" class="small" bindtap="toggleLanguage">{{language === 'zh' ? '中文 ⇄ English' : 'English ⇄ 中文'}}</button></view>
   <view class="frame" style="height:{{frameHeight}}px" bindtap="controls">
    <image wx:if="{{!imageError}}" class="art" data-src="{{page.image}}" src="{{page.image}}" mode="aspectFit" bindload="imageLoaded" binderror="imageFailed" aria-label="{{page.image_alt}}"/>
    <view wx:if="{{imageError}}" class="image-error">插画加载失败<button class="small" catchtap="retryImage">重试插画</button></view>
@@ -23,9 +23,14 @@
   </view>
   <button wx:if="{{fullscreen && !controlsVisible}}" class="controls-hint" bindtap="controls">第{{index + 1}} / {{total}}页 · 轻点画面显示操作{{playing ? ' · 配音中' : ''}}</button>
   <view wx:if="{{audioError}}" class="error">{{audioError}}</view>
-  <button wx:if="{{index === total - 1 && !completed && !fullscreen}}" class="primary finish" bindtap="finish">我们读完啦</button>
-  <view wx:if="{{completed}}" class="panel completion-panel {{celebrationEnabled ? 'celebration' : ''}}">
-   <block wx:if="{{celebrationEnabled}}"><view class="completion-art"><view class="character-portrait"><image wx:if="{{completionCharacter}}" src="{{completionCharacter.image}}" mode="widthFix" style="{{completionCharacter.portraitStyle}}"/><text wx:else class="completion-book">📖</text></view><text class="completion-clap" aria-hidden="true">👏</text><text class="completion-spark" aria-hidden="true">✦</text></view><view class="completion-speaker">{{completionCharacter ? completionCharacter.name + '说' : '故事小伙伴说'}}</view><view class="completion-message"><view>谢谢你陪我</view><view>读完这个故事！</view></view><view class="completion-note">今天的故事，变成我们的小小回忆。</view></block>
-   <view wx:else class="section">又读完一个好故事！</view><view class="actions"><button class="primary" bindtap="again">再读一次</button><button bindtap="shelf">返回书架</button></view></view>
+  <view wx:if="{{completed}}" class="panel completion-panel celebration">
+    <button class="completion-art {{characterReply ? 'character-reply' : ''}}" bindtap="greet" aria-label="和{{completionCharacter ? completionCharacter.name : '故事小伙伴'}}击掌">
+     <view class="character-portrait"><image wx:if="{{completionCharacter}}" src="{{completionCharacter.image}}" data-src="{{completionCharacter.image}}" binderror="portraitFailed" mode="widthFix" style="{{completionCharacter.portraitStyle}}"/><text wx:else class="completion-book">📖</text></view>
+     <text class="completion-clap" aria-hidden="true">{{characterReply ? '🖐️' : '👏'}}</text><text class="completion-spark" aria-hidden="true">✦</text><text class="completion-spark spark-right" aria-hidden="true">✧</text><text wx:if="{{characterReply}}" class="completion-heart" aria-hidden="true">♥</text>
+    </button>
+    <view class="completion-speaker">{{completionCharacter ? completionCharacter.name + '说' : '故事小伙伴说'}}</view>
+    <view class="completion-message" aria-live="polite"><view>{{characterReply ? '收到你的击掌啦！' : '谢谢你陪我'}}</view><view>{{characterReply ? '下次还要一起读哦。' : '读完这个故事！'}}</view></view>
+    <view class="completion-note">轻轻点一下，和我击掌吧</view>
+   <view class="actions"><button class="primary" bindtap="again">再读一次</button><button bindtap="shelf">返回书架</button></view></view>
  </block>
 </view>

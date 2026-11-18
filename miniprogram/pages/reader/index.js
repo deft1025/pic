@@ -2,11 +2,11 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 const dialogue = require('../../utils/dialogue');
 Page({
- data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: false, completionCharacter: null, viewportHeight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
- onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.setData({ celebrationEnabled: query.celebrate === '1' }); this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
- onShow() { this.hidden = false; },
- onHide() { this.hidden = true; this.destroyAudio(true); },
- onUnload() { this.dead = true; this.serial++; this.destroyAudio(true); },
+ data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
+ onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
+ onShow() { this.hidden = false; this.scheduleCompletion(); },
+ onHide() { this.hidden = true; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
+ onUnload() { this.dead = true; this.serial++; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
  onResize() { this.frame(); },
  async load() {
   this.setData({ error: '' });
@@ -51,10 +51,11 @@ Page({
  retryImage() { const page = this.data.page; this.setData({ page: null, imageError: false, imageReady: false }, () => this.setData({ page }, () => { this.renderText(); this.frame(); })); },
  show(index, autoplay) {
   if (!this.pages || index < 0 || index >= this.pages.length) return;
+  this.cancelCompletion(); this.cancelGreeting(); this.lastPageAudioStarted = false;
   this.serial++; this.destroyAudio(); this.imageRatio = null;
   if (!autoplay) this.restorePlaybackView();
   this.visited.add(index);
-  this.setData({ index, page: this.pages[index], imageError: false, imageReady: false, audioError: '', completed: false, completionCharacter: null });
+  this.setData({ index, page: this.pages[index], imageError: false, imageReady: false, audioError: '', completed: false, completionCharacter: null, characterReply: false }, () => this.scheduleCompletion());
   this.renderText(); this.artwork();
   if (autoplay && !this.hidden) this.play();
  },
@@ -122,10 +123,12 @@ Page({
  destroyAudio(restoreView = false) { if (this.audio) { const old = this.audio; this.audio = null; old.stop(); old.destroy(); } this.setData({ playing: false }); if (restoreView) this.restorePlaybackView(); },
  play() {
   if (!this.data.page || this.hidden || this.dead) return;
+  this.cancelCompletion();
   if (this.data.playing) { this.audio.pause(); this.setData({ playing: false }); return; }
   if (this.audio) { this.audio.play(); return; }
   const source = this.data.language === 'zh' ? this.data.page.audio_zh : this.data.page.audio_original;
-  if (!source) { this.restorePlaybackView(); this.setData({ audioError: '本页暂时没有这一语言的配音，可以先读文字。' }); return; }
+  if (!source) { this.restorePlaybackView(); this.setData({ audioError: '本页暂时没有这一语言的配音，可以先读文字。' }); this.scheduleCompletion(); return; }
+  this.lastPageAudioStarted = true;
   this.setData({ audioError: '' });
   const audio = wx.createInnerAudioContext(); this.audio = audio; audio.obeyMuteSwitch = false; audio.playbackRate = this.data.rate;
   const current = () => this.audio === audio && !this.hidden && !this.dead;
@@ -145,29 +148,54 @@ Page({
  next() { this.show(this.data.index + 1, this.data.playing); },
  pickPage(e) { this.show(Number(e.detail.value), this.data.playing); },
  settings() { const { language, auto, rate } = this.data; wx.setStorageSync('pic-reader-settings', { language, auto, rate }); },
- language(e) { const language = e.currentTarget.dataset.language; if (language === this.data.language) return; const playing = this.data.playing; this.serial++; this.destroyAudio(); this.setData({ language }); this.settings(); this.renderText(); if (playing) this.play(); },
+ language(e) { const language = e.currentTarget.dataset.language; if (language === this.data.language) return; const playing = this.data.playing; this.cancelCompletion(); this.lastPageAudioStarted = false; this.serial++; this.destroyAudio(); this.setData({ language }); this.settings(); this.renderText(); if (playing) this.play(); else this.scheduleCompletion(); },
  toggleLanguage() { this.language({ currentTarget: { dataset: { language: this.data.language === 'zh' ? 'en' : 'zh' } } }); },
  controls() { if (this.data.fullscreen) this.setData({ controlsVisible: !this.data.controlsVisible }, () => this.frame()); },
  keepControls() {},
  auto() { this.setData({ auto: !this.data.auto }); this.settings(); },
  rate(e) { const rate = [.75, 1, 1.25][Number(e.detail.value)]; this.setData({ rate }); this.settings(); if (this.audio) this.audio.playbackRate = rate; },
  fullscreen() { this.autoExpanded = false; this.playbackViewDismissed = Boolean(this.audio); const fullscreen = !this.data.fullscreen; this.setData({ fullscreen, controlsVisible: !fullscreen }, () => this.frame()); },
+ cancelCompletion() { clearTimeout(this.completionTimer); this.completionTimer = null; },
+ cancelGreeting() { clearTimeout(this.replyTimer); this.replyTimer = null; if (!this.dead && this.data.characterReply) this.setData({ characterReply: false }); },
+ greet() {
+  if (!this.data.completed || !this.data.celebrationEnabled || this.data.characterReply || this.hidden || this.dead) return;
+  this.setData({ characterReply: true });
+  this.replyTimer = setTimeout(() => { this.replyTimer = null; if (!this.dead) this.setData({ characterReply: false }); }, 1800);
+ },
+ scheduleCompletion() {
+  this.cancelCompletion();
+  if (!this.data.celebrationEnabled || !this.data.total || this.data.index !== this.data.total - 1 || this.visited?.size !== this.data.total || this.data.completed || this.hidden || this.dead || this.audio || this.lastPageAudioStarted) return;
+  const serial = this.serial;
+  this.completionTimer = setTimeout(() => {
+   this.completionTimer = null;
+   if (serial !== this.serial || this.hidden || this.dead || this.audio || this.lastPageAudioStarted || this.data.completed) return;
+   this.finish();
+  }, 4000);
+ },
+ completionPortrait() {
+  // All books share this greeting; valid dialogue supplies the actual character.
+  for (const page of this.pages || []) {
+   const ratio = page.dialogue?.aspect_ratio;
+   if (!page.image || !Array.isArray(ratio) || ratio.length !== 2 || !ratio.every(n => Number.isFinite(n) && n > 0) || typeof page.text_zh !== 'string') continue;
+   const bubble = dialogue.split(page, 'zh', true).bubbles.find(b => typeof b.speaker === 'string' && b.speaker.trim() && Array.isArray(b.part.target) && b.part.target.length === 2 && b.part.target.every(n => Number.isFinite(n) && n >= 0 && n <= 100));
+   if (!bubble) continue;
+   const height = 200 * ratio[1] / ratio[0], [x, y] = bubble.part.target;
+   const left = Math.max(-100, Math.min(0, 50 - x * 2));
+   const top = height < 100 ? (100 - height) / 2 : Math.max(100 - height, Math.min(0, 50 - y * height / 100));
+   return { name: bubble.speaker.trim(), image: page.image, portraitStyle: 'left:' + left + '%;top:' + top + '%;' };
+  }
+  return null;
+ },
+ portraitFailed(e) { if (e.currentTarget.dataset.src === this.data.completionCharacter?.image) this.setData({ completionCharacter: null }); },
  finish() {
+  this.cancelCompletion();
   this.destroyAudio(true);
   if (this.visited.size < this.data.total) { wx.showToast({ title: '还有页面没读，先一起读完吧', icon: 'none' }); return; }
-  if (!this.finished) { this.finished = true; state.event(this.id, 'complete', this.readingID); }
-  let completionCharacter = null;
-  if (this.data.celebrationEnabled) {
-   // Reuse an actual speaking character and its illustration anchor from MySQL.
-   const page = this.pages.find(p => p.dialogue?.parts?.some(part => part.speaker?.zh && part.target));
-   const part = page?.dialogue.parts.find(part => part.speaker?.zh && part.target);
-   if (part) {
-    const ratio = page.dialogue.aspect_ratio[0] / page.dialogue.aspect_ratio[1];
-    completionCharacter = { name: part.speaker.zh, image: page.image, portraitStyle: 'left:' + (50 - part.target[0] * 2) + '%;top:' + (50 - part.target[1] * 2 / ratio) + '%;' };
-   }
-  }
+  const completionCharacter = this.completionPortrait();
+  const readingID = this.readingID, serial = this.serial;
   this.setData({ completed: true, completionCharacter }, () => {
-   if (this.data.celebrationEnabled && !this.data.fullscreen && wx.pageScrollTo) wx.pageScrollTo({ selector: '.completion-panel', duration: 300 });
+   if (this.dead || serial !== this.serial || readingID !== this.readingID || !this.data.completed || this.finished) return;
+   this.finished = true; state.event(this.id, 'complete', readingID);
   });
  },
  again() { this.finished = false; this.readingID = state.id(); this.visited = new Set(); this.show(0, false); },

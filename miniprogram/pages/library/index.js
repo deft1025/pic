@@ -4,6 +4,7 @@ Page({
  data: { q: '', age: '', category: '', ages: [{ id: '', name: '全部' }], categories: [{ id: '', name: '全部' }], ageIndex: 0, categoryIndex: 0, filtersLoading: false, filtersReady: false, filterError: '', items: [], total: 0, loading: false, error: '' },
  onLoad() { this.loadFilters(); this.load(true); },
  async onShow() {
+  this.getTabBar?.()?.sync();
   this.setData({ items: state.markCompleted(this.data.items) });
   try { await state.syncCompleted(); } catch (_) { /* Keep the catalog available while status is offline. */ }
   this.setData({ items: state.markCompleted(this.data.items) });

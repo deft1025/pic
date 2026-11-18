@@ -4,7 +4,7 @@ const avatar = require('../../utils/avatar');
 const PAGE_SIZE = 8;
 Page({
  data: { loggedIn: false, profile: null, avatar: '', avatarError: false, ageLabel: '未选择年龄段', needsProfile: false, busy: false, loading: false, items: [], page: 1, pageCount: 0, total: 0, error: '', loginError: '', syncError: '', ageDialog: false, firstAges: [], firstAge: '', ageSaving: false },
- onShow() { this.load(); },
+ onShow() { this.getTabBar?.()?.sync(); this.load(); },
  async load() {
   const serial = (this.serial || 0) + 1; this.serial = serial;
   const token = api.session()?.token, previousPage = this.data.page;

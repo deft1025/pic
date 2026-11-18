@@ -1,0 +1,8 @@
+<view class="tab-bar">
+ <view class="tab-items">
+  <button wx:for="{{tabs}}" wx:key="path" class="tab-item {{selected === index ? 'selected' : ''}}" data-index="{{index}}" bindtap="switchTab" aria-label="{{item.label}}{{selected === index ? '，当前栏目' : ''}}" hover-class="tab-pressed">
+   <view class="tab-icon icon-{{item.icon}}" aria-hidden="true"><view class="icon-part part-one"/><view class="icon-part part-two"/><view class="icon-part part-three"/></view>
+   <text class="tab-label">{{item.label}}</text>
+  </button>
+ </view>
+</view>

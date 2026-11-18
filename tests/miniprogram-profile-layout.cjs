@@ -12,14 +12,22 @@ let browser;
  const ages = [{ id: '0-2', name: '0–2 岁', description: '看图认知 · 亲子陪伴' }, { id: '3-4', name: '3–4 岁', description: '发现世界 · 快乐成长' }, { id: '5-6', name: '5–6 岁', description: '独立思考 · 自主阅读' }];
  for (const [width, height] of [[320, 568], [390, 844], [568, 320], [1366, 768]]) {
   await p.setViewportSize({ width, height });
-  for (const [scenario, selected] of [['shelf', false], ['shelf', true], ['shelfFavorites', true], ['shelfAccount', false], ['shelfAccount', true], ['profile', true], ['library', false], ['library', true], ['bookCard', false], ['bookCard', true]]) {
+  for (const [scenario, selected] of [['home', false], ['shelf', false], ['shelf', true], ['shelfFavorites', true], ['shelfAccount', false], ['shelfAccount', true], ['profile', true], ['library', false], ['library', true], ['bookCard', false], ['bookCard', true]]) {
    const page = ['shelfFavorites', 'shelfAccount'].includes(scenario) ? 'shelf' : scenario;
-   const data = page === 'bookCard' ? { book: { id: 'book', title_zh: '很长的绘本名字也能完整显示，方便找到喜欢的故事', cover: '', reading_value: '在故事里学会等待与陪伴', page_count: 18, reading_minutes: 5, completed: selected } } : page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
+   const data = page === 'home' ? { featured: [], recent: [], loading: false, error: '' } : page === 'bookCard' ? { book: { id: 'book', title_zh: '很长的绘本名字也能完整显示，方便找到喜欢的故事', cover: '', reading_value: '在故事里学会等待与陪伴', page_count: 18, reading_minutes: 5, completed: selected } } : page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
    Object.assign(data, { avatar: selected ? 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23fff8e4"/><text x="50" y="70" text-anchor="middle" font-size="55">📖</text></svg>'.replace('%23', '#')) : '', avatarError: false, ageLabel: '3–4 岁' });
    if (scenario === 'shelfAccount') Object.assign(data, { ageDialog: false, needsProfile: false, loggedIn: selected, profile: selected ? { name: 'yiyi', age: '3-4' } : null });
    if (scenario === 'shelfFavorites') Object.assign(data, { ageDialog: false, needsProfile: false, total: 17, page: 2, pageCount: 3, items: Array.from({ length: 8 }, (_, i) => ({ id: 'book-' + i, completed: i % 2 === 0, title_zh: i === 0 ? '很长的绘本名字也能完整显示，方便找到喜欢的故事' : '美好的一天', cover: '' })) });
-   const template = page === 'bookCard' ? '<view class="page"><view class="grid">' + fs.readFileSync(path.join(root, 'components/book-card/index.wxml'), 'utf8').repeat(2) + '</view></view>' : fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
-   const styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, page === 'bookCard' ? 'components/book-card/index.wxss' : 'pages/' + page + '/index.wxss'), 'utf8');
+   let template = page === 'bookCard' ? '<view class="page"><view class="grid">' + fs.readFileSync(path.join(root, 'components/book-card/index.wxml'), 'utf8').repeat(2) + '</view></view>' : fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
+   let styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, page === 'bookCard' ? 'components/book-card/index.wxss' : 'pages/' + page + '/index.wxss'), 'utf8');
+   const hasTabBar = ['home', 'library', 'shelf'].includes(page), safeBottom = width === 390 ? 34 : 0;
+   if (hasTabBar) {
+    const bar = require('../miniprogram/app.json').tabBar;
+    Object.assign(data, { tabs: bar.list.map((tab, i) => ({ path: tab.pagePath, label: tab.text, icon: ['discover', 'library', 'shelf'][i] })), navSelected: ['home', 'library', 'shelf'].indexOf(page) });
+    template += fs.readFileSync(path.join(root, 'custom-tab-bar/index.wxml'), 'utf8').replace(/\bselected\b(?= === index)/g, 'navSelected');
+    styles += fs.readFileSync(path.join(root, 'custom-tab-bar/index.wxss'), 'utf8');
+   }
+   styles = styles.replace(/env\(safe-area-inset-bottom\)/g, safeBottom + 'px');
    await p.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body></body></html>');
    await p.evaluate(({ template, styles, data }) => {
     const css = document.createElement('style'); css.textContent = 'body{margin:0}*{box-sizing:border-box}button{border:0;font-family:inherit}input{font-family:inherit}img{object-fit:cover}' + styles.replace(/([\d.]+)rpx/g, (_, n) => Number(n) * innerWidth / 750 + 'px'); document.head.append(css);
@@ -62,10 +70,24 @@ let browser;
     children(tree, document.body, data);
    }, { template, styles, data });
    for (const avatar of await p.locator('img.account-avatar').all()) await avatar.evaluate(async e => { await e.decode(); });
-   const errors = await p.evaluate(({ page, selected, scenario }) => {
+   const errors = await p.evaluate(({ page, selected, scenario, hasTabBar, safeBottom }) => {
     const failures = [], check = (v, m) => { if (!v) failures.push(m); };
     check(document.documentElement.scrollWidth <= innerWidth + 1, 'page horizontal overflow');
-    if (page === 'bookCard') {
+    if (hasTabBar) {
+     const bar = document.querySelector('.tab-bar'), items = [...bar.querySelectorAll('.tab-item')], r = bar.getBoundingClientRect();
+     check(items.length === 3 && bar.querySelectorAll('.selected').length === 1, 'tab selection missing');
+     check(bar.querySelector('.selected .tab-label').textContent === ({ home: '发现', library: '书库', shelf: '我的书架' })[page], 'wrong selected label');
+     check(Math.abs(r.bottom - innerHeight) < 1 && r.height >= 76 + safeBottom, 'tab safe area missing');
+     for (const item of items) {
+      const rect = item.getBoundingClientRect(); check(rect.height >= 44 && rect.width >= 44 && rect.left >= 0 && rect.right <= innerWidth, 'tab touch target outside viewport');
+      check(parseFloat(getComputedStyle(item.querySelector('.tab-label')).fontSize) === 16, 'tab font must be 16px');
+      check(item.querySelector('.tab-icon').getBoundingClientRect().height >= 24, 'missing navigation icon');
+     }
+     check(parseFloat(getComputedStyle(document.querySelector('.tab-page')).paddingBottom) > r.height, 'footer covers page content');
+    }
+    if (page === 'home') {
+     check(document.querySelector('.hero'), 'home missing');
+    } else if (page === 'bookCard') {
      check(document.querySelectorAll('.completion').length === (selected ? 2 : 0), 'completion badge mismatch');
      for (const badge of document.querySelectorAll('.completion')) {
       const b = badge.getBoundingClientRect(), cover = badge.parentElement.getBoundingClientRect();
@@ -111,7 +133,7 @@ let browser;
      check(document.querySelector('.age-picker').textContent.includes('3–4'), 'saved age missing');
     }
     return failures;
-   }, { page, selected, scenario });
+   }, { page, selected, scenario, hasTabBar, safeBottom });
    assert.deepEqual(errors, [], `${page}/${selected}/${width}x${height}: ${errors.join('; ')}`); checks++;
    if (output && width === 390 && selected) {
     fs.mkdirSync(output, { recursive: true });
@@ -120,5 +142,5 @@ let browser;
    }
   }
  }
- console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, required selection, saved profile, filter labels, compact favorite rows/pagination, completed badges, touch targets and scrolling. Not a native device test.`);
+ console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, custom tab icons/16px labels/selection/safe areas, required selection, saved profile, filter labels, compact favorite rows/pagination, completed badges, touch targets and scrolling. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

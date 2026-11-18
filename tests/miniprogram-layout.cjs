@@ -12,12 +12,14 @@ const sources = Object.fromEntries(moduleNames.map(n => [n, fs.readFileSync(path
 const template = fs.readFileSync(path.join(mini, 'pages/reader/index.wxml'), 'utf8');
 const styles = fs.readFileSync(path.join(mini, 'app.wxss'), 'utf8').replace(/\bpage\{/g, 'body{') + fs.readFileSync(path.join(mini, 'pages/reader/index.wxss'), 'utf8');
 const output = process.env.PIC_MINI_READER_OUTPUT;
+const localArt = process.env.PIC_MINI_READER_ASSETS === 'local';
+const media = localArt ? Object.fromEntries(books.filter(b => !process.env.PIC_MINI_READER_BOOK || b.id === process.env.PIC_MINI_READER_BOOK).flatMap(b => b.pages.map(p => [p.image, 'data:image/webp;base64,' + fs.readFileSync(path.join(root, 'web', p.image)).toString('base64')]))) : {};
 let browser, checks = 0;
 (async () => {
  browser = await chromium.launch({ headless: true, executablePath: process.env.PIC_BROWSER_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', args: ['--no-sandbox'] });
  const p = await browser.newPage();
  await p.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body></body></html>');
- await p.evaluate(({ sources, template, styles, books }) => {
+ await p.evaluate(({ sources, template, styles, books, media }) => {
   const css = document.createElement('style'); document.head.append(css);
   const cache = new Map(), storage = new Map();
   let def, currentBook = books[0];
@@ -54,10 +56,13 @@ let browser, checks = 0;
      out.addEventListener('click', event => { if (attr.name === 'catchtap') event.stopPropagation(); window.reader[attr.value]({ currentTarget: { dataset: { ...out.dataset } }, detail: {} }); });
      continue;
     }
+    if (attr.name === 'binderror') {
+     out.addEventListener('error', () => window.reader[attr.value]({ currentTarget: { dataset: { ...out.dataset } } })); continue;
+    }
     if (attr.name.startsWith('wx:') || attr.name.startsWith('bind') || attr.name.startsWith('catch')) continue;
     const val = value(attr.value, scope);
     if (attr.name === 'disabled') { out.disabled = Boolean(val); continue; }
-    if (attr.name === 'src') { out.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><rect width="1200" height="800" fill="#e4f1f7"/><circle cx="600" cy="420" r="100" fill="#ffda6e"/></svg>'); continue; }
+    if (attr.name === 'src') { const mediaPath = String(val).replace(/^https?:\/\/[^/]+/, ''); out.src = media[mediaPath] || 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><rect width="1200" height="800" fill="#e4f1f7"/><circle cx="600" cy="420" r="100" fill="#ffda6e"/></svg>'); continue; }
     out.setAttribute(attr.name, String(val));
    }
    if (node.localName === 'scroll-view' && value(node.getAttribute('scroll-y'), scope)) out.style.overflowY = 'auto';
@@ -87,8 +92,13 @@ let browser, checks = 0;
    r.serial = (r.serial || 0) + 1; r.pages = currentBook.pages; r.id = id; r.readingID = load('utils/state.js').id(); r.visited = new Set(); r.dead = false; r.hidden = false; r.ratio = r.pages.find(p => p.dialogue)?.dialogue.aspect_ratio || [4, 3]; r.ratioReady = true;
    r.setData({ fullscreen: false, controlsVisible: true, book: currentBook, total: r.pages.length, pageNames: r.pages.map((_, i) => '第' + (i + 1) + '页') }); r.frame(); r.show(0, false);
   };
+  window.openOrdinaryBook = async id => {
+   currentBook = books.find(b => b.id === id);
+   const r = window.reader; r.data = structuredClone(def.data); r.dead = false; r.hidden = false; r.finished = false;
+   r.onLoad({ id }); await new Promise(resolve => setTimeout(resolve, 0));
+  };
   window.imageReady = () => { const r = window.reader; r.imageLoaded({ currentTarget: { dataset: { src: r.data.page.image } }, detail: { width: r.ratio[0] * 100, height: r.ratio[1] * 100 } }); };
- }, { sources, template, styles, books });
+ }, { sources, template, styles, books, media });
  const settle = async () => { await p.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))); };
  async function verify(label) {
   await settle();
@@ -185,16 +195,37 @@ let browser, checks = 0;
   await p.setViewportSize({ width, height });
   for (const fullscreen of [false, true]) {
    await p.evaluate(async fullscreen => {
-    await window.openBook('sb-bean-in-a-pot'); const r = window.reader;
+    await window.openOrdinaryBook('sb-bean-in-a-pot'); const r = window.reader;
     for (let i = 0; i < r.pages.length; i++) r.show(i, false);
-    r.setData({ celebrationEnabled: true, fullscreen }); r.frame(); r.finish();
+    r.setData({ fullscreen }); r.frame();
    }, fullscreen);
+   assert.equal(await p.getByText('我们读完啦', { exact: true }).count(), 0);
+   assert.equal(await p.getByText('读完啦', { exact: true }).count(), 0);
+   assert.equal(await p.locator('.completion-panel').count(), 0);
+   await p.waitForFunction(() => window.reader.data.completed, null, { timeout: 7000 });
+   assert.equal(await p.evaluate(() => window.reader.data.celebrationEnabled), true);
+   assert.equal(await p.locator('.completion-panel').evaluate(e => { const r = e.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight + 1; }), true, 'celebration must be visible immediately without page scrolling');
    assert.equal(await p.locator('.completion-speaker').textContent(), '小川说');
-   assert.equal(await p.locator('.completion-panel button').count(), 2);
+   assert.equal(await p.locator('.completion-panel .actions button').count(), 2);
    assert.equal(await p.locator('.completion-art').evaluate(e => getComputedStyle(e).animationName), 'character-pop');
-   assert.equal(await p.locator('.completion-clap').evaluate(e => getComputedStyle(e).animationIterationCount), '4');
+   assert.equal(await p.locator('.completion-clap').evaluate(e => getComputedStyle(e).animationIterationCount), '6');
+   assert.equal(await p.locator('.character-portrait').evaluate(e => e.clientWidth >= 130), true);
+   assert.equal(await p.locator('.completion-message').evaluate(e => parseFloat(getComputedStyle(e).fontSize)), 18);
+   if (localArt) {
+    await p.locator('.character-portrait img').evaluate(async e => { await e.decode(); });
+    assert.equal(await p.locator('.character-portrait img').evaluate(e => e.src.startsWith('data:image/webp;base64,')), true);
+   }
+   await p.locator('.completion-art').click();
+   assert.equal(await p.evaluate(() => window.reader.data.characterReply), true);
+   assert.ok((await p.locator('.completion-message').textContent()).includes('收到你的击掌啦'));
+   assert.equal(await p.locator('.character-portrait').evaluate(e => getComputedStyle(e).animationName), 'character-highfive');
    assert.equal(await p.locator('.completion-panel').evaluate(e => e.scrollWidth <= e.clientWidth + 1), true);
-   const buttons = await p.locator('.completion-panel button').all();
+   if (output) {
+    fs.mkdirSync(output, { recursive: true });
+    await p.locator('.completion-art').evaluate(async e => { await Promise.all(e.getAnimations().map(a => a.finished)); });
+    await p.screenshot({ path: path.join(output, 'completion-' + width + 'x' + height + (fullscreen ? '-fullscreen' : '') + '.png') });
+   }
+   const buttons = await p.locator('.completion-panel .actions button').all();
    const boxes = await Promise.all(buttons.map(e => e.boundingBox()));
    assert.ok(Math.abs(boxes[0].width - boxes[1].width) < 1 && Math.abs(boxes[0].height - boxes[1].height) < 1);
    for (const button of buttons) {
@@ -206,5 +237,28 @@ let browser, checks = 0;
    assert.equal(await p.evaluate(() => window.reader.data.index), 0); checks++;
   }
  }
- console.log(`PASS: ${checks} mini-program WXML/WXSS browser adapter checks; ${dialogueBooks.length} selected books with configured dialogue pages, both languages, five viewports, stable art, fixed bubble mode, fullscreen with controls hidden/shown and image retry. Not a native device test.`);
+ // Every catalog entry shares the same popup, including books without dialogue.
+ // Trigger directly here; fake-clock unit cases cover the real silent/audio triggers.
+ for (const [width, height] of [[320, 568], [568, 320], [1366, 768]]) {
+  await p.setViewportSize({ width, height });
+  for (const book of books) for (const fullscreen of [false, true]) {
+   await p.evaluate(async ({ id, fullscreen }) => {
+    await window.openOrdinaryBook(id); const r = window.reader;
+    r.visited = new Set(r.pages.map((_, i) => i)); r.show(r.pages.length - 1, false);
+    r.setData({ fullscreen }); r.frame(); r.finish();
+   }, { id: book.id, fullscreen });
+   const failures = await p.evaluate(() => {
+    const errors = [], panel = document.querySelector('.completion-panel'), rect = panel.getBoundingClientRect();
+    if (rect.top < 0 || rect.bottom > innerHeight + 1 || panel.scrollWidth > panel.clientWidth + 1) errors.push('popup outside viewport');
+    if (!document.querySelector('.completion-art') || document.querySelectorAll('.completion-panel .actions button').length !== 2) errors.push('missing interaction or actions');
+    if (document.querySelector('button.finish')) errors.push('manual completion button remains');
+    return errors;
+   });
+   assert.deepEqual(failures, [], book.id + '/' + width + '/' + fullscreen); checks++;
+  }
+ }
+ await p.evaluate(() => { const image = document.querySelector('.character-portrait img'); if (image) image.dispatchEvent(new Event('error')); });
+ assert.equal(await p.locator('.completion-book').count(), 1, 'failed portrait must use the generic buddy');
+ await p.locator('.completion-art').click(); assert.equal(await p.evaluate(() => window.reader.data.characterReply), true);
+ console.log(`PASS: ${checks} mini-program WXML/WXSS browser adapter checks; ${dialogueBooks.length} selected books with configured dialogue pages, both languages, five viewports, stable art, fixed bubble mode, fullscreen with controls hidden/shown, image retry, all-book completion layouts and image-failure fallback. ${localArt ? 'Local illustration files' : 'Placeholder art'} with fixture API. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

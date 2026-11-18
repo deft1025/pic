@@ -2,7 +2,7 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 Page({
  data: { featured: [], recent: [], loading: true, error: '' },
- onShow() { this.load(); },
+ onShow() { this.getTabBar?.()?.sync(); this.load(); },
  async load() {
   const serial = (this.serial || 0) + 1; this.serial = serial;
   const token = api.session()?.token || '';
