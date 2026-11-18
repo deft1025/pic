@@ -78,7 +78,9 @@ class MaterialTests(unittest.TestCase):
             with self.subTest(book=bid):
                 raw = (ROOT/'content/sources/storybloom'/evidence['source_file']).read_bytes()
                 self.assertEqual(hashlib.sha256(raw).hexdigest(), evidence['source_sha256'])
-                source = json.loads(raw)['book']
+                original = json.loads(raw)
+                selector = evidence.get('source_selector')
+                source = next(item for item in original if item['id'] == selector['id']) if selector else original.get('book', original)
                 book = self.books[bid]
                 self.assertEqual(len(book['pages']), len(source['pages']))
                 self.assertEqual([p['page_number'] for p in evidence['images']], list(range(1, len(book['pages']) + 1)))
@@ -87,9 +89,9 @@ class MaterialTests(unittest.TestCase):
                 self.assertEqual(book['license']['source_url'], evidence['source_url'])
                 self.assertEqual(book['license']['review_status'], 'pending')
                 self.assertFalse(book['license']['self_hosting'])
-                self.assertIn('AI', book['illustrator'])
+                self.assertIn('AI', book['license']['attribution'])
                 self.assertIn('应用代码', book['license']['attribution'])
-                self.assertTrue(set(book['categories']).issubset({'cognition', 'habits'}))
+                self.assertTrue(set(book['categories']).issubset({'animals', 'habits', 'emotions', 'bedtime', 'nature', 'cognition', 'kindergarten'}))
 
     def test_original_editions_preserve_reviewed_text_page_order_and_credits(self):
         for bid, evidence in self.original_sources.items():

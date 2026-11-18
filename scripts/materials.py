@@ -29,13 +29,15 @@ class Store:
     def __init__(self, config=None):
         self.config = Path(config).resolve() if config else None
 
-    def call(self, action, book_id=None, payload=None, metadata_only=False):
+    def call(self, action, book_id=None, payload=None, metadata_only=False, category_id=None):
         binary = os.environ.get('PIC_MATERIALS_BIN')
         command = [binary, action] if binary else ['go', 'run', './cmd/materials', action]
         if self.config:
             command += ['--config', str(self.config)]
         if book_id:
             command += ['--book', book_id]
+        if category_id:
+            command += ['--category', category_id]
         if metadata_only:
             command += ['--metadata-only']
         result = subprocess.run(command, cwd=ROOT, input=json.dumps(payload, ensure_ascii=False) if payload is not None else None,
@@ -152,20 +154,26 @@ def snapshot_tests(store, destination=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['list', 'show', 'validate', 'audio', 'art', 'package', 'prepare', 'snapshot-tests'])
+    parser.add_argument('action', choices=['list', 'show', 'validate', 'audio', 'art', 'package', 'prepare', 'snapshot-tests', 'add-category'])
     parser.add_argument('--book', help='业务 ID；除 list 外必填，避免误生成全库')
     parser.add_argument('--db-config', type=Path, help='数据库.env配置，默认项目根目录.env')
     parser.add_argument('--language', choices=['zh', 'en', 'both'], default='both')
     parser.add_argument('--force', action='store_true', help='明确要求重生成本书音频')
     parser.add_argument('--preview', action='store_true', help='只生成第一页试听，不写库')
     parser.add_argument('--source-dir', type=Path, help='原画源图目录，默认按来源记录选择批次')
+    parser.add_argument('--category', help='add-category 必填；新增已定义的主题，不修改现有主题')
     args = parser.parse_args(argv)
-    if args.action not in ['list', 'snapshot-tests'] and (not args.book or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.book)):
+    if args.action == 'add-category' and (not args.category or args.book) or args.action != 'add-category' and args.category:
+        parser.error('add-category 必须仅指定 --category 主题ID')
+    if args.action not in ['list', 'snapshot-tests', 'add-category'] and (not args.book or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.book)):
         parser.error('请用 --book 指定一本有效书目 ID')
     if args.preview and args.action != 'audio':
         parser.error('--preview 仅用于 audio')
     store = Store(args.db_config)
-    if args.action == 'snapshot-tests':
+    if args.action == 'add-category':
+        store.call('add-category', category_id=args.category)
+        print(args.category + ': 主题已创建或已存在，未修改已有主题。')
+    elif args.action == 'snapshot-tests':
         snapshot_tests(store)
     elif args.action == 'list':
         for book_id in store.call('list'):

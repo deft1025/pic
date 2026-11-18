@@ -20,6 +20,33 @@ type materialMemory struct {
 	conflict bool
 }
 
+type categoryMemory struct {
+	materialMemory
+	option model.Option
+	order  int
+	err    error
+}
+
+func (m *categoryMemory) AddMaterialCategory(_ context.Context, option model.Option, order int) error {
+	m.option, m.order = option, order
+	return m.err
+}
+
+func TestMaterialCategoryRejectsUnknownIDsAndPropagatesConflicts(t *testing.T) {
+	m := &categoryMemory{}
+	s := NewMaterials(m, false)
+	if err := s.AddCategory(context.Background(), "unreviewed-topic"); err == nil || m.option.ID != "" {
+		t.Fatal("unknown category reached storage")
+	}
+	if err := s.AddCategory(context.Background(), "kindergarten"); err != nil || m.option.Name != "幼儿园适应" || m.order < 1 {
+		t.Fatal("known category was not created", err)
+	}
+	m.err = errors.New("existing metadata differs")
+	if err := s.AddCategory(context.Background(), "kindergarten"); !errors.Is(err, m.err) {
+		t.Fatal("storage conflict was hidden", err)
+	}
+}
+
 func (m *materialMemory) Material(context.Context, string) (repository.MaterialSnapshot, error) {
 	if m.missing {
 		return repository.MaterialSnapshot{}, sql.ErrNoRows

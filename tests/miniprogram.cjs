@@ -395,7 +395,8 @@ test('fullscreen uses the window and safe areas, reveals controls on demand and 
  p.controls(); assert.equal(p.frameH, height);
  c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, statusBarHeight: 0 });
  c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 32 }); p.onResize();
- assert.equal(p.frameWidth, 844); assert.ok(p.frameH > 0 && p.frameH < 390);
+ assert.equal(p.data.landscape, true); assert.ok(p.frameWidth > 400 && p.frameWidth < 844); assert.equal(p.frameH, 342);
+ const landscapeHeight = p.frameH; p.controls(); assert.equal(p.frameH, landscapeHeight, 'landscape controls shrank the art');
  p.fullscreen(); assert.equal(p.data.fullscreen, false); assert.equal(p.data.controlsVisible, true);
 });
 
@@ -652,4 +653,31 @@ test('switching language after paused audio restarts the silent final-page wait'
  reader.play(); reader.play(); clock.advance(5000); assert.equal(reader.data.completed, false);
  reader.language({ currentTarget: { dataset: { language: 'en' } } });
  clock.advance(3999); assert.equal(reader.data.completed, false); clock.advance(1); assert.equal(reader.data.completed, true);
+});
+
+
+test('fullscreen rotation uses resize-event dimensions while window metrics catch up, and restores portrait', async () => {
+ const c = client(o => o.url.endsWith('/pages') ? { items: [{ image: '/image.webp', text_zh: '旁白', text_original: 'Story', audio_zh: '/audio.mp3' }] } : { title_zh: '故事' });
+ let info = { windowWidth: 390, windowHeight: 844, screenHeight: 844, statusBarHeight: 24, safeArea: { left: 0, right: 390, bottom: 810 } };
+ c.wx.getWindowInfo = () => info; c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: info.windowWidth === 390 ? 56 : 32 });
+ const reader = c.page('reader'); reader.onLoad({ id: 'book' }); await tick(); reader.fullscreen();
+ reader.play(); const audio = c.audios.at(-1);
+ reader.onResize({ size: { windowWidth: 844, windowHeight: 390 } });
+ assert.equal(reader.data.landscape, true); assert.equal(reader.data.viewportHeight, 390); assert.ok(reader.frameWidth > 400 && reader.frameWidth < 600);
+ assert.equal(reader.data.safeLeft, 8, 'stale portrait safe area was reused');
+ info = { windowWidth: 844, windowHeight: 390, screenHeight: 390, statusBarHeight: 0, safeArea: { left: 44, right: 800, bottom: 369 } };
+ reader.frame(); assert.equal(reader.data.safeLeft, 44); assert.equal(reader.data.safeRight, 44); assert.equal(reader.data.safeBottom, 21);
+ const height = reader.frameH; reader.controls(); assert.equal(reader.frameH, height); assert.ok(reader.data.narrationHeight > 24);
+ reader.onResize({ size: { windowWidth: 390, windowHeight: 844 } }); assert.equal(reader.data.landscape, false); assert.equal(reader.frameWidth, 390);
+ assert.equal(reader.audio, audio); assert.equal(audio.destroyed, false); assert.equal(c.audios.length, 1); assert.equal(reader.data.playing, true);
+ reader.onUnload();
+});
+
+test('detail credits show creator names while retaining original source records', async () => {
+ const source = { id: 'book', title_zh: '故事', author: 'StoryBloom（AI生成，项目校对）', illustrator: 'StoryBloom（AI生成原图）', license: { attribution: '完整来源记录' } };
+ const c = client(() => source), detail = c.page('detail'); detail.onLoad({ id: 'book' }); await tick();
+ assert.equal(detail.data.book.author, 'StoryBloom'); assert.equal(detail.data.book.illustrator, 'StoryBloom');
+ assert.equal(source.author, 'StoryBloom（AI生成，项目校对）'); assert.equal(detail.data.book.license.attribution, '完整来源记录');
+ const book = c.load('utils/api.js').book({ author: '杜甫 / StoryBloom', illustrator: '真实插画师（翻译版）' });
+ assert.equal(book.author, '杜甫 / StoryBloom'); assert.equal(book.illustrator, '真实插画师（翻译版）');
 });

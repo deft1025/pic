@@ -20,6 +20,28 @@ type MaterialSnapshot struct {
 
 var ErrMaterialConflict = errors.New("绘本已被其他操作修改，请重新查库后重试；本次未写入")
 
+// AddMaterialCategory is create-only. Repeating the same request is safe, while
+// an existing entry with different metadata is never silently overwritten.
+func (r *MySQL) AddMaterialCategory(ctx context.Context, option model.Option, order int) error {
+	tx, err := r.db.BeginTx(ctx, nil)
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+	var current model.Option
+	var currentOrder int
+	err = tx.QueryRowContext(ctx, "SELECT category_id,name,description,sort_order FROM categories WHERE category_id=? FOR UPDATE", option.ID).Scan(&current.ID, &current.Name, &current.Description, &currentOrder)
+	if errors.Is(err, sql.ErrNoRows) {
+		_, err = tx.ExecContext(ctx, "INSERT INTO categories (category_id,name,description,sort_order) VALUES (?,?,?,?)", option.ID, option.Name, option.Description, order)
+	} else if err == nil && (current != option || currentOrder != order) {
+		return errors.New("主题已存在且信息不同，本次未修改；请重新查库核对")
+	}
+	if err != nil {
+		return err
+	}
+	return tx.Commit()
+}
+
 func materialRevision(b model.Book) string {
 	data, _ := json.Marshal(b)
 	return fmt.Sprintf("%x", sha256.Sum256(data))

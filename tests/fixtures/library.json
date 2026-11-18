@@ -2005,7 +2005,8 @@
       ],
       "categories": [
         "animals",
-        "emotions"
+        "emotions",
+        "kindergarten"
       ],
       "languages": [
         "zh",
@@ -2017,7 +2018,7 @@
       "featured_order": 12,
       "published_at": "2026-11-10T07:00:00Z",
       "publish_status": "published",
-      "content_version": "materials-a1d645fa85604a0b2a72567168704332949cd6882dcccf21a6304340b1c2c505",
+      "content_version": "materials-02d414b26dcdb3877542bc406afc2318b2ee3a49687fd45f4759f114d66514b9",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -5866,7 +5867,8 @@
       ],
       "categories": [
         "animals",
-        "emotions"
+        "emotions",
+        "kindergarten"
       ],
       "languages": [
         "zh",
@@ -5878,7 +5880,7 @@
       "featured_order": 0,
       "published_at": "2026-11-16T09:30:00Z",
       "publish_status": "published",
-      "content_version": "materials-91d654d71024a89ff573787bb4210b1b8a3ebe378b99dafc2296536d176ea54d",
+      "content_version": "materials-533718f1f05cc3e74af9fd324216e87dde9c6bbb58660ea714b24fec7caa5141",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -11496,6 +11498,504 @@
       ]
     },
     {
+      "id": "sb-a-rose-for-you",
+      "title_zh": "赠人玫瑰，手有余香",
+      "title_original": "A Rose for You",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "小刺猬想把生日桌摆满玫瑰，却在邀请朋友的路上送出了一朵又一朵。他也给自己留下一朵，最后收获了一桌温暖的陪伴。",
+      "reading_value": "在温暖的分享里，也照顾自己的心愿",
+      "age_ranges": [
+        "3-4"
+      ],
+      "categories": [
+        "bedtime",
+        "animals",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-a-rose-for-you/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T09:56:46.174Z",
+      "publish_status": "published",
+      "content_version": "materials-1892bddb95073f19da2a798d0fa1585604ce1d81e314577d29dd6051f2688d7f",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/yanyu/zeng-ren-mei-gui",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom谚语故事系列，公开AI生成样例，来源未列逐本个人绘本作者、插画师及具体生成模型。本版保留完整18页双语文本与原图；英文书名由本项目翻译，添加实际角色对白排版与合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T09:59:42.111Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T09:58:14.955Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-a-rose-for-you/page-001.webp",
+          "image_alt": "穿绿色针织衣的小刺猬站在林间圆门小屋外，欣赏院子里盛开的粉红玫瑰。",
+          "text_zh": "小刺猬的生日快到了。院子里的粉红玫瑰，也一朵朵开了。",
+          "text_original": "Little Hedgehog's birthday was coming, and pink roses were opening in his garden.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-001.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-a-rose-for-you/page-002.webp",
+          "image_alt": "小刺猬站在铺着桌布的小桌旁，桌上有几个空花瓶，门边篮子里装着花。",
+          "text_zh": "他想把花摆满小桌子，请朋友们来吃点心。",
+          "text_original": "He wanted to fill his little table with flowers and invite friends for treats.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-002.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-a-rose-for-you/page-003.webp",
+          "image_alt": "小刺猬提着装满粉红玫瑰的藤篮，沿着开着小花的林间石头路往前走。",
+          "text_zh": "清早，他装好一篮花，沿着小路去邀请大家。",
+          "text_original": "Early one morning, he took a basket of flowers and went to invite everyone.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-003.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-a-rose-for-you/page-004.webp",
+          "image_alt": "小刺猬提着花篮站在池塘边，小鸭围着蓝色围巾坐在岸边望向水面。",
+          "text_zh": "池塘边，小鸭望着远方。“我有点想家，那边也开着这样的花。”",
+          "text_original": "By the pond, Duckling gazed into the distance. “I miss home. Flowers like these grow there too.”",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-004.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 96,
+              "zh": 29
+            },
+            "text_sha256": {
+              "en": "fcaa67c274c5acb1bb706eebba27bd51600a92888a271750e8390dbe2ad1e307",
+              "zh": "9184df0fe02f6eac114521611f1ec194e3ecb86c59abbe45f7fc332fda048e9e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 47,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 96,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Duckling",
+                  "zh": "小鸭"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  71,
+                  49
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-a-rose-for-you/page-005.webp",
+          "image_alt": "小刺猬把一朵粉红玫瑰递给小鸭，小鸭坐在小屋外的小路边看着花。",
+          "text_zh": "小刺猬挑出一朵：“送给你，让它陪你想一想家。”",
+          "text_original": "Little Hedgehog chose a rose. “This is for you. It can keep you company while you think of home.”",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-005.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 97,
+              "zh": 23
+            },
+            "text_sha256": {
+              "en": "69c71ef913314ee358c49643a0d8a3a8db0a773a3b3f93df02967e02d48aedfe",
+              "zh": "77d64a65952b8362e2a8206db30dbc840d261cb5c00f709093959f20ed07d9e1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 30,
+                  "zh": 8
+                },
+                "end": {
+                  "en": 97,
+                  "zh": 23
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "小刺猬"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  37,
+                  48
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-a-rose-for-you/page-006.webp",
+          "image_alt": "小刺猬提着花篮站在山羊阿姨的圆门外，望着半掩窗帘的窗子。",
+          "text_zh": "走到山羊阿姨家，他看见窗帘半掩着，屋里静悄悄的。",
+          "text_original": "At Aunt Goat's house, the curtains were half closed and everything was quiet.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-006.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-a-rose-for-you/page-007.webp",
+          "image_alt": "山羊阿姨穿着紫色披肩站在门边，小刺猬从花篮里举起一朵玫瑰递向她。",
+          "text_zh": "阿姨正照顾休养的家人。小刺猬轻声说：“这些花，放在窗边好吗？”",
+          "text_original": "Aunt Goat was caring for a resting relative. “Could these flowers go by the window?” Hedgehog asked softly.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-007.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 107,
+              "zh": 31
+            },
+            "text_sha256": {
+              "en": "7366e6d9050330e217d2161c509cd638944183a0271bd36dd00cdf99939eb567",
+              "zh": "11bd947c6b13c24c7be984ab1a01f2ef81050ec17da90c81f935f953caa3c326"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 45,
+                  "zh": 18
+                },
+                "end": {
+                  "en": 84,
+                  "zh": 31
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "小刺猬"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  34,
+                  64
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-a-rose-for-you/page-008.webp",
+          "image_alt": "小刺猬和山羊阿姨在窗边看着插有粉红玫瑰的花瓶，阳光照进安静的房间。",
+          "text_zh": "粉红的花映着阳光，安静的房间多了一点春天。",
+          "text_original": "Sunlight touched the pink petals, bringing a little spring into the quiet room.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-008.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-a-rose-for-you/page-009.webp",
+          "image_alt": "戴着有补丁旧帽子的小老鼠与提着花篮的小刺猬，在林间小路上相遇。",
+          "text_zh": "转过弯，他遇见小老鼠。那顶旧帽子的边上，缝着一块补丁。",
+          "text_original": "Around the bend, he met Mouse. A patch covered one side of Mouse's old hat.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-009.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-a-rose-for-you/page-010.webp",
+          "image_alt": "小刺猬和小老鼠面对面交谈，小老鼠的补丁帽子旁别着一朵粉红玫瑰。",
+          "text_zh": "“我很喜欢这顶帽子。”小老鼠说。小刺猬问：“要不要添一朵花？”",
+          "text_original": "“I love this hat,” Mouse said. “Would you like a flower for it?” asked Hedgehog.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-010.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 80,
+              "zh": 31
+            },
+            "text_sha256": {
+              "en": "0e6b903042911a2bfe85f9aa28176d1ca8e7e37c47c9613485c3cac3ba94d777",
+              "zh": "511779e830de47f94d1209f4f6ae4784d39ec42eaa3d29afc7256adaed19ea84"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 18,
+                  "zh": 11
+                },
+                "speaker": {
+                  "en": "Mouse",
+                  "zh": "小老鼠"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  73,
+                  46
+                ]
+              },
+              {
+                "start": {
+                  "en": 31,
+                  "zh": 21
+                },
+                "end": {
+                  "en": 64,
+                  "zh": 31
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "小刺猬"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  36,
+                  58
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-a-rose-for-you/page-011.webp",
+          "image_alt": "小老鼠开心地捧着双手，帽子上别着玫瑰，小刺猬在旁边微笑。",
+          "text_zh": "小老鼠点点头。花别好了，旧帽子变得像一个小花园。",
+          "text_original": "Mouse nodded. With the flower tucked in, the old hat looked like a tiny garden.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-011.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-a-rose-for-you/page-012.webp",
+          "image_alt": "小刺猬低头看着手里的藤篮，篮子里只剩下一朵玫瑰，身后是安静的小路。",
+          "text_zh": "回家的时候，篮子里只剩最后一朵。小刺猬的脚步慢了下来。",
+          "text_original": "On the way home, only one flower remained. Little Hedgehog slowed his steps.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-012.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-a-rose-for-you/page-013.webp",
+          "image_alt": "小刺猬坐在空空的小桌旁，双手托着脸，看着小瓶里的一朵玫瑰。",
+          "text_zh": "他看看空空的小桌子，心里有一点舍不得：“我的花桌子没有了。”",
+          "text_original": "He looked at his empty table and felt a little sad. “There goes my table full of flowers.”",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-013.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 90,
+              "zh": 30
+            },
+            "text_sha256": {
+              "en": "37c05d906fcb1e588fca820b1e004f889febad8d20aeeb36549957580bc71952",
+              "zh": "920a811a010cbc2bdffb7011371427ee913db7ffc3b27f1d72979302512d4005"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 52,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 90,
+                  "zh": 30
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "小刺猬"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  42,
+                  49
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-a-rose-for-you/page-014.webp",
+          "image_alt": "小刺猬把最后一朵粉红玫瑰插进玻璃小瓶，小瓶放在铺着桌布的小桌上。",
+          "text_zh": "想了一会儿，他把最后一朵插进小瓶。“这一朵，留给我自己。”",
+          "text_original": "After a moment, he put the last rose in a little vase. “This one is for me.”",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-014.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 76,
+              "zh": 29
+            },
+            "text_sha256": {
+              "en": "cf892ae9246b7cf8ca2fda8f8ffd8fe230c910e6efedfc9cea201a079df84106",
+              "zh": "5d90b77898d88363db1a02cfbb33884a48ec3c7219f4f758bfd2f5d84f57bd17"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 55,
+                  "zh": 17
+                },
+                "end": {
+                  "en": 76,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Hedgehog",
+                  "zh": "小刺猬"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  44,
+                  41
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-a-rose-for-you/page-015.webp",
+          "image_alt": "生日桌旁，小鸭举着一幅画给小刺猬看，画里有花田和小屋，桌上放着蛋糕。",
+          "text_zh": "生日那天，小鸭来了，带着一张家乡的画，讲起花田旁的小屋。",
+          "text_original": "On his birthday, Duckling came with a picture of home and stories of a cottage beside a flower field.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-015.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-015.mp3"
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-a-rose-for-you/page-016.webp",
+          "image_alt": "小刺猬、小鸭和山羊阿姨围坐在生日小桌旁，山羊阿姨微笑着和大家说话。",
+          "text_zh": "山羊阿姨也来坐了一会儿：“你送的花，让我们的窗边亮了好几天。”",
+          "text_original": "Aunt Goat stopped by. “Your flowers brightened our window for days,” she said.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-016.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-016.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 78,
+              "zh": 31
+            },
+            "text_sha256": {
+              "en": "6d88b10dea1b0bd30460604d3582c0c04bfb0d948588f9cf60c6f488efb6b0ab",
+              "zh": "fdd682c87db04811008a021a45e1b7d55862833c10c01c27a280927a1fa24d54"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 22,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 68,
+                  "zh": 31
+                },
+                "speaker": {
+                  "en": "Aunt Goat",
+                  "zh": "山羊阿姨"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  69,
+                  28
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-a-rose-for-you/page-017.webp",
+          "image_alt": "小刺猬、小老鼠、小鸭与山羊阿姨围坐在生日桌旁，小老鼠的帽子上别着玫瑰。",
+          "text_zh": "小老鼠戴着花帽子，逗得大家哈哈笑。小桌子周围，渐渐坐满了朋友。",
+          "text_original": "Mouse arrived in the flowered hat and made everyone laugh. Friends filled the seats around the table.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-017.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-a-rose-for-you/page-018.webp",
+          "image_alt": "朋友们围在生日桌边微笑，小刺猬把玫瑰轻轻凑近鼻子，桌上摆着蛋糕与茶杯。",
+          "text_zh": "桌上只有一朵玫瑰，屋里却满是笑声。小刺猬闻闻手心，好像还留着花香。",
+          "text_original": "There was only one rose on the table, but the room was full of laughter. Hedgehog's paws seemed to hold its scent.",
+          "audio_zh": "/assets/books/sb-a-rose-for-you/audio/zh/154c748e4b5d9991/page-018.mp3",
+          "audio_original": "/assets/books/sb-a-rose-for-you/audio/en/841471ff25e6d94b/page-018.mp3"
+        }
+      ]
+    },
+    {
       "id": "sb-bean-in-a-pot",
       "title_zh": "花盆里的一颗豆",
       "title_original": "A Bean in a Flowerpot",
@@ -12481,6 +12981,467 @@
                 "target": [
                   31,
                   35
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sb-can-i-ask-for-help",
+      "title_zh": "我想去洗手间，可以举手吗？",
+      "title_original": "May I Raise My Hand for the Bathroom?",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "听故事时，安安想去洗手间，却怕打断老师。乐乐的鼓励和林老师的回应，让她知道：身体不舒服时，可以及时告诉大人。",
+      "reading_value": "听见身体的小信号，练习开口求助",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "kindergarten",
+        "habits",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-can-i-ask-for-help/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 6,
+      "featured_order": 0,
+      "published_at": "2026-11-18T10:37:15.685Z",
+      "publish_status": "published",
+      "content_version": "materials-cafc3d9d8accdba096440ca422a1d31f0a9524a1e423841fa47ce06c65f1ccee",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom日常系列，公开AI生成样例，来源未列逐本个人作者、插画师及具体生成模型。本版保留完整18页顺序与WebP原图；完整中英文正文保留原文。英文书名由本项目翻译；增加实际角色对白排版及合成配音，首幅兼作封面。仓库MIT仅明确应用代码，未发现逐本图文独立许可，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T10:40:23.297Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T10:39:14.996Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-001.webp",
+          "image_alt": "林老师在教室里举着画有蓝色鲸鱼的大绘本，安安和其他孩子在前面认真听故事。",
+          "text_zh": "大班的故事时间到了。林老师坐在大家面前，打开一本关于大鲸鱼的绘本，开始讲起来。",
+          "text_original": "It was story time in the oldest kindergarten class. Teacher Lin sat with the children and opened a picture book about a great whale.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-001.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-002.webp",
+          "image_alt": "阳光照进教室，林老师展示鲸鱼绘本，孩子们围在课桌旁专心观看。",
+          "text_zh": "教室里安安静静的，大家都在聚精会神地听着。窗外小树叶在风里轻轻摇晃。",
+          "text_original": "The room was peaceful and quiet as everyone listened intently. Outside, young leaves rustled gently in the morning breeze.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-002.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-003.webp",
+          "image_alt": "安安坐在课桌前，双手放在腹部，神情担心，周围的同伴仍在听故事。",
+          "text_zh": "安安坐在第三排，两只手规规矩矩地放在膝盖上。突然，她觉得肚子里“咕噜”响了一声，小肚子变得鼓鼓胀胀的。",
+          "text_original": "An'an sat in the third row with hands folded on her knees. Suddenly, her tummy gave a soft rumble and felt uncomfortably full.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-003.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-004.webp",
+          "image_alt": "安安坐在木桌后扶着肚子，转头看向教室门口。",
+          "text_zh": "“我想去洗手间了……”安安望向门口。故事讲到一半，她却不知道该不该现在开口。",
+          "text_original": "“I need the bathroom,” An'an thought, looking toward the door. The story was halfway through, and she was unsure whether to speak up.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-004.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-005.webp",
+          "image_alt": "安安坐在小木椅上，双腿紧紧并拢，两只手放在肚子前，眉头皱起。",
+          "text_zh": "她想起开学第一天老师说的纪律：“上课时要保持安静，不随意走动。”安安把两只脚并得紧紧的，不敢乱动一下。",
+          "text_original": "She remembered the first-day rule: “Stay quiet during class and do not wander.” An'an clamped her feet tight, afraid to move.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-005.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-006.webp",
+          "image_alt": "林老师展示鲸鱼绘本，周围孩子笑起来，安安仍在座位上皱眉忍着不适。",
+          "text_zh": "林老师翻开下一页，讲到了大鲸鱼喷出高高的水花。全班同学都笑了起来，可安安却一点儿也笑不出声来。",
+          "text_original": "Teacher Lin turned the page to a whale spouting water. The class laughed in delight, but An'an could not even smile.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-006.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-007.webp",
+          "image_alt": "安安紧张地望向一侧，双手放在桌沿，明亮的教室里她显得有些局促。",
+          "text_zh": "随着时间的过去，肚子胀得越来越厉害，像装了一个快要吹爆的小气球。安安的额头甚至渗出了一颗颗亮晶晶的小汗珠。",
+          "text_original": "As minutes ticked by, her tummy felt like a balloon stretched to bursting. Tiny beads of sweat appeared on her forehead.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-007.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-008.webp",
+          "image_alt": "安安低着头坐在课桌前，小手放在桌下，脸上满是犹豫。",
+          "text_zh": "“现在举手，老师会不会当着全班同学批评我下课没去厕所？”安安心里像打鼓一样七上八下，手缩在桌子下面直打颤。",
+          "text_original": "“If I raise my hand now, will the teacher scold me in front of everyone?” Her heart drummed in panic; her hands shook under the desk.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-008.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-009.webp",
+          "image_alt": "穿黄色上衣的乐乐俯身靠近安安，手轻轻扶着她的肩，询问她怎么了。",
+          "text_zh": "同桌乐乐注意到了安安的不自在。乐乐侧过身，悄悄拉了拉安安的衣角：“安安，你怎么啦？脸都白了。”",
+          "text_original": "Desk partner Lele noticed her discomfort. He leaned in and tugged her sleeve softly: “An'an, what's wrong? You look pale.”",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-009.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 122,
+              "zh": 47
+            },
+            "text_sha256": {
+              "en": "3a9c65cdb038e9395d40a0930e0c6ede35f09ec04a253ad2395fa40e37d8ba9b",
+              "zh": "62e7df7384e078162981b0d48e4c0efed38d15fcab46a9b5aed703ad93f5edd0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 85,
+                  "zh": 32
+                },
+                "end": {
+                  "en": 122,
+                  "zh": 47
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  73,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-010.webp",
+          "image_alt": "安安侧头靠近乐乐低声说话，乐乐扶着她的肩膀认真听。",
+          "text_zh": "“我想去洗手间……但我不敢举手。”安安带着哭腔小声说。",
+          "text_original": "“I need the bathroom... but I'm scared to raise my hand,” An'an whispered with a catch in her throat.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-010.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 101,
+              "zh": 27
+            },
+            "text_sha256": {
+              "en": "238cdb382eaf55c260225e23d325a0c1460611ce14ae71e3a8f5491b3f02e35c",
+              "zh": "eee20274aaa8f6ee1fb20270e02bd10eede910a7b0a3a5e919a6c760e176bc5c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 57,
+                  "zh": 17
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  43,
+                  42
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-011.webp",
+          "image_alt": "乐乐靠近安安温柔地鼓励她，安安双手合在胸前抬头看他，老师在远处。",
+          "text_zh": "“可以告诉老师你需要帮助。”乐乐轻声鼓励她，“不用一直忍着，我陪你举一下手。”",
+          "text_original": "“You can tell the teacher you need help,” Lele encouraged softly. “You do not have to hold it. I can raise a hand with you.”",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-011.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 124,
+              "zh": 39
+            },
+            "text_sha256": {
+              "en": "d762b1f7f31431370c3633cfb9e066728ea46d25f9f55f89829f0ebd7b430229",
+              "zh": "2f74651687c8de580521a84e155ed434e51458a93b4048e399c29d98089b3e61"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 41,
+                  "zh": 14
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  72,
+                  42
+                ]
+              },
+              {
+                "start": {
+                  "en": 66,
+                  "zh": 22
+                },
+                "end": {
+                  "en": 124,
+                  "zh": 39
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  72,
+                  42
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-012.webp",
+          "image_alt": "安安一只手贴在胸口，抬头望向老师的方向，乐乐坐在她身旁陪伴。",
+          "text_zh": "安安深吸了一口气。她想起了妈妈说过的话：“身体不舒服时，一定要第一时间告诉大人。”",
+          "text_original": "An'an took a deep breath. She remembered Mom's words: “Whenever your body feels uncomfortable, tell a grown-up right away.”",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-012.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-013.webp",
+          "image_alt": "故事圈里，安安高高举起右手，林老师拿着鲸鱼绘本看向她，其他孩子坐在一旁。",
+          "text_zh": "安安举起了右手。小手臂直直地伸向空中：“林老师……我想去洗手间。”声音不大，但清楚明白。",
+          "text_original": "An'an raised her right arm straight up into the air. “Teacher Lin... may I go to the bathroom?” Her voice was soft, but clear.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-013.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 126,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "c62ddc2c4add43b0e7d3f9868796bf6cd0d17eef092900dfe672d354b31d9132",
+              "zh": "298e212eb8a2142b1a20c1115d8a22556ecbc98422491bdf0505554466e179b8"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 53,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 95,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  43,
+                  40
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-014.webp",
+          "image_alt": "林老师放低鲸鱼绘本，俯身向走近的安安微笑点头，阳光照着桌边。",
+          "text_zh": "教室里没有哄堂大笑，也没有严厉的责怪。林老师立刻放下了手里的绘本，微笑着对安安点头：“快去吧，安安！”",
+          "text_original": "There was no laughter and no scolding. Teacher Lin lowered the book at once and smiled warmly: “Go right ahead, An'an!”",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-014.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 119,
+              "zh": 51
+            },
+            "text_sha256": {
+              "en": "3125d45f1bfeee751e36a04fbd25b8ffc49658beece3fa38bd00addbf0a8646e",
+              "zh": "bdc0f2f4ae9d34125de1ccdddf65567f8a8c5eb21a0f0af38292b0bb1d84890c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 95,
+                  "zh": 42
+                },
+                "end": {
+                  "en": 119,
+                  "zh": 51
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  70,
+                  32
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-015.webp",
+          "image_alt": "安安快步走向教室旁的洗手区，门边的男孩扶着门，林老师在身后留意着她。",
+          "text_zh": "门边的天天帮忙扶住通往洗手区的门。林老师留意着旁边的短走廊，安安快步走了过去。",
+          "text_original": "Tiantian held the door to the handwashing area. Teacher Lin watched the short corridor nearby as An'an walked briskly over.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-015.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-015.mp3"
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-016.webp",
+          "image_alt": "安安站在洗手台边用纸巾擦手，神情轻松，墙上有纸巾盒和明亮的镜子。",
+          "text_zh": "从洗手间洗好手出来，肚子的胀痛全都消失了，整个人像卸下了一块大石头一样轻松自在。",
+          "text_original": "Coming out after washing her hands, the painful pressure was gone. An'an felt as light as if a heavy stone had rolled away.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-016.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-016.mp3"
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-017.webp",
+          "image_alt": "林老师在安安身旁蹲下，把一张白色纸巾递给她，两人微笑着对视。",
+          "text_zh": "回到教室坐好，林老师走过来，悄悄把一张擦手纸递到她手心，还对她眨了眨眼睛。",
+          "text_original": "Back in her seat, Teacher Lin walked over, slipped a clean dry tissue into her hand, and gave her an affectionate wink.",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-017.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-can-i-ask-for-help/page-018.webp",
+          "image_alt": "林老师坐在孩子们中间和大家说话，安安举着手，鲸鱼绘本摊在圆桌上。",
+          "text_zh": "放学前，林老师对全班小朋友说：“规则很重要，但大家身体发出的红色信号最重要！任何时候想去洗手间，都可以勇敢举手！”",
+          "text_original": "Before dismissal, Teacher Lin announced: “Rules are important, but body signals are most important! Raise hands anytime you need the bathroom!”",
+          "audio_zh": "/assets/books/sb-can-i-ask-for-help/audio/zh/c56915569eb62f9d/page-018.mp3",
+          "audio_original": "/assets/books/sb-can-i-ask-for-help/audio/en/7f0a70fcb5cd5163/page-018.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 143,
+              "zh": 57
+            },
+            "text_sha256": {
+              "en": "43e34c14375c8b633bd2008345414e205e197e7109b9fe549375515d9de89d52",
+              "zh": "ec476c01998b41e8a1c991094016298e707bef41f4875fd0fa559cf97ada7bef"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 41,
+                  "zh": 15
+                },
+                "end": {
+                  "en": 143,
+                  "zh": 57
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  72,
+                  29
                 ]
               }
             ]
@@ -14687,6 +15648,2124 @@
       ]
     },
     {
+      "id": "sb-may-i-play",
+      "title_zh": "我可以和你们一起玩吗？",
+      "title_original": "May I Play with You?",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "操场的沙城堡真热闹，安安想加入，却迟迟不敢开口。伙伴的鼓励、一次清楚的邀请和老师的帮助，让更多孩子慢慢玩到一起。",
+      "reading_value": "练习说出邀请，也一起商量轮流",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "kindergarten",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-may-i-play/cover.webp",
+      "page_count": 20,
+      "reading_minutes": 6,
+      "featured_order": 0,
+      "published_at": "2026-11-18T10:37:10.552Z",
+      "publish_status": "published",
+      "content_version": "materials-d0845f53d457efb729a5ee7ce8b1ccd948d579d1d270fea6011622793d9be673",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom日常系列，公开AI生成样例，来源未列逐本个人作者、插画师及具体生成模型。本版保留完整20页顺序与WebP原图；第10页英文将同一说话者两段相邻引语间的短署名移到整段前，以对应中文说话轮次；内容和顺序不变，其余正文保留。英文书名由本项目翻译；增加实际角色对白排版及合成配音，首幅兼作封面。仓库MIT仅明确应用代码，未发现逐本图文独立许可，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T10:40:24.02Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T10:39:19.077Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-may-i-play/page-001.webp",
+          "image_alt": "安安背着橙色书包奔向幼儿园操场，旁边孩子们在阳光下游戏。",
+          "text_zh": "户外游戏开始了。阳光把塑胶跑道照得暖烘烘的，微风吹着大树的绿叶，孩子们走向喜欢的游戏区。",
+          "text_original": "Outdoor play began. Sunshine warmed the running track, and leaves rustled in the breeze as the children went to their chosen play areas.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-001.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-may-i-play/page-002.webp",
+          "image_alt": "安安手里拿着红色小汽车和黄色工程车，跑向操场上的沙坑。",
+          "text_zh": "安安手里拿着两辆自己心爱的小汽车：一辆红色小跑车，一辆黄色工程救援车。她快步来到大沙坑旁。",
+          "text_original": "An'an held two favorite toy cars in her hands: a little red roadster and a yellow tow truck. She hurried over to the sandpit.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-002.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-may-i-play/page-003.webp",
+          "image_alt": "穿绿色和蓝色上衣的两个男孩蹲在沙坑边，一起堆高高的沙城堡。",
+          "text_zh": "大沙坑边上热闹非凡。小宇和天天正蹲在沙堆前，忙得热火朝天。",
+          "text_original": "The sandpit was bustling. Xiaoyu and Tiantian knelt by a large sand mound, completely absorbed in their project.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-003.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-may-i-play/page-004.webp",
+          "image_alt": "两个男孩在沙坑中修建城堡和小桥，周围摆着彩色小桶、铲子和模具。",
+          "text_zh": "他们用湿润的细沙堆起了一座高大的连环城堡，周围还用小树枝插出了一圈威风凛凛的城墙。",
+          "text_original": "They shaped damp sand into a towering fortress, rimmed with dry twigs that looked like sturdy palace ramparts.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-004.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-may-i-play/page-005.webp",
+          "image_alt": "穿蓝色上衣的天天弯腰挖着城堡旁的沙子，穿绿色上衣的小宇在旁边搭建。",
+          "text_zh": "“这里需要一个大车库，可是沙子总往下塌！”天天一边挖洞一边着急地说。",
+          "text_original": "“We need a garage tunnel here, but the sand keeps tumbling down!” Tiantian said anxiously as he dug.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-005.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 100,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "5d07defcd5ed657ff0499951cd884b848d873dd5811bc67bf7dac87ef7578efd",
+              "zh": "e4f61376a52ade213ff748b3c528d0723ad333bd7f2a0ab9e7278e2edee8da76"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 65,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Tiantian",
+                  "zh": "天天"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  78,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-may-i-play/page-006.webp",
+          "image_alt": "安安站在沙坑后边拿着两辆玩具车，看着两个男孩专心堆城堡。",
+          "text_zh": "安安停在三步远的地方，看着他们那么投入，心里特别想加入他们一起玩。",
+          "text_original": "An'an stopped three paces away. Watching them play with such excitement, she wished deeply to join the adventure.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-006.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-may-i-play/page-007.webp",
+          "image_alt": "安安把两辆玩具车抱在胸前，站在操场边，表情犹豫而担心。",
+          "text_zh": "可她的脚像生了根一样停在原地，手指紧紧捏着小黄车，心想：“他们玩得那么高兴，会不会嫌我麻烦？”",
+          "text_original": "Her feet seemed rooted to the ground. Gripping the yellow car tightly, she thought: “Will they think I'm getting in the way?”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-007.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-may-i-play/page-008.webp",
+          "image_alt": "乐乐拿着彩色球站在安安旁边，张口询问她，安安抱着玩具车听。",
+          "text_zh": "乐乐拍着皮球从旁边路过，看见安安在沙坑边转圈，跑过来问：“安安，你怎么站在这里发呆呀？”",
+          "text_original": "Lele bounced his basketball by. Seeing An'an circling the sandpit, he ran over: “An'an, why are you just standing here?”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-008.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 120,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "4825a827da25db81b96320c07a307714822e1160e4019703718623adaeac334c",
+              "zh": "c3313abb9a62dbb05705dedaf61ba662cd54ef7a81467da795957d4fc8527419"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 80,
+                  "zh": 28
+                },
+                "end": {
+                  "en": 120,
+                  "zh": 44
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  68,
+                  39
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-may-i-play/page-009.webp",
+          "image_alt": "安安低着头向乐乐说话，乐乐抱着球看着她，两人站在沙坑旁。",
+          "text_zh": "“我想和他们一起搭城堡，但我不敢过去说。”安安低着头小声说。",
+          "text_original": "“I want to build castles with them, but I'm afraid to go over and ask,” An'an whispered, looking down at her sneakers.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-009.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 118,
+              "zh": 30
+            },
+            "text_sha256": {
+              "en": "8264986e81a2a6a914950e3dbef5fe6d990175a7088cf976b1819d02f9479c3b",
+              "zh": "308ab67c3ce2354a8be4731b1ccb1bca86d24bd92dd893aa579a104db2ca4e3d"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 71,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  30,
+                  42
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-may-i-play/page-010.webp",
+          "image_alt": "乐乐站在左边向安安说话，安安举着红色小车和黄色工程车看着他。",
+          "text_zh": "乐乐说：“可以先问问他们愿不愿意一起玩。你的小汽车能加入故事，也可以只带着你自己的想法。”",
+          "text_original": "Lele said, “You can ask whether they would like to play together. Your cars could join the story, or you could simply bring an idea.”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-010.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 133,
+              "zh": 45
+            },
+            "text_sha256": {
+              "en": "77e4d137cc8440e7ffd55723201a308c466084725d7ed266c35460d907964ea1",
+              "zh": "47caa19fb930b8532b3e88c56e86f60a1152f25c1c536ac94c2cea1eea58d7f9"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 11,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 133,
+                  "zh": 45
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  28,
+                  28
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-may-i-play/page-011.webp",
+          "image_alt": "安安迈步走到沙坑边，两个男孩仍低头忙着修筑城堡和水渠。",
+          "text_zh": "安安深吸了一口气，迈开步子走到了沙坑边缘。两个小男孩正专心地修筑护城河，没有注意到她。",
+          "text_original": "An'an took a steady breath and stepped up to the edge of the sandpit. The two boys were busy digging and hadn't noticed her yet.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-011.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-may-i-play/page-012.webp",
+          "image_alt": "安安站在沙坑边摊开双手向两个男孩说话，男孩们抬起头看她。",
+          "text_zh": "安安清了清嗓子，大声说：“哇！你们搭的沙子城堡真壮观，像一座真的石头王宫！”",
+          "text_original": "An'an cleared her throat and spoke clearly: “Wow! Your sand castle is amazing—it looks like a real stone fortress!”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-012.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 115,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "8ad62a7183b8eac266b20dc995fb181e7dc981dfeeb316ab3efd7760340b33e2",
+              "zh": "ab191676e823cbd49e60ce32f831bbebfad8319a77309ad9a9d158fe42d60770"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 44,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 115,
+                  "zh": 38
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  38,
+                  34
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-may-i-play/page-013.webp",
+          "image_alt": "两个男孩仰头微笑着看安安，城堡就在他们中间，安安站在沙坑后边。",
+          "text_zh": "两个小男孩抬起头，脸上沾着沙粒，听到称赞都笑了：“真的吗？我们已经修了好一会儿呢！”",
+          "text_original": "The two boys looked up with sandy cheeks and smiled at her kind words. “Really? We have been building for quite a while!”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-013.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-013.mp3"
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-may-i-play/page-014.webp",
+          "image_alt": "安安举着黄色小工程车向伙伴们发出邀请，两个男孩抬头微笑。",
+          "text_zh": "安安蹲下来，举起小黄车：“我可以和你们一起玩吗？我想和你们修一条路，让小救援车开进城堡。”",
+          "text_original": "An'an crouched and lifted her yellow truck. “May I play with you? I would like to help make a road so the rescue truck can enter the castle.”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-014.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 141,
+              "zh": 45
+            },
+            "text_sha256": {
+              "en": "4183fa5ae2e33cffccdc8290e8a919b0a46445a2b95e0c695c0a7cf1648a2fc3",
+              "zh": "a06784855d8562076e833c715ccbf7e8351d3252a0048a2b4333adc0496c9fd5"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 44,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 141,
+                  "zh": 45
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  49,
+                  32
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-may-i-play/page-015.webp",
+          "image_alt": "穿绿色上衣的小宇开心地伸手招呼安安，安安俯身将黄色工程车举向城堡。",
+          "text_zh": "小宇眼前一亮，高兴得直拍手：“太好了！我们刚才正愁没有结实的桥面呢！大工程师，快来这边！”",
+          "text_original": "Xiaoyu's eyes widened and he clapped with glee: “Awesome! We were just wishing for a bridge! Come on over, Chief Engineer!”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-015.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-015.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 123,
+              "zh": 45
+            },
+            "text_sha256": {
+              "en": "d544ff39badc153c26e4ff372e088a8d37be409f6fbfa2e078e0581de3b70c91",
+              "zh": "6d3286a9506e16b8a8f2203f765a91e92b947f999fe45e880d32683a537fbd25"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 48,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 123,
+                  "zh": 45
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小宇"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  23,
+                  41
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-may-i-play/page-016.webp",
+          "image_alt": "安安和两个男孩一起摆放玩具车、整理城堡旁的沙子，小铲子放在手边。",
+          "text_zh": "天天也把一把小铲子递给安安：“你来负责挖西边的深水渠，我们给救援车开一条平整的大道！”",
+          "text_original": "Tiantian handed a mini plastic shovel to An'an: “You can dig the west canal, and we'll pave a smooth road for your truck!”",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-016.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-016.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 122,
+              "zh": 43
+            },
+            "text_sha256": {
+              "en": "12498750e9830b749c6ec7c8e0e6051193e448e5c6bf2d32003f7db1a3e4c5a0",
+              "zh": "269cc70efd93ef881478cb42fbe5b0e167532cc9b7816d0bb495da7e3e18f0ee"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 48,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 122,
+                  "zh": 43
+                },
+                "speaker": {
+                  "en": "Tiantian",
+                  "zh": "天天"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  74,
+                  38
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-may-i-play/page-017.webp",
+          "image_alt": "三个孩子围在沙城堡边合作，玩具车停在城堡上，木片小桥横跨前面的水渠。",
+          "text_zh": "三个人在细沙里忙碌着。小汽车停上城堡，木片搭成的小桥横过水渠，大家又给它补了补。",
+          "text_original": "The three children worked in the sand. The cars rested on the castle, and a little wooden bridge crossed the channel. Together, they made it steadier.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-017.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-may-i-play/page-018.webp",
+          "image_alt": "三个孩子继续堆城堡，另两个小朋友来到沙坑后边，旁边放着彩色小桶和铲子。",
+          "text_zh": "过了一会儿，又有两个别班的小朋友想加入运沙子。沙坑边已经挤满了人，工具也分完了。",
+          "text_original": "Later, two other children ran up wanting to carry sand. But the pit was already crowded and all tools were in use.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-018.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-018.mp3"
+        },
+        {
+          "page_number": 19,
+          "image": "/assets/books/sb-may-i-play/page-019.webp",
+          "image_alt": "林老师蹲在沙坑旁和孩子们商量，几个孩子围着她和沙城堡倾听。",
+          "text_zh": "小宇说：“我们再玩一小会儿就轮换，好吗？”林老师听见了，过来和大家一起安排，让新来的朋友也有机会。",
+          "text_original": "“Shall we swap turns after a little while?” Xiaoyu asked. Teacher Lin heard and helped arrange things so the newcomers would have a turn too.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-019.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-019.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 141,
+              "zh": 49
+            },
+            "text_sha256": {
+              "en": "c94107d904fc3cb404b1adc7722730171945aa57798eff0b041395a925669aac",
+              "zh": "154fd0dc70dcd4566a25f9ae61c4322cbc25a924c71984d77d5b5646dbb95073"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 43,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小宇"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  43,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 20,
+          "image": "/assets/books/sb-may-i-play/page-020.webp",
+          "image_alt": "林老师站在孩子们身后微笑，更多小朋友围在沙坑边一起修筑城堡。",
+          "text_zh": "安安发现，想一起玩可以问出来，暂时要等也可以说说心情。和朋友商量、找老师帮忙，游戏就能慢慢接着玩。",
+          "text_original": "An'an learned she could ask to join and say how waiting felt. Talking with friends and asking a teacher for help could keep the game going.",
+          "audio_zh": "/assets/books/sb-may-i-play/audio/zh/8a194a9b4f0e8b6e/page-020.mp3",
+          "audio_original": "/assets/books/sb-may-i-play/audio/en/86955f8ebe448e9f/page-020.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-nightlight-can-stay",
+      "title_zh": "今晚的小灯可以亮着吗",
+      "title_original": "Could the Little Light Stay On Tonight?",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "睡前，安安被窗边的影子吓住了。爸爸陪她寻找影子的来处，留下小夜灯，也留下随时可以呼唤的陪伴。",
+      "reading_value": "陪孩子说出怕黑，找到安心入睡的办法",
+      "age_ranges": [
+        "3-4"
+      ],
+      "categories": [
+        "bedtime",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-nightlight-can-stay/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T09:56:31.728Z",
+      "publish_status": "published",
+      "content_version": "materials-9b1adfa3ea57b0b7c7ea5ff35fe85f39285ff904cdbbe23557204da9c35e0b37",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom日常系列系列，公开AI生成样例，来源未列逐本个人绘本作者、插画师及具体生成模型。本版保留完整18页双语文本与原图；英文书名由本项目翻译，添加实际角色对白排版与合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T10:00:00.755Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T09:58:22.439Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-nightlight-can-stay/page-001.webp",
+          "image_alt": "安安穿着浅黄色睡衣躺在被窝里，爸爸坐在床边陪伴，左侧台灯发出暖光。",
+          "text_zh": "睡前，安安穿好软软的睡衣，听爸爸讲完故事。房间里的灯一暗，窗帘边就出现了一团长长的影子。",
+          "text_original": "At bedtime, An'an put on her soft pajamas and listened to Dad's story. When the light dimmed, a long shadow appeared beside the curtain.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-001.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-nightlight-can-stay/page-002.webp",
+          "image_alt": "安安把被子拉到胸前，望向蓝色窗帘旁的长影子，怀里抱着玩偶。",
+          "text_zh": "她盯着影子，越看越像一只伸出手的大东西。安安把被子拉高，只露出两只眼睛。",
+          "text_original": "She stared at the shadow. The longer she looked, the more it seemed like something large reaching out. She pulled up her quilt, leaving only her eyes showing.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-002.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-nightlight-can-stay/page-003.webp",
+          "image_alt": "爸爸站在门边回头看安安，安安坐在床上抬头看他。",
+          "text_zh": "“我要关大灯了。”爸爸说。安安想开口，又把话咽回去：“说害怕，会不会被笑？”",
+          "text_original": "“I'm going to turn off the main light,” Dad said. An'an wanted to speak but swallowed the words. “Would he laugh if I said I was scared?”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-003.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 137,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "a6bcaf1f900c3f5b646861e6a0d6089191ba7446ee35886c4cb1edc0456cc98b",
+              "zh": "bf78bac33304aa91e37f5a2f64c16ff9485f7b4a0c7ea919c0d33d80772fcd91"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 39,
+                  "zh": 9
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  62,
+                  22
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-nightlight-can-stay/page-004.webp",
+          "image_alt": "安安在床上张口叫爸爸，爸爸扶着门转过身来。",
+          "text_zh": "灯还没关，她就轻轻叫了一声：“爸爸。”爸爸转过身：“怎么了？”",
+          "text_original": "Before the light went off, she softly called, “Dad.” He turned. “What is it?”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-004.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 77,
+              "zh": 31
+            },
+            "text_sha256": {
+              "en": "cb7a501b17ac9037bfa6b827ac1963dbe2922777bc6e67c3eb613b19f8a418cd",
+              "zh": "64445498a96868f258fa9b8b359e8f39dd4d1129bb82867a266cc2b01282e0bd"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 46,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 52,
+                  "zh": 19
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  28,
+                  47
+                ]
+              },
+              {
+                "start": {
+                  "en": 64,
+                  "zh": 25
+                },
+                "end": {
+                  "en": 77,
+                  "zh": 31
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  67,
+                  21
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-nightlight-can-stay/page-005.webp",
+          "image_alt": "安安坐在床上伸手指向窗边，爸爸俯身听她说话。",
+          "text_zh": "“今晚的小灯，可以亮着吗？”安安问，“窗边有个影子，我看着有点害怕。”",
+          "text_original": "“Could the little light stay on tonight?” An'an asked. “There's a shadow by the window, and it scares me a little.”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-005.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 115,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "e3c349fa8fd1bfc551e5c7c6eccdecb7c555b5a6491350e1deb4df57c513bc1c",
+              "zh": "83704f1bc1533986f586afb49aadd36dc6405da1f207ae550e79e0e05ea643d0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 41,
+                  "zh": 14
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  48,
+                  45
+                ]
+              },
+              {
+                "start": {
+                  "en": 55,
+                  "zh": 18
+                },
+                "end": {
+                  "en": 115,
+                  "zh": 35
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  48,
+                  45
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-nightlight-can-stay/page-006.webp",
+          "image_alt": "爸爸重新坐在床边，一只手轻轻搭在安安肩上，微笑着回应她。",
+          "text_zh": "爸爸没有笑。他坐回床边：“谢谢你告诉我。我们一起看看它从哪里来，好吗？”",
+          "text_original": "Dad did not laugh. He sat by the bed again. “Thank you for telling me. Shall we look together and see where it comes from?”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-006.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 123,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "f867be29d35b33d451dd4d40f2b8c03667b9d39800715ce3b03faabf3c8ed405",
+              "zh": "a4141fa2d1e708003114bb77d63d74fc8132422e7d4891b709bda9b9674a3445"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 44,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 123,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  69,
+                  31
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-nightlight-can-stay/page-007.webp",
+          "image_alt": "安安和爸爸一起查看搭在木椅上的深色外套，袖子从椅背垂下。",
+          "text_zh": "大灯亮了一点，安安才看见，椅背上搭着爸爸的外套，一只袖子垂到了窗帘旁。",
+          "text_original": "With the light a little brighter, An'an saw Dad's coat over a chair. One sleeve hung down beside the curtain.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-007.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-nightlight-can-stay/page-008.webp",
+          "image_alt": "爸爸站在窗边拿起椅背上的外套，安安在床上看着他。",
+          "text_zh": "爸爸拿起外套，那团长影子也跟着动了。原来，伸出来的那只“手”，是一条空空的袖子。",
+          "text_original": "Dad lifted the coat, and the long shadow moved too. The reaching “hand” was an empty sleeve.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-008.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-nightlight-can-stay/page-009.webp",
+          "image_alt": "安安坐在床沿向爸爸说心里的感受，爸爸抱着收起的外套认真听。",
+          "text_zh": "安安呼了口气，又说：“我知道是外套了，可灯一暗，心里还是有一点怕。”",
+          "text_original": "An'an breathed out, then said, “I know it's a coat now. But when it gets dark, I still feel a little scared inside.”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-009.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 116,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "869f79579d1b5e9df286815d840a54f3d5e4cac00c38e6c608ae8e78f5b5395d",
+              "zh": "c05917c7b619e4df422011220fe750599e2af5087a0675719d53aee60903920d"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 31,
+                  "zh": 10
+                },
+                "end": {
+                  "en": 116,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  31,
+                  44
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-nightlight-can-stay/page-010.webp",
+          "image_alt": "爸爸坐在床边温柔回应，安安抬头看他，双手轻轻摊开。",
+          "text_zh": "爸爸点头：“知道原因，和马上不害怕，不一定一起发生。我们可以再找一个舒服的办法。”",
+          "text_original": "Dad nodded. “Knowing the reason doesn't always make the fear disappear right away. We can find another way to feel comfortable.”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-010.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 128,
+              "zh": 41
+            },
+            "text_sha256": {
+              "en": "de6247886fc962c5ae7f2de0d98c92ab7cf28b8edde719186378261c3522e797",
+              "zh": "856a3c766cad5f148c07d0db6c6f988145fedea9861e9c5932a02261319a28e4"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 12,
+                  "zh": 5
+                },
+                "end": {
+                  "en": 128,
+                  "zh": 41
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  67,
+                  35
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-nightlight-can-stay/page-011.webp",
+          "image_alt": "爸爸挪动窗边的木椅，安安重新躺回床上看着他。",
+          "text_zh": "他们把外套收好，挪开椅子。安安躺回去试了试，窗边没有那只长袖子了。",
+          "text_original": "They put the coat away and moved the chair. An'an lay down to try again. The long sleeve was no longer beside the window.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-011.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-nightlight-can-stay/page-012.webp",
+          "image_alt": "爸爸弯腰把发出暖光的小夜灯放在木架上，远离床上的被子。",
+          "text_zh": "床边有一盏暖暖的小夜灯。爸爸把它放稳，远离被子和窗帘，房间留下一小片柔和的光。",
+          "text_original": "There was a warm little night-light. Dad placed it securely away from bedding and curtains, leaving a soft pool of light in the room.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-012.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-nightlight-can-stay/page-013.webp",
+          "image_alt": "安安躺在被窝里抱着玩偶，爸爸坐在身边听她说话。",
+          "text_zh": "安安问：“我还想你再坐一会儿。”爸爸说：“好，我们一起听听窗外的声音。”",
+          "text_original": "An'an asked, “Could you stay a little longer too?” Dad said, “Yes. Let's listen to the sounds outside together.”",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-013.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 112,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "bad0c76ff37b3a25f65da0106bfa7f50869474472de5bc9ed14b6c26366a9e8c",
+              "zh": "63e91cbdceb334c9e74be5a28ebc4d71c60db2b2d701341d31de0810ed96101c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 13,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 50,
+                  "zh": 16
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  25,
+                  56
+                ]
+              },
+              {
+                "start": {
+                  "en": 61,
+                  "zh": 20
+                },
+                "end": {
+                  "en": 112,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  69,
+                  25
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-nightlight-can-stay/page-014.webp",
+          "image_alt": "爸爸轻轻摸着安安的头，安安躺在枕头上看他，窗外是夜色和树叶。",
+          "text_zh": "远处有车轻轻开过，风碰了碰树叶。安安握着被角，呼吸一点一点慢下来。",
+          "text_original": "A car passed softly in the distance, and wind rustled the leaves. Holding her quilt, An'an's breathing slowly settled.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-014.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-014.mp3"
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-nightlight-can-stay/page-015.webp",
+          "image_alt": "爸爸站在敞开的门边指向隔壁，安安从床上望向他。",
+          "text_zh": "爸爸告诉她：“我在隔壁，需要我就叫一声，我会来。”安安点头，知道门外有人可以找到。",
+          "text_original": "Dad told her, “I'll be in the next room. Call me if you need me, and I'll come.” An'an nodded, knowing someone was nearby.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-015.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-015.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 122,
+              "zh": 41
+            },
+            "text_sha256": {
+              "en": "268c4b560d5d8831325137e4210fc9a7c26bc452b4886b245068a5cd6954d5bf",
+              "zh": "b6672e6bd949a64fbe7e935ab9cb7077da80e882d86cae2d634904fc9ca21324"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 14,
+                  "zh": 6
+                },
+                "end": {
+                  "en": 80,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  63,
+                  26
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-nightlight-can-stay/page-016.webp",
+          "image_alt": "爸爸回到床边坐下，安安抱着玩偶坐在被子里继续和他说话。",
+          "text_zh": "过了一会儿，她还是叫了爸爸。爸爸走回来，听她说完，又陪她坐了一小会儿。",
+          "text_original": "A little later, she still called Dad. He came back, listened to what she needed, and sat beside her a little longer.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-016.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-016.mp3"
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-nightlight-can-stay/page-017.webp",
+          "image_alt": "第二个晚上，爸爸在床边为安安整理被子，窗边的小灯亮着。",
+          "text_zh": "第二个晚上，安安还想留着小灯。爸爸和她一起安排好，没有催她立刻变得勇敢。",
+          "text_original": "The next evening, An'an still wanted the little light. Dad helped arrange things again without rushing her to become brave at once.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-017.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-nightlight-can-stay/page-018.webp",
+          "image_alt": "安安闭着眼睛安睡在被窝里，房间里的小夜灯留下一片柔和的暖光。",
+          "text_zh": "小灯亮着，安安闭上眼睛。今天的害怕已经说出来，安心也一点一点，走到了枕边。",
+          "text_original": "The little light glowed as An'an closed her eyes. She had spoken about her fear, and comfort had slowly found its way to her pillow.",
+          "audio_zh": "/assets/books/sb-nightlight-can-stay/audio/zh/6e141902845c8a89/page-018.mp3",
+          "audio_original": "/assets/books/sb-nightlight-can-stay/audio/en/f2d16a677c11a263/page-018.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-rest-at-naptime",
+      "title_zh": "睡不着的午休小床",
+      "title_original": "Resting at Naptime",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "午休时，安安怎么也睡不着，担心老师会觉得自己不乖。林老师轻轻来到床边，陪她放下担心，找到舒服的休息办法。",
+      "reading_value": "睡不着也可以安心休息，不必假装",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "kindergarten",
+        "habits",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-rest-at-naptime/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 6,
+      "featured_order": 0,
+      "published_at": "2026-11-18T10:35:29.336Z",
+      "publish_status": "published",
+      "content_version": "materials-8f3b602728183f692c25da215fc8329f3fbef182e85a387513cc65796a538985",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom日常系列，公开AI生成样例，来源未列逐本个人作者、插画师及具体生成模型。本版保留完整18页顺序与WebP原图；《睡不着的午休小床》第3页将鞋色由红白改为浅色（中英文同步），与实际原图一致；其余正文保留原文。英文书名由本项目翻译；增加实际角色对白排版及合成配音，首幅兼作封面。仓库MIT仅明确应用代码，未发现逐本图文独立许可，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T10:40:04.421Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T10:39:15.813Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-rest-at-naptime/page-001.webp",
+          "image_alt": "午休教室里拉着暖黄色窗帘，一排排低矮木床铺着花被子，安安走在小床之间。",
+          "text_zh": "午饭后，大班的教室拉上了厚厚的鹅黄色遮光窗帘，屋子里一下子变成了柔和温暖的黄昏模样。",
+          "text_original": "After lunch, the senior classroom drew its thick honey-yellow curtains, turning the room into a cozy twilight space.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-001.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-rest-at-naptime/page-002.webp",
+          "image_alt": "孩子们躺在整齐的小木床上，安安盖着花被子睁眼看着四周，鞋子放在床旁。",
+          "text_zh": "一排排小木床整整齐齐地排在地毯上。小朋友们脱掉小鞋子，钻进了各自的小被窝里。",
+          "text_original": "Neat rows of low wooden cots lined the carpet. Children took off their shoes and tucked into their little blankets.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-002.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-rest-at-naptime/page-003.webp",
+          "image_alt": "安安躺在淡绿色花被子下，睁着眼睛，浅色运动鞋并排摆在床边地毯上。",
+          "text_zh": "安安盖着自己的淡绿色小花被子，脱掉的浅色运动鞋整齐地摆在床头边的小地垫上。",
+          "text_original": "An'an lay under her pale-green floral quilt, her pale sneakers placed neatly on a small mat beside her pillow.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-003.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-rest-at-naptime/page-004.webp",
+          "image_alt": "安安在小床上侧头看着安静的午休教室，其他孩子躺在身后的床上。",
+          "text_zh": "周围渐渐安静下来。旁边的小朋友翻了个身，很快睡着了；有人抱着小熊，呼吸轻轻的。",
+          "text_original": "The room grew quiet. A nearby child turned over and soon fell asleep. Another hugged a teddy bear, breathing softly.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-004.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-rest-at-naptime/page-005.webp",
+          "image_alt": "安安仰躺在花枕头上，睁着大眼睛望向上方，没有睡意。",
+          "text_zh": "可是，安安睁着大大的眼睛，盯着天花板上的吊扇发呆。她一点儿睡意也没有，脑子里特别清醒。",
+          "text_original": "Yet An'an's eyes were wide open, gazing up at the ceiling fan. She didn't feel sleepy at all; her mind felt completely wide awake.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-005.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-rest-at-naptime/page-006.webp",
+          "image_alt": "安安侧身躺在小木床上，双手靠近被沿，神情有些紧张。",
+          "text_zh": "安安侧过身，床板“吱呀”轻轻响了一声。这微小的声音在安静的教室里显得格外刺耳，吓得她赶紧僵住不敢动。",
+          "text_original": "An'an rolled to her side, and the wooden cot creaked softly. In the quiet room, the noise felt huge, making her freeze in place.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-006.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-rest-at-naptime/page-007.webp",
+          "image_alt": "安安拉着被沿躺在床上，睁眼看向一旁，眉头微微皱着。",
+          "text_zh": "“大家都睡着了，只有我不睡觉，老师会不会觉得我是个不听话的坏孩子？”安安心里像揣了一只小兔子般不安。",
+          "text_original": "“Everyone is asleep except me. Will the teacher think I'm being naughty?” An'an worried, her heart fluttering nervously.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-007.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-rest-at-naptime/page-008.webp",
+          "image_alt": "安安紧紧闭着眼睛，脸上有用力的表情，双手收在花被子边。",
+          "text_zh": "为了快点睡着，安安紧紧闭上眼睛，在心里默念数羊：“一只羊、两只羊、三只羊……”可数到了一百只，还是醒着的。",
+          "text_original": "To fall asleep faster, An'an squeezed her eyes shut and counted sheep: “One sheep, two sheep, three sheep...” But at one hundred, she was still awake.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-008.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-rest-at-naptime/page-009.webp",
+          "image_alt": "安安皱着眉躺在床上，脸有些红，小手放在胸口的被子上。",
+          "text_zh": "她越是逼着自己睡觉，太阳穴就越是跳得欢，甚至觉得小枕头有点硬邦邦的，被窝里也有点热烘烘的。",
+          "text_original": "The harder she forced herself, the more her temples throbbed; the pillow felt stiff and the blanket uncomfortably warm.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-009.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-rest-at-naptime/page-010.webp",
+          "image_alt": "林老师半蹲在安安的小床边，温柔地看着她，其他孩子在后排床上休息。",
+          "text_zh": "轻轻的脚步声在地毯上停下，巡视午休的林老师悄悄走了过来，在安安的小床边半蹲下来。",
+          "text_original": "Gentle footsteps stopped by the carpet. Teacher Lin, patrolling the quiet room, knelt softly beside An'an's cot.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-010.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-rest-at-naptime/page-011.webp",
+          "image_alt": "安安紧闭双眼，林老师俯身看着她，一只手放在床边。",
+          "text_zh": "安安吓得赶紧把眼睛闭得死死的，假装已经睡熟了。但她微微颤抖的长睫毛把秘密全都透露了。",
+          "text_original": "An'an quickly clamped her eyes shut, pretending to be fast asleep. But her fluttering eyelashes gave her secret away.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-011.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-rest-at-naptime/page-012.webp",
+          "image_alt": "林老师轻轻抚摸安安的额头，安安闭着眼睛躺在花被子里。",
+          "text_zh": "林老师没有叫醒她责备，而是伸出温暖干燥的手，轻轻抚了抚安安有些汗湿的额头。",
+          "text_original": "Instead of waking her with a scold, Teacher Lin reached out and gently smoothed An'an's warm, sweaty forehead.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-012.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-rest-at-naptime/page-013.webp",
+          "image_alt": "安安睁开眼睛看向林老师，神情有些难过，老师的手轻轻搭在她头上。",
+          "text_zh": "安安慢慢睁开眼睛，难过地小声说：“老师……我努力数了一百只羊，可我还是睡不着。”",
+          "text_original": "An'an opened her eyes slowly, whispering with shame: “Teacher... I counted a hundred sheep, but I just can't sleep.”",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-013.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 116,
+              "zh": 40
+            },
+            "text_sha256": {
+              "en": "1ec1672cc41c53c2700c1761f1b20b887cc7ed51c9c08ec82b7b29d49effe739",
+              "zh": "7f3c206744b3f053c5631ebd43ca421f47cc8a12ed51b596cf95522e378a2efc"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 53,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 116,
+                  "zh": 40
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  61,
+                  54
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-rest-at-naptime/page-014.webp",
+          "image_alt": "林老师靠近安安微笑着说话，安安躺在枕头上抬眼听。",
+          "text_zh": "“现在还没睡着，也没有关系。”林老师在床边坐下，轻轻地说，“你不需要假装。”",
+          "text_original": "“It is all right that you are still awake,” Teacher Lin whispered, sitting beside the bed. “You do not need to pretend.”",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-014.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 120,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "768eeeda02e843940376674f41e17ae138a6b5c8408c4e512de40b57b738dce6",
+              "zh": "dce9ef8d0ec40d4b87c0d14222933f31d6cf38e138f7cfd7294b63800e1daa1e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 43,
+                  "zh": 15
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  44,
+                  36
+                ]
+              },
+              {
+                "start": {
+                  "en": 91,
+                  "zh": 29
+                },
+                "end": {
+                  "en": 120,
+                  "zh": 38
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  44,
+                  36
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-rest-at-naptime/page-015.webp",
+          "image_alt": "林老师为安安整理绿色花被角，两人面对面轻轻交谈。",
+          "text_zh": "“小身体有时候像一块充满电的小电池，不一定每次都需要关机睡着。”老师帮她把被角塞得平平整整。",
+          "text_original": "“Sometimes our body is like a fully charged battery; it doesn't need to shut down every afternoon,” the teacher smoothed the quilt.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-015.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-015.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 131,
+              "zh": 46
+            },
+            "text_sha256": {
+              "en": "b9db8a5588b8be1795753a1226710e580fbbe5f9eb71c4d8d59671ba49cc7a4f",
+              "zh": "7b43118677225da84313b55f9295dc37a3ac142431b3e9f8fa2e6786894ee6b1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 99,
+                  "zh": 32
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  45,
+                  36
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-rest-at-naptime/page-016.webp",
+          "image_alt": "林老师一边轻扶安安的手，一边指向有阳光和树影的窗外。",
+          "text_zh": "“只要安静地闭上眼睛躺着，给小腿和小眼睛放个假，听听窗外树叶的沙沙声，身体就在默默充电呢。”老师说。",
+          "text_original": "“Just resting with eyes closed gives little legs and eyes a holiday. Listening to leaves rustling still recharges you,” she said.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-016.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-016.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 129,
+              "zh": 50
+            },
+            "text_sha256": {
+              "en": "adab146b617697e36d96cef4208a2d740a9b03d31e32f2bb17f9ef74d8f4415a",
+              "zh": "8cedcdeef6063370eaf75aac45c120afb1b1c6011b6991d5fe8a622ffa85484c"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 119,
+                  "zh": 46
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  40,
+                  36
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-rest-at-naptime/page-017.webp",
+          "image_alt": "安安放松地闭上眼睛，嘴角微微上扬，安静躺在自己的小床上。",
+          "text_zh": "安安心里那块沉甸甸的石头放下了。她不再使劲闭眼，只是舒服地躺着，听窗外很轻的声音。",
+          "text_original": "The weight in An'an's heart lifted. She stopped squeezing her eyes shut and rested comfortably, listening to the soft sounds outside.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-017.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-rest-at-naptime/page-018.webp",
+          "image_alt": "暖色窗帘旁，安安和其他孩子安静躺在一排排小木床上，午休室一片柔和。",
+          "text_zh": "这一次，安安后来睡着了。也许另一天，她只安静地休息。无论哪一种，老师都愿意陪她找到舒服的办法。",
+          "text_original": "This time, An'an fell asleep later. Another day, she might simply rest quietly. Either way, her teacher would help her feel comfortable.",
+          "audio_zh": "/assets/books/sb-rest-at-naptime/audio/zh/ceda636c173cb6a8/page-018.mp3",
+          "audio_original": "/assets/books/sb-rest-at-naptime/audio/en/2cc22b1eb3dbac0a/page-018.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-school-gate-wave",
+      "title_zh": "校门口的那一次挥手",
+      "title_original": "A Wave at the Kindergarten Gate",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "大班第一天，安安在校门口舍不得松开妈妈的手。一个手心里的小爱心、一个会兑现的接园约定，陪她慢慢走进教室。",
+      "reading_value": "用温暖的告别约定，陪孩子安心入园",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "kindergarten",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-school-gate-wave/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 6,
+      "featured_order": 0,
+      "published_at": "2026-11-18T10:35:23.763Z",
+      "publish_status": "published",
+      "content_version": "materials-e8a1b15176547376e96ada9431b0db4e07f502f1a9e4770b7ae896ee02335d54",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom日常系列，公开AI生成样例，来源未列逐本个人作者、插画师及具体生成模型。本版保留完整18页顺序与WebP原图；完整中英文正文保留原文。英文书名由本项目翻译；增加实际角色对白排版及合成配音，首幅兼作封面。仓库MIT仅明确应用代码，未发现逐本图文独立许可，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T10:40:18.035Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T10:39:17.244Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-school-gate-wave/page-001.webp",
+          "image_alt": "安安背着橙色书包牵着妈妈的手走向幼儿园，身后有彩虹形欢迎拱门和其他孩子。",
+          "text_zh": "清晨，阳光洒在幼儿园大门前的台阶上。红色的欢迎拱门高高立着，许多小朋友正背着书包走进去。",
+          "text_original": "Morning sunlight poured over the kindergarten steps. A welcoming archway stood tall as children walked in with their backpacks.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-001.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-school-gate-wave/page-002.webp",
+          "image_alt": "大树旁，安安停下脚步，仰头望着牵着自己的妈妈。",
+          "text_zh": "安安站在校门口的大树旁，脚步停住了。她拉着妈妈的手，手指抓得紧紧的。",
+          "text_original": "An'an paused beside the big tree near the gate. She held Mom's hand, her small fingers gripping tightly.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-002.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-school-gate-wave/page-003.webp",
+          "image_alt": "安安紧紧抱着妈妈的胳膊，妈妈低头温柔地看着她，头顶是树叶。",
+          "text_zh": "“我已经上大班了。”安安小声说，可她还是把头靠在妈妈胳膊上。长大了一点，也还是会舍不得。",
+          "text_original": "“I am in the oldest kindergarten class now,” An'an whispered, leaning against Mom's arm. Growing bigger did not mean she never missed Mom.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-003.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 138,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "dcea5753dfb975f6378531ce4f0821c07ab39467a57b1f9e13b0ffdaf9eda00b",
+              "zh": "26743af42e9041dd03f1fd832dd77632fb10c51ab1df96005fe7cc9bd738633f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 44,
+                  "zh": 10
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  47,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-school-gate-wave/page-004.webp",
+          "image_alt": "安安站在校园大树下抬头看二楼教室的高窗，橙色书包背在身后。",
+          "text_zh": "大班的教室在二楼，走廊比以前更长。安安看着那些高高的窗户，觉得幼儿园好像一下子变大了好多。",
+          "text_original": "The senior classroom was on the second floor with longer hallways. Looking up at the tall windows, An'an felt the school had suddenly grown much bigger.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-004.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-school-gate-wave/page-005.webp",
+          "image_alt": "妈妈蹲到安安面前，伸手为她整理脸颊旁的头发。",
+          "text_zh": "妈妈蹲下身来，把安安脸颊边的一缕碎发理到耳后，目光平平地看着她的眼睛。",
+          "text_original": "Mom knelt down, gently brushed a loose strand of hair behind An'an's ear, and met her eyes at eye level.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-005.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-school-gate-wave/page-006.webp",
+          "image_alt": "妈妈蹲着握住安安的双手，和她平视，安安认真地听。",
+          "text_zh": "“安安是不是觉得，大班的事情又新又多，心里有点没准备好？”妈妈轻声问。",
+          "text_original": "“Does the senior class feel big and new, making you feel a little unready inside?” Mom asked softly.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-006.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 100,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "43e6a29d93d0cc9d6dbfc64ad3202ccfe2e990faf07cd670f0b48a029cacead6",
+              "zh": "3747e742296a637968534094f2f08a1a58053c90cfa45aea078542db9f40c6cf"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 82,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  67,
+                  39
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-school-gate-wave/page-007.webp",
+          "image_alt": "安安抬起小脸向妈妈说话，妈妈扶着她的肩膀专心倾听。",
+          "text_zh": "安安点点头，声音小小的：“我想和你在一起。如果我想你了，怎么办呢？”",
+          "text_original": "An'an nodded, her voice very quiet. “I want to stay with you. What if I miss you during the day?”",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-007.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 97,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "4ceb50c1f22b3aee2e0a5b8af3f1a1102bda43a7588a5196befdc2aeece2fc54",
+              "zh": "ba21c92daa18bed5b37326967fa53343f12a00b4ad772fe36c76388079a414a9"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 36,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 97,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "An'an",
+                  "zh": "安安"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  42,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-school-gate-wave/page-008.webp",
+          "image_alt": "妈妈托着安安摊开的手掌，用食指在手心轻轻画圈。",
+          "text_zh": "妈妈握住安安的小手，轻轻展开她的手掌。妈妈伸出食指，在安安的手心里画了一个小小的圆圈。",
+          "text_original": "Mom took An'an's hand and gently opened her palm. With her forefinger, Mom drew a small circle in the center.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-008.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-school-gate-wave/page-009.webp",
+          "image_alt": "安安微笑着看自己的手心，妈妈的手指仍轻触着掌心。",
+          "text_zh": "“这是一颗隐形的小爱心。”妈妈微笑着按了按那块手心，“当你想妈妈时，就合上小手，把它按进心窝里。”",
+          "text_original": "“This is a little invisible heart,” Mom smiled, pressing gently on her palm. “Whenever you miss me, close your hand and press it to your chest.”",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-009.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-school-gate-wave/page-010.webp",
+          "image_alt": "安安把双手合在胸前，妈妈蹲在一旁微笑，身后是校园拱门。",
+          "text_zh": "安安慢慢合拢手指，紧紧攥住手心里的温热，就像真的抓到了一颗红亮亮的小糖果。",
+          "text_original": "An'an slowly curled her fingers into a fist, holding tight to the warmth in her palm as if gripping a shiny little sweet.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-010.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-school-gate-wave/page-011.webp",
+          "image_alt": "安安和妈妈站在校门边的大树下，妈妈伸出手指向一旁。",
+          "text_zh": "“下午离园时，我会在这棵树下等你。”妈妈指了指大树，“如果接送安排有变化，我会提前告诉老师。”",
+          "text_original": "“I will wait under this tree at pick-up time,” Mom said. “If our plans change, I will let your teacher know beforehand.”",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-011.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 120,
+              "zh": 47
+            },
+            "text_sha256": {
+              "en": "216b1f7d252db52738042ede7bc5163a28bee82807f742947b0a24cbaded63df",
+              "zh": "55a4027dbb43cc59512555233e6a91ab507e7b9657913bda6774484a9b1e38fd"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 46,
+                  "zh": 18
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  54,
+                  39
+                ]
+              },
+              {
+                "start": {
+                  "en": 57,
+                  "zh": 26
+                },
+                "end": {
+                  "en": 120,
+                  "zh": 47
+                },
+                "speaker": {
+                  "en": "Mom",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  54,
+                  39
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-school-gate-wave/page-012.webp",
+          "image_alt": "林老师从校门边俯身向安安伸出手，妈妈站在安安身后微笑。",
+          "text_zh": "林老师从校门里迎出来，微笑着向安安伸出手：“早上好，安安！今天植物角的小番茄又长高了一点呢。”",
+          "text_original": "Teacher Lin walked out from the gate, smiling as she offered a welcoming hand. “Good morning, An'an! The cherry tomatoes in our plant corner grew taller today.”",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-012.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 160,
+              "zh": 47
+            },
+            "text_sha256": {
+              "en": "c1e4c4e26708ad695f8363099920e4c8821daf2766dba4916e35b365c985c7e3",
+              "zh": "e1c613d59eb2425ef53507200206853c47833f6caf47a6b8ed86f591d39feaed"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 79,
+                  "zh": 21
+                },
+                "end": {
+                  "en": 160,
+                  "zh": 47
+                },
+                "speaker": {
+                  "en": "Teacher Lin",
+                  "zh": "林老师"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  81,
+                  40
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-school-gate-wave/page-013.webp",
+          "image_alt": "妈妈在校门前向安安挥手，安安背着橙色书包回头看她。",
+          "text_zh": "安安转头看看妈妈，妈妈微笑着点点头，松开了手：“去吧，安安。妈妈的爱就在你的口袋里。”",
+          "text_original": "An'an looked back at Mom. Mom smiled and released her hand gently. “Go ahead, An'an. My love is right in your pocket.”",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-013.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-013.mp3"
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-school-gate-wave/page-014.webp",
+          "image_alt": "安安站在二楼走廊的大窗边，回头看向窗外，阳光落在木地板上。",
+          "text_zh": "安安跟着林老师走进楼里。在走廊的大窗户边，她停了一下，回过头去看。",
+          "text_original": "An'an followed Teacher Lin inside. By the large corridor window, she paused and looked back.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-014.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-014.mp3"
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-school-gate-wave/page-015.webp",
+          "image_alt": "从窗边望出去，妈妈站在大树下抬起手臂向楼上的安安挥手。",
+          "text_zh": "大树下，妈妈依然站在那里。妈妈抬起手，用力地、慢慢地向她挥动着手臂。",
+          "text_original": "Under the big tree, Mom was still standing there, raising her arm and waving slowly and steadily toward the window.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-015.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-015.mp3"
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-school-gate-wave/page-016.webp",
+          "image_alt": "安安一只手放在胸口，另一只手高高举起，隔着窗向妈妈微笑挥手。",
+          "text_zh": "安安把一只手贴在胸口，摸摸那颗“小爱心”，又举起另一只手，隔着玻璃朝妈妈挥了挥。",
+          "text_original": "An'an pressed one hand to her chest over the little heart. With the other, she waved back through the glass.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-016.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-016.mp3"
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-school-gate-wave/page-017.webp",
+          "image_alt": "安安走进摆满积木的教室，穿黄色上衣的乐乐坐在地毯上举手招呼她。",
+          "text_zh": "到了大班教室，阳光铺满地板。乐乐正在积木区招手：“安安，来帮我搭大吊桥！”安安走了过去。",
+          "text_original": "Sunlight filled the classroom. Lele waved from the block corner. “An'an, come help me build a bridge!” She walked over.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-017.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-017.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 119,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "2fd04c43e956bcd6fcf01e806067922a8eabc65be5a5327dbefe2ce97a40b5a4",
+              "zh": "cc32e768a5544860011a651d35263accb80ef9983bafd7bf7493cf171b6f85f0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 65,
+                  "zh": 24
+                },
+                "end": {
+                  "en": 102,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Lele",
+                  "zh": "乐乐"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  79,
+                  57
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-school-gate-wave/page-018.webp",
+          "image_alt": "午后校园门前，安安跑向张开双臂迎接自己的妈妈，两人开心地笑着。",
+          "text_zh": "下午四点，放学铃声响起。安安背好书包飞奔出校门，大树下，妈妈果然张开双臂，正微笑着迎向她。",
+          "text_original": "At four in the afternoon, the dismissal bell chimed. An'an ran out through the gate; under the big tree, Mom was waiting with open arms.",
+          "audio_zh": "/assets/books/sb-school-gate-wave/audio/zh/884f8d668fc7459b/page-018.mp3",
+          "audio_original": "/assets/books/sb-school-gate-wave/audio/en/235f0b2f1f528661/page-018.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-spring-night-rain",
+      "title_zh": "春夜喜雨",
+      "title_original": "A Welcome Rain on a Spring Night",
+      "author": "杜甫 / StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "跟随杜甫在春夜看细雨、船灯和花苞，听完整原诗与双语解说，想象雨后清晨的明亮花朵。",
+      "reading_value": "轻轻听雨读诗，感受安静春夜的盼望",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "bedtime",
+        "nature"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-spring-night-rain/cover.webp",
+      "page_count": 8,
+      "reading_minutes": 4,
+      "featured_order": 0,
+      "published_at": "2026-11-18T09:56:41.674Z",
+      "publish_status": "published",
+      "content_version": "materials-e6696fadd8a004c97df7531cb743e4ee1b244f8b2b4d2837e8bbb0a457f36c7c",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "原诗：唐代杜甫《春夜喜雨》；图文来源：StoryBloom唐诗入画系列，公开AI生成样例，来源未列逐本个人绘本作者、插画师及具体生成模型。本版保留完整8页双语文本与原图；英文书名由本项目翻译，添加实际角色对白排版与合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T09:58:15.091Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T09:57:38.344Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-spring-night-rain/page-001.webp",
+          "image_alt": "穿深青色长袍的诗人站在木廊下望着春夜细雨，远处河面上有一盏船灯。",
+          "text_zh": "好雨知时节，\n当春乃发生。\n随风潜入夜，\n润物细无声。\n野径云俱黑，\n江船火独明。\n晓看红湿处，\n花重锦官城。",
+          "text_original": "Good rain knows the right season,\nArriving when spring begins to grow.\nIt slips into the night with the wind,\nMoistening everything softly and silently.\nClouds darken every country path,\nWhile one light shines from a riverboat.\nAt dawn, look where red blossoms are wet,\nHeavy with rain across the City of Brocade.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-001.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-001.mp3"
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-spring-night-rain/page-002.webp",
+          "image_alt": "诗人在廊下伸出手感受细雨，雨水落在田地、嫩芽和花丛上。",
+          "text_zh": "好雨知时节，\n当春乃发生。\n春天的草木正要生长，一场及时的雨就来了。",
+          "text_original": "Good rain knows the right season,\nArriving when spring begins to grow.\nJust as spring plants begin growing, the timely rain arrives.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-002.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-spring-night-rain/page-003.webp",
+          "image_alt": "诗人静静望向细雨中的田野，廊边的红花和绿叶带着雨水，江船灯火映在远处。",
+          "text_zh": "随风潜入夜，\n润物细无声。\n细雨跟着春风走进夜色，轻轻滋润每一片叶子。",
+          "text_original": "It slips into the night with the wind,\nMoistening everything softly and silently.\nFine rain rides the breeze and quietly waters every leaf.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-003.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-spring-night-rain/page-004.webp",
+          "image_alt": "乌云笼罩夜色中的田间小路，诗人在廊下远望，江面上一点暖色船灯亮着。",
+          "text_zh": "野径云俱黑，\n江船火独明。\n乌云遮住天空和小路，远处江船的一点灯火却亮着。",
+          "text_original": "Clouds darken every country path,\nWhile one light shines from a riverboat.\nClouds cover the path, but one boat light glows across the river.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-004.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-spring-night-rain/page-005.webp",
+          "image_alt": "晨光映亮湿润的田野和红花，诗人站在木廊边看着远处江面和花丛。",
+          "text_zh": "晓看红湿处，\n花重锦官城。\n等到天亮，带着雨珠的红花会沉甸甸地开满锦官城。",
+          "text_original": "At dawn, look where red blossoms are wet,\nHeavy with rain across the City of Brocade.\nBy morning, red flowers will open across the city, heavy with raindrops.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-005.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-spring-night-rain/page-006.webp",
+          "image_alt": "画面展示雨水滋润泥土、嫩芽和伸入地下的根系，诗人从左侧木廊窗口静静观看。",
+          "text_zh": "雨没有敲锣打鼓，只在黑夜里轻轻落下。泥土、嫩芽和花苞，都安静地喝饱了水。",
+          "text_original": "The rain makes no fuss; it falls softly through the night. Soil, shoots, and buds quietly drink their fill.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-006.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-spring-night-rain/page-007.webp",
+          "image_alt": "天边泛起粉红和金色晨光，诗人面向雨后湿润的田野和红色花苞。",
+          "text_zh": "诗人还没看见清晨的花，就已经在心里看见了。期待让漆黑的雨夜，也藏着明亮的颜色。",
+          "text_original": "Before dawn arrives, the poet already sees the flowers in his mind. Hope hides bright colors inside the dark rainy night.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-007.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-spring-night-rain/page-008.webp",
+          "image_alt": "诗人站在木廊下望着晨光中的田野、红花与河面，雨后的远山渐渐明亮。",
+          "text_zh": "好雨知时节，\n当春乃发生。\n随风潜入夜，\n润物细无声。\n野径云俱黑，\n江船火独明。\n晓看红湿处，\n花重锦官城。\n再轻轻读一遍吧。",
+          "text_original": "Good rain knows the right season,\nArriving when spring begins to grow.\nIt slips into the night with the wind,\nMoistening everything softly and silently.\nClouds darken every country path,\nWhile one light shines from a riverboat.\nAt dawn, look where red blossoms are wet,\nHeavy with rain across the City of Brocade.\nNow read it softly once more.",
+          "audio_zh": "/assets/books/sb-spring-night-rain/audio/zh/a181a434688fac09/page-008.mp3",
+          "audio_original": "/assets/books/sb-spring-night-rain/audio/en/e79267fc5a841b39/page-008.mp3"
+        }
+      ]
+    },
+    {
       "id": "sb-subway",
       "title_zh": "地铁为什么跑得快",
       "title_original": "Why Can a Subway Travel So Fast?",
@@ -15284,6 +18363,414 @@
                 "target": [
                   33,
                   29
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "sb-why-we-sleep",
+      "title_zh": "为什么要睡觉",
+      "title_original": "Why Do We Need Sleep?",
+      "author": "StoryBloom",
+      "illustrator": "StoryBloom",
+      "description_zh": "小宝还想搭积木，为什么每天都要睡觉呢？妈妈从梦、记忆和身体的休息讲起，陪他发现睡眠的小秘密。",
+      "reading_value": "从睡前的小问题，认识睡眠与身体",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "bedtime",
+        "habits",
+        "cognition"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-why-we-sleep/cover.webp",
+      "page_count": 8,
+      "reading_minutes": 3,
+      "featured_order": 0,
+      "published_at": "2026-11-18T09:56:37.489Z",
+      "publish_status": "published",
+      "content_version": "materials-585fda15846a38273d60b59788d1305311b38c4c0867bebd3407144f8be08c79",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom好奇为什么系列，公开AI生成样例，来源未列逐本个人绘本作者、插画师及具体生成模型。本版保留完整8页双语文本与原图；英文书名由本项目翻译，添加实际角色对白排版与合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T09:58:08.375Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T09:57:42.076Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-why-we-sleep/page-001.webp",
+          "image_alt": "穿蓝色月亮睡衣的小宝坐在木积木桥旁，妈妈在床边拉窗帘，狐狸玩偶放在地毯上。",
+          "text_zh": "晚上，小宝还在搭积木桥，妈妈却拉上窗帘：“到睡觉时间啦。”小宝不舍地问：“为什么每天都要睡觉？”",
+          "text_original": "At night, Xiaobao was still building a block bridge when Mama closed the curtains. \"Time for bed.\" Xiaobao asked, \"Why do we have to sleep every day?\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-001.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 150,
+              "zh": 48
+            },
+            "text_sha256": {
+              "en": "5bed94a62db48e5da776a2c733fc4a763e6f000c0973602a80bb024a94753168",
+              "zh": "dd75ad8ffc9bf52e4d066edc3d0df2a1818c581302c3166ba8853f6fbde9c5e3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 83,
+                  "zh": 20
+                },
+                "end": {
+                  "en": 98,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Mama",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  77,
+                  22
+                ]
+              },
+              {
+                "start": {
+                  "en": 114,
+                  "zh": 36
+                },
+                "end": {
+                  "en": 150,
+                  "zh": 48
+                },
+                "speaker": {
+                  "en": "Xiaobao",
+                  "zh": "小宝"
+                },
+                "x": 52,
+                "y": 76,
+                "width": 44,
+                "target": [
+                  35,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-why-we-sleep/page-002.webp",
+          "image_alt": "小宝抱着狐狸玩偶坐在被窝里指向台灯，妈妈坐在床边，枕头上方有柔和的梦境图案。",
+          "text_zh": "钻进被窝后，小宝又问：“睡觉时，大脑会像灯一样关掉吗？如果关掉了，梦又从哪里来呢？”",
+          "text_original": "After climbing into bed, Xiaobao asked, \"Does the brain switch off like a lamp during sleep? If it does, where do dreams come from?\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-002.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 132,
+              "zh": 42
+            },
+            "text_sha256": {
+              "en": "61c3ffda35308ae6216399cc2d9ffe1d02f9de83e2a4df670438f87b3dc541b5",
+              "zh": "02383c359fab232406c34e9e205f0b2a162719077718be600189fbf7b5c37da0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 40,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 132,
+                  "zh": 42
+                },
+                "speaker": {
+                  "en": "Xiaobao",
+                  "zh": "小宝"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  31,
+                  53
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-why-we-sleep/page-003.webp",
+          "image_alt": "小宝抱着狐狸玩偶睡着了，妈妈坐在一旁，上方光线连接着积木桥、红球、树和妈妈的图像。",
+          "text_zh": "妈妈说：“睡眠不是关机。大脑仍然活跃，还会经过不同的睡眠阶段，整理白天学到的事，帮助重要的记忆变得更稳。”",
+          "text_original": "Mama said, \"Sleep is not a shutdown. The brain stays active and moves through different sleep stages, organizing what you learned and helping important memories grow stronger.\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-003.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 176,
+              "zh": 53
+            },
+            "text_sha256": {
+              "en": "2d3856b5e8b7acdcd61dc6a009f24fa88114b4a64b3b9d8b04f43e15199b7678",
+              "zh": "ed1a8aa671f4a17d154e3fef293ce66d9e38f933e33f6bcccdf263e14e7b62a1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 11,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 176,
+                  "zh": 53
+                },
+                "speaker": {
+                  "en": "Mama",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  78,
+                  31
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-why-we-sleep/page-004.webp",
+          "image_alt": "妈妈为熟睡的小宝盖好被子，柔和金色光点围绕被子下的身体，狐狸玩偶靠在枕边。",
+          "text_zh": "“深睡时，促进生长的一些重要信号会更活跃，身体也会修补白天跑跳留下的细小损耗。”",
+          "text_original": "\"During deep sleep, important signals that support growth become more active, and the body repairs tiny wear from the day's running and jumping.\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-004.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 145,
+              "zh": 40
+            },
+            "text_sha256": {
+              "en": "db4b7fb26747ac0a4b1c67c7ad0f7ac66870939c7b244cd35ebe49d6dc33e130",
+              "zh": "bf41f4e9f93b7059c0aa76964c9889ca40abf0da364ff27db67461b8773ffcd2"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 145,
+                  "zh": 40
+                },
+                "speaker": {
+                  "en": "Mama",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  67,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-why-we-sleep/page-005.webp",
+          "image_alt": "小宝抱着狐狸玩偶安睡，妈妈站在门口，上方梦境中圆润的白色形状围着细小光点。",
+          "text_zh": "“充足睡眠还帮助免疫系统有条理地工作，让身体更好地应对每天遇到的病菌。”",
+          "text_original": "\"Enough sleep also helps the immune system work in a coordinated way, so the body can respond better to germs it meets each day.\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-005.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 129,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "b9d7b5417c74a140eda7fa4c764198b19db1e0facf7631fc2cc5d60850d3464d",
+              "zh": "2f438a246be3b39e43277fe7eaa79dfdcf947915925573b80ac92777bb076cf8"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 129,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Mama",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  87,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-why-we-sleep/page-006.webp",
+          "image_alt": "小宝安静睡着，床上方彩色云朵和光线渐渐平稳，妈妈在门边准备离开。",
+          "text_zh": "“睡得够，第二天更容易集中注意、调节情绪；睡得太少，就更容易走神，也可能变得急躁。”",
+          "text_original": "\"With enough sleep, it is easier to pay attention and manage feelings the next day. Too little sleep can make us distracted or irritable.\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-006.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 138,
+              "zh": 42
+            },
+            "text_sha256": {
+              "en": "e1371cfde4844061fa6b40d4ab31abd5ecdf7ab83e0a02a52047e02cba0f2134",
+              "zh": "584b705cc3e9e86c1ded7d68d61db1911a217225fb7ef65e0cfd8b09afead829"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 138,
+                  "zh": 42
+                },
+                "speaker": {
+                  "en": "Mama",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  82,
+                  25
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-why-we-sleep/page-007.webp",
+          "image_alt": "早晨小宝在地毯上为积木桥放好支撑木块，妈妈端着早餐托盘站在门边，狐狸玩偶坐在桥旁。",
+          "text_zh": "第二天早晨，小宝精神十足。他想起昨晚没搭稳的地方，很快让积木桥稳稳站住了。",
+          "text_original": "The next morning, Xiaobao felt refreshed. He remembered what had made the bridge wobble and soon built it so it stood firmly.",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-007.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-why-we-sleep/page-008.webp",
+          "image_alt": "小宝和妈妈坐在早餐桌旁，小宝摸着肚子，桌上摆着粥、水果和杯子，狐狸玩偶坐在旁边。",
+          "text_zh": "早餐刚摆好，小宝的肚子忽然咕噜作响。他摸摸肚皮，又有了新问题：“肚子为什么会咕咕叫呢？”",
+          "text_original": "As breakfast was served, Xiaobao's tummy suddenly rumbled. He patted it and asked a new question: \"Why does my tummy growl?\"",
+          "audio_zh": "/assets/books/sb-why-we-sleep/audio/zh/9eb75fda6284f5fc/page-008.mp3",
+          "audio_original": "/assets/books/sb-why-we-sleep/audio/en/9df05fbea710ff0e/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 124,
+              "zh": 44
+            },
+            "text_sha256": {
+              "en": "ad7845b91f208e5b24e9c359d808f3392b48cd90e7635e10679ccabbd8835842",
+              "zh": "40648ee2841eea019c1891394638e87dc733fe7a583831c831b0d54337c198de"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 98,
+                  "zh": 31
+                },
+                "end": {
+                  "en": 124,
+                  "zh": 44
+                },
+                "speaker": {
+                  "en": "Xiaobao",
+                  "zh": "小宝"
+                },
+                "x": 4,
+                "y": 5,
+                "width": 44,
+                "target": [
+                  45,
+                  49
                 ]
               }
             ]

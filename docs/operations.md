@@ -11,6 +11,10 @@ go run ./cmd/materials read --book 书ID
 
 新增默认至少4本。逐本核实适龄性、完整原文与页序、实际画面、作者插画师及许可；同作品先排重。选择来源和系列见 [选材入口](resource-candidates.md)。新作品使用新ID，不覆盖旧故事；不自行提交、推送或部署。
 
+StoryBloom新增按每个来源系列取一本、优先睡前共读选材，减少相似画风重复。“幼儿园适应”（`kindergarten`）已按用户要求新增，幼儿园相关物料统一归入，可保留情绪、习惯等标签。本次用户要求优先补充该主题，选材以实际校园情境优先，可在同系列选取不同生活问题；后续继续偏温暖动物朋友、入园分离、吃饭午睡与同伴交往故事。不把来源系列当作产品主题。
+
+新增主题先在Go校验字典和Python物料校验器中定义，再通过 `python3 scripts/materials.py add-category --category kindergarten` 向现有categories表创建一条记录；该命令经过service/repository，只允许已定义主题，重复相同记录安全，已有信息不同则回滚，不覆盖其他主题、不建表、不运行dbinit。前端主题列表读取MySQL；网页主题说明使用API字典描述，不按固定六项数组取值。
+
 Codex将内容在内存中生成，通过标准输入传给 `go run ./cmd/materials save`，结构为 `{book, revision}`。新增revision为空；更新使用刚回读的完整快照revision，不强行覆盖。已发布书填写一句基于全文的 `reading_value`；制作未完成时可以 `save --metadata-only` 录入正文与预计路径，该阶段不代表交付完成。
 
 先补齐逐本来源证据和原图，再执行指定书制作。StoryBloom在 `content/sources/storybloom/sources.json` 登记来源和逐页哈希，经 `scripts/storybloom_art.py` 核验后原样保留WebP。书目、图像描述与角色对白只维护MySQL。陌生ID不能靠 `art` 自动获得完整插画。

@@ -34,6 +34,24 @@ func (s *Materials) Read(ctx context.Context, id string) (repository.MaterialSna
 }
 func (s *Materials) IDs(ctx context.Context) ([]string, error) { return s.store.MaterialIDs(ctx) }
 
+// AddCategory explicitly creates a known dictionary entry without rebuilding tables
+// or changing existing categories. Public clients continue to read MySQL options.
+func (s *Materials) AddCategory(ctx context.Context, id string) error {
+	for i, option := range catalog.Categories {
+		if option.ID != id {
+			continue
+		}
+		store, ok := s.store.(interface {
+			AddMaterialCategory(context.Context, model.Option, int) error
+		})
+		if !ok {
+			return errors.New("物料存储不支持新增主题")
+		}
+		return store.AddMaterialCategory(ctx, option, i+1)
+	}
+	return fmt.Errorf("未知主题 %q", id)
+}
+
 func (s *Materials) Validate(b model.Book, check func([]string) error) error {
 	if b.Status == "published" && strings.TrimSpace(b.ReadingValue) == "" {
 		return fmt.Errorf("已发布物料必须包含推荐理由 reading_value，请根据故事内容填写一句短句")

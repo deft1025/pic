@@ -2,12 +2,17 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 const dialogue = require('../../utils/dialogue');
 Page({
- data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
+ data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, frameWidth: 0, landscape: false, safeLeft: 0, safeRight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
  onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
  onShow() { this.hidden = false; this.scheduleCompletion(); },
  onHide() { this.hidden = true; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
  onUnload() { this.dead = true; this.serial++; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
- onResize() { this.frame(); },
+ onResize(e) {
+  const size = e?.size;
+  if (size?.windowWidth > 0 && size?.windowHeight > 0) this.windowSize = { windowWidth: size.windowWidth, windowHeight: size.windowHeight };
+  this.frame();
+  wx.nextTick?.(() => { if (!this.dead) this.frame(); });
+ },
  async load() {
   this.setData({ error: '' });
   try {
@@ -24,20 +29,29 @@ Page({
  },
  frame() {
   if (!this.pages) return;
-  const info = wx.getWindowInfo ? wx.getWindowInfo() : wx.getSystemInfoSync();
-  const capsule = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null;
-  const safeTop = Math.max(info.statusBarHeight || 0, capsule?.bottom || 0) + 8;
-  const safeBottom = Math.max(8, info.screenHeight && info.safeArea ? info.screenHeight - info.safeArea.bottom : 0);
-  const width = this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
-  // Reserve the same narration area for every page and both languages in this book.
-  // Turning controls on/off is an explicit view change, never a result of bubble size.
+  const measured = wx.getWindowInfo ? wx.getWindowInfo() : wx.getSystemInfoSync();
+  const info = { ...measured, ...this.windowSize };
+  // Resize events can arrive before getWindowInfo has the rotated dimensions.
+  const fresh = measured.windowWidth === info.windowWidth && measured.windowHeight === info.windowHeight;
+  const capsule = fresh && wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null;
+  const landscape = this.data.fullscreen && info.windowWidth > info.windowHeight && info.windowHeight <= 600;
+  const safeTop = Math.max(fresh ? info.statusBarHeight || 0 : 32, capsule?.bottom || 0) + 8;
+  const safe = fresh ? info.safeArea : null;
+  const safeBottom = Math.max(8, info.screenHeight && safe ? info.screenHeight - safe.bottom : 0);
+  const safeLeft = landscape ? Math.max(8, safe?.left || 0) : 0;
+  const safeRight = landscape ? Math.max(8, safe?.right ? info.windowWidth - safe.right : 0) : 0;
+  const sidebar = Math.max(216, Math.min(300, Math.round(info.windowWidth * .34)));
+  const width = landscape ? Math.max(1, info.windowWidth - safeLeft - safeRight - 12 - sidebar) : this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
+  // Keep a stable art frame across pages/languages. In short landscape, narration
+  // and controls share the side column instead of subtracting from image height.
   const hasNarration = this.data.imageError || this.pages.some(p => ['zh', 'en'].some(lang => dialogue.split(p, lang, true).narration.trim()));
-  const narrationHeight = hasNarration ? Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
-  const height = this.data.fullscreen
-   ? Math.max(1, info.windowHeight - safeTop - 44 - safeBottom - narrationHeight - (this.data.controlsVisible ? 116 : 36))
+  const availableHeight = Math.max(1, info.windowHeight - safeTop - safeBottom);
+  const narrationHeight = hasNarration ? landscape ? Math.max(24, availableHeight - 44 - (this.data.controlsVisible ? 132 : 36)) : Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
+  const height = landscape ? availableHeight : this.data.fullscreen
+   ? Math.max(1, availableHeight - 44 - narrationHeight - (this.data.controlsVisible ? 116 : 36))
    : Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * (this.ratio?.[1] || 3) / (this.ratio?.[0] || 4)));
   this.frameWidth = width; this.frameH = height;
-  this.setData({ frameHeight: height, safeTop, safeBottom, viewportHeight: info.windowHeight, narrationHeight });
+  this.setData({ frameHeight: height, frameWidth: width, landscape, safeTop, safeBottom, safeLeft, safeRight, viewportHeight: info.windowHeight, narrationHeight });
   this.artwork();
  },
  artwork() {

@@ -15,8 +15,10 @@ import (
 
 type materialState struct {
 	importState
-	book  *model.Book
-	locks int
+	book          *model.Book
+	locks         int
+	category      *model.Option
+	categoryOrder int
 }
 type materialConnector struct{ s *materialState }
 
@@ -37,6 +39,13 @@ func (c *materialConn) QueryContext(ctx context.Context, q string, args []driver
 	b := c.s.book
 	if strings.Contains(q, "FOR UPDATE") {
 		c.s.locks++
+	}
+	if strings.HasPrefix(q, "SELECT category_id,name,description,sort_order") {
+		if c.s.category == nil {
+			return materialRows(nil, 4), nil
+		}
+		option := c.s.category
+		return materialRows([][]driver.Value{{option.ID, option.Name, option.Description, int64(c.s.categoryOrder)}}, 4), nil
 	}
 	if strings.HasPrefix(q, "SELECT book_id FROM books WHERE") {
 		if b == nil {
@@ -99,6 +108,40 @@ func (c *materialConn) QueryContext(ctx context.Context, q string, args []driver
 		}
 	}
 	return c.testConn.QueryContext(ctx, q, args)
+}
+
+func TestMaterialCategoryCreatesOnceAndNeverOverwritesExistingMetadata(t *testing.T) {
+	option := model.Option{ID: "kindergarten", Name: "幼儿园适应", Description: "安心入园"}
+	for _, mode := range []string{"new", "same", "different"} {
+		t.Run(mode, func(t *testing.T) {
+			state := &materialState{categoryOrder: 7}
+			if mode != "new" {
+				copy := option
+				state.category = &copy
+				if mode == "different" {
+					state.category.Name = "已有名称"
+				}
+			}
+			db := sql.OpenDB(materialConnector{state})
+			defer db.Close()
+			err := New(db, false).AddMaterialCategory(context.Background(), option, 7)
+			if (err != nil) != (mode == "different") {
+				t.Fatal("unexpected result", err)
+			}
+			if mode == "new" && (state.writes != 1 || state.commit != 1) {
+				t.Fatal("creation did not commit")
+			}
+			if mode != "new" && state.writes != 0 {
+				t.Fatal("existing category was overwritten")
+			}
+			if mode == "different" && (state.commit != 0 || state.rollback != 1) {
+				t.Fatal("conflict did not roll back")
+			}
+			if state.locks != 1 {
+				t.Fatal("missing row lock")
+			}
+		})
+	}
 }
 func materialBook(t *testing.T) model.Book {
 	t.Helper()

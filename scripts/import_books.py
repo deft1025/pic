@@ -12,7 +12,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 AGES = {'0-2','3-4','5-6'}
-CATEGORIES = {'animals','habits','emotions','bedtime','nature','cognition'}
+CATEGORIES = {'animals','habits','emotions','bedtime','nature','cognition','kindergarten'}
 
 def asset_path(value, web_root):
     if not isinstance(value,str) or not value.startswith('/assets/') or any(c in value for c in ('\\','?','#')) or unquote(value) != value or any(p in ('.','..') for p in value.split('/')):

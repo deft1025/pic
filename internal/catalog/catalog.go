@@ -16,7 +16,7 @@ import (
 )
 
 var Ages = []model.Option{{ID: "0-2", Name: "0–2 岁", Description: "看图认知 · 亲子陪伴"}, {ID: "3-4", Name: "3–4 岁", Description: "发现世界 · 快乐成长"}, {ID: "5-6", Name: "5–6 岁", Description: "独立思考 · 自主阅读"}}
-var Categories = []model.Option{{ID: "animals", Name: "动物朋友", Description: "认识可爱的动物伙伴"}, {ID: "habits", Name: "生活习惯", Description: "在故事里慢慢长大"}, {ID: "emotions", Name: "情绪表达", Description: "和每一种心情做朋友"}, {ID: "bedtime", Name: "睡前故事", Description: "给今天一个温柔的晚安"}, {ID: "nature", Name: "自然探索", Description: "发现身边的小小世界"}, {ID: "cognition", Name: "认知启蒙", Description: "颜色、数字与想象力"}}
+var Categories = []model.Option{{ID: "animals", Name: "动物朋友", Description: "认识可爱的动物伙伴"}, {ID: "habits", Name: "生活习惯", Description: "在故事里慢慢长大"}, {ID: "emotions", Name: "情绪表达", Description: "和每一种心情做朋友"}, {ID: "bedtime", Name: "睡前故事", Description: "给今天一个温柔的晚安"}, {ID: "nature", Name: "自然探索", Description: "发现身边的小小世界"}, {ID: "cognition", Name: "认知启蒙", Description: "颜色、数字与想象力"}, {ID: "kindergarten", Name: "幼儿园适应", Description: "安心入园，慢慢学会一起生活"}}
 
 type Catalog struct{ Books []model.Book }
 

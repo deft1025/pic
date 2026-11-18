@@ -1,4 +1,4 @@
-<view style="padding-top:{{safeTop}}px;{{fullscreen ? 'height:' + viewportHeight + 'px;padding-bottom:' + safeBottom + 'px;' : ''}}" class="reader {{fullscreen ? 'expanded' : ''}}">
+<view style="padding-top:{{safeTop}}px;{{fullscreen ? 'height:' + viewportHeight + 'px;padding-bottom:' + safeBottom + 'px;padding-left:' + safeLeft + 'px;padding-right:' + safeRight + 'px;' + (landscape ? 'grid-template-columns:' + frameWidth + 'px minmax(0,1fr);' : '') : ''}}" class="reader {{fullscreen ? 'expanded' : ''}} {{landscape ? 'landscape' : ''}}">
  <view wx:if="{{error}}" class="error">{{error}}<button bindtap="load">重新加载</button></view>
  <block wx:if="{{page}}">
   <view wx:if="{{!fullscreen}}" class="reader-header"><button class="small" bindtap="back">‹ 返回</button><view>{{book.title_zh}}</view></view>
@@ -7,7 +7,7 @@
    <button class="small" bindtap="fullscreen">全屏阅读</button>
   </view>
   <view wx:if="{{fullscreen}}" class="fullscreen-header"><button class="small" bindtap="fullscreen">退出全屏</button><button wx:if="{{controlsVisible}}" class="small" bindtap="toggleLanguage">{{language === 'zh' ? '中文 ⇄ English' : 'English ⇄ 中文'}}</button></view>
-  <view class="frame" style="height:{{frameHeight}}px" bindtap="controls">
+  <view class="frame" style="height:{{frameHeight}}px;{{landscape ? 'width:' + frameWidth + 'px;' : ''}}" bindtap="controls">
    <image wx:if="{{!imageError}}" class="art" data-src="{{page.image}}" src="{{page.image}}" mode="aspectFit" bindload="imageLoaded" binderror="imageFailed" aria-label="{{page.image_alt}}"/>
    <view wx:if="{{imageError}}" class="image-error">插画加载失败<button class="small" catchtap="retryImage">重试插画</button></view>
    <view wx:if="{{showText && !imageError && imageReady}}" class="overlay {{bubbleReady ? 'ready' : ''}}" style="{{overlayStyle}}">

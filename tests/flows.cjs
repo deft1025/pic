@@ -52,6 +52,14 @@ function setup(saved, fetcher, speechVoices) {
 }
 const settle=async()=>{await Promise.resolve();await Promise.resolve();};
 
+test('home renders new and unknown theme entries from dictionary metadata',async()=>{
+ const h=setup();
+ h.flow.setMeta({ages:[],categories:[{id:'kindergarten',name:'幼儿园适应',description:'安心入园，慢慢学会一起生活'},{id:'future-topic',name:'未来主题',description:'来自数据库的介绍'}]});
+ const html=await h.flow.home();
+ assert.match(html,/href="\/books\?category=kindergarten"/);assert.match(html,/安心入园，慢慢学会一起生活/);
+ assert.match(html,/来自数据库的介绍/);assert.doesNotMatch(html,/undefined/);
+});
+
 test('reader keeps the first image frame ratio when following pages use different sizes',async()=>{
  const h=setup(),r=await h.start(),img=h.element('.reader-image'),stage=h.element('.reader-stage');
  img.naturalWidth=1600;img.naturalHeight=800;img.events.load();

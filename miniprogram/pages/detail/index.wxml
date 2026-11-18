@@ -1,1 +1,18 @@
-<view class="page"><view wx:if="{{error}}" class="error">{{error}}<button bindtap="load">重新加载</button></view><block wx:if="{{book}}"><image class="detail-cover" src="{{book.cover}}" mode="aspectFit"/><view class="title">{{book.title_zh}}</view><view class="muted">{{book.title_original}}</view><view class="panel">{{book.reading_value}}</view><view class="copy">{{book.description_zh}}</view><view class="note">{{book.page_count}}页 · 约{{book.reading_minutes}}分钟 · 中英双语</view><view class="actions"><button class="primary" bindtap="read">开始阅读</button><button disabled="{{busy}}" bindtap="favorite">{{!loggedIn ? '登录后收藏' : (needsProfile ? '选择年龄段后收藏' : (favorite ? '已收藏 ♥' : '收藏 ♡'))}}</button></view><view class="panel"><view>作者：{{book.author}}</view><view>插画：{{book.illustrator}}</view></view></block></view>
+<view class="page detail-page">
+ <view wx:if="{{error}}" class="error">{{error}}<button bindtap="load">重新加载</button></view>
+ <block wx:if="{{book}}">
+  <image class="detail-cover" src="{{book.cover}}" mode="aspectFit"/>
+  <view class="detail-heading">
+   <view class="detail-title">{{book.title_zh}}</view>
+   <view wx:if="{{book.title_original}}" class="detail-original">{{book.title_original}}</view>
+   <view class="detail-facts"><text class="detail-fact">{{book.page_count}} 页</text><text class="detail-fact">约 {{book.reading_minutes}} 分钟</text><text class="detail-fact">中英双语</text></view>
+  </view>
+  <view wx:if="{{book.reading_value}}" class="reading-value">
+   <view class="reading-value-label">共读亮点</view>
+   <view class="reading-value-copy">{{book.reading_value}}</view>
+  </view>
+  <view class="detail-description copy">{{book.description_zh}}</view>
+  <view class="actions detail-actions"><button class="primary" bindtap="read">开始阅读</button><button disabled="{{busy}}" bindtap="favorite">{{!loggedIn ? '登录后收藏' : (needsProfile ? '选择年龄段后收藏' : (favorite ? '已收藏 ♥' : '收藏 ♡'))}}</button></view>
+  <view class="detail-credits"><view><text class="credit-label">作者</text><text class="credit-name">{{book.author}}</text></view><view><text class="credit-label">插画</text><text class="credit-name">{{book.illustrator}}</text></view></view>
+ </block>
+</view>

@@ -12,12 +12,19 @@ let browser;
  const ages = [{ id: '0-2', name: '0–2 岁', description: '看图认知 · 亲子陪伴' }, { id: '3-4', name: '3–4 岁', description: '发现世界 · 快乐成长' }, { id: '5-6', name: '5–6 岁', description: '独立思考 · 自主阅读' }];
  for (const [width, height] of [[320, 568], [390, 844], [568, 320], [1366, 768]]) {
   await p.setViewportSize({ width, height });
-  for (const [scenario, selected] of [['home', false], ['shelf', false], ['shelf', true], ['shelfFavorites', true], ['shelfAccount', false], ['shelfAccount', true], ['profile', true], ['library', false], ['library', true], ['bookCard', false], ['bookCard', true]]) {
+  for (const [scenario, selected] of [['home', false], ['shelf', false], ['shelf', true], ['shelfFavorites', true], ['shelfAccount', false], ['shelfAccount', true], ['profile', true], ['library', false], ['library', true], ['bookCard', false], ['bookCard', true], ['detail', false], ['detail', true]]) {
    const page = ['shelfFavorites', 'shelfAccount'].includes(scenario) ? 'shelf' : scenario;
    const data = page === 'home' ? { featured: [], recent: [], loading: false, error: '' } : page === 'bookCard' ? { book: { id: 'book', title_zh: '很长的绘本名字也能完整显示，方便找到喜欢的故事', cover: '', reading_value: '在故事里学会等待与陪伴', page_count: 18, reading_minutes: 5, completed: selected } } : page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
    Object.assign(data, { avatar: selected ? 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23fff8e4"/><text x="50" y="70" text-anchor="middle" font-size="55">📖</text></svg>'.replace('%23', '#')) : '', avatarError: false, ageLabel: '3–4 岁' });
    if (scenario === 'shelfAccount') Object.assign(data, { ageDialog: false, needsProfile: false, loggedIn: selected, profile: selected ? { name: 'yiyi', age: '3-4' } : null });
    if (scenario === 'shelfFavorites') Object.assign(data, { ageDialog: false, needsProfile: false, total: 17, page: 2, pageCount: 3, items: Array.from({ length: 8 }, (_, i) => ({ id: 'book-' + i, completed: i % 2 === 0, title_zh: i === 0 ? '很长的绘本名字也能完整显示，方便找到喜欢的故事' : '美好的一天', cover: '' })) });
+   if (page === 'detail') {
+    const library = JSON.parse(fs.readFileSync(path.resolve(root, '../tests/fixtures/library.json'))).books;
+    const book = { ...library.find(b => b.id === (selected ? 'sb-kite-waits-for-wind' : 'sb-nightlight-can-stay')) };
+    const cover = path.resolve(root, '../web' + book.cover);
+    Object.assign(book, { author: 'StoryBloom', illustrator: 'StoryBloom', cover: fs.existsSync(cover) ? 'data:image/webp;base64,' + fs.readFileSync(cover).toString('base64') : '' });
+    Object.assign(data, { book, loggedIn: true, needsProfile: false, favorite: false, busy: false, error: '' });
+   }
    let template = page === 'bookCard' ? '<view class="page"><view class="grid">' + fs.readFileSync(path.join(root, 'components/book-card/index.wxml'), 'utf8').repeat(2) + '</view></view>' : fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
    let styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, page === 'bookCard' ? 'components/book-card/index.wxss' : 'pages/' + page + '/index.wxss'), 'utf8');
    const hasTabBar = ['home', 'library', 'shelf'].includes(page), safeBottom = width === 390 ? 34 : 0;
@@ -65,6 +72,7 @@ let browser;
       if (a.name === 'disabled') e.disabled = Boolean(v); else e.setAttribute(a.name, String(v));
      }
      if (n.localName === 'scroll-view' && n.hasAttribute('scroll-y')) e.style.overflowY = 'auto';
+     if (['image', 'img'].includes(n.localName) && n.getAttribute('mode') === 'aspectFit') e.style.objectFit = 'contain';
      out.append(e); children(n, e, scope);
     }
     children(tree, document.body, data);
@@ -85,7 +93,17 @@ let browser;
      }
      check(parseFloat(getComputedStyle(document.querySelector('.tab-page')).paddingBottom) > r.height, 'footer covers page content');
     }
-    if (page === 'home') {
+    if (page === 'detail') {
+     check(parseFloat(getComputedStyle(document.querySelector('.detail-title')).fontSize) === 27, 'detail title hierarchy missing');
+     check(parseFloat(getComputedStyle(document.querySelector('.detail-original')).fontSize) === 14, 'English title too prominent');
+     check(document.querySelector('.reading-value-label').textContent === '共读亮点', 'reading value missing');
+     check(parseFloat(getComputedStyle(document.querySelector('.detail-description')).fontSize) === 15, 'description font mismatch');
+     check(document.querySelectorAll('.detail-fact').length === 3, 'detail facts missing');
+     check([...document.querySelectorAll('.credit-name')].every(e => e.textContent === 'StoryBloom'), 'creator byline includes extra explanation');
+     const buttons = [...document.querySelectorAll('.detail-actions button')];
+     check(buttons.length === 2 && buttons.every(e => e.getBoundingClientRect().height >= 48), 'detail actions too small');
+     check(Math.abs(buttons[0].getBoundingClientRect().width - buttons[1].getBoundingClientRect().width) < 1, 'detail action widths differ');
+    } else if (page === 'home') {
      check(document.querySelector('.hero'), 'home missing');
     } else if (page === 'bookCard') {
      check(document.querySelectorAll('.completion').length === (selected ? 2 : 0), 'completion badge mismatch');
@@ -142,5 +160,5 @@ let browser;
    }
   }
  }
- console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, custom tab icons/16px labels/selection/safe areas, required selection, saved profile, filter labels, compact favorite rows/pagination, completed badges, touch targets and scrolling. Not a native device test.`);
+ console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, custom tab icons/16px labels/selection/safe areas, required selection, saved profile, filter labels, detail typography/clean bylines, compact favorite rows/pagination, completed badges, touch targets and scrolling. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

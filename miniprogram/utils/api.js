@@ -18,5 +18,6 @@ function request(path, method = 'GET', data, options = {}) {
 }
 function query(values) { return Object.keys(values).filter(k => values[k] !== '' && values[k] != null).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(values[k])).join('&'); }
 function media(path) { return path && path.startsWith('/') ? config.apiBase + path : path; }
-function book(b) { return { ...b, cover: media(b.cover) }; }
+function creator(value) { return typeof value === 'string' ? value.replace(/[（(]\s*AI\s*生成(?:原图)?(?:[，,、]\s*项目校对)?\s*[）)]/gi, '').trim() : value; }
+function book(b) { return { ...b, author: creator(b.author), illustrator: creator(b.illustrator), cover: media(b.cover) }; }
 module.exports = { request, query, media, book, session, onUnauthorized(fn) { onUnauthorized = fn; } };

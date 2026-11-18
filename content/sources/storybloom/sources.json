@@ -1622,5 +1622,1736 @@
     ],
     "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
     "series_registry": "src/lib/library/qinzi.ts"
+  },
+  "sb-nightlight-can-stay": {
+    "title": "今晚的小灯可以亮着吗",
+    "series": "日常系列",
+    "series_id": "richang",
+    "source_file": "jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma.json",
+    "source_git_blob_sha": "a162c0f99346162b29343c6b4a0791191ad65cfc",
+    "source_sha256": "da51ca0a3c8647bcb69520fd465c86ac7f63f181843e50270c738691d6f08f0c",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-bedtime-20261118/originals/sb-nightlight-can-stay",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/1.webp",
+        "git_blob_sha": "f82715458d0a38f961b5e801d1eac4fad7e041d6",
+        "sha256": "55f9f8de49c6f3f7ad78abdc6fb86b6e4cd69a3beec73d73b98e4b565937ea45",
+        "bytes": 133608,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/2.webp",
+        "git_blob_sha": "9848240c37238714f792b601256e3d2fe57d2b2a",
+        "sha256": "a9f96bb8865db2eefd15014cbaabcae6523d7383026121c9c200f3991242d278",
+        "bytes": 101190,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/3.webp",
+        "git_blob_sha": "fc9dacdf6eacc38a23f8adbefd9dbc6cb1740e4d",
+        "sha256": "73f152048f45abd59338560fcf7d13892f98eeb82a6964fb66c607feb3dd15b3",
+        "bytes": 97612,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/4.webp",
+        "git_blob_sha": "c264987eee85e773747b3632ac4949a3a3acc589",
+        "sha256": "8263e8d7719b4c5d772d4c5a355dc1ffee807db5064243f1c53f9b13d0e7c6e3",
+        "bytes": 121622,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/5.webp",
+        "git_blob_sha": "40650635caa271b47078adcda691ee3a3c475477",
+        "sha256": "621aec1e6549f25378bc268bce6cf560f64103bc2df01fd09d842ff4d6fe3678",
+        "bytes": 123348,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/6.webp",
+        "git_blob_sha": "63bf58f694ef82ac5393584f028d78f4c6a48ebe",
+        "sha256": "fbdcf265e1133283f1a0ed7973afd1c8385b703ad28995ff6a2283ad97594059",
+        "bytes": 110150,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/7.webp",
+        "git_blob_sha": "0bd092b1b22aee7a19d2d5f483108affc60f836b",
+        "sha256": "59597b0da026dcbf05a8895fc874ab3d1fe33e654f6a739ceeabb3a23a7d658e",
+        "bytes": 134176,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/8.webp",
+        "git_blob_sha": "044154767614adbd0e201413c34a868eba4614a2",
+        "sha256": "73aa86966d1e49467c38fb46e2e69a71022c9567a54146819db8f1ff16b685d7",
+        "bytes": 123834,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/9.webp",
+        "git_blob_sha": "463db1176fa65ace0da2c9774e8aab96af8dae42",
+        "sha256": "cc1bd1ae7fb2893b75b26dba865105b510f37594929e4b29c1c3ab760176ffa8",
+        "bytes": 125344,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/10.webp",
+        "git_blob_sha": "a08fa249df9da2fa1845838fa0810bab6655984f",
+        "sha256": "ccacbd098999da870fa6b66c9d840268953562024a3a9e29f387315be72e2933",
+        "bytes": 117412,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/11.webp",
+        "git_blob_sha": "08425e9391c204f98baf13e9cee0cb9df041e4ec",
+        "sha256": "209059e36de3a7c37c321c59ecf072ba108c586711abf298e6af7aa9dd82cb2b",
+        "bytes": 131070,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/12.webp",
+        "git_blob_sha": "c900193c7fda041561012d77680d9acc6b8b77f9",
+        "sha256": "2c1cbd6421639a7d0b1cf200fe52fb43ac02f0677b8027c34ca67d551ce2b3de",
+        "bytes": 98268,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/13.webp",
+        "git_blob_sha": "2ebceecb3667495da9233564694de73f40f8e928",
+        "sha256": "901186769937d8607220bd0e2bbc7bb9329b5f045f13ce1005ef14b0b7735070",
+        "bytes": 123814,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/14.webp",
+        "git_blob_sha": "e874f4c684a3ff42b09b96f464bd3ed7cde02bc2",
+        "sha256": "4a5ec892aba284e3c8a0bc9c7e3a1a1c7ce16a520e2cd41608c07379f489c526",
+        "bytes": 115562,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/15.webp",
+        "git_blob_sha": "ea4f139f4b9cbba6d4081ad48f16144ba4cc8f46",
+        "sha256": "878c4f33b5b92a56d55be481c0ec8b213e7de2f5a44367deaa17d04c52171de2",
+        "bytes": 101564,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/16.webp",
+        "git_blob_sha": "e381e0f12d5a861fe2ee28d7d0f38defa67f1a52",
+        "sha256": "f8ecf432dd76fa9f2534b9de43e574b4c765a9db3edf29212d245627cf278794",
+        "bytes": 100924,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/17.webp",
+        "git_blob_sha": "2b1428841822f7e2c487f636310d272d58bcf88d",
+        "sha256": "386870990f90da6bd30a555fd294623728432f6bef41782d317e357d256f368f",
+        "bytes": 152850,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/jin-wan-de-xiao-deng-ke-yi-liang-zhe-ma/18.webp",
+        "git_blob_sha": "56fb4552bbced1a40792231f7d4d0c4bac780c08",
+        "sha256": "935277902a54121a816014f5ace599a5bd1e654efe59bad14c1ea68e3f736906",
+        "bytes": 89066,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/richang.ts"
+  },
+  "sb-why-we-sleep": {
+    "title": "为什么要睡觉",
+    "series": "好奇为什么",
+    "series_id": "haoqi",
+    "source_file": "wei-shen-me-yao-shui-jiao.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/haoqi/wei-shen-me-yao-shui-jiao/draft.json",
+    "source_git_blob_sha": "582ae347163225c27ea720189f09c8e6e80e6cf6",
+    "source_sha256": "c557497039e06897b7ed1ac769668860ac0ad7889cc9a5d1025bf9d678ca02d2",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-bedtime-20261118/originals/sb-why-we-sleep",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/1.webp",
+        "git_blob_sha": "6d8284bcef97bb1ce0dc952f4534cc969092414d",
+        "sha256": "4fed219684eccdd7b091515472afdc135d63f2041d78fd553a53b1b4a885612a",
+        "bytes": 88766,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/2.webp",
+        "git_blob_sha": "e1794ae16e75e89a773d037d3ee032f42320166d",
+        "sha256": "0fb769bb65ce63740025a77480d5e249648842dd9feab9bd03abb5dc5b613c21",
+        "bytes": 89234,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/3.webp",
+        "git_blob_sha": "29c141f3cd87814f9c610a594476d37a9c27f0d3",
+        "sha256": "e7d37d38dbb6791bcfd68fbb0e22aba91d6ac7acbf44924e3d8b6c7d7104c897",
+        "bytes": 86958,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/4.webp",
+        "git_blob_sha": "8b6d45464729bb2f905ad612ad41eb85d759e5c9",
+        "sha256": "9db4feeb995537020b98cbee01952558f5347b1c264287b9a06bf9bde315c546",
+        "bytes": 82428,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/5.webp",
+        "git_blob_sha": "ddfff810f094932d3a075c5f7ad474f2b494ed6e",
+        "sha256": "140329c1be8e4c0d37fd2f9eec5774cf5512690e16ebae46bff2cd7fd7fb3527",
+        "bytes": 76554,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/6.webp",
+        "git_blob_sha": "d98b9dc0eedb95b0ce30f08c9794965856de79c5",
+        "sha256": "9c6cfc26d75fb9b51fc734043b0202608b8349b0dfddc84424aedd79ec7f052d",
+        "bytes": 81810,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/7.webp",
+        "git_blob_sha": "04cc1393d5fbd12b6677506a690e360082ece1ef",
+        "sha256": "a47260111d3711b666438a591801aa3b21700c32484b9b1dfc2046540d736cbc",
+        "bytes": 114502,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/haoqi/wei-shen-me-yao-shui-jiao/8.webp",
+        "git_blob_sha": "2b2be6364f291b0d0194cedf14d76676e746bed6",
+        "sha256": "25618a89f1c1e6fd2e22447c4c76fc3422f1a2c378c1efdf47fdd3246f5371ad",
+        "bytes": 106880,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/haoqi.ts"
+  },
+  "sb-spring-night-rain": {
+    "title": "春夜喜雨",
+    "series": "唐诗入画",
+    "series_id": "tangshi",
+    "source_file": "chun-ye-xi-yu.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/tangshi/chun-ye-xi-yu.json",
+    "source_git_blob_sha": "b5ce1537b6dffa0883da6f397407d65d7d599258",
+    "source_sha256": "9c7ba65fc5dd4560b6783cc549798e53ed66175cf7f67c9a22f65e322620adce",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-bedtime-20261118/originals/sb-spring-night-rain",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/1.webp",
+        "git_blob_sha": "7d87caf89b5afc120fe52d80f6af792902fcafab",
+        "sha256": "dd332fb5039a0e6bd82306877e093bcd722b5e570650179221624e9ea888ae21",
+        "bytes": 165480,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/2.webp",
+        "git_blob_sha": "b38b6ac8a1f4faec105c6a7bdb1e4113c5963e03",
+        "sha256": "4d51c676e8487a67358d84d866f5fe3e5c9f2f068769a98c8b95fba637776ff7",
+        "bytes": 197702,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/3.webp",
+        "git_blob_sha": "aae34ce39ecac5193523fd57e562145ea54f53de",
+        "sha256": "34213e1f7a48ca78acefc63ad91bc7490e3250f4997b72ae747ea1ffac0104c8",
+        "bytes": 164882,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/4.webp",
+        "git_blob_sha": "01b6c55967210ffca917b907b50bdb42c470fbac",
+        "sha256": "6a2ba6cab9b8109e065617406ffb211cfc1c594194dba517c1754b5ee1877f9c",
+        "bytes": 154312,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/5.webp",
+        "git_blob_sha": "d390ef23f197ea7c3d68320e45b278bcbdf2f494",
+        "sha256": "65d0eb9a596bca077131b5551c86f0552b60f8577dc0dfc142c1a09bb0489a6d",
+        "bytes": 238848,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/6.webp",
+        "git_blob_sha": "161bdffc8e3ae9a43d00ddce3ff3e11654f01448",
+        "sha256": "6c8b104c35838d7bb0c70eb1dc579767e176a7f665a335b6f897a0477d611055",
+        "bytes": 223656,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/7.webp",
+        "git_blob_sha": "44dc0f374ba2456092fa77600bd2bc0ff33ca5cd",
+        "sha256": "befc5c5499ad7d4a4a0cf8044e1f58ab0d25fb0d08edff58172d277e4596a1df",
+        "bytes": 181940,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/tangshi/chun-ye-xi-yu/8.webp",
+        "git_blob_sha": "a1e15ddfd5a32f786a86b3eb1a10de6b75cb4925",
+        "sha256": "094ff2129785e104cbe1b41411ced1361c00bb33d17a259169893c8d3bad975e",
+        "bytes": 239856,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/tangshi.ts"
+  },
+  "sb-a-rose-for-you": {
+    "title": "赠人玫瑰，手有余香",
+    "series": "谚语故事",
+    "series_id": "yanyu",
+    "source_file": "chengyu-51-60.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/yanyu/zeng-ren-mei-gui",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/chengyu/chengyu-51-60.json",
+    "source_git_blob_sha": "5527f569797f2b1313d1d9dd6a62e94af05a89ef",
+    "source_sha256": "60492f2801748da0d523c95fb5037103ee248ae76a53c48d20c81ac00cbacc75",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-bedtime-20261118/originals/sb-a-rose-for-you",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/1.webp",
+        "git_blob_sha": "e2f2355abdf40eb0050d49a0d37446db5c71d85c",
+        "sha256": "0f4421b76961f7dde5ffa059a644ff9522c87b88a948b52813a07e9a80ee075d",
+        "bytes": 171712,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/2.webp",
+        "git_blob_sha": "390c5975cfd50db5e2d4bb9cb5774fdb51be59f4",
+        "sha256": "7449e630423baabf7a51dcd2626853ea3351ef54e4a5d26196417b9532212c91",
+        "bytes": 172886,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/3.webp",
+        "git_blob_sha": "c3c5d8ddda0584eff23276627fc9f4f328160f98",
+        "sha256": "59a916c3457b8de9fbdd3a286c7dd534af5c4684dcdd2f0c6aa203f12dc87077",
+        "bytes": 191894,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/4.webp",
+        "git_blob_sha": "1df098c0dc69e90311213140dc9b90ed0545b228",
+        "sha256": "1cb4ed6f936a99e6fc99c5a990a25b2974e00336cb0892a6c99be310c8968846",
+        "bytes": 175742,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/5.webp",
+        "git_blob_sha": "a694322dcd5d4983f462c073324089ef44283562",
+        "sha256": "1286118f7c9f594c5b9716d4528dbe17fef51730c1270f928b32ff9c2e289f24",
+        "bytes": 166666,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/6.webp",
+        "git_blob_sha": "9a61cd655a1b725de9ce80074b0e4a95a6cd1d41",
+        "sha256": "c69dcb96dd2281b37f51cd81b4078c5b05ba4078616a3a7f9b35310ce51bed7c",
+        "bytes": 158222,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/7.webp",
+        "git_blob_sha": "2054b10fd4aaac41b687006377a439af5658a0d7",
+        "sha256": "3f35ba39aa14b9db22d73850972d08dc7d1e4ad48bb44633e4491756cfabaf9f",
+        "bytes": 198070,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/8.webp",
+        "git_blob_sha": "d0f64b0e651c7485e37a7e5d2f4586d8fcd4e343",
+        "sha256": "d2cf9b58c488408de18d34e4fb827789c7e5fb5fee1c1b971b86d33eff163390",
+        "bytes": 139436,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/9.webp",
+        "git_blob_sha": "44b600a55cbef57a781e2e053654d38ed4de7313",
+        "sha256": "cf55ecca8bafc46056b776d104f594dfa13f6c17093de7c2e2dcbd86c351ba28",
+        "bytes": 174938,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/10.webp",
+        "git_blob_sha": "9d725e5604b6fb8d23e9d28e01a466e83348619c",
+        "sha256": "8852054abd2d9f3595a940d4131a6e29e94460d727ea5ce1ee0d377ba251bccd",
+        "bytes": 166902,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/11.webp",
+        "git_blob_sha": "bbcdbef0f4be32ab4f311e672618d91a0d7bbec0",
+        "sha256": "6daf7518d5466974a434857be8d6d69f6bdf51de573370e5f6ddff080e7850cb",
+        "bytes": 133962,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/12.webp",
+        "git_blob_sha": "cf6958f372fda2c48a8bf9e24105f998c46d103e",
+        "sha256": "f1bf330a2c0948ad2b479d5127e0bf485a977647292ec1653fed991d87fe2f00",
+        "bytes": 185120,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/13.webp",
+        "git_blob_sha": "57671416679f8d9faefa21d7dde8428a0c077dc6",
+        "sha256": "9456ed837727aec7b3bf12c43a7267daa490185b583cd367e26b69f9fc56a0fa",
+        "bytes": 137932,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/14.webp",
+        "git_blob_sha": "87cce1ce6371c6b6532cedf857f32756aae5a1cf",
+        "sha256": "1926ef7904baf6b5d99c781239f8d846eeead443eb1f56ebb5c4b940a38ac285",
+        "bytes": 120500,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/15.webp",
+        "git_blob_sha": "8057c5ca8801734af5d845b069663264881b9611",
+        "sha256": "38a9e22fa2452d49b5574baac8353520f29a8560e3b25fbe373864e104c2a737",
+        "bytes": 158014,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/16.webp",
+        "git_blob_sha": "70cb572880f3d98fb00f8ec80609b274fd3a506e",
+        "sha256": "f1c7bf39e95b543fd4fdfee9ae612b3a3fc501bd29bf06fba273a54abb890c49",
+        "bytes": 162690,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/17.webp",
+        "git_blob_sha": "3e9704286cffc14bed0e5f59d702579e29a1d2b9",
+        "sha256": "3fa764af347066537a0d4324cb4d9cfaffeae194ccddbb73710fbfbedc20eac6",
+        "bytes": 190938,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/chengyu/zeng-ren-mei-gui/18.webp",
+        "git_blob_sha": "1d508c87f1137146ed1e95d93bf9e3e25f18ca29",
+        "sha256": "1b92f69d7774726aa65e473e2415e818a37a316674e1b87430426caec4be227c",
+        "bytes": 139240,
+        "dimensions": [
+          1024,
+          1024
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/yanyu.ts",
+    "source_selector": {
+      "id": "zeng-ren-mei-gui"
+    }
+  },
+  "sb-school-gate-wave": {
+    "title": "校门口的那一次挥手",
+    "series": "日常系列",
+    "series_id": "richang",
+    "source_file": "xiao-men-kou-de-na-yi-ci-hui-shou.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/richang/xiao-men-kou-de-na-yi-ci-hui-shou.json",
+    "source_git_blob_sha": "70643cb055a4cf95c7a4ab2cd8e62017e7277c20",
+    "source_sha256": "cd27ff23ba8e80399295d8bdf965f011f904ab7a5342cb89d133eb6ff6389113",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-kindergarten-20261118/originals/sb-school-gate-wave",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/1.webp",
+        "git_blob_sha": "2ff08985ae9a827d60aa36bad94415d6d0dc9634",
+        "sha256": "6a1655b1f838a2b6d5b23dbbb1a3f5333e1cf8b97b0493d02879e8a493cfabb3",
+        "bytes": 187448,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/2.webp",
+        "git_blob_sha": "ff2987bf951b8e68e1a2dd4b668a084336548eca",
+        "sha256": "91e5641e9ab4deac5a36e090f9a3e1a8abc9e3eb3dae177a9c4809889fdfab8f",
+        "bytes": 238774,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/3.webp",
+        "git_blob_sha": "2f0b052e38bf7054a131f998b0236639839f935e",
+        "sha256": "66b7df12963e1584f5b7e599d03b82e6ab3df19e8e110ec2d4053d1e06f12fcf",
+        "bytes": 211322,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/4.webp",
+        "git_blob_sha": "b1651bacc991c4ee875e181278671aad4d2f1f72",
+        "sha256": "4f46411515e7a4518b01c284966f074160329e5f333c234dce425a8a290a6d20",
+        "bytes": 216178,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/5.webp",
+        "git_blob_sha": "df499d7b2561a8dc9c7687da4d8bb35dff64755a",
+        "sha256": "76a923f66bf3378258d1e6902229d3d278d66cc30055a27e9dbf55b93c9ece20",
+        "bytes": 228534,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/6.webp",
+        "git_blob_sha": "37c456eff01dcb944fea4084adeda9355f4e70c3",
+        "sha256": "1990ff4dbaf6cbeaa5fd2d8ce42d4e84d7e94136fa8f4443fbd3e4eaf24ac248",
+        "bytes": 175440,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/7.webp",
+        "git_blob_sha": "8a21fac3e97b78362cf20d95a18f124a7317759e",
+        "sha256": "3b3c988316d25a83368f58465332965476f6bcdc94d1835d14b82f0532a74d85",
+        "bytes": 168128,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/8.webp",
+        "git_blob_sha": "ed02ed807fb13110bcb28af7cec570bdfc3f25ab",
+        "sha256": "807555200b58f106ef30b57760f6365cda0e8fa7f810251422ed7d10a22afe82",
+        "bytes": 139018,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/9.webp",
+        "git_blob_sha": "81648f9ae414a9cd80e3a3602441b97be8dc084c",
+        "sha256": "df1ee418198b1612a5d8737de816ad2c124a433e80e32920c104f32a50724bfe",
+        "bytes": 141822,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/10.webp",
+        "git_blob_sha": "0de7549840ad1be31f9dda68a611f9ba74e444ab",
+        "sha256": "9e022a3848bb6c63b00104fce66f245ebdb3b6b6d7a0d3295c68760f4f20825f",
+        "bytes": 192502,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/11.webp",
+        "git_blob_sha": "4377f5eb726e590ee0fb4424fc385972ba3545e4",
+        "sha256": "c2c35bfe66a7f46b9eff10b712cb6032585fea5f4d07bbf5cc7716a07d480bd1",
+        "bytes": 209242,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/12.webp",
+        "git_blob_sha": "1aa08c1bab9cd6cca4336643459ad36afe59870d",
+        "sha256": "00bb7e6e6c89922040cdd324ff4a25642558a1a7d58523dbc3d8be8a70526f6a",
+        "bytes": 202596,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/13.webp",
+        "git_blob_sha": "1f28678c2dd28b1e7820c0c2709008708189009d",
+        "sha256": "fbb9aeb6f235ee3a1717afeaf60feec311c6ff257be395ccfb42b9b617037b7e",
+        "bytes": 192698,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/14.webp",
+        "git_blob_sha": "2de148e60989c69ceb206b253cd42c903508e049",
+        "sha256": "127eb7201d16dd47f41e4fd56c98984869e1b2f6916c08a5928510e7a6afe465",
+        "bytes": 153690,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/15.webp",
+        "git_blob_sha": "bbd2b79b448b03ca825fcc066283b569cc05f819",
+        "sha256": "31e9be102dcdf7d0d02085ba276c9eb6974878529b6cb2c3810be36a1c2ddd00",
+        "bytes": 212302,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/16.webp",
+        "git_blob_sha": "e9caa1817c3216f9b8e92acbaca8a0bf9222efd5",
+        "sha256": "9d10affa3f7837a86e2e1f3ec6fceb72f047d48940289480b284a9bb92afa592",
+        "bytes": 147016,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/17.webp",
+        "git_blob_sha": "98b7885cf1a86faa1127112cc5f5c3d236f1fceb",
+        "sha256": "8b3d8194ea34c91e431b14acb417457e51739a10dbafe0a9099a7e75f7159743",
+        "bytes": 198176,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/xiao-men-kou-de-na-yi-ci-hui-shou/18.webp",
+        "git_blob_sha": "f1ee82eecb680d7017851afc144fa265f784e3a8",
+        "sha256": "20cca4a047b3f6db93d945c58ca9b2e183be9747f6ab00f26ed421347c539526",
+        "bytes": 217222,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/richang.ts"
+  },
+  "sb-rest-at-naptime": {
+    "title": "睡不着的午休小床",
+    "series": "日常系列",
+    "series_id": "richang",
+    "source_file": "shui-bu-zhao-de-wu-xiu-xiao-chuang.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang.json",
+    "source_git_blob_sha": "db1ecf8384493474ef1e2dec17ad0a8051309010",
+    "source_sha256": "3996d117479fbcd27677511fb7fcfc5e008c5b69cfb45c87cc64250fc67d9611",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-kindergarten-20261118/originals/sb-rest-at-naptime",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/1.webp",
+        "git_blob_sha": "37fbc3f289ccc1d35e8bc3e5dc746960a149245c",
+        "sha256": "3aa9f9d79398763f92b95c37128be4106a1d2f8a79360107a22264a1767c026e",
+        "bytes": 139750,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/2.webp",
+        "git_blob_sha": "cfacb0faf9503113d3c067e678bfb8d4e515a8d8",
+        "sha256": "bd34bd9dac8a2a044df58480662bf65ed1c2b94ad75b75aa887eb2f3923941de",
+        "bytes": 140364,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/3.webp",
+        "git_blob_sha": "62b2eb223938c596e12bdec914fec3f57c037da2",
+        "sha256": "e5268e60374847d38a3314b9374eaa8df7d399c5af17cf83a73e56b7699d3b5f",
+        "bytes": 137754,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/4.webp",
+        "git_blob_sha": "453115ba6c052e4e88c4dfa3e255c1a7d6fa72de",
+        "sha256": "1069220eb69ed9b8cf408ee33ab3e2e33c121d0e742f7f68242a05a33747a4c7",
+        "bytes": 145984,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/5.webp",
+        "git_blob_sha": "4b4df38e94a2149e439f35cde5452cf958968069",
+        "sha256": "3260306080c4e03a4baa42c7cfe9c80f9520a7ef88b561d3275fe76bf687e2fe",
+        "bytes": 184852,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/6.webp",
+        "git_blob_sha": "1f11e65f797569e8c30fa99fa25b24f1c7c045ce",
+        "sha256": "40fcc95e6f755132c75abf94f1955a011f74e00901e3953f13eb05426946dcc3",
+        "bytes": 122938,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/7.webp",
+        "git_blob_sha": "c2ba748f70365247ba79cb53d31e075a4d98a33f",
+        "sha256": "41764ca10973d90c69ba0bd39d30bc5ce78a0701651a3d6ee49866b4f60a197f",
+        "bytes": 126398,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/8.webp",
+        "git_blob_sha": "230e8334c44b5e9e8a79bc9302767f83d6b0036f",
+        "sha256": "f3e165d4ed96bb7c4fd9178f74a0aa9bf92942f2457d16c8337ab81f1d9899a9",
+        "bytes": 123196,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/9.webp",
+        "git_blob_sha": "b45cb1c30e9256b70d572faa2d1dcc922dffba94",
+        "sha256": "81ebc06783015c244863220726a7ca6463622b920a58a39a812eee8ed19a85fe",
+        "bytes": 143650,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/10.webp",
+        "git_blob_sha": "957244eff4884b21dde8669273316fd310f23d2c",
+        "sha256": "e49c9b649583fab28283c4fda57da40095625aa19a3e8fef2702295ce36da3ed",
+        "bytes": 165470,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/11.webp",
+        "git_blob_sha": "ac43ff9a953161bbca7d789a7f40939c8eb3e252",
+        "sha256": "fa9ca217abeea2459a6ae984a80dc52d8a002ad5d6cbaf77165d24b9667690f0",
+        "bytes": 176348,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/12.webp",
+        "git_blob_sha": "a001cbf3c66178392fa0ba30e6343806b69caba4",
+        "sha256": "72e1dacb8bbad468b52b8d0a8d8bde8439e201af555e67532f369a3ea6899a2e",
+        "bytes": 181482,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/13.webp",
+        "git_blob_sha": "2498629d1910476fe8066650cfd7fe45bf555bfe",
+        "sha256": "c8ca538e172f2f1c1e1e3403d0cded74f6031eb5b099dac2544d34e6d4596a63",
+        "bytes": 180110,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/14.webp",
+        "git_blob_sha": "9cdb86b2d017fa1f8050073ca013eeaf3b3d7ff5",
+        "sha256": "89261830dea441bc098431db97a7472c6a7e33762167692696d9956d3449bf39",
+        "bytes": 180832,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/15.webp",
+        "git_blob_sha": "62277f4ac8eee7c56c651f234f73a90ba190aece",
+        "sha256": "afd3472e3b5f06db7bbaa1eebc5ce77f93c19c3350b5db1f8eb53315cdfb361d",
+        "bytes": 194422,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/16.webp",
+        "git_blob_sha": "7a3330a5a0963ad29a618c363d6672ae639af03a",
+        "sha256": "5828e59b5efc0981d9fccf50922154292f295f049c1c96bf648ff20a9606000c",
+        "bytes": 212680,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/17.webp",
+        "git_blob_sha": "2bf4769edc0f548659a0cec030302346c91ce3e4",
+        "sha256": "7d85d512566e54ba6f7b7eb27d40f63d80834a1db68c3458a190c7cb1cce72b3",
+        "bytes": 186622,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/shui-bu-zhao-de-wu-xiu-xiao-chuang/18.webp",
+        "git_blob_sha": "e315b09472789d52bd6c7b18a513da0087aa1dd9",
+        "sha256": "6ce109f839b0d8b98a8ddf112aebe3bf045177d8a28837a15f661b209283f831",
+        "bytes": 178846,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/richang.ts"
+  },
+  "sb-may-i-play": {
+    "title": "我可以和你们一起玩吗？",
+    "series": "日常系列",
+    "series_id": "richang",
+    "source_file": "wo-ke-yi-he-ni-men-yi-qi-wan-ma.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma.json",
+    "source_git_blob_sha": "faaa0cfe0187f24154d4a56ca7024939ce0d5c95",
+    "source_sha256": "4a2de3381eb321661e5163fa12760d68d25e7b0bef3a9ef389aa72d0126ee04a",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-kindergarten-20261118/originals/sb-may-i-play",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/1.webp",
+        "git_blob_sha": "d2491904d691a1f06b26f29af5f1ffac42d72d32",
+        "sha256": "0e7eb38b3c630dddb75c587bcffcf5d83692131a7fe667030cca0def82a48e89",
+        "bytes": 260724,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/2.webp",
+        "git_blob_sha": "afa116e68d85f0e8e59cdaac5c016f767ed118ae",
+        "sha256": "0e10e97c702661f95868ee8b2ade1015b27a733fad860a06c19c030c6b41d4de",
+        "bytes": 246966,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/3.webp",
+        "git_blob_sha": "0fde054907d33855d52e818a30e2b9d8e76013a6",
+        "sha256": "24973960bc4bbeda291827402d8aa50d51b06c49363b17ac7ce894de0aa57e69",
+        "bytes": 265770,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/4.webp",
+        "git_blob_sha": "44d213c402b532d5bc1f7ba98da158d5098751ba",
+        "sha256": "cba94607487d90881892f3b7c45522c3ba4e4230a2dd899e2e78f6deedb8e0d2",
+        "bytes": 252558,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/5.webp",
+        "git_blob_sha": "2fb601cf26a87f0e3f5dae70e08b123b879ab19b",
+        "sha256": "b7534f73840417f41596aaa823686b978c5e445b3598015be76968af42b36f50",
+        "bytes": 240692,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/6.webp",
+        "git_blob_sha": "8e0b81e4d9732148704e8b42763810742bd68c2e",
+        "sha256": "df56650824452ca209e649ac7385fe2f42020e68ed52b4bdafa0096e87f1f6c9",
+        "bytes": 246782,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/7.webp",
+        "git_blob_sha": "3cb8c6b5311742e9c640d46713322d079d8d9591",
+        "sha256": "c3e696cda381e8b75ee8609e0a4ecf9131f5b8e4a6493c907728cfd165fb6c3b",
+        "bytes": 201670,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/8.webp",
+        "git_blob_sha": "e767e8cca42713cb68024257a261c523230c167f",
+        "sha256": "d67597a145b73e250881425e947ab2442b9d741ffa746e1d31aadeab7a8c38f7",
+        "bytes": 226296,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/9.webp",
+        "git_blob_sha": "14ff380c76be3cc5d7c20d81d4ea14cc70f5261e",
+        "sha256": "14ae9a769771bd78e319c2b0beb40c8a2219a065797c6e2f615c86cbafa2e435",
+        "bytes": 213316,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/10.webp",
+        "git_blob_sha": "8cc0cfa7a0e6b0a54677981d1398772bd7047ac9",
+        "sha256": "3ce29598a4babba28606a71f81f6460ba4bd50133649e20c7579f466b8c72c02",
+        "bytes": 232424,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/11.webp",
+        "git_blob_sha": "c6b999bb5b553c96abb6761435b7a56ff42416e3",
+        "sha256": "07738dbe2b247bc3cea28fef7735b4836252881ebf347c8629ef5e0528015971",
+        "bytes": 281198,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/12.webp",
+        "git_blob_sha": "ca23b5f7adc3d91f3c18e39e694456f04f94813e",
+        "sha256": "7217300f86c8b1d109fdaad596d1ffbc9fbb503ea6fbfbe945c53eb8a160869b",
+        "bytes": 281318,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/13.webp",
+        "git_blob_sha": "8cbfa6c794db2262c00f1651f31f65124f079d31",
+        "sha256": "2e3345e102150468df40305e79b902ea71a0d270aa466870238486336d13a295",
+        "bytes": 291838,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/14.webp",
+        "git_blob_sha": "709d00aa58c776988ee5b831742774217b28a7f7",
+        "sha256": "85650e1a93e9c97878efa3892be7af90b37e48e28b7c462fd6dc9ed368c09bb8",
+        "bytes": 304050,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/15.webp",
+        "git_blob_sha": "d4b4bbcf88c64a75176fde6a17b2a626bf61cf62",
+        "sha256": "d938eba0c0494130c9d0044daa0db53b2e46218c31c7ff96c81325e5818edf16",
+        "bytes": 251196,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/16.webp",
+        "git_blob_sha": "d8a6f048b38754317c4d41ce1dce6af8fd1e5d98",
+        "sha256": "578068b7ae0126abcd79e1f55efd1d76732ffe762284af8c9e2646db7509c790",
+        "bytes": 278360,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/17.webp",
+        "git_blob_sha": "c46f6d66141b49ba130d71a4fc287b7552e893b9",
+        "sha256": "76634bd5ce11f4ffa2a1fdc307ce9fec1e15aae7fb9b19fe5bd6bec9575d19b7",
+        "bytes": 304234,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/18.webp",
+        "git_blob_sha": "612197d7c75fe3cd4e3a2f775b9bf8e7ca80a0cd",
+        "sha256": "201445e133fdecd846b5b4b6921fcc48f4ae877f37bc70c4975685661946485a",
+        "bytes": 289504,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 19,
+        "file": "19.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/19.webp",
+        "git_blob_sha": "7397103b9c11305c66fb9b34d4b3eb9a5c457fd5",
+        "sha256": "5a2fcccbd0143916081b690434ad2ac5f0992a66a5d7af46ee6f764ce226c878",
+        "bytes": 231894,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 20,
+        "file": "20.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-ke-yi-he-ni-men-yi-qi-wan-ma/20.webp",
+        "git_blob_sha": "21813132c2cfc711499a654c2a9be30e71da7589",
+        "sha256": "e500dcd4853eb6c9395c7ff730a9110d3cfbd52de58ed26343b6c3e93f133f58",
+        "bytes": 293580,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/richang.ts"
+  },
+  "sb-can-i-ask-for-help": {
+    "title": "我想去洗手间，可以举手吗？",
+    "series": "日常系列",
+    "series_id": "richang",
+    "source_file": "wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma.json",
+    "source_git_blob_sha": "66100d7ccb6680ae9420fc7013e0c6289f709182",
+    "source_sha256": "756f5ce4175d4190de7590ae242981735e0d250bc61a5457354e616c0f585adc",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-kindergarten-20261118/originals/sb-can-i-ask-for-help",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/1.webp",
+        "git_blob_sha": "e46a30eb56af4eac461ebb35b03d931a50e3011b",
+        "sha256": "e476d7c8b34028af8e8fb1ab89e52991d4ce3b1422d6d20574c3fc010c26c5ee",
+        "bytes": 198830,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/2.webp",
+        "git_blob_sha": "d3813ae8e99938d1724d3c364bf66ef4df3b6725",
+        "sha256": "75273603ec73b7e8b37b5dbd9ff602fa8b866843f30e4d74200a2d28177efd37",
+        "bytes": 188534,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/3.webp",
+        "git_blob_sha": "3214a6709e0891e7a5c01392eddfc80d873f5d4b",
+        "sha256": "fc908ba9d4ca73ca0223b55edda3e54a0ce2c066553625a96bd75a01cb5f6f73",
+        "bytes": 144946,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/4.webp",
+        "git_blob_sha": "6c8b1ce7be8c8194fea59df55e4cfb5b9b9a14e0",
+        "sha256": "24fdedd4533e79ae3746040f3e60d739df7f1a02b97174a4109a1e5e43a2bb3c",
+        "bytes": 131044,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/5.webp",
+        "git_blob_sha": "2734795bb16f0d1c4cb0ca96a1f345ab3f7e625a",
+        "sha256": "6e3082478a69252b2b86e2ef62cc41642cd7a53c8c2a7da18f0e50b2fe9ed541",
+        "bytes": 168762,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/6.webp",
+        "git_blob_sha": "da04acbf5805a0083073dac6f7e0f32b530f728b",
+        "sha256": "dff2edb16c8471ad4d48625d7e0750f097c6e7ec95520b144394838fefaeeb44",
+        "bytes": 184906,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/7.webp",
+        "git_blob_sha": "13fb84b7737e0fb7e5231905f86b5c34b9a86e94",
+        "sha256": "777be4874a225f4bcc3de06dd9fcfbe33844593bdbc10c9ef816c672928ba024",
+        "bytes": 161608,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/8.webp",
+        "git_blob_sha": "182565d79b2a015dc73205b89d4d7b83e6e86339",
+        "sha256": "ff0d9bebae19cee9dba3fa41dc505833e0c33f74f92b642391bc94502a27ba52",
+        "bytes": 157862,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/9.webp",
+        "git_blob_sha": "65748de584099c315fef7a80e12f1c44cd015b92",
+        "sha256": "d7ed3612e354b44d58297b7b888c0a01143ba35818cbfbdced175166b262eaba",
+        "bytes": 184482,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/10.webp",
+        "git_blob_sha": "4ac264c82d17a7428f5659c6ca5697ff0e73ff08",
+        "sha256": "fefc1366a6603652bf398b5b6c057b4b37780b1ac0ae249e719a1c16b71ec9a1",
+        "bytes": 172952,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/11.webp",
+        "git_blob_sha": "10703c86ca0c27dffea4cf791c5da922fdcd34a9",
+        "sha256": "7b39ccb56ba7d7cdd04626a8d4bf6636d9437cada69497ccc25fde8ac3915a99",
+        "bytes": 174036,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/12.webp",
+        "git_blob_sha": "dba7812283c2da9431c5f8121cc11b7a44ba3aa1",
+        "sha256": "338d4fba7fbe81f3bbf0aa35adece40e04a6ff915ad13f8ded915d84dece2250",
+        "bytes": 170404,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/13.webp",
+        "git_blob_sha": "f3e1e6ba4a1de5afce74c18c1256e86218f9e2e1",
+        "sha256": "89d104aa8273bf2e8910161b3ad6beb207c231ab3ad7e8aff3c13c8a933d1264",
+        "bytes": 208926,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/14.webp",
+        "git_blob_sha": "2cc247e75b221b88d65c69b4ad888e24d1c4da30",
+        "sha256": "32b311436d046e16a8ad89616bfe911bb97ffb9315d1fe66bcd67b34112383bd",
+        "bytes": 206048,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/15.webp",
+        "git_blob_sha": "a4742543b068845a978d90b142d3ccdc9205b54e",
+        "sha256": "ca56e146605fc3ab4208ee7b541b7b992ee54d0362fc9a1dec0fd71807ee2153",
+        "bytes": 149806,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/16.webp",
+        "git_blob_sha": "aa304ee9c60fb75d8c145b8a506e7c5440853755",
+        "sha256": "8b9276852282456c9cfb56786f9d9729d6fe712e75d81bc8d0bfe6d9d292eb12",
+        "bytes": 151570,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/17.webp",
+        "git_blob_sha": "0358067896af4976c5b92a9bafb3b8505dfd83b3",
+        "sha256": "52d0e4ffedd26116e56e15aef44823014b0466685d4db804412fe51637166992",
+        "bytes": 208214,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/richang/wo-xiang-qu-xi-shou-jian-ke-yi-ju-shou-ma/18.webp",
+        "git_blob_sha": "0ef1f12ba225d041f21cf6eb85222ae1362d2c6f",
+        "sha256": "fd3524925a9c64f09476181d54949b99175ace6ea7e18cd723f9a456d3d7be70",
+        "bytes": 211960,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/richang.ts"
   }
 }

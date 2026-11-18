@@ -143,7 +143,7 @@ func TestMySQLIntegration(t *testing.T) {
 		t.Fatal("stale voices after reimport", err)
 	}
 	options, err := r.Options(ctx)
-	if err != nil || len(options.Categories) != 6 || len(options.Ages) != 3 || len(options.Languages) != 2 {
+	if err != nil || len(options.Categories) != len(catalog.Categories) || len(options.Ages) != 3 || len(options.Languages) != 2 {
 		t.Fatalf("options %v %v", options, err)
 	}
 	if _, err = New(db, true).Get(ctx, fixture.Books[0].ID); !errors.Is(err, sql.ErrNoRows) {

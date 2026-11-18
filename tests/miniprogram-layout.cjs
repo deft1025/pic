@@ -13,7 +13,9 @@ const template = fs.readFileSync(path.join(mini, 'pages/reader/index.wxml'), 'ut
 const styles = fs.readFileSync(path.join(mini, 'app.wxss'), 'utf8').replace(/\bpage\{/g, 'body{') + fs.readFileSync(path.join(mini, 'pages/reader/index.wxss'), 'utf8');
 const output = process.env.PIC_MINI_READER_OUTPUT;
 const localArt = process.env.PIC_MINI_READER_ASSETS === 'local';
-const media = localArt ? Object.fromEntries(books.filter(b => !process.env.PIC_MINI_READER_BOOK || b.id === process.env.PIC_MINI_READER_BOOK).flatMap(b => b.pages.map(p => [p.image, 'data:image/webp;base64,' + fs.readFileSync(path.join(root, 'web', p.image)).toString('base64')]))) : {};
+const selectedIDs = (process.env.PIC_MINI_READER_BOOK || '').split(',').filter(Boolean);
+const selectedBooks = books.filter(b => !selectedIDs.length || selectedIDs.includes(b.id));
+const media = localArt ? Object.fromEntries(books.filter(b => selectedBooks.includes(b) || b.id === 'sb-bean-in-a-pot').flatMap(b => b.pages.map(p => [p.image, 'data:image/webp;base64,' + fs.readFileSync(path.join(root, 'web', p.image)).toString('base64')]))) : {};
 let browser, checks = 0;
 (async () => {
  browser = await chromium.launch({ headless: true, executablePath: process.env.PIC_BROWSER_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', args: ['--no-sandbox'] });
@@ -89,7 +91,7 @@ let browser, checks = 0;
   window.reader = { ...def, data: structuredClone(def.data), setData(patch, fn) { Object.assign(this.data, patch); render(); if (fn) queueMicrotask(fn); } };
   window.openBook = async id => {
    currentBook = books.find(b => b.id === id); const r = window.reader;
-   r.serial = (r.serial || 0) + 1; r.pages = currentBook.pages; r.id = id; r.readingID = load('utils/state.js').id(); r.visited = new Set(); r.dead = false; r.hidden = false; r.ratio = r.pages.find(p => p.dialogue)?.dialogue.aspect_ratio || [4, 3]; r.ratioReady = true;
+   r.serial = (r.serial || 0) + 1; r.pages = currentBook.pages; r.id = id; r.readingID = load('utils/state.js').id(); r.visited = new Set(); r.dead = false; r.hidden = false; const ratio = r.pages.find(p => p.dialogue)?.dialogue.aspect_ratio; r.ratio = ratio || [4, 3]; r.ratioReady = Boolean(ratio);
    r.setData({ fullscreen: false, controlsVisible: true, book: currentBook, total: r.pages.length, pageNames: r.pages.map((_, i) => '第' + (i + 1) + '页') }); r.frame(); r.show(0, false);
   };
   window.openOrdinaryBook = async id => {
@@ -97,7 +99,11 @@ let browser, checks = 0;
    const r = window.reader; r.data = structuredClone(def.data); r.dead = false; r.hidden = false; r.finished = false;
    r.onLoad({ id }); await new Promise(resolve => setTimeout(resolve, 0));
   };
-  window.imageReady = () => { const r = window.reader; r.imageLoaded({ currentTarget: { dataset: { src: r.data.page.image } }, detail: { width: r.ratio[0] * 100, height: r.ratio[1] * 100 } }); };
+  window.imageReady = async () => {
+   const r = window.reader, src = r.data.page.image; let width = r.ratio[0] * 100, height = r.ratio[1] * 100;
+   if (media[src]) { const img = document.querySelector('.art'); await img.decode(); width = img.naturalWidth; height = img.naturalHeight; }
+   r.imageLoaded({ currentTarget: { dataset: { src } }, detail: { width, height } });
+  };
  }, { sources, template, styles, books, media });
  const settle = async () => { await p.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))); };
  async function verify(label) {
@@ -124,11 +130,12 @@ let browser, checks = 0;
     });
    }
    const frame = art.getBoundingClientRect(), player = document.querySelector('.player')?.getBoundingClientRect();
-   if (player) check(player.top >= frame.bottom, 'player overlaps art');
+   if (player) check(player.top >= frame.bottom - 1 || player.left >= frame.right - 1, 'player overlaps art');
    if (r.data.fullscreen) {
     const reader = document.querySelector('.reader').getBoundingClientRect();
     check(Math.abs(reader.height - innerHeight) < 1 && reader.top === 0, 'fullscreen does not fill window');
-    check(frame.left === 0 && frame.width === innerWidth, 'fullscreen art has side margins');
+    check(Math.abs(frame.left - r.data.safeLeft) < 1 && Math.abs(frame.width - (r.data.landscape ? r.data.frameWidth : innerWidth)) < 1, 'fullscreen art frame dimensions mismatch');
+    if (r.data.landscape) check(frame.height >= innerHeight - r.data.safeTop - r.data.safeBottom - 1, 'landscape illustration lost usable height');
     check(Boolean(player) === r.data.controlsVisible, 'fullscreen controls not toggled');
     if (player) check(player.bottom <= innerHeight + 1, 'fullscreen controls below window');
     const hint = document.querySelector('.controls-hint')?.getBoundingClientRect();
@@ -144,22 +151,27 @@ let browser, checks = 0;
   assert.deepEqual(errors, [], label + ': ' + errors.join('; ')); checks++;
  }
  const sizes = [[320, 568], [390, 844], [600, 800], [1366, 768], [568, 320]];
- const dialogueBooks = books.filter(b => b.pages.some(p => p.dialogue) && (!process.env.PIC_MINI_READER_BOOK || b.id === process.env.PIC_MINI_READER_BOOK));
+ const dialogueBooks = selectedBooks.filter(b => selectedIDs.length || b.pages.some(p => p.dialogue));
  assert.ok(dialogueBooks.length, 'no matching dialogue books');
  for (const [width, height] of sizes) {
   await p.setViewportSize({ width, height });
   for (const book of dialogueBooks) {
    await p.evaluate(id => window.openBook(id), book.id);
+   await p.evaluate(() => window.imageReady());
    for (const mode of ['normal', 'fullscreen', 'fullscreen-controls']) {
     await p.evaluate(mode => { const r = window.reader; r.setData({ fullscreen: mode !== 'normal', controlsVisible: mode !== 'fullscreen' }); r.frame(); }, mode);
     const originalFrame = await p.locator('.frame').boundingBox();
     for (let i = 0; i < book.pages.length; i++) {
-     if (!book.pages[i].dialogue) continue;
+     if (!selectedIDs.length && !book.pages[i].dialogue) continue;
      for (const lang of ['zh', 'en']) {
-      await p.evaluate(({ i, lang }) => { const r = window.reader; r.setData({ language: lang, showText: true }); r.show(i, false); window.imageReady(); }, { i, lang });
+      await p.evaluate(async ({ i, lang }) => { const r = window.reader; r.setData({ language: lang, showText: true }); r.show(i, false); await window.imageReady(); }, { i, lang });
       await verify(`${book.id}/${i + 1}/${lang}/${width}x${height}/${mode}`);
       const currentFrame = await p.locator('.frame').boundingBox();
       assert.equal(currentFrame.width, originalFrame.width); assert.equal(currentFrame.height, originalFrame.height);
+      if (output && width === 568 && mode !== 'normal' && i === book.pages.findIndex(page => page.dialogue) && lang === 'zh') {
+       fs.mkdirSync(output, { recursive: true });
+       await p.screenshot({ path: path.join(output, book.id + '-568-' + mode + '.png') });
+      }
       if (book.id === 'bd-a-beautiful-day' && i === 0 && lang === 'zh' && width === 390) {
        const coverage = await p.evaluate(() => {
         const overlay = document.querySelector('.overlay').getBoundingClientRect();
@@ -177,6 +189,20 @@ let browser, checks = 0;
   }
   }
  }
+ // Exercise an actual orientation transition without reopening the book.
+ for (const book of dialogueBooks) {
+  await p.setViewportSize({ width: 390, height: 844 });
+  await p.evaluate(async id => { await window.openBook(id); const r = window.reader; r.setData({ fullscreen: true, controlsVisible: false, language: 'en' }); r.show(1, false); await window.imageReady(); r.setData({ playing: true }); r.frame(); }, book.id);
+  for (const [width, height] of [[844, 390], [390, 844]]) {
+   await p.setViewportSize({ width, height });
+   await p.evaluate(({ width, height }) => window.reader.onResize({ size: { windowWidth: width, windowHeight: height } }), { width, height });
+   await verify(book.id + '/rotation/' + width);
+   assert.equal(await p.evaluate(() => window.reader.data.landscape), width > height);
+   assert.deepEqual(await p.evaluate(() => [window.reader.data.index, window.reader.data.language, window.reader.data.playing]), [1, 'en', true], 'rotation changed reading state');
+  }
+ }
+ // Restore a dialogue page for interaction and image-error checks below.
+ await p.evaluate(async id => { await window.openBook(id); const r = window.reader; r.show(r.pages.findIndex(page => page.dialogue), false); await window.imageReady(); }, dialogueBooks.find(b => b.pages.some(page => page.dialogue)).id);
  await p.evaluate(() => { const r = window.reader; r.setData({ fullscreen: true, controlsVisible: false }); r.frame(); r.controls(); r.controls(); }); await verify('fullscreen control toggle');
  await p.locator('.controls-hint').click(); await verify('tap to reveal fullscreen controls');
  assert.equal(await p.locator('.player').count(), 1);
@@ -260,5 +286,5 @@ let browser, checks = 0;
  await p.evaluate(() => { const image = document.querySelector('.character-portrait img'); if (image) image.dispatchEvent(new Event('error')); });
  assert.equal(await p.locator('.completion-book').count(), 1, 'failed portrait must use the generic buddy');
  await p.locator('.completion-art').click(); assert.equal(await p.evaluate(() => window.reader.data.characterReply), true);
- console.log(`PASS: ${checks} mini-program WXML/WXSS browser adapter checks; ${dialogueBooks.length} selected books with configured dialogue pages, both languages, five viewports, stable art, fixed bubble mode, fullscreen with controls hidden/shown, image retry, all-book completion layouts and image-failure fallback. ${localArt ? 'Local illustration files' : 'Placeholder art'} with fixture API. Not a native device test.`);
+ console.log(`PASS: ${checks} mini-program WXML/WXSS browser adapter checks; ${dialogueBooks.length} selected books, ${selectedIDs.length ? 'all pages' : 'configured dialogue pages'}, both languages, five viewports, orientation transitions, stable art, fixed bubble mode, fullscreen with controls hidden/shown, image retry, all-book completion layouts and image-failure fallback. ${localArt ? 'Local illustration files for selected books and the completion demo' : 'Placeholder art'} with fixture API. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

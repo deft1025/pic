@@ -32,16 +32,20 @@ func run(args []string, input io.Reader, output io.Writer) error {
 	action := args[0]
 	fs := flag.NewFlagSet("materials "+action, flag.ContinueOnError)
 	id := fs.String("book", "", "绘本业务ID")
+	category := fs.String("category", "", "新增的主题业务ID，仅支持已定义主题")
 	configFile := fs.String("config", "", "数据库配置文件，默认项目根目录.env")
 	metadataOnly := fs.Bool("metadata-only", false, "仅写正文与元数据，资源存在性留待制作后validate；不代表物料已完成")
 	if err := fs.Parse(args[1:]); err != nil {
 		return err
 	}
-	if fs.NArg() != 0 || (action != "list" && action != "read" && action != "save" && action != "validate") {
+	if fs.NArg() != 0 || (action != "list" && action != "read" && action != "save" && action != "validate" && action != "add-category") {
 		return errors.New("无效操作或参数")
 	}
 	if (action == "read" || action == "validate") && *id == "" {
 		return errors.New("read 必须指定 --book ID")
+	}
+	if action == "add-category" && (*category == "" || *id != "" || *metadataOnly) || action != "add-category" && *category != "" {
+		return errors.New("add-category 必须仅指定 --category 主题ID")
 	}
 	var payload repository.MaterialSnapshot
 	if action == "save" {
@@ -80,6 +84,11 @@ func run(args []string, input io.Reader, output io.Writer) error {
 		check = func(paths []string) error { return checker.Check(ctx, paths) }
 	}
 	switch action {
+	case "add-category":
+		if e := m.AddCategory(ctx, *category); e != nil {
+			return e
+		}
+		return encoder.Encode(map[string]string{"status": "created_or_exists", "category_id": *category})
 	case "list":
 		ids, e := m.IDs(ctx)
 		if e != nil {
