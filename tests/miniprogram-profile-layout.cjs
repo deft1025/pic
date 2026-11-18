@@ -12,15 +12,17 @@ let browser;
  const ages = [{ id: '0-2', name: '0–2 岁', description: '看图认知 · 亲子陪伴' }, { id: '3-4', name: '3–4 岁', description: '发现世界 · 快乐成长' }, { id: '5-6', name: '5–6 岁', description: '独立思考 · 自主阅读' }];
  for (const [width, height] of [[320, 568], [390, 844], [568, 320], [1366, 768]]) {
   await p.setViewportSize({ width, height });
-  for (const [scenario, selected] of [['shelf', false], ['shelf', true], ['shelfFavorites', true], ['profile', true], ['library', false], ['library', true]]) {
-   const page = scenario === 'shelfFavorites' ? 'shelf' : scenario;
-   const data = page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
-   if (scenario === 'shelfFavorites') Object.assign(data, { ageDialog: false, needsProfile: false, total: 17, page: 2, pageCount: 3, items: Array.from({ length: 8 }, (_, i) => ({ id: 'book-' + i, title_zh: i === 0 ? '很长的绘本名字也能完整显示，方便找到喜欢的故事' : '美好的一天', cover: '' })) });
-   const template = fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
-   const styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, 'pages', page, 'index.wxss'), 'utf8');
+  for (const [scenario, selected] of [['shelf', false], ['shelf', true], ['shelfFavorites', true], ['shelfAccount', false], ['shelfAccount', true], ['profile', true], ['library', false], ['library', true], ['bookCard', false], ['bookCard', true]]) {
+   const page = ['shelfFavorites', 'shelfAccount'].includes(scenario) ? 'shelf' : scenario;
+   const data = page === 'bookCard' ? { book: { id: 'book', title_zh: '很长的绘本名字也能完整显示，方便找到喜欢的故事', cover: '', reading_value: '在故事里学会等待与陪伴', page_count: 18, reading_minutes: 5, completed: selected } } : page === 'shelf' ? { loggedIn: true, profile: { id: '10000', name: '' }, needsProfile: true, busy: false, loading: false, items: [], total: 0, page: 1, pageCount: 0, error: '', loginError: '', syncError: '', ageDialog: true, firstAges: ages, firstAge: selected ? '3-4' : '', ageSaving: false } : page === 'library' ? { q: '', ages: [{ id: '', name: '全部' }, ...ages], categories: [{ id: '', name: '全部' }, { id: 'animals', name: '动物朋友' }], ageIndex: selected ? 2 : 0, categoryIndex: selected ? 1 : 0, filtersReady: true, filtersLoading: false, filterError: '', error: '', loading: false, total: 0, items: [] } : { name: '小小读者', age: '3-4', ages, ageNames: ['请选择年龄段', ...ages.map(a => a.name)], ageIndex: 2, first: false, loading: false, saving: false, error: '' };
+   Object.assign(data, { avatar: selected ? 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23fff8e4"/><text x="50" y="70" text-anchor="middle" font-size="55">📖</text></svg>'.replace('%23', '#')) : '', avatarError: false, ageLabel: '3–4 岁' });
+   if (scenario === 'shelfAccount') Object.assign(data, { ageDialog: false, needsProfile: false, loggedIn: selected, profile: selected ? { name: 'yiyi', age: '3-4' } : null });
+   if (scenario === 'shelfFavorites') Object.assign(data, { ageDialog: false, needsProfile: false, total: 17, page: 2, pageCount: 3, items: Array.from({ length: 8 }, (_, i) => ({ id: 'book-' + i, completed: i % 2 === 0, title_zh: i === 0 ? '很长的绘本名字也能完整显示，方便找到喜欢的故事' : '美好的一天', cover: '' })) });
+   const template = page === 'bookCard' ? '<view class="page"><view class="grid">' + fs.readFileSync(path.join(root, 'components/book-card/index.wxml'), 'utf8').repeat(2) + '</view></view>' : fs.readFileSync(path.join(root, 'pages', page, 'index.wxml'), 'utf8');
+   const styles = fs.readFileSync(path.join(root, 'app.wxss'), 'utf8').replace(/^page\{/, 'body{') + fs.readFileSync(path.join(root, page === 'bookCard' ? 'components/book-card/index.wxss' : 'pages/' + page + '/index.wxss'), 'utf8');
    await p.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body></body></html>');
    await p.evaluate(({ template, styles, data }) => {
-    const css = document.createElement('style'); css.textContent = 'body{margin:0}*{box-sizing:border-box}button{border:0;font-family:inherit}input{font-family:inherit}' + styles.replace(/([\d.]+)rpx/g, (_, n) => Number(n) * innerWidth / 750 + 'px'); document.head.append(css);
+    const css = document.createElement('style'); css.textContent = 'body{margin:0}*{box-sizing:border-box}button{border:0;font-family:inherit}input{font-family:inherit}img{object-fit:cover}' + styles.replace(/([\d.]+)rpx/g, (_, n) => Number(n) * innerWidth / 750 + 'px'); document.head.append(css);
     const tree = new DOMParser().parseFromString(template.replace(/<([\w-]+)([^>]*?)\/>/g, (_, t, a) => t === 'br' ? '<br>' : '<' + t + a + '></' + t + '>'), 'text/html').body;
     const expr = (e, s) => new Function('s', 'with(s){return (' + e + ')}')(s);
     const val = (v, s) => /^{{([^{}]+)}}$/.test(v) ? expr(v.slice(2, -2), s) : v.replace(/{{([\s\S]+?)}}/g, (_, e) => expr(e, s) ?? '');
@@ -39,11 +41,19 @@ let browser;
     }
     function element(n, out, scope) {
      if (n.localName === 'block') { children(n, out, scope); return; }
-     const tag = ['input', 'button', 'br'].includes(n.localName) ? n.localName : n.localName === 'text' ? 'span' : 'div';
+     const tag = ['image', 'img'].includes(n.localName) ? 'img' : ['input', 'button', 'br'].includes(n.localName) ? n.localName : n.localName === 'text' ? 'span' : 'div';
      const e = document.createElement(tag);
      for (const a of n.attributes) {
       if (/^(wx:|bind|catch)/.test(a.name)) continue;
       const v = val(a.value, scope);
+      if (a.name === 'placeholder-class') {
+       const placeholder = document.createElement('style');
+       placeholder.textContent = v.split(/\s+/).filter(Boolean).map(name => {
+        const rule = [...css.sheet.cssRules].find(rule => rule.selectorText === '.' + name);
+        return rule ? 'input::placeholder{' + rule.style.cssText + '}' : '';
+       }).join('');
+       document.head.append(placeholder);
+      }
       if (a.name === 'disabled') e.disabled = Boolean(v); else e.setAttribute(a.name, String(v));
      }
      if (n.localName === 'scroll-view' && n.hasAttribute('scroll-y')) e.style.overflowY = 'auto';
@@ -51,15 +61,35 @@ let browser;
     }
     children(tree, document.body, data);
    }, { template, styles, data });
+   for (const avatar of await p.locator('img.account-avatar').all()) await avatar.evaluate(async e => { await e.decode(); });
    const errors = await p.evaluate(({ page, selected, scenario }) => {
     const failures = [], check = (v, m) => { if (!v) failures.push(m); };
     check(document.documentElement.scrollWidth <= innerWidth + 1, 'page horizontal overflow');
-    if (page === 'shelf' && scenario === 'shelfFavorites') {
+    if (page === 'bookCard') {
+     check(document.querySelectorAll('.completion').length === (selected ? 2 : 0), 'completion badge mismatch');
+     for (const badge of document.querySelectorAll('.completion')) {
+      const b = badge.getBoundingClientRect(), cover = badge.parentElement.getBoundingClientRect();
+      check(b.left >= cover.left && b.right <= cover.right && b.bottom <= cover.bottom, 'completion badge outside cover');
+     }
+    } else if (page === 'shelf' && scenario === 'shelfFavorites') {
+     check(document.querySelectorAll('.favorite-completion').length === 4, 'shelf completion badge mismatch');
      const rows = [...document.querySelectorAll('.favorite-row')];
      check(rows.length === 8, 'favorites page must contain eight rows');
      for (const row of rows) { const r = row.getBoundingClientRect(); check(r.height >= 72, 'favorite touch target too small'); check(row.scrollWidth <= row.clientWidth + 1, 'favorite title overflow'); }
      check(document.querySelector('.shelf-pagination').textContent.includes('2 / 3'), 'favorite page indicator missing');
      check(document.querySelectorAll('.shelf-pagination button').length === 2, 'favorite page controls missing');
+    } else if (scenario === 'shelfAccount') {
+     const card = document.querySelector('.account-card');
+     check(card.scrollWidth <= card.clientWidth + 1, 'account card overflows');
+     check(document.querySelectorAll('.account-edit').length === (selected ? 1 : 0), 'edit entry ignores session');
+     check(document.querySelectorAll('.account-logout').length === (selected ? 1 : 0), 'logout entry ignores session');
+     for (const el of document.querySelectorAll('.account-edit,.account-link')) {
+      const style = getComputedStyle(el);
+      check(style.backgroundColor === 'rgba(0, 0, 0, 0)', 'account action is too prominent');
+      check(parseFloat(style.fontSize) <= 13 && el.clientHeight >= 40, 'account action text or touch target');
+     }
+     check(document.querySelectorAll('.account-avatar').length === (selected ? 1 : 0), 'avatar mapping preview missing');
+     check(document.querySelector('.account-avatar-wrap').clientWidth >= 44, 'avatar too small');
     } else if (page === 'shelf') {
      const modal = document.querySelector('.age-welcome'), m = modal.getBoundingClientRect();
      check(m.left >= 0 && m.right <= innerWidth && m.top >= 0 && m.bottom <= innerHeight, 'age dialog outside viewport');
@@ -85,10 +115,10 @@ let browser;
    assert.deepEqual(errors, [], `${page}/${selected}/${width}x${height}: ${errors.join('; ')}`); checks++;
    if (output && width === 390 && selected) {
     fs.mkdirSync(output, { recursive: true });
-    if (page === 'shelf' && scenario !== 'shelfFavorites') await p.locator('.age-welcome').evaluate(e => e.scrollTop = 0);
+    if (page === 'shelf' && !['shelfFavorites', 'shelfAccount'].includes(scenario)) await p.locator('.age-welcome').evaluate(e => e.scrollTop = 0);
     await p.screenshot({ path: path.join(output, scenario + '-390.png'), fullPage: true });
    }
   }
  }
- console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, required selection, saved profile, filter labels, compact favorite rows/pagination, touch targets and scrolling. Not a native device test.`);
+ console.log(`PASS: ${checks} age-dialog/profile/library browser adapter cases; four viewports, required selection, saved profile, filter labels, compact favorite rows/pagination, completed badges, touch targets and scrolling. Not a native device test.`);
 })().catch(e => { console.error(e); process.exitCode = 1; }).finally(async () => { if (browser) await browser.close(); });

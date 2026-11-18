@@ -21,6 +21,7 @@ func New(library *service.Library, webDir, assetBaseURL, siteBaseURL string, acc
 	mux.HandleFunc("GET /api/me/profile", a.Profile)
 	mux.HandleFunc("PUT /api/me/profile", a.SaveProfile)
 	mux.HandleFunc("GET /api/me/favorites", a.Favorites)
+	mux.HandleFunc("GET /api/me/completed-books", a.CompletedBooks)
 	mux.HandleFunc("PUT /api/me/favorites", a.SetFavorites)
 	mux.HandleFunc("POST /api/events", a.Event)
 	h := handler.New(library, siteBaseURL, account)

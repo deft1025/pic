@@ -11496,6 +11496,519 @@
       ]
     },
     {
+      "id": "sb-bean-in-a-pot",
+      "title_zh": "花盆里的一颗豆",
+      "title_original": "A Bean in a Flowerpot",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "小川和妈妈种下两颗菜豆，记录浇水和发芽的变化，慢慢发现每颗种子都有自己的节奏。",
+      "reading_value": "陪孩子观察发芽，练习等待与照料",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "nature",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-bean-in-a-pot/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T07:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-a02de4508a5f9e46d72e44a97d33d4d0aba56e6ded33e9f62c42af5e527ecc6e",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom亲子成长系列，公开AI生成样例，来源未列个人作者、插画师及具体生成模型。本版保留完整18页中文叙事与原图；1处英文说话署名移到同一句引语之前，以对应中文说话轮次；英文书名由本项目翻译，添加角色气泡和合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T07:32:03.128Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T07:31:04.393Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-bean-in-a-pot/page-001.webp",
+          "image_alt": "窗边的木桌上放着种子袋、种植图卡和两个空花盆，蓝衣小川抬头向黄衣妈妈提问。",
+          "text_zh": "妈妈带回一小袋菜豆种子。小川把袋子放到桌上：“它以后会长成什么样？”",
+          "text_original": "Mum brought home a little packet of bean seeds. Xiaochuan put it on the table. “What will they look like when they grow?”",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-001.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 121,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "d4f76ef71fc1a4a26e0fb3f2ccee42c74544da85124b60835c883be0d86f0f16",
+              "zh": "4587eada601ad2ba10421890b8611aa9a5670f7fbb17e81f8735b453e980b0fb"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 79,
+                  "zh": 22
+                },
+                "end": {
+                  "en": 121,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Xiaochuan",
+                  "zh": "小川"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  70,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-bean-in-a-pot/page-002.webp",
+          "image_alt": "妈妈用小铲往左侧花盆添土，小川在右边伸手指向另一个花盆，桌上铺着种植图卡。",
+          "text_zh": "他们照着种植说明，给两个小花盆放上土。盆底有小洞，下面各有一个托盘。",
+          "text_original": "Following the planting instructions, they filled two little pots with soil. Each pot had holes underneath and a tray below it.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-002.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-bean-in-a-pot/page-003.webp",
+          "image_alt": "小川和妈妈分别向两个装土花盆里放种子，旁边有绿色小水壶和种植图卡。",
+          "text_zh": "小川在第一盆放下一颗豆，第二盆也放一颗。妈妈帮他按说明盖上适量的土。",
+          "text_original": "Xiaochuan put one bean in the first pot and one in the second. Mum helped him cover them with the amount of soil the instructions showed.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-003.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-bean-in-a-pot/page-004.webp",
+          "image_alt": "妈妈把绿色小水壶里的水慢慢倒向左边花盆，小川用双手扶住右边花盆。",
+          "text_zh": "小壶倒出一点水，土面颜色深了一些。妈妈看看托盘，和小川把花盆放到合适的窗边。",
+          "text_original": "A little water came from the jug, darkening the soil. Mum checked the trays. Together, they put the pots in a suitable place by the window.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-004.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-004.mp3"
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-bean-in-a-pot/page-005.webp",
+          "image_alt": "小川坐在桌旁，用红色笔在记录纸上画花盆，妈妈俯身陪着，桌上两个花盆还没有叶子。",
+          "text_zh": "他们洗干净手，小川画下两个花盆：“今天，还没有叶子。”",
+          "text_original": "They washed their hands. Xiaochuan drew two pots. “Today, there aren't any leaves yet.”",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-005.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 87,
+              "zh": 27
+            },
+            "text_sha256": {
+              "en": "ce67405b8d492aad88e9cae0d247ffdd07a2f6dd29eacc5e33972aa729b87bb1",
+              "zh": "3d2d5d365291283bc58318681676dcd33500c666c16431dbaee9d8ce42c268d0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 50,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 87,
+                  "zh": 27
+                },
+                "speaker": {
+                  "en": "Xiaochuan",
+                  "zh": "小川"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  69,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-bean-in-a-pot/page-006.webp",
+          "image_alt": "小川把手指伸向右边花盆的土面，妈妈在左侧留意他的动作，两个盆都还没有发芽。",
+          "text_zh": "第二天，小川跑到窗边。土还是昨天的样子，他的手指想往里面挖。",
+          "text_original": "The next day, Xiaochuan ran to the window. The soil looked the same. His finger was about to dig inside.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-006.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-bean-in-a-pot/page-007.webp",
+          "image_alt": "妈妈用手指示意花盆的土面，小川在右边认真看着，绿色小水壶放在桌边。",
+          "text_zh": "妈妈轻轻叫住他：“挖出来会打扰它。我们可以先看土面，也看看盆底有没有水。”",
+          "text_original": "Mum gently stopped him. “Digging it up would disturb it. We can look at the surface and check underneath for water.”",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-007.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 116,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "6d931a0f4ca62c9590076fec754be73fe825a44e4335e2a18c1e741aefcbcb45",
+              "zh": "0ac2905862163c3a9ada0d6e00f79abaec54d6243a1455e62f0814729005518b"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 24,
+                  "zh": 8
+                },
+                "end": {
+                  "en": 116,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  40,
+                  29
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-bean-in-a-pot/page-008.webp",
+          "image_alt": "小川蹲在桌边，一只手摸左侧花盆的土，妈妈在右后方陪着，盆底托盘清晰可见。",
+          "text_zh": "小川蹲下来，托盘里没有积水。他又摸摸表层，手指上沾了一点凉凉的土。",
+          "text_original": "Xiaochuan crouched down. There was no standing water in the tray. He touched the surface, and a little cool soil stuck to his finger.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-008.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-bean-in-a-pot/page-009.webp",
+          "image_alt": "小川拿着笔在记录纸上画蓝色水滴，妈妈在左边看着，绿色小水壶留在一旁。",
+          "text_zh": "“还湿着，今天先不浇。”妈妈说。小壶留在旁边，小川给记录卡画了一个小水点。",
+          "text_original": "“It's still damp. We won't water it today,” Mum said. The jug stayed nearby. Xiaochuan drew a little water drop on his record card.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-009.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 131,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "18b82bcc02b950854bfe58e6a59e9ce6b455ea07cd052baac933e751919213a3",
+              "zh": "20972114b76bafdae197476eae02206d334d25af55cec9cc5ea22402dd608827"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 43,
+                  "zh": 12
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  40,
+                  29
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-bean-in-a-pot/page-010.webp",
+          "image_alt": "小川双手托着下巴看向妈妈，桌上的两个花盆仍然只有土，窗边洒着暖光。",
+          "text_zh": "又过了一天，窗边还是安安静静。小川问：“它是不是忘了长？”",
+          "text_original": "Another day passed. The window was still quiet. Xiaochuan asked, “Has it forgotten to grow?”",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-010.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 92,
+              "zh": 29
+            },
+            "text_sha256": {
+              "en": "e8c73bcc79906316864d927cd6ae4fbc15b11786b034b2ea63a050881f2c0588",
+              "zh": "ed69a7090d268ebfe7e6f64cb181b521b6ff6a2ff1a135a22aa02a0a1622e00e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 65,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 92,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Xiaochuan",
+                  "zh": "小川"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  68,
+                  45
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-bean-in-a-pot/page-011.webp",
+          "image_alt": "妈妈和小川一起看种植说明图卡，桌前两个花盆都还没有冒出小芽。",
+          "text_zh": "妈妈说：“有些豆会晚一点，也有些可能不发芽。先照着说明照料几天，再看看。”",
+          "text_original": "Mum said, “Some beans take longer, and some may not sprout. Let's follow the instructions for a few more days and see.”",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-011.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 119,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "d0c3eb20dc3cc0dd1c86f55fcabf478269c0fe46f33b4b665b166256fbeae6f3",
+              "zh": "eb03c2a933e2348686a5b251f65ab41c124179e8e24f487e4aa28b13376f03c8"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 10,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 119,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  40,
+                  27
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-bean-in-a-pot/page-012.webp",
+          "image_alt": "左侧花盆里刚露出弯弯的小芽，小川和妈妈把脸凑近观察，右侧花盆仍是平平的土面。",
+          "text_zh": "后来，第一盆土面拱起了一小块。小川靠近看，一条弯弯的小芽露出来了。",
+          "text_original": "Later, a little bump appeared in the first pot. Xiaochuan leaned closer. A tiny curved shoot was coming out.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-012.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-bean-in-a-pot/page-013.webp",
+          "image_alt": "小川低头在记录纸上画小芽，妈妈在旁边看着，左边花盆里已有一条小绿芽。",
+          "text_zh": "“它出来了！”小川没有去拉那条芽，只把记录卡搬到窗边，画下一条弯线。",
+          "text_original": "“It's here!” Xiaochuan did not pull the shoot. He brought his record card to the window and drew a curved line.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-013.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 111,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "f714b5c82ab074c118938b7babd964e0bb25bafcb8d657f075fab2ff7f2cfc23",
+              "zh": "29e6ca2d2d70370565f1edefe242b98914800a2e931a4fa3ac82f8085a512b0f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 12,
+                  "zh": 7
+                },
+                "speaker": {
+                  "en": "Xiaochuan",
+                  "zh": "小川"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  68,
+                  45
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-bean-in-a-pot/page-014.webp",
+          "image_alt": "小川双手捧着一个花盆，妈妈拿着种植图卡，另一只手指向明亮的窗边。",
+          "text_zh": "第二盆还没有动静。他想搬到更亮的地方，妈妈先一起看说明，再调整到适合的位置。",
+          "text_original": "The second pot was still quiet. He wanted to move it into more light. Mum checked the instructions with him before they chose a suitable position.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-014.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-014.mp3"
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-bean-in-a-pot/page-015.webp",
+          "image_alt": "小川给冒芽的花盆浇少量水，妈妈把另一只花盆的托盘倾斜，让多余的水流入桌边容器。",
+          "text_zh": "这天表层干了。他们慢慢浇一点，停下来看看，倒掉托盘里多余的水。",
+          "text_original": "That day, the surface was dry. They slowly added a little water, paused to check, and emptied the extra water from the tray.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-015.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-015.mp3"
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-bean-in-a-pot/page-016.webp",
+          "image_alt": "小川在纸上画下两个花盆的不同样子，左边盆里长着小叶子，右边盆里仍然只有土。",
+          "text_zh": "几天后，第一盆有了小叶子。第二盆仍是土，小川在两张图上画下不同的样子。",
+          "text_original": "A few days later, the first pot had little leaves. The second still looked like soil. Xiaochuan drew their different shapes on two pictures.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-016.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-016.mp3"
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-bean-in-a-pot/page-017.webp",
+          "image_alt": "小川指向左边花盆的小叶子，笑着与妈妈交谈，右边花盆仍放在桌上等待观察。",
+          "text_zh": "妈妈问还想看什么。小川指着小叶：“它会再长一片吗？”第二盆也暂时留着，一起继续观察。",
+          "text_original": "Mum asked what else he wanted to watch. Xiaochuan pointed to a little leaf. “Will it grow another one?” They kept the second pot for now and carried on observing both.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-017.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-017.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 167,
+              "zh": 42
+            },
+            "text_sha256": {
+              "en": "cb0e16d738146ff4927c1184fd12c5a74c2a01338548462143ab40c71b8fc30f",
+              "zh": "3c810c85d853702b898ab0ee205d7531c92e3420c18b5c1224a9d912e8b90794"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 76,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 103,
+                  "zh": 26
+                },
+                "speaker": {
+                  "en": "Xiaochuan",
+                  "zh": "小川"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  67,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-bean-in-a-pot/page-018.webp",
+          "image_alt": "傍晚的窗边，小川安静看着两个花盆，其中一个长着嫩叶，妈妈站在身后，水壶已放在旁边。",
+          "text_zh": "睡前，小川看了一眼窗边。今天不用再浇，他把小壶放好，让那片叶子安安静静待到明天。",
+          "text_original": "Before bed, Xiaochuan looked at the window. No more water was needed today. He put the jug away and left the little leaf quietly until tomorrow.",
+          "audio_zh": "/assets/books/sb-bean-in-a-pot/audio/zh/938a8692802d02a4/page-018.mp3",
+          "audio_original": "/assets/books/sb-bean-in-a-pot/audio/en/4d3c05b752f5557e/page-018.mp3"
+        }
+      ]
+    },
+    {
       "id": "sb-bus-next-stop",
       "title_zh": "公交车怎么知道下一站",
       "title_original": "How Does a Bus Know Its Next Stop?",
@@ -12209,6 +12722,1967 @@
           "text_original": "Back at home, An'an drew a safety rule: hear a siren, stop and look from a safe place, and give emergency vehicles room. Then she wondered how ambulances save every minute.",
           "audio_zh": "/assets/books/sb-fire-engine/audio/zh/db1a15e27f7b381d/page-012.mp3",
           "audio_original": "/assets/books/sb-fire-engine/audio/en/371715ba32bd5bbf/page-012.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-grandpas-pace",
+      "title_zh": "外公走得慢一点",
+      "title_original": "A Slower Walk with Grandpa",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "小雨想去看公园里的桥，外公却走得慢。妈妈陪大家商量一条适合今天的路，发现树荫和小鸟。",
+      "reading_value": "放慢脚步，看见家人不同的需要",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "emotions",
+        "habits"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-grandpas-pace/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T07:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-3d81185f1551ad2fa9cd00cdb91247974fc417244fd890affde3a8a3e5aa1325",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom亲子成长系列，公开AI生成样例，来源未列个人作者、插画师及具体生成模型。本版保留完整18页中文叙事与原图；2处英文说话署名移到同一句引语之前，以对应中文说话轮次；英文书名由本项目翻译，添加角色气泡和合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T07:31:51.44Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T07:31:05.362Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-grandpas-pace/page-001.webp",
+          "image_alt": "家门口，小雨穿黄色裙子和运动鞋走在前面，外公拄着手杖，妈妈拿着水杯站在右侧。",
+          "text_zh": "星期六，小雨穿好运动鞋：“我们去看公园那座桥！”外公拿起手杖，妈妈带上水杯。",
+          "text_original": "On Saturday, Xiaoyu put on her trainers. “Let's see the bridge in the park!” Grandpa picked up his walking stick, and Mum packed the water bottle.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-001.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 146,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "7c4fa46a818c9241610c8fa12e4622c37b5b6584417c7da7b1ed0c838ea96d48",
+              "zh": "1c9bc89883f57bde3532372fe708695ad29e871e62f9df3eaa0a77e499a35b8a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 41,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 76,
+                  "zh": 24
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  36,
+                  44
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-grandpas-pace/page-002.webp",
+          "image_alt": "公园树荫下，小雨在前方张开双臂，妈妈伸手招呼她回来，外公拄着手杖慢慢跟上。",
+          "text_zh": "走到公园入口，小雨已经朝前跑了几步。妈妈叫她回来，一起走在没有车的步道上。",
+          "text_original": "At the park entrance, Xiaoyu had already run a few steps ahead. Mum called her back, and they walked together on the path where there were no cars.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-002.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-grandpas-pace/page-003.webp",
+          "image_alt": "小雨在左前方边走边回头看外公，外公拄着手杖，妈妈走在右边，远处能看见一座桥。",
+          "text_zh": "外公的步子小小的。小雨走一段，又停一段：“桥是不是很远呀？”",
+          "text_original": "Grandpa took small steps. Xiaoyu walked a little, then stopped a little. “Is the bridge very far?”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-003.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 98,
+              "zh": 30
+            },
+            "text_sha256": {
+              "en": "10ac51fb11f949dc513e3a1d09703ecc9d8f00c5beec08ee73d305656c16e814",
+              "zh": "4da8d58c93ffbfd9b313112a84e5cec80cb4bcb9290dcd05ed9c7720a947741b"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 73,
+                  "zh": 20
+                },
+                "end": {
+                  "en": 98,
+                  "zh": 30
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  32,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-grandpas-pace/page-004.webp",
+          "image_alt": "外公拄着手杖慢慢走着，妈妈在右侧指向长椅，小雨在左侧抬头听两人说话。",
+          "text_zh": "外公说：“今天我的腿有些累，得走慢一点。”妈妈指向前面的长椅：“累了就坐。”",
+          "text_original": "“My legs feel tired today. I need to walk slowly,” Grandpa said. Mum pointed to a bench ahead. “We can sit whenever we need to.”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-004.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 128,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "8beb6bbba3491d3231c00fe840969d522447fed9b0528660c8fc17f7960e0d27",
+              "zh": "5c32cf8437fa593b8f0f505af5be6b9c04697a2a5bf0e4181143f8317726f477"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 50,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Grandpa",
+                  "zh": "外公"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  54,
+                  22
+                ]
+              },
+              {
+                "start": {
+                  "en": 95,
+                  "zh": 31
+                },
+                "end": {
+                  "en": 128,
+                  "zh": 38
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  77,
+                  20
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-grandpas-pace/page-005.webp",
+          "image_alt": "小雨低头用鞋尖拨地上的落叶，妈妈牵着她的手，外公拄着手杖站在右后方。",
+          "text_zh": "小雨低头踢了一下落叶：“我想快点到。”妈妈没有说她不懂事，先拉住她的小手。",
+          "text_original": "Xiaoyu nudged a fallen leaf with her shoe. “I want to get there quickly.” Mum did not call her unkind. She took her little hand first.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-005.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-005.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 134,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "e54572c33ad8f8b9125a9f3a29725bb0cf0484df3670e31cef19239ad83ec6ad",
+              "zh": "f7b4695f6073d4ed34ca19ae73c3ee003bf051afeb691f343d1d14860d22ebd3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 43,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 73,
+                  "zh": 19
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  27,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-grandpas-pace/page-006.webp",
+          "image_alt": "妈妈蹲下来与小雨交谈，外公已坐到后面的长椅上，双手扶着手杖休息。",
+          "text_zh": "“你很想看桥。”妈妈说，“外公也想出来坐坐。我们看看，两件事怎么安排。”",
+          "text_original": "“You really want to see the bridge,” Mum said. “Grandpa wants to sit outside too. Let's see how we can arrange both wishes.”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-006.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 124,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "48cb2bc529f160f9f1e2def60042aa69ae385bb695a0723fc2da81154babfc87",
+              "zh": "2c68e622981bc3a7ac68a92514fa8e2466ab1a36b0c2cd381a2a53d36b0f6823"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 36,
+                  "zh": 8
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  58,
+                  37
+                ]
+              },
+              {
+                "start": {
+                  "en": 47,
+                  "zh": 12
+                },
+                "end": {
+                  "en": 124,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Mum",
+                  "zh": "妈妈"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  58,
+                  37
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-grandpas-pace/page-007.webp",
+          "image_alt": "小雨、外公和妈妈坐在树下长椅上，外公拿着水杯，手杖稳稳放在身边。",
+          "text_zh": "他们先坐到长椅上。外公把手杖放稳，接过自己的水杯，小雨坐在妈妈另一边。",
+          "text_original": "They sat on the bench first. Grandpa set his stick safely beside him and took his water bottle. Xiaoyu sat on Mum's other side.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-007.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-007.mp3"
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-grandpas-pace/page-008.webp",
+          "image_alt": "外公和身旁的小雨、妈妈一起抬头望向树枝，三个人仍坐在长椅上。",
+          "text_zh": "树上忽然响起两声啾啾。外公抬头：“听，它又叫了。”小雨也把脚停住。",
+          "text_original": "Two chirps came from the tree. Grandpa looked up. “Listen. There it is again.” Xiaoyu stopped swinging her feet.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-008.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 112,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "a2225b24522579bff6a983551fa4196dad47d4e7f3932f76acbb42b4f7eb8dba",
+              "zh": "41b400e43ebd1d9d22ea29255e4554eeadfb1c6b6c25b06ee65db5a8e1730070"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 50,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 78,
+                  "zh": 25
+                },
+                "speaker": {
+                  "en": "Grandpa",
+                  "zh": "外公"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  73,
+                  27
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-grandpas-pace/page-009.webp",
+          "image_alt": "外公坐在长椅上，伸手指向右上方树叶间的小鸟，小雨和妈妈顺着他的手望过去。",
+          "text_zh": "“你看见它了吗？”小雨问。外公指着叶子间的一小团灰色，没有站起来追。",
+          "text_original": "“Can you see it?” Xiaoyu asked. Grandpa pointed to a little grey shape among the leaves. He did not get up to chase it.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-009.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-009.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 119,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "57b2f543b77f3ec70d9ad8660d8652d447d22e64d098bf0f843214d61fbcc43b",
+              "zh": "bf5e11485f1bba102018dcff4e14d8d26d4efc42b827b9dad3bfdfa6d34a7ca2"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 17,
+                  "zh": 9
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  30,
+                  47
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-grandpas-pace/page-010.webp",
+          "image_alt": "小雨坐在长椅中间抬手看树枝，外公和妈妈在两边陪着，树叶间停着小鸟。",
+          "text_zh": "小雨看见了尾巴，没看见脑袋。她坐着等一会儿，小鸟自己跳到了更低的枝上。",
+          "text_original": "Xiaoyu could see its tail, but not its head. She sat and waited. The bird hopped down onto a lower branch all by itself.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-010.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-010.mp3"
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-grandpas-pace/page-011.webp",
+          "image_alt": "外公、小雨和妈妈坐在树荫下长椅上微笑交谈，外公双手扶着手杖。",
+          "text_zh": "外公笑起来：“慢一点，有时能多看见一点。”小雨也笑，但她还惦记着那座桥。",
+          "text_original": "Grandpa smiled. “Sometimes going slowly lets us see a little more.” Xiaoyu smiled too, though she was still thinking about the bridge.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-011.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-011.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 134,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "91593520097c1a040c2789cc9056c0d1b0eeddc729e0ce4f04b7e4fea9332ce3",
+              "zh": "75ca3917564c5a0ef57f4e8b2e97830ed9eb29ab6265f704af2052ca015bb8ce"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 16,
+                  "zh": 6
+                },
+                "end": {
+                  "en": 67,
+                  "zh": 21
+                },
+                "speaker": {
+                  "en": "Grandpa",
+                  "zh": "外公"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  23,
+                  30
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-grandpas-pace/page-012.webp",
+          "image_alt": "妈妈展开公园地图，小雨坐在中间指着图上路线，外公在右边拿着手杖一起看。",
+          "text_zh": "妈妈拿出公园地图。桥在很远的地方，近处有一棵大树，树下还有另一张椅子。",
+          "text_original": "Mum took out the park map. The bridge was far away. A big tree was nearby, with another bench underneath.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-012.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-grandpas-pace/page-013.webp",
+          "image_alt": "外公坐在长椅上指向左边的大树，小雨靠近他，妈妈坐在右侧听着。",
+          "text_zh": "外公说：“我今天想走到大树就回来。桥，改天你和妈妈可以再去。”",
+          "text_original": "Grandpa said, “Today I'd like to walk to the big tree and then go home. You and Mum could see the bridge another day.”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-013.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-013.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 118,
+              "zh": 31
+            },
+            "text_sha256": {
+              "en": "f9422aac19ee67d2a39a5947a4f796c2988bdd445f2e914a3c49ad32a18edd15",
+              "zh": "4f4755334ba2b2f037e8d6f9fd9c523e014da5ead4584314a947a233540fc22e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 14,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 118,
+                  "zh": 31
+                },
+                "speaker": {
+                  "en": "Grandpa",
+                  "zh": "外公"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  48,
+                  31
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-grandpas-pace/page-014.webp",
+          "image_alt": "小雨站在长椅前举起手臂，外公和妈妈仍坐在树下，抬头看着她。",
+          "text_zh": "小雨想了想：“那今天去大树。我想看看它的影子有多大。”妈妈把地图收好。",
+          "text_original": "Xiaoyu thought for a moment. “Let's go to the tree today. I want to see how big its shadow is.” Mum put the map away.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-014.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 117,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "3b0e506d8dda4bb3b6c3680ddbe243aac1e4a6f921a5469f7c5cc8cb0b415eb8",
+              "zh": "5df42a1ea9b31d4048b7358b8439994d759416ed74924d8783df30ca501cf7f5"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 29,
+                  "zh": 6
+                },
+                "end": {
+                  "en": 95,
+                  "zh": 27
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  29,
+                  46
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-grandpas-pace/page-015.webp",
+          "image_alt": "妈妈在右侧扶着外公站稳，小雨在左边张开双臂等待，三人都在树荫步道上。",
+          "text_zh": "妈妈扶着外公站稳。小雨等他们都准备好，才沿着树荫往前走。",
+          "text_original": "Mum helped Grandpa stand steadily. Xiaoyu waited until they were both ready, then walked along the shady path.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-015.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-015.mp3"
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-grandpas-pace/page-016.webp",
+          "image_alt": "大树荫影下，小雨坐在长椅上举起一只手，外公和妈妈在旁边微笑看着她。",
+          "text_zh": "大树的影子盖住了整张椅子。小雨坐进去，举起手：“我的手也凉下来了。”",
+          "text_original": "The tree's shadow covered the whole bench. Xiaoyu sat in it and held up her hand. “My hand feels cooler too.”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-016.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-016.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 109,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "2174d7056343acce4f07ab0eac3c6bde9580f88b0d0c014b78d8c7b22414b414",
+              "zh": "e46525e8aba36550034e7ee702c19d0a46ff5ae05cc8c51dfe62339a54390b27"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 82,
+                  "zh": 23
+                },
+                "end": {
+                  "en": 109,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  27,
+                  41
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-grandpas-pace/page-017.webp",
+          "image_alt": "回家的公园路上，小雨牵着外公的手，妈妈拿着水杯走在右边，小雨举手讲述发现。",
+          "text_zh": "回家路上，外公问桥留到哪一天。小雨说：“我和妈妈商量。今天我们看到了那只鸟。”",
+          "text_original": "On the way home, Grandpa asked which day they would save the bridge for. Xiaoyu said, “I'll plan it with Mum. Today we saw that bird.”",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-017.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-017.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 134,
+              "zh": 39
+            },
+            "text_sha256": {
+              "en": "fd9c5fc585cd80d10d89b1a0c5018ec9ec57eebd7573363c1510ced44085c499",
+              "zh": "6efe2feec50eb2fd12b19a9fc0029bd9a8886992fdc2dc7cf9dbaa2dc6d84a4e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 86,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 134,
+                  "zh": 39
+                },
+                "speaker": {
+                  "en": "Xiaoyu",
+                  "zh": "小雨"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  28,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-grandpas-pace/page-018.webp",
+          "image_alt": "傍晚家中，小雨在木桌上画大树和树下的人，外公和妈妈从两侧靠近，陪她看画。",
+          "text_zh": "晚上，小雨画了一棵树，树下坐着三个人。桥还没画，她先给外公留了一个带树荫的位置。",
+          "text_original": "That evening, Xiaoyu drew a tree with three people sitting underneath. She had not drawn the bridge yet. First, she gave Grandpa a place in the shade.",
+          "audio_zh": "/assets/books/sb-grandpas-pace/audio/zh/1a9393034e30124d/page-018.mp3",
+          "audio_original": "/assets/books/sb-grandpas-pace/audio/en/5d71d1397a825163/page-018.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-kite-waits-for-wind",
+      "title_zh": "风筝等一阵风",
+      "title_original": "A Kite Waits for the Wind",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "宁宁想让蓝色燕子风筝飞上天，爸爸陪她看风、等待，一小段一小段地练习收放线。",
+      "reading_value": "一起观察风，接纳尝试中的小进步",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "nature",
+        "emotions"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-kite-waits-for-wind/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T07:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-f17f105d921d34d05448ec9b46ea0a9d8db0f7ecfbf3c3cd564e67fb5358e0f1",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom亲子成长系列，公开AI生成样例，来源未列个人作者、插画师及具体生成模型。本版保留完整18页中文叙事与原图；英文正文保留来源原文；英文书名由本项目翻译，添加角色气泡和合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T07:31:56.309Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T07:31:06.732Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-001.webp",
+          "image_alt": "开阔草地上，宁宁穿着青绿色上衣，张开双臂举着蓝色燕子风筝，爸爸蹲在右边拿着线轮。",
+          "text_zh": "宁宁抱着一只蓝色燕子风筝来到空地。她伸开两只手：“今天，它要到天上去。”",
+          "text_original": "Ningning brought a blue swallow-shaped kite to the open field. She spread both arms. “Today, it's going into the sky.”",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-001.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 118,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "a2a8d7cbd201ea63963aa637e58800fb2d0612aa92d2d8ed6b891286fef2d1ff",
+              "zh": "23c7176ea66db4b96532c33dd547eef5bb1b8dc45957e8cd6f2a320bf71216ff"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 85,
+                  "zh": 24
+                },
+                "end": {
+                  "en": 118,
+                  "zh": 36
+                },
+                "speaker": {
+                  "en": "Ningning",
+                  "zh": "宁宁"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  46,
+                  23
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-002.webp",
+          "image_alt": "爸爸站在草地上指向空旷的方向，宁宁在左边拿着线轮等待，蓝色燕子风筝放在脚旁。",
+          "text_zh": "爸爸先看看四周，选了没有人的方向。宁宁站在旁边，等他确认可以开始。",
+          "text_original": "Dad checked all around and chose a direction with nobody in the way. Ningning stood beside him until he said they could begin.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-002.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-002.mp3"
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-003.webp",
+          "image_alt": "爸爸在后方托着蓝色风筝，宁宁拿着线轮在草地上迈出小步，抬头看向前方。",
+          "text_zh": "爸爸托住风筝，宁宁往前跑了两小步。燕子翘起来一点，又轻轻落回草地。",
+          "text_original": "Dad held up the kite. Ningning took two little running steps. The swallow tipped up a little, then softly landed on the grass.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-003.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-003.mp3"
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-004.webp",
+          "image_alt": "宁宁站在落回草地的风筝旁，爸爸蹲在右边，伸手示意她先停下来。",
+          "text_zh": "她还想一直往前跑，爸爸请她停稳：“先看看，是不是有风。”",
+          "text_original": "She wanted to keep running, but Dad asked her to stop steadily. “First, let's see if there's any wind.”",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-004.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 103,
+              "zh": 28
+            },
+            "text_sha256": {
+              "en": "4aa2c956850763824afc758ba30a44e83bc985e6c44a419086cc1b689ba2f7d4",
+              "zh": "978e93dab55ef4ca4c4a079b315dd58ec31d64192b3da3b46f026c9af4a540ca"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 64,
+                  "zh": 16
+                },
+                "end": {
+                  "en": 103,
+                  "zh": 28
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  73,
+                  17
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-005.webp",
+          "image_alt": "爸爸蹲在草地上举起一根垂直下垂的短布条，宁宁抬头观察，风筝和线轮放在地上。",
+          "text_zh": "爸爸拿出一根短布条。布条软软地垂着，没有朝哪边飘。",
+          "text_original": "Dad took out a short strip of cloth. It hung softly down without blowing in any direction.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-005.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-006.webp",
+          "image_alt": "宁宁弯腰看着地上的燕子风筝，蹲着的爸爸在旁边讲解，手中拿着蓝白色线轮。",
+          "text_zh": "“这会儿风很小。”爸爸说。宁宁看看燕子：“那它不是不想飞？”",
+          "text_original": "“The wind is very light now,” Dad said. Ningning looked at the swallow. “So it isn't that it doesn't want to fly?”",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-006.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-006.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 114,
+              "zh": 30
+            },
+            "text_sha256": {
+              "en": "0483295e122b224d659ff1eae91aa3b79842e9e8d7c810d4fee932ee4f7d90bd",
+              "zh": "27e0cbb01b32b29e798b8f68b1847c1f1de8dbecca90490175a0ec7626c33031"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 29,
+                  "zh": 9
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  73,
+                  35
+                ]
+              },
+              {
+                "start": {
+                  "en": 72,
+                  "zh": 20
+                },
+                "end": {
+                  "en": 114,
+                  "zh": 30
+                },
+                "speaker": {
+                  "en": "Ningning",
+                  "zh": "宁宁"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  41,
+                  35
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-007.webp",
+          "image_alt": "宁宁和爸爸坐在树荫下喝水，收好的燕子风筝与线轮放在旁边的草地上。",
+          "text_zh": "爸爸笑了：“得有合适的风。先喝点水，等一会儿。”他们把线收好，坐到一旁。",
+          "text_original": "Dad smiled. “We need suitable wind. Let's have some water and wait a little.” They gathered the line and sat to one side.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-007.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 121,
+              "zh": 36
+            },
+            "text_sha256": {
+              "en": "a428574e11416eb969ae1743d5243c46cdeced3eafb04caa490219e72a82f3cb",
+              "zh": "c1d5194f18028c032f2c2c0c4fbd8f4c19adba07c016c3943756d296bded571e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 12,
+                  "zh": 5
+                },
+                "end": {
+                  "en": 77,
+                  "zh": 24
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  75,
+                  25
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-008.webp",
+          "image_alt": "爸爸站起来举着一根向旁边飘动的短布条，宁宁抱着风筝抬头看着。",
+          "text_zh": "过了一阵，布条往同一边轻轻飘。爸爸又看了看天气和周围，站起来试试风。",
+          "text_original": "After a while, the cloth gently blew in one direction. Dad checked the weather and their surroundings again, then stood up to feel the wind.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-008.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-008.mp3"
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-009.webp",
+          "image_alt": "爸爸在左侧托起蓝色燕子风筝，宁宁站在右边拿着线轮，风筝线没有绕在手指上。",
+          "text_zh": "爸爸安排好方向，托起燕子。宁宁拿着线轮，双脚站稳，线没有绕在手指上。",
+          "text_original": "Dad chose their direction and held up the swallow. Ningning held the reel, standing steadily. The line was not wrapped around her fingers.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-009.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-010.webp",
+          "image_alt": "爸爸半跪在草地上高高托着燕子风筝，宁宁站在左侧双手拿着线轮等待。",
+          "text_zh": "“先留一点线，我放开时，你看看它往哪里走。”爸爸说。宁宁盯着蓝色翅膀。",
+          "text_original": "“Let out a little line first. When I let go, watch where it goes,” Dad said. Ningning watched the blue wings.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-010.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 109,
+              "zh": 35
+            },
+            "text_sha256": {
+              "en": "4fe9e28073326e7aca28e27a4d76286d77b4f36fba6aa42ccdbebcbfe90f4ff8",
+              "zh": "c69a9ad8163680d680b12b6b8917baa1a6029c08dd4658642f293574ecfbfe72"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 66,
+                  "zh": 22
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  72,
+                  50
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-011.webp",
+          "image_alt": "蓝色风筝升到宁宁头顶左上方，弯曲的风筝线连着她手中的线轮，爸爸在后方观察。",
+          "text_zh": "燕子离开爸爸的手，往上抬了一小段。宁宁一高兴，多放了一截，线又松下来。",
+          "text_original": "The swallow left Dad's hands and rose a little. Ningning was excited and let out too much line. It became slack again.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-011.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-012.webp",
+          "image_alt": "燕子风筝在左上方摇摆，爸爸蹲在宁宁身后，伸手帮她控制手中的线轮。",
+          "text_zh": "风筝晃了晃，开始往下。爸爸帮她收回一点线：“不急，先让这段稳住。”",
+          "text_original": "The kite wobbled and began to come down. Dad helped her reel in a little. “No hurry. Let's keep this bit steady first.”",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-012.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-012.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 119,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "2869c2877adc696076dc7ed56108acdeb5a42e4b6f2b02972601ce7f943445f4",
+              "zh": "a880128f9cc86f18121057c8107634bce30234871646f5d6f9ba82c0babf0f15"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 74,
+                  "zh": 21
+                },
+                "end": {
+                  "en": 119,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  86,
+                  43
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-013.webp",
+          "image_alt": "宁宁站在草地上慢慢转动线轮，抬头看右上方的燕子风筝，爸爸蹲在左后方。",
+          "text_zh": "宁宁慢慢转动线轮，眼睛没有离开燕子。翅膀摆了两下，又朝上走了一点。",
+          "text_original": "Ningning turned the reel slowly, watching the swallow. Its wings swayed twice, then rose a little again.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-013.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-013.mp3"
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-014.webp",
+          "image_alt": "爸爸站在宁宁右侧抬头观察，宁宁双手拿着线轮，蓝色风筝沿着线升向左上方。",
+          "text_zh": "“现在可以再放一点。”爸爸说。宁宁放一小段就停，像给燕子留一条慢慢走的路。",
+          "text_original": "“Now you can let out a little more,” Dad said. Ningning released a short length and paused, as if giving the swallow a path to travel slowly.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-014.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 141,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "496a20f35c793351f14c25320dd711d056ac5f6c043281615526ce6a30724ec0",
+              "zh": "f9e3c1270a252b420adac430a8568b69174e97f1ebe7fbd888e6e9a29a10d7b3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 36,
+                  "zh": 11
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  72,
+                  21
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-015.webp",
+          "image_alt": "蓝色燕子风筝降低到草地附近，宁宁站在中间观察，爸爸在右侧蹲着拿线轮。",
+          "text_zh": "风变小了，燕子又往下落。这一次，宁宁没有追着跑：“布条也垂下来了。”",
+          "text_original": "The wind grew weaker, and the swallow began to come down. This time Ningning did not chase it. “The cloth is hanging down too.”",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-015.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-015.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 127,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "38661b14b76bb7668a6aa48ea40f9835070aa4bbfc075a0eb9d91185f9909c40",
+              "zh": "5f4f38e828156e30e3526556a6b9f983ec1632d12f414969940be1008bb3140e"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 95,
+                  "zh": 24
+                },
+                "end": {
+                  "en": 127,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Ningning",
+                  "zh": "宁宁"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  63,
+                  39
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-016.webp",
+          "image_alt": "宁宁弯下身扶住落地的蓝色燕子风筝，爸爸蹲在旁边，把线收回手中的线轮。",
+          "text_zh": "爸爸帮她慢慢收线，把燕子带回空地。他们没有让线落到旁边人的脚下。",
+          "text_original": "Dad helped her reel in slowly and bring the swallow back to the field. They kept the line from trailing where someone might walk.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-016.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-016.mp3"
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-017.webp",
+          "image_alt": "宁宁蹲在收回的风筝旁，举着短布条和爸爸交谈，爸爸在右边微笑看着她。",
+          "text_zh": "宁宁摸摸翅膀：“今天它飞了一小会儿。”爸爸问下次先看什么，她举起那根短布条。",
+          "text_original": "Ningning touched a wing. “It flew for a little while today.” Dad asked what she would check first next time. She held up the strip of cloth.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-017.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-017.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 140,
+              "zh": 38
+            },
+            "text_sha256": {
+              "en": "ae43fa57633a46739dd61cd641b95f4e7ec1df2c7d26b34a8536de95f71fb12f",
+              "zh": "1bbd1c42eed6a7b4ecf041c9673855788e2e48ad759956f6838057e47838bf9f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 25,
+                  "zh": 7
+                },
+                "end": {
+                  "en": 60,
+                  "zh": 19
+                },
+                "speaker": {
+                  "en": "Ningning",
+                  "zh": "宁宁"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  36,
+                  31
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-kite-waits-for-wind/page-018.webp",
+          "image_alt": "宁宁和爸爸沿草地牵手回家，爸爸另一只手提着装好蓝色风筝和线轮的袋子。",
+          "text_zh": "回家的袋子里，燕子收好了，布条也在。宁宁已经想好：下次先看风，再问爸爸可不可以放。",
+          "text_original": "The swallow and the cloth were packed in the bag for home. Ningning knew her plan: next time, look at the wind first, then ask Dad if they could fly.",
+          "audio_zh": "/assets/books/sb-kite-waits-for-wind/audio/zh/74778de62f355a85/page-018.mp3",
+          "audio_original": "/assets/books/sb-kite-waits-for-wind/audio/en/60b3e68f966c49bf/page-018.mp3"
+        }
+      ]
+    },
+    {
+      "id": "sb-learning-with-dad",
+      "title_zh": "爸爸也有不会的时候",
+      "title_original": "Dad Is Learning Too",
+      "author": "StoryBloom（AI生成，项目校对）",
+      "illustrator": "StoryBloom（AI生成原图）",
+      "description_zh": "果果想学吹口琴，却发现爸爸也不会。父子一起看说明、听声音，在小小的尝试中学会不着急。",
+      "reading_value": "从一句不会开始，体验共同学习",
+      "age_ranges": [
+        "5-6"
+      ],
+      "categories": [
+        "emotions",
+        "cognition"
+      ],
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "cover": "/assets/books/sb-learning-with-dad/cover.webp",
+      "page_count": 18,
+      "reading_minutes": 5,
+      "featured_order": 0,
+      "published_at": "2026-11-18T07:00:00Z",
+      "publish_status": "published",
+      "content_version": "materials-ac03183bb62a09c3cb5cc8e093132d675b5e2031a518975cabdb2feb6ac13b9f",
+      "is_demo": false,
+      "license": {
+        "type": "许可待核实",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou",
+        "license_url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+        "attribution": "图文来源：StoryBloom亲子成长系列，公开AI生成样例，来源未列个人作者、插画师及具体生成模型。本版保留完整18页中文叙事与原图；英文正文保留来源原文；英文书名由本项目翻译，添加角色气泡和合成配音，首幅图兼作封面。仓库MIT声明明确用于应用代码，图文独立许可未确认，记录pending。",
+        "review_status": "pending",
+        "commercial_use": false,
+        "self_hosting": false,
+        "translation_allowed": false,
+        "audio_derivative_allowed": false
+      },
+      "voices": {
+        "en": {
+          "provider": "edge-tts",
+          "voice_id": "en-US-JennyNeural",
+          "generated_at": "2026-11-18T07:32:03.042Z",
+          "review_status": "pending"
+        },
+        "zh": {
+          "provider": "edge-tts",
+          "voice_id": "zh-CN-XiaoxiaoNeural",
+          "generated_at": "2026-11-18T07:31:04.272Z",
+          "review_status": "pending"
+        }
+      },
+      "pages": [
+        {
+          "page_number": 1,
+          "image": "/assets/books/sb-learning-with-dad/page-001.webp",
+          "image_alt": "木桌上放着打开的蓝色礼物盒、口琴和小册子，绿衣果果举着盒子向右边的爸爸提问。",
+          "text_zh": "果果打开礼物盒，里面是一只亮亮的小口琴。他把盒子搬到爸爸面前：“教我吹那首歌吧。”",
+          "text_original": "Guoguo opened his present. Inside was a shiny little harmonica. He brought the box to Dad. “Teach me to play that song!”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-001.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-001.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 120,
+              "zh": 41
+            },
+            "text_sha256": {
+              "en": "0575e3e10f08eaa4f542b0aca9168d598ee39c3d71b842d83bbfb923b8501752",
+              "zh": "da9ab9bedece830339035346186b7a48795b741d0eb8836a6f5374f5caa9b123"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 91,
+                  "zh": 31
+                },
+                "end": {
+                  "en": 120,
+                  "zh": 41
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  27,
+                  34
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 2,
+          "image": "/assets/books/sb-learning-with-dad/page-002.webp",
+          "image_alt": "爸爸拿起配套的图解小册子，果果坐在左边认真看着，口琴和蓝色盒子放在桌上。",
+          "text_zh": "爸爸拿起配套的小册子：“我也没有学过。我们先看看，怎么拿才舒服。”",
+          "text_original": "Dad picked up the booklet that came with it. “I've never learned either. Let's first see how to hold it comfortably.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-002.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-002.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 117,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "151a2ba1b4db8a61ebc1a0f6d42934fb83fe82d28f9a7e04be56ed53f00daec7",
+              "zh": "455211d9fe01161fdce74cf500fd65a5d938da1d560c3d55668fdf185992bb88"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 45,
+                  "zh": 11
+                },
+                "end": {
+                  "en": 117,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  68,
+                  22
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 3,
+          "image": "/assets/books/sb-learning-with-dad/page-003.webp",
+          "image_alt": "果果拿着口琴，歪头向爸爸提问，爸爸微笑着用手势回答，桌上摊着图解册。",
+          "text_zh": "果果愣了一下：“你也不会？”爸爸点头：“不会。但我愿意陪你慢慢学。”",
+          "text_original": "Guoguo paused. “You don't know either?” Dad nodded. “No. But I'd like to learn slowly with you.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-003.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-003.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 96,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "5411223d5e98b4aa0c884c78d478c9bb60d47c8235e3010e0170849cc38e96f7",
+              "zh": "aaa3d5a1ef27be5f9ae2002c9255441117168743cb036b55cbda9a27ce01b8bd"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 15,
+                  "zh": 7
+                },
+                "end": {
+                  "en": 39,
+                  "zh": 14
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  32,
+                  33
+                ]
+              },
+              {
+                "start": {
+                  "en": 52,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 96,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  70,
+                  21
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 4,
+          "image": "/assets/books/sb-learning-with-dad/page-004.webp",
+          "image_alt": "果果双手举起口琴靠近嘴边，爸爸指着桌上的图解，陪他确认口琴的方向。",
+          "text_zh": "果果把口琴倒着举起来。爸爸也拿不准，指着图：“这里看起来是在上面。”",
+          "text_original": "Guoguo held the harmonica upside down. Dad was not sure yet either. He pointed at the picture. “It looks as if this side goes on top.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-004.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-004.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 134,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "d9ba0ab766cd05a58ec71f3aa175db1ba84660d7ab75377068f64634f4e1d7fc",
+              "zh": "dfd37ae89b543314988aaf126a81d366f2840bd1bab344a72388f26d4e5713ff"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 95,
+                  "zh": 22
+                },
+                "end": {
+                  "en": 134,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  70,
+                  22
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 5,
+          "image": "/assets/books/sb-learning-with-dad/page-005.webp",
+          "image_alt": "果果双手托住口琴两侧，把嘴轻轻靠近吹口，爸爸在右边观察并做示意手势。",
+          "text_zh": "他们对着图转了转。果果用两只手托住两边，嘴巴轻轻靠近吹口。",
+          "text_original": "They turned it to match the picture. Guoguo held each end and gently brought his mouth to the holes.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-005.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-005.mp3"
+        },
+        {
+          "page_number": 6,
+          "image": "/assets/books/sb-learning-with-dad/page-006.webp",
+          "image_alt": "果果举着口琴睁大眼睛，爸爸在右侧平静地伸手回应，蓝色盒子和小册子放在桌上。",
+          "text_zh": "他使劲一吹，声音又响又乱，自己也吓了一跳。爸爸没有叫他立刻再吹。",
+          "text_original": "He blew hard. The sound was loud and jumbled, and startled him too. Dad did not tell him to try again straight away.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-006.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-006.mp3"
+        },
+        {
+          "page_number": 7,
+          "image": "/assets/books/sb-learning-with-dad/page-007.webp",
+          "image_alt": "果果放下口琴，拿起透明水杯喝水，爸爸在右侧俯身听他讲话。",
+          "text_zh": "果果把口琴放下，喝了一口水：“它怎么一下出来这么多声音？”",
+          "text_original": "Guoguo put it down and had some water. “Why did so many sounds come out at once?”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-007.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-007.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 81,
+              "zh": 29
+            },
+            "text_sha256": {
+              "en": "5b9e9c2cb69540b59565c1a3313f9d7d33beeda429c73fc9b29dd3f334eb11ea",
+              "zh": "2daa563c940f27eba2591f7b527d5f7db66a146b03d67b5023570cccf98817fb"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 39,
+                  "zh": 14
+                },
+                "end": {
+                  "en": 81,
+                  "zh": 29
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  28,
+                  35
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 8,
+          "image": "/assets/books/sb-learning-with-dad/page-008.webp",
+          "image_alt": "爸爸指着小册子讲解，果果在左边双手拿着口琴试着把嘴靠近小孔。",
+          "text_zh": "爸爸看看说明：“嘴巴碰到几个小孔，可能就一起响。先不用急着吹歌。”",
+          "text_original": "Dad checked the booklet. “If your mouth covers several holes, they may sound together. We don't have to play a song yet.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-008.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-008.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 121,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "94d48d816cf0d3ad38524f8920cf1dc6da5fbf84965a857bb14e24d54e169cbe",
+              "zh": "abaa1b995d7cebe04908dc6f383573a5345b1552be7887f67489bd15a6f131c1"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 25,
+                  "zh": 7
+                },
+                "end": {
+                  "en": 121,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  70,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 9,
+          "image": "/assets/books/sb-learning-with-dad/page-009.webp",
+          "image_alt": "果果缩小嘴形轻轻吹口琴，爸爸在旁边用手势示意，桌上图解册保持打开。",
+          "text_zh": "果果缩小嘴巴，轻轻送一点气。声音还是有两个，却比刚才柔和了。",
+          "text_original": "Guoguo made his mouth smaller and gently blew a little air. There were still two sounds, but they were softer than before.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-009.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-009.mp3"
+        },
+        {
+          "page_number": 10,
+          "image": "/assets/books/sb-learning-with-dad/page-010.webp",
+          "image_alt": "果果在左边吹口琴，爸爸竖起一根手指，俯身和他一起听声音。",
+          "text_zh": "他又试了一次。“刚才更响，这次更轻。”爸爸说，“你自己听到了吗？”",
+          "text_original": "He tried once more. “The first one was louder, and this one was softer,” Dad said. “Could you hear it too?”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-010.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-010.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 107,
+              "zh": 33
+            },
+            "text_sha256": {
+              "en": "f6a90ad84df8c80f2cf44cfa99ec35d41c97585d54f2b2fffc83b7e03fc8e696",
+              "zh": "75d7cdf82f0618793c303caf20a7c8d383b79e2b841cedf9c2b441909e1d1e6f"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 20,
+                  "zh": 7
+                },
+                "end": {
+                  "en": 72,
+                  "zh": 19
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  73,
+                  24
+                ]
+              },
+              {
+                "start": {
+                  "en": 83,
+                  "zh": 23
+                },
+                "end": {
+                  "en": 107,
+                  "zh": 33
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  73,
+                  24
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 11,
+          "image": "/assets/books/sb-learning-with-dad/page-011.webp",
+          "image_alt": "果果把口琴放回桌上，爸爸用双手在嘴前演示缓缓呼气，面前摊着图解册。",
+          "text_zh": "果果点头，嘴角弯了一下。爸爸照着图，用手势演示慢慢呼气，没有去吹果果的口琴。",
+          "text_original": "Guoguo nodded, with a little smile. Following the picture, Dad showed a slow outward breath with his hands. He did not use Guoguo's harmonica.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-011.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-011.mp3"
+        },
+        {
+          "page_number": 12,
+          "image": "/assets/books/sb-learning-with-dad/page-012.webp",
+          "image_alt": "果果把口琴放在桌面，闭着眼睛用手势练习轻轻吸气，爸爸在旁边微笑观察。",
+          "text_zh": "小册子的下一张图，是轻轻吸气。果果先放下口琴，像闻花一样试了试。",
+          "text_original": "The next picture showed a gentle inward breath. Guoguo put the harmonica down first and tried breathing in as if smelling a flower.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-012.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-012.mp3"
+        },
+        {
+          "page_number": 13,
+          "image": "/assets/books/sb-learning-with-dad/page-013.webp",
+          "image_alt": "果果重新举起口琴靠近嘴巴，爸爸低头陪他听，桌上放着打开的蓝色盒子和图解册。",
+          "text_zh": "他重新举起来，轻轻吹，再轻轻吸。咦，同一个位置，声音变了。",
+          "text_original": "He picked it up again and gently breathed out, then in. Oh! In the same place, the sound changed.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-013.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-013.mp3"
+        },
+        {
+          "page_number": 14,
+          "image": "/assets/books/sb-learning-with-dad/page-014.webp",
+          "image_alt": "果果拿着口琴竖起一根手指向爸爸说话，爸爸也伸出手掌回应，图解册摊在桌上。",
+          "text_zh": "“一个往外，一个往里！”果果说。爸爸也听见了：“这两个，我们都分出来了。”",
+          "text_original": "“One goes out, and one goes in!” Guoguo said. Dad heard it too. “We can both tell those two apart now.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-014.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-014.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 103,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "b2374ea4d0960ca01f498faeadd9792bf5f9563015c64a2cc169243d1418e35a",
+              "zh": "5457ffaa789dedb65cbc46315bca9cb14c4de015853f41e5553fad62d93d66d0"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 0,
+                  "zh": 0
+                },
+                "end": {
+                  "en": 32,
+                  "zh": 12
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  30,
+                  34
+                ]
+              },
+              {
+                "start": {
+                  "en": 64,
+                  "zh": 23
+                },
+                "end": {
+                  "en": 103,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 52,
+                "y": 65,
+                "width": 44,
+                "target": [
+                  68,
+                  22
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 15,
+          "image": "/assets/books/sb-learning-with-dad/page-015.webp",
+          "image_alt": "果果双手举着口琴看向爸爸，爸爸在右边张开手掌，陪他面对再次尝试后的疑惑。",
+          "text_zh": "果果想把两个声音连起来，吹着吹着又乱了。他看看爸爸：“还不能唱歌。”",
+          "text_original": "Guoguo tried joining the two sounds, but they became jumbled again. He looked at Dad. “I still can't play the song.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-015.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-015.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 116,
+              "zh": 34
+            },
+            "text_sha256": {
+              "en": "d3338a1f18b1a0e7f15cdba510aa825b27f4296dd021184650a10672d5396464",
+              "zh": "d3e87a7d274977d439558265c641e255bcadfbe2fac5fee7c836173f8172865a"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 86,
+                  "zh": 26
+                },
+                "end": {
+                  "en": 116,
+                  "zh": 34
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  29,
+                  35
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 16,
+          "image": "/assets/books/sb-learning-with-dad/page-016.webp",
+          "image_alt": "爸爸拿着图解册，举起一根手指向果果说明下一步，果果在左侧拿着口琴听着。",
+          "text_zh": "爸爸说：“今天先听清这两个。整首歌，要学的还多呢。我们可以下次再找办法。”",
+          "text_original": "Dad said, “Today, let's just listen to those two clearly. There's more to learn for a whole song. We can look for the next step another day.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-016.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-016.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 141,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "62385aa5ffe89cd71103577d843c7b00e3725f4a23efa51dcd175edf0d121f81",
+              "zh": "3240eb28edfbbf2256d07106ef3d0d885883df13c844c6447ebdc06961ede835"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 10,
+                  "zh": 4
+                },
+                "end": {
+                  "en": 141,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Dad",
+                  "zh": "爸爸"
+                },
+                "x": 34,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  70,
+                  21
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "page_number": 17,
+          "image": "/assets/books/sb-learning-with-dad/page-017.webp",
+          "image_alt": "果果用白色软布擦拭口琴外面，爸爸扶着打开的蓝色盒子，桌上放着夹有蓝纸的小册子。",
+          "text_zh": "他们按说明擦好口琴外面，放回盒子。果果在小册子里夹了一张蓝纸，留住学到的那一页。",
+          "text_original": "They cleaned the outside as the instructions said and put the harmonica away. Guoguo tucked a blue slip into the booklet to mark the page they had learned from.",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-017.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-017.mp3"
+        },
+        {
+          "page_number": 18,
+          "image": "/assets/books/sb-learning-with-dad/page-018.webp",
+          "image_alt": "傍晚桌边，果果用手指轻靠下巴与爸爸交谈，口琴已放好，蓝色纸条留在摊开的小册子上。",
+          "text_zh": "晚上，爸爸问最想记住什么。果果想了想：“你不会的时候，也可以和我一起听。”",
+          "text_original": "That evening, Dad asked what he most wanted to remember. Guoguo thought for a moment. “When you don't know, you can still listen with me.”",
+          "audio_zh": "/assets/books/sb-learning-with-dad/audio/zh/e6bb655ad6fe3fd8/page-018.mp3",
+          "audio_original": "/assets/books/sb-learning-with-dad/audio/en/4c32637431675225/page-018.mp3",
+          "dialogue": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "length": {
+              "en": 138,
+              "zh": 37
+            },
+            "text_sha256": {
+              "en": "12ee18d2e59251fdff56c60dec088c6af554cf136ddaf60ae7a0c4be4698f59b",
+              "zh": "9bb27970a1080593ffb0c7c85edc5889b8a7b7e613465e3196a613634f7e61c3"
+            },
+            "parts": [
+              {
+                "start": {
+                  "en": 86,
+                  "zh": 19
+                },
+                "end": {
+                  "en": 138,
+                  "zh": 37
+                },
+                "speaker": {
+                  "en": "Guoguo",
+                  "zh": "果果"
+                },
+                "x": 4,
+                "y": 65,
+                "width": 62,
+                "target": [
+                  30,
+                  34
+                ]
+              }
+            ]
+          }
         }
       ]
     },

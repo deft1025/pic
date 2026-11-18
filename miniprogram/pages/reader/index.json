@@ -4,5 +4,6 @@
     "book-card": "/components/book-card/index"
   },
   "navigationStyle": "custom",
-  "disableScroll": false
+  "disableScroll": false,
+  "pageOrientation": "auto"
 }

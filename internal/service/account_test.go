@@ -53,7 +53,8 @@ func (s *accountsStub) Logout(_ context.Context, hash string) error {
 	}
 	return nil
 }
-func (s *accountsStub) Favorites(context.Context, string) ([]string, error) { return s.ids, s.err }
+func (s *accountsStub) Favorites(context.Context, string) ([]string, error)      { return s.ids, s.err }
+func (s *accountsStub) CompletedBooks(context.Context, string) ([]string, error) { return s.ids, s.err }
 func (s *accountsStub) SetFavorites(_ context.Context, _ string, ids []string, _ bool) error {
 	s.ids = ids
 	s.calls++
@@ -258,5 +259,23 @@ func TestReadingEventsRejectGuestsBeforeAccessingStorage(t *testing.T) {
 	e := model.ReadingEvent{ID: strings.Repeat("a", 32), BookID: "book", Kind: "open", ReadingID: strings.Repeat("b", 32)}
 	if err := svc.RecordEvent(ctx, "", e); !errors.Is(err, ErrUnauthorized) || repo.calls != 0 {
 		t.Fatal("guest reading event was stored")
+	}
+}
+
+func TestCompletedBooksRequiresAccountAndPropagatesStorageFailure(t *testing.T) {
+	ctx := context.Background()
+	svc := NewAccounts(nil, nil, nil)
+	if _, err := svc.CompletedBooks(ctx, ""); !errors.Is(err, ErrUnauthorized) {
+		t.Fatal("guest could access completed books", err)
+	}
+	repo := &accountsStub{ids: []string{"finished-book"}}
+	svc = NewAccounts(repo, nil, nil)
+	ids, err := svc.CompletedBooks(ctx, "owner")
+	if err != nil || len(ids) != 1 || ids[0] != "finished-book" {
+		t.Fatal(ids, err)
+	}
+	repo.err = errors.New("storage down")
+	if _, err = svc.CompletedBooks(ctx, "owner"); !errors.Is(err, ErrUnavailable) {
+		t.Fatal("lost storage failure", err)
 	}
 }

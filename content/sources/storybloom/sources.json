@@ -650,5 +650,977 @@
         ]
       }
     ]
+  },
+  "sb-bean-in-a-pot": {
+    "title": "花盆里的一颗豆",
+    "series": "亲子成长",
+    "series_id": "sanzijing",
+    "source_file": "hua-pen-li-de-yi-ke-dou.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qinzi/hua-pen-li-de-yi-ke-dou.json",
+    "source_git_blob_sha": "f2339b8d6929495ec592ed1a6c6ce8c209abb778",
+    "source_sha256": "f310c31b4dafa56bdc6269e548f4442be985a00df8c956d8bb797929ddf41fd9",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-qinzi-20261118/originals/sb-bean-in-a-pot",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/1.webp",
+        "git_blob_sha": "ba45eb6356eb626fe96b5e1a68c11032009e9f19",
+        "sha256": "9edcad3971625915dbb00fdc074f05d44df34f6d4c15b7f04a9b37a6d6094b8d",
+        "bytes": 209980,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/2.webp",
+        "git_blob_sha": "350361b79902effd2b2348b595c0411a91418260",
+        "sha256": "31d9a47a4c5eba9e3ba29c336dfd5a424e189ea8d228769243b532fa36e51b55",
+        "bytes": 267242,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/3.webp",
+        "git_blob_sha": "ec14ce852c0bb4c67d9e634d4177df8604bf9d42",
+        "sha256": "9e38db6ffc3f1733c5ea7a6bd2e43d3d65b7e9ea7de6e26739ab6c4f36edeee4",
+        "bytes": 267498,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/4.webp",
+        "git_blob_sha": "3ea87a251aa405556526c6d1fd9b2c0670262108",
+        "sha256": "0c23e531cf7688a698fb306ae97b173e17cffd3ba86effb07c4491440da4b504",
+        "bytes": 236488,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/5.webp",
+        "git_blob_sha": "a6558a6a0b116e28d6438ae5f2fbd1d4eea863ee",
+        "sha256": "f29c053d2ead8d41c20edc91219fb5ba2b4a5957a99842f00bc57c5274fa3683",
+        "bytes": 257292,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/6.webp",
+        "git_blob_sha": "7c19816f281445b91dfabeb15aab717233d8da84",
+        "sha256": "cebea01c7a37bf23e242fb7b8b1caaab645e6f00d373f4886b1b5946f64a1501",
+        "bytes": 234756,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/7.webp",
+        "git_blob_sha": "b5955274ea002574e211a594ec4d84a939d61236",
+        "sha256": "c02d0450f3e26a4f80894f70a94301823a8d9817a1e6c03d0dbbf334c7d2af7a",
+        "bytes": 254860,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/8.webp",
+        "git_blob_sha": "14a2fda65fa6e5ffc5e81e9168fd5b3241f4b106",
+        "sha256": "553190f6fd2ebe38671f9c14898511f9e79fb685157c4660add93695b094441e",
+        "bytes": 233484,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/9.webp",
+        "git_blob_sha": "1e0b2fe568551a30876feb2686a4837c57d1540e",
+        "sha256": "edc4deb9679eee036d6212af943166a56f62c3baa079b9464c2ae69264b2384e",
+        "bytes": 247232,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/10.webp",
+        "git_blob_sha": "4f8496814fd93c125a10a3c37a851426a4fe2523",
+        "sha256": "be9430680c66cd8155cac7b67f86bb665c5b05b47eb2f73416a094d76ef84e2c",
+        "bytes": 236322,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/11.webp",
+        "git_blob_sha": "021b1adbe303f0cf6bc1f1484015c62d12857a14",
+        "sha256": "d99258edc70d874dfd0e8f9295a13cb117ffaddb54699ac6483bb5571a5b5966",
+        "bytes": 246606,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/12.webp",
+        "git_blob_sha": "d47ca198755135edf65d9ac80ee5e879a47c1974",
+        "sha256": "b18ec00d090dbdffa373176dbde012aacb3ff659fedb394577f3c494318a9814",
+        "bytes": 247522,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/13.webp",
+        "git_blob_sha": "b5d65807f139e20f6be22ecb5c73d908cf06702d",
+        "sha256": "2e7af9268e5d4f8b3bfd688561dc48603ea6fad6619dc5fa86e2ece908778cbf",
+        "bytes": 225226,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/14.webp",
+        "git_blob_sha": "d23b0860dff1ba6861b62fd65ed9f313346d86ce",
+        "sha256": "c98e194106f2153db1af3be7b960e3df43e07244f6da203b3676eca097b98e96",
+        "bytes": 191234,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/15.webp",
+        "git_blob_sha": "e31f6b3ef7d82a62592c3c5ec30098e4bb5b9f6c",
+        "sha256": "3d16ec5d0fef7709a1a7fddf26602b4728f1998ed52e0692bf1718fee44dfbc1",
+        "bytes": 225256,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/16.webp",
+        "git_blob_sha": "fdca597e4e3ac4e8a56efb8b5c8d7c7f3cae334c",
+        "sha256": "e88e07cc85eaf9d06c2db287682641fc9eef38ee79d69602fc1f3c94a0ac10a3",
+        "bytes": 257010,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/17.webp",
+        "git_blob_sha": "56eb958a22b5e7bda044c5ae0a093cf924b4c640",
+        "sha256": "16efaa1de261425d4e9c5c5bd31325abfe1b9698de298e0b967839574ba033d7",
+        "bytes": 220670,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/hua-pen-li-de-yi-ke-dou/18.webp",
+        "git_blob_sha": "f2943fe28bad099e8035f243c57ab27e44e63945",
+        "sha256": "7c7423ae03261cd5eadf8c0f2d8fd799081795c2d3ac8a7f8ac9003ca39e6197",
+        "bytes": 185578,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/qinzi.ts"
+  },
+  "sb-kite-waits-for-wind": {
+    "title": "风筝等一阵风",
+    "series": "亲子成长",
+    "series_id": "sanzijing",
+    "source_file": "feng-zheng-deng-yi-zhen-feng.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qinzi/feng-zheng-deng-yi-zhen-feng.json",
+    "source_git_blob_sha": "521a7116a836e0b86c2f6c6c514560d41c5683fe",
+    "source_sha256": "1521784392803674e9838797b24fefe3e5ac47c65e30975081953d651696af2b",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-qinzi-20261118/originals/sb-kite-waits-for-wind",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/1.webp",
+        "git_blob_sha": "3452a4b29658f01e5173ea0e1c34d98a62ec322e",
+        "sha256": "9c1b763229c39a88716a742415c3fc188067ce5cb4004da26d9ac1b109bd86c2",
+        "bytes": 263670,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/2.webp",
+        "git_blob_sha": "b1990ce8e08d27e4047b154a316b94089874c1b6",
+        "sha256": "f7f9e8a4d810b19fe875bf0e9134567afb075d072675fea6971aa9a57f495973",
+        "bytes": 278236,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/3.webp",
+        "git_blob_sha": "d4dbd743fc1eaf68ac07138d6de09eafeb55e140",
+        "sha256": "c89294258bad2c4b6a305501b2c8c7c9d48cc6a2edac2924daf75a578f5ac6b3",
+        "bytes": 293984,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/4.webp",
+        "git_blob_sha": "0f3a9edfd3a265257b89135f962d444a2fc852af",
+        "sha256": "791d70d3fc45370b722b82a92f66169bcde3457070a92f130a6b97fd0a5388d6",
+        "bytes": 268094,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/5.webp",
+        "git_blob_sha": "3d18a5d3c3cee2e581fabb4d451562c197e7542a",
+        "sha256": "f5b825d8fde30a0c5514f3ed74a3c6936a3d3a33e81c37ec22bb4786709519f8",
+        "bytes": 267320,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/6.webp",
+        "git_blob_sha": "26e669e25a15884d57892b33e779deb8967082f8",
+        "sha256": "a532e593792386e37220d0d76a61853053fcd8ed2de39d4b5603f0c03d8f588b",
+        "bytes": 241906,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/7.webp",
+        "git_blob_sha": "3a389cd8b85c6b05bf776c3fdbe563bedd368d2f",
+        "sha256": "5942186631344ce4d534d197274cb80666b1a45ee42e7c197a58bff356b75946",
+        "bytes": 304968,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/8.webp",
+        "git_blob_sha": "b6082b779dad61844541a88d7149fffc303b2973",
+        "sha256": "92bf58ad65cc775b933dca389deae45bca9a4f10026778e3ef323ca8f694d24a",
+        "bytes": 253560,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/9.webp",
+        "git_blob_sha": "34e6b26d43374044e5f4438de623c9cb77b9ce10",
+        "sha256": "aca7956e9333e713e7b01a9ae39ebed7c2f214a32c38388c47341694fb9de7e1",
+        "bytes": 287366,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/10.webp",
+        "git_blob_sha": "9d1e9754339e3d04e6aca666bdd9343dcb4319dd",
+        "sha256": "fd10e4aceaa31a685458b197a0d0eefe4a4e319d352fadfb795d923a9d671e3c",
+        "bytes": 272744,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/11.webp",
+        "git_blob_sha": "984389329040d8d48ece4f7bb1a8272c4c7d09ed",
+        "sha256": "035be052182344f4ebf38ef1b4b25e4e2c9706917009dd19cdcba39060fa164b",
+        "bytes": 232092,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/12.webp",
+        "git_blob_sha": "770f954792d33f8856be44c9415d5d8a8c57def7",
+        "sha256": "bc38660b7ec8921893c8f0687ab76efd90ab4fd6869336b167b4f4129644964d",
+        "bytes": 240556,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/13.webp",
+        "git_blob_sha": "fb85ef966539a3fd2c7bb90913e72ecd94739185",
+        "sha256": "1fa45bcf36cd6d38d86a3266ea88ebb7149f4870a95d42d07071ebd92d382162",
+        "bytes": 253436,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/14.webp",
+        "git_blob_sha": "9473325252726da6c704a0fd6f3b462825c9f812",
+        "sha256": "02d2def76d2d96f247220c8d12a50ac8d35de16b6d68350f79ac3e2b7c3d6583",
+        "bytes": 255282,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/15.webp",
+        "git_blob_sha": "05ee235e7966e8ddeedc410835c1116788d97891",
+        "sha256": "fc26eab1b5be775ef68a4133f7d9bc2d41d1379b8e3298497cfa606c73c6ecfb",
+        "bytes": 235954,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/16.webp",
+        "git_blob_sha": "6af58fba191780e5fd2cb120c37acee71e095aa2",
+        "sha256": "d8397f394a0c09b663951d24c8523cef2310c6ad82a99fe8bf9a00059704c9f2",
+        "bytes": 298304,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/17.webp",
+        "git_blob_sha": "0cb643fffce346535ca1d41fcd0a5677cf1f14ac",
+        "sha256": "93d9c830cfac48622885d78c5ddf459017d6cbf83d41d2426ec1617d587ac7c0",
+        "bytes": 288764,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/feng-zheng-deng-yi-zhen-feng/18.webp",
+        "git_blob_sha": "c1d44ba63b629cdf253ddce4c702cddecba2fa0e",
+        "sha256": "425843332e4697c5fefa0d40a8027eebdfa86f1cc9b4bbae5e9265b6182e00fc",
+        "bytes": 272114,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/qinzi.ts"
+  },
+  "sb-grandpas-pace": {
+    "title": "外公走得慢一点",
+    "series": "亲子成长",
+    "series_id": "sanzijing",
+    "source_file": "wai-gong-zou-de-man-yi-dian.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qinzi/wai-gong-zou-de-man-yi-dian.json",
+    "source_git_blob_sha": "b7d91e3d6b38e5b35fd6e557f069acd9bc7efdef",
+    "source_sha256": "365986365a493c812ee9917c97e94a405f1bc45162e80630806d522c86ea7ee6",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-qinzi-20261118/originals/sb-grandpas-pace",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/1.webp",
+        "git_blob_sha": "d835253e065f4e5c4162407680eb8a9fb4eae3e5",
+        "sha256": "8f4640752396f972aa808531ca71e766a38d83eca31de4094a20ddfd428ff003",
+        "bytes": 253978,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/2.webp",
+        "git_blob_sha": "11a4c605eb9182425f279c3fa7a173ab56abb0c5",
+        "sha256": "55f69ab095de071545763ababb841eb9e0b60bc5a1e51500fa5c3479fa02902a",
+        "bytes": 284992,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/3.webp",
+        "git_blob_sha": "44448ed8858851c87b0989a1504bc63eef8f1bf4",
+        "sha256": "c64148403efe255f18555b1d3ac558e164c2bc2c6c721e36b98a5c96dc97136d",
+        "bytes": 294168,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/4.webp",
+        "git_blob_sha": "a711f86ad6677ae04f859adf270c4a08968acadf",
+        "sha256": "4ad76d4dc37b7fe032939229b9ea96e60bb8f81401a1bdda8cf50aeedadd2931",
+        "bytes": 266866,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/5.webp",
+        "git_blob_sha": "68130c1d19b7573fdc8ca9c91edd41c5ccfa43ca",
+        "sha256": "84126452b38ca6df41debd473d5b993171cb3042f1f8ea7e0065ba7869ec1136",
+        "bytes": 277438,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/6.webp",
+        "git_blob_sha": "215e3c90051570d18ce40c446ff7fbcc1eb3461a",
+        "sha256": "e4de2059fb0c60cda882c56af1fbe86eb8ad9377f33c0c1c4bf3364d69832e43",
+        "bytes": 271674,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/7.webp",
+        "git_blob_sha": "3c8afb4414bf71ab21b1d1f9a3fc4890cd6e09b0",
+        "sha256": "71e0e00cb1e58d56f71378a8e810daf6569745c54502b5d22232925e4db07717",
+        "bytes": 251016,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/8.webp",
+        "git_blob_sha": "54a38114ef811e8dfd56ae9badb38b1c82eae095",
+        "sha256": "6ac2760fa2c2612dc290ce6c0b50d7fbfe7c86f224771d133c56a8aa4e622e6b",
+        "bytes": 276032,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/9.webp",
+        "git_blob_sha": "63d1c13726c948ffcac2f3ce1ff6ed737391c845",
+        "sha256": "303cd49a67a69f9f0e987176ee538795c270cd548f4f4271504b440747e24752",
+        "bytes": 299536,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/10.webp",
+        "git_blob_sha": "02db89694d3b192f6e71de6f6920131b43c1cd86",
+        "sha256": "b8d7a9fc9f828b26b2a88fa74f8de49d34a09691d1c9cff160d11ce958e3a456",
+        "bytes": 298112,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/11.webp",
+        "git_blob_sha": "0a7a5d8885a7854e5df56330a071e03a459934cf",
+        "sha256": "688aecf90a4cc3a5efc59b53df9bff6c2283929f3dcd109f975d74861bbb56c2",
+        "bytes": 269306,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/12.webp",
+        "git_blob_sha": "42090cea3591612bf8d26b8bd31cf6c47b6305b0",
+        "sha256": "069655ddca150b976bf01d47641a799fefda81687e21a62dd2e788e2c460381b",
+        "bytes": 271402,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/13.webp",
+        "git_blob_sha": "d8b43f01a3bda70df1768313a9828ba6b2b9f36c",
+        "sha256": "ffac6ada6181afbf0289c44fd356811c31b5ed2e3a991e0011470c8401e463cb",
+        "bytes": 297352,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/14.webp",
+        "git_blob_sha": "7deabdabb2c64dded2824a25784750acf6917f23",
+        "sha256": "2c8af011ca9ff9f2fa245c8ea188f57e2e2ceeaa8726e61b988cc5124069a911",
+        "bytes": 252458,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/15.webp",
+        "git_blob_sha": "ce49f24bfe57e9ec4f353c04abcf4905e7cd7dd0",
+        "sha256": "22e02c6007820ee8e444d7d3c6ebb00252f96e10a6a7a34a5bdb29b5b7f98863",
+        "bytes": 286972,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/16.webp",
+        "git_blob_sha": "930201d3899b6e4846a8c4a78e692f6df066d97f",
+        "sha256": "af11f099a2751bc1210ea90cd089a34866254df2024bddf7a7b0f565f2709836",
+        "bytes": 262812,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/17.webp",
+        "git_blob_sha": "f6ed628a70792bcd3c0af50bd064ba3eeb1aa209",
+        "sha256": "514dd65f8f2d35673cab26bfe26eea09fe11280d63d28e2b3b14e3df51e22bc6",
+        "bytes": 297422,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/wai-gong-zou-de-man-yi-dian/18.webp",
+        "git_blob_sha": "930ac8d0d212dd7b7ea1dec01f2c1be362559e1e",
+        "sha256": "385ca6e16bb4e895c59b8a856b69707964c4a31aa6302fb5800e4b041430b889",
+        "bytes": 230384,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/qinzi.ts"
+  },
+  "sb-learning-with-dad": {
+    "title": "爸爸也有不会的时候",
+    "series": "亲子成长",
+    "series_id": "sanzijing",
+    "source_file": "ba-ba-ye-you-bu-hui-de-shi-hou.json",
+    "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou",
+    "repository_url": "https://github.com/valleylmh/storybloom/blob/main/content-drafts/qinzi/ba-ba-ye-you-bu-hui-de-shi-hou.json",
+    "source_git_blob_sha": "f02d96df5322bb51b1533b7fd6be683375463074",
+    "source_sha256": "5ddb475a50c01d545ddfa0ca1d7e9ba95191fd2d8c2f660a5a1b449dcc9490e4",
+    "downloaded_on": "2026-11-18",
+    "originals_directory": "docs/materials-review/storybloom-qinzi-20261118/originals/sb-learning-with-dad",
+    "cover_from_page": 1,
+    "license_evidence": {
+      "code_license": "MIT",
+      "url": "https://github.com/valleylmh/storybloom/blob/main/LICENSE",
+      "asset_license": "未发现独立图文许可证；README仅明确应用代码MIT",
+      "review_status": "pending",
+      "readme_snapshot": "upstream/20261118/README.md",
+      "license_snapshot": "upstream/20261118/LICENSE",
+      "readme_sha256": "0a176793c100270f62407de5476ecd79f75b622ffe7cc9bb09dd12add8bcec44",
+      "license_sha256": "e12d7e6cf39e8deee1ea0ce2f6e058071fa72e5cb1ab192860e66c4fcb2fdf4d"
+    },
+    "images": [
+      {
+        "page_number": 1,
+        "file": "1.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/1.webp",
+        "git_blob_sha": "06daccecd370518f35e1bf092cb5952eb8dcfda2",
+        "sha256": "73f2e71ebc02ee78941a02ac3f4b07c6fdcedffc4ef9ea9926e2af26ff573ec6",
+        "bytes": 198796,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 2,
+        "file": "2.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/2.webp",
+        "git_blob_sha": "05322237eb79c4da462e308fff662f132296b316",
+        "sha256": "2da9c3a9224c1bab2cac3597d6f26d679bde7fdd8cb0230142cc4cfb65ef05e3",
+        "bytes": 199440,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 3,
+        "file": "3.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/3.webp",
+        "git_blob_sha": "2d7972f11637abba447b98238690dd6ac005a7b6",
+        "sha256": "9527d6f9cab58a5bbd762af3db8e1818b69a9165784e920f0de781b21b90de6c",
+        "bytes": 200404,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 4,
+        "file": "4.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/4.webp",
+        "git_blob_sha": "c4eb8fc26579f4820a5b4c1a0a290544973c0e3f",
+        "sha256": "e2b771bdeacb05f3343fbcefe9114490c9408267870558e78de1beb3adcbf482",
+        "bytes": 230418,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 5,
+        "file": "5.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/5.webp",
+        "git_blob_sha": "079610dd3084d03d7c963f203a5dbd8a41006dd3",
+        "sha256": "52aa5b15bb7b4b563a444fdb8e639c35b7a8579e1cc8412c926370bca0aad46e",
+        "bytes": 202250,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 6,
+        "file": "6.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/6.webp",
+        "git_blob_sha": "24a2716f10bd281fdc824d6143b09a0b223b47b0",
+        "sha256": "5dc47817286d10cf6f5af570fbf5b90bbd9ebd2f59a7c6fc0901580c83ab69f3",
+        "bytes": 222120,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 7,
+        "file": "7.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/7.webp",
+        "git_blob_sha": "71610a31b0f54cf6b815b0cc870b5f374f1e69ac",
+        "sha256": "538e78647ae6521a3c0ed019a3b0d7637a53fba59f4fa26ac0e9255757361077",
+        "bytes": 199594,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 8,
+        "file": "8.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/8.webp",
+        "git_blob_sha": "5a733be1efa6a3fca0586b7e632bd774feb3aae7",
+        "sha256": "31f7b1783692c4ace42e55786673fb22baea9892f0f0debfb24959149628e2c0",
+        "bytes": 229622,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 9,
+        "file": "9.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/9.webp",
+        "git_blob_sha": "21aa74df051cf82469e64a625105cdc81db96742",
+        "sha256": "a01fd179c25be80f5a2ec3034deb0efd8d051c608333c84a43949d67dab82b6c",
+        "bytes": 219108,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 10,
+        "file": "10.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/10.webp",
+        "git_blob_sha": "1ac5c9052f40576a7cb830576e5f4b1e62fe3b76",
+        "sha256": "6232dee7c7ccf032c2b9d6b96bcd3286ebe793f92acbc2728c3d49e296d5a0b4",
+        "bytes": 193608,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 11,
+        "file": "11.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/11.webp",
+        "git_blob_sha": "43f3682b1b0baba7817b35acf6dec814963a42e4",
+        "sha256": "1d1c065978d1fb0d4d6cc394a740ff41247a66ef46a55fd49b9425686ddee52a",
+        "bytes": 191008,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 12,
+        "file": "12.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/12.webp",
+        "git_blob_sha": "4a40aba244b5b1e0e37debc015190e5e384f06c6",
+        "sha256": "91ecc13944bdf6873d2d4c5fca485c084c21d0d09bd6b13dd6e017f5cec67190",
+        "bytes": 194226,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 13,
+        "file": "13.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/13.webp",
+        "git_blob_sha": "1e4d80a738efcd6f97626ff7a524190b41a1b23d",
+        "sha256": "7e59288d9852ef28868a67832ffbcdc45b0d915f0b147ef75d0df548b6cb4440",
+        "bytes": 201474,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 14,
+        "file": "14.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/14.webp",
+        "git_blob_sha": "8b3af1fd02035a2d6efe535bb4db4f8fbedd8504",
+        "sha256": "355f8710fe73cd7e08831e672e91cda536c8bee2ffe8eed2df4f73e0c378aa46",
+        "bytes": 195146,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 15,
+        "file": "15.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/15.webp",
+        "git_blob_sha": "782a3ad3129565621a4233fbef82c367788a8374",
+        "sha256": "326a5953cdbe56b9cc441c72c9b85452421062f706c96a10592deed25a846596",
+        "bytes": 207346,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 16,
+        "file": "16.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/16.webp",
+        "git_blob_sha": "e370811c8c8fb4f2e9aa877937dc083568baba19",
+        "sha256": "015e8e1f4581c372e7f7e4a76bf6774e0578e67ef91dd79128300bb747672616",
+        "bytes": 197940,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 17,
+        "file": "17.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/17.webp",
+        "git_blob_sha": "078a07c0727965bec4cb280c1a254a1358b4ad4f",
+        "sha256": "cad50b6ea5e43974f9f831edbca885a18c9031d1460ffc0002199cb2f0bf6191",
+        "bytes": 215108,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      },
+      {
+        "page_number": 18,
+        "file": "18.webp",
+        "source_url": "https://storybloom.valleylmh.vip/library/sanzijing/ba-ba-ye-you-bu-hui-de-shi-hou/18.webp",
+        "git_blob_sha": "6a1d132fc35ac8fcdb53e96abca9f55118d9d1f5",
+        "sha256": "b762f0dbbe5d2f84a6492a02a2aa7894671e8a15ab38c1561be72c773f9d6f58",
+        "bytes": 221246,
+        "dimensions": [
+          1200,
+          1200
+        ]
+      }
+    ],
+    "upstream_tree_sha": "793f1ac03f91f4e4616b7924153d3ec95775f007",
+    "series_registry": "src/lib/library/qinzi.ts"
   }
 }

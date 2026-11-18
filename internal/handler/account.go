@@ -132,6 +132,17 @@ func (h *AccountHandler) Favorites(w http.ResponseWriter, r *http.Request) {
 	items, err := h.accounts.Favorites(r.Context(), user)
 	respond(w, map[string]any{"items": items}, err)
 }
+func (h *AccountHandler) CompletedBooks(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "no-store")
+	w.Header().Set("Vary", "Authorization")
+	user, ok := h.user(w, r)
+	if !ok {
+		return
+	}
+	items, err := h.accounts.CompletedBooks(r.Context(), user)
+	respond(w, map[string]any{"items": items}, err)
+}
+
 func (h *AccountHandler) SetFavorites(w http.ResponseWriter, r *http.Request) {
 	user, ok := h.user(w, r)
 	if !ok {

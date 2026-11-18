@@ -16,6 +16,7 @@ type AccountStore interface {
 	Authenticate(context.Context, string, time.Time) (string, error)
 	Logout(context.Context, string) error
 	Favorites(context.Context, string) ([]string, error)
+	CompletedBooks(context.Context, string) ([]string, error)
 	SetFavorites(context.Context, string, []string, bool) error
 	RecordEvent(context.Context, model.ReadingEvent) error
 }
@@ -77,6 +78,25 @@ func (s *MySQL) Favorites(ctx context.Context, user string) ([]string, error) {
 	}
 	return items, rows.Err()
 }
+
+// CompletedBooks derives the account's finished books from its existing reading state.
+func (s *MySQL) CompletedBooks(ctx context.Context, user string) ([]string, error) {
+	rows, err := s.db.QueryContext(ctx, `SELECT e.book_id FROM reader_events e JOIN books b ON b.book_id=e.book_id WHERE e.user_id=? AND e.event_kind='complete' AND b.publish_status='published' ORDER BY e.id DESC`, user)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	items := []string{}
+	for rows.Next() {
+		var id string
+		if err = rows.Scan(&id); err != nil {
+			return nil, err
+		}
+		items = append(items, id)
+	}
+	return items, rows.Err()
+}
+
 func (s *MySQL) SetFavorites(ctx context.Context, user string, ids []string, active bool) error {
 	tx, err := s.db.BeginTx(ctx, nil)
 	if err != nil {

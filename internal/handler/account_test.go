@@ -56,7 +56,7 @@ func TestReaderAccountEndpointsRequireLoginIncludingEvents(t *testing.T) {
 	for _, endpoint := range []struct {
 		name   string
 		handle http.HandlerFunc
-	}{{"favorites", h.Favorites}, {"set-favorites", h.SetFavorites}, {"profile", h.Profile}, {"save-profile", h.SaveProfile}, {"events", h.Event}} {
+	}{{"completed-books", h.CompletedBooks}, {"favorites", h.Favorites}, {"set-favorites", h.SetFavorites}, {"profile", h.Profile}, {"save-profile", h.SaveProfile}, {"events", h.Event}} {
 		w := httptest.NewRecorder()
 		r := httptest.NewRequest("POST", "/", strings.NewReader(`{}`))
 		endpoint.handle(w, r)

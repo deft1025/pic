@@ -2,8 +2,8 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 const dialogue = require('../../utils/dialogue');
 Page({
- data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, night: false, fullscreen: false, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
- onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['showText', 'night', 'auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
+ data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: false, completionCharacter: null, viewportHeight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
+ onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.setData({ celebrationEnabled: query.celebrate === '1' }); this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
  onShow() { this.hidden = false; },
  onHide() { this.hidden = true; this.destroyAudio(true); },
  onUnload() { this.dead = true; this.serial++; this.destroyAudio(true); },
@@ -18,16 +18,26 @@ Page({
    const index = 0;
    const configuredRatio = this.pages.find(p => p.dialogue)?.dialogue.aspect_ratio;
    this.ratio = configuredRatio || [4, 3]; this.ratioReady = Boolean(configuredRatio);
-   this.setData({ book, total: this.pages.length, pageNames: this.pages.map((_, i) => '第' + (i + 1) + '页'), language: this.data.language });
+   this.setData({ book: api.book(book), total: this.pages.length, pageNames: this.pages.map((_, i) => '第' + (i + 1) + '页'), language: this.data.language });
    wx.setNavigationBarTitle({ title: book.title_zh }); this.frame(); this.show(index, false);
   } catch (e) { if (!this.dead) this.setData({ error: e.message }); }
  },
  frame() {
   if (!this.pages) return;
   const info = wx.getWindowInfo ? wx.getWindowInfo() : wx.getSystemInfoSync();
-  const width = Math.min(info.windowWidth, 1100) - 16;
-  const height = Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * this.ratio[1] / this.ratio[0]));
-  this.frameWidth = width; this.frameH = height; this.setData({ frameHeight: height, safeTop: info.statusBarHeight || 0 });
+  const capsule = wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null;
+  const safeTop = Math.max(info.statusBarHeight || 0, capsule?.bottom || 0) + 8;
+  const safeBottom = Math.max(8, info.screenHeight && info.safeArea ? info.screenHeight - info.safeArea.bottom : 0);
+  const width = this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
+  // Reserve the same narration area for every page and both languages in this book.
+  // Turning controls on/off is an explicit view change, never a result of bubble size.
+  const hasNarration = this.data.imageError || this.pages.some(p => ['zh', 'en'].some(lang => dialogue.split(p, lang, true).narration.trim()));
+  const narrationHeight = hasNarration ? Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
+  const height = this.data.fullscreen
+   ? Math.max(1, info.windowHeight - safeTop - 44 - safeBottom - narrationHeight - (this.data.controlsVisible ? 116 : 36))
+   : Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * (this.ratio?.[1] || 3) / (this.ratio?.[0] || 4)));
+  this.frameWidth = width; this.frameH = height;
+  this.setData({ frameHeight: height, safeTop, safeBottom, viewportHeight: info.windowHeight, narrationHeight });
   this.artwork();
  },
  artwork() {
@@ -37,14 +47,14 @@ Page({
   this.setData({ overlayStyle: 'left:' + (this.frameWidth - w) / 2 + 'px;top:' + (this.frameH - h) / 2 + 'px;width:' + w + 'px;height:' + h + 'px' }, () => this.layout());
  },
  imageLoaded(e) { if (e.currentTarget.dataset.src !== this.data.page.image) return; this.imageRatio = e.detail.width / e.detail.height; if (!this.ratioReady) { this.ratio = [e.detail.width, e.detail.height]; this.ratioReady = true; this.frame(); } this.setData({ imageReady: true, imageError: false }); this.artwork(); },
- imageFailed(e) { if (e.currentTarget.dataset.src !== this.data.page.image) return; this.setData({ imageReady: false, imageError: true }); this.renderText(); },
- retryImage() { const page = this.data.page; this.setData({ page: null, imageError: false, imageReady: false }, () => this.setData({ page }, () => this.renderText())); },
+ imageFailed(e) { if (e.currentTarget.dataset.src !== this.data.page.image) return; this.setData({ imageReady: false, imageError: true }); this.renderText(); this.frame(); },
+ retryImage() { const page = this.data.page; this.setData({ page: null, imageError: false, imageReady: false }, () => this.setData({ page }, () => { this.renderText(); this.frame(); })); },
  show(index, autoplay) {
   if (!this.pages || index < 0 || index >= this.pages.length) return;
   this.serial++; this.destroyAudio(); this.imageRatio = null;
   if (!autoplay) this.restorePlaybackView();
   this.visited.add(index);
-  this.setData({ index, page: this.pages[index], imageError: false, imageReady: false, audioError: '', completed: false });
+  this.setData({ index, page: this.pages[index], imageError: false, imageReady: false, audioError: '', completed: false, completionCharacter: null });
   this.renderText(); this.artwork();
   if (autoplay && !this.hidden) this.play();
  },
@@ -102,12 +112,12 @@ Page({
   const info = wx.getWindowInfo ? wx.getWindowInfo() : wx.getSystemInfoSync();
   if (Math.min(info.windowWidth, info.windowHeight) > 600) return;
   this.autoExpanded = true;
-  this.setData({ fullscreen: true }, () => this.frame());
+  this.setData({ fullscreen: true, controlsVisible: false }, () => this.frame());
  },
  restorePlaybackView() {
   const restore = this.autoExpanded;
   this.autoExpanded = false; this.playbackViewDismissed = false;
-  if (restore) this.setData({ fullscreen: false }, () => this.frame());
+  if (restore) this.setData({ fullscreen: false, controlsVisible: true }, () => this.frame());
  },
  destroyAudio(restoreView = false) { if (this.audio) { const old = this.audio; this.audio = null; old.stop(); old.destroy(); } this.setData({ playing: false }); if (restoreView) this.restorePlaybackView(); },
  play() {
@@ -134,18 +144,31 @@ Page({
  previous() { this.show(this.data.index - 1, this.data.playing); },
  next() { this.show(this.data.index + 1, this.data.playing); },
  pickPage(e) { this.show(Number(e.detail.value), this.data.playing); },
- settings() { const { language, showText, night, auto, rate } = this.data; wx.setStorageSync('pic-reader-settings', { language, showText, night, auto, rate }); },
+ settings() { const { language, auto, rate } = this.data; wx.setStorageSync('pic-reader-settings', { language, auto, rate }); },
  language(e) { const language = e.currentTarget.dataset.language; if (language === this.data.language) return; const playing = this.data.playing; this.serial++; this.destroyAudio(); this.setData({ language }); this.settings(); this.renderText(); if (playing) this.play(); },
- text() { this.setData({ showText: !this.data.showText }); this.settings(); if (this.data.showText) this.layout(); },
+ toggleLanguage() { this.language({ currentTarget: { dataset: { language: this.data.language === 'zh' ? 'en' : 'zh' } } }); },
+ controls() { if (this.data.fullscreen) this.setData({ controlsVisible: !this.data.controlsVisible }, () => this.frame()); },
+ keepControls() {},
  auto() { this.setData({ auto: !this.data.auto }); this.settings(); },
  rate(e) { const rate = [.75, 1, 1.25][Number(e.detail.value)]; this.setData({ rate }); this.settings(); if (this.audio) this.audio.playbackRate = rate; },
- night() { this.setData({ night: !this.data.night }); this.settings(); },
- fullscreen() { this.autoExpanded = false; this.playbackViewDismissed = Boolean(this.audio); this.setData({ fullscreen: !this.data.fullscreen }, () => this.frame()); },
+ fullscreen() { this.autoExpanded = false; this.playbackViewDismissed = Boolean(this.audio); const fullscreen = !this.data.fullscreen; this.setData({ fullscreen, controlsVisible: !fullscreen }, () => this.frame()); },
  finish() {
   this.destroyAudio(true);
   if (this.visited.size < this.data.total) { wx.showToast({ title: '还有页面没读，先一起读完吧', icon: 'none' }); return; }
   if (!this.finished) { this.finished = true; state.event(this.id, 'complete', this.readingID); }
-  this.setData({ completed: true });
+  let completionCharacter = null;
+  if (this.data.celebrationEnabled) {
+   // Reuse an actual speaking character and its illustration anchor from MySQL.
+   const page = this.pages.find(p => p.dialogue?.parts?.some(part => part.speaker?.zh && part.target));
+   const part = page?.dialogue.parts.find(part => part.speaker?.zh && part.target);
+   if (part) {
+    const ratio = page.dialogue.aspect_ratio[0] / page.dialogue.aspect_ratio[1];
+    completionCharacter = { name: part.speaker.zh, image: page.image, portraitStyle: 'left:' + (50 - part.target[0] * 2) + '%;top:' + (50 - part.target[1] * 2 / ratio) + '%;' };
+   }
+  }
+  this.setData({ completed: true, completionCharacter }, () => {
+   if (this.data.celebrationEnabled && !this.data.fullscreen && wx.pageScrollTo) wx.pageScrollTo({ selector: '.completion-panel', duration: 300 });
+  });
  },
  again() { this.finished = false; this.readingID = state.id(); this.visited = new Set(); this.show(0, false); },
  back() { if (getCurrentPages().length > 1) wx.navigateBack(); else this.shelf(); },

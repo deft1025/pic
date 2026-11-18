@@ -18,6 +18,5 @@ Page({
   try { await state.toggleFavorite(this.id); this.refresh(); }
   catch (e) { this.refresh(); if (e.code === 'PROFILE_REQUIRED') { wx.navigateTo({ url: '/pages/profile/index' }); return; } wx.showToast({ title: e.message, icon: 'none' }); } finally { this.setData({ busy: false }); }
  },
- read() { wx.navigateTo({ url: '/pages/reader/index?id=' + encodeURIComponent(this.id) }); },
- source() { wx.setClipboardData({ data: this.data.book.license.source_url }); }
+ read() { wx.navigateTo({ url: '/pages/reader/index?id=' + encodeURIComponent(this.id) }); }
 });

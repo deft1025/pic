@@ -3,12 +3,35 @@ const read = (k, fallback) => wx.getStorageSync('pic-' + k) || fallback;
 const write = (k, value) => wx.setStorageSync('pic-' + k, value);
 // Retry identifiers only. Authentication tokens are generated on the server.
 function id() { return Array.from({ length: 32 }, () => Math.floor(Math.random() * 16).toString(16)).join(''); }
-let epoch = 0, profileRevision = 0, syncTask = null, flushing = false;
-api.onUnauthorized(() => { epoch++; syncTask = null; write('account-favorites', []); });
+let epoch = 0, profileRevision = 0, syncTask = null, completedTask = null, flushing = false;
+api.onUnauthorized(() => { epoch++; syncTask = null; completedTask = null; write('account-favorites', []); write('account-completed', null); });
 function loggedIn() { return Boolean(api.session()); }
 function user() { return api.session()?.user || null; }
 function needsProfile() { return loggedIn() && !user()?.age; }
 function favorites() { return loggedIn() ? read('account-favorites', []) : []; }
+function completedBooks() {
+ if (!loggedIn()) return [];
+ const owner = user().id, saved = read('account-completed', {});
+ const confirmed = saved.user_id === owner && Array.isArray(saved.items) ? saved.items : [];
+ const pending = read('events-' + owner, []).filter(e => e.kind === 'complete').map(e => e.book_id);
+ return [...new Set([...confirmed, ...pending])];
+}
+function markCompleted(books) { const ids = new Set(completedBooks()); return books.map(book => ({ ...book, completed: ids.has(book.id) })); }
+async function syncCompleted() {
+ if (!loggedIn()) return;
+ if (completedTask) return completedTask;
+ const generation = epoch, session = api.session();
+ const task = (async () => {
+  let result;
+  try { result = await api.request('/api/me/completed-books', 'GET', undefined, { token: session.token }); }
+  catch (e) { if ([404, 405].includes(e.status)) return; throw e; }
+  if (generation !== epoch || api.session()?.token !== session.token) return;
+  if (!Array.isArray(result.items)) throw new Error('已读状态响应无效');
+  write('account-completed', { user_id: session.user.id, items: [...new Set([...completedBooks(), ...result.items])] });
+ })();
+ completedTask = task;
+ try { await task; } finally { if (completedTask === task) completedTask = null; }
+}
 function requireLogin() { if (!loggedIn()) { const error = new Error('请先登录'); error.status = 401; throw error; } }
 async function synchronize() {
  if (!loggedIn()) return;
@@ -35,7 +58,7 @@ async function login() {
   throw e;
  });
  if (generation !== epoch) return;
- epoch++; write('session', account); write('account-favorites', []);
+ epoch++; completedTask = null; write('session', account); write('account-favorites', []); write('account-completed', null);
  if (!needsProfile()) await synchronize();
  flushEvents(); return user();
 }
@@ -53,7 +76,7 @@ async function logout() {
   catch (e) { if (e.status !== 401) throw e; }
   wx.removeStorageSync('pic-events-' + session.user.id);
  }
- epoch++; syncTask = null; wx.removeStorageSync('pic-session'); write('account-favorites', []);
+ epoch++; syncTask = null; completedTask = null; wx.removeStorageSync('pic-session'); write('account-favorites', []); write('account-completed', null);
 }
 async function toggleFavorite(bookID) {
  requireLogin();
@@ -81,11 +104,13 @@ async function flushEvents() {
  try {
   while (api.session()?.token === session.token && read(key, []).length) {
    const item = read(key, [])[0];
-   try { await api.request('/api/events', 'POST', item, { token: session.token }); }
+   let accepted = false;
+   try { await api.request('/api/events', 'POST', item, { token: session.token }); accepted = true; }
    catch (e) { if (![400, 404].includes(e.status)) break; }
    if (api.session()?.token !== session.token) break;
+   if (accepted && item.kind === 'complete') write('account-completed', { user_id: session.user.id, items: completedBooks() });
    write(key, read(key, []).filter(x => x.event_id !== item.event_id));
   }
  } finally { flushing = false; }
 }
-module.exports = { id, loggedIn, user, needsProfile, favorites, synchronize, login, saveProfile, logout, toggleFavorite, event, flushEvents };
+module.exports = { id, loggedIn, user, needsProfile, favorites, completedBooks, markCompleted, syncCompleted, synchronize, login, saveProfile, logout, toggleFavorite, event, flushEvents };

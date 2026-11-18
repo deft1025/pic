@@ -31,7 +31,7 @@ function client(responder = () => ({ ok: true })) {
   p.setData = (patch, cb) => { for (const [key, value] of Object.entries(patch)) { const parts = key.split('.'); let o = p.data; while (parts.length > 1) o = o[parts.shift()]; o[parts[0]] = value; } cb?.(); };
   return p;
  }
- return { wx, storage, requests, audios, state: load(path.join(root, 'utils/state.js')), page };
+ return { wx, storage, requests, audios, load: name => load(path.join(root, name)), state: load(path.join(root, 'utils/state.js')), page };
 }
 const tick = () => new Promise(resolve => setImmediate(resolve));
 const profile = { id: '10000', name: '小小读者', age: '3-4', needs_profile: false };
@@ -171,11 +171,12 @@ test('dialogue only merges adjacent turns at the same known mouth anchor', () =>
  assert.equal(d.split(invalid, 'zh', true).bubbles.length, 0);
 });
 test('reader settings are validated and restored without changing the approved default rate', () => {
- const c = client(); c.storage.set('pic-reader-settings', { night: true, auto: true, rate: 999, language: 'en', dialogueMode: false });
+ const c = client(); c.storage.set('pic-reader-settings', { night: true, showText: false, auto: true, rate: 999, language: 'en', dialogueMode: false });
  const p = c.page('reader'); p.load = () => {}; p.onLoad({ id: 'book' });
- assert.equal(p.data.night, true); assert.equal(p.data.language, 'en'); assert.equal('dialogueMode' in p.data, false); assert.equal(p.data.rate, 1);
+ assert.equal(p.data.night, undefined); assert.equal(p.data.showText, true); assert.equal(p.data.language, 'en'); assert.equal('dialogueMode' in p.data, false); assert.equal(p.data.rate, 1);
  p.rate({ detail: { value: 2 } }); assert.equal(c.storage.get('pic-reader-settings').rate, 1.25);
  assert.equal('dialogueMode' in c.storage.get('pic-reader-settings'), false);
+ assert.equal('night' in c.storage.get('pic-reader-settings'), false); assert.equal('showText' in c.storage.get('pic-reader-settings'), false);
 });
 
 test('reader always shows configured speech as bubbles and leaves narration below the picture', async () => {
@@ -365,4 +366,116 @@ test('expired recommendation session becomes a guest and stale personal response
  delayed.storage.set('pic-session',session); const other=delayed.page('home'); other.onShow(); await tick();
  delayed.storage.delete('pic-session'); other.onShow(); await tick(); release({items:[{id:'private'}]}); await tick();
  assert.equal(other.data.featured[0].id,'guest');
+});
+
+
+test('fullscreen uses the window and safe areas, reveals controls on demand and keeps art stable between pages', async () => {
+ const c = client(o => o.url.endsWith('/pages') ? { items: [1, 2].map(i => ({ image: '/' + i + '.jpg', text_zh: '旁白', text_original: 'Narration' })) } : { title_zh: '故事' });
+ c.wx.getWindowInfo = () => ({ windowWidth: 390, windowHeight: 844, screenHeight: 844, statusBarHeight: 24, safeArea: { bottom: 810 } });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 56 });
+ const p = c.page('reader'); p.onLoad({ id: 'book' }); await tick();
+ p.fullscreen();
+ assert.equal(p.data.controlsVisible, false); assert.equal(p.frameWidth, 390); assert.equal(p.data.safeTop, 64); assert.equal(p.data.safeBottom, 34);
+ const height = p.frameH;
+ assert.equal(p.frameH + p.data.safeTop + 44 + p.data.narrationHeight + 36 + p.data.safeBottom, 844);
+ p.next(); p.toggleLanguage(); assert.equal(p.frameH, height);
+ p.controls(); assert.equal(p.data.controlsVisible, true); assert.ok(p.frameH < height);
+ p.controls(); assert.equal(p.frameH, height);
+ c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, statusBarHeight: 0 });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 32 }); p.onResize();
+ assert.equal(p.frameWidth, 844); assert.ok(p.frameH > 0 && p.frameH < 390);
+ p.fullscreen(); assert.equal(p.data.fullscreen, false); assert.equal(p.data.controlsVisible, true);
+});
+
+test('completed markers use only the current account and complete events, never opens or guest state', async () => {
+ const c = client(o => o.url.endsWith('/completed-books') ? { items: ['server-finished'] } : { ok: true });
+ c.storage.set('pic-account-completed', { user_id: 'other', items: ['private'] });
+ assert.equal(c.state.completedBooks().length, 0);
+ await c.state.syncCompleted(); assert.equal(c.requests.length, 0);
+ c.storage.set('pic-session', session);
+ c.state.event('opened', 'open', 'a'.repeat(32)); await tick();
+ assert.equal(c.state.markCompleted([{ id: 'opened' }])[0].completed, false);
+ await c.state.syncCompleted();
+ assert.equal(c.state.markCompleted([{ id: 'server-finished' }])[0].completed, true);
+ assert.equal(c.state.markCompleted([{ id: 'private' }])[0].completed, false);
+ c.state.event('just-finished', 'complete', 'b'.repeat(32));
+ assert.equal(c.state.markCompleted([{ id: 'just-finished' }])[0].completed, true);
+ await tick(); assert.ok(c.state.completedBooks().includes('just-finished'));
+ await c.state.logout(); assert.equal(c.state.completedBooks().length, 0);
+});
+
+test('late completion responses cannot restore a logged-out account or erase a newer completion', async () => {
+ let release;
+ const c = client(o => o.url.endsWith('/completed-books') ? new Promise(r => release = r) : { ok: true });
+ c.storage.set('pic-session', session);
+ const stale = c.state.syncCompleted(); await tick();
+ c.state.event('new-finish', 'complete', 'b'.repeat(32)); await tick();
+ release({ items: ['earlier-finish'] }); await stale;
+ assert.deepEqual([...c.state.completedBooks()].sort(), ['earlier-finish', 'new-finish']);
+ const late = c.state.syncCompleted(); await tick(); await c.state.logout();
+ release({ items: ['private'] }); await late;
+ assert.equal(c.state.completedBooks().length, 0);
+ assert.equal(c.storage.get('pic-account-completed'), null);
+});
+
+test('returning to the library refreshes completed marks without resetting filters or loaded books', async () => {
+ let fail = false;
+ const c = client(() => fail ? { networkError: true } : { items: ['finished'] });
+ c.storage.set('pic-session', session);
+ const library = c.page('library'); library.setData({ q: '故事', age: '3-4', items: [{ id: 'finished' }, { id: 'unread' }] });
+ await library.onShow();
+ assert.equal(library.data.items[0].completed, true); assert.equal(library.data.items[1].completed, false);
+ assert.equal(library.data.q, '故事'); assert.equal(library.data.age, '3-4');
+ fail = true; await library.onShow(); assert.equal(library.data.items[0].completed, true);
+ c.storage.delete('pic-session'); await library.onShow(); assert.equal(library.data.items[0].completed, false);
+});
+
+test('end-of-book demo greets with an actual story character only when explicitly enabled', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ assert.ok(book);
+ const c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book);
+ const p = c.page('reader'); p.onLoad({ id: book.id, celebrate: '1' }); await tick();
+ for (let i = 0; i < book.pages.length; i++) p.show(i, false);
+ p.finish();
+ assert.equal(p.data.completed, true); assert.equal(p.data.completionCharacter.name, '小川');
+ assert.ok(p.data.completionCharacter.image.endsWith('/page-001.webp'));
+ assert.match(p.data.completionCharacter.portraitStyle, /left:-90%/);
+ p.again(); assert.equal(p.data.completed, false); assert.equal(p.data.completionCharacter, null);
+ const normal = c.page('reader'); normal.onLoad({ id: book.id }); await tick();
+ for (let i = 0; i < book.pages.length; i++) normal.show(i, false);
+ normal.finish(); assert.equal(normal.data.celebrationEnabled, false); assert.equal(normal.data.completionCharacter, null);
+});
+
+
+test('configured age avatars follow saved profiles and logout, with a default and image failure fallback', async () => {
+ let current = { ...profile };
+ const c = client(o => {
+  if (o.url.endsWith('/profile') && o.method === 'PUT') { current = { ...current, ...o.data }; return current; }
+  if (o.url.endsWith('/profile')) return current;
+  if (o.url.endsWith('/categories')) return { ages: [{ id: '0-2', name: '0–2 岁' }, { id: '3-4', name: '3–4 岁' }, { id: '5-6', name: '5–6 岁' }] };
+  return { items: [] };
+ });
+ const config = c.load('config/avatars.js');
+ Object.assign(config, { defaultAvatar: '/assets/default.png', byAge: { '0-2': '/assets/baby.png', '3-4': '/assets/young.png', '5-6': '/assets/older.png' } });
+ c.storage.set('pic-session', session);
+ const shelf = c.page('shelf'); await shelf.load();
+ assert.equal(shelf.data.avatar, '/assets/young.png'); assert.equal(shelf.data.ageLabel, '3–4 岁');
+ const editor = c.page('profile'); await editor.load();
+ editor.age({ detail: { value: '3' } }); assert.equal(editor.data.avatar, '/assets/older.png');
+ await editor.save(); await shelf.load(); assert.equal(shelf.data.avatar, '/assets/older.png');
+ shelf.avatarFailed(); assert.equal(shelf.data.avatarError, true);
+ editor.age({ detail: { value: '1' } }); await editor.save(); await shelf.load();
+ assert.equal(shelf.data.avatar, '/assets/baby.png'); assert.equal(shelf.data.avatarError, false);
+ await c.state.logout(); await shelf.load(); assert.equal(shelf.data.avatar, '/assets/default.png');
+ config.defaultAvatar = ''; assert.equal(c.load('utils/avatar.js').forAge('unknown'), '');
+});
+
+test('older backends without completed-books keep account synchronization and local completions working', async () => {
+ let status = 404;
+ const c = client(o => o.url.endsWith('/completed-books') ? { status, body: { error: '接口不存在' } } : o.url.endsWith('/profile') ? profile : { items: [] });
+ c.storage.set('pic-session', session);
+ c.storage.set('pic-account-completed', { user_id: profile.id, items: ['finished'] });
+ const shelf = c.page('shelf'); await shelf.load();
+ assert.equal(shelf.data.syncError, ''); assert.deepEqual([...c.state.completedBooks()], ['finished']);
+ status = 503; await shelf.load(); assert.ok(shelf.data.syncError);
 });

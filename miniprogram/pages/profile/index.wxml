@@ -1,1 +1,18 @@
-<view class="page"><view class="hero"><view class="title">{{first ? '一起认识一下吧' : '我的阅读资料'}}</view><view class="subtitle">请选择适合孩子的阅读年龄段。</view></view><view wx:if="{{loading}}" class="empty">正在加载资料…</view><view wx:if="{{error}}" class="error">{{error}}<button bindtap="load">重新加载</button></view><view class="panel"><view class="section">怎么称呼你</view><view class="name-field"><input class="name-input" value="{{name}}" bindinput="name" maxlength="50" placeholder="小小读者（可不填）" aria-label="怎么称呼你"/></view><view class="section">阅读年龄段</view><picker mode="selector" range="{{ageNames}}" value="{{ageIndex}}" bindchange="age"><view class="age-picker">{{ageNames[ageIndex]}} ▾</view></picker><view class="note">年龄段之后也可以修改，不需要填写生日。</view></view><button class="primary" loading="{{saving}}" disabled="{{loading || saving || !age}}" bindtap="save">{{first ? '选好啦，保存资料' : '保存修改'}}</button></view>
+<view class="page profile-page">
+ <view class="profile-intro">
+  <view class="account-heading">
+   <view class="account-avatar-wrap"><image wx:if="{{avatar && !avatarError}}" class="account-avatar" src="{{avatar}}" mode="aspectFill" binderror="avatarFailed" aria-label="阅读头像"/><text wx:else class="account-avatar-fallback" aria-hidden="true">📖</text></view>
+   <view class="account-copy"><view class="profile-kicker">我的阅读资料</view><view class="account-name">{{name || '小小读者'}}</view><view class="profile-caption">一起找到适合孩子的故事</view></view>
+  </view>
+ </view>
+ <view wx:if="{{loading}}" class="empty">正在加载资料…</view>
+ <view wx:if="{{error}}" class="error">{{error}}<button class="small" bindtap="load">重新加载</button></view>
+ <view class="profile-form">
+  <view class="field-label">怎么称呼你<text class="field-optional">选填</text></view>
+  <view class="name-field"><input class="name-input" value="{{name}}" bindinput="name" maxlength="50" placeholder="小小读者" placeholder-class="name-placeholder" aria-label="怎么称呼你"/></view>
+  <view class="field-label age-label">阅读年龄段</view>
+  <picker mode="selector" range="{{ageNames}}" value="{{ageIndex}}" disabled="{{loading || saving}}" bindchange="age"><view class="age-picker"><text>{{ageNames[ageIndex]}}</text><text class="picker-arrow" aria-hidden="true">⌄</text></view></picker>
+  <view class="field-note">以后可以修改年龄段，不需要填写生日。</view>
+ </view>
+ <button class="primary profile-save" loading="{{saving}}" disabled="{{loading || saving || !age}}" bindtap="save">{{first ? '选好啦，开始读故事' : '保存修改'}}</button>
+</view>

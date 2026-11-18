@@ -1,7 +1,13 @@
 const api = require('../../utils/api');
+const state = require('../../utils/state');
 Page({
  data: { q: '', age: '', category: '', ages: [{ id: '', name: '全部' }], categories: [{ id: '', name: '全部' }], ageIndex: 0, categoryIndex: 0, filtersLoading: false, filtersReady: false, filterError: '', items: [], total: 0, loading: false, error: '' },
  onLoad() { this.loadFilters(); this.load(true); },
+ async onShow() {
+  this.setData({ items: state.markCompleted(this.data.items) });
+  try { await state.syncCompleted(); } catch (_) { /* Keep the catalog available while status is offline. */ }
+  this.setData({ items: state.markCompleted(this.data.items) });
+ },
  async loadFilters() {
   if (this.data.filtersLoading) return;
   this.setData({ filtersLoading: true, filterError: '' });
@@ -33,7 +39,7 @@ Page({
   try {
    const result = await api.request('/api/books?' + api.query({ q: this.data.q, age: this.data.age, category: this.data.category, sort: 'newest', limit: 24, offset }));
    if (serial !== this.serial) return;
-   this.setData({ items: (reset ? [] : this.data.items).concat(result.items.map(api.book)), total: result.total });
+   this.setData({ items: state.markCompleted((reset ? [] : this.data.items).concat(result.items.map(api.book))), total: result.total });
   } catch (e) { if (serial === this.serial) this.setData({ error: e.message }); }
   finally { if (serial === this.serial) this.setData({ loading: false }); }
  }

@@ -221,6 +221,20 @@ func (s *Accounts) Favorites(ctx context.Context, user string) ([]string, error)
 	}
 	return visible, nil
 }
+func (s *Accounts) CompletedBooks(ctx context.Context, user string) ([]string, error) {
+	if user == "" {
+		return nil, unauthorized()
+	}
+	items, err := s.store.CompletedBooks(ctx, user)
+	if err != nil {
+		return nil, accountUnavailable(err)
+	}
+	if items == nil {
+		items = []string{}
+	}
+	return items, nil
+}
+
 func (s *Accounts) SetFavorites(ctx context.Context, user string, ids []string, active bool) error {
 	if user == "" {
 		return unauthorized()
