@@ -38,8 +38,11 @@ func run(args []string, input io.Reader, output io.Writer) error {
 	if err := fs.Parse(args[1:]); err != nil {
 		return err
 	}
-	if fs.NArg() != 0 || (action != "list" && action != "read" && action != "save" && action != "validate" && action != "add-category") {
+	if fs.NArg() != 0 || (action != "list" && action != "read" && action != "save" && action != "validate" && action != "add-category" && action != "normalize-published-at") {
 		return errors.New("无效操作或参数")
+	}
+	if action == "normalize-published-at" && (*id != "" || *metadataOnly) {
+		return errors.New("normalize-published-at 不接受书目或正文参数")
 	}
 	if (action == "read" || action == "validate") && *id == "" {
 		return errors.New("read 必须指定 --book ID")
@@ -84,6 +87,12 @@ func run(args []string, input io.Reader, output io.Writer) error {
 		check = func(paths []string) error { return checker.Check(ctx, paths) }
 	}
 	switch action {
+	case "normalize-published-at":
+		count, e := m.NormalizePublishedAt(ctx)
+		if e != nil {
+			return e
+		}
+		return encoder.Encode(map[string]any{"status": "normalized", "updated_books": count})
 	case "add-category":
 		if e := m.AddCategory(ctx, *category); e != nil {
 			return e

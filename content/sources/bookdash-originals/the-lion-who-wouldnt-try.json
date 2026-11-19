@@ -1,0 +1,81 @@
+{
+  "key": "the-lion-who-wouldnt-try",
+  "id": "bd-the-lion-who-wouldnt-try",
+  "title": "不敢试试的狮子",
+  "en": "The Lion who Wouldn’t Try",
+  "writer": "Liza Woodward",
+  "illustrator": "André Kieswetter",
+  "designer": "Nick Mulgrew",
+  "editor": "Liz Sparg",
+  "isbn": "978-1-928365-93-8",
+  "source_url": "https://bookdash.org/books/the-lion-who-wouldnt-try/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "逐本阅读官网完整预览并核对12个故事跨页、署名与ISBN；英文合并排版换行并规范引号、朗读标点，OCR仅为辅助。本版中文翻译、实际画面描述和对白只维护MySQL。官网源文件页当前请求返回403，许可依据为本日已保存的Book Dash全部作品CC BY 4.0声明，不声称已读取本书PDF版权页。作者采用当前官网Liza Woodward，封面原署名Liza Esterhuysen，两种署名分别保留；第10页原作无字，补写画面串词“狮子往前走，脚边有一块香蕉皮。”并配齐中英文音频；其他页保留完整叙述。大象扔石块与猴子比吃香蕉为原作动物游戏情节，不改写为儿童活动指导。",
+  "narration_additions": [
+    10
+  ],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "It was a sunny day in the jungle. All the animals were out playing.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "“Come play with me, Lion,” said Cheetah. “Catch me if you can!” ZOOM-ZOOM! went Cheetah. “I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "“Come play with me, Lion,” said Elephant. “We can throw rocks!” KA-POW! KA-POW! went Elephant. “I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "“Come play with us, Lion!” said the monkeys. “Who can eat the most bananas?” POP! POP! POP! went the monkeys. “I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "“Come play with me, Lion,” said Springbok. “Let’s jump high!” ZOOP! ZOOP! ZOOP! went Springbok. “I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "“Come play with me, Lion,” said Crocodile. “It’s a swimming competition!” SPLASH! SPLASH! went Crocodile. “I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "Elephant and Crocodile had the swimming competition without Lion. Crocodile was quicker than Elephant, but each time Crocodile got ahead, Elephant tickled him! TEE-HEE-HEE! went Elephant and Crocodile.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Lion sat sadly by himself, watching Crocodile and Elephant swim.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "“Why are you sad, Lion?” asked Mouse. “Because I don’t want to play,” said Lion. “I’ll lose.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "",
+      "original_was_wordless": true
+    },
+    {
+      "page_number": 11,
+      "text_original": "Lion slipped on a banana peel! WHEEEEEE! went Lion. “That looks like fun!” said all the other animals.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "Lion played, and he was happy.",
+      "original_was_wordless": false
+    }
+  ]
+}

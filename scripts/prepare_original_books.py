@@ -31,12 +31,21 @@ def remove_typesetting(image, regions):
     height, width = gray.shape
     mask = np.zeros_like(gray)
     white_regions = []
+    solid_regions = []
     for region in regions:
         x, y, w, h = region['box']
         padding = max(5, int(width * .007))
         x0, y0 = max(0, int(x * width) - padding), max(0, int(y * height) - 4)
         x1, y1 = min(width, int((x + w) * width) + padding), min(height, int((y + h) * height) + 5)
         roi = gray[y0:y1, x0:x1]
+        # Some originals use light lettering on a flat coloured background.
+        # Only explicitly reviewed empty areas may be filled with that colour.
+        if 'background_color' in region:
+            color = region['background_color']
+            if len(color) != 3 or any(type(c) is not int or c < 0 or c > 255 for c in color):
+                raise ValueError('文字区域背景色必须为三个0–255整数')
+            solid_regions.append((x0, y0, x1, y1, color))
+            continue
         # Curved lettering can sit on watercolour edges. A reviewed absolute
         # threshold removes only the dark ink, keeping the pale painted edge.
         if 'ink_threshold' in region:
@@ -54,6 +63,8 @@ def remove_typesetting(image, regions):
     result = cv2.inpaint(pixels, mask, 4, cv2.INPAINT_TELEA)
     for x0, y0, x1, y1 in white_regions:
         result[y0:y1, x0:x1] = 255
+    for x0, y0, x1, y1, color in solid_regions:
+        result[y0:y1, x0:x1] = color
     from PIL import Image
     return Image.fromarray(result)
 

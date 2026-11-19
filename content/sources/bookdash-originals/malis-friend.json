@@ -1,0 +1,79 @@
+{
+  "key": "malis-friend",
+  "id": "bd-malis-friend",
+  "title": "马里的新朋友",
+  "en": "Mali’s Friend",
+  "writer": "Rujeko Moyo",
+  "illustrator": "Ellen Heydenrych",
+  "designer": "Rox Jaden Palmer",
+  "editor": "Margot Bertelsmann",
+  "isbn": "978-1-928442-84-4",
+  "source_url": "https://bookdash.org/books/malis-friend/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/",
+  "source_note": "逐本阅读官网完整预览并核对12个故事跨页、署名与ISBN；英文合并排版换行并规范引号、朗读标点，OCR仅为辅助。本版中文翻译、实际画面描述和对白只维护MySQL。官网源文件页当前请求返回403，许可依据为本日已保存的Book Dash全部作品CC BY 4.0声明，不声称已读取本书PDF版权页。设计署名官网Rox Jaden Palmer，封面RJ Palmer；原文保留ibhola、ibhathi、maphonselana、ingedo本土游戏名称，中文按画面与上下文译为球类或抛接小石子的游戏。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Mali enjoys playing by himself. He likes to be a pilot, swooshing around the house with his paper plane. Swoosh! Swoosh! Swoosh! Then a taxi driver, hooting around the yard with his wire car. Beep! Beep! Beeeeeeeeeeep! Mali never goes out to play with others.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Gogo says, “Mali go out and play ibhola with the others.” But Mali does not enjoy himself.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Gogo says, “Mali, look, the children are playing ibhathi. Go out and play.” Mali tries again. But he does not enjoy himself.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "Gogo tries one more time. “Mali, go out and play maphonselana with the others.” Once again, Mali tries. He does not enjoy himself.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "There is a knock on the door. Ko! Ko! Ko! It’s Lesedi from next door. She has come to play. Mali is shy. He does not know how to play with Lesedi. Lesedi asks him if he would like to make mud pies and cakes.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "They make mud pies and cakes and even pancakes and biscuits. Mali enjoys himself very much.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "Lesedi comes back again. She shows Mali how to play ingedo. Mali has trouble throwing, moving and catching the stones. But he gets better at the game. Mali enjoys himself very much.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "Mali then shows Lesedi how to make a paper plane. They go all around the house swooshing their planes. Oh! They laugh a lot!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Mali asks Lesedi, “Can I come to your house to play tomorrow?” “Of course you can!” she laughs.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "The next morning, after gobbling down his porridge, Mali takes out his wire car.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "“Where are you going, Mali?” asks Gogo.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "“I am going out to play with Lesedi!” he laughs.",
+      "original_was_wordless": false
+    }
+  ]
+}

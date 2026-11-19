@@ -8,6 +8,7 @@ import (
 	"io"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/go-sql-driver/mysql"
 
@@ -23,6 +24,7 @@ type importState struct {
 	legacy                          bool
 	layout                          []byte
 	pageLayouts                     []driver.Value
+	published                       []time.Time
 }
 type testConnector struct{ s *importState }
 
@@ -41,6 +43,9 @@ func (c *testConn) Begin() (driver.Tx, error)                                   
 func (c *testConn) BeginTx(context.Context, driver.TxOptions) (driver.Tx, error) { return c.Begin() }
 func (c *testConn) ExecContext(_ context.Context, q string, args []driver.NamedValue) (driver.Result, error) {
 	c.s.writes++
+	if strings.HasPrefix(strings.TrimSpace(q), "INSERT INTO books") {
+		c.s.published = append(c.s.published, args[11].Value.(time.Time))
+	}
 	if c.s.failPages && strings.HasPrefix(strings.TrimSpace(q), "INSERT INTO book_pages") {
 		return nil, errors.New("injected child failure")
 	}
@@ -117,5 +122,20 @@ func TestImportTransactionAndPrevalidation(t *testing.T) {
 				t.Fatal("invalid batch wrote data")
 			}
 		})
+	}
+}
+
+func TestImportStoresPublishedAtAsUTCWholeSeconds(t *testing.T) {
+	book := materialBook(t)
+	book.PublishedAt = "2026-11-19T23:59:59.987654+08:00"
+	state := &importState{}
+	db := sql.OpenDB(testConnector{state})
+	defer db.Close()
+	if err := New(db, false).Import(context.Background(), []model.Book{book}); err != nil {
+		t.Fatal(err)
+	}
+	want := time.Date(2026, 11, 19, 15, 59, 59, 0, time.UTC)
+	if len(state.published) != 1 || state.published[0] != want {
+		t.Fatalf("publication time rounded or retained fractions: %v", state.published)
 	}
 }

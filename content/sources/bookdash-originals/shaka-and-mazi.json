@@ -1,0 +1,79 @@
+{
+  "key": "shaka-and-mazi",
+  "id": "bd-shaka-and-mazi",
+  "en": "Shaka and Mazi",
+  "title": "沙卡和马兹",
+  "writer": "Zulaikhah Agoro",
+  "illustrator": "Heather Jenkins",
+  "designer": "Natalie Pierre-Eugene",
+  "editor": "Carla Lever",
+  "isbn": "978-1-77623-163-8",
+  "source_url": "https://bookdash.org/books/shaka-and-mazi/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=shaka-and-mazi",
+  "source_note": "2026-11-19逐本核对官网作品页、完整12个故事跨页、署名、ISBN与官方CC BY 4.0声明；英文按原画人工校对，OCR仅辅助，合并换行并规范引号及朗读标点。正文中文、画面描述和对白仅维护MySQL。本版未补写无字页串词。采用预览索引1–12；封底小插图不算正文。原作想象朋友Mazi如实呈现，不解释为真实人物；第8–9页问句未明确说话者，保留普通文字。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Shaka has a new friend that only he can see.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "“His name is Mazi,” he tells Mama. …but whenever Mama comes to Shaka’s room, Mazi runs and hides.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "Mazi likes to laugh. He makes Shaka laugh too! They roll in the grass and build castles in the sand.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "“Can Mazi eat with us?” Shaka asks Papa at dinner. But when Papa looks up, Mazi hides behind the curtains.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "One day, Mama tells Shaka, “Papa has a new job. We are moving to another town.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "“Can Mazi come?” Shaka asks Mama. “Ask him,” Mama says. But Shaka can’t see Mazi anywhere.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "The next afternoon, the big truck comes. Soon, the house is empty.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "But Shaka can’t leave. Where has Mazi gone?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "Is Mazi in the garden? Has he jumped over the fence?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "“Maybe Mazi’s Papa got a new job too,” Mama says. “He might also have moved away.”",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "When Shaka gets to the new house, there is a boy next door. “My name is Matty,” says the boy with a smile.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "“Sometimes we miss old friends,” Mama says. “But there is always room in our hearts for new ones!”",
+      "original_was_wordless": false
+    }
+  ]
+}

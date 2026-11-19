@@ -5,12 +5,13 @@ function isSpeechAttribution(gap,names,language) {
  if(gap.length>80||/[\r\n]/.test(gap))return false;
  const phrase=gap.trim().replace(/^[，,。.!?！？:：;；“”‘’"'…\s]+|[，,。.!?！？:：;；“”‘’"'…\s]+$/g,'');
  if(!phrase)return true;
- return names.filter(Boolean).some(name=>{
+ const clauses=phrase.split(/[，,。.!?！？:：;；]+/).map(s=>s.trim()).filter(Boolean);
+ return clauses.every(clause=>names.filter(Boolean).some(name=>{
  const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
- if(language==='zh')return new RegExp('^'+escaped+'(?:轻声|小声|大声|笑着)?(?:说|问|喊|叫)(?:道)?$').test(phrase);
+ if(language==='zh')return new RegExp('^'+escaped+'(?:轻声|小声|大声|笑着)?(?:说|问|喊|叫|回答|回复)(?:道)?$').test(clause);
  const verb='(?:says?|said|asks?|asked|calls?|called|shouts?|shouted|replies|replied|answers?|answered|whispers?|whispered)';
- return new RegExp('^(?:'+verb+'[ \t]+(?:the[ \t]+)?'+escaped+'|'+escaped+'[ \t]+'+verb+')$','i').test(phrase);
- });
+ return new RegExp('^(?:'+verb+'[ \t]+(?:the[ \t]+)?'+escaped+'|'+escaped+'[ \t]+'+verb+')$','i').test(clause);
+ }));
 }
 
 const clamp = (n, low, high) => Math.max(low, Math.min(high, n));

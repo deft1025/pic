@@ -154,7 +154,7 @@ def snapshot_tests(store, destination=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action', choices=['list', 'show', 'validate', 'audio', 'art', 'package', 'prepare', 'snapshot-tests', 'add-category'])
+    parser.add_argument('action', choices=['list', 'show', 'validate', 'audio', 'art', 'package', 'prepare', 'snapshot-tests', 'add-category', 'normalize-published-at'])
     parser.add_argument('--book', help='业务 ID；除 list 外必填，避免误生成全库')
     parser.add_argument('--db-config', type=Path, help='数据库.env配置，默认项目根目录.env')
     parser.add_argument('--language', choices=['zh', 'en', 'both'], default='both')
@@ -165,12 +165,17 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.action == 'add-category' and (not args.category or args.book) or args.action != 'add-category' and args.category:
         parser.error('add-category 必须仅指定 --category 主题ID')
-    if args.action not in ['list', 'snapshot-tests', 'add-category'] and (not args.book or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.book)):
+    if args.action == 'normalize-published-at' and args.book:
+        parser.error('normalize-published-at 不接受 --book，仅整理发布时间的小数秒')
+    if args.action not in ['list', 'snapshot-tests', 'add-category', 'normalize-published-at'] and (not args.book or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.book)):
         parser.error('请用 --book 指定一本有效书目 ID')
     if args.preview and args.action != 'audio':
         parser.error('--preview 仅用于 audio')
     store = Store(args.db_config)
-    if args.action == 'add-category':
+    if args.action == 'normalize-published-at':
+        result = store.call('normalize-published-at')
+        print(f"发布时间已整理为秒：{result['updated_books']} 本。")
+    elif args.action == 'add-category':
         store.call('add-category', category_id=args.category)
         print(args.category + ': 主题已创建或已存在，未修改已有主题。')
     elif args.action == 'snapshot-tests':

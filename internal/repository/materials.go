@@ -20,6 +20,28 @@ type MaterialSnapshot struct {
 
 var ErrMaterialConflict = errors.New("绘本已被其他操作修改，请重新查库后重试；本次未写入")
 
+// NormalizeMaterialPublishedAt removes legacy fractional seconds without
+// rewriting book content, child rows, voices or content versions.
+func (r *MySQL) NormalizeMaterialPublishedAt(ctx context.Context) (int64, error) {
+	tx, err := r.db.BeginTx(ctx, nil)
+	if err != nil {
+		return 0, err
+	}
+	defer tx.Rollback()
+	result, err := tx.ExecContext(ctx, "UPDATE books SET published_at=DATE_FORMAT(published_at,'%Y-%m-%d %H:%i:%s') WHERE MICROSECOND(published_at)<>0")
+	if err != nil {
+		return 0, err
+	}
+	count, err := result.RowsAffected()
+	if err != nil {
+		return 0, err
+	}
+	if err = tx.Commit(); err != nil {
+		return 0, err
+	}
+	return count, nil
+}
+
 // AddMaterialCategory is create-only. Repeating the same request is safe, while
 // an existing entry with different metadata is never silently overwritten.
 func (r *MySQL) AddMaterialCategory(ctx context.Context, option model.Option, order int) error {

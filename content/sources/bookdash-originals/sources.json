@@ -2838,5 +2838,1141 @@
         "height": 2363
       }
     ]
+  },
+  "bd-sindi-and-the-moon": {
+    "source_url": "https://bookdash.org/books/sindi-and-the-moon/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=sindi-and-the-moon",
+    "downloaded_on": "2026-11-19",
+    "source_file": "sindi-and-the-moon.json",
+    "source_sha256": "3613fe5d4820de0bc721c429f7c41420274d371256d8b69573d3a502bca9776f",
+    "image_processing": "保留官网原插画，只清理核对过的正文文字；纯色底浅字使用原背景色填充，其余文字区域使用原有清理流程。封面保留英文原书名与署名，按配置缩小、不放大，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_01-768x768.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-sindi-and-the-moon/cover.jpg",
+        "sha256": "0a2f9c8e53967366e31d6708617c21fd81592fc9a5c90c08affc2150457e592a",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_05-768x384.jpg",
+        "source_preview_index": 4,
+        "page_number": 1,
+        "source_file": "bd-sindi-and-the-moon/page-001.jpg",
+        "sha256": "2ae281b7e907d4db6590a0470b146bf48e1189aafcac08b0f2884d78c776bdc0",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_06-768x384.jpg",
+        "source_preview_index": 5,
+        "page_number": 2,
+        "source_file": "bd-sindi-and-the-moon/page-002.jpg",
+        "sha256": "5a605f1c5dfccb8d379e61308157ca87a88bf4ad83296dabbe9b720373e8371f",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_07-768x384.jpg",
+        "source_preview_index": 6,
+        "page_number": 3,
+        "source_file": "bd-sindi-and-the-moon/page-003.jpg",
+        "sha256": "06ec7dbde6edf2b2ea7786425a020a6de6d1f8bd78bb57a5952dcc0c148159c9",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_08-768x384.jpg",
+        "source_preview_index": 7,
+        "page_number": 4,
+        "source_file": "bd-sindi-and-the-moon/page-004.jpg",
+        "sha256": "ab8eb3eaf0346cc342e92a926eb7bebf43383024f2c44b222a39e356e0e66961",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_09-768x384.jpg",
+        "source_preview_index": 8,
+        "page_number": 5,
+        "source_file": "bd-sindi-and-the-moon/page-005.jpg",
+        "sha256": "47fac908770a128ee567805ed81ab68baec2c82c6ec54b4bcac53e0f7ebf3936",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_10-768x384.jpg",
+        "source_preview_index": 9,
+        "page_number": 6,
+        "source_file": "bd-sindi-and-the-moon/page-006.jpg",
+        "sha256": "a21bd7c40c68113a0414f376c02805b6856983a789d40d00b769375df004ee03",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_11-768x384.jpg",
+        "source_preview_index": 10,
+        "page_number": 7,
+        "source_file": "bd-sindi-and-the-moon/page-007.jpg",
+        "sha256": "42c63c6a80a8019002a48b821ca8d3ef1e5c0df764acf9826cc08b0512436d3d",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_12-768x384.jpg",
+        "source_preview_index": 11,
+        "page_number": 8,
+        "source_file": "bd-sindi-and-the-moon/page-008.jpg",
+        "sha256": "d1eb3e27f29ef4a327baeb9f852059b735fb19f758ef3551596bac53ab7fa768",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_13-768x384.jpg",
+        "source_preview_index": 12,
+        "page_number": 9,
+        "source_file": "bd-sindi-and-the-moon/page-009.jpg",
+        "sha256": "603b825509490db15f7768fff88b4341878f6a76f2c6e46909596dacf99c970f",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_14-768x384.jpg",
+        "source_preview_index": 13,
+        "page_number": 10,
+        "source_file": "bd-sindi-and-the-moon/page-010.jpg",
+        "sha256": "2bb27785662aa31b57b5f9becd499938643c58a75760b629e57c500b09372e55",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_15-768x384.jpg",
+        "source_preview_index": 14,
+        "page_number": 11,
+        "source_file": "bd-sindi-and-the-moon/page-011.jpg",
+        "sha256": "becf980594bb8326f5e4efe6c2f2bc549797433f9da5756a62c690a66dc02e79",
+        "width": 768,
+        "height": 384
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2016/01/sindi-and-the-moon_Page_16-768x384.jpg",
+        "source_preview_index": 15,
+        "page_number": 12,
+        "source_file": "bd-sindi-and-the-moon/page-012.jpg",
+        "sha256": "77fe8ebceb2c07bc987fca3267a83849a814c32b6161a86b227d10f06ca9ccbb",
+        "width": 768,
+        "height": 384
+      }
+    ]
+  },
+  "bd-its-my-birthday": {
+    "source_url": "https://bookdash.org/books/its-my-birthday/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=its-my-birthday",
+    "downloaded_on": "2026-11-19",
+    "source_file": "its-my-birthday.json",
+    "source_sha256": "b1956c5dc67827184611919b95ac567742a9ef4f752d20597f7ff2738868fe9b",
+    "image_processing": "保留官网原插画，只清理核对过的正文文字；纯色底浅字使用原背景色填充，其余文字区域使用原有清理流程。封面保留英文原书名与署名，按配置缩小、不放大，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_cover-880x880.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-its-my-birthday/cover.jpg",
+        "sha256": "0c8d3392610173974b0e3f41f446578e2ad77a382f506a2820d300e7dab7a7c1",
+        "width": 880,
+        "height": 880
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page4-2048x1024.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-its-my-birthday/page-001.jpg",
+        "sha256": "7f68f58449919ab843145cb607a3839cc7669e06f675e2edf18e29a273acdd19",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page5-2048x1024.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-its-my-birthday/page-002.jpg",
+        "sha256": "ad6190fe1b88981c7740ff734b19bbbeacb00751940f211ba9cacdc63e298947",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page6-2048x1024.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-its-my-birthday/page-003.jpg",
+        "sha256": "58c2c1fcceae30f36b76519f7167380f0dff541158d1b643eecc48cc4254b76e",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page7-2048x1024.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-its-my-birthday/page-004.jpg",
+        "sha256": "0fa12f8ce8874aabaf158fd5f948241242655cadcaf2e44c81bdd45c568f1d69",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page8-2048x1024.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-its-my-birthday/page-005.jpg",
+        "sha256": "9d98b0d66da97759234df3e58efb4cfde9dcb00c1cf3a646522e8c0cdb15e8df",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page9-2048x1024.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-its-my-birthday/page-006.jpg",
+        "sha256": "793fd655417b5eba774090d28e159951936d7f3a534f630124ade86ed04f3568",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page10-2048x1024.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-its-my-birthday/page-007.jpg",
+        "sha256": "3d02db68b706622f7b7a0cc68a09c25a4ee7435a39260d898f1f2c0b87bc6028",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page11-2048x1024.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-its-my-birthday/page-008.jpg",
+        "sha256": "6577f565002f469f29dc933c3e7e778d46ca9b26c781b548b5a4b955e5888c0b",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page12-2048x1024.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-its-my-birthday/page-009.jpg",
+        "sha256": "72b7f5441918a857561a200dac2875150f49e051983945d8fe8ae5d02f9c9bdd",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page13-2048x1024.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-its-my-birthday/page-010.jpg",
+        "sha256": "2b20a54d8236628c0d71e9c3b59a9213551a48947f2c559809b90709a28525eb",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page14-2048x1024.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-its-my-birthday/page-011.jpg",
+        "sha256": "e68b2f8fd2f0f38d49abf1491b05e130c0f71688a7ffa6bdcd228d69c675ac5e",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2023/11/its-my-birthday_en_20231103_page15-2048x1024.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-its-my-birthday/page-012.jpg",
+        "sha256": "847ff196f6e52be6f300a7330936151ab035fc846a241e9324074d5abb63ff4a",
+        "width": 2048,
+        "height": 1024
+      }
+    ]
+  },
+  "bd-shaka-and-mazi": {
+    "source_url": "https://bookdash.org/books/shaka-and-mazi/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=shaka-and-mazi",
+    "downloaded_on": "2026-11-19",
+    "source_file": "shaka-and-mazi.json",
+    "source_sha256": "481f72c527012a2579247617a7787048e4c882c5c44695330668002d0c05db0f",
+    "image_processing": "保留官网原插画，只清理核对过的正文文字；纯色底浅字使用原背景色填充，其余文字区域使用原有清理流程。封面保留英文原书名与署名，按配置缩小、不放大，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_cover-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_cover-1-880x880.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-shaka-and-mazi/cover.jpg",
+        "sha256": "483c67b22307c10796616ae27a7d13cc57244654f3e81ec7c0ab53fbfaa63cc5",
+        "width": 880,
+        "height": 880
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page4-2048x1024.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-shaka-and-mazi/page-001.jpg",
+        "sha256": "cc8eeb025a8f14d9882caf8d7c55033167fd04816b899938a94aab0cbe74b74c",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page5-2048x1024.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-shaka-and-mazi/page-002.jpg",
+        "sha256": "934597da5fb52d9f0c4416935aa0ede69629fe19b3da663885f47da136827020",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page6-2048x1024.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-shaka-and-mazi/page-003.jpg",
+        "sha256": "10ca97a9673221a31f2b44f91ff350aacfd0338522c3b273440dc5bdf420f3ee",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page7-2048x1024.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-shaka-and-mazi/page-004.jpg",
+        "sha256": "06b626013f121cd13ab76c4391989d1005ad73b56f7e844e86fb2655dae4a444",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page8-2048x1024.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-shaka-and-mazi/page-005.jpg",
+        "sha256": "ec06987717c0fe8f54a01e068281d1e63f168dddcf28f8f97534377b97c63724",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page9-2048x1024.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-shaka-and-mazi/page-006.jpg",
+        "sha256": "45a5802de79347bf0a6ec90bbcdf0e814dc747df44329126021135182f913238",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page10-2048x1024.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-shaka-and-mazi/page-007.jpg",
+        "sha256": "75f8ceefaa1efddc56c711f108d436cb30bb6af46ec4ec853a99c4d3d3d3bc32",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page11-2048x1024.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-shaka-and-mazi/page-008.jpg",
+        "sha256": "add0eee7eadd658fe060815f2e1060698c8e634a12b170cd628cb3a8e96d31c3",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page12-2048x1024.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-shaka-and-mazi/page-009.jpg",
+        "sha256": "6e3eaff9c818c8377e71535f53763493f5e9af9145fc9f29406689174df17601",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page13-2048x1024.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-shaka-and-mazi/page-010.jpg",
+        "sha256": "00415a459d07b2baf1dc5ea096e338de7ffec6d3aae74ef3d0a2d7ca703fcf3a",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page14-2048x1024.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-shaka-and-mazi/page-011.jpg",
+        "sha256": "c80fe0d5921643d64d5d90be480e1210685eca035e09bb9a98ca221175f83a85",
+        "width": 2048,
+        "height": 1024
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/shaka-and-mazi_en_20210525_page15-2048x1024.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-shaka-and-mazi/page-012.jpg",
+        "sha256": "55880d51ded4bd25e12e347b4517d7369e965c76f3566cabf23249dca81c9c42",
+        "width": 2048,
+        "height": 1024
+      }
+    ]
+  },
+  "bd-how-about-you": {
+    "source_url": "https://bookdash.org/books/how-about-you/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/?book=how-about-you",
+    "downloaded_on": "2026-11-19",
+    "source_file": "how-about-you.json",
+    "source_sha256": "8832fd58519f4628e2598c7b06c47f9a2d56feb3e82d3657e9c38be3a463deeb",
+    "image_processing": "保留官网原插画，只清理核对过的正文文字；纯色底浅字使用原背景色填充，其余文字区域使用原有清理流程。封面保留英文原书名与署名，按配置缩小、不放大，未AI重绘。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_01.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_01.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-how-about-you/cover.jpg",
+        "sha256": "c7361cd56c65c59644c50ae9c9f7dd0d323f48d8502e7c1b9a7b92b773d8c519",
+        "width": 788,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_05.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_05.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-how-about-you/page-001.jpg",
+        "sha256": "f6577a6b864848aeef241cf5e9cf3e09a32127fe212773297fedeb9c4921fbe0",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_06.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_06.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-how-about-you/page-002.jpg",
+        "sha256": "a9eefee0756dd3d16eed40d22a2e3abe5cfcd35dc924003624e1732b40dd1792",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_07.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_07.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-how-about-you/page-003.jpg",
+        "sha256": "dd55252987d5176f92b37f94591ce7b08c864797ea41bbf80b44cd6bf713091c",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_08.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_08.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-how-about-you/page-004.jpg",
+        "sha256": "c399b39b65a734a0724ea71063e4feb949a5c1fecabd0586c367c969601eb803",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_09.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_09.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-how-about-you/page-005.jpg",
+        "sha256": "236123f0fd4af7b7d133049af8b2ba44e107333f07538a63681efdc8cf9f5e33",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_10.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-how-about-you/page-006.jpg",
+        "sha256": "a5925f0ecf2db1c19e25616326c275d33b4c5b7d7604fb08f794e568359f48c3",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_11.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-how-about-you/page-007.jpg",
+        "sha256": "29cf7550e2021e6384656d26c94fb5e4ba44a9bc359b019ac25a252353ebeba6",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_12.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-how-about-you/page-008.jpg",
+        "sha256": "ff4ddd85a175f9572a3b58f232c1214b8588b080cedc2ae9d361e1b26c5457fe",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_13.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-how-about-you/page-009.jpg",
+        "sha256": "9f98995128e96ea9e2891f2d945ea66753abac2d6f0ba90aefaac54b59eca50d",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_14.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-how-about-you/page-010.jpg",
+        "sha256": "99a85989610cfcc156aabd8c5bd4bbaccb4e723bbbce7b36e08808398dbc689b",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_15.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-how-about-you/page-011.jpg",
+        "sha256": "a09d95bf65c16fe6fc05d44ee9ae7513a5ec862ecbf800594804c5ed17a0e058",
+        "width": 1575,
+        "height": 788
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2015/08/how-about-you-pdf-ebook_20150804_Page_16.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-how-about-you/page-012.jpg",
+        "sha256": "a4a60063c411a9485dd02c42a0fefe6758dd7aa9663735efb3e1ce5be4cc5b0e",
+        "width": 1575,
+        "height": 788
+      }
+    ]
+  },
+  "bd-malis-friend": {
+    "source_url": "https://bookdash.org/books/malis-friend/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-19",
+    "source_file": "malis-friend.json",
+    "source_sha256": "9e118a9c59b84b65f8d0f2f2e66d16fd840af5aadf1a82f5083a58a00788a877",
+    "image_processing": "保留完整官网原插画，按逐区复核位置清理原正文；封面保留英文标题与原创作者署名，按配置缩小而不放大。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_cover-3.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_cover-3.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-malis-friend/cover.jpg",
+        "sha256": "0afb68b66fd28e7165e520e73d46058660c56c026b2be301e081baa57734ebbb",
+        "width": 1575,
+        "height": 1575
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_4-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_4-3-scaled.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-malis-friend/page-001.jpg",
+        "sha256": "6fb67deb27f99bd96ec8106ec63a26a5a4b7edaad60aba5e7329bf8eb254df37",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_5-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_5-3-scaled.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-malis-friend/page-002.jpg",
+        "sha256": "d5f28b31c3070863d108395939396da4c572a473448a29c811be95351b131f01",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_6-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_6-3-scaled.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-malis-friend/page-003.jpg",
+        "sha256": "10e0f875135715f24ef3c43fbf696d43c129eb66103b6c0e5f8dc94a734ec959",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_7-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_7-3-scaled.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-malis-friend/page-004.jpg",
+        "sha256": "7377f84280b775d386a33f9f042b31397c320a33370b17ba9788532593bff315",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_8-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_8-3-scaled.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-malis-friend/page-005.jpg",
+        "sha256": "69965c7d6a64485e65a13f6c124e221775e9730aee3de125a5af8c3d2265236f",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_9-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_9-3-scaled.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-malis-friend/page-006.jpg",
+        "sha256": "aad2960a17ddde922935ae2a2b862f084cfbd49c9e71f67cd8a6fbe7413b682b",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_10-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_10-3-scaled.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-malis-friend/page-007.jpg",
+        "sha256": "cc325872a3e2c622d8be876f3dd8e607d3d6b5f506d6ca7f39dbaeb1646a23e2",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_11-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_11-3-scaled.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-malis-friend/page-008.jpg",
+        "sha256": "ef014dd0b4e02b26314284d04db6a304dfee014df3a8f903e3f6f0566d8efb72",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_12-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_12-3-scaled.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-malis-friend/page-009.jpg",
+        "sha256": "982d0bbcc374507475a6b9ce23a3ea270d4c5824bd3bf1e3967ab2d07c00face",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_13-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_13-3-scaled.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-malis-friend/page-010.jpg",
+        "sha256": "aa7c709275431dfb77929d2e1f395d9a545adcac5ded05e57d08d460abed7538",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_14-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_14-3-scaled.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-malis-friend/page-011.jpg",
+        "sha256": "b66460cf2c6ddeb7888002947d56f685ba7b28b289816b147b4eb5a61c08d7c2",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_15-3-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2018/11/malis-friend_en_20181120_page_15-3-scaled.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-malis-friend/page-012.jpg",
+        "sha256": "32eff66df54968e9d042c2d13382ede03ee741d3421fe850116ee14720674472",
+        "width": 2560,
+        "height": 1280
+      }
+    ]
+  },
+  "bd-the-lion-who-wouldnt-try": {
+    "source_url": "https://bookdash.org/books/the-lion-who-wouldnt-try/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-19",
+    "source_file": "the-lion-who-wouldnt-try.json",
+    "source_sha256": "31620deef0458e51714a1bb2b07a89a6b80cf6b297e4f4a60d69a315fdb73eb7",
+    "image_processing": "保留完整官网原插画，按逐区复核位置清理原正文；封面保留英文标题与原创作者署名，按配置缩小而不放大。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-1.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-1.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-the-lion-who-wouldnt-try/cover.jpg",
+        "sha256": "6269d303c1c74dd1e940be558373433fc11f42891f06ea356f0596b16f9e8264",
+        "width": 567,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-5.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-5.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-001.jpg",
+        "sha256": "7acdceeb56f5efce73ac77e8cf39de8cd658a66c75b55911c32b18fe0993c462",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-6.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-6.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-002.jpg",
+        "sha256": "d0158e9a303a6ba67a3f7d829a036d3ba0808907465a233a5fb4558c1e0fe684",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-7.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-7.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-003.jpg",
+        "sha256": "10659d269be301b17b533c610a081a971bd7f6993f45cdba729d0358126569f2",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-8.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-8.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-004.jpg",
+        "sha256": "6e364994ffed25875a3adb81e94a9262d17e8709678e4c53505fd9c2e51ada6b",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-9.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-9.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-005.jpg",
+        "sha256": "550892e05453f4989fecf67582442d0553278f9059d80c71cd53135eb7a31e02",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-10.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-006.jpg",
+        "sha256": "7a008573061ece63e7fce6126ad4894794b52b231e08560941531a2a7f89d71c",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-11.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-007.jpg",
+        "sha256": "85357078f6ffbb2298d066a6ee581c9406da2acfdb18325d14f3c1d4eb5076e6",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-12.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-008.jpg",
+        "sha256": "9128794807bd753df85fde54ad218db74623057587c08103d784429d47be5761",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-13.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-009.jpg",
+        "sha256": "32dba905d9b695b0feb6456ebbbaeb2accf1753ff32e5c4fe13a7e5a3fde03d4",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-14.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-010.jpg",
+        "sha256": "7d08b48b9b6d4d9920c23e50fd565835013cb82600c104df6a7a402719b33d29",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-15.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-011.jpg",
+        "sha256": "74b07f3423a09d3ea939be0fe3389a85641e9a747be7f58710a29eafc253b90b",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-16.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/02/the-lion-who-wouldnt-try_english_20170208-16.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-the-lion-who-wouldnt-try/page-012.jpg",
+        "sha256": "ac9a4cee6e946d358277fc13de0f68ca41d8f2829822e794d85eb428f3415544",
+        "width": 1134,
+        "height": 567
+      }
+    ]
+  },
+  "bd-yes-you-can": {
+    "source_url": "https://bookdash.org/books/yes-you-can/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-19",
+    "source_file": "yes-you-can.json",
+    "source_sha256": "c36ded5f7398270ab800e95caf3de55b4880a7c6ec51088b299aad9aeb8565aa",
+    "image_processing": "保留完整官网原插画，按逐区复核位置清理原正文；封面保留英文标题与原创作者署名，按配置缩小而不放大。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_cover-768x768.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-yes-you-can/cover.jpg",
+        "sha256": "bb199d1f5608aa6547e81cf96efcd7674de6bff01b3a51e83b250809519c7d53",
+        "width": 768,
+        "height": 768
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page4-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page4-scaled.jpg",
+        "source_preview_index": 1,
+        "page_number": 1,
+        "source_file": "bd-yes-you-can/page-001.jpg",
+        "sha256": "9934a9fd1b965ce8de000d875bc1ad777bc4d5e7950314f0b10dcf5b1596b87a",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page5-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page5-scaled.jpg",
+        "source_preview_index": 2,
+        "page_number": 2,
+        "source_file": "bd-yes-you-can/page-002.jpg",
+        "sha256": "da34c016b66b41f927932f47655be44e11f6cc3fcdf3d8ab47ca4da2f3a23429",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page6-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page6-scaled.jpg",
+        "source_preview_index": 3,
+        "page_number": 3,
+        "source_file": "bd-yes-you-can/page-003.jpg",
+        "sha256": "b39819574d4a47c14773f820ab5b3e2cced1364bac54b55785726693b1c582f6",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page7-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page7-scaled.jpg",
+        "source_preview_index": 4,
+        "page_number": 4,
+        "source_file": "bd-yes-you-can/page-004.jpg",
+        "sha256": "79ff536d602b53437483c2ed7018bcbde17038a4b5d2daa718c4b83ca632276b",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page8-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page8-scaled.jpg",
+        "source_preview_index": 5,
+        "page_number": 5,
+        "source_file": "bd-yes-you-can/page-005.jpg",
+        "sha256": "5ea0048072cfad0b3607d38e8e72fb1565ae9cac9285833dfde92fd4976102b4",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page9-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page9-scaled.jpg",
+        "source_preview_index": 6,
+        "page_number": 6,
+        "source_file": "bd-yes-you-can/page-006.jpg",
+        "sha256": "db09148b851dc517006467fa0493cdd061c31348a9b6728c43e1b467f8159c7b",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page10-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page10-scaled.jpg",
+        "source_preview_index": 7,
+        "page_number": 7,
+        "source_file": "bd-yes-you-can/page-007.jpg",
+        "sha256": "2aa1f8affcfcf88acf5fc86f33dd530b03b948fa5a4fb0b2718c04ad36851e71",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page11-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page11-scaled.jpg",
+        "source_preview_index": 8,
+        "page_number": 8,
+        "source_file": "bd-yes-you-can/page-008.jpg",
+        "sha256": "e1e7b13780b5750520212de5884134e5862d48963a709529940eab1baa2bcb28",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page12-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page12-scaled.jpg",
+        "source_preview_index": 9,
+        "page_number": 9,
+        "source_file": "bd-yes-you-can/page-009.jpg",
+        "sha256": "119ded12c6c6fd2f2cceecd84793a10bb1619755f3eb8df8a93eaf0bbbe65b7d",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page13-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page13-scaled.jpg",
+        "source_preview_index": 10,
+        "page_number": 10,
+        "source_file": "bd-yes-you-can/page-010.jpg",
+        "sha256": "6500e525112aa04c89660cf46a00bd4b68b4ff5bf7453e3f0b7598f5908e08f1",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page14-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page14-scaled.jpg",
+        "source_preview_index": 11,
+        "page_number": 11,
+        "source_file": "bd-yes-you-can/page-011.jpg",
+        "sha256": "5905d397b913515b06d7062787bd4b55987e9f130f569718923c03f99e506d79",
+        "width": 2560,
+        "height": 1280
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page15-scaled.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2021/05/yes-you-can_en_20210812_page15-scaled.jpg",
+        "source_preview_index": 12,
+        "page_number": 12,
+        "source_file": "bd-yes-you-can/page-012.jpg",
+        "sha256": "f59894f33638edf57e32e5e5c9f993c0c24469999332041593bea90127deedee",
+        "width": 2560,
+        "height": 1280
+      }
+    ]
+  },
+  "bd-tumi-goes-to-the-park": {
+    "source_url": "https://bookdash.org/books/tumi-goes-to-the-park/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://bookdash.org/book-source-files/",
+    "downloaded_on": "2026-11-19",
+    "source_file": "tumi-goes-to-the-park.json",
+    "source_sha256": "33ea5be73ad790f5e00b830018939c5300d5890f4b40e1673e9c9f4bb17c66c0",
+    "image_processing": "保留完整官网原插画，按逐区复核位置清理原正文；封面保留英文标题与原创作者署名，按配置缩小而不放大。",
+    "images": [
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_cover.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_cover.jpg",
+        "source_preview_index": 0,
+        "page_number": 0,
+        "source_file": "bd-tumi-goes-to-the-park/cover.jpg",
+        "sha256": "d8ba2be99c3a97f9b554808c7fc2c9b87531e26d6fb0acffea11e03e7869217a",
+        "width": 567,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page4.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page4.jpg",
+        "source_preview_index": 3,
+        "page_number": 1,
+        "source_file": "bd-tumi-goes-to-the-park/page-001.jpg",
+        "sha256": "149ec2abbdef6dca607e9139778bc1902d121079652265a7b5b386683bf3e636",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page5.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page5.jpg",
+        "source_preview_index": 4,
+        "page_number": 2,
+        "source_file": "bd-tumi-goes-to-the-park/page-002.jpg",
+        "sha256": "e7ddab06857de2dd0097436636b3e759b98deae944f99772ef58a3676ee691bb",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page6.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page6.jpg",
+        "source_preview_index": 5,
+        "page_number": 3,
+        "source_file": "bd-tumi-goes-to-the-park/page-003.jpg",
+        "sha256": "5848fe896176b5101f3718dbcd598bfb68d0a805bc7fd6fa4ae142d065110121",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page7.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page7.jpg",
+        "source_preview_index": 6,
+        "page_number": 4,
+        "source_file": "bd-tumi-goes-to-the-park/page-004.jpg",
+        "sha256": "b115598a27417ac20ea4c16116cb5b02a6139018bd90ba769480cd2b3c7ff9b3",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page8.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page8.jpg",
+        "source_preview_index": 7,
+        "page_number": 5,
+        "source_file": "bd-tumi-goes-to-the-park/page-005.jpg",
+        "sha256": "8470cb41f49c4f66535008db8820bde6f58752f1021c899a0207435ae146807d",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page9.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page9.jpg",
+        "source_preview_index": 8,
+        "page_number": 6,
+        "source_file": "bd-tumi-goes-to-the-park/page-006.jpg",
+        "sha256": "0dbc9a5f574547d8e23e1025fbc89a34f0a4318cf74bb78eddda1642662e102e",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page10.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page10.jpg",
+        "source_preview_index": 9,
+        "page_number": 7,
+        "source_file": "bd-tumi-goes-to-the-park/page-007.jpg",
+        "sha256": "0230f29ba798ec54159f4484a51a0a4c2a303775e13f9ee981bfa233234e64d8",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page11.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page11.jpg",
+        "source_preview_index": 10,
+        "page_number": 8,
+        "source_file": "bd-tumi-goes-to-the-park/page-008.jpg",
+        "sha256": "35157b065e2e78e49a6b00e868204fb7d0358180129657fbc45af4c203bf47de",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page12.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page12.jpg",
+        "source_preview_index": 11,
+        "page_number": 9,
+        "source_file": "bd-tumi-goes-to-the-park/page-009.jpg",
+        "sha256": "26a2fa539c9a94c8a77761a41cc8b599621caeeb4a32013629da2ce31ddda24a",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page13.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page13.jpg",
+        "source_preview_index": 12,
+        "page_number": 10,
+        "source_file": "bd-tumi-goes-to-the-park/page-010.jpg",
+        "sha256": "5d24293b5f25710add432c7d4e3826078269f88e17c7224507322b9c07987392",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page14.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page14.jpg",
+        "source_preview_index": 13,
+        "page_number": 11,
+        "source_file": "bd-tumi-goes-to-the-park/page-011.jpg",
+        "sha256": "7bdbec05790afcd384e430c9d05cc4ca0100f4ec361bae7d80c5ae62a9d2e674",
+        "width": 1134,
+        "height": 567
+      },
+      {
+        "original_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page15.jpg",
+        "download_url": "https://bookdash.org/wp-content/uploads/2017/03/tumi-goes-to-the-park_english_20170316_page15.jpg",
+        "source_preview_index": 14,
+        "page_number": 12,
+        "source_file": "bd-tumi-goes-to-the-park/page-012.jpg",
+        "sha256": "91263a07287a89d57cb19e65f563208c5de1cba2cd275c9e05dbdad57ac3484c",
+        "width": 1134,
+        "height": 567
+      }
+    ]
   }
 }

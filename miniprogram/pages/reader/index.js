@@ -40,15 +40,17 @@ Page({
   const safeBottom = Math.max(8, info.screenHeight && safe ? info.screenHeight - safe.bottom : 0);
   const safeLeft = landscape ? Math.max(8, safe?.left || 0) : 0;
   const safeRight = landscape ? Math.max(8, safe?.right ? info.windowWidth - safe.right : 0) : 0;
-  const sidebar = Math.max(216, Math.min(300, Math.round(info.windowWidth * .34)));
-  const width = landscape ? Math.max(1, info.windowWidth - safeLeft - safeRight - 12 - sidebar) : this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
   // Keep a stable art frame across pages/languages. In short landscape, narration
   // and controls share the side column instead of subtracting from image height.
   const hasNarration = this.data.imageError || this.pages.some(p => ['zh', 'en'].some(lang => dialogue.split(p, lang, true).narration.trim()));
   const availableHeight = Math.max(1, info.windowHeight - safeTop - safeBottom);
-  const narrationHeight = hasNarration ? landscape ? Math.max(24, availableHeight - 44 - (this.data.controlsVisible ? 132 : 36)) : Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
+  const sidebar = Math.max(144, Math.min(190, Math.round(info.windowWidth * .2)));
+  const availableWidth = Math.max(1, info.windowWidth - safeLeft - safeRight);
+  const aspect = (this.ratio?.[0] || 4) / (this.ratio?.[1] || 3);
+  const width = landscape ? Math.max(1, Math.min(availableWidth - 12 - sidebar, availableHeight * aspect)) : this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
+  const narrationHeight = hasNarration ? landscape ? Math.max(24, availableHeight - 44 - 48) : Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
   const height = landscape ? availableHeight : this.data.fullscreen
-   ? Math.max(1, availableHeight - 44 - narrationHeight - (this.data.controlsVisible ? 116 : 36))
+   ? Math.max(1, availableHeight - 44 - narrationHeight - 48)
    : Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * (this.ratio?.[1] || 3) / (this.ratio?.[0] || 4)));
   this.frameWidth = width; this.frameH = height;
   this.setData({ frameHeight: height, frameWidth: width, landscape, safeTop, safeBottom, safeLeft, safeRight, viewportHeight: info.windowHeight, narrationHeight });
@@ -162,12 +164,12 @@ Page({
  next() { this.show(this.data.index + 1, this.data.playing); },
  pickPage(e) { this.show(Number(e.detail.value), this.data.playing); },
  settings() { const { language, auto, rate } = this.data; wx.setStorageSync('pic-reader-settings', { language, auto, rate }); },
- language(e) { const language = e.currentTarget.dataset.language; if (language === this.data.language) return; const playing = this.data.playing; this.cancelCompletion(); this.lastPageAudioStarted = false; this.serial++; this.destroyAudio(); this.setData({ language }); this.settings(); this.renderText(); if (playing) this.play(); else this.scheduleCompletion(); },
+ language(e) { if (this.data.fullscreen) return; const language = e.currentTarget.dataset.language; if (language === this.data.language) return; const playing = this.data.playing; this.cancelCompletion(); this.lastPageAudioStarted = false; this.serial++; this.destroyAudio(); this.setData({ language }); this.settings(); this.renderText(); if (playing) this.play(); else this.scheduleCompletion(); },
  toggleLanguage() { this.language({ currentTarget: { dataset: { language: this.data.language === 'zh' ? 'en' : 'zh' } } }); },
  controls() { if (this.data.fullscreen) this.setData({ controlsVisible: !this.data.controlsVisible }, () => this.frame()); },
  keepControls() {},
- auto() { this.setData({ auto: !this.data.auto }); this.settings(); },
- rate(e) { const rate = [.75, 1, 1.25][Number(e.detail.value)]; this.setData({ rate }); this.settings(); if (this.audio) this.audio.playbackRate = rate; },
+ auto() { if (this.data.fullscreen) return; this.setData({ auto: !this.data.auto }); this.settings(); },
+ rate(e) { if (this.data.fullscreen) return; const rate = [.75, 1, 1.25][Number(e.detail.value)]; this.setData({ rate }); this.settings(); if (this.audio) this.audio.playbackRate = rate; },
  fullscreen() { this.autoExpanded = false; this.playbackViewDismissed = Boolean(this.audio); const fullscreen = !this.data.fullscreen; this.setData({ fullscreen, controlsVisible: !fullscreen }, () => this.frame()); },
  cancelCompletion() { clearTimeout(this.completionTimer); this.completionTimer = null; },
  cancelGreeting() { clearTimeout(this.replyTimer); this.replyTimer = null; if (!this.dead && this.data.characterReply) this.setData({ characterReply: false }); },

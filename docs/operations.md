@@ -11,11 +11,11 @@ go run ./cmd/materials read --book 书ID
 
 新增默认至少4本。逐本核实适龄性、完整原文与页序、实际画面、作者插画师及许可；同作品先排重。选择来源和系列见 [选材入口](resource-candidates.md)。新作品使用新ID，不覆盖旧故事；不自行提交、推送或部署。
 
-StoryBloom新增按每个来源系列取一本、优先睡前共读选材，减少相似画风重复。“幼儿园适应”（`kindergarten`）已按用户要求新增，幼儿园相关物料统一归入，可保留情绪、习惯等标签。本次用户要求优先补充该主题，选材以实际校园情境优先，可在同系列选取不同生活问题；后续继续偏温暖动物朋友、入园分离、吃饭午睡与同伴交往故事。不把来源系列当作产品主题。
+新增物料继续归入“幼儿园适应”（`kindergarten`），可兼顾情绪、习惯等标签。选材覆盖温暖的入园、集体生活、交朋友、表达与同伴相处；优先其他主人公和不同画风，丰富列表视觉，不因主题相关就连续选用同一安安角色。来源系列与产品主题分别核实。
 
-新增主题先在Go校验字典和Python物料校验器中定义，再通过 `python3 scripts/materials.py add-category --category kindergarten` 向现有categories表创建一条记录；该命令经过service/repository，只允许已定义主题，重复相同记录安全，已有信息不同则回滚，不覆盖其他主题、不建表、不运行dbinit。前端主题列表读取MySQL；网页主题说明使用API字典描述，不按固定六项数组取值。
+新增主题先在Go校验字典和Python物料校验器中定义，再通过 `python3 scripts/materials.py add-category --category 主题ID` 向现有categories表创建一条记录；该命令经过service/repository，只允许已定义主题，重复相同记录安全，已有信息不同则回滚，不覆盖其他主题、不建表、不运行dbinit。前端主题列表读取MySQL；网页主题说明使用API字典描述，不按固定六项数组取值。
 
-Codex将内容在内存中生成，通过标准输入传给 `go run ./cmd/materials save`，结构为 `{book, revision}`。新增revision为空；更新使用刚回读的完整快照revision，不强行覆盖。已发布书填写一句基于全文的 `reading_value`；制作未完成时可以 `save --metadata-only` 录入正文与预计路径，该阶段不代表交付完成。
+Codex将内容在内存中生成，通过标准输入传给 `go run ./cmd/materials save`，结构为 `{book, revision}`。新增revision为空；更新使用刚回读的完整快照revision，不强行覆盖。作者、插画师入库只留创作者名称，自动清理“AI生成”“AI生成原图”“项目校对”等制作后缀；许可与原始来源证据独立保留。已发布书填写一句基于全文的 `reading_value`；制作未完成时可以 `save --metadata-only` 录入正文与预计路径，该阶段不代表交付完成。
 
 先补齐逐本来源证据和原图，再执行指定书制作。StoryBloom在 `content/sources/storybloom/sources.json` 登记来源和逐页哈希，经 `scripts/storybloom_art.py` 核验后原样保留WebP。书目、图像描述与角色对白只维护MySQL。陌生ID不能靠 `art` 自动获得完整插画。
 
@@ -39,13 +39,13 @@ python3 scripts/materials.py snapshot-tests
 tar -xzf 书ID.tar.gz
 ```
 
-不清空旧目录。用户确认上传解压后，由Codex执行：
+不清空旧目录。当前用户要求上传解压后的远程验收由人工完成，不默认执行自动远程检查；用户后续要求Codex验证时使用：
 
 ```sh
 ASSET_CHECK_MODE=remote python3 scripts/materials.py validate --book 书ID
 ```
 
-随后检查公网页面及新书双语资源；上传反馈本身不代表全部验收完成。本批结果和剩余事项写 [验收记录](acceptance.md)。素材更新刷新即可；代码变更由用户自行提交推送、按 `bash deploy.sh` 部署。小程序客户端变更需用户重新编译预览或发布，与后端、素材分开处理。
+执行自动验收时随后检查公网页面及新书双语资源；上传反馈本身不代表全部验收完成。本批结果和剩余事项写 [验收记录](acceptance.md)。素材更新刷新即可；代码变更由用户自行提交推送、按 `bash deploy.sh` 部署。小程序客户端变更需用户重新编译预览或发布，与后端、素材分开处理。
 
 
 ## 小程序读完鼓励与底栏
@@ -53,3 +53,15 @@ ASSET_CHECK_MODE=remote python3 scripts/materials.py validate --book 书ID
 读完鼓励是小程序阅读器默认行为，适用于全部现有书与新书，没有逐书启用清单，不依赖API的功能字段。角色和插画从MySQL已有对白读取，缺少有效角色或头像加载失败时显示可互动的“故事小伙伴”。全部页面读过后，末页配音自然结束或静读4秒弹出；面板渲染后执行原有读完记录。
 
 底栏由 `miniprogram/custom-tab-bar/` 维护：图标加16px标签，浅蓝圆角选中态，适配底部安全区；首页、书库、书架同步当前路由，并为栏位预留底部空间。本次动效与底栏只需更新小程序客户端并重新编译/发布，不改库、不重制素材，也无需为这两项更新后端。跨设备已读同步仍需要后端支持既有 `GET /api/me/completed-books` 接口。
+
+## 时间字段
+
+`books.published_at`在标准入库链中转换为UTC并截断到整秒，不四舍五入。历史小数秒可用 `python3 scripts/materials.py normalize-published-at` 事务整理，该命令只更新有小数秒的发布时间，不改正文、图片或配音，重复执行无改动；不需要修改表结构。
+
+数据库应用连接使用UTC（`time_zone='+00:00'`）。`reader_users.created_at / updated_at`为秒级TIMESTAMP，查询工具采用北京时间会自动显示为UTC加8小时；不要给历史值手工加8小时。`created_at`表示建号，`updated_at`由数据库在资料实际变更时自动更新；重复登录和保存相同资料不会刷新，不作为最近登录时间。
+
+## 小程序全屏阅读
+
+语言、配音播放、连播与倍速在进入全屏前选好，全屏内只保留退出、上一页/下一页和页码，轻点画面呼出或收起翻页。正在播放的配音延续既有状态，退出后再调整；普通阅读保留完整播放器。
+
+短横屏左侧完整插画、右侧窄旁白栏；按全书稳定比例分配画幅，保留胶囊与系统安全区，长旁白可滚动。翻页操作与提示使用相同固定高度，显隐不压缩图片；不裁切原画，也不因翻页或语言改变画幅。客户端修改需重新编译预览/发布，浏览器适配检查不代表微信真机。

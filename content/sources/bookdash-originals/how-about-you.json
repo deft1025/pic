@@ -1,0 +1,79 @@
+{
+  "key": "how-about-you",
+  "id": "bd-how-about-you",
+  "en": "How About You?",
+  "title": "你呢？",
+  "writer": "Margot Bertelsmann",
+  "illustrator": "Renate van Rensburg",
+  "designer": "Ronell Botes-Kerr",
+  "editor": "Sarah McGregor",
+  "isbn": "978-1-928318-29-3",
+  "source_url": "https://bookdash.org/books/how-about-you/",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://bookdash.org/book-source-files/?book=how-about-you",
+  "source_note": "2026-11-19逐本核对官网作品页、完整12个故事跨页、署名、ISBN与官方CC BY 4.0声明；英文按原画人工校对，OCR仅辅助，合并换行并规范引号及朗读标点。正文中文、画面描述和对白仅维护MySQL。本版未补写无字页串词。采用预览索引1–12，跳过衬页与封底。当前官网设计署名Ronell Botes-Kerr，旧封面署名Ronëll Botes；第10页为月亮和太阳的意象，不解释为鼓励孩子熬夜。对话式诗句未明确独立说话者，保留完整普通文字，不强加角色气泡。官方无文字原图目录可见，单文件下载尝试返回403，未取得或冒称使用无文字源图；本版清理的是公开预览原图的文字区域。",
+  "narration_additions": [],
+  "pages": [
+    {
+      "page_number": 1,
+      "text_original": "Who are you?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 2,
+      "text_original": "Is that goo? Eeuw! I want some too.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 3,
+      "text_original": "We are two. How old are you? Six hundred and thirty two?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 4,
+      "text_original": "I like blue. Do you too? I choose two shoes. Which do you choose?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 5,
+      "text_original": "Horseshoes!?",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 6,
+      "text_original": "I make toys with boys.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 7,
+      "text_original": "We make lots of noise. Whaaa! Eurgghhh… Aargh!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 8,
+      "text_original": "I take a nap on Gogo’s back.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 9,
+      "text_original": "I don’t nap!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 10,
+      "text_original": "I stay upright all through the night.",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 11,
+      "text_original": "The ball goes THWOCK! Buddy, you ROCK!",
+      "original_was_wordless": false
+    },
+    {
+      "page_number": 12,
+      "text_original": "That’s what we do. How about you?",
+      "original_was_wordless": false
+    }
+  ]
+}

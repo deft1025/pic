@@ -6,7 +6,7 @@
    <view class="languages"><button class="small {{language === 'zh' ? 'primary' : ''}}" data-language="zh" bindtap="language">中文</button><button class="small {{language === 'en' ? 'primary' : ''}}" data-language="en" bindtap="language">English</button></view>
    <button class="small" bindtap="fullscreen">全屏阅读</button>
   </view>
-  <view wx:if="{{fullscreen}}" class="fullscreen-header"><button class="small" bindtap="fullscreen">退出全屏</button><button wx:if="{{controlsVisible}}" class="small" bindtap="toggleLanguage">{{language === 'zh' ? '中文 ⇄ English' : 'English ⇄ 中文'}}</button></view>
+  <view wx:if="{{fullscreen}}" class="fullscreen-header"><button class="small" bindtap="fullscreen">退出全屏</button></view>
   <view class="frame" style="height:{{frameHeight}}px;{{landscape ? 'width:' + frameWidth + 'px;' : ''}}" bindtap="controls">
    <image wx:if="{{!imageError}}" class="art" data-src="{{page.image}}" src="{{page.image}}" mode="aspectFit" bindload="imageLoaded" binderror="imageFailed" aria-label="{{page.image_alt}}"/>
    <view wx:if="{{imageError}}" class="image-error">插画加载失败<button class="small" catchtap="retryImage">重试插画</button></view>
@@ -17,10 +17,11 @@
   </view>
   <scroll-view wx:if="{{fullscreen && narrationHeight}}" class="fullscreen-narration" scroll-y="{{true}}" style="height:{{narrationHeight}}px"><view class="narration copy">{{narration}}</view></scroll-view>
   <view wx:if="{{!fullscreen && narration}}" class="narration copy">{{narration}}</view>
-  <view wx:if="{{!fullscreen || controlsVisible}}" class="player">
+  <view wx:if="{{!fullscreen}}" class="player">
    <view class="player-row"><button disabled="{{index === 0}}" bindtap="previous">上一页</button><button class="primary" bindtap="play">{{playing ? '暂停' : (audioError ? '重试播放' : '播放配音')}}</button><button disabled="{{index === total - 1}}" bindtap="next">下一页</button></view>
    <view class="player-row"><picker mode="selector" range="{{pageNames}}" value="{{index}}" bindchange="pickPage"><view class="picker">第{{index + 1}} / {{total}}页 ▾</view></picker><button class="small" bindtap="auto">{{auto ? '连续播放：开' : '连续播放：关'}}</button><picker mode="selector" range="{{rates}}" value="{{rate === 1 ? 1 : (rate === 0.75 ? 0 : 2)}}" bindchange="rate"><view class="picker">{{rate}}倍 ▾</view></picker></view>
   </view>
+  <view wx:if="{{fullscreen && controlsVisible}}" class="fullscreen-pages"><button disabled="{{index === 0}}" bindtap="previous" aria-label="上一页">‹</button><text>{{index + 1 + ' / ' + total}}</text><button disabled="{{index === total - 1}}" bindtap="next" aria-label="下一页">›</button></view>
   <button wx:if="{{fullscreen && !controlsVisible}}" class="controls-hint" bindtap="controls">第{{index + 1}} / {{total}}页 · 轻点画面显示操作{{playing ? ' · 配音中' : ''}}</button>
   <view wx:if="{{audioError}}" class="error">{{audioError}}</view>
   <view wx:if="{{completed}}" class="panel completion-panel celebration">

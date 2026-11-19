@@ -99,9 +99,15 @@ let browser, checks = 0;
    const r = window.reader; r.data = structuredClone(def.data); r.dead = false; r.hidden = false; r.finished = false;
    r.onLoad({ id }); await new Promise(resolve => setTimeout(resolve, 0));
   };
+  // setData replaces the adapter DOM; decode retained images so a pending
+  // render cannot discard the image being checked midway through decode().
+  const decodedImages = new Map();
   window.imageReady = async () => {
    const r = window.reader, src = r.data.page.image; let width = r.ratio[0] * 100, height = r.ratio[1] * 100;
-   if (media[src]) { const img = document.querySelector('.art'); await img.decode(); width = img.naturalWidth; height = img.naturalHeight; }
+   if (media[src]) {
+    if (!decodedImages.has(src)) { const img = new Image(); img.src = media[src]; decodedImages.set(src, img); }
+    const img = decodedImages.get(src); await img.decode(); width = img.naturalWidth; height = img.naturalHeight;
+   }
    r.imageLoaded({ currentTarget: { dataset: { src } }, detail: { width, height } });
   };
  }, { sources, template, styles, books, media });
@@ -129,7 +135,7 @@ let browser, checks = 0;
      for (const next of boxes.slice(i + 1)) check(!(rect.left < next.right && rect.right > next.left && rect.top < next.bottom && rect.bottom > next.top), 'speech overlaps');
     });
    }
-   const frame = art.getBoundingClientRect(), player = document.querySelector('.player')?.getBoundingClientRect();
+   const frame = art.getBoundingClientRect(), player = document.querySelector('.player, .fullscreen-pages')?.getBoundingClientRect();
    if (player) check(player.top >= frame.bottom - 1 || player.left >= frame.right - 1, 'player overlaps art');
    if (r.data.fullscreen) {
     const reader = document.querySelector('.reader').getBoundingClientRect();
@@ -137,6 +143,9 @@ let browser, checks = 0;
     check(Math.abs(frame.left - r.data.safeLeft) < 1 && Math.abs(frame.width - (r.data.landscape ? r.data.frameWidth : innerWidth)) < 1, 'fullscreen art frame dimensions mismatch');
     if (r.data.landscape) check(frame.height >= innerHeight - r.data.safeTop - r.data.safeBottom - 1, 'landscape illustration lost usable height');
     check(Boolean(player) === r.data.controlsVisible, 'fullscreen controls not toggled');
+    check(!document.querySelector('.player, .languages, [bindtap="toggleLanguage"]'), 'fullscreen exposes language or audio settings');
+    const navigation = document.querySelector('.fullscreen-pages');
+    if (navigation) check(navigation.querySelectorAll('button').length === 2, 'fullscreen should only offer previous/next');
     if (player) check(player.bottom <= innerHeight + 1, 'fullscreen controls below window');
     const hint = document.querySelector('.controls-hint')?.getBoundingClientRect();
     if (hint) check(hint.bottom <= innerHeight + 1, 'fullscreen hint below window');
@@ -205,11 +214,11 @@ let browser, checks = 0;
  await p.evaluate(async id => { await window.openBook(id); const r = window.reader; r.show(r.pages.findIndex(page => page.dialogue), false); await window.imageReady(); }, dialogueBooks.find(b => b.pages.some(page => page.dialogue)).id);
  await p.evaluate(() => { const r = window.reader; r.setData({ fullscreen: true, controlsVisible: false }); r.frame(); r.controls(); r.controls(); }); await verify('fullscreen control toggle');
  await p.locator('.controls-hint').click(); await verify('tap to reveal fullscreen controls');
- assert.equal(await p.locator('.player').count(), 1);
+ assert.equal(await p.locator('.fullscreen-pages').count(), 1);
  await p.locator('.bubble').first().click();
  assert.equal(await p.evaluate(() => window.reader.data.controlsVisible), true, 'speech tap hid controls');
  await p.locator('.frame').click({ position: { x: 1, y: 1 } }); await verify('tap artwork to hide fullscreen controls');
- assert.equal(await p.locator('.player').count(), 0);
+ assert.equal(await p.locator('.fullscreen-pages').count(), 0);
  await p.evaluate(() => { const r = window.reader; r.imageFailed({ currentTarget: { dataset: { src: r.data.page.image } } }); });
  assert.equal(await p.locator('.bubble').count(), 0);
  assert.equal(await p.locator('.narration').textContent(), await p.evaluate(() => window.reader.data.language === 'zh' ? window.reader.data.page.text_zh : window.reader.data.page.text_original));

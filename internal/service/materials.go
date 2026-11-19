@@ -34,6 +34,16 @@ func (s *Materials) Read(ctx context.Context, id string) (repository.MaterialSna
 }
 func (s *Materials) IDs(ctx context.Context) ([]string, error) { return s.store.MaterialIDs(ctx) }
 
+func (s *Materials) NormalizePublishedAt(ctx context.Context) (int64, error) {
+	store, ok := s.store.(interface {
+		NormalizeMaterialPublishedAt(context.Context) (int64, error)
+	})
+	if !ok {
+		return 0, errors.New("物料存储不支持发布时间精度整理")
+	}
+	return store.NormalizeMaterialPublishedAt(ctx)
+}
+
 // AddCategory explicitly creates a known dictionary entry without rebuilding tables
 // or changing existing categories. Public clients continue to read MySQL options.
 func (s *Materials) AddCategory(ctx context.Context, id string) error {
@@ -78,6 +88,8 @@ func (s *Materials) Validate(b model.Book, check func([]string) error) error {
 // Save clears stale generated speech and typography after edits, validates the
 // complete book, then commits with an optimistic revision check under a row lock.
 func (s *Materials) Save(ctx context.Context, next repository.MaterialSnapshot, check func([]string) error) error {
+	next.Book.Author = catalog.CreatorName(next.Book.Author)
+	next.Book.Illustrator = catalog.CreatorName(next.Book.Illustrator)
 	next.Book.ReadingValue = strings.TrimSpace(next.Book.ReadingValue)
 	current, err := s.store.Material(ctx, next.Book.ID)
 	if err != nil && !errors.Is(err, sql.ErrNoRows) {

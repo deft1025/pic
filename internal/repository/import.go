@@ -26,6 +26,9 @@ func (r *MySQL) importBooks(ctx context.Context, books []model.Book, guard func(
 	generated := map[string]map[string]time.Time{}
 	// Validate the whole batch before starting any write.
 	for i, b := range books {
+		b.Author = catalog.CreatorName(b.Author)
+		b.Illustrator = catalog.CreatorName(b.Illustrator)
+		books[i] = b
 		if err := catalog.Validate(b, r.strict); err != nil {
 			return fmt.Errorf("%s: %w", b.ID, err)
 		}
@@ -40,7 +43,7 @@ func (r *MySQL) importBooks(ctx context.Context, books []model.Book, guard func(
 		if err != nil {
 			return fmt.Errorf("%s: published_at 必须是 ISO 8601 时间", b.ID)
 		}
-		published[i] = p.UTC()
+		published[i] = p.UTC().Truncate(time.Second)
 		for _, relation := range [][]string{b.Ages, b.Categories, b.Languages} {
 			unique := map[string]bool{}
 			for _, id := range relation {

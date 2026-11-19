@@ -94,6 +94,12 @@ for (const book of JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/li
  }
 }
 assert.ok(checked > 0);
+assert.equal(context.attribution('图米问。妈妈说：', ['图米', '妈妈'], 'zh'), true);
+assert.equal(context.attribution('asked Tumi. Mama replies,', ['Tumi', 'Mama'], 'en'), true);
+assert.equal(context.attribution('兰加老师回答：', ['兰加老师'], 'zh'), true);
+assert.equal(context.attribution('图米问。妈妈跑过来。', ['图米', '妈妈'], 'zh'), false);
+assert.equal(context.attribution('asked Tumi. Mama leaves.', ['Tumi', 'Mama'], 'en'), false);
+assert.equal(context.attribution('图米问。扎凯说：', ['图米', '妈妈'], 'zh'), false);
 view.render(sample);
 assert.ok(stage.querySelector('.reader-scene').classList.contains('reader-dialogue-mode'));
 assert.equal(stage.querySelector('.reader-dialogue').parentElement, picture, 'overlay has one stable parent on every viewport');

@@ -122,7 +122,7 @@ test('reader stops stale audio on page/language change, error, hide and unload',
  const c = client(o => o.url.endsWith('/pages') ? { items: [{ page_number: 1, image: '/1.jpg', text_zh: '一', text_original: 'one', audio_zh: '/1.mp3', audio_original: '/1-en.mp3' }, { page_number: 2, image: '/2.jpg', text_zh: '二', text_original: 'two', audio_zh: '/2.mp3', audio_original: '/2-en.mp3' }] } : { id: 'book', title_zh: '故事', content_version: 'v1' });
  const p = c.page('reader'); p.onLoad({ id: 'book' }); await tick(); p.play(); const first = c.audios.at(-1); assert.equal(first.playbackRate, 1); assert.equal(p.data.playing, true);
  p.next(); assert.equal(first.destroyed, true); const second = c.audios.at(-1); first.emit('ended'); assert.equal(p.data.index, 1); assert.equal(p.data.completed, false);
- p.language({ currentTarget: { dataset: { language: 'en' } } }); assert.equal(second.destroyed, true); const third = c.audios.at(-1); assert.equal(third.src.endsWith('/2-en.mp3'), true);
+ p.fullscreen(); p.language({ currentTarget: { dataset: { language: 'en' } } }); assert.equal(second.destroyed, true); const third = c.audios.at(-1); assert.equal(third.src.endsWith('/2-en.mp3'), true);
  third.emit('error'); assert.equal(third.destroyed, true); assert.ok(p.data.audioError); p.play(); const retry = c.audios.at(-1); assert.equal(p.data.audioError, '');
  p.onHide(); assert.equal(retry.destroyed, true); p.onShow(); p.play(); const final = c.audios.at(-1); p.onUnload(); assert.equal(final.destroyed, true);
 });
@@ -181,6 +181,20 @@ test('dialogue only merges adjacent turns at the same known mouth anchor', () =>
  const invalid = structuredClone(page); invalid.dialogue.parts[0].end.zh = 99999;
  assert.equal(d.split(invalid, 'zh', true).narration, page.text_zh);
  assert.equal(d.split(invalid, 'zh', true).bubbles.length, 0);
+});
+test('adjacent speaker attributions do not repeat below the art, while real narration remains', () => {
+ const d = require('../miniprogram/utils/dialogue');
+ const fixture = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json')));
+ const page = fixture.books.find(b => b.id === 'bd-tumi-goes-to-the-park').pages[1];
+ for (const language of ['zh', 'en']) {
+  const result = d.split(page, language, true);
+  assert.equal(result.bubbles.length, 4);
+  assert.equal(result.narration.trim(), '');
+ }
+ const classroom = fixture.books.find(b => b.id === 'bd-yes-you-can').pages[4];
+ const result = d.split(classroom, 'zh', true);
+ assert.ok(!result.narration.includes('老师回答'));
+ assert.ok(result.narration.includes('全班一起喊'));
 });
 test('reader settings are validated and restored without changing the approved default rate', () => {
  const c = client(); c.storage.set('pic-reader-settings', { night: true, showText: false, auto: true, rate: 999, language: 'en', dialogueMode: false });
@@ -388,10 +402,13 @@ test('fullscreen uses the window and safe areas, reveals controls on demand and 
  const p = c.page('reader'); p.onLoad({ id: 'book' }); await tick();
  p.fullscreen();
  assert.equal(p.data.controlsVisible, false); assert.equal(p.frameWidth, 390); assert.equal(p.data.safeTop, 64); assert.equal(p.data.safeBottom, 34);
+ const settings = [p.data.language, p.data.auto, p.data.rate];
+ p.toggleLanguage(); p.auto(); p.rate({ detail: { value: 2 } });
+ assert.deepEqual([p.data.language, p.data.auto, p.data.rate], settings, 'fullscreen changed preselected settings');
  const height = p.frameH;
- assert.equal(p.frameH + p.data.safeTop + 44 + p.data.narrationHeight + 36 + p.data.safeBottom, 844);
+ assert.equal(p.frameH + p.data.safeTop + 44 + p.data.narrationHeight + 48 + p.data.safeBottom, 844);
  p.next(); p.toggleLanguage(); assert.equal(p.frameH, height);
- p.controls(); assert.equal(p.data.controlsVisible, true); assert.ok(p.frameH < height);
+ p.controls(); assert.equal(p.data.controlsVisible, true); assert.equal(p.frameH, height);
  p.controls(); assert.equal(p.frameH, height);
  c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, statusBarHeight: 0 });
  c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 32 }); p.onResize();
@@ -651,7 +668,7 @@ test('switching language after paused audio restarts the silent final-page wait'
  const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick();
  for (let i = 0; i < book.pages.length; i++) reader.show(i, false);
  reader.play(); reader.play(); clock.advance(5000); assert.equal(reader.data.completed, false);
- reader.language({ currentTarget: { dataset: { language: 'en' } } });
+ reader.fullscreen(); reader.language({ currentTarget: { dataset: { language: 'en' } } });
  clock.advance(3999); assert.equal(reader.data.completed, false); clock.advance(1); assert.equal(reader.data.completed, true);
 });
 
@@ -663,7 +680,7 @@ test('fullscreen rotation uses resize-event dimensions while window metrics catc
  const reader = c.page('reader'); reader.onLoad({ id: 'book' }); await tick(); reader.fullscreen();
  reader.play(); const audio = c.audios.at(-1);
  reader.onResize({ size: { windowWidth: 844, windowHeight: 390 } });
- assert.equal(reader.data.landscape, true); assert.equal(reader.data.viewportHeight, 390); assert.ok(reader.frameWidth > 400 && reader.frameWidth < 600);
+ assert.equal(reader.data.landscape, true); assert.equal(reader.data.viewportHeight, 390); assert.ok(reader.frameWidth > 400 && reader.frameWidth <= 460);
  assert.equal(reader.data.safeLeft, 8, 'stale portrait safe area was reused');
  info = { windowWidth: 844, windowHeight: 390, screenHeight: 390, statusBarHeight: 0, safeArea: { left: 44, right: 800, bottom: 369 } };
  reader.frame(); assert.equal(reader.data.safeLeft, 44); assert.equal(reader.data.safeRight, 44); assert.equal(reader.data.safeBottom, 21);
