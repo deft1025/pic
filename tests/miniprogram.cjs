@@ -412,7 +412,7 @@ test('fullscreen uses the window and safe areas, reveals controls on demand and 
  p.controls(); assert.equal(p.frameH, height);
  c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, statusBarHeight: 0 });
  c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 32 }); p.onResize();
- assert.equal(p.data.landscape, true); assert.ok(p.frameWidth > 400 && p.frameWidth < 844); assert.equal(p.frameH, 342);
+ assert.equal(p.data.landscape, true); assert.ok(p.frameWidth > 600 && p.frameWidth < 844); assert.equal(p.frameH, 374);
  const landscapeHeight = p.frameH; p.controls(); assert.equal(p.frameH, landscapeHeight, 'landscape controls shrank the art');
  p.fullscreen(); assert.equal(p.data.fullscreen, false); assert.equal(p.data.controlsVisible, true);
 });
@@ -680,13 +680,59 @@ test('fullscreen rotation uses resize-event dimensions while window metrics catc
  const reader = c.page('reader'); reader.onLoad({ id: 'book' }); await tick(); reader.fullscreen();
  reader.play(); const audio = c.audios.at(-1);
  reader.onResize({ size: { windowWidth: 844, windowHeight: 390 } });
- assert.equal(reader.data.landscape, true); assert.equal(reader.data.viewportHeight, 390); assert.ok(reader.frameWidth > 400 && reader.frameWidth <= 460);
+ assert.equal(reader.data.landscape, true); assert.equal(reader.data.viewportHeight, 390); assert.equal(reader.frameWidth, 668);
  assert.equal(reader.data.safeLeft, 8, 'stale portrait safe area was reused');
  info = { windowWidth: 844, windowHeight: 390, screenHeight: 390, statusBarHeight: 0, safeArea: { left: 44, right: 800, bottom: 369 } };
  reader.frame(); assert.equal(reader.data.safeLeft, 44); assert.equal(reader.data.safeRight, 44); assert.equal(reader.data.safeBottom, 21);
  const height = reader.frameH; reader.controls(); assert.equal(reader.frameH, height); assert.ok(reader.data.narrationHeight > 24);
  reader.onResize({ size: { windowWidth: 390, windowHeight: 844 } }); assert.equal(reader.data.landscape, false); assert.equal(reader.frameWidth, 390);
  assert.equal(reader.audio, audio); assert.equal(audio.destroyed, false); assert.equal(c.audios.length, 1); assert.equal(reader.data.playing, true);
+ reader.onUnload();
+});
+
+test('square nightlight illustrations keep the landscape height while narration stays narrow', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-nightlight-can-stay');
+ const c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book);
+ c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, screenHeight: 390, statusBarHeight: 0, safeArea: { left: 44, right: 800, top: 0, bottom: 369 } });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 32 });
+ const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick(); reader.fullscreen();
+ assert.equal(reader.data.sidebarWidth, 152);
+ assert.equal(reader.frameWidth + reader.data.sidebarWidth + 8 + 44 + 44, 844);
+ assert.equal(reader.frameH, 361);
+ assert.equal(reader.artHeight, 361);
+ assert.equal(reader.data.ambientFill, true);
+ assert.ok(reader.data.safeTop + reader.data.fullscreenHeaderHeight - 36 >= 32, 'exit button overlaps the capsule');
+ reader.controls(); assert.equal(reader.artHeight, 361);
+ reader.next(); assert.equal(reader.artHeight, 361);
+ c.wx.getWindowInfo = () => ({ windowWidth: 390, windowHeight: 844, screenHeight: 844, statusBarHeight: 24, safeArea: { left: 0, right: 390, top: 24, bottom: 810 } });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ bottom: 56 });
+ reader.onResize(); assert.equal(reader.data.ambientFill, false, 'portrait still fills the background');
+ reader.fullscreen(); assert.equal(reader.data.ambientFill, false, 'ordinary reading still fills the background');
+ reader.onUnload();
+});
+
+test('wide landscape illustrations choose bottom captions when that makes the actual image larger', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'bd-shaka-and-mazi');
+ const c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book);
+ c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, screenHeight: 390, statusBarHeight: 0, safeArea: { left: 44, right: 800, top: 0, bottom: 369 } });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ left: 744, bottom: 32 });
+ const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick(); reader.fullscreen();
+ assert.equal(reader.data.bottomCaptions, true);
+ assert.equal(reader.data.ambientFill, false);
+ assert.equal(reader.frameWidth, 756); assert.equal(reader.frameH, 313);
+ assert.equal(reader.artWidth, 626); assert.equal(reader.artHeight, 313);
+ assert.equal(reader.data.narrationHeight, 48);
+ assert.ok(reader.artWidth > 575, 'actual image did not grow from the previous layout');
+ const dimensions = [reader.frameWidth, reader.frameH, reader.artWidth, reader.artHeight];
+ reader.controls(); reader.next();
+ assert.deepEqual([reader.frameWidth, reader.frameH, reader.artWidth, reader.artHeight], dimensions);
+ c.wx.getWindowInfo = () => ({ windowWidth: 568, windowHeight: 320, screenHeight: 320, statusBarHeight: 0, safeArea: { left: 0, right: 568, top: 0, bottom: 320 } });
+ c.wx.getMenuButtonBoundingClientRect = () => ({ left: 476, bottom: 32 });
+ reader.onResize();
+ assert.equal(reader.data.bottomCaptions, true);
+ assert.equal(reader.data.safeTop, 40, 'wide picture overlaps the capsule');
+ assert.equal(reader.artWidth, 448); assert.equal(reader.artHeight, 224);
+ assert.ok(reader.artWidth > 396, 'small landscape picture did not grow');
  reader.onUnload();
 });
 

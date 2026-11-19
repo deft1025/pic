@@ -2,7 +2,7 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 const dialogue = require('../../utils/dialogue');
 Page({
- data: { book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, frameWidth: 0, landscape: false, safeLeft: 0, safeRight: 0, safeBottom: 0, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
+ data: { ambientFill: false, bottomCaptions: false, book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, frameWidth: 0, landscape: false, safeLeft: 0, safeRight: 0, safeBottom: 0, sidebarWidth: 0, fullscreenHeaderHeight: 44, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
  onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
  onShow() { this.hidden = false; this.scheduleCompletion(); },
  onHide() { this.hidden = true; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
@@ -35,25 +35,48 @@ Page({
   const fresh = measured.windowWidth === info.windowWidth && measured.windowHeight === info.windowHeight;
   const capsule = fresh && wx.getMenuButtonBoundingClientRect ? wx.getMenuButtonBoundingClientRect() : null;
   const landscape = this.data.fullscreen && info.windowWidth > info.windowHeight && info.windowHeight <= 600;
-  const safeTop = Math.max(fresh ? info.statusBarHeight || 0 : 32, capsule?.bottom || 0) + 8;
   const safe = fresh ? info.safeArea : null;
+  // The capsule occupies only the right column in landscape; it must not
+  // subtract a full-width strip from the illustration's usable height.
+  let safeTop = landscape ? Math.max(8, fresh ? info.statusBarHeight || 0 : 0, safe?.top || 0)
+   : Math.max(fresh ? info.statusBarHeight || 0 : 32, capsule?.bottom || 0) + 8;
   const safeBottom = Math.max(8, info.screenHeight && safe ? info.screenHeight - safe.bottom : 0);
   const safeLeft = landscape ? Math.max(8, safe?.left || 0) : 0;
   const safeRight = landscape ? Math.max(8, safe?.right ? info.windowWidth - safe.right : 0) : 0;
-  // Keep a stable art frame across pages/languages. In short landscape, narration
-  // and controls share the side column instead of subtracting from image height.
+  // Keep a stable art frame across pages/languages. Compare a narrow side
+  // column with a bottom strip to maximize the complete, uncropped image.
   const hasNarration = this.data.imageError || this.pages.some(p => ['zh', 'en'].some(lang => dialogue.split(p, lang, true).narration.trim()));
-  const availableHeight = Math.max(1, info.windowHeight - safeTop - safeBottom);
-  const sidebar = Math.max(144, Math.min(190, Math.round(info.windowWidth * .2)));
+  let availableHeight = Math.max(1, info.windowHeight - safeTop - safeBottom);
+  const sidebarWidth = landscape ? Math.max(120, Math.min(152, Math.round(info.windowWidth * .18))) : 0;
   const availableWidth = Math.max(1, info.windowWidth - safeLeft - safeRight);
   const aspect = (this.ratio?.[0] || 4) / (this.ratio?.[1] || 3);
-  const width = landscape ? Math.max(1, Math.min(availableWidth - 12 - sidebar, availableHeight * aspect)) : this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
-  const narrationHeight = hasNarration ? landscape ? Math.max(24, availableHeight - 44 - 48) : Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
-  const height = landscape ? availableHeight : this.data.fullscreen
+  const sideWidth = Math.max(1, availableWidth - 8 - sidebarWidth);
+  const sideImageWidth = Math.min(sideWidth, availableHeight * aspect);
+  let bottomTop = safeTop;
+  let bottomHeight = Math.max(1, availableHeight - 48);
+  let bottomImageWidth = Math.min(availableWidth, bottomHeight * aspect);
+  const menu = capsule || (!fresh ? { left: info.windowWidth - 100, bottom: 32 } : null);
+  // A bottom caption strip releases the entire screen width for wide art.
+  // Keep the actual fitted image clear of the system capsule as well.
+  if (landscape && Number.isFinite(menu?.left) &&
+      safeLeft + (availableWidth + bottomImageWidth) / 2 > menu.left - 8 &&
+      bottomTop + (bottomHeight - bottomImageWidth / aspect) / 2 < menu.bottom + 8) {
+   bottomTop = Math.max(bottomTop, menu.bottom + 8);
+   bottomHeight = Math.max(1, info.windowHeight - bottomTop - safeBottom - 48);
+   bottomImageWidth = Math.min(availableWidth, bottomHeight * aspect);
+  }
+  // Choose once per viewport/book ratio, never by page text or control state.
+  const bottomCaptions = landscape && aspect > 1 && bottomImageWidth > sideImageWidth + 1;
+  if (bottomCaptions) { safeTop = bottomTop; availableHeight = Math.max(1, info.windowHeight - safeTop - safeBottom); }
+  const fullscreenHeaderHeight = landscape ? Math.max(40, (capsule?.bottom || (fresh ? 0 : 32)) - safeTop + 36) : 44;
+  const width = landscape ? bottomCaptions ? availableWidth : sideWidth : this.data.fullscreen ? info.windowWidth : Math.min(info.windowWidth, 1100) - 16;
+  const narrationHeight = hasNarration ? landscape ? bottomCaptions ? 48 : Math.max(24, availableHeight - fullscreenHeaderHeight - 48) : Math.min(112, Math.floor(info.windowHeight * .18)) : 0;
+  const height = landscape ? bottomCaptions ? bottomHeight : availableHeight : this.data.fullscreen
    ? Math.max(1, availableHeight - 44 - narrationHeight - 48)
    : Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * (this.ratio?.[1] || 3) / (this.ratio?.[0] || 4)));
+  const ambientFill = landscape && !bottomCaptions && aspect >= .9 && aspect <= 1.1 && width - height * aspect > 24;
   this.frameWidth = width; this.frameH = height;
-  this.setData({ frameHeight: height, frameWidth: width, landscape, safeTop, safeBottom, safeLeft, safeRight, viewportHeight: info.windowHeight, narrationHeight });
+  this.setData({ ambientFill, frameHeight: height, frameWidth: width, landscape, bottomCaptions, safeTop, safeBottom, safeLeft, safeRight, sidebarWidth, fullscreenHeaderHeight, viewportHeight: info.windowHeight, narrationHeight });
   this.artwork();
  },
  artwork() {

@@ -1,84 +1,49 @@
 # pic · 小小绘本馆
 
-**2026-11-12 当前流程**：MySQL 是正式书目唯一维护源，已只读核对18本217页。Codex 通过本机制作工具完成内容录入、图片/中英文配音、校验与打包，用户最多负责上传压缩包、解压。正式书目JSON不再人工维护、不提交Git；本机旧文件仅留备份。服务器使用 `deploy.sh`（git pull、Go编译、systemd），Docker配置已移除。日常制作入口为 `python3 scripts/materials.py … --book 书ID`，详见[操作手册](docs/operations.md)；下方早期导入说明不再是日常流程。
+面向0–6岁儿童与家长的免费双语绘本馆，包含Go API、原生HTML/CSS/JavaScript网页和微信小程序。MySQL是书目唯一维护源；正文、对白与资源路径经物料工具维护，不手工维护第二份书目JSON。
 
-面向 0–6 岁儿童与家长的免费双语绘本 Web MVP：Go API + MySQL + 原生 HTML/CSS/JavaScript，无前端构建依赖。视觉保持浅蓝、奶油白、黄色按钮、圆角卡片与柔和插画。
+## 本机运行
 
-## 运行
-
-需要 Go 1.25+ 和 MySQL（推荐 8.4）。当前 `.env`、数据库和初始书目已由用户配置，日常直接启动：
+需要Go 1.25+和MySQL（推荐8.4），从项目根目录运行：
 
 ```sh
-cd /Users/zx/Projects/pic
 go run ./cmd/api
 ```
 
-首页 **http://127.0.0.1:8198/**，健康检查 `/api/health`。运行时只读 MySQL，不回退 JSON。全新环境的建表说明见 [database.md](docs/database.md)，不要覆盖现有 `.env` 或重复初始化运营数据库。
+首页：http://127.0.0.1:8198/；健康检查：`/api/health`。配置自动读取 `.env`，支持 `--config` / `CONFIG_FILE` 与环境变量覆盖，公开模板见 [.env.example](.env.example)。不要打印、提交或覆盖真实凭据；现有数据库日常不运行dbinit、不主动建表或迁移。
 
-## 物料更新
+后端分层为 `router → handler → service → repository → model`；网页在 `web/`，小程序在 `miniprogram/`。运行与本机制作均查MySQL，数据库故障不回退JSON；`content/books/` 仅为本机历史备份。
 
-**生成 → 校验 → 打包上传并解压 → 确认资源可访问 → 导入 → 网页验证**。
+## 物料与部署
 
-完整步骤、每条命令的执行位置与常见错误统一见 [操作手册](docs/operations.md)。服务器素材目录为 `/root/www/pic/assets/books/`，主站配置为：
+Codex负责逐本选材、入库、图片和双语配音制作、校验与单书打包。用户上传 `web/assets/books/书ID.tar.gz` 到 `/root/www/pic/assets/books/` 并解压，当前远程验收由人工完成。具体命令见 [操作手册](docs/operations.md)。
 
-```dotenv
-ASSET_BASE_URL=https://img.xuninfo.top/pic
-```
+素材域名为 `https://img.xuninfo.top/pic`，数据库保存 `/assets/…` 相对路径，API通过 `ASSET_BASE_URL` 添加前缀。素材不随Git部署，内容更新刷新即可；服务器代码由用户通过 `bash deploy.sh` 更新，小程序客户端单独编译发布。
 
-本次全量包使用 `python3 scripts/package_assets.py`；后续单书使用 `python3 scripts/package_assets.py --book 书ID`，压缩包生成在 `web/assets/books/` 下。两种包的解压位置不同，见操作手册。
+## 微信小程序
 
-绘本图片、音频、试听和压缩包已排除出 Git / Docker 部署；主站不需要本地绘本目录。导入器默认本地缺失时通过素材域名校验，可用 `ASSET_CHECK_MODE=remote go run ./cmd/importer --validate-only` 强制检查全部远程资源。离线制作和单书打包仍使用本地文件，完整说明见操作手册。
+在项目根目录执行 `npm run setup:mini`，再用微信开发者工具导入 `miniprogram/`。接口为 `https://pic.xuninfo.top`，AppSecret只留后端。游客可阅读；账号收藏、已读与推荐需要已有五张读者表及后端 `MINI_PROGRAM_ENABLED` 开关，详见 [操作手册](docs/operations.md#微信小程序配置)。
 
-数据库继续保存 `/assets/…` 相对路径，API 自动添加域名前缀，不用改表。配置修改需重启；绘本入库后刷新网页即可。
-
-首批为 10 本 Book Dash 双语翻译与重绘版、121 页（历史记录，当前为18本217页）。图片和中英文各 121 页音频已由用户上传素材服务器，本地已上传的绘本文件及已用全量包已清理；书目 JSON 保留。用户反馈已执行 importer，实际数据库状态未独立复核。旧演示数据与试听已清理，不再保留旧清理步骤。
-
-配音参数统一在 [config/audio.json](config/audio.json)：中文晓晓 `zh-CN-XiaoxiaoNeural`、英文 Jenny `en-US-JennyNeural`，均为 `-20%` 生成语速，播放器默认 1 倍。缺音频时仅提供明确标注的设备朗读；现有方案不提供可控情绪风格。新文本或参数会产生新的音频版本目录，成功生成整本后由本地制作入口事务写回 MySQL。
-
-## 功能
-
-- 首页年龄与主题入口、精选/最新/睡前书目、继续上次阅读。
-- 分类搜索、组合筛选、排序分页、空结果推荐。
-- 详情、来源与署名、逐语言配音状态、本地收藏。
-- 逐页双语阅读、滑动/按键翻页、音频播放/暂停/继续、自动翻页与失败重试。
-- 夜间/全屏/文字显示、音量/倍速/定时停止、本地阅读进度和历史。
-- MySQL 事务导入、资源校验、配置管理、静态资源域名。
-
-网页版无需注册，收藏、进度与设置保存在当前浏览器。原生微信小程序支持游客阅读，登录后收藏和参与阅读统计，不保存阅读进度，见 [小程序说明](docs/miniprogram.md)。初期 `REQUIRE_LICENSE_APPROVAL=false`，保留授权字段，不增加审核门槛。
-
-## 配置与分层
-
-自动读取 `.env`，支持 `--config` / `CONFIG_FILE`，环境变量覆盖文件；完整模板为 [.env.example](.env.example)。不要打印或上传实际 `.env`。
-
-后端为 `router → handler → service → repository → model`，命令仅负责配置、组装和生命周期。静态界面在 `web/`；`content/books/` 仅留历史本机备份，不是日常制作源或运行时后备。
+网页版收藏、历史与设置保存在当前浏览器；小程序账号功能不接入PC，不保存阅读进度。书库与主题通过API读取，不在客户端维护书单。
 
 ## 检查
 
 ```sh
 make test
-# 单独检查前端流程；完整 DOM 测试需要先安装 package.json 的开发依赖
 npm run check
 npm run test:flows
 npm run test:reader
+npm run test:layout
+npm run test:mini
+npm run test:mini:layout
 ```
 
-检查结果和未验证范围见 [acceptance.md](docs/acceptance.md)。当前 schema 外键数量断言与 SQL 不一致，`make test` 尚未全绿；不要为消除测试失败擅自改变用户数据库。
+前端DOM与浏览器检查使用 `package.json` 的开发依赖。`make test` 在Python失败处停止，JS需单独执行。已知缺失schema文件及外键断言问题见 [验收记录](docs/acceptance.md)，不要为消除测试失败擅改运营数据库。
 
-## 文档入口
+## 文档
 
-| 文档 | 内容 |
-| --- | --- |
-| [AGENTS.md](AGENTS.md) | 后续 Codex 会话的项目约定、物料风格与当前状态 |
-| [operations.md](docs/operations.md) | 日常启动、生成、上传、入库、验证及清理 |
-| [materials.md](docs/materials.md) | 书目、分龄、共读问题和校对图 |
-| [content.md](docs/content.md) | JSON 字段与素材格式 |
-| [database.md](docs/database.md) | 表结构、初始化与事务说明 |
-| [architecture.md](docs/architecture.md) | 分层、配置与各包职责 |
-| [acceptance.md](docs/acceptance.md) | 当前验收状态及待验证项目 |
-| [prd.docx](docs/prd.docx) | 原始产品文档 |
+- [操作手册](docs/operations.md)：物料制作、选材、上传、时间字段及小程序维护。
+- [验收记录](docs/acceptance.md)：实际检查结果、历史交付及未验证范围。
+- [测试资料说明](tests/fixtures/README.md)：离线夹具用途及自动刷新方式。
 
-## 微信小程序
-
-原生客户端位于 `miniprogram/`。先在根目录执行 `npm run setup:mini`，再用微信开发者工具导入该目录；接口为 `https://pic.xuninfo.top`，AppSecret只留在后端。新账号功能默认关闭，现有库仅通过独立四张新表启用，见 [配置与验收说明](docs/miniprogram.md)。
-
-检查入口为 `npm run check:mini`、`npm run test:mini` 和 `npm run test:mini:layout`；浏览器模拟检查与微信模拟器/真机结果分开记录。
+本机Codex约定保存在被Git忽略的 `AGENTS.md`。书目数量和状态以实时查库为准，不在说明文档重复维护清单。

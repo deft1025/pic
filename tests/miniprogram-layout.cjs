@@ -68,7 +68,7 @@ let browser, checks = 0;
     out.setAttribute(attr.name, String(val));
    }
    if (node.localName === 'scroll-view' && value(node.getAttribute('scroll-y'), scope)) out.style.overflowY = 'auto';
-   if (tag === 'img') { out.style.objectFit = 'contain'; if (node.getAttribute('mode') === 'widthFix') out.style.height = 'auto'; }
+   if (tag === 'img') { out.style.objectFit = node.getAttribute('mode') === 'aspectFill' ? 'cover' : 'contain'; if (node.getAttribute('mode') === 'widthFix') out.style.height = 'auto'; }
    target.append(out); children(node, out, scope);
   }
   function render() {
@@ -77,7 +77,8 @@ let browser, checks = 0;
   }
   const wx = {
    getStorageSync: k => storage.get(k), setStorageSync: (k, v) => storage.set(k, structuredClone(v)), removeStorageSync: k => storage.delete(k),
-   getWindowInfo: () => ({ windowWidth: innerWidth, windowHeight: innerHeight, screenHeight: innerHeight, statusBarHeight: 0, safeArea: { bottom: innerHeight } }), setNavigationBarTitle() {}, showToast() {},
+   getWindowInfo: () => ({ windowWidth: innerWidth, windowHeight: innerHeight, screenHeight: innerHeight, statusBarHeight: 0, safeArea: { bottom: innerHeight }, ...window.deviceMetrics }),
+   getMenuButtonBoundingClientRect: () => window.deviceCapsule || null, setNavigationBarTitle() {}, showToast() {},
    request(o) { const data = o.url.endsWith('/pages') ? { items: currentBook.pages } : o.url.includes('/api/books/') ? currentBook : {}; queueMicrotask(() => o.success({ statusCode: 200, data })); },
    createSelectorQuery() { const selectors = []; return { in() { return this; }, selectAll(s) { selectors.push(s); return this; }, boundingClientRect() { return this; }, exec(fn) { fn(selectors.map(selector => [...document.querySelectorAll(selector)].map(el => { const r = el.getBoundingClientRect(); return { width: r.width, height: r.height }; }))); } }; }
   };
@@ -118,6 +119,13 @@ let browser, checks = 0;
    const failures = [], r = window.reader, art = document.querySelector('.frame'), overlay = document.querySelector('.overlay');
    const check = (ok, msg) => { if (!ok) failures.push(msg); };
    check(document.documentElement.scrollWidth <= innerWidth + 2, 'horizontal page overflow');
+   const ambient = document.querySelector('.ambient-art');
+   if (ambient) {
+    check(r.data.fullscreen && r.data.landscape && r.data.ambientFill && !r.data.imageError, 'ambient fill outside landscape art');
+    check(ambient.getAttribute('aria-hidden') === 'true', 'decorative background announced as story art');
+    check(document.querySelector('.art').getAttribute('mode') === 'aspectFit', 'ambient fill crops the actual illustration');
+    check(getComputedStyle(document.querySelector('.art')).filter === 'none', 'actual illustration is blurred');
+   }
    if (overlay && r.data.bubbles.length) {
     check(r.data.bubbleReady, 'bubbles not measured');
     check(document.querySelectorAll('.bubble').length === r.data.bubbles.length, 'missing speech');
@@ -141,7 +149,13 @@ let browser, checks = 0;
     const reader = document.querySelector('.reader').getBoundingClientRect();
     check(Math.abs(reader.height - innerHeight) < 1 && reader.top === 0, 'fullscreen does not fill window');
     check(Math.abs(frame.left - r.data.safeLeft) < 1 && Math.abs(frame.width - (r.data.landscape ? r.data.frameWidth : innerWidth)) < 1, 'fullscreen art frame dimensions mismatch');
-    if (r.data.landscape) check(frame.height >= innerHeight - r.data.safeTop - r.data.safeBottom - 1, 'landscape illustration lost usable height');
+    if (r.data.landscape) {
+     check(Math.abs(frame.height + (r.data.bottomCaptions ? 48 : 0) + r.data.safeTop + r.data.safeBottom - innerHeight) <= 1, 'landscape illustration lost usable height');
+     const narration = document.querySelector('.fullscreen-narration')?.getBoundingClientRect();
+     if (narration) check(r.data.bottomCaptions ? narration.height <= 48 : narration.width <= 153 && narration.width <= innerWidth * .22, 'landscape narration takes too much space');
+     if (narration) check(r.data.bottomCaptions ? narration.top >= frame.bottom - 1 : narration.left >= frame.right - 1, 'landscape narration covers the illustration');
+     check(Math.abs(frame.width + (r.data.bottomCaptions ? 0 : r.data.sidebarWidth + 8) + r.data.safeLeft + r.data.safeRight - innerWidth) <= 1, 'landscape gives spare illustration width to narration');
+    }
     check(Boolean(player) === r.data.controlsVisible, 'fullscreen controls not toggled');
     check(!document.querySelector('.player, .languages, [bindtap="toggleLanguage"]'), 'fullscreen exposes language or audio settings');
     const navigation = document.querySelector('.fullscreen-pages');
@@ -198,6 +212,40 @@ let browser, checks = 0;
   }
   }
  }
+ // Check the reported examples with a simulated landscape notch and capsule.
+ for (const id of ['sb-nightlight-can-stay', 'bd-shaka-and-mazi'].filter(id => selectedBooks.some(b => b.id === id))) {
+  await p.setViewportSize({ width: 844, height: 390 });
+  await p.evaluate(async id => {
+   window.deviceMetrics = { safeArea: { left: 44, right: 800, top: 0, bottom: 369 } };
+   window.deviceCapsule = { left: 744, bottom: 32 };
+   await window.openBook(id); const r = window.reader;
+   r.setData({ fullscreen: true, controlsVisible: true, language: 'zh' });
+   r.show(id === 'bd-shaka-and-mazi' ? 5 : 0, false); await window.imageReady(); r.frame();
+  }, id);
+  await verify(id + '/notch-and-capsule');
+  const dimensions = await p.evaluate(() => ({
+   imageWidth: window.reader.artWidth, imageHeight: window.reader.artHeight,
+   bottomCaptions: window.reader.data.bottomCaptions,
+   ambientFill: window.reader.data.ambientFill,
+   narration: document.querySelector('.fullscreen-narration').getBoundingClientRect().toJSON(),
+   imageMode: document.querySelector('.art').getAttribute('mode')
+  }));
+  assert.equal(dimensions.imageMode, 'aspectFit');
+  if (id === 'bd-shaka-and-mazi') {
+   assert.equal(dimensions.bottomCaptions, true);
+   assert.equal(dimensions.ambientFill, false);
+   assert.equal(dimensions.imageWidth, 626); assert.equal(dimensions.imageHeight, 313);
+   assert.equal(dimensions.narration.height, 48);
+  } else {
+   assert.equal(dimensions.bottomCaptions, false);
+   assert.equal(dimensions.ambientFill, true);
+   assert.equal(dimensions.imageWidth, 361); assert.equal(dimensions.imageHeight, 361);
+   assert.equal(dimensions.narration.width, 152);
+  }
+  if (output) { fs.mkdirSync(output, { recursive: true }); await p.screenshot({ path: path.join(output, id + '-844-safe-area.png') }); }
+  console.log('Landscape example ' + id + ': ' + JSON.stringify(dimensions));
+ }
+ await p.evaluate(() => { window.deviceMetrics = null; window.deviceCapsule = null; });
  // Exercise an actual orientation transition without reopening the book.
  for (const book of dialogueBooks) {
   await p.setViewportSize({ width: 390, height: 844 });
