@@ -339,7 +339,7 @@ func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, d
 		t.Fatal("new account has recommendation history", err)
 	}
 	first := model.RecommendationRecord{Date: "2026-11-10", BookIDs: []string{"a", "b", "c", "d"}}
-	saved, err := repo.SaveRecommendation(ctx, user, first)
+	saved, err := repo.SaveRecommendation(ctx, user, first, model.RecommendationRecord{})
 	if err != nil || !reflect.DeepEqual(saved, first) {
 		t.Fatal("first batch not saved", err, saved)
 	}
@@ -351,7 +351,7 @@ func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, d
 	if err = db.QueryRowContext(ctx, `SELECT id,created_at FROM reader_recommendations WHERE user_id=?`, user).Scan(&originalID, &originalCreated); err != nil {
 		t.Fatal(err)
 	}
-	saved, err = repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: first.Date, BookIDs: []string{"should-not-replace"}})
+	saved, err = repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: first.Date, BookIDs: []string{"should-not-replace"}}, model.RecommendationRecord{})
 	if err != nil || !reflect.DeepEqual(saved, first) {
 		t.Fatal("same day replaced batch", err)
 	}
@@ -360,7 +360,7 @@ func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, d
 		t.Fatal("same day changed timestamp", err)
 	}
 	next := model.RecommendationRecord{Date: "2026-11-17", BookIDs: []string{"e", "f", "g", "h"}}
-	saved, err = repo.SaveRecommendation(ctx, user, next)
+	saved, err = repo.SaveRecommendation(ctx, user, next, model.RecommendationRecord{})
 	if err != nil || !reflect.DeepEqual(saved, next) {
 		t.Fatal("return after multiple days did not replace batch", err)
 	}
@@ -378,7 +378,7 @@ func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, d
 		wg.Add(1)
 		go func(i int) {
 			defer wg.Done()
-			record, e := repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: "2026-11-18", BookIDs: []string{fmt.Sprintf("candidate-%d", i)}})
+			record, e := repo.SaveRecommendation(ctx, user, model.RecommendationRecord{Date: "2026-11-18", BookIDs: []string{fmt.Sprintf("candidate-%d", i)}}, model.RecommendationRecord{})
 			results <- record
 			failures <- e
 		}(i)
@@ -400,7 +400,7 @@ func testRecommendationHistory(t *testing.T, ctx context.Context, repo *MySQL, d
 			t.Fatal("concurrent requests got different batches")
 		}
 	}
-	saved, err = repo.SaveRecommendation(ctx, user, next)
+	saved, err = repo.SaveRecommendation(ctx, user, next, model.RecommendationRecord{})
 	if err != nil || !reflect.DeepEqual(saved, winner) {
 		t.Fatal("late old-date request replaced newer record", err)
 	}

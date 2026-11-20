@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"slices"
 	"time"
 
 	"pic/internal/model"
@@ -16,7 +17,7 @@ type RecommendationStore interface {
 
 type RecommendationHistoryStore interface {
 	RecommendationHistory(context.Context, string) (model.RecommendationRecord, error)
-	SaveRecommendation(context.Context, string, model.RecommendationRecord) (model.RecommendationRecord, error)
+	SaveRecommendation(context.Context, string, model.RecommendationRecord, model.RecommendationRecord) (model.RecommendationRecord, error)
 }
 
 func readRecommendation(ctx context.Context, db contentReader, user string) (model.RecommendationRecord, error) {
@@ -41,9 +42,9 @@ func (r *MySQL) RecommendationHistory(ctx context.Context, user string) (model.R
 	return readRecommendation(ctx, r.db, user)
 }
 
-// SaveRecommendation lets the first successful request win the day. Generation
-// and card loading happen beforehand, without holding a connection or row lock.
-func (r *MySQL) SaveRecommendation(ctx context.Context, user string, next model.RecommendationRecord) (model.RecommendationRecord, error) {
+// SaveRecommendation lets the first request win the day. A same-day repair can
+// replace only the exact batch read by the caller, preserving concurrent winners.
+func (r *MySQL) SaveRecommendation(ctx context.Context, user string, next, previous model.RecommendationRecord) (model.RecommendationRecord, error) {
 	tx, err := r.db.BeginTx(ctx, nil)
 	if err != nil {
 		return model.RecommendationRecord{}, err
@@ -58,7 +59,8 @@ func (r *MySQL) SaveRecommendation(ctx context.Context, user string, next model.
 		return model.RecommendationRecord{}, err
 	}
 	// Also prevents a request spanning midnight from replacing a newer batch.
-	if current.Date >= next.Date {
+	if current.Date > next.Date || (current.Date == next.Date &&
+		(previous.Date != current.Date || !slices.Equal(previous.BookIDs, current.BookIDs) || slices.Equal(next.BookIDs, current.BookIDs))) {
 		return current, nil
 	}
 	raw, err := json.Marshal(next.BookIDs)

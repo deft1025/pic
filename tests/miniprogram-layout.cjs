@@ -92,12 +92,13 @@ let browser, checks = 0;
   window.reader = { ...def, data: structuredClone(def.data), setData(patch, fn) { Object.assign(this.data, patch); render(); if (fn) queueMicrotask(fn); } };
   window.openBook = async id => {
    currentBook = books.find(b => b.id === id); const r = window.reader;
+   r.windowSize = null; r.leaving = false;
    r.serial = (r.serial || 0) + 1; r.pages = currentBook.pages; r.id = id; r.readingID = load('utils/state.js').id(); r.visited = new Set(); r.dead = false; r.hidden = false; const ratio = r.pages.find(p => p.dialogue)?.dialogue.aspect_ratio; r.ratio = ratio || [4, 3]; r.ratioReady = Boolean(ratio);
    r.setData({ fullscreen: false, controlsVisible: true, book: currentBook, total: r.pages.length, pageNames: r.pages.map((_, i) => '第' + (i + 1) + '页') }); r.frame(); r.show(0, false);
   };
   window.openOrdinaryBook = async id => {
    currentBook = books.find(b => b.id === id);
-   const r = window.reader; r.data = structuredClone(def.data); r.dead = false; r.hidden = false; r.finished = false;
+   const r = window.reader; r.data = structuredClone(def.data); r.dead = false; r.hidden = false; r.finished = false; r.windowSize = null; r.leaving = false;
    r.onLoad({ id }); await new Promise(resolve => setTimeout(resolve, 0));
   };
   // setData replaces the adapter DOM; decode retained images so a pending
@@ -113,6 +114,35 @@ let browser, checks = 0;
   };
  }, { sources, template, styles, books, media });
  const settle = async () => { await p.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))); };
+ async function verifyCompletion(label) {
+  await settle();
+  const errors = await p.evaluate(() => {
+   const errors = [], panel = document.querySelector('.completion-panel');
+   const rect = panel.getBoundingClientRect(), backdrop = document.querySelector('.completion-backdrop');
+   const style = getComputedStyle(backdrop), scroll = document.querySelector('.completion-scroll');
+   const content = document.querySelector('.completion-content');
+   // Finish finite entrance animations before checking touch geometry.
+   for (const animation of panel.getAnimations({ subtree: true })) animation.finish();
+   const bounds = e => e.getBoundingClientRect();
+   if (rect.left < parseFloat(style.paddingLeft) - 1 || rect.right > innerWidth - parseFloat(style.paddingRight) + 1 || rect.top < parseFloat(style.paddingTop) - 1 || rect.bottom > innerHeight - parseFloat(style.paddingBottom) + 1) errors.push('popup overlaps safe area');
+   if (scroll.scrollWidth > scroll.clientWidth + 1) errors.push('popup horizontal overflow');
+   const art = bounds(panel.querySelector('.completion-art')), copy = bounds(panel.querySelector('.completion-copy'));
+   if (art.left < copy.right && art.right > copy.left && art.top < copy.bottom && art.bottom > copy.top) errors.push('character overlaps message or actions');
+   const buttons = [...panel.querySelectorAll('.actions button')], boxes = buttons.map(bounds);
+   if (boxes.length !== 2 || Math.abs(boxes[0].width - boxes[1].width) > 1 || Math.abs(boxes[0].height - boxes[1].height) > 1) errors.push('unequal action sizes');
+   if (boxes.some(r => r.width < 80 || r.height < 44)) errors.push('action touch target too small');
+   if (bounds(content).height > scroll.clientHeight + 1 && getComputedStyle(scroll).overflowY !== 'auto') errors.push('short popup cannot scroll');
+   if (window.reader.data.completionCompact && copy.left < art.right - 1) errors.push('landscape character is not beside copy');
+   return errors;
+  });
+  assert.deepEqual(errors, [], label);
+  // Bounds alone miss a transparent layer intercepting the real button.
+  for (const selector of ['.completion-art', '.completion-panel .actions button:first-child', '.completion-panel .actions button:last-child']) {
+   const target = p.locator(selector); await target.scrollIntoViewIfNeeded();
+   assert.equal(await target.evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)); }), true, label + '/touch interception/' + selector);
+  }
+  checks++;
+ }
  async function verify(label) {
   await settle();
   const errors = await p.evaluate(() => {
@@ -286,6 +316,7 @@ let browser, checks = 0;
    assert.equal(await p.getByText('读完啦', { exact: true }).count(), 0);
    assert.equal(await p.locator('.completion-panel').count(), 0);
    await p.waitForFunction(() => window.reader.data.completed, null, { timeout: 7000 });
+   await verifyCompletion('silent-completion/' + width + '/' + fullscreen);
    assert.equal(await p.evaluate(() => window.reader.data.celebrationEnabled), true);
    assert.equal(await p.locator('.completion-panel').evaluate(e => { const r = e.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight + 1; }), true, 'celebration must be visible immediately without page scrolling');
    assert.equal(await p.locator('.completion-speaker').textContent(), '小川说');
@@ -320,6 +351,32 @@ let browser, checks = 0;
    assert.equal(await p.evaluate(() => window.reader.data.index), 0); checks++;
   }
  }
+ // Completion stays usable across phone rotations, safe areas, and both art
+ // layouts. In very short windows its native scroll-view exposes all actions.
+ for (const id of ['sb-nightlight-can-stay', 'bd-shaka-and-mazi']) {
+  for (const [width, height] of [[568, 320], [812, 375], [844, 390], [932, 430], [1024, 600], [568, 240]]) for (const fullscreen of [false, true]) {
+   await p.setViewportSize({ width, height });
+   await p.evaluate(async ({ id, width, height, fullscreen }) => {
+    window.deviceMetrics = { safeArea: { left: 44, right: width - 44, top: 0, bottom: height - 21 } };
+    window.deviceCapsule = { left: width - 100, bottom: 32 };
+    await window.openOrdinaryBook(id); const r = window.reader;
+    r.visited = new Set(r.pages.map((_, i) => i)); r.show(r.pages.length - 1, false);
+    r.setData({ fullscreen }); r.frame(); r.finish();
+   }, { id, width, height, fullscreen });
+   await verifyCompletion(id + '/completion-safe-area/' + width + '/' + height + '/' + fullscreen);
+   if (output && id === 'bd-shaka-and-mazi') await p.screenshot({ path: path.join(output, 'completion-safe-' + width + 'x' + height + (fullscreen ? '-fullscreen' : '') + '.png') });
+   await p.setViewportSize({ width: 390, height: 844 });
+   await p.evaluate(() => { window.deviceMetrics = null; window.deviceCapsule = null; window.reader.onResize({ size: { windowWidth: 390, windowHeight: 844 } }); });
+   await verifyCompletion(id + '/completion-rotate-portrait/' + width + '/' + fullscreen);
+   await p.setViewportSize({ width, height });
+   await p.evaluate(({ width, height }) => window.reader.onResize({ size: { windowWidth: width, windowHeight: height } }), { width, height });
+   await verifyCompletion(id + '/completion-rotate-back/' + width + '/' + fullscreen);
+   await p.locator('.completion-panel .actions button').first().click();
+   assert.equal(await p.locator('.completion-backdrop').count(), 0);
+   assert.equal(await p.evaluate(() => window.reader.data.index), 0);
+  }
+ }
+ await p.evaluate(() => { window.deviceMetrics = null; window.deviceCapsule = null; });
  // Every catalog entry shares the same popup, including books without dialogue.
  // Trigger directly here; fake-clock unit cases cover the real silent/audio triggers.
  for (const [width, height] of [[320, 568], [568, 320], [1366, 768]]) {

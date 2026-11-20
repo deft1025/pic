@@ -25,14 +25,24 @@
   <view wx:if="{{fullscreen && controlsVisible}}" class="fullscreen-pages"><button disabled="{{index === 0}}" bindtap="previous" aria-label="上一页">‹</button><text>{{index + 1 + ' / ' + total}}</text><button disabled="{{index === total - 1}}" bindtap="next" aria-label="下一页">›</button></view>
   <button wx:if="{{fullscreen && !controlsVisible}}" class="controls-hint" bindtap="controls">第{{index + 1}} / {{total}}页 · {{landscape ? '轻点翻页' : '轻点画面显示操作'}}{{playing && !landscape ? ' · 配音中' : ''}}</button>
   <view wx:if="{{audioError}}" class="error">{{audioError}}</view>
-  <view wx:if="{{completed}}" class="panel completion-panel celebration">
+ </block>
+</view>
+<view wx:if="{{completed}}" class="completion-backdrop" style="{{completionBackdropStyle}}">
+ <view class="completion-shade" catchtap="keepControls" catchtouchmove="keepControls"/>
+ <view class="completion-panel celebration {{completionCompact ? 'compact' : ''}}">
+  <scroll-view class="completion-scroll" scroll-y="{{true}}" style="height:{{completionHeight}}px">
+   <view class="completion-content">
     <button class="completion-art {{characterReply ? 'character-reply' : ''}}" bindtap="greet" aria-label="和{{completionCharacter ? completionCharacter.name : '故事小伙伴'}}击掌">
      <view class="character-portrait"><image wx:if="{{completionCharacter}}" src="{{completionCharacter.image}}" data-src="{{completionCharacter.image}}" binderror="portraitFailed" mode="widthFix" style="{{completionCharacter.portraitStyle}}"/><text wx:else class="completion-book">📖</text></view>
      <text class="completion-clap" aria-hidden="true">{{characterReply ? '🖐️' : '👏'}}</text><text class="completion-spark" aria-hidden="true">✦</text><text class="completion-spark spark-right" aria-hidden="true">✧</text><text wx:if="{{characterReply}}" class="completion-heart" aria-hidden="true">♥</text>
     </button>
+    <view class="completion-copy">
     <view class="completion-speaker">{{completionCharacter ? completionCharacter.name + '说' : '故事小伙伴说'}}</view>
     <view class="completion-message" aria-live="polite"><view>{{characterReply ? '收到你的击掌啦！' : '谢谢你陪我'}}</view><view>{{characterReply ? '下次还要一起读哦。' : '读完这个故事！'}}</view></view>
     <view class="completion-note">轻轻点一下，和我击掌吧</view>
-   <view class="actions"><button class="primary" bindtap="again">再读一次</button><button bindtap="shelf">返回书架</button></view></view>
- </block>
+    <view class="actions"><button class="primary" bindtap="again">再读一次</button><button bindtap="shelf">返回书架</button></view>
+    </view>
+   </view>
+  </scroll-view>
+ </view>
 </view>

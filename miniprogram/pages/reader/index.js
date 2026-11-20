@@ -2,7 +2,7 @@ const api = require('../../utils/api');
 const state = require('../../utils/state');
 const dialogue = require('../../utils/dialogue');
 Page({
- data: { ambientFill: false, bottomCaptions: false, book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, frameWidth: 0, landscape: false, safeLeft: 0, safeRight: 0, safeBottom: 0, sidebarWidth: 0, fullscreenHeaderHeight: 44, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
+ data: { completionCompact: false, completionHeight: 432, completionBackdropStyle: '', ambientFill: false, bottomCaptions: false, book: null, page: null, index: 0, total: 0, pageNames: [], language: 'zh', showText: true, fullscreen: false, controlsVisible: true, celebrationEnabled: true, completionCharacter: null, characterReply: false, viewportHeight: 0, frameWidth: 0, landscape: false, safeLeft: 0, safeRight: 0, safeBottom: 0, sidebarWidth: 0, fullscreenHeaderHeight: 44, narrationHeight: 0, bubbles: [], measurements: [], overflow: false, narration: '', bubbleReady: false, packed: false, playing: false, auto: false, rate: 1, rates: ['0.75倍', '1倍', '1.25倍'], error: '', audioError: '', imageError: false, imageReady: false, completed: false, safeTop: 24, frameHeight: 300, imageStyle: '', overlayStyle: '' },
  onLoad(query) { const saved = wx.getStorageSync('pic-reader-settings'); if (saved) { const clean = {}; for (const k of ['auto']) if (typeof saved[k] === 'boolean') clean[k] = saved[k]; if (['zh', 'en'].includes(saved.language)) clean.language = saved.language; if ([.75, 1, 1.25].includes(saved.rate)) clean.rate = saved.rate; this.setData(clean); } this.id = query.id; this.readingID = state.id(); this.visited = new Set(); this.serial = 0; this.load(); },
  onShow() { this.hidden = false; this.scheduleCompletion(); },
  onHide() { this.hidden = true; this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio(true); },
@@ -76,7 +76,17 @@ Page({
    : Math.max(130, Math.min(info.windowHeight * (info.windowWidth > info.windowHeight ? .62 : .7), width * (this.ratio?.[1] || 3) / (this.ratio?.[0] || 4)));
   const ambientFill = landscape && !bottomCaptions && aspect >= .9 && aspect <= 1.1 && width - height * aspect > 24;
   this.frameWidth = width; this.frameH = height;
-  this.setData({ ambientFill, frameHeight: height, frameWidth: width, landscape, bottomCaptions, safeTop, safeBottom, safeLeft, safeRight, sidebarWidth, fullscreenHeaderHeight, viewportHeight: info.windowHeight, narrationHeight });
+  // The greeting owns a separate viewport layer, including outside fullscreen.
+  // Give native scroll-view a definite height; do not depend on grid/transform
+  // sizing or a huge box-shadow in iOS's rotated compositing layer.
+  const completionCompact = info.windowWidth > info.windowHeight && info.windowHeight <= 600;
+  const modalTop = Math.max(16, fresh ? info.statusBarHeight || 0 : 32, safe?.top || 0, (capsule?.bottom || 0) + 8);
+  const modalBottom = Math.max(16, safeBottom);
+  const modalLeft = Math.max(16, (safe?.left || 0) + 8);
+  const modalRight = Math.max(16, safe?.right ? info.windowWidth - safe.right + 8 : 0);
+  const completionHeight = Math.max(1, Math.min(completionCompact ? 224 : 432, info.windowHeight - modalTop - modalBottom - 2));
+  const completionBackdropStyle = 'height:' + info.windowHeight + 'px;padding:' + modalTop + 'px ' + modalRight + 'px ' + modalBottom + 'px ' + modalLeft + 'px;';
+  this.setData({ completionCompact, completionHeight, completionBackdropStyle, ambientFill, frameHeight: height, frameWidth: width, landscape, bottomCaptions, safeTop, safeBottom, safeLeft, safeRight, sidebarWidth, fullscreenHeaderHeight, viewportHeight: info.windowHeight, narrationHeight });
   this.artwork();
  },
  artwork() {
@@ -203,7 +213,7 @@ Page({
  },
  scheduleCompletion() {
   this.cancelCompletion();
-  if (!this.data.celebrationEnabled || !this.data.total || this.data.index !== this.data.total - 1 || this.visited?.size !== this.data.total || this.data.completed || this.hidden || this.dead || this.audio || this.lastPageAudioStarted) return;
+  if (!this.data.celebrationEnabled || !this.data.total || this.data.index !== this.data.total - 1 || this.visited?.size !== this.data.total || this.data.completed || this.hidden || this.dead || this.leaving || this.audio || this.lastPageAudioStarted) return;
   const serial = this.serial;
   this.completionTimer = setTimeout(() => {
    this.completionTimer = null;
@@ -228,6 +238,7 @@ Page({
  portraitFailed(e) { if (e.currentTarget.dataset.src === this.data.completionCharacter?.image) this.setData({ completionCharacter: null }); },
  finish() {
   this.cancelCompletion();
+  if (this.leaving || this.dead || this.hidden) return;
   this.destroyAudio(true);
   if (this.visited.size < this.data.total) { wx.showToast({ title: '还有页面没读，先一起读完吧', icon: 'none' }); return; }
   const completionCharacter = this.completionPortrait();
@@ -238,6 +249,29 @@ Page({
   });
  },
  again() { this.finished = false; this.readingID = state.id(); this.visited = new Set(); this.show(0, false); },
- back() { if (getCurrentPages().length > 1) wx.navigateBack(); else this.shelf(); },
- shelf() { wx.switchTab({ url: '/pages/shelf/index' }); }
+ back() { this.leaveReader(getCurrentPages().length <= 1); },
+ shelf() { this.leaveReader(true); },
+ leaveReader(toShelf) {
+  if (this.leaving || this.dead) return;
+  this.leaving = true; this.serial++;
+  this.cancelCompletion(); this.cancelGreeting(); this.destroyAudio();
+  this.autoExpanded = false; this.playbackViewDismissed = false;
+  const completed = this.data.completed;
+  // Remove the native modal and immersive layers before switching back to a
+  // portrait tab, avoiding overlapping old/new layers during iPhone rotation.
+  this.setData({ completed: false, characterReply: false, completionCharacter: null, fullscreen: false, controlsVisible: true, ambientFill: false }, () => {
+   const navigate = () => {
+    if (this.dead || !this.leaving) return;
+    const fail = () => {
+     if (this.dead) return;
+     this.leaving = false;
+     this.setData({ completed, completionCharacter: completed ? this.completionPortrait() : null }, () => { this.frame(); this.scheduleCompletion(); });
+     wx.showToast({ title: '暂时没能返回，请再试试', icon: 'none' });
+    };
+    if (toShelf) wx.switchTab({ url: '/pages/shelf/index', fail });
+    else wx.navigateBack({ fail });
+   };
+   if (wx.nextTick) wx.nextTick(navigate); else navigate();
+  });
+ }
 });

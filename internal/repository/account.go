@@ -3,10 +3,13 @@ package repository
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"time"
 
 	"pic/internal/model"
 )
+
+var ErrFavoriteLimit = errors.New("reader favorite limit reached")
 
 // AccountStore keeps identity and reader state separate from catalog maintenance.
 type AccountStore interface {
@@ -108,6 +111,29 @@ func (s *MySQL) SetFavorites(ctx context.Context, user string, ids []string, act
 	if err = tx.QueryRowContext(ctx, `SELECT user_id FROM reader_users WHERE user_id=? FOR UPDATE`, user).Scan(&locked); err != nil {
 		return err
 	}
+	if active {
+		rows, err := tx.QueryContext(ctx, `SELECT book_id FROM reader_favorites WHERE user_id=? AND active=1`, user)
+		if err != nil {
+			return err
+		}
+		current := map[string]bool{}
+		for rows.Next() {
+			var id string
+			if err = rows.Scan(&id); err != nil {
+				rows.Close()
+				return err
+			}
+			current[id] = true
+		}
+		err = rows.Err()
+		rows.Close()
+		if err != nil {
+			return err
+		}
+		if err = checkFavoriteLimit(current, ids); err != nil {
+			return err
+		}
+	}
 	for _, id := range ids {
 		var old int
 		err = tx.QueryRowContext(ctx, `SELECT active FROM reader_favorites WHERE user_id=? AND book_id=?`, user, id).Scan(&old)
@@ -127,6 +153,21 @@ func (s *MySQL) SetFavorites(ctx context.Context, user string, ids []string, act
 		}
 	}
 	return tx.Commit()
+}
+
+func checkFavoriteLimit(current map[string]bool, ids []string) error {
+	added := map[string]bool{}
+	for _, id := range ids {
+		if !current[id] {
+			added[id] = true
+		}
+	}
+	// Existing over-limit accounts can remove books or retry old favorites;
+	// no existing favorites are silently removed when this rule is introduced.
+	if len(added) > 0 && len(current)+len(added) > model.ReaderFavoriteLimit {
+		return ErrFavoriteLimit
+	}
+	return nil
 }
 
 // RecordEvent stores one monotonic reading state per account and book.

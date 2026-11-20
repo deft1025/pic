@@ -257,6 +257,30 @@ test('failed account favorite changes preserve the server-confirmed state', asyn
  assert.deepEqual([...c.state.favorites()], ['book']);
 });
 
+test('a full shelf shows the server limit, keeps its cache and permits adding after cancellation', async () => {
+ let saved = Array.from({ length: 20 }, (_, i) => 'book-' + i);
+ const message = '最多收藏20本，请先取消部分收藏', toasts = [];
+ const c = client(o => {
+  if (o.url.endsWith('/profile')) return profile;
+  if (o.url.endsWith('/favorites') && o.method === 'GET') return { items: [...saved] };
+  if (o.url.endsWith('/favorites') && o.method === 'PUT') {
+   const id = o.data.book_ids[0];
+   if (o.data.active && saved.length >= 20) return { status: 400, body: { error: message } };
+   saved = saved.filter(x => x !== id); if (o.data.active) saved.push(id);
+   return { ok: true };
+  }
+  return { items: [] };
+ });
+ c.storage.set('pic-session', session); c.wx.showToast = options => toasts.push(options.title);
+ const detail = c.page('detail'); detail.id = 'new-book'; detail.refresh();
+ await detail.favorite();
+ assert.deepEqual(toasts, [message]); assert.equal(detail.data.busy, false); assert.equal(detail.data.favorite, false);
+ assert.equal(c.state.favorites().length, 20); assert.equal(c.state.favorites().includes('new-book'), false);
+ await c.state.toggleFavorite('book-0'); await detail.favorite();
+ assert.equal(detail.data.favorite, true); assert.equal(c.state.favorites().length, 20);
+ assert.equal(c.state.favorites().includes('book-0'), false); assert.equal(toasts.length, 1);
+});
+
 test('guests never send or queue reading statistics, and account queues remain isolated', async () => {
  const c = client(); c.state.event('book', 'open', c.state.id()); await c.state.flushEvents();
  assert.equal(c.requests.length, 0); assert.equal(c.storage.size, 0);
@@ -570,6 +594,45 @@ test('the completion character responds to a tap without recording another compl
  reader.greet(); reader.onHide(); assert.equal(reader.data.characterReply, false);
  reader.onShow(); reader.greet(); reader.again(); clock.advance(10000);
  assert.equal(reader.data.completed, false); assert.equal(reader.data.characterReply, false);
+});
+
+test('returning from a landscape completion removes native layers before navigation and allows retry', async () => {
+ const book = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'fixtures/library.json'))).books.find(b => b.id === 'sb-bean-in-a-pot');
+ const clock = manualClock(), c = client(o => o.url.endsWith('/pages') ? { items: book.pages } : book, clock);
+ c.wx.getWindowInfo = () => ({ windowWidth: 844, windowHeight: 390, screenHeight: 390, safeArea: { left: 44, right: 800, top: 0, bottom: 369 } });
+ const reader = c.page('reader'); reader.onLoad({ id: book.id }); await tick();
+ for (let i = 0; i < book.pages.length; i++) reader.show(i, false);
+ reader.fullscreen(); clock.advance(4000); reader.greet();
+ assert.equal(reader.data.completed, true); assert.equal(reader.data.fullscreen, true);
+ const rendered = [], nextTicks = [], navigations = [], setData = reader.setData;
+ c.wx.nextTick = cb => nextTicks.push(cb);
+ c.wx.switchTab = options => {
+  assert.equal(reader.data.completed, false); assert.equal(reader.data.fullscreen, false);
+  assert.equal(reader.data.characterReply, false); assert.equal(reader.data.playing, false);
+  navigations.push(options);
+ };
+ reader.setData = (patch, cb) => { setData(patch); if (cb) rendered.push(cb); };
+ reader.shelf(); reader.shelf(); reader.finish(); clock.advance(10000);
+ assert.equal(navigations.length, 0, 'navigation ran before native layers were removed');
+ assert.equal(reader.data.completed, false, 'late completion restored the departing overlay');
+ assert.equal(reader.replyTimer, null); assert.equal(reader.completionTimer, null);
+ rendered.shift()(); assert.equal(navigations.length, 0);
+ nextTicks.shift()(); assert.equal(navigations.length, 1); assert.equal(navigations[0].url, '/pages/shelf/index');
+ reader.setData = setData;
+ navigations[0].fail(); assert.equal(reader.data.completed, true); assert.equal(reader.leaving, false);
+ reader.shelf(); nextTicks.shift()(); assert.equal(navigations.length, 2, 'failed navigation left return locked');
+ reader.onHide(); reader.onUnload(); clock.advance(10000);
+ assert.equal(reader.data.completed, false);
+});
+
+test('reader back navigation also unmounts the completion and fullscreen layers', async () => {
+ const c = client(o => o.url.endsWith('/pages') ? { items: [{ text_zh: '故事', text_original: 'Story', image: '/p.jpg' }] } : { title_zh: '故事' });
+ const reader = c.page('reader'); reader.onLoad({ id: 'book' }); await tick();
+ reader.setData({ completed: true, fullscreen: true });
+ let returns = 0;
+ c.wx.navigateBack = () => { returns++; assert.equal(reader.data.completed, false); assert.equal(reader.data.fullscreen, false); };
+ reader.back(); reader.back(); assert.equal(returns, 1);
+ reader.onUnload();
 });
 
 test('configured age avatars follow saved profiles and logout, with a default and image failure fallback', async () => {

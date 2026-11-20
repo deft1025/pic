@@ -2,6 +2,8 @@ package model
 
 import "time"
 
+const ReaderFavoriteLimit = 20
+
 type Account struct {
 	ID           string `json:"id"`
 	Name         string `json:"name"`

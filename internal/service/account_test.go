@@ -14,6 +14,7 @@ import (
 	"github.com/go-sql-driver/mysql"
 
 	"pic/internal/model"
+	"pic/internal/repository"
 )
 
 type identityStub struct{ err error }
@@ -30,6 +31,28 @@ type accountsStub struct {
 	profile model.Account
 	event   model.ReadingEvent
 	calls   int
+}
+
+type favoriteLimitStub struct{ *accountsStub }
+
+func (s favoriteLimitStub) SetFavorites(ctx context.Context, user string, ids []string, active bool) error {
+	if active {
+		return repository.ErrFavoriteLimit
+	}
+	return s.accountsStub.SetFavorites(ctx, user, ids, active)
+}
+
+func TestFavoriteLimitIsAReadableClientErrorAndDoesNotBlockRemoval(t *testing.T) {
+	ctx, service, store, _ := accountService()
+	service.store = favoriteLimitStub{store}
+	err := service.SetFavorites(ctx, "owner", []string{"book"}, true)
+	var detail *Error
+	if !errors.Is(err, ErrInvalidQuery) || !errors.As(err, &detail) || detail.Code != "favorite_limit" || detail.Message != "最多收藏20本，请先取消部分收藏" {
+		t.Fatal("limit was hidden as a server failure", err)
+	}
+	if err = service.SetFavorites(ctx, "owner", []string{"book"}, false); err != nil {
+		t.Fatal("full account cannot cancel favorites", err)
+	}
 }
 
 func (s *accountsStub) Login(_ context.Context, open, hash string, expires time.Time) (model.Account, error) {

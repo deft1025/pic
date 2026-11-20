@@ -269,7 +269,11 @@ func (s *Accounts) SetFavorites(ctx context.Context, user string, ids []string, 
 		}
 	}
 	sort.Strings(ordered)
-	return accountUnavailable(s.store.SetFavorites(ctx, user, ordered, active))
+	err := s.store.SetFavorites(ctx, user, ordered, active)
+	if errors.Is(err, repository.ErrFavoriteLimit) {
+		return &Error{Kind: ErrInvalidQuery, Code: "favorite_limit", Message: "最多收藏20本，请先取消部分收藏"}
+	}
+	return accountUnavailable(err)
 }
 func (s *Accounts) RecordEvent(ctx context.Context, user string, e model.ReadingEvent) error {
 	if user == "" {
