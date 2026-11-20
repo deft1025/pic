@@ -14359,7 +14359,7 @@
       "featured_order": 0,
       "published_at": "2026-11-19T08:52:41Z",
       "publish_status": "published",
-      "content_version": "materials-d770eb88f8651dcd84e99850366cd2e23cddb87b86d53a9c85183c554b1d9b9d",
+      "content_version": "materials-30de68161100e7f980bc098cef843300a5293f275277a950c31244d727ec6f0e",
       "is_demo": false,
       "license": {
         "type": "CC BY 4.0 · 原画整理与双语翻译版",
@@ -14564,6 +14564,20 @@
                   60
                 ]
               }
+            ],
+            "text_regions": [
+              [
+                67,
+                0,
+                33,
+                43
+              ],
+              [
+                67,
+                70,
+                33,
+                30
+              ]
             ]
           }
         },
@@ -14677,6 +14691,14 @@
                   38
                 ]
               }
+            ],
+            "text_regions": [
+              [
+                67,
+                36,
+                33,
+                64
+              ]
             ]
           }
         },
@@ -14769,6 +14791,14 @@
                   27
                 ]
               }
+            ],
+            "text_regions": [
+              [
+                67,
+                40,
+                33,
+                60
+              ]
             ]
           }
         },
@@ -14903,6 +14933,14 @@
                   25
                 ]
               }
+            ],
+            "text_regions": [
+              [
+                67,
+                40,
+                33,
+                60
+              ]
             ]
           }
         },

@@ -28,6 +28,9 @@ func TestDialogueTextIntegrityAndUTF16Bounds(t *testing.T) {
 		wantError bool
 	}{
 		{"valid bilingual layout", func(*model.Page) {}, false},
+		{"verified blank regions", func(p *model.Page) { p.Dialogue.TextRegions = [][4]float64{{68, 32, 32, 68}} }, false},
+		{"blank region outside image", func(p *model.Page) { p.Dialogue.TextRegions = [][4]float64{{68, 32, 33, 68}} }, true},
+		{"empty blank region", func(p *model.Page) { p.Dialogue.TextRegions = [][4]float64{{68, 32, 0, 68}} }, true},
 		{"same length text change", func(p *model.Page) { p.TextZH = "您好😀" }, true},
 		{"surrogate split", func(p *model.Page) { p.Dialogue.Parts[0].End["zh"] = 3 }, true},
 		{"missing speaker", func(p *model.Page) { delete(p.Dialogue.Parts[0].Speaker, "en") }, true},

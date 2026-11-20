@@ -21,6 +21,12 @@ func storedDialogue(textZH, textEN string) []byte {
 func TestDialogueReadAndLegacySchema(t *testing.T) {
 	for _, legacy := range []bool{false, true} {
 		layout := storedDialogue("你好", "Hello")
+		var authored model.DialogueLayout
+		if err := json.Unmarshal(layout, &authored); err != nil {
+			t.Fatal(err)
+		}
+		authored.TextRegions = [][4]float64{{68, 32, 32, 68}}
+		layout, _ = json.Marshal(authored)
 		state := &importState{legacy: legacy, layout: layout}
 		db := sql.OpenDB(testConnector{state})
 		pages, err := New(db, false).Pages(context.Background(), "a-book")
@@ -30,6 +36,9 @@ func TestDialogueReadAndLegacySchema(t *testing.T) {
 		}
 		if (pages[0].Dialogue == nil) != legacy {
 			t.Fatalf("layout not restored: %+v", pages[0])
+		}
+		if !legacy && (len(pages[0].Dialogue.TextRegions) != 1 || pages[0].Dialogue.TextRegions[0] != authored.TextRegions[0]) {
+			t.Fatal("verified empty areas were not returned with the dialogue")
 		}
 		if pages[0].TextZH != "你好" {
 			t.Fatal("legacy read changed the story")

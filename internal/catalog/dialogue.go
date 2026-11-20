@@ -24,6 +24,14 @@ func ValidateDialogue(p model.Page, languages []string) error {
 			return fmt.Errorf("对白画幅比例无效")
 		}
 	}
+	if len(d.TextRegions) > 8 {
+		return fmt.Errorf("对白空白区域最多8个")
+	}
+	for _, r := range d.TextRegions {
+		if !finite(r[0]) || !finite(r[1]) || !finite(r[2]) || !finite(r[3]) || r[0] < 0 || r[1] < 0 || r[2] <= 0 || r[3] <= 0 || r[0]+r[2] > 100 || r[1]+r[3] > 100 {
+			return fmt.Errorf("对白空白区域须在画面百分比范围内")
+		}
+	}
 	for _, language := range languages {
 		text := p.TextZH
 		if language == "en" {

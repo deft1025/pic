@@ -119,7 +119,7 @@ Page({
   const layoutID = (this.layoutID || 0) + 1; this.layoutID = layoutID;
   // Native scroll-view fills its parent, so measure text nodes independently.
   // Try authored, narrow and wide widths before deciding where each bubble fits.
-  const bubbles = this.data.bubbles, measurements = dialogue.measurements(bubbles, width);
+  const bubbles = this.data.bubbles, measurements = dialogue.measurements(bubbles, width, this.data.page.dialogue?.text_regions);
   this.setData({ measurements, bubbleReady: false, packed: false, overflow: false }, () => {
    const query = wx.createSelectorQuery().in(this);
    query.selectAll('.bubble-measure').boundingClientRect();
@@ -134,17 +134,17 @@ Page({
      choices[m.index].push({ w: Math.min(m.width, Math.ceil(Math.max(words.width, speaker.width)) + 17), h: Math.ceil(outer.height), header: Math.ceil(outer.height - words.height) });
     });
     if (choices.some(options => !options.length)) return;
-    let placements = dialogue.positions(bubbles, choices, width, height), packed = false, overflow = false;
+    let placements = dialogue.positions(bubbles, choices, width, height, this.data.page.dialogue?.text_regions), packed = false, overflow = false;
     if (!placements) {
      if (!grouped) {
       const merged = dialogue.merge(bubbles, this.data.page, language);
       if (merged.length < bubbles.length) { this.setData({ bubbles: merged }, () => this.layout(true)); return; }
      }
-     const result = dialogue.pack(bubbles, choices, width, height);
+     const result = dialogue.pack(bubbles, choices, width, height, this.data.page.dialogue?.text_regions);
      placements = result.placements; packed = true; overflow = result.overflow;
     }
     this.setData({ measurements: [], bubbles: bubbles.map((b, i) => {
-     const r = placements[i], bodyHeight = Math.max(24, r.h - r.header);
+     const r = placements[i], bodyHeight = Math.max(22, r.h - r.header);
      return { ...b, style: 'left:' + r.x + 'px;top:' + r.y + 'px;width:' + r.w + 'px;', scroll: r.scroll, scrollStyle: 'height:' + bodyHeight + 'px;', tailStyle: overflow ? '' : this.tail(b, r, width, height) };
     }), bubbleReady: true, packed, overflow });
    });

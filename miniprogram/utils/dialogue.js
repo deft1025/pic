@@ -31,11 +31,11 @@ function split(page, language, enabled) {
  return { bubbles, narration: narration.join('') };
 }
 // Width choices share real text measurements with both free placement and packing.
-function measurements(bubbles, width) {
+function measurements(bubbles, width, regions = []) {
  const max = Math.min(300, width - 12), result = [];
  bubbles.forEach((b, index) => {
   const preferred = clamp((b.part.width || 44) * width / 100, Math.min(90, max), max);
-  const limits = [preferred, (width - 18) / 2, (width - 24) / 3, max];
+  const limits = [preferred, (width - 18) / 2, (width - 24) / 3, max, ...regions.map(r => r[2] * width / 100 - 12)];
   for (const limit of new Set(limits.filter(n => n >= Math.min(80, max)).map(Math.floor))) {
    result.push({ key: index + '-' + limit, index, width: limit, words: b.words, speaker: b.speaker });
   }
@@ -45,8 +45,22 @@ function measurements(bubbles, width) {
 const distance = (r, p) => Math.hypot(p[0] - clamp(p[0], r.x, r.x + r.w), p[1] - clamp(p[1], r.y, r.y + r.h));
 const intersects = (a, b, gap = 6) => a.x < b.x + b.w + gap && a.x + a.w + gap > b.x && a.y < b.y + b.h + gap && a.y + a.h + gap > b.y;
 const target = (bubble, w, h) => bubble.part.target ? bubble.part.target.map((v, i) => v * (i ? h : w) / 100) : [bubble.part.x * w / 100, bubble.part.y * h / 100];
-function positions(bubbles, choices, width, height) {
+function emptyAreas(regions, width, height) {
+ return regions.filter(r => Array.isArray(r) && r.length === 4 && r.every(Number.isFinite) && r[0] >= 0 && r[1] >= 0 && r[2] > 0 && r[3] > 0 && r[0] + r[2] <= 100 && r[1] + r[3] <= 100)
+  .map(r => ({ x: r[0] * width / 100, y: r[1] * height / 100, w: r[2] * width / 100, h: r[3] * height / 100 }));
+}
+function illustrationCost(r, areas, width, height, speaker) {
+ if (!areas.length) return 0;
+ const limit = Math.min(width, height) * .5;
+ // Distant white space must not pull a bubble away from its speaking character.
+ if (distance(r, speaker) > limit) return limit;
+ const empty = areas.reduce((sum, a) => sum + Math.max(0, Math.min(r.x + r.w, a.x + a.w) - Math.max(r.x, a.x)) * Math.max(0, Math.min(r.y + r.h, a.y + a.h) - Math.max(r.y, a.y)), 0);
+ // Prefer verified empty space while retaining the distance cost to the speaker.
+ return (1 - Math.min(1, empty / (r.w * r.h))) * limit;
+}
+function positions(bubbles, choices, width, height, regions = []) {
  const pad = 6, guard = 10, targets = bubbles.filter(b => b.part.target).map(b => target(b, width, height));
+ const areas = emptyAreas(regions, width, height);
  const attempt = order => {
   const placed = [];
   for (const i of order) {
@@ -54,11 +68,16 @@ function positions(bubbles, choices, width, height) {
    for (const size of choices[i]) {
     const w = size.w, h = size.h;
     if (h > height - 2 * pad || w > width - 2 * pad) continue;
-    for (const x0 of [t[0] - w / 2, t[0] + guard, t[0] - guard - w, b.part.x * width / 100, pad, width - w - pad]) {
-     for (const y0 of [t[1] - guard - h, t[1] + guard, t[1] - h / 2, b.part.y * height / 100, pad, height - h - pad]) {
+    const xs = [t[0] - w / 2, t[0] + guard, t[0] - guard - w, b.part.x * width / 100, pad, width - w - pad];
+    const ys = [t[1] - guard - h, t[1] + guard, t[1] - h / 2, b.part.y * height / 100, pad, height - h - pad];
+    for (const a of areas) { xs.push(a.x + pad, a.x + a.w - w - pad); ys.push(a.y + pad, a.y + a.h - h - pad); }
+    // Stack in the free region without depending on the authored speech order.
+    if (areas.length) for (const r of placed.filter(Boolean)) { xs.push(r.x - w - pad, r.x + r.w + pad); ys.push(r.y - h - pad, r.y + r.h + pad); }
+    for (const x0 of xs) {
+     for (const y0 of ys) {
       const r = { x: clamp(x0, pad, width - w - pad), y: clamp(y0, pad, height - h - pad), w, h, header: size.header, scroll: false };
       if (placed.some(o => o && intersects(r, o)) || targets.some(p => distance(r, p) < guard)) continue;
-      const score = distance(r, t) * .3 + Math.hypot(r.x - b.part.x * width / 100, r.y - b.part.y * height / 100) * .08 + w * h / (width * height) * 100;
+      const score = distance(r, t) * .3 + Math.hypot(r.x - b.part.x * width / 100, r.y - b.part.y * height / 100) * .08 + w * h / (width * height) * 100 + illustrationCost(r, areas, width, height, t);
       if (!best || score < best.score) best = { ...r, score };
      }
     }
@@ -68,14 +87,19 @@ function positions(bubbles, choices, width, height) {
   return placed;
  };
  const order = bubbles.map((_, i) => i);
- return attempt(order) || attempt(order.reverse());
+ if (!areas.length) return attempt(order) || attempt(order.reverse());
+ const results = [order, [...order].reverse(), [...order].sort((a, b) => Math.min(...choices[b].map(s => s.w * s.h)) - Math.min(...choices[a].map(s => s.w * s.h)))].map(attempt).filter(Boolean);
+ const nearby = positions(bubbles, choices, width, height);
+ if (nearby) results.push(nearby.map((r, i) => ({ ...r, score: r.score + illustrationCost(r, areas, width, height, target(bubbles[i], width, height)) })));
+ return results.sort((a, b) => a.reduce((sum, r) => sum + r.score, 0) - b.reduce((sum, r) => sum + r.score, 0))[0] || null;
 }
 function permutations(items) {
  if (items.length < 2) return [items];
  return items.flatMap((item, i) => permutations(items.filter((_, j) => j !== i)).map(rest => [item, ...rest]));
 }
-function pack(bubbles, choices, width, height) {
+function pack(bubbles, choices, width, height, regions = []) {
  const pad = 6, gap = 6, targets = bubbles.filter(b => b.part.target).map(b => target(b, width, height));
+ const areas = emptyAreas(regions, width, height);
  const indices = bubbles.map((_, i) => i), orders = indices.length <= 4 ? permutations(indices) : [indices];
  let best = null;
  for (let columns = 1; columns <= Math.min(3, bubbles.length); columns++) {
@@ -84,7 +108,7 @@ function pack(bubbles, choices, width, height) {
   if (cw < Math.min(80, width - pad * 2)) continue;
   const eligible = choices.map(options => options.filter(size => size.w <= cw + .1));
   if (eligible.some(options => !options.length)) continue;
-  const minimumHeight = Math.max(76, ...eligible.map(options => Math.min(...options.map(size => size.header + 24))));
+  const minimumHeight = Math.max(76, ...eligible.map(options => Math.min(...options.map(size => size.header + 22))));
   const ch = Math.max(minimumHeight, available), overflow = ch > available;
   for (const order of orders) {
    let score = overflow ? width * height : 0; const placed = [];
@@ -95,11 +119,11 @@ function pack(bubbles, choices, width, height) {
     for (const size of choices[i]) {
      if (size.w > cw + .1) continue;
      const h = Math.min(size.h, ch), w = size.w;
-     if (h < size.header + 24) continue;
+     if (h < size.header + 22) continue;
      for (const x of [cell.x, cell.x + cw - w]) for (const y of [cell.y, cell.y + ch - h]) {
       const r = { x, y, w, h, header: size.header, scroll: h < size.h };
       const covered = targets.reduce((sum, p) => sum + Math.max(0, 10 - distance(r, p)), 0);
-      const cost = covered * 20 + distance(r, t) * .3 + Math.hypot(x - b.part.x * width / 100, y - b.part.y * height / 100) * .08 + w * h / (width * height) * 100 + (size.h - h) * 50;
+      const cost = covered * 20 + distance(r, t) * .3 + Math.hypot(x - b.part.x * width / 100, y - b.part.y * height / 100) * .08 + w * h / (width * height) * 100 + (size.h - h) * 50 + illustrationCost(r, areas, width, height, t);
       if (!candidate || cost < candidate.cost) candidate = { ...r, cost };
      }
     }

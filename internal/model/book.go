@@ -37,6 +37,8 @@ type DialogueLayout struct {
 	Length      map[string]int    `json:"length"`
 	TextSHA256  map[string]string `json:"text_sha256"`
 	Parts       []DialoguePart    `json:"parts"`
+	// TextRegions marks verified empty illustration areas, in x/y/width/height percentages.
+	TextRegions [][4]float64 `json:"text_regions,omitempty"`
 }
 
 type DialoguePart struct {

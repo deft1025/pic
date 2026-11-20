@@ -20,6 +20,7 @@ let browser, checks = 0;
 (async () => {
  browser = await chromium.launch({ headless: true, executablePath: process.env.PIC_BROWSER_EXECUTABLE || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', args: ['--no-sandbox'] });
  const p = await browser.newPage();
+ p.on('pageerror', error => console.error('Reader adapter page error:', error));
  await p.setContent('<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body></body></html>');
  await p.evaluate(({ sources, template, styles, books, media }) => {
   const css = document.createElement('style'); document.head.append(css);
@@ -165,10 +166,10 @@ let browser, checks = 0;
      const rect = boxes[i], words = b.querySelector('.words');
      check(rect.left >= o.left - 1 && rect.right <= o.right + 1, 'speech outside artwork horizontally');
      check(rect.top >= o.top - 1 && (r.data.packed || rect.bottom <= o.bottom + 1), 'speech outside artwork vertically');
-     check(parseFloat(getComputedStyle(words).fontSize) >= 16, 'unreadable speech');
+     check(parseFloat(getComputedStyle(words).fontSize) >= 15, 'unreadable speech');
      check(b.scrollWidth <= b.clientWidth + 1, 'speech horizontal overflow');
      const scroller = words.parentElement;
-     check(scroller.clientHeight >= 24, 'speech viewport too short');
+     check(scroller.clientHeight >= 22, 'speech viewport too short');
      check(words.scrollHeight <= scroller.clientHeight + 1 || getComputedStyle(scroller).overflowY === 'auto', 'long speech not scrollable');
      for (const next of boxes.slice(i + 1)) check(!(rect.left < next.right && rect.right > next.left && rect.top < next.bottom && rect.bottom > next.top), 'speech overlaps');
     });

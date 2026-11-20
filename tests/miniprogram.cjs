@@ -386,6 +386,23 @@ test('shelf drops delayed private books when the account logs out during loading
  shelf.next(); assert.equal(shelf.data.items.length, 0);
 });
 
+test('nearby verified empty areas reduce illustration coverage without pulling speech away from its character', () => {
+ const d = require('../miniprogram/utils/dialogue');
+ const bubbles = [{ part: { x: 25, y: 4, width: 28, target: [45, 30] } }, { part: { x: 35, y: 55, width: 28, target: [55, 65] } }];
+ const choices = bubbles.map(() => [{ w: 110, h: 70, header: 26 }]);
+ const near = d.positions(bubbles, choices, 400, 240);
+ const inWhite = d.positions(bubbles, choices, 400, 240, [[65, 0, 35, 100]]);
+ assert.ok(near.every(r => r.x < 260));
+ assert.ok(inWhite.every(r => r.x >= 260 && r.x + r.w <= 400));
+ assert.ok(inWhite[0].y + inWhite[0].h <= inWhite[1].y || inWhite[1].y + inWhite[1].h <= inWhite[0].y);
+ const distant = [{ part: { x: 2, y: 4, width: 28, target: [8, 50] } }];
+ const staysNear = d.positions(distant, choices.slice(0, 1), 400, 240, [[65, 0, 35, 100]]);
+ assert.ok(staysNear[0].x < 140, 'distant white column pulled speech away from the character');
+ const small = d.pack(bubbles, choices, 180, 90, [[65, 0, 35, 100]]);
+ assert.equal(small.placements.length, 2);
+ assert.ok(small.placements.every(r => r.x >= 0 && r.x + r.w <= 180));
+});
+
 test('compact packing uses measured content height instead of stretching short speech into cells', () => {
  const d = require('../miniprogram/utils/dialogue');
  const bubbles = [20, 80].map(x => ({ part: { x, y: 10, width: 44, target: [x, 60] } }));
@@ -394,7 +411,10 @@ test('compact packing uses measured content height instead of stretching short s
  assert.equal(result.overflow, false); assert.equal(result.placements.length, 2);
  for (const r of result.placements) { assert.equal(r.h, 52); assert.equal(r.w, 96); assert.equal(r.scroll, false); }
  const tiny = d.pack(bubbles.slice(0, 1), [[{ w: 64, h: 196, header: 100 }]], 80, 130);
- assert.equal(tiny.overflow, true); assert.ok(tiny.placements[0].h >= 124); assert.equal(tiny.placements[0].scroll, true);
+ assert.equal(tiny.overflow, true); assert.ok(tiny.placements[0].h >= 122); assert.equal(tiny.placements[0].scroll, true);
+ const shortLine = d.pack(bubbles, bubbles.map(() => [{ w: 96, h: 48, header: 26 }]), 320, 160);
+ assert.equal(shortLine.placements.length, 2);
+ assert.ok(shortLine.placements.every(r => r.h === 48 && !r.scroll), '22px speech line rejected by packing');
 });
 
 test('home reloads recommendations with account changes and removes duplicates from new books', async () => {

@@ -42,7 +42,7 @@ Page({
   if (this.data.busy) return;
   this.setData({ busy: true, loginError: '' });
   try {
-   const consent = await new Promise((resolve, reject) => wx.showModal({ title: '登录保存书架', content: '登录后建立账号，选择适合的阅读年龄段，保存收藏和阅读统计。用户名可自行填写，无需手机号或微信头像昵称。是否继续？', confirmText: '同意登录', success: r => resolve(r.confirm), fail: () => reject(new Error('登录确认暂时无法打开，请重试')) }));
+   const consent = await new Promise((resolve, reject) => wx.showModal({ title: '登录保存书架', content: '登录后建立账号，选择适合的阅读年龄段，保存收藏和阅读统计。是否继续？', confirmText: '同意登录', success: r => resolve(r.confirm), fail: () => reject(new Error('登录确认暂时无法打开，请重试')) }));
    if (!consent) return;
    await state.login(); await this.load(); if (state.needsProfile()) await this.openAgeChoice();
   }
